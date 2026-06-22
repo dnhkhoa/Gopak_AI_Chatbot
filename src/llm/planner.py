@@ -209,6 +209,19 @@ class QueryPlanner:
                     metadata.latency_ms["total"] = (perf_counter() - start) * 1000
                     return PlannerResult(plan=plan, latency_ms=metadata.latency_ms["total"], raw_response=raw, used_fallback=False, metadata=metadata.model_dump())
                 except Exception as retry_exc:
+                    if deterministic and deterministic.plan:
+                        try:
+                            validation_start = perf_counter()
+                            PlanValidator(self.catalog).validate(deterministic.plan)
+                            metadata.validation_passed = True
+                            metadata.latency_ms["validation"] = (perf_counter() - validation_start) * 1000
+                            metadata.extra["semantic_fallback_after_llm_failure"] = True
+                            metadata.extra["retry_error"] = str(retry_exc)
+                            metadata.selected_tables = deterministic.plan.tables
+                            metadata.latency_ms["total"] = (perf_counter() - start) * 1000
+                            return PlannerResult(plan=deterministic.plan, latency_ms=metadata.latency_ms["total"], raw_response=raw, used_fallback=True, error=str(retry_exc), metadata=metadata.model_dump())
+                        except Exception:
+                            pass
                     if not (self.settings.enable_heuristic_fallback and self.settings.force_legacy_fallback_mode):
                         return self._safe_failure(start, raw, metadata, str(retry_exc))
         elif route.requires_llm and not (self.settings.enable_heuristic_fallback and self.settings.force_legacy_fallback_mode):

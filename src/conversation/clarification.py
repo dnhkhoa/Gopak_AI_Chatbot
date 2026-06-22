@@ -6,7 +6,7 @@ from typing import Any
 
 from src.application.schemas import ChatResponse
 from src.conversation.state import ConversationState, PendingClarification
-from src.query.schemas import QueryPlan
+from src.query.schemas import MetricSpec, QueryPlan, SortSpec
 from src.query_understanding.catalog_utils import find_table, role_column
 from src.query_understanding.text import normalize_text
 
@@ -130,16 +130,21 @@ class ClarificationResolver:
 
 def build_plan_from_resolved_message(catalog: dict, state: ConversationState, message: str) -> QueryPlan | None:
     q = normalize_text(message)
-    table = find_table(catalog, "machine_downtime") or (catalog.get("tables") or [None])[0]
+    scoped_tables = catalog.get("tables") or []
+    table = scoped_tables[0] if len(scoped_tables) == 1 else find_table(catalog, "machine_downtime") or (scoped_tables or [None])[0]
     if not table:
         return None
     duration = role_column(table, "duration_seconds")
     machine = role_column(table, "machine")
     loss_name = role_column(table, "loss_name")
     loss_group = role_column(table, "loss_group")
-    metric_name = "row_count" if "so lan" in q or "ban ghi" in q else "total_duration_seconds"
-    metric = {"aggregation": "count", "column": None, "name": "row_count"} if metric_name == "row_count" else {"aggregation": "sum", "column": duration, "name": "total_duration_seconds"}
-    dimension = machine if "may" in q else loss_name if "nguyen nhan" in q else loss_group if "nhom" in q else None
+    metric_name = "row_count" if "so lan" in q or "ban ghi" in q or "count" in q else "total_duration_seconds"
+    metric = (
+        {"aggregation": "count", "column": None, "name": "row_count"}
+        if metric_name == "row_count" or not duration
+        else {"aggregation": "sum", "column": duration, "name": "total_duration_seconds"}
+    )
+    dimension = machine if "may" in q else loss_name if "nguyen nhan" in q or "loi" in q else loss_group if "nhom" in q else None
     output = "bar" if "bieu do" in q or "ve" in q else "table"
     intent = "chart" if output == "bar" else "query"
     limit = _extract_int(q) or (5 if "top" in q else 20)
@@ -156,7 +161,52 @@ def build_plan_from_resolved_message(catalog: dict, state: ConversationState, me
     )
 
 
+def restore_topic_plan(catalog: dict, state: ConversationState, message: str) -> QueryPlan | None:
+    q = normalize_text(message)
+    if not any(term in q for term in ["quay lai", "luc nay", "truoc do", "nhu tren", "ban dau"]):
+        return None
+    allowed_tables = {table["table_name"] for table in catalog.get("tables", [])}
+    frames = [
+        item
+        for item in reversed(state.topic_frames or [])
+        if item.get("active_file_id") == state.active_file_id and item.get("last_query_plan")
+    ]
+    for frame in frames:
+        try:
+            plan = QueryPlan.model_validate(frame["last_query_plan"])
+        except Exception:
+            continue
+        if not plan.tables or not set(plan.tables).issubset(allowed_tables):
+            continue
+        label = normalize_text(str(frame.get("label") or ""))
+        if "may" in q and "may" not in label and "machine" not in label:
+            continue
+        if "nguyen nhan" in q and "nguyen nhan" not in label and "loss" not in label:
+            continue
+        _apply_topic_delta(plan, catalog, q)
+        return plan
+    return None
+
+
+def _apply_topic_delta(plan: QueryPlan, catalog: dict, q: str) -> None:
+    table = next((item for item in catalog.get("tables", []) if item["table_name"] in plan.tables), None)
+    duration = role_column(table, "duration_seconds") if table else None
+    if any(term in q for term in ["so lan", "dem", "count", "lan dung"]):
+        plan.metrics = [MetricSpec(aggregation="count", column=None, name="row_count")]
+        if plan.dimensions:
+            plan.sort = [SortSpec(column="row_count", direction="desc")]
+    elif any(term in q for term in ["tong", "downtime", "thoi gian", "thoi luong"]) and duration:
+        plan.metrics = [MetricSpec(aggregation="sum", column=duration, name="total_duration_seconds")]
+        if plan.dimensions:
+            plan.sort = [SortSpec(column="total_duration_seconds", direction="desc")]
+    if any(term in q for term in ["bieu do", "chart", "ve "]):
+        plan.intent = "chart"
+        plan.output = "bar"
+
+
 def _pending_kind(q: str, clarification: str) -> str | None:
+    if _looks_complete(q):
+        return None
     text = q + " " + normalize_text(clarification)
     if q in {"top", "top may", "top nguyen nhan"} or "top bao nhieu" in text:
         return "top"
@@ -165,6 +215,17 @@ def _pending_kind(q: str, clarification: str) -> str | None:
     if "ban muon hoi ve tong" in text or "metric" in text:
         return "metric_dimension"
     return None
+
+
+def _looks_complete(q: str) -> bool:
+    has_metric = _metric_from_text(q) is not None or "downtime" in q
+    has_dimension = _dimension_from_text(q) is not None
+    has_limit = _extract_int(q) is not None or any(term in q for term in ["top", "bottom"])
+    if any(term in q for term in ["top", "bottom", "dung dau", "cao nhat", "nhieu nhat"]):
+        return has_metric and has_dimension and has_limit
+    if any(term in q for term in ["bieu do", "chart", "ve "]):
+        return has_metric and has_dimension
+    return False
 
 
 def _build_pending(active_file_id: str, message: str, kind: str) -> PendingClarification:
@@ -228,7 +289,7 @@ def _compose_resolved_message(pending: PendingClarification, slots: dict[str, ob
 def _metric_from_text(q: str) -> str | None:
     if any(term in q for term in ["so lan", "dem", "ban ghi", "count", "lan dung"]):
         return "count"
-    if any(term in q for term in ["tong", "thoi luong", "thoi gian", "downtime"]):
+    if any(term in q for term in ["tong", "thoi luong", "thoi gian", "downtime", "may bi dung"]):
         return "downtime"
     return None
 

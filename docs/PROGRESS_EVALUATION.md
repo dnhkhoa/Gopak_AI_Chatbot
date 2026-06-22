@@ -376,7 +376,7 @@ Artifacts:
 - `artifacts/paraphrase_equivalence.json`
 ## COMPREHENSIVE LLM EVALUATION
 
-Updated: 2026-06-22T23:12:01.117877
+Updated: 2026-06-23T00:21:00.399669
 
 - Evaluation modes: REAL_LLM probe plus full HEURISTIC_FALLBACK suite.
 - Real model requested: `qwen3.5:9b` via local Ollama.
@@ -384,7 +384,7 @@ Updated: 2026-06-22T23:12:01.117877
 - Number of cases generated: 85
 - Fallback pass/fail/manual: 69/1/15
 - Fallback accuracy: 81.18%
-- Fallback P50/P95 latency: 96.2 ms / 119.5 ms
+- Fallback P50/P95 latency: 96.1 ms / 115.9 ms
 - Consistency: 10/10 stable fallback reruns; REAL_LLM consistency is blocked by malformed planner JSON.
 - Paraphrase equivalence: 1/1 groups consistent.
 - Critical issues: None observed for REAL_LLM transport.

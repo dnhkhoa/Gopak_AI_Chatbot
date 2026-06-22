@@ -25,7 +25,7 @@ from src.application.schemas import (
     TablePayload,
 )
 from src.catalog.profiler import load_catalog
-from src.conversation.clarification import ClarificationResolver, build_plan_from_resolved_message
+from src.conversation.clarification import ClarificationResolver, build_plan_from_resolved_message, restore_topic_plan
 from src.config import Settings, get_settings
 from src.conversation.memory_service import ConversationMemoryService
 from src.application.customer_intents import CustomerIntentResult, detect_customer_intent
@@ -373,6 +373,8 @@ class ChatApplicationService:
         if clarification.resolved_message:
             message = clarification.resolved_message
         forced_plan = build_plan_from_resolved_message(catalog, state, message) if clarification.resolved_message else None
+        if forced_plan is None:
+            forced_plan = restore_topic_plan(catalog, state, message)
         if forced_plan is None and state.pending_clarification is None and _starts_slot_clarification(message):
             started_clarification = ClarificationResolver(catalog).maybe_start(
                 conversation_id,
@@ -904,9 +906,12 @@ class ChatApplicationService:
         )
 
     def _resolve_table(self, intent: CustomerIntentResult, catalog: dict) -> dict | None:
+        tables = catalog.get("tables", [])
+        if len(tables) == 1:
+            return tables[0]
         if not intent.table_hint:
             return None
-        return next((table for table in catalog.get("tables", []) if intent.table_hint in str(table.get("table_name", "")).lower() or intent.table_hint in str(table.get("source", "")).lower()), None)
+        return next((table for table in tables if intent.table_hint in str(table.get("table_name", "")).lower() or intent.table_hint in str(table.get("source", "")).lower()), None)
 
     def _sources_for_plan(self, plan: QueryPlan, catalog: dict) -> list[dict]:
         return [
@@ -1156,7 +1161,10 @@ def _table_file_id(table: dict) -> str:
 
 
 def _starts_slot_clarification(message: str) -> bool:
+    import re
+
     q = _ascii_text(message).strip(" ?.!;:")
+    q = re.sub(r"\s*#\d+\s*$", "", q).strip()
     return q in {"top", "top may", "top nguyen nhan", "ve bieu do tong quan", "bieu do tong quan"}
 
 

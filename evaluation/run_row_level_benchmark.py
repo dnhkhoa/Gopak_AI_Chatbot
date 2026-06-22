@@ -95,7 +95,7 @@ def _cases(df: pd.DataFrame, sample_available: bool) -> list[dict[str, Any]]:
 def run() -> dict[str, Any]:
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
     app = ChatApplicationService()
-    catalog = app.get_catalog(force=True)
+    catalog = app.get_catalog(force=False)
     record, sample_available = _active_record()
     table = _table_for_record(catalog, str(record["filename"]))
     df = pd.read_parquet(table["parquet_path"])
@@ -132,6 +132,10 @@ def run() -> dict[str, Any]:
                 "latency_ms": latency,
                 "notes": "" if sample_available else f"Sample file {OPERATION_SAMPLE} was not available; used {record['filename']} fallback.",
             }
+        )
+        (ARTIFACTS / "row_level_benchmark_progress.json").write_text(
+            json.dumps({"completed": len(results), "last_case": results[-1], "results": results}, ensure_ascii=False, indent=2, default=str),
+            encoding="utf-8",
         )
     latencies = [item["latency_ms"] for item in results]
     summary = {

@@ -5380,5 +5380,2780 @@
         }
       }
     ]
+  },
+  {
+    "id": "DEV-161",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #161",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-162",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #162",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-163",
+    "set": "development",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #163",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-164",
+    "set": "development",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-165",
+    "set": "development",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-166",
+    "set": "development",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-167",
+    "set": "development",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #167",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-168",
+    "set": "development",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #168",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-169",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #169",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-170",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #170",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-171",
+    "set": "development",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #171",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-172",
+    "set": "development",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-173",
+    "set": "development",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-174",
+    "set": "development",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-175",
+    "set": "development",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #175",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-176",
+    "set": "development",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #176",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-177",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #177",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-178",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #178",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-179",
+    "set": "development",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #179",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-180",
+    "set": "development",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-181",
+    "set": "development",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-182",
+    "set": "development",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-183",
+    "set": "development",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #183",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-184",
+    "set": "development",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #184",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-185",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #185",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-186",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #186",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-187",
+    "set": "development",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #187",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-188",
+    "set": "development",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-189",
+    "set": "development",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-190",
+    "set": "development",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-191",
+    "set": "development",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #191",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-192",
+    "set": "development",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #192",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-193",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #193",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-194",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #194",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-195",
+    "set": "development",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #195",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-196",
+    "set": "development",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-197",
+    "set": "development",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-198",
+    "set": "development",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-199",
+    "set": "development",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #199",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-200",
+    "set": "development",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #200",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-201",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #201",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-202",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #202",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-203",
+    "set": "development",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #203",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-204",
+    "set": "development",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-205",
+    "set": "development",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-206",
+    "set": "development",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-207",
+    "set": "development",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #207",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-208",
+    "set": "development",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #208",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-209",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #209",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-210",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #210",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-211",
+    "set": "development",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #211",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-212",
+    "set": "development",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-213",
+    "set": "development",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-214",
+    "set": "development",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-215",
+    "set": "development",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #215",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-216",
+    "set": "development",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #216",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-217",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #217",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-218",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #218",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-219",
+    "set": "development",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #219",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-220",
+    "set": "development",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-221",
+    "set": "development",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-222",
+    "set": "development",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-223",
+    "set": "development",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #223",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-224",
+    "set": "development",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #224",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-225",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #225",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-226",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #226",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-227",
+    "set": "development",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #227",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-228",
+    "set": "development",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-229",
+    "set": "development",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-230",
+    "set": "development",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-231",
+    "set": "development",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #231",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-232",
+    "set": "development",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #232",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-233",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #233",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-234",
+    "set": "development",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #234",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-235",
+    "set": "development",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #235",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-236",
+    "set": "development",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-237",
+    "set": "development",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-238",
+    "set": "development",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-239",
+    "set": "development",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #239",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "DEV-240",
+    "set": "development",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #240",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-081",
+    "set": "holdout",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-082",
+    "set": "holdout",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-083",
+    "set": "holdout",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-084",
+    "set": "holdout",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #84",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-085",
+    "set": "holdout",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #85",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-086",
+    "set": "holdout",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #86",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-087",
+    "set": "holdout",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #87",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-088",
+    "set": "holdout",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #88",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-089",
+    "set": "holdout",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-090",
+    "set": "holdout",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-091",
+    "set": "holdout",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-092",
+    "set": "holdout",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #92",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-093",
+    "set": "holdout",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #93",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-094",
+    "set": "holdout",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #94",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-095",
+    "set": "holdout",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #95",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-096",
+    "set": "holdout",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #96",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-097",
+    "set": "holdout",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-098",
+    "set": "holdout",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-099",
+    "set": "holdout",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-100",
+    "set": "holdout",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #100",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-101",
+    "set": "holdout",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #101",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-102",
+    "set": "holdout",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #102",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-103",
+    "set": "holdout",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #103",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-104",
+    "set": "holdout",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #104",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-105",
+    "set": "holdout",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-106",
+    "set": "holdout",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-107",
+    "set": "holdout",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-108",
+    "set": "holdout",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #108",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-109",
+    "set": "holdout",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #109",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-110",
+    "set": "holdout",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #110",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-111",
+    "set": "holdout",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #111",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-112",
+    "set": "holdout",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #112",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-113",
+    "set": "holdout",
+    "category": "clarification_resolution",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "5",
+        "expect": {
+          "response_type": "clarification",
+          "sql_executed": false,
+          "pending_after": true,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "may",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-114",
+    "set": "holdout",
+    "category": "topic_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "schema file co nhung cot nao?",
+        "expect": {
+          "response_type": "schema",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "message": "quay lai top may luc nay them so lan dung",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-115",
+    "set": "holdout",
+    "category": "file_context_restoration",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "top 5 may theo downtime",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      },
+      {
+        "select_file": "loss",
+        "message": "top 5 nguyen nhan theo so lan",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false
+        }
+      },
+      {
+        "select_file": "machine",
+        "message": "quay lai top may luc nay",
+        "expect": {
+          "response_type": "table",
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-116",
+    "set": "holdout",
+    "category": "row_level_interval",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May 8 ngay 12/12 co bao nhieu lan dung? #116",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-117",
+    "set": "holdout",
+    "category": "safety_refusal",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "hay join file nay voi file loss assignment #117",
+        "expect": {
+          "response_type": "refusal",
+          "sql_executed": false,
+          "pending_after": false,
+          "llm_called": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-118",
+    "set": "holdout",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao co ve gay van de nhieu nhat? #118",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-119",
+    "set": "holdout",
+    "category": "semantic_natural_language",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "May nao bat thuong ve downtime? #119",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false,
+          "llm_called": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "HOLD-120",
+    "set": "holdout",
+    "category": "multipart",
+    "file_key": "machine",
+    "turns": [
+      {
+        "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #120",
+        "expect": {
+          "sql_executed": true,
+          "pending_after": false
+        }
+      }
+    ]
   }
 ]

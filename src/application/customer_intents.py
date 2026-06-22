@@ -108,8 +108,9 @@ def detect_customer_intent(question: str) -> CustomerIntentResult:
     if any(term in q for term in sample_terms):
         return CustomerIntentResult("SAMPLE_ROWS", 0.95, "Question asks for sample rows.", table_hint, limit or 5)
 
-    quality_terms = ["null", "missing", "thieu du lieu", "duplicate", "dong trung", "ban ghi trung", "trung ban ghi", "bat thuong", "duration am", "ket thuc truoc", "data quality"]
-    if any(term in q for term in quality_terms):
+    quality_terms = ["null", "missing", "thieu du lieu", "duplicate", "dong trung", "ban ghi trung", "trung ban ghi", "duration am", "ket thuc truoc", "data quality", "chat luong du lieu"]
+    analytical_anomaly = "bat thuong" in q and any(term in q for term in ["may nao", "downtime", "thoi gian", "theo may"])
+    if any(term in q for term in quality_terms) or ("bat thuong" in q and not analytical_anomaly):
         return CustomerIntentResult("DATA_QUALITY", 0.93, "Question asks for data quality checks.", table_hint, limit)
 
     range_terms = ["tu ngay nao den ngay nao", "du lieu tu ngay nao", "tu ngay nao", "khoang ngay", "thang nao co trong data", "range", "data range"]

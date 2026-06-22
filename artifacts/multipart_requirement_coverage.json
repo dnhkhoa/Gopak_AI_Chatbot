@@ -1,529 +1,714 @@
 {
   "summary": {
-    "total": 20,
-    "passed": 0,
-    "coverage": "partial; runner currently checks execution not every atomic requirement"
+    "total": 35,
+    "passed": 35,
+    "accuracy": 1.0
   },
-  "results": [
+  "conversation_results": [
     {
       "id": "DEV-009",
       "set": "development",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 43.5,
+          "latency_ms": 179.5,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 43.5
+      ]
     },
     {
       "id": "DEV-021",
       "set": "development",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 47.5,
+          "latency_ms": 151.7,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 47.5
+      ]
     },
     {
       "id": "DEV-033",
       "set": "development",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 48.0,
+          "latency_ms": 141.4,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 48.0
+      ]
     },
     {
       "id": "DEV-045",
       "set": "development",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 47.5,
+          "latency_ms": 146.1,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 47.5
+      ]
     },
     {
       "id": "DEV-057",
       "set": "development",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 40.2,
+          "latency_ms": 142.5,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 40.2
+      ]
     },
     {
       "id": "DEV-069",
       "set": "development",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 42.2,
+          "latency_ms": 150.1,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 42.2
+      ]
     },
     {
       "id": "DEV-081",
       "set": "development",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 47.5,
+          "latency_ms": 145.5,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 47.5
+      ]
     },
     {
       "id": "DEV-093",
       "set": "development",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 40.9,
+          "latency_ms": 139.6,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 40.9
+      ]
     },
     {
       "id": "DEV-105",
       "set": "development",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 42.4,
+          "latency_ms": 139.5,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 42.4
+      ]
     },
     {
       "id": "DEV-117",
       "set": "development",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 43.9,
+          "latency_ms": 143.3,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 43.9
+      ]
     },
     {
       "id": "DEV-129",
       "set": "development",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 42.9,
+          "latency_ms": 145.0,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 42.9
+      ]
     },
     {
       "id": "DEV-141",
       "set": "development",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 44.2,
+          "latency_ms": 142.9,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 44.2
+      ]
     },
     {
       "id": "DEV-153",
       "set": "development",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 43.6,
+          "latency_ms": 141.7,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 43.6
+      ]
+    },
+    {
+      "id": "DEV-163",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #163",
+          "latency_ms": 140.7,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-171",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #171",
+          "latency_ms": 138.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-179",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #179",
+          "latency_ms": 153.6,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-187",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #187",
+          "latency_ms": 141.3,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-195",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #195",
+          "latency_ms": 141.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-203",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #203",
+          "latency_ms": 145.4,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-211",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #211",
+          "latency_ms": 137.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-219",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #219",
+          "latency_ms": 139.8,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-227",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #227",
+          "latency_ms": 143.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-235",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #235",
+          "latency_ms": 141.3,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-164",
       "set": "holdout",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 48.5,
+          "latency_ms": 492.5,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 48.5
+      ]
     },
     {
       "id": "HOL-176",
       "set": "holdout",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 44.3,
+          "latency_ms": 141.5,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 44.3
+      ]
     },
     {
       "id": "HOL-188",
       "set": "holdout",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 65.1,
+          "latency_ms": 145.8,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 65.1
+      ]
     },
     {
       "id": "HOL-200",
       "set": "holdout",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 44.5,
+          "latency_ms": 144.5,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 44.5
+      ]
     },
     {
       "id": "HOL-212",
       "set": "holdout",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 42.5,
+          "latency_ms": 141.6,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 42.5
+      ]
     },
     {
       "id": "HOL-224",
       "set": "holdout",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 43.3,
+          "latency_ms": 143.0,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 43.3
+      ]
     },
     {
       "id": "HOL-236",
       "set": "holdout",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
+      "passed": true,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 43.7,
+          "latency_ms": 142.2,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
-      ],
-      "latency_ms": 43.7
+      ]
+    },
+    {
+      "id": "HOLD-088",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #88",
+          "latency_ms": 139.4,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-096",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #96",
+          "latency_ms": 133.6,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-104",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #104",
+          "latency_ms": 145.7,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-112",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #112",
+          "latency_ms": 141.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-120",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #120",
+          "latency_ms": 144.0,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     }
-  ]
+  ],
+  "file_scoped_multipart": {
+    "total": 35,
+    "passed": 28,
+    "accuracy": 0.8
+  }
 }

@@ -1,12 +1,12 @@
 {
   "summary": {
-    "total": 80,
-    "passed": 46,
-    "accuracy": 0.575,
-    "repeated_clarification_loops": 7,
-    "p50_latency_ms": 45.0,
-    "p95_latency_ms": 131.5,
-    "llm_calls": 0
+    "total": 120,
+    "passed": 120,
+    "accuracy": 1.0,
+    "repeated_clarification_loops": 0,
+    "p50_latency_ms": 135.4,
+    "p95_latency_ms": 9379.3,
+    "llm_calls": 17
   },
   "results": [
     {
@@ -19,7 +19,7 @@
       "turns": [
         {
           "message": "top",
-          "latency_ms": 16.2,
+          "latency_ms": 15.3,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -32,7 +32,7 @@
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 28.5,
+          "latency_ms": 99.2,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -44,51 +44,45 @@
           "passed": true
         }
       ],
-      "latency_ms": 44.7
+      "latency_ms": 114.5
     },
     {
       "id": "HOL-162",
       "set": "holdout",
       "category": "topic_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True",
-        "turn 1: sql expected True got False",
-        "repeated clarification loop"
-      ],
-      "repeated_loop": true,
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
       "turns": [
         {
           "message": "top 5 may theo downtime",
-          "latency_ms": 31.5,
+          "latency_ms": 130.9,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "chi thang gan nhat",
-          "latency_ms": 14.4,
+          "latency_ms": 74.2,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 30.6,
+          "latency_ms": 31.6,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -101,48 +95,44 @@
         },
         {
           "message": "quay lai top may luc nay",
-          "latency_ms": 29.9,
+          "latency_ms": 74.6,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 106.3
+      "latency_ms": 311.3
     },
     {
       "id": "HOL-163",
       "set": "holdout",
       "category": "file_context_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "top 5 may theo downtime",
-          "latency_ms": 31.8,
+          "latency_ms": 127.5,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 57.3,
+          "latency_ms": 61.2,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -155,71 +145,67 @@
         },
         {
           "message": "quay lai top may luc nay",
-          "latency_ms": 16.0,
+          "latency_ms": 79.1,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 105.1
+      "latency_ms": 267.7
     },
     {
       "id": "HOL-164",
       "set": "holdout",
       "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 48.5,
+          "latency_ms": 492.5,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 48.5
+      "latency_ms": 492.5
     },
     {
       "id": "HOL-165",
       "set": "holdout",
       "category": "row_level_interval",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
-          "latency_ms": 58.0,
+          "latency_ms": 142.5,
           "checks": {
             "response_type": "scalar",
-            "execution_mode": "TIME_WINDOW_RECORDS",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 58.0
+      "latency_ms": 142.5
     },
     {
       "id": "HOL-166",
@@ -231,7 +217,7 @@
       "turns": [
         {
           "message": "hay join file nay voi file loss assignment",
-          "latency_ms": 14.5,
+          "latency_ms": 14.4,
           "checks": {
             "response_type": "refusal",
             "execution_mode": "REFUSAL",
@@ -243,7 +229,7 @@
           "passed": true
         }
       ],
-      "latency_ms": 14.5
+      "latency_ms": 14.4
     },
     {
       "id": "HOL-167",
@@ -255,19 +241,19 @@
       "turns": [
         {
           "message": "May nao co ve gay van de nhieu nhat?",
-          "latency_ms": 31.5,
+          "latency_ms": 9522.9,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 31.5
+      "latency_ms": 9522.9
     },
     {
       "id": "HOL-168",
@@ -279,7 +265,7 @@
       "turns": [
         {
           "message": "No 1 la gi? holdout 8",
-          "latency_ms": 32.2,
+          "latency_ms": 35.1,
           "checks": {
             "response_type": "record_detail",
             "execution_mode": "RECORD_LOOKUP",
@@ -291,7 +277,7 @@
           "passed": true
         }
       ],
-      "latency_ms": 32.2
+      "latency_ms": 35.1
     },
     {
       "id": "HOL-169",
@@ -303,7 +289,7 @@
       "turns": [
         {
           "message": "schema file co nhung cot nao? holdout 9",
-          "latency_ms": 31.4,
+          "latency_ms": 33.7,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -315,35 +301,31 @@
           "passed": true
         }
       ],
-      "latency_ms": 31.4
+      "latency_ms": 33.7
     },
     {
       "id": "HOL-170",
       "set": "holdout",
       "category": "simple_deterministic",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "top 5 may theo downtime holdout 10",
-          "latency_ms": 33.4,
+          "latency_ms": 118.9,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 33.4
+      "latency_ms": 118.9
     },
     {
       "id": "HOL-171",
@@ -355,7 +337,7 @@
       "turns": [
         {
           "message": "top",
-          "latency_ms": 15.4,
+          "latency_ms": 16.3,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -368,7 +350,7 @@
         },
         {
           "message": "5",
-          "latency_ms": 15.9,
+          "latency_ms": 15.7,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -381,7 +363,7 @@
         },
         {
           "message": "may",
-          "latency_ms": 71.7,
+          "latency_ms": 71.0,
           "checks": {
             "response_type": "table",
             "execution_mode": "DETERMINISTIC",
@@ -405,7 +387,7 @@
       "turns": [
         {
           "message": "ve bieu do tong quan",
-          "latency_ms": 15.0,
+          "latency_ms": 16.8,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -418,7 +400,7 @@
         },
         {
           "message": "tong",
-          "latency_ms": 15.3,
+          "latency_ms": 15.7,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -431,7 +413,7 @@
         },
         {
           "message": "may",
-          "latency_ms": 97.7,
+          "latency_ms": 113.1,
           "checks": {
             "response_type": "chart",
             "execution_mode": "DETERMINISTIC",
@@ -443,7 +425,7 @@
           "passed": true
         }
       ],
-      "latency_ms": 128.0
+      "latency_ms": 145.7
     },
     {
       "id": "HOL-173",
@@ -468,7 +450,7 @@
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 30.5,
+          "latency_ms": 31.7,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -480,51 +462,45 @@
           "passed": true
         }
       ],
-      "latency_ms": 46.0
+      "latency_ms": 47.2
     },
     {
       "id": "HOL-174",
       "set": "holdout",
       "category": "topic_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True",
-        "turn 1: sql expected True got False",
-        "repeated clarification loop"
-      ],
-      "repeated_loop": true,
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
       "turns": [
         {
           "message": "top 5 may theo downtime",
-          "latency_ms": 32.3,
+          "latency_ms": 110.4,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "chi thang gan nhat",
-          "latency_ms": 14.8,
+          "latency_ms": 73.3,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 29.1,
+          "latency_ms": 35.8,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -537,48 +513,44 @@
         },
         {
           "message": "quay lai top may luc nay",
-          "latency_ms": 31.1,
+          "latency_ms": 67.7,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 107.4
+      "latency_ms": 287.3
     },
     {
       "id": "HOL-175",
       "set": "holdout",
       "category": "file_context_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "top 5 may theo downtime",
-          "latency_ms": 33.3,
+          "latency_ms": 119.2,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 51.6,
+          "latency_ms": 54.5,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -591,71 +563,67 @@
         },
         {
           "message": "quay lai top may luc nay",
-          "latency_ms": 18.9,
+          "latency_ms": 69.1,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 103.8
+      "latency_ms": 242.8
     },
     {
       "id": "HOL-176",
       "set": "holdout",
       "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 44.3,
+          "latency_ms": 141.5,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 44.3
+      "latency_ms": 141.5
     },
     {
       "id": "HOL-177",
       "set": "holdout",
       "category": "row_level_interval",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
-          "latency_ms": 58.5,
+          "latency_ms": 132.6,
           "checks": {
             "response_type": "scalar",
-            "execution_mode": "TIME_WINDOW_RECORDS",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 58.5
+      "latency_ms": 132.6
     },
     {
       "id": "HOL-178",
@@ -667,7 +635,7 @@
       "turns": [
         {
           "message": "hay join file nay voi file loss assignment",
-          "latency_ms": 15.4,
+          "latency_ms": 13.4,
           "checks": {
             "response_type": "refusal",
             "execution_mode": "REFUSAL",
@@ -679,7 +647,7 @@
           "passed": true
         }
       ],
-      "latency_ms": 15.4
+      "latency_ms": 13.4
     },
     {
       "id": "HOL-179",
@@ -691,19 +659,19 @@
       "turns": [
         {
           "message": "May nao co ve gay van de nhieu nhat?",
-          "latency_ms": 33.3,
+          "latency_ms": 9236.2,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 33.3
+      "latency_ms": 9236.2
     },
     {
       "id": "HOL-180",
@@ -715,7 +683,7 @@
       "turns": [
         {
           "message": "No 1 la gi? holdout 20",
-          "latency_ms": 34.0,
+          "latency_ms": 32.9,
           "checks": {
             "response_type": "record_detail",
             "execution_mode": "RECORD_LOOKUP",
@@ -727,7 +695,7 @@
           "passed": true
         }
       ],
-      "latency_ms": 34.0
+      "latency_ms": 32.9
     },
     {
       "id": "HOL-181",
@@ -739,7 +707,7 @@
       "turns": [
         {
           "message": "schema file co nhung cot nao? holdout 21",
-          "latency_ms": 30.7,
+          "latency_ms": 30.9,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -751,35 +719,31 @@
           "passed": true
         }
       ],
-      "latency_ms": 30.7
+      "latency_ms": 30.9
     },
     {
       "id": "HOL-182",
       "set": "holdout",
       "category": "simple_deterministic",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "top 5 may theo downtime holdout 22",
-          "latency_ms": 31.5,
+          "latency_ms": 113.2,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 31.5
+      "latency_ms": 113.2
     },
     {
       "id": "HOL-183",
@@ -791,7 +755,7 @@
       "turns": [
         {
           "message": "top",
-          "latency_ms": 16.0,
+          "latency_ms": 15.9,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -804,7 +768,7 @@
         },
         {
           "message": "5",
-          "latency_ms": 15.7,
+          "latency_ms": 16.6,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -817,7 +781,7 @@
         },
         {
           "message": "may",
-          "latency_ms": 74.1,
+          "latency_ms": 68.0,
           "checks": {
             "response_type": "table",
             "execution_mode": "DETERMINISTIC",
@@ -829,7 +793,7 @@
           "passed": true
         }
       ],
-      "latency_ms": 105.8
+      "latency_ms": 100.5
     },
     {
       "id": "HOL-184",
@@ -854,7 +818,7 @@
         },
         {
           "message": "tong",
-          "latency_ms": 15.6,
+          "latency_ms": 14.6,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -867,7 +831,7 @@
         },
         {
           "message": "may",
-          "latency_ms": 98.0,
+          "latency_ms": 113.2,
           "checks": {
             "response_type": "chart",
             "execution_mode": "DETERMINISTIC",
@@ -879,7 +843,7 @@
           "passed": true
         }
       ],
-      "latency_ms": 129.8
+      "latency_ms": 144.1
     },
     {
       "id": "HOL-185",
@@ -891,7 +855,7 @@
       "turns": [
         {
           "message": "top",
-          "latency_ms": 17.0,
+          "latency_ms": 13.9,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -904,443 +868,7 @@
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 30.6,
-          "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": false
-          },
-          "passed": true
-        }
-      ],
-      "latency_ms": 47.6
-    },
-    {
-      "id": "HOL-186",
-      "set": "holdout",
-      "category": "topic_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True",
-        "turn 1: sql expected True got False",
-        "repeated clarification loop"
-      ],
-      "repeated_loop": true,
-      "turns": [
-        {
-          "message": "top 5 may theo downtime",
-          "latency_ms": 31.9,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": false
-        },
-        {
-          "message": "chi thang gan nhat",
-          "latency_ms": 26.1,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": false
-        },
-        {
-          "message": "schema file co nhung cot nao?",
-          "latency_ms": 36.2,
-          "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": false
-          },
-          "passed": true
-        },
-        {
-          "message": "quay lai top may luc nay",
-          "latency_ms": 34.1,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        }
-      ],
-      "latency_ms": 128.4
-    },
-    {
-      "id": "HOL-187",
-      "set": "holdout",
-      "category": "file_context_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True"
-      ],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "top 5 may theo downtime",
-          "latency_ms": 33.2,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": false
-        },
-        {
-          "message": "schema file co nhung cot nao?",
-          "latency_ms": 52.0,
-          "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "pending_after": false
-          },
-          "passed": true
-        },
-        {
-          "message": "quay lai top may luc nay",
-          "latency_ms": 17.1,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        }
-      ],
-      "latency_ms": 102.2
-    },
-    {
-      "id": "HOL-188",
-      "set": "holdout",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 65.1,
-          "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": false
-          },
-          "passed": false
-        }
-      ],
-      "latency_ms": 65.1
-    },
-    {
-      "id": "HOL-189",
-      "set": "holdout",
-      "category": "row_level_interval",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
-          "latency_ms": 54.6,
-          "checks": {
-            "response_type": "scalar",
-            "execution_mode": "TIME_WINDOW_RECORDS",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": false
-          },
-          "passed": false
-        }
-      ],
-      "latency_ms": 54.6
-    },
-    {
-      "id": "HOL-190",
-      "set": "holdout",
-      "category": "safety_refusal",
-      "passed": true,
-      "failure_reasons": [],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "hay join file nay voi file loss assignment",
-          "latency_ms": 14.0,
-          "checks": {
-            "response_type": "refusal",
-            "execution_mode": "REFUSAL",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": false
-          },
-          "passed": true
-        }
-      ],
-      "latency_ms": 14.0
-    },
-    {
-      "id": "HOL-191",
-      "set": "holdout",
-      "category": "semantic_natural_language",
-      "passed": true,
-      "failure_reasons": [],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "May nao co ve gay van de nhieu nhat?",
           "latency_ms": 31.2,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        }
-      ],
-      "latency_ms": 31.2
-    },
-    {
-      "id": "HOL-192",
-      "set": "holdout",
-      "category": "simple_deterministic",
-      "passed": true,
-      "failure_reasons": [],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "No 1 la gi? holdout 32",
-          "latency_ms": 32.9,
-          "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "RECORD_LOOKUP",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": false
-          },
-          "passed": true
-        }
-      ],
-      "latency_ms": 32.9
-    },
-    {
-      "id": "HOL-193",
-      "set": "holdout",
-      "category": "simple_deterministic",
-      "passed": true,
-      "failure_reasons": [],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "schema file co nhung cot nao? holdout 33",
-          "latency_ms": 31.2,
-          "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": false
-          },
-          "passed": true
-        }
-      ],
-      "latency_ms": 31.2
-    },
-    {
-      "id": "HOL-194",
-      "set": "holdout",
-      "category": "simple_deterministic",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True"
-      ],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "top 5 may theo downtime holdout 34",
-          "latency_ms": 32.0,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": false
-        }
-      ],
-      "latency_ms": 32.0
-    },
-    {
-      "id": "HOL-195",
-      "set": "holdout",
-      "category": "clarification_resolution",
-      "passed": true,
-      "failure_reasons": [],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "top",
-          "latency_ms": 15.6,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        },
-        {
-          "message": "5",
-          "latency_ms": 16.0,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        },
-        {
-          "message": "may",
-          "latency_ms": 75.7,
-          "checks": {
-            "response_type": "table",
-            "execution_mode": "DETERMINISTIC",
-            "llm_called": false,
-            "sql_executed": true,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": false
-          },
-          "passed": true
-        }
-      ],
-      "latency_ms": 107.3
-    },
-    {
-      "id": "HOL-196",
-      "set": "holdout",
-      "category": "clarification_resolution",
-      "passed": true,
-      "failure_reasons": [],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "ve bieu do tong quan",
-          "latency_ms": 14.5,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        },
-        {
-          "message": "tong",
-          "latency_ms": 16.0,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        },
-        {
-          "message": "may",
-          "latency_ms": 101.1,
-          "checks": {
-            "response_type": "chart",
-            "execution_mode": "DETERMINISTIC",
-            "llm_called": false,
-            "sql_executed": true,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": false
-          },
-          "passed": true
-        }
-      ],
-      "latency_ms": 131.6
-    },
-    {
-      "id": "HOL-197",
-      "set": "holdout",
-      "category": "topic_switch_during_clarification",
-      "passed": true,
-      "failure_reasons": [],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "top",
-          "latency_ms": 16.2,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        },
-        {
-          "message": "schema file co nhung cot nao?",
-          "latency_ms": 29.0,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -1355,48 +883,42 @@
       "latency_ms": 45.1
     },
     {
-      "id": "HOL-198",
+      "id": "HOL-186",
       "set": "holdout",
       "category": "topic_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True",
-        "turn 1: sql expected True got False",
-        "repeated clarification loop"
-      ],
-      "repeated_loop": true,
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
       "turns": [
         {
           "message": "top 5 may theo downtime",
-          "latency_ms": 30.7,
+          "latency_ms": 119.3,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "chi thang gan nhat",
-          "latency_ms": 15.1,
+          "latency_ms": 66.4,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 28.9,
+          "latency_ms": 34.4,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -1409,48 +931,44 @@
         },
         {
           "message": "quay lai top may luc nay",
-          "latency_ms": 29.8,
+          "latency_ms": 70.1,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 104.5
+      "latency_ms": 290.2
     },
     {
-      "id": "HOL-199",
+      "id": "HOL-187",
       "set": "holdout",
       "category": "file_context_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "top 5 may theo downtime",
-          "latency_ms": 30.0,
+          "latency_ms": 112.0,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 53.6,
+          "latency_ms": 56.4,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -1463,74 +981,70 @@
         },
         {
           "message": "quay lai top may luc nay",
-          "latency_ms": 15.0,
+          "latency_ms": 68.2,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 98.6
+      "latency_ms": 236.6
     },
     {
-      "id": "HOL-200",
+      "id": "HOL-188",
       "set": "holdout",
       "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 44.5,
+          "latency_ms": 145.8,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 44.5
+      "latency_ms": 145.8
     },
     {
-      "id": "HOL-201",
+      "id": "HOL-189",
       "set": "holdout",
       "category": "row_level_interval",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
-          "latency_ms": 55.6,
+          "latency_ms": 131.4,
           "checks": {
             "response_type": "scalar",
-            "execution_mode": "TIME_WINDOW_RECORDS",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 55.6
+      "latency_ms": 131.4
     },
     {
-      "id": "HOL-202",
+      "id": "HOL-190",
       "set": "holdout",
       "category": "safety_refusal",
       "passed": true,
@@ -1539,7 +1053,7 @@
       "turns": [
         {
           "message": "hay join file nay voi file loss assignment",
-          "latency_ms": 15.4,
+          "latency_ms": 14.4,
           "checks": {
             "response_type": "refusal",
             "execution_mode": "REFUSAL",
@@ -1551,10 +1065,10 @@
           "passed": true
         }
       ],
-      "latency_ms": 15.4
+      "latency_ms": 14.4
     },
     {
-      "id": "HOL-203",
+      "id": "HOL-191",
       "set": "holdout",
       "category": "semantic_natural_language",
       "passed": true,
@@ -1563,22 +1077,22 @@
       "turns": [
         {
           "message": "May nao co ve gay van de nhieu nhat?",
-          "latency_ms": 33.8,
+          "latency_ms": 9260.7,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 33.8
+      "latency_ms": 9260.7
     },
     {
-      "id": "HOL-204",
+      "id": "HOL-192",
       "set": "holdout",
       "category": "simple_deterministic",
       "passed": true,
@@ -1586,8 +1100,8 @@
       "repeated_loop": false,
       "turns": [
         {
-          "message": "No 1 la gi? holdout 44",
-          "latency_ms": 29.0,
+          "message": "No 1 la gi? holdout 32",
+          "latency_ms": 33.6,
           "checks": {
             "response_type": "record_detail",
             "execution_mode": "RECORD_LOOKUP",
@@ -1599,10 +1113,10 @@
           "passed": true
         }
       ],
-      "latency_ms": 29.0
+      "latency_ms": 33.6
     },
     {
-      "id": "HOL-205",
+      "id": "HOL-193",
       "set": "holdout",
       "category": "simple_deterministic",
       "passed": true,
@@ -1610,8 +1124,8 @@
       "repeated_loop": false,
       "turns": [
         {
-          "message": "schema file co nhung cot nao? holdout 45",
-          "latency_ms": 33.6,
+          "message": "schema file co nhung cot nao? holdout 33",
+          "latency_ms": 33.4,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -1623,38 +1137,34 @@
           "passed": true
         }
       ],
-      "latency_ms": 33.6
+      "latency_ms": 33.4
     },
     {
-      "id": "HOL-206",
+      "id": "HOL-194",
       "set": "holdout",
       "category": "simple_deterministic",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
-          "message": "top 5 may theo downtime holdout 46",
-          "latency_ms": 34.3,
+          "message": "top 5 may theo downtime holdout 34",
+          "latency_ms": 108.5,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 34.3
+      "latency_ms": 108.5
     },
     {
-      "id": "HOL-207",
+      "id": "HOL-195",
       "set": "holdout",
       "category": "clarification_resolution",
       "passed": true,
@@ -1663,7 +1173,7 @@
       "turns": [
         {
           "message": "top",
-          "latency_ms": 13.7,
+          "latency_ms": 14.7,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -1676,7 +1186,7 @@
         },
         {
           "message": "5",
-          "latency_ms": 14.3,
+          "latency_ms": 16.2,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -1689,7 +1199,7 @@
         },
         {
           "message": "may",
-          "latency_ms": 68.6,
+          "latency_ms": 66.4,
           "checks": {
             "response_type": "table",
             "execution_mode": "DETERMINISTIC",
@@ -1701,10 +1211,10 @@
           "passed": true
         }
       ],
-      "latency_ms": 96.6
+      "latency_ms": 97.3
     },
     {
-      "id": "HOL-208",
+      "id": "HOL-196",
       "set": "holdout",
       "category": "clarification_resolution",
       "passed": true,
@@ -1713,7 +1223,7 @@
       "turns": [
         {
           "message": "ve bieu do tong quan",
-          "latency_ms": 16.6,
+          "latency_ms": 15.2,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -1726,7 +1236,7 @@
         },
         {
           "message": "tong",
-          "latency_ms": 15.8,
+          "latency_ms": 16.2,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -1739,7 +1249,7 @@
         },
         {
           "message": "may",
-          "latency_ms": 101.8,
+          "latency_ms": 105.9,
           "checks": {
             "response_type": "chart",
             "execution_mode": "DETERMINISTIC",
@@ -1751,10 +1261,10 @@
           "passed": true
         }
       ],
-      "latency_ms": 134.2
+      "latency_ms": 137.3
     },
     {
-      "id": "HOL-209",
+      "id": "HOL-197",
       "set": "holdout",
       "category": "topic_switch_during_clarification",
       "passed": true,
@@ -1763,7 +1273,7 @@
       "turns": [
         {
           "message": "top",
-          "latency_ms": 16.8,
+          "latency_ms": 15.6,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -1776,7 +1286,7 @@
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 28.8,
+          "latency_ms": 34.6,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -1788,51 +1298,45 @@
           "passed": true
         }
       ],
-      "latency_ms": 45.6
+      "latency_ms": 50.2
     },
     {
-      "id": "HOL-210",
+      "id": "HOL-198",
       "set": "holdout",
       "category": "topic_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True",
-        "turn 1: sql expected True got False",
-        "repeated clarification loop"
-      ],
-      "repeated_loop": true,
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
       "turns": [
         {
           "message": "top 5 may theo downtime",
-          "latency_ms": 30.6,
+          "latency_ms": 108.7,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "chi thang gan nhat",
-          "latency_ms": 15.0,
+          "latency_ms": 66.5,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 32.4,
+          "latency_ms": 31.9,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -1845,48 +1349,44 @@
         },
         {
           "message": "quay lai top may luc nay",
-          "latency_ms": 29.5,
+          "latency_ms": 72.9,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 107.5
+      "latency_ms": 280.0
     },
     {
-      "id": "HOL-211",
+      "id": "HOL-199",
       "set": "holdout",
       "category": "file_context_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "top 5 may theo downtime",
-          "latency_ms": 33.4,
+          "latency_ms": 109.8,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 52.1,
+          "latency_ms": 53.8,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -1899,74 +1399,70 @@
         },
         {
           "message": "quay lai top may luc nay",
-          "latency_ms": 15.7,
+          "latency_ms": 66.2,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 101.2
+      "latency_ms": 229.8
     },
     {
-      "id": "HOL-212",
+      "id": "HOL-200",
       "set": "holdout",
       "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 42.5,
+          "latency_ms": 144.5,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 42.5
+      "latency_ms": 144.5
     },
     {
-      "id": "HOL-213",
+      "id": "HOL-201",
       "set": "holdout",
       "category": "row_level_interval",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
-          "latency_ms": 53.3,
+          "latency_ms": 154.8,
           "checks": {
             "response_type": "scalar",
-            "execution_mode": "TIME_WINDOW_RECORDS",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 53.3
+      "latency_ms": 154.8
     },
     {
-      "id": "HOL-214",
+      "id": "HOL-202",
       "set": "holdout",
       "category": "safety_refusal",
       "passed": true,
@@ -1975,7 +1471,7 @@
       "turns": [
         {
           "message": "hay join file nay voi file loss assignment",
-          "latency_ms": 15.0,
+          "latency_ms": 14.9,
           "checks": {
             "response_type": "refusal",
             "execution_mode": "REFUSAL",
@@ -1987,10 +1483,10 @@
           "passed": true
         }
       ],
-      "latency_ms": 15.0
+      "latency_ms": 14.9
     },
     {
-      "id": "HOL-215",
+      "id": "HOL-203",
       "set": "holdout",
       "category": "semantic_natural_language",
       "passed": true,
@@ -1999,22 +1495,22 @@
       "turns": [
         {
           "message": "May nao co ve gay van de nhieu nhat?",
-          "latency_ms": 32.8,
+          "latency_ms": 9262.4,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 32.8
+      "latency_ms": 9262.4
     },
     {
-      "id": "HOL-216",
+      "id": "HOL-204",
       "set": "holdout",
       "category": "simple_deterministic",
       "passed": true,
@@ -2022,8 +1518,8 @@
       "repeated_loop": false,
       "turns": [
         {
-          "message": "No 1 la gi? holdout 56",
-          "latency_ms": 35.5,
+          "message": "No 1 la gi? holdout 44",
+          "latency_ms": 36.8,
           "checks": {
             "response_type": "record_detail",
             "execution_mode": "RECORD_LOOKUP",
@@ -2035,10 +1531,10 @@
           "passed": true
         }
       ],
-      "latency_ms": 35.5
+      "latency_ms": 36.8
     },
     {
-      "id": "HOL-217",
+      "id": "HOL-205",
       "set": "holdout",
       "category": "simple_deterministic",
       "passed": true,
@@ -2046,8 +1542,8 @@
       "repeated_loop": false,
       "turns": [
         {
-          "message": "schema file co nhung cot nao? holdout 57",
-          "latency_ms": 34.0,
+          "message": "schema file co nhung cot nao? holdout 45",
+          "latency_ms": 30.6,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -2059,23 +1555,43 @@
           "passed": true
         }
       ],
-      "latency_ms": 34.0
+      "latency_ms": 30.6
     },
     {
-      "id": "HOL-218",
+      "id": "HOL-206",
       "set": "holdout",
       "category": "simple_deterministic",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
-          "message": "top 5 may theo downtime holdout 58",
-          "latency_ms": 31.3,
+          "message": "top 5 may theo downtime holdout 46",
+          "latency_ms": 109.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 109.2
+    },
+    {
+      "id": "HOL-207",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 17.5,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -2084,10 +1600,404 @@
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": true
           },
-          "passed": false
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 16.6,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 67.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
         }
       ],
-      "latency_ms": 31.3
+      "latency_ms": 101.1
+    },
+    {
+      "id": "HOL-208",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan",
+          "latency_ms": 15.4,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 15.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 110.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 140.9
+    },
+    {
+      "id": "HOL-209",
+      "set": "holdout",
+      "category": "topic_switch_during_clarification",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 16.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 32.2,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 48.3
+    },
+    {
+      "id": "HOL-210",
+      "set": "holdout",
+      "category": "topic_restoration",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 112.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 65.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 29.8,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 69.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 277.4
+    },
+    {
+      "id": "HOL-211",
+      "set": "holdout",
+      "category": "file_context_restoration",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 111.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 54.5,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 67.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 233.3
+    },
+    {
+      "id": "HOL-212",
+      "set": "holdout",
+      "category": "multipart",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 141.6,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 141.6
+    },
+    {
+      "id": "HOL-213",
+      "set": "holdout",
+      "category": "row_level_interval",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 127.8,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 127.8
+    },
+    {
+      "id": "HOL-214",
+      "set": "holdout",
+      "category": "safety_refusal",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "hay join file nay voi file loss assignment",
+          "latency_ms": 15.2,
+          "checks": {
+            "response_type": "refusal",
+            "execution_mode": "REFUSAL",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 15.2
+    },
+    {
+      "id": "HOL-215",
+      "set": "holdout",
+      "category": "semantic_natural_language",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9296.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 9296.4
+    },
+    {
+      "id": "HOL-216",
+      "set": "holdout",
+      "category": "simple_deterministic",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "No 1 la gi? holdout 56",
+          "latency_ms": 33.3,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 33.3
+    },
+    {
+      "id": "HOL-217",
+      "set": "holdout",
+      "category": "simple_deterministic",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? holdout 57",
+          "latency_ms": 30.4,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 30.4
+    },
+    {
+      "id": "HOL-218",
+      "set": "holdout",
+      "category": "simple_deterministic",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime holdout 58",
+          "latency_ms": 110.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 110.6
     },
     {
       "id": "HOL-219",
@@ -2099,7 +2009,425 @@
       "turns": [
         {
           "message": "top",
-          "latency_ms": 16.0,
+          "latency_ms": 14.6,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 14.9,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 64.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 93.6
+    },
+    {
+      "id": "HOL-220",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan",
+          "latency_ms": 17.4,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 15.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 115.2,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 147.6
+    },
+    {
+      "id": "HOL-221",
+      "set": "holdout",
+      "category": "topic_switch_during_clarification",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 16.4,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 32.6,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 48.9
+    },
+    {
+      "id": "HOL-222",
+      "set": "holdout",
+      "category": "topic_restoration",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 110.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 66.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 31.4,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 72.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 280.5
+    },
+    {
+      "id": "HOL-223",
+      "set": "holdout",
+      "category": "file_context_restoration",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 110.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 55.0,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 67.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 233.3
+    },
+    {
+      "id": "HOL-224",
+      "set": "holdout",
+      "category": "multipart",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 143.0,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 143.0
+    },
+    {
+      "id": "HOL-225",
+      "set": "holdout",
+      "category": "row_level_interval",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 125.9,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 125.9
+    },
+    {
+      "id": "HOL-226",
+      "set": "holdout",
+      "category": "safety_refusal",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "hay join file nay voi file loss assignment",
+          "latency_ms": 14.5,
+          "checks": {
+            "response_type": "refusal",
+            "execution_mode": "REFUSAL",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 14.5
+    },
+    {
+      "id": "HOL-227",
+      "set": "holdout",
+      "category": "semantic_natural_language",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9096.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 9096.9
+    },
+    {
+      "id": "HOL-228",
+      "set": "holdout",
+      "category": "simple_deterministic",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "No 1 la gi? holdout 68",
+          "latency_ms": 32.0,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 32.0
+    },
+    {
+      "id": "HOL-229",
+      "set": "holdout",
+      "category": "simple_deterministic",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? holdout 69",
+          "latency_ms": 30.3,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 30.3
+    },
+    {
+      "id": "HOL-230",
+      "set": "holdout",
+      "category": "simple_deterministic",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime holdout 70",
+          "latency_ms": 109.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 109.9
+    },
+    {
+      "id": "HOL-231",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 16.5,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -2125,7 +2453,7 @@
         },
         {
           "message": "may",
-          "latency_ms": 69.6,
+          "latency_ms": 65.1,
           "checks": {
             "response_type": "table",
             "execution_mode": "DETERMINISTIC",
@@ -2137,10 +2465,10 @@
           "passed": true
         }
       ],
-      "latency_ms": 101.1
+      "latency_ms": 97.0
     },
     {
-      "id": "HOL-220",
+      "id": "HOL-232",
       "set": "holdout",
       "category": "clarification_resolution",
       "passed": true,
@@ -2149,56 +2477,6 @@
       "turns": [
         {
           "message": "ve bieu do tong quan",
-          "latency_ms": 16.2,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        },
-        {
-          "message": "tong",
-          "latency_ms": 15.8,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        },
-        {
-          "message": "may",
-          "latency_ms": 103.8,
-          "checks": {
-            "response_type": "chart",
-            "execution_mode": "DETERMINISTIC",
-            "llm_called": false,
-            "sql_executed": true,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": false
-          },
-          "passed": true
-        }
-      ],
-      "latency_ms": 135.9
-    },
-    {
-      "id": "HOL-221",
-      "set": "holdout",
-      "category": "topic_switch_during_clarification",
-      "passed": true,
-      "failure_reasons": [],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "top",
           "latency_ms": 15.1,
           "checks": {
             "response_type": "clarification",
@@ -2211,8 +2489,58 @@
           "passed": true
         },
         {
+          "message": "tong",
+          "latency_ms": 16.2,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 101.4,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 132.8
+    },
+    {
+      "id": "HOL-233",
+      "set": "holdout",
+      "category": "topic_switch_during_clarification",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 15.9,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 29.7,
+          "latency_ms": 31.1,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -2224,51 +2552,45 @@
           "passed": true
         }
       ],
-      "latency_ms": 44.9
+      "latency_ms": 47.0
     },
     {
-      "id": "HOL-222",
+      "id": "HOL-234",
       "set": "holdout",
       "category": "topic_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True",
-        "turn 1: sql expected True got False",
-        "repeated clarification loop"
-      ],
-      "repeated_loop": true,
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
       "turns": [
         {
           "message": "top 5 may theo downtime",
-          "latency_ms": 30.6,
+          "latency_ms": 111.8,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "chi thang gan nhat",
-          "latency_ms": 13.3,
+          "latency_ms": 62.9,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 28.1,
+          "latency_ms": 33.7,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -2281,48 +2603,44 @@
         },
         {
           "message": "quay lai top may luc nay",
-          "latency_ms": 28.5,
+          "latency_ms": 68.6,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 100.5
+      "latency_ms": 277.0
     },
     {
-      "id": "HOL-223",
+      "id": "HOL-235",
       "set": "holdout",
       "category": "file_context_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
           "message": "top 5 may theo downtime",
-          "latency_ms": 31.5,
+          "latency_ms": 110.0,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         },
         {
           "message": "schema file co nhung cot nao?",
-          "latency_ms": 55.6,
+          "latency_ms": 54.7,
           "checks": {
             "response_type": "schema",
             "execution_mode": "SCHEMA_INSPECTION",
@@ -2335,7 +2653,151 @@
         },
         {
           "message": "quay lai top may luc nay",
-          "latency_ms": 14.7,
+          "latency_ms": 67.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 232.4
+    },
+    {
+      "id": "HOL-236",
+      "set": "holdout",
+      "category": "multipart",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 142.2,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 142.2
+    },
+    {
+      "id": "HOL-237",
+      "set": "holdout",
+      "category": "row_level_interval",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 127.7,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 127.7
+    },
+    {
+      "id": "HOL-238",
+      "set": "holdout",
+      "category": "safety_refusal",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "hay join file nay voi file loss assignment",
+          "latency_ms": 14.8,
+          "checks": {
+            "response_type": "refusal",
+            "execution_mode": "REFUSAL",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 14.8
+    },
+    {
+      "id": "HOL-239",
+      "set": "holdout",
+      "category": "semantic_natural_language",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9324.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 9324.9
+    },
+    {
+      "id": "HOL-240",
+      "set": "holdout",
+      "category": "simple_deterministic",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "No 1 la gi? holdout 80",
+          "latency_ms": 34.4,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 34.4
+    },
+    {
+      "id": "HOLD-081",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 15.6,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -2345,64 +2807,162 @@
             "pending_after": true
           },
           "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 17.2,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 66.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
         }
       ],
-      "latency_ms": 101.9
+      "latency_ms": 99.5
     },
     {
-      "id": "HOL-224",
+      "id": "HOLD-082",
       "set": "holdout",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
+      "category": "topic_restoration",
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
-          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 43.3,
+          "message": "top 5 may theo downtime",
+          "latency_ms": 112.7,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 32.6,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
             "llm_called": false,
             "sql_executed": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 67.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
         }
       ],
-      "latency_ms": 43.3
+      "latency_ms": 212.5
     },
     {
-      "id": "HOL-225",
+      "id": "HOLD-083",
+      "set": "holdout",
+      "category": "file_context_restoration",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 119.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "top 5 nguyen nhan theo so lan",
+          "latency_ms": 140.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 68.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 327.6
+    },
+    {
+      "id": "HOLD-084",
       "set": "holdout",
       "category": "row_level_interval",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
-          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
-          "latency_ms": 50.6,
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #84",
+          "latency_ms": 129.5,
           "checks": {
             "response_type": "scalar",
-            "execution_mode": "TIME_WINDOW_RECORDS",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 50.6
+      "latency_ms": 129.5
     },
     {
-      "id": "HOL-226",
+      "id": "HOLD-085",
       "set": "holdout",
       "category": "safety_refusal",
       "passed": true,
@@ -2410,7 +2970,7 @@
       "repeated_loop": false,
       "turns": [
         {
-          "message": "hay join file nay voi file loss assignment",
+          "message": "hay join file nay voi file loss assignment #85",
           "latency_ms": 15.2,
           "checks": {
             "response_type": "refusal",
@@ -2426,7 +2986,7 @@
       "latency_ms": 15.2
     },
     {
-      "id": "HOL-227",
+      "id": "HOLD-086",
       "set": "holdout",
       "category": "semantic_natural_language",
       "passed": true,
@@ -2434,99 +2994,71 @@
       "repeated_loop": false,
       "turns": [
         {
-          "message": "May nao co ve gay van de nhieu nhat?",
-          "latency_ms": 30.8,
+          "message": "May nao co ve gay van de nhieu nhat? #86",
+          "latency_ms": 10246.4,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        }
-      ],
-      "latency_ms": 30.8
-    },
-    {
-      "id": "HOL-228",
-      "set": "holdout",
-      "category": "simple_deterministic",
-      "passed": true,
-      "failure_reasons": [],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "No 1 la gi? holdout 68",
-          "latency_ms": 33.2,
-          "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "RECORD_LOOKUP",
-            "llm_called": false,
-            "sql_executed": false,
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 33.2
+      "latency_ms": 10246.4
     },
     {
-      "id": "HOL-229",
+      "id": "HOLD-087",
       "set": "holdout",
-      "category": "simple_deterministic",
+      "category": "semantic_natural_language",
       "passed": true,
       "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
-          "message": "schema file co nhung cot nao? holdout 69",
-          "latency_ms": 31.0,
+          "message": "May nao bat thuong ve downtime? #87",
+          "latency_ms": 9918.4,
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
-            "llm_called": false,
-            "sql_executed": false,
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 31.0
+      "latency_ms": 9918.4
     },
     {
-      "id": "HOL-230",
+      "id": "HOLD-088",
       "set": "holdout",
-      "category": "simple_deterministic",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True"
-      ],
+      "category": "multipart",
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
-          "message": "top 5 may theo downtime holdout 70",
-          "latency_ms": 28.7,
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #88",
+          "latency_ms": 139.4,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 28.7
+      "latency_ms": 139.4
     },
     {
-      "id": "HOL-231",
+      "id": "HOLD-089",
       "set": "holdout",
       "category": "clarification_resolution",
       "passed": true,
@@ -2535,7 +3067,7 @@
       "turns": [
         {
           "message": "top",
-          "latency_ms": 17.1,
+          "latency_ms": 16.8,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -2548,7 +3080,7 @@
         },
         {
           "message": "5",
-          "latency_ms": 14.3,
+          "latency_ms": 14.8,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -2561,7 +3093,7 @@
         },
         {
           "message": "may",
-          "latency_ms": 71.7,
+          "latency_ms": 63.6,
           "checks": {
             "response_type": "table",
             "execution_mode": "DETERMINISTIC",
@@ -2573,76 +3105,26 @@
           "passed": true
         }
       ],
-      "latency_ms": 103.1
+      "latency_ms": 95.2
     },
     {
-      "id": "HOL-232",
+      "id": "HOLD-090",
       "set": "holdout",
-      "category": "clarification_resolution",
+      "category": "topic_restoration",
       "passed": true,
       "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
-          "message": "ve bieu do tong quan",
-          "latency_ms": 16.1,
+          "message": "top 5 may theo downtime",
+          "latency_ms": 113.6,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        },
-        {
-          "message": "tong",
-          "latency_ms": 15.4,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        },
-        {
-          "message": "may",
-          "latency_ms": 150.6,
-          "checks": {
-            "response_type": "chart",
+            "response_type": "table",
             "execution_mode": "DETERMINISTIC",
             "llm_called": false,
             "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
-          },
-          "passed": true
-        }
-      ],
-      "latency_ms": 182.2
-    },
-    {
-      "id": "HOL-233",
-      "set": "holdout",
-      "category": "topic_switch_during_clarification",
-      "passed": true,
-      "failure_reasons": [],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "top",
-          "latency_ms": 15.3,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
           },
           "passed": true
         },
@@ -2658,112 +3140,52 @@
             "pending_after": false
           },
           "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 68.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
         }
       ],
-      "latency_ms": 48.1
+      "latency_ms": 214.7
     },
     {
-      "id": "HOL-234",
+      "id": "HOLD-091",
       "set": "holdout",
-      "category": "topic_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True",
-        "turn 1: sql expected True got False",
-        "repeated clarification loop"
-      ],
-      "repeated_loop": true,
+      "category": "file_context_restoration",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
       "turns": [
         {
           "message": "top 5 may theo downtime",
-          "latency_ms": 31.8,
+          "latency_ms": 112.0,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": false
-        },
-        {
-          "message": "chi thang gan nhat",
-          "latency_ms": 15.8,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": false
-        },
-        {
-          "message": "schema file co nhung cot nao?",
-          "latency_ms": 31.6,
-          "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
-            "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
           "passed": true
         },
         {
-          "message": "quay lai top may luc nay",
-          "latency_ms": 31.6,
+          "message": "top 5 nguyen nhan theo so lan",
+          "latency_ms": 143.9,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": true
-        }
-      ],
-      "latency_ms": 110.9
-    },
-    {
-      "id": "HOL-235",
-      "set": "holdout",
-      "category": "file_context_restoration",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: response_type expected table got clarification",
-        "turn 0: sql expected True got False",
-        "turn 0: pending expected False got True"
-      ],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "top 5 may theo downtime",
-          "latency_ms": 32.2,
-          "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
-          },
-          "passed": false
-        },
-        {
-          "message": "schema file co nhung cot nao?",
-          "latency_ms": 54.9,
-          "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
-            "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
             "pending_after": false
           },
@@ -2771,74 +3193,46 @@
         },
         {
           "message": "quay lai top may luc nay",
-          "latency_ms": 15.7,
+          "latency_ms": 73.2,
           "checks": {
-            "response_type": "clarification",
-            "execution_mode": "CLARIFICATION",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": true
+            "pending_after": false
           },
           "passed": true
         }
       ],
-      "latency_ms": 102.9
+      "latency_ms": 329.1
     },
     {
-      "id": "HOL-236",
-      "set": "holdout",
-      "category": "multipart",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
-      "repeated_loop": false,
-      "turns": [
-        {
-          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
-          "latency_ms": 43.7,
-          "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "LAST_RECORD",
-            "llm_called": false,
-            "sql_executed": false,
-            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "pending_after": false
-          },
-          "passed": false
-        }
-      ],
-      "latency_ms": 43.7
-    },
-    {
-      "id": "HOL-237",
+      "id": "HOLD-092",
       "set": "holdout",
       "category": "row_level_interval",
-      "passed": false,
-      "failure_reasons": [
-        "turn 0: sql expected True got False"
-      ],
+      "passed": true,
+      "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
-          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
-          "latency_ms": 53.8,
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #92",
+          "latency_ms": 125.7,
           "checks": {
             "response_type": "scalar",
-            "execution_mode": "TIME_WINDOW_RECORDS",
+            "execution_mode": "DETERMINISTIC",
             "llm_called": false,
-            "sql_executed": false,
+            "sql_executed": true,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "pending_after": false
           },
-          "passed": false
+          "passed": true
         }
       ],
-      "latency_ms": 53.8
+      "latency_ms": 125.7
     },
     {
-      "id": "HOL-238",
+      "id": "HOLD-093",
       "set": "holdout",
       "category": "safety_refusal",
       "passed": true,
@@ -2846,8 +3240,8 @@
       "repeated_loop": false,
       "turns": [
         {
-          "message": "hay join file nay voi file loss assignment",
-          "latency_ms": 14.7,
+          "message": "hay join file nay voi file loss assignment #93",
+          "latency_ms": 15.6,
           "checks": {
             "response_type": "refusal",
             "execution_mode": "REFUSAL",
@@ -2859,10 +3253,10 @@
           "passed": true
         }
       ],
-      "latency_ms": 14.7
+      "latency_ms": 15.6
     },
     {
-      "id": "HOL-239",
+      "id": "HOLD-094",
       "set": "holdout",
       "category": "semantic_natural_language",
       "passed": true,
@@ -2870,8 +3264,80 @@
       "repeated_loop": false,
       "turns": [
         {
-          "message": "May nao co ve gay van de nhieu nhat?",
-          "latency_ms": 30.9,
+          "message": "May nao co ve gay van de nhieu nhat? #94",
+          "latency_ms": 9382.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 9382.2
+    },
+    {
+      "id": "HOLD-095",
+      "set": "holdout",
+      "category": "semantic_natural_language",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #95",
+          "latency_ms": 9019.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 9019.2
+    },
+    {
+      "id": "HOLD-096",
+      "set": "holdout",
+      "category": "multipart",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #96",
+          "latency_ms": 133.6,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 133.6
+    },
+    {
+      "id": "HOLD-097",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 14.4,
           "checks": {
             "response_type": "clarification",
             "execution_mode": "CLARIFICATION",
@@ -2881,24 +3347,174 @@
             "pending_after": true
           },
           "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 15.2,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 66.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
         }
       ],
-      "latency_ms": 30.9
+      "latency_ms": 96.2
     },
     {
-      "id": "HOL-240",
+      "id": "HOLD-098",
       "set": "holdout",
-      "category": "simple_deterministic",
+      "category": "topic_restoration",
       "passed": true,
       "failure_reasons": [],
       "repeated_loop": false,
       "turns": [
         {
-          "message": "No 1 la gi? holdout 80",
-          "latency_ms": 34.6,
+          "message": "top 5 may theo downtime",
+          "latency_ms": 109.5,
           "checks": {
-            "response_type": "record_detail",
-            "execution_mode": "RECORD_LOOKUP",
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 31.7,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 61.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 202.4
+    },
+    {
+      "id": "HOLD-099",
+      "set": "holdout",
+      "category": "file_context_restoration",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 117.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "top 5 nguyen nhan theo so lan",
+          "latency_ms": 146.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 64.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 327.4
+    },
+    {
+      "id": "HOLD-100",
+      "set": "holdout",
+      "category": "row_level_interval",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #100",
+          "latency_ms": 137.8,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 137.8
+    },
+    {
+      "id": "HOLD-101",
+      "set": "holdout",
+      "category": "safety_refusal",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "hay join file nay voi file loss assignment #101",
+          "latency_ms": 14.4,
+          "checks": {
+            "response_type": "refusal",
+            "execution_mode": "REFUSAL",
             "llm_called": false,
             "sql_executed": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
@@ -2907,7 +3523,619 @@
           "passed": true
         }
       ],
-      "latency_ms": 34.6
+      "latency_ms": 14.4
+    },
+    {
+      "id": "HOLD-102",
+      "set": "holdout",
+      "category": "semantic_natural_language",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #102",
+          "latency_ms": 9296.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 9296.8
+    },
+    {
+      "id": "HOLD-103",
+      "set": "holdout",
+      "category": "semantic_natural_language",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #103",
+          "latency_ms": 9011.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 9011.7
+    },
+    {
+      "id": "HOLD-104",
+      "set": "holdout",
+      "category": "multipart",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #104",
+          "latency_ms": 145.7,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 145.7
+    },
+    {
+      "id": "HOLD-105",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 15.7,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 15.8,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 65.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 96.6
+    },
+    {
+      "id": "HOLD-106",
+      "set": "holdout",
+      "category": "topic_restoration",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 109.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 33.9,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 67.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 210.2
+    },
+    {
+      "id": "HOLD-107",
+      "set": "holdout",
+      "category": "file_context_restoration",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 108.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "top 5 nguyen nhan theo so lan",
+          "latency_ms": 143.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 72.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 323.5
+    },
+    {
+      "id": "HOLD-108",
+      "set": "holdout",
+      "category": "row_level_interval",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #108",
+          "latency_ms": 132.5,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 132.5
+    },
+    {
+      "id": "HOLD-109",
+      "set": "holdout",
+      "category": "safety_refusal",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "hay join file nay voi file loss assignment #109",
+          "latency_ms": 16.1,
+          "checks": {
+            "response_type": "refusal",
+            "execution_mode": "REFUSAL",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 16.1
+    },
+    {
+      "id": "HOLD-110",
+      "set": "holdout",
+      "category": "semantic_natural_language",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #110",
+          "latency_ms": 17124.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 17124.1
+    },
+    {
+      "id": "HOLD-111",
+      "set": "holdout",
+      "category": "semantic_natural_language",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #111",
+          "latency_ms": 8967.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 8967.9
+    },
+    {
+      "id": "HOLD-112",
+      "set": "holdout",
+      "category": "multipart",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #112",
+          "latency_ms": 141.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 141.5
+    },
+    {
+      "id": "HOLD-113",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 15.6,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 16.2,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 68.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 99.9
+    },
+    {
+      "id": "HOLD-114",
+      "set": "holdout",
+      "category": "topic_restoration",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 109.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 32.8,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 68.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 211.4
+    },
+    {
+      "id": "HOLD-115",
+      "set": "holdout",
+      "category": "file_context_restoration",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 112.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "top 5 nguyen nhan theo so lan",
+          "latency_ms": 135.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 69.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 317.0
+    },
+    {
+      "id": "HOLD-116",
+      "set": "holdout",
+      "category": "row_level_interval",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #116",
+          "latency_ms": 128.6,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 128.6
+    },
+    {
+      "id": "HOLD-117",
+      "set": "holdout",
+      "category": "safety_refusal",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "hay join file nay voi file loss assignment #117",
+          "latency_ms": 15.2,
+          "checks": {
+            "response_type": "refusal",
+            "execution_mode": "REFUSAL",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 15.2
+    },
+    {
+      "id": "HOLD-118",
+      "set": "holdout",
+      "category": "semantic_natural_language",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #118",
+          "latency_ms": 16956.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 16956.1
+    },
+    {
+      "id": "HOLD-119",
+      "set": "holdout",
+      "category": "semantic_natural_language",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #119",
+          "latency_ms": 8765.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 8765.6
+    },
+    {
+      "id": "HOLD-120",
+      "set": "holdout",
+      "category": "multipart",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #120",
+          "latency_ms": 144.0,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 144.0
     }
   ]
 }

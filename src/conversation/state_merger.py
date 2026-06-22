@@ -137,7 +137,8 @@ class StateMerger:
         table_name = plan.tables[0] if plan.tables else state.active_table
         if table_name:
             return next((table for table in self.catalog.get("tables", []) if table["table_name"] == table_name), None)
-        return find_table(self.catalog, "machine_downtime")
+        scoped_tables = self.catalog.get("tables", [])
+        return find_table(self.catalog, "machine_downtime") or (scoped_tables[0] if len(scoped_tables) == 1 else None)
 
     def _replace_filter_columns(self, old: list[FilterSpec], columns: list[str | None], new: list[FilterSpec]) -> list[FilterSpec]:
         column_set = {col for col in columns if col}

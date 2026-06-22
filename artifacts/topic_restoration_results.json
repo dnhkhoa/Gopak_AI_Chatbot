@@ -1,0 +1,1879 @@
+{
+  "summary": {
+    "total": 35,
+    "passed": 35,
+    "accuracy": 1.0
+  },
+  "results": [
+    {
+      "id": "DEV-007",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 122.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 73.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 32.5,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 74.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-019",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 108.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 69.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 31.5,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 72.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-031",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 122.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 67.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 32.2,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 68.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-043",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 113.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 68.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 31.4,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 71.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-055",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 110.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 65.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 31.8,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 73.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-067",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 110.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 65.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 31.8,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 70.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-079",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 107.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 66.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 33.8,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 68.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-091",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 110.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 62.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 32.4,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 65.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-103",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 108.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 67.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 29.6,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 67.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-115",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 108.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 66.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 33.7,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 66.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-127",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 107.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 66.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 32.1,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 69.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-139",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 117.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 63.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 29.4,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 70.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-151",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 110.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 66.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 34.1,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 68.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-165",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 111.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 32.0,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 63.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-173",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 105.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 29.2,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 67.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-181",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 109.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 33.5,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 67.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-189",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 110.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 31.4,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 63.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-197",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 111.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 31.9,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 64.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-205",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 106.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 30.4,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 66.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-213",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 109.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 33.3,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 67.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-221",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 108.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 33.0,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 70.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-229",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 110.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 30.3,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 64.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-237",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 109.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 32.7,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 62.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-162",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 130.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 74.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 31.6,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 74.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-174",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 110.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 73.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 35.8,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 67.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-186",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 119.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 66.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 34.4,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 70.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-198",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 108.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 66.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 31.9,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 72.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-210",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 112.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 65.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 29.8,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 69.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-222",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 110.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 66.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 31.4,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 72.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-234",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 111.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "chi thang gan nhat",
+          "latency_ms": 62.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 33.7,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay",
+          "latency_ms": 68.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-082",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 112.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 32.6,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 67.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-090",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 113.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 32.8,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 68.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-098",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 109.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 31.7,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 61.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-106",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 109.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 33.9,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 67.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-114",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime",
+          "latency_ms": 109.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "schema file co nhung cot nao?",
+          "latency_ms": 32.8,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        },
+        {
+          "message": "quay lai top may luc nay them so lan dung",
+          "latency_ms": 68.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

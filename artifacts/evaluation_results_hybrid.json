@@ -11,7 +11,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "fefaca3c-f8c7-4f38-91e4-c2e2d343361f",
+      "conversation_id": "a3dfeb68-18cc-4bf0-98d8-ca2bd03eb200",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -46,7 +46,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "fefaca3c-f8c7-4f38-91e4-c2e2d343361f",
+      "conversation_id": "a3dfeb68-18cc-4bf0-98d8-ca2bd03eb200",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -186,17 +186,17 @@
     "generated_sql": "SELECT count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"row_count\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 50.50750001100823,
-    "query_latency_ms": 21.571699995547533,
-    "render_latency_ms": 0.14910000027157366,
-    "total_latency_ms": 104.52079999959096,
+    "llm_latency_ms": 52.402100001927465,
+    "query_latency_ms": 21.999899996444583,
+    "render_latency_ms": 0.21899997955188155,
+    "total_latency_ms": 106.05600001872517,
     "latency_ms": {
-      "routing": 50.46530000981875,
+      "routing": 52.35860001994297,
       "llm": 0.0,
-      "validation": 0.04010001430287957,
+      "validation": 0.041000021155923605,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 50.50750001100823
+      "total": 52.402100001927465
     },
     "presented_response": {
       "response_type": "scalar",
@@ -222,7 +222,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "4dd4ff85-fda7-4684-a61c-0d8a9874479e",
+      "conversation_id": "d84c6bd3-deb4-408e-ae8f-6d87f7dbd1a5",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -257,7 +257,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "4dd4ff85-fda7-4684-a61c-0d8a9874479e",
+      "conversation_id": "d84c6bd3-deb4-408e-ae8f-6d87f7dbd1a5",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -397,17 +397,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 48.59209997812286,
-    "query_latency_ms": 22.783200023695827,
-    "render_latency_ms": 0.12310000602155924,
-    "total_latency_ms": 100.77580000506714,
+    "llm_latency_ms": 49.72819998511113,
+    "query_latency_ms": 24.02300000539981,
+    "render_latency_ms": 0.13230001786723733,
+    "total_latency_ms": 101.59860001294874,
     "latency_ms": {
-      "routing": 48.555899993516505,
+      "routing": 49.686199985444546,
       "llm": 0.0,
-      "validation": 0.03320001997053623,
+      "validation": 0.03920000744983554,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 48.59209997812286
+      "total": 49.72819998511113
     },
     "presented_response": {
       "response_type": "scalar",
@@ -433,7 +433,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "70406d48-0cb6-4a48-beff-97b4415b3bdd",
+      "conversation_id": "5beceb92-0cdb-4b73-a869-a15306742a78",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -468,7 +468,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "70406d48-0cb6-4a48-beff-97b4415b3bdd",
+      "conversation_id": "5beceb92-0cdb-4b73-a869-a15306742a78",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -608,17 +608,17 @@
     "generated_sql": "SELECT avg(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"avg_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"avg_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 48.72269998304546,
-    "query_latency_ms": 22.71590000600554,
-    "render_latency_ms": 0.11369999265298247,
-    "total_latency_ms": 100.5443999893032,
+    "llm_latency_ms": 54.90670001017861,
+    "query_latency_ms": 22.251600021263584,
+    "render_latency_ms": 0.11530000483617187,
+    "total_latency_ms": 112.32079999172129,
     "latency_ms": {
-      "routing": 48.69329999201,
+      "routing": 54.87270001322031,
       "llm": 0.0,
-      "validation": 0.027400004910305142,
+      "validation": 0.03170000854879618,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 48.72269998304546
+      "total": 54.90670001017861
     },
     "presented_response": {
       "response_type": "scalar",
@@ -644,7 +644,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "e31d6d10-64ed-4d2d-a3bf-0f679816fa59",
+      "conversation_id": "90bac05b-fd7d-4be7-877b-9d8ffef51fa7",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -679,7 +679,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "e31d6d10-64ed-4d2d-a3bf-0f679816fa59",
+      "conversation_id": "90bac05b-fd7d-4be7-877b-9d8ffef51fa7",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -819,17 +819,17 @@
     "generated_sql": "SELECT max(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"max_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"max_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 52.30670000310056,
-    "query_latency_ms": 22.975700005190447,
-    "render_latency_ms": 0.13169998419471085,
-    "total_latency_ms": 104.06189999775961,
+    "llm_latency_ms": 52.36859997967258,
+    "query_latency_ms": 27.215900016017258,
+    "render_latency_ms": 0.14710001414641738,
+    "total_latency_ms": 107.39089999697171,
     "latency_ms": {
-      "routing": 52.28010000428185,
+      "routing": 52.339699992444366,
       "llm": 0.0,
-      "validation": 0.02449998282827437,
+      "validation": 0.026999972760677338,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 52.30670000310056
+      "total": 52.36859997967258
     },
     "presented_response": {
       "response_type": "scalar",
@@ -855,7 +855,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "6c22c164-48fc-46e0-9295-21bc1c5249db",
+      "conversation_id": "c8855eba-c59c-49ad-a1d2-96bd3022ff9e",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -890,7 +890,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "6c22c164-48fc-46e0-9295-21bc1c5249db",
+      "conversation_id": "c8855eba-c59c-49ad-a1d2-96bd3022ff9e",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1030,17 +1030,17 @@
     "generated_sql": "SELECT min(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"min_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"min_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 48.4569999971427,
-    "query_latency_ms": 21.89380000345409,
-    "render_latency_ms": 0.1255999959539622,
-    "total_latency_ms": 98.5903000109829,
+    "llm_latency_ms": 48.37159998714924,
+    "query_latency_ms": 22.113600018201396,
+    "render_latency_ms": 0.11640001321211457,
+    "total_latency_ms": 101.98020000825636,
     "latency_ms": {
-      "routing": 48.43110000365414,
+      "routing": 48.34419998223893,
       "llm": 0.0,
-      "validation": 0.02370000584051013,
+      "validation": 0.02519998815841973,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 48.4569999971427
+      "total": 48.37159998714924
     },
     "presented_response": {
       "response_type": "scalar",
@@ -1066,7 +1066,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "0d7a3cec-a671-4682-8fae-786c899bf5f1",
+      "conversation_id": "7328d784-9824-4f58-900c-c33610c713fd",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1101,7 +1101,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "0d7a3cec-a671-4682-8fae-786c899bf5f1",
+      "conversation_id": "7328d784-9824-4f58-900c-c33610c713fd",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1241,17 +1241,17 @@
     "generated_sql": "SELECT count(DISTINCT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\") AS \"machine_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"machine_count\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 49.387000006390736,
-    "query_latency_ms": 23.146299994550645,
-    "render_latency_ms": 0.15529998927377164,
-    "total_latency_ms": 104.10980001324788,
+    "llm_latency_ms": 44.019099994329736,
+    "query_latency_ms": 21.755199995823205,
+    "render_latency_ms": 0.12730000889860094,
+    "total_latency_ms": 94.33819999685511,
     "latency_ms": {
-      "routing": 49.36279999674298,
+      "routing": 43.99179999018088,
       "llm": 0.0,
-      "validation": 0.022199994418770075,
+      "validation": 0.025299988919869065,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 49.387000006390736
+      "total": 44.019099994329736
     },
     "presented_response": {
       "response_type": "scalar",
@@ -1277,7 +1277,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "4733c664-5d94-40cc-9ecd-f7e90dbd3341",
+      "conversation_id": "8356579c-bfe2-4beb-812e-038275c47b26",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1312,7 +1312,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "4733c664-5d94-40cc-9ecd-f7e90dbd3341",
+      "conversation_id": "8356579c-bfe2-4beb-812e-038275c47b26",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1452,17 +1452,17 @@
     "generated_sql": "SELECT count(DISTINCT \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\") AS \"reason_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"reason_count\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 50.763300008838996,
-    "query_latency_ms": 26.28079999703914,
-    "render_latency_ms": 0.1475999888498336,
-    "total_latency_ms": 107.88619998493232,
+    "llm_latency_ms": 47.970600018743426,
+    "query_latency_ms": 23.304599977564067,
+    "render_latency_ms": 0.14170000213198364,
+    "total_latency_ms": 100.72640000726096,
     "latency_ms": {
-      "routing": 50.73329998413101,
+      "routing": 47.94460002449341,
       "llm": 0.0,
-      "validation": 0.02780000795610249,
+      "validation": 0.02400000812485814,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 50.763300008838996
+      "total": 47.970600018743426
     },
     "presented_response": {
       "response_type": "scalar",
@@ -1488,7 +1488,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "67d31fd7-f558-4da9-b8de-4da11ffda23f",
+      "conversation_id": "8ed235cf-2d68-4c57-b683-c874bd139733",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1523,7 +1523,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "67d31fd7-f558-4da9-b8de-4da11ffda23f",
+      "conversation_id": "8ed235cf-2d68-4c57-b683-c874bd139733",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1695,17 +1695,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" AS \"nhom_ton_that\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 49.48710001190193,
-    "query_latency_ms": 22.040100011508912,
-    "render_latency_ms": 1.0134000040125102,
-    "total_latency_ms": 108.63709999830462,
+    "llm_latency_ms": 47.15080000460148,
+    "query_latency_ms": 24.219399987487122,
+    "render_latency_ms": 0.9327000007033348,
+    "total_latency_ms": 105.14329999568872,
     "latency_ms": {
-      "routing": 49.45300001418218,
+      "routing": 47.12249999283813,
       "llm": 0.0,
-      "validation": 0.031400006264448166,
+      "validation": 0.026399997295811772,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 49.48710001190193
+      "total": 47.15080000460148
     },
     "presented_response": {
       "response_type": "table",
@@ -1731,7 +1731,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "44fda00e-a536-4bd9-a683-df3f0d38a9b5",
+      "conversation_id": "12c9794a-45f0-4d41-97ab-e1c750706d8c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1766,7 +1766,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "44fda00e-a536-4bd9-a683-df3f0d38a9b5",
+      "conversation_id": "12c9794a-45f0-4d41-97ab-e1c750706d8c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2002,17 +2002,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"row_count\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 43.96710000582971,
-    "query_latency_ms": 23.975899996003136,
-    "render_latency_ms": 0.9154999861493707,
-    "total_latency_ms": 99.01949999039061,
+    "llm_latency_ms": 45.306800020625815,
+    "query_latency_ms": 23.984900006325915,
+    "render_latency_ms": 0.8447000000160187,
+    "total_latency_ms": 101.6937000094913,
     "latency_ms": {
-      "routing": 43.94160001538694,
+      "routing": 45.278400008101016,
       "llm": 0.0,
-      "validation": 0.023200002033263445,
+      "validation": 0.026399997295811772,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 43.96710000582971
+      "total": 45.306800020625815
     },
     "presented_response": {
       "response_type": "table",
@@ -2038,7 +2038,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "687230cb-685d-44f0-9e4b-14bd7bc68d97",
+      "conversation_id": "7ba99ecb-2d4e-48bc-802a-6f6a88e969b4",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2073,7 +2073,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "687230cb-685d-44f0-9e4b-14bd7bc68d97",
+      "conversation_id": "7ba99ecb-2d4e-48bc-802a-6f6a88e969b4",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2277,17 +2277,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 45.48689999501221,
-    "query_latency_ms": 24.897399998735636,
-    "render_latency_ms": 0.8335000020451844,
-    "total_latency_ms": 102.6824000000488,
+    "llm_latency_ms": 48.58060000697151,
+    "query_latency_ms": 24.77550000185147,
+    "render_latency_ms": 0.8174000249709934,
+    "total_latency_ms": 104.6900000073947,
     "latency_ms": {
-      "routing": 45.456299994839355,
+      "routing": 48.55219999444671,
       "llm": 0.0,
-      "validation": 0.02889998722821474,
+      "validation": 0.026900001103058457,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 45.48689999501221
+      "total": 48.58060000697151
     },
     "presented_response": {
       "response_type": "table",
@@ -2313,7 +2313,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "0a799c32-e5bd-4a23-aebb-720ca3022652",
+      "conversation_id": "6a41a7a9-aaa5-4f0b-a34f-c6b6c46971c2",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2348,7 +2348,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "0a799c32-e5bd-4a23-aebb-720ca3022652",
+      "conversation_id": "6a41a7a9-aaa5-4f0b-a34f-c6b6c46971c2",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2592,17 +2592,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" AS \"ten_ton_that\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" ORDER BY \"row_count\" DESC LIMIT 10",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 46.67510002036579,
-    "query_latency_ms": 26.7722999851685,
-    "render_latency_ms": 0.8646000060252845,
-    "total_latency_ms": 105.3265999944415,
+    "llm_latency_ms": 45.44519999762997,
+    "query_latency_ms": 24.853300012182444,
+    "render_latency_ms": 0.8379000064451247,
+    "total_latency_ms": 101.48819998721592,
     "latency_ms": {
-      "routing": 46.640400018077344,
+      "routing": 45.419200003379956,
       "llm": 0.0,
-      "validation": 0.03200001083314419,
+      "validation": 0.02400000812485814,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 46.67510002036579
+      "total": 45.44519999762997
     },
     "presented_response": {
       "response_type": "table",
@@ -2628,7 +2628,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "bb97f52f-f365-4517-8b27-1021c78df42d",
+      "conversation_id": "c28c0abe-dbb8-4d9d-a862-5f69f8044d32",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2663,7 +2663,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "bb97f52f-f365-4517-8b27-1021c78df42d",
+      "conversation_id": "c28c0abe-dbb8-4d9d-a862-5f69f8044d32",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2835,17 +2835,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", avg(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"avg_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"avg_duration_seconds\" DESC LIMIT 1",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 46.4122999983374,
-    "query_latency_ms": 23.325700021814555,
-    "render_latency_ms": 0.7991000020410866,
-    "total_latency_ms": 101.06870002346113,
+    "llm_latency_ms": 43.902100005652755,
+    "query_latency_ms": 23.536200023954734,
+    "render_latency_ms": 0.8450000023003668,
+    "total_latency_ms": 100.02800001529977,
     "latency_ms": {
-      "routing": 46.37110000476241,
+      "routing": 43.87339999084361,
       "llm": 0.0,
-      "validation": 0.03920000744983554,
+      "validation": 0.026699999580159783,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 46.4122999983374
+      "total": 43.902100005652755
     },
     "presented_response": {
       "response_type": "table",
@@ -2871,7 +2871,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "feb06051-31d7-4245-bffa-c9bab1d53e3d",
+      "conversation_id": "8f38cb2a-7c73-418b-8ae5-33ece87baafd",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2906,7 +2906,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "feb06051-31d7-4245-bffa-c9bab1d53e3d",
+      "conversation_id": "8f38cb2a-7c73-418b-8ae5-33ece87baafd",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -3078,17 +3078,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" AS \"nhom_ton_that\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" ORDER BY \"total_duration_seconds\" DESC LIMIT 1",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 47.42119999718852,
-    "query_latency_ms": 27.738900011172518,
-    "render_latency_ms": 1.1178000131621957,
-    "total_latency_ms": 108.52450001402758,
+    "llm_latency_ms": 42.777700000442564,
+    "query_latency_ms": 24.045800004387274,
+    "render_latency_ms": 0.731200008885935,
+    "total_latency_ms": 96.14700000383891,
     "latency_ms": {
-      "routing": 47.387099999468774,
+      "routing": 42.74840001016855,
       "llm": 0.0,
-      "validation": 0.03170000854879618,
+      "validation": 0.027400004910305142,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 47.42119999718852
+      "total": 42.777700000442564
     },
     "presented_response": {
       "response_type": "table",
@@ -3114,7 +3114,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "2d7c50f9-437e-4e11-8190-0e503036f8e3",
+      "conversation_id": "652edd88-d52b-4427-b10e-4a155c22a175",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -3149,7 +3149,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "2d7c50f9-437e-4e11-8190-0e503036f8e3",
+      "conversation_id": "652edd88-d52b-4427-b10e-4a155c22a175",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -3565,17 +3565,17 @@
     "generated_sql": "WITH base AS (SELECT date_trunc('month', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") AS \"thoi_gian_bat_dau\", \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY date_trunc('month', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\"), \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\"), filtered AS (SELECT \"thoi_gian_bat_dau\", \"may\", \"total_duration_seconds\" FROM base), ranked AS (SELECT *, ROW_NUMBER() OVER (PARTITION BY \"thoi_gian_bat_dau\" ORDER BY \"total_duration_seconds\" DESC) AS \"_rank\" FROM filtered) SELECT * FROM ranked ORDER BY \"thoi_gian_bat_dau\" ASC, \"_rank\" ASC",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 45.226799993542954,
-    "query_latency_ms": 26.142300019273534,
-    "render_latency_ms": 2.1496000117622316,
-    "total_latency_ms": 105.64649998559617,
+    "llm_latency_ms": 49.40280001028441,
+    "query_latency_ms": 28.70480000274256,
+    "render_latency_ms": 2.438099996652454,
+    "total_latency_ms": 114.55909998039715,
     "latency_ms": {
-      "routing": 45.19489998347126,
+      "routing": 49.36810000799596,
       "llm": 0.0,
-      "validation": 0.029799994081258774,
+      "validation": 0.03250001464039087,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 45.226799993542954
+      "total": 49.40280001028441
     },
     "presented_response": {
       "response_type": "table",
@@ -3601,7 +3601,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "6018f169-f046-40fc-a0b7-4495c7d003af",
+      "conversation_id": "dfe647e0-2478-4f2f-b70f-acf2f244035c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -3636,7 +3636,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "6018f169-f046-40fc-a0b7-4495c7d003af",
+      "conversation_id": "dfe647e0-2478-4f2f-b70f-acf2f244035c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -3853,17 +3853,17 @@
     "generated_sql": "WITH base AS (SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\") SELECT \"may\", \"total_duration_seconds\" FROM base WHERE \"total_duration_seconds\" > (SELECT AVG(\"total_duration_seconds\") FROM base) ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 50.91239998000674,
-    "query_latency_ms": 24.632099986774847,
-    "render_latency_ms": 0.821399997221306,
-    "total_latency_ms": 107.14990002452396,
+    "llm_latency_ms": 42.40760000539012,
+    "query_latency_ms": 22.70539998426102,
+    "render_latency_ms": 0.7858000171836466,
+    "total_latency_ms": 100.49819998675957,
     "latency_ms": {
-      "routing": 50.87559999083169,
+      "routing": 42.37680000369437,
       "llm": 0.0,
-      "validation": 0.034900003811344504,
+      "validation": 0.02889998722821474,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 50.91239998000674
+      "total": 42.40760000539012
     },
     "presented_response": {
       "response_type": "table",
@@ -3889,7 +3889,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "89add365-5264-40de-bb88-7a240849a252",
+      "conversation_id": "8bfa028e-977c-4190-aeed-41bc2782bd41",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -3924,7 +3924,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "89add365-5264-40de-bb88-7a240849a252",
+      "conversation_id": "8bfa028e-977c-4190-aeed-41bc2782bd41",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -4128,17 +4128,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"total_duration_seconds\" ASC LIMIT 5",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 44.387899979483336,
-    "query_latency_ms": 23.894300014944747,
-    "render_latency_ms": 0.9878000128082931,
-    "total_latency_ms": 99.19739997712895,
+    "llm_latency_ms": 44.14399998495355,
+    "query_latency_ms": 21.73649999895133,
+    "render_latency_ms": 0.7905999955255538,
+    "total_latency_ms": 95.34319999511354,
     "latency_ms": {
-      "routing": 44.35680000460707,
+      "routing": 44.11220000474714,
       "llm": 0.0,
-      "validation": 0.029099988751113415,
+      "validation": 0.02950002090074122,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 44.387899979483336
+      "total": 44.14399998495355
     },
     "presented_response": {
       "response_type": "table",
@@ -4164,7 +4164,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "472a7f8d-d83c-4c7f-b091-be9cff7a50cf",
+      "conversation_id": "7600ccf7-f85f-46b5-8e93-7d88f69eb18e",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -4199,7 +4199,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "472a7f8d-d83c-4c7f-b091-be9cff7a50cf",
+      "conversation_id": "7600ccf7-f85f-46b5-8e93-7d88f69eb18e",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -4495,17 +4495,17 @@
     "generated_sql": "WITH base AS (SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" AS \"ten_ton_that\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\") SELECT \"ten_ton_that\", \"row_count\", CASE WHEN SUM(\"row_count\") OVER () = 0 THEN NULL ELSE (\"row_count\" * 100.0 / NULLIF(SUM(\"row_count\") OVER (), 0)) END AS \"percentage\" FROM base ORDER BY \"row_count\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 51.97479997877963,
-    "query_latency_ms": 27.929200005019084,
-    "render_latency_ms": 1.3703000149689615,
-    "total_latency_ms": 119.96760001056828,
+    "llm_latency_ms": 41.29680001642555,
+    "query_latency_ms": 21.334200020646676,
+    "render_latency_ms": 0.9744999988470227,
+    "total_latency_ms": 95.47580001526512,
     "latency_ms": {
-      "routing": 51.94449998089112,
+      "routing": 41.27040001912974,
       "llm": 0.0,
-      "validation": 0.028000009479001164,
+      "validation": 0.023800006601959467,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 51.97479997877963
+      "total": 41.29680001642555
     },
     "presented_response": {
       "response_type": "table",
@@ -4531,7 +4531,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "caf1fd2e-aa9e-40f1-ad2b-c5eea4e31177",
+      "conversation_id": "c3aa91a4-f88d-41d8-b5dd-7ef7a30e3d5d",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -4566,7 +4566,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "caf1fd2e-aa9e-40f1-ad2b-c5eea4e31177",
+      "conversation_id": "c3aa91a4-f88d-41d8-b5dd-7ef7a30e3d5d",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -4747,17 +4747,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\" BETWEEN ? AND ? ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 44.05529997893609,
-    "query_latency_ms": 22.3145000054501,
-    "render_latency_ms": 0.13020000187680125,
-    "total_latency_ms": 104.9256999976933,
+    "llm_latency_ms": 44.48680000496097,
+    "query_latency_ms": 20.330900006229058,
+    "render_latency_ms": 0.10269999620504677,
+    "total_latency_ms": 91.49420002358966,
     "latency_ms": {
-      "routing": 44.01149999466725,
+      "routing": 44.450499990489334,
       "llm": 0.0,
-      "validation": 0.04150002496317029,
+      "validation": 0.03429999924264848,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 44.05529997893609
+      "total": 44.48680000496097
     },
     "presented_response": {
       "response_type": "scalar",
@@ -4783,7 +4783,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "4ee9020a-7be3-4674-8f91-6076a98efb23",
+      "conversation_id": "a9c96f6b-4992-467b-9be5-b644d8907cc7",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -4818,7 +4818,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "4ee9020a-7be3-4674-8f91-6076a98efb23",
+      "conversation_id": "a9c96f6b-4992-467b-9be5-b644d8907cc7",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -4999,17 +4999,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\" BETWEEN ? AND ? ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 42.62920000473969,
-    "query_latency_ms": 20.308799983467907,
-    "render_latency_ms": 0.09640000644139946,
-    "total_latency_ms": 89.67109999503009,
+    "llm_latency_ms": 42.18869999749586,
+    "query_latency_ms": 20.507200009888038,
+    "render_latency_ms": 0.11110000195913017,
+    "total_latency_ms": 88.37020001374185,
     "latency_ms": {
-      "routing": 42.59470000397414,
+      "routing": 42.15619998285547,
       "llm": 0.0,
-      "validation": 0.032100011594593525,
+      "validation": 0.030399998649954796,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 42.62920000473969
+      "total": 42.18869999749586
     },
     "presented_response": {
       "response_type": "scalar",
@@ -5035,7 +5035,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "bd892e6c-4994-4604-82ca-cb6d90dd2670",
+      "conversation_id": "d6dfa56a-5066-49d6-8d88-a8be95fc4422",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -5070,7 +5070,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "bd892e6c-4994-4604-82ca-cb6d90dd2670",
+      "conversation_id": "d6dfa56a-5066-49d6-8d88-a8be95fc4422",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -5407,17 +5407,17 @@
     "generated_sql": "SELECT date_trunc('day', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") AS \"thoi_gian_bat_dau\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY date_trunc('day', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") ORDER BY \"thoi_gian_bat_dau\" ASC, \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 45.05819999030791,
-    "query_latency_ms": 25.511000014375895,
-    "render_latency_ms": 1.2697000056505203,
-    "total_latency_ms": 103.90790001838468,
+    "llm_latency_ms": 44.062300003133714,
+    "query_latency_ms": 22.685899981297553,
+    "render_latency_ms": 1.3306000037118793,
+    "total_latency_ms": 98.73890000744723,
     "latency_ms": {
-      "routing": 45.02709998632781,
+      "routing": 44.03449999517761,
       "llm": 0.0,
-      "validation": 0.02889998722821474,
+      "validation": 0.02579999272711575,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 45.05819999030791
+      "total": 44.062300003133714
     },
     "presented_response": {
       "response_type": "table",
@@ -5443,7 +5443,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "99db6202-505c-4b30-86f1-61ed34e20b3f",
+      "conversation_id": "da7a62b6-5af1-4cca-b4dc-08f515a6795f",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -5478,7 +5478,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "99db6202-505c-4b30-86f1-61ed34e20b3f",
+      "conversation_id": "da7a62b6-5af1-4cca-b4dc-08f515a6795f",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -5767,17 +5767,17 @@
     "generated_sql": "SELECT date_trunc('week', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") AS \"thoi_gian_bat_dau\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY date_trunc('week', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") ORDER BY \"thoi_gian_bat_dau\" ASC, \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 45.49009999027476,
-    "query_latency_ms": 22.51589999650605,
-    "render_latency_ms": 1.1490000179037452,
-    "total_latency_ms": 100.51960000419058,
+    "llm_latency_ms": 44.675599987385795,
+    "query_latency_ms": 26.612199988448992,
+    "render_latency_ms": 1.299199997447431,
+    "total_latency_ms": 103.16440000315197,
     "latency_ms": {
-      "routing": 45.460699999239296,
+      "routing": 44.64549999102019,
       "llm": 0.0,
-      "validation": 0.027400004910305142,
+      "validation": 0.028099981136620045,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 45.49009999027476
+      "total": 44.675599987385795
     },
     "presented_response": {
       "response_type": "table",
@@ -5803,7 +5803,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "3104a432-288a-4831-a6d6-80045096ec4b",
+      "conversation_id": "b166fa99-51f1-4f12-98dd-6030dcf3263a",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -5838,7 +5838,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "3104a432-288a-4831-a6d6-80045096ec4b",
+      "conversation_id": "b166fa99-51f1-4f12-98dd-6030dcf3263a",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -6047,17 +6047,17 @@
     "generated_sql": "SELECT date_trunc('month', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") AS \"thoi_gian_bat_dau\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY date_trunc('month', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") ORDER BY \"thoi_gian_bat_dau\" ASC, \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 43.49150002235547,
-    "query_latency_ms": 23.175699985586107,
-    "render_latency_ms": 1.1491000186651945,
-    "total_latency_ms": 97.90399999474175,
+    "llm_latency_ms": 45.87219998938963,
+    "query_latency_ms": 23.06239999597892,
+    "render_latency_ms": 1.06380000943318,
+    "total_latency_ms": 101.47369999322109,
     "latency_ms": {
-      "routing": 43.46250000526197,
+      "routing": 45.841399987693876,
       "llm": 0.0,
-      "validation": 0.026900001103058457,
+      "validation": 0.028300011763349175,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 43.49150002235547
+      "total": 45.87219998938963
     },
     "presented_response": {
       "response_type": "table",
@@ -6083,7 +6083,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "22cca569-6f96-471f-a73b-467134dcc673",
+      "conversation_id": "e1db7a60-6e73-4f2f-8b34-4472c02f2ba3",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -6118,7 +6118,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "22cca569-6f96-471f-a73b-467134dcc673",
+      "conversation_id": "e1db7a60-6e73-4f2f-8b34-4472c02f2ba3",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -6288,17 +6288,17 @@
     "generated_sql": "SELECT date_trunc('day', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") AS \"thoi_gian_bat_dau\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY date_trunc('day', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") ORDER BY \"total_duration_seconds\" DESC LIMIT 1",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 44.32200000155717,
-    "query_latency_ms": 23.717100004432723,
-    "render_latency_ms": 1.094200008083135,
-    "total_latency_ms": 104.47699998621829,
+    "llm_latency_ms": 45.903999998699874,
+    "query_latency_ms": 24.87490000203252,
+    "render_latency_ms": 1.0804000194184482,
+    "total_latency_ms": 100.6370999966748,
     "latency_ms": {
-      "routing": 44.29220000747591,
+      "routing": 45.87070000707172,
       "llm": 0.0,
-      "validation": 0.027700007194653153,
+      "validation": 0.031400006264448166,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 44.32200000155717
+      "total": 45.903999998699874
     },
     "presented_response": {
       "response_type": "table",
@@ -6324,7 +6324,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "50b5e1a9-a4f1-49a4-b5e3-14fb16b49a39",
+      "conversation_id": "41a86059-3e32-44da-a3d8-737fa970c254",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -6359,7 +6359,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "50b5e1a9-a4f1-49a4-b5e3-14fb16b49a39",
+      "conversation_id": "41a86059-3e32-44da-a3d8-737fa970c254",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -6540,17 +6540,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\" BETWEEN ? AND ? ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 44.954200013307855,
-    "query_latency_ms": 20.71869999053888,
-    "render_latency_ms": 0.12130002141930163,
-    "total_latency_ms": 94.21990002738312,
+    "llm_latency_ms": 76.6410999931395,
+    "query_latency_ms": 28.10180000960827,
+    "render_latency_ms": 0.12670000432990491,
+    "total_latency_ms": 137.50709997839294,
     "latency_ms": {
-      "routing": 44.922800007043406,
+      "routing": 76.60180001403205,
       "llm": 0.0,
-      "validation": 0.0295999925583601,
+      "validation": 0.03709999145939946,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 44.954200013307855
+      "total": 76.6410999931395
     },
     "presented_response": {
       "response_type": "scalar",
@@ -6576,7 +6576,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "b6602958-97f1-436e-a6ea-4f9ebdada958",
+      "conversation_id": "225bbc27-8542-4588-8110-00847dd40e46",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -6611,7 +6611,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "b6602958-97f1-436e-a6ea-4f9ebdada958",
+      "conversation_id": "225bbc27-8542-4588-8110-00847dd40e46",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -6771,17 +6771,17 @@
     "generated_sql": "SELECT count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\" > ? ORDER BY \"row_count\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 47.30420000851154,
-    "query_latency_ms": 22.80619999510236,
-    "render_latency_ms": 0.11930000619031489,
-    "total_latency_ms": 99.8404000129085,
+    "llm_latency_ms": 47.66209999797866,
+    "query_latency_ms": 23.26409998931922,
+    "render_latency_ms": 0.11559997801668942,
+    "total_latency_ms": 106.5385999972932,
     "latency_ms": {
-      "routing": 47.26719998870976,
+      "routing": 47.62759999721311,
       "llm": 0.0,
-      "validation": 0.034199998481199145,
+      "validation": 0.03200001083314419,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 47.30420000851154
+      "total": 47.66209999797866
     },
     "presented_response": {
       "response_type": "scalar",
@@ -6807,7 +6807,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "4f556b26-6616-4fbe-9f8e-eceb27e74bb7",
+      "conversation_id": "38b41619-a01f-484c-915f-80b88ea86aac",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -6842,7 +6842,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "4f556b26-6616-4fbe-9f8e-eceb27e74bb7",
+      "conversation_id": "38b41619-a01f-484c-915f-80b88ea86aac",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -7002,17 +7002,17 @@
     "generated_sql": "SELECT count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\" > ? ORDER BY \"row_count\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 48.37900001439266,
-    "query_latency_ms": 23.945200024172664,
-    "render_latency_ms": 0.15139998868107796,
-    "total_latency_ms": 104.67289999360219,
+    "llm_latency_ms": 50.77800000435673,
+    "query_latency_ms": 23.947900015627965,
+    "render_latency_ms": 0.11300001642666757,
+    "total_latency_ms": 105.54300001240335,
     "latency_ms": {
-      "routing": 48.33489999873564,
+      "routing": 50.742799998261034,
       "llm": 0.0,
-      "validation": 0.041399995097890496,
+      "validation": 0.0329999893438071,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 48.37900001439266
+      "total": 50.77800000435673
     },
     "presented_response": {
       "response_type": "scalar",
@@ -7038,7 +7038,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "f3528e25-e8c6-4032-87e8-0d7fce269437",
+      "conversation_id": "70dc4b32-ec73-4b24-ad1f-abee635189bf",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -7073,7 +7073,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "f3528e25-e8c6-4032-87e8-0d7fce269437",
+      "conversation_id": "70dc4b32-ec73-4b24-ad1f-abee635189bf",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -7270,17 +7270,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" = ? AND \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\" BETWEEN ? AND ? ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 53.22609998984262,
-    "query_latency_ms": 25.25099998456426,
-    "render_latency_ms": 0.12959999730810523,
-    "total_latency_ms": 110.9197000041604,
+    "llm_latency_ms": 49.981099989963695,
+    "query_latency_ms": 24.288199987495318,
+    "render_latency_ms": 0.16769999638199806,
+    "total_latency_ms": 106.02869998547249,
     "latency_ms": {
-      "routing": 53.18489999626763,
+      "routing": 49.94040000019595,
       "llm": 0.0,
-      "validation": 0.03819999983534217,
+      "validation": 0.03850000211969018,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 53.22609998984262
+      "total": 49.981099989963695
     },
     "presented_response": {
       "response_type": "scalar",
@@ -7306,7 +7306,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "8c30d61a-406a-4dcd-8889-cabe2ea7ac6f",
+      "conversation_id": "a0d8166b-e595-407b-8b30-c0c946ce0fd6",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -7341,7 +7341,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "8c30d61a-406a-4dcd-8889-cabe2ea7ac6f",
+      "conversation_id": "a0d8166b-e595-407b-8b30-c0c946ce0fd6",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -7517,17 +7517,17 @@
     "generated_sql": "SELECT count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" = ? AND \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" = ? ORDER BY \"row_count\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 49.954499991144985,
-    "query_latency_ms": 24.720099987462163,
-    "render_latency_ms": 0.11239998275414109,
-    "total_latency_ms": 104.58149999612942,
+    "llm_latency_ms": 48.59699998633005,
+    "query_latency_ms": 22.99600001424551,
+    "render_latency_ms": 0.11199997970834374,
+    "total_latency_ms": 100.93520002556033,
     "latency_ms": {
-      "routing": 49.91679999511689,
+      "routing": 48.56139997718856,
       "llm": 0.0,
-      "validation": 0.03510000533424318,
+      "validation": 0.03339999238960445,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 49.954499991144985
+      "total": 48.59699998633005
     },
     "presented_response": {
       "response_type": "scalar",
@@ -7553,7 +7553,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "557fdfc2-955b-40d1-a7cc-2df4a80eb401",
+      "conversation_id": "d058c1d5-8441-43b5-9128-d55a18c8229f",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -7588,7 +7588,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "557fdfc2-955b-40d1-a7cc-2df4a80eb401",
+      "conversation_id": "d058c1d5-8441-43b5-9128-d55a18c8229f",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -7748,17 +7748,17 @@
     "generated_sql": "SELECT count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\" > ? ORDER BY \"row_count\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 49.683199991704896,
-    "query_latency_ms": 23.99330001208,
-    "render_latency_ms": 0.152299995534122,
-    "total_latency_ms": 105.79070000676438,
+    "llm_latency_ms": 47.40740000852384,
+    "query_latency_ms": 22.880900010932237,
+    "render_latency_ms": 0.11319998884573579,
+    "total_latency_ms": 100.74289998738095,
     "latency_ms": {
-      "routing": 49.64959999779239,
+      "routing": 47.373599983984604,
       "llm": 0.0,
-      "validation": 0.031000003218650818,
+      "validation": 0.031200004741549492,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 49.683199991704896
+      "total": 47.40740000852384
     },
     "presented_response": {
       "response_type": "scalar",
@@ -7784,7 +7784,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "b87a4e1e-85ac-4f59-90bd-134614655b5a",
+      "conversation_id": "38b8db14-01bf-423f-a81a-103a32b9b5d1",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -7819,7 +7819,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "b87a4e1e-85ac-4f59-90bd-134614655b5a",
+      "conversation_id": "38b8db14-01bf-423f-a81a-103a32b9b5d1",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -8032,17 +8032,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" = ? AND \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" = ? AND \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\" BETWEEN ? AND ? ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 46.88259999966249,
-    "query_latency_ms": 24.4894000061322,
-    "render_latency_ms": 0.1312999811489135,
-    "total_latency_ms": 103.6690000037197,
+    "llm_latency_ms": 48.81120001664385,
+    "query_latency_ms": 23.866599978646263,
+    "render_latency_ms": 0.18239999189972878,
+    "total_latency_ms": 105.2893000014592,
     "latency_ms": {
-      "routing": 46.84050002833828,
+      "routing": 48.76999999396503,
       "llm": 0.0,
-      "validation": 0.03890000516548753,
+      "validation": 0.037999998312443495,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 46.88259999966249
+      "total": 48.81120001664385
     },
     "presented_response": {
       "response_type": "scalar",
@@ -8068,7 +8068,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "dc7ca6bf-3d66-4b77-9ce6-d0dd1b3f674b",
+      "conversation_id": "7af24b10-6176-4967-aa0f-b1b52e57c8a7",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -8103,7 +8103,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "dc7ca6bf-3d66-4b77-9ce6-d0dd1b3f674b",
+      "conversation_id": "7af24b10-6176-4967-aa0f-b1b52e57c8a7",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -8263,17 +8263,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" <> ? ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 48.36379998596385,
-    "query_latency_ms": 24.927199992816895,
-    "render_latency_ms": 0.15130001702345908,
-    "total_latency_ms": 105.13150002225302,
+    "llm_latency_ms": 48.794400005135685,
+    "query_latency_ms": 24.3932000012137,
+    "render_latency_ms": 0.09819999104365706,
+    "total_latency_ms": 104.47290001320653,
     "latency_ms": {
-      "routing": 48.32729999907315,
+      "routing": 48.75679998076521,
       "llm": 0.0,
-      "validation": 0.03409999771974981,
+      "validation": 0.03510000533424318,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 48.36379998596385
+      "total": 48.794400005135685
     },
     "presented_response": {
       "response_type": "scalar",
@@ -8299,7 +8299,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "bf51071c-f51a-4acd-8c83-e60f066dfff7",
+      "conversation_id": "714f940f-dcf8-4e8e-851e-0ed3afc6fb14",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -8334,7 +8334,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "bf51071c-f51a-4acd-8c83-e60f066dfff7",
+      "conversation_id": "714f940f-dcf8-4e8e-851e-0ed3afc6fb14",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -8506,17 +8506,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" IN (?, ?) ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 48.833099979674444,
-    "query_latency_ms": 22.630399995250627,
-    "render_latency_ms": 0.11310001718811691,
-    "total_latency_ms": 102.69790000165813,
+    "llm_latency_ms": 47.55529999965802,
+    "query_latency_ms": 24.51000001747161,
+    "render_latency_ms": 0.1221999991685152,
+    "total_latency_ms": 103.59020001487806,
     "latency_ms": {
-      "routing": 48.794600006658584,
+      "routing": 47.51830000896007,
       "llm": 0.0,
-      "validation": 0.03589998232200742,
+      "validation": 0.034500000765547156,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 48.833099979674444
+      "total": 47.55529999965802
     },
     "presented_response": {
       "response_type": "scalar",
@@ -8542,7 +8542,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "3d0f92a3-76ce-4a93-8451-87844fbcd927",
+      "conversation_id": "3ed13258-8842-449c-bff4-6499cf7ab0f8",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -8577,7 +8577,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "3d0f92a3-76ce-4a93-8451-87844fbcd927",
+      "conversation_id": "3ed13258-8842-449c-bff4-6499cf7ab0f8",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -8717,17 +8717,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 44.976299977861345,
-    "query_latency_ms": 21.832099999301136,
-    "render_latency_ms": 0.12930002412758768,
-    "total_latency_ms": 95.34429997438565,
+    "llm_latency_ms": 50.75929997838102,
+    "query_latency_ms": 23.921299987705424,
+    "render_latency_ms": 0.11799999629147351,
+    "total_latency_ms": 105.80300001311116,
     "latency_ms": {
-      "routing": 44.932100019650534,
+      "routing": 50.72180001297966,
       "llm": 0.0,
-      "validation": 0.0420999713242054,
+      "validation": 0.03440000000409782,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 44.976299977861345
+      "total": 50.75929997838102
     },
     "presented_response": {
       "response_type": "scalar",
@@ -8753,7 +8753,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "b2f0168e-5aa5-41aa-8b2b-411c8311ef7c",
+      "conversation_id": "9a0498f5-f9e4-4f6e-8d6e-f22f208f4456",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -8788,7 +8788,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "b2f0168e-5aa5-41aa-8b2b-411c8311ef7c",
+      "conversation_id": "9a0498f5-f9e4-4f6e-8d6e-f22f208f4456",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -8928,17 +8928,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 46.09250000794418,
-    "query_latency_ms": 21.457099996041507,
-    "render_latency_ms": 0.12519999290816486,
-    "total_latency_ms": 94.78340001078323,
+    "llm_latency_ms": 49.649199994746596,
+    "query_latency_ms": 25.79330001026392,
+    "render_latency_ms": 0.17739998293109238,
+    "total_latency_ms": 107.64070000732318,
     "latency_ms": {
-      "routing": 46.059399988735095,
+      "routing": 49.61409998941235,
       "llm": 0.0,
-      "validation": 0.03060000017285347,
+      "validation": 0.032499985536560416,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 46.09250000794418
+      "total": 49.649199994746596
     },
     "presented_response": {
       "response_type": "scalar",
@@ -8964,7 +8964,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "20b111db-91e7-49f4-a534-b0da40aff711",
+      "conversation_id": "2b3bed4d-f01c-45c6-8f0a-f192e47c5040",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -8999,7 +8999,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "20b111db-91e7-49f4-a534-b0da40aff711",
+      "conversation_id": "2b3bed4d-f01c-45c6-8f0a-f192e47c5040",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -9139,17 +9139,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 45.41079999762587,
-    "query_latency_ms": 20.813900016946718,
-    "render_latency_ms": 0.12280000373721123,
-    "total_latency_ms": 94.46599998045713,
+    "llm_latency_ms": 50.37019998417236,
+    "query_latency_ms": 24.31909998995252,
+    "render_latency_ms": 0.12030001380480826,
+    "total_latency_ms": 107.34449999290518,
     "latency_ms": {
-      "routing": 45.38110000430606,
+      "routing": 50.33499997807667,
       "llm": 0.0,
-      "validation": 0.02750000567175448,
+      "validation": 0.03200001083314419,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 45.41079999762587
+      "total": 50.37019998417236
     },
     "presented_response": {
       "response_type": "scalar",
@@ -9175,7 +9175,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "dacd9d5f-8b04-47fa-8b57-5d94f11e4c10",
+      "conversation_id": "2e03e2d7-833b-4141-805e-13c6390d4fc7",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -9210,7 +9210,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "dacd9d5f-8b04-47fa-8b57-5d94f11e4c10",
+      "conversation_id": "2e03e2d7-833b-4141-805e-13c6390d4fc7",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -9350,17 +9350,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 47.42070002248511,
-    "query_latency_ms": 26.048500003525987,
-    "render_latency_ms": 0.19869999960064888,
-    "total_latency_ms": 100.10229999898002,
+    "llm_latency_ms": 40.473800007021055,
+    "query_latency_ms": 19.803900009719655,
+    "render_latency_ms": 0.11480000102892518,
+    "total_latency_ms": 88.35959999123588,
     "latency_ms": {
-      "routing": 47.382599994307384,
+      "routing": 40.441199991619214,
       "llm": 0.0,
-      "validation": 0.03540000761859119,
+      "validation": 0.030099996365606785,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 47.42070002248511
+      "total": 40.473800007021055
     },
     "presented_response": {
       "response_type": "scalar",
@@ -9386,7 +9386,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "d1ab72e7-cb74-432a-a935-923fbbe428a9",
+      "conversation_id": "673c84c1-2bd6-4cbc-bdee-02f8e4a489fd",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -9421,7 +9421,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "d1ab72e7-cb74-432a-a935-923fbbe428a9",
+      "conversation_id": "673c84c1-2bd6-4cbc-bdee-02f8e4a489fd",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -9561,17 +9561,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 53.98169998079538,
-    "query_latency_ms": 25.213400018401444,
-    "render_latency_ms": 0.12079998850822449,
-    "total_latency_ms": 111.75209999782965,
+    "llm_latency_ms": 44.24769998877309,
+    "query_latency_ms": 21.319299994502217,
+    "render_latency_ms": 0.10050000855699182,
+    "total_latency_ms": 91.94890002254397,
     "latency_ms": {
-      "routing": 53.94630000228062,
+      "routing": 44.21849999926053,
       "llm": 0.0,
-      "validation": 0.03259998629800975,
+      "validation": 0.026900001103058457,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 53.98169998079538
+      "total": 44.24769998877309
     },
     "presented_response": {
       "response_type": "scalar",
@@ -9597,7 +9597,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "afb2efb1-7d6d-4e08-9387-d7541fc6448a",
+      "conversation_id": "c8e2fc96-3846-4db9-9e3e-8bb0ab968375",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -9632,7 +9632,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "afb2efb1-7d6d-4e08-9387-d7541fc6448a",
+      "conversation_id": "c8e2fc96-3846-4db9-9e3e-8bb0ab968375",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -9772,17 +9772,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 51.23089998960495,
-    "query_latency_ms": 25.885499984724447,
-    "render_latency_ms": 0.3381000133231282,
-    "total_latency_ms": 108.44530002214015,
+    "llm_latency_ms": 41.1720999982208,
+    "query_latency_ms": 20.32609999878332,
+    "render_latency_ms": 0.09789998875930905,
+    "total_latency_ms": 87.92540000285953,
     "latency_ms": {
-      "routing": 51.1969999934081,
+      "routing": 41.13200001302175,
       "llm": 0.0,
-      "validation": 0.03130000550299883,
+      "validation": 0.037999998312443495,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 51.23089998960495
+      "total": 41.1720999982208
     },
     "presented_response": {
       "response_type": "scalar",
@@ -9808,7 +9808,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "92a4ec4e-960f-49d7-afad-f55c31345ad3",
+      "conversation_id": "c5765f64-7064-4eb2-942a-ec76529123aa",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -9843,7 +9843,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "92a4ec4e-960f-49d7-afad-f55c31345ad3",
+      "conversation_id": "c5765f64-7064-4eb2-942a-ec76529123aa",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -9983,17 +9983,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 42.81839999021031,
-    "query_latency_ms": 20.696099993074313,
-    "render_latency_ms": 0.09989997488446534,
-    "total_latency_ms": 90.12879998772405,
+    "llm_latency_ms": 41.21619998477399,
+    "query_latency_ms": 19.849399977829307,
+    "render_latency_ms": 0.10800000745803118,
+    "total_latency_ms": 87.08709999336861,
     "latency_ms": {
-      "routing": 42.78999997768551,
+      "routing": 41.18990001734346,
       "llm": 0.0,
-      "validation": 0.026299996534362435,
+      "validation": 0.02409997978247702,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 42.81839999021031
+      "total": 41.21619998477399
     },
     "presented_response": {
       "response_type": "scalar",
@@ -10019,7 +10019,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "b2db6ff3-1e30-4ae6-bd53-77e1d1b1d2ea",
+      "conversation_id": "93156c02-a8d5-4850-afc3-92d587519df9",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -10054,7 +10054,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "b2db6ff3-1e30-4ae6-bd53-77e1d1b1d2ea",
+      "conversation_id": "93156c02-a8d5-4850-afc3-92d587519df9",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -10194,17 +10194,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 45.865399995818734,
-    "query_latency_ms": 20.584999991115183,
-    "render_latency_ms": 0.09560000034980476,
-    "total_latency_ms": 92.53119997447357,
+    "llm_latency_ms": 47.577799996361136,
+    "query_latency_ms": 22.204400011105463,
+    "render_latency_ms": 0.10110001312568784,
+    "total_latency_ms": 96.1982999870088,
     "latency_ms": {
-      "routing": 45.83630000706762,
+      "routing": 47.5363000005018,
       "llm": 0.0,
-      "validation": 0.027000001864507794,
+      "validation": 0.039099977584555745,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 45.865399995818734
+      "total": 47.577799996361136
     },
     "presented_response": {
       "response_type": "scalar",
@@ -10230,7 +10230,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "542dd1f1-a6f2-40d2-9589-11d9ffec06f5",
+      "conversation_id": "74f8f4aa-5c9b-487f-989b-34477ba73469",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -10265,7 +10265,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "542dd1f1-a6f2-40d2-9589-11d9ffec06f5",
+      "conversation_id": "74f8f4aa-5c9b-487f-989b-34477ba73469",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -10436,17 +10436,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 1",
     "passed": false,
     "failure_type": "AGGREGATION_ERROR",
-    "llm_latency_ms": 44.891900004586205,
-    "query_latency_ms": 22.4537999893073,
-    "render_latency_ms": 0.8200000156648457,
-    "total_latency_ms": 94.53129998291843,
+    "llm_latency_ms": 42.61209999094717,
+    "query_latency_ms": 21.89990002079867,
+    "render_latency_ms": 0.8380000072065741,
+    "total_latency_ms": 91.68730000965297,
     "latency_ms": {
-      "routing": 44.86329999053851,
+      "routing": 42.58419998222962,
       "llm": 0.0,
-      "validation": 0.026399997295811772,
+      "validation": 0.025699991965666413,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 44.891900004586205
+      "total": 42.61209999094717
     },
     "presented_response": {
       "response_type": "table",
@@ -10472,7 +10472,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "a26526f6-ffe9-432c-8bbd-2c57733eeeb4",
+      "conversation_id": "09cd67cb-7f8b-4aac-876f-7ae928bd9fab",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -10507,7 +10507,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "a26526f6-ffe9-432c-8bbd-2c57733eeeb4",
+      "conversation_id": "09cd67cb-7f8b-4aac-876f-7ae928bd9fab",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -10647,17 +10647,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 42.570299992803484,
-    "query_latency_ms": 20.629000006010756,
-    "render_latency_ms": 0.11740002082660794,
-    "total_latency_ms": 89.94770000572316,
+    "llm_latency_ms": 42.125599982682616,
+    "query_latency_ms": 19.64899999438785,
+    "render_latency_ms": 0.11240001185797155,
+    "total_latency_ms": 89.55080001032911,
     "latency_ms": {
-      "routing": 42.54259998560883,
+      "routing": 42.097700003068894,
       "llm": 0.0,
-      "validation": 0.025899993488565087,
+      "validation": 0.02570002106949687,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 42.570299992803484
+      "total": 42.125599982682616
     },
     "presented_response": {
       "response_type": "scalar",
@@ -10683,7 +10683,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "889a1308-f383-4db1-8333-39ec65aecf7c",
+      "conversation_id": "45ee210f-8310-4b1a-a109-3628699724d3",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -10718,7 +10718,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "889a1308-f383-4db1-8333-39ec65aecf7c",
+      "conversation_id": "45ee210f-8310-4b1a-a109-3628699724d3",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -10853,17 +10853,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" AS \"ten_ton_that\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE lower(CAST(\"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" AS VARCHAR)) LIKE lower(?) GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" ORDER BY \"ten_ton_that\" ASC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 55.619999999180436,
-    "query_latency_ms": 21.27460000338033,
-    "render_latency_ms": 0.5423999973572791,
-    "total_latency_ms": 104.27200002595782,
+    "llm_latency_ms": 60.28529998729937,
+    "query_latency_ms": 24.295799987157807,
+    "render_latency_ms": 0.7183999987319112,
+    "total_latency_ms": 111.58310002065264,
     "latency_ms": {
-      "routing": 55.59470001026057,
+      "routing": 60.25949999457225,
       "llm": 0.0,
-      "validation": 0.023899978259578347,
+      "validation": 0.02379997749812901,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 55.619999999180436
+      "total": 60.28529998729937
     },
     "presented_response": {
       "response_type": "table",
@@ -10889,7 +10889,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "6df377df-974c-484c-ae4e-85996a1b9c28",
+      "conversation_id": "963f10fc-366f-49f5-9509-3e5aeb9af18a",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -10924,7 +10924,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "6df377df-974c-484c-ae4e-85996a1b9c28",
+      "conversation_id": "963f10fc-366f-49f5-9509-3e5aeb9af18a",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -11079,17 +11079,17 @@
     "generated_sql": "SELECT \"loss_assignment_20260203_100840_report_2a7588\".\"ten_ton_that\" AS \"ten_ton_that\" FROM read_parquet(?) AS \"loss_assignment_20260203_100840_report_2a7588\" WHERE lower(CAST(\"loss_assignment_20260203_100840_report_2a7588\".\"ten_ton_that\" AS VARCHAR)) LIKE lower(?) GROUP BY \"loss_assignment_20260203_100840_report_2a7588\".\"ten_ton_that\" ORDER BY \"ten_ton_that\" ASC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 45.54269998334348,
-    "query_latency_ms": 22.75910001480952,
-    "render_latency_ms": 0.602399988565594,
-    "total_latency_ms": 97.75970000191592,
+    "llm_latency_ms": 48.37840000982396,
+    "query_latency_ms": 27.42030000081286,
+    "render_latency_ms": 0.738900009309873,
+    "total_latency_ms": 108.24370000045747,
     "latency_ms": {
-      "routing": 45.51500000525266,
+      "routing": 48.34869998740032,
       "llm": 0.0,
-      "validation": 0.025800021830946207,
+      "validation": 0.027600006433203816,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 45.54269998334348
+      "total": 48.37840000982396
     },
     "presented_response": {
       "response_type": "table",
@@ -11115,7 +11115,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "f7bb4526-4f31-438a-928e-b67ba106911b",
+      "conversation_id": "27045109-844f-4643-bbff-d0684902a234",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -11150,7 +11150,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "f7bb4526-4f31-438a-928e-b67ba106911b",
+      "conversation_id": "27045109-844f-4643-bbff-d0684902a234",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -11371,17 +11371,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" AS \"ten_ton_that\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" = ? GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" ORDER BY \"ten_ton_that\" ASC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 44.15890001109801,
-    "query_latency_ms": 23.16620000055991,
-    "render_latency_ms": 0.6288000149652362,
-    "total_latency_ms": 98.40610000537708,
+    "llm_latency_ms": 43.45140000805259,
+    "query_latency_ms": 22.122599999420345,
+    "render_latency_ms": 0.5793999880552292,
+    "total_latency_ms": 99.95090001029894,
     "latency_ms": {
-      "routing": 44.13369999383576,
+      "routing": 43.42169998562895,
       "llm": 0.0,
-      "validation": 0.023100001271814108,
+      "validation": 0.027400004910305142,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 44.15890001109801
+      "total": 43.45140000805259
     },
     "presented_response": {
       "response_type": "table",
@@ -11407,7 +11407,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "e41cd81b-79c5-46d8-9517-0f666372522b",
+      "conversation_id": "e0f2192c-3cc4-414d-9889-786552151a09",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -11442,7 +11442,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "e41cd81b-79c5-46d8-9517-0f666372522b",
+      "conversation_id": "e0f2192c-3cc4-414d-9889-786552151a09",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -11597,17 +11597,17 @@
     "generated_sql": "SELECT \"loss_assignment_20260203_100840_report_2a7588\".\"ten_ton_that\" AS \"ten_ton_that\" FROM read_parquet(?) AS \"loss_assignment_20260203_100840_report_2a7588\" WHERE lower(CAST(\"loss_assignment_20260203_100840_report_2a7588\".\"ten_ton_that\" AS VARCHAR)) LIKE lower(?) GROUP BY \"loss_assignment_20260203_100840_report_2a7588\".\"ten_ton_that\" ORDER BY \"ten_ton_that\" ASC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 50.06639999919571,
-    "query_latency_ms": 22.2494000045117,
-    "render_latency_ms": 0.6194000015966594,
-    "total_latency_ms": 102.01250002137385,
+    "llm_latency_ms": 42.073999997228384,
+    "query_latency_ms": 21.630400005960837,
+    "render_latency_ms": 0.5422000249382108,
+    "total_latency_ms": 92.19609998399392,
     "latency_ms": {
-      "routing": 50.033100007567555,
+      "routing": 42.047099996125326,
       "llm": 0.0,
-      "validation": 0.031200004741549492,
+      "validation": 0.025299988919869065,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 50.06639999919571
+      "total": 42.073999997228384
     },
     "presented_response": {
       "response_type": "table",
@@ -11633,7 +11633,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "0277f490-6f54-4853-8568-ebc179147188",
+      "conversation_id": "f8408113-f7fa-4551-9faf-478f3dc0bea9",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -11668,7 +11668,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "0277f490-6f54-4853-8568-ebc179147188",
+      "conversation_id": "f8408113-f7fa-4551-9faf-478f3dc0bea9",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -11823,17 +11823,17 @@
     "generated_sql": "SELECT \"loss_assignment_20260203_100840_report_2a7588\".\"ten_ton_that\" AS \"ten_ton_that\" FROM read_parquet(?) AS \"loss_assignment_20260203_100840_report_2a7588\" WHERE lower(CAST(\"loss_assignment_20260203_100840_report_2a7588\".\"ten_ton_that\" AS VARCHAR)) LIKE lower(?) GROUP BY \"loss_assignment_20260203_100840_report_2a7588\".\"ten_ton_that\" ORDER BY \"ten_ton_that\" ASC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 45.51640001591295,
-    "query_latency_ms": 23.704699997324497,
-    "render_latency_ms": 0.601400010054931,
-    "total_latency_ms": 99.01289999834262,
+    "llm_latency_ms": 44.752599991625175,
+    "query_latency_ms": 25.240899994969368,
+    "render_latency_ms": 0.6791999912820756,
+    "total_latency_ms": 100.20740001345985,
     "latency_ms": {
-      "routing": 45.487399998819456,
+      "routing": 44.712500006426126,
       "llm": 0.0,
-      "validation": 0.026599998818710446,
+      "validation": 0.037999998312443495,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 45.51640001591295
+      "total": 44.752599991625175
     },
     "presented_response": {
       "response_type": "table",
@@ -11859,7 +11859,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "57e860f2-a693-447f-af36-787a9ce8b89c",
+      "conversation_id": "0c27b579-292e-4230-8292-9be95a4c4763",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -11894,7 +11894,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "57e860f2-a693-447f-af36-787a9ce8b89c",
+      "conversation_id": "0c27b579-292e-4230-8292-9be95a4c4763",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -11957,17 +11957,17 @@
     "generated_sql": "",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 0.07589999586343765,
+    "llm_latency_ms": 0.08480000542476773,
     "query_latency_ms": 0.0,
-    "render_latency_ms": 0.5354000022634864,
-    "total_latency_ms": 0.8280000183731318,
+    "render_latency_ms": 0.46389998169615865,
+    "total_latency_ms": 0.7550000154878944,
     "latency_ms": {
-      "routing": 0.07479998748749495,
+      "routing": 0.08369999704882503,
       "llm": 0.0,
       "validation": 0.0,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.07589999586343765
+      "total": 0.08480000542476773
     },
     "presented_response": {
       "response_type": "error",
@@ -11993,7 +11993,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "024d4166-cfac-4b22-9df6-646729047657",
+      "conversation_id": "bd668a9a-20da-48bf-be51-1ad973ef4ec1",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -12028,7 +12028,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "024d4166-cfac-4b22-9df6-646729047657",
+      "conversation_id": "bd668a9a-20da-48bf-be51-1ad973ef4ec1",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -12091,17 +12091,17 @@
     "generated_sql": "",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 0.05539998528547585,
+    "llm_latency_ms": 0.05329999839887023,
     "query_latency_ms": 0.0,
-    "render_latency_ms": 0.17270000535063446,
-    "total_latency_ms": 0.4165999998804182,
+    "render_latency_ms": 0.18239999189972878,
+    "total_latency_ms": 0.41629999759607017,
     "latency_ms": {
-      "routing": 0.054500007536262274,
+      "routing": 0.0523999915458262,
       "llm": 0.0,
       "validation": 0.0,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.05539998528547585
+      "total": 0.05329999839887023
     },
     "presented_response": {
       "response_type": "error",
@@ -12127,7 +12127,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "08048cb8-7bd0-4f0a-ab05-460585905bcd",
+      "conversation_id": "e58a7a37-c100-4672-8b56-72199e6cf535",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -12162,7 +12162,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "08048cb8-7bd0-4f0a-ab05-460585905bcd",
+      "conversation_id": "e58a7a37-c100-4672-8b56-72199e6cf535",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -12225,17 +12225,17 @@
     "generated_sql": "",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 0.048999994760379195,
+    "llm_latency_ms": 0.043400010326877236,
     "query_latency_ms": 0.0,
-    "render_latency_ms": 0.16679998952895403,
-    "total_latency_ms": 0.38350000977516174,
+    "render_latency_ms": 0.15929999062791467,
+    "total_latency_ms": 0.3598999755922705,
     "latency_ms": {
-      "routing": 0.048299989430233836,
+      "routing": 0.042800005758181214,
       "llm": 0.0,
       "validation": 0.0,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.048999994760379195
+      "total": 0.043400010326877236
     },
     "presented_response": {
       "response_type": "error",
@@ -12261,7 +12261,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "e5ddab1c-bb00-4565-9fc7-64674c4db792",
+      "conversation_id": "17658d42-98f9-420d-aca6-b62fba9d94b9",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -12296,7 +12296,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "e5ddab1c-bb00-4565-9fc7-64674c4db792",
+      "conversation_id": "17658d42-98f9-420d-aca6-b62fba9d94b9",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -12359,17 +12359,17 @@
     "generated_sql": "",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 0.046900007873773575,
+    "llm_latency_ms": 0.04129999433644116,
     "query_latency_ms": 0.0,
-    "render_latency_ms": 0.162799988174811,
-    "total_latency_ms": 0.3749000024981797,
+    "render_latency_ms": 0.15180002083070576,
+    "total_latency_ms": 0.3515999997034669,
     "latency_ms": {
-      "routing": 0.04630000330507755,
+      "routing": 0.04069998976774514,
       "llm": 0.0,
       "validation": 0.0,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.046900007873773575
+      "total": 0.04129999433644116
     },
     "presented_response": {
       "response_type": "error",
@@ -12395,7 +12395,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "05db116d-0ece-44eb-a141-1ad666c8bbc8",
+      "conversation_id": "138f847d-ae5b-48af-968a-efeee0eba9ef",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -12430,7 +12430,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "05db116d-0ece-44eb-a141-1ad666c8bbc8",
+      "conversation_id": "138f847d-ae5b-48af-968a-efeee0eba9ef",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -12493,17 +12493,17 @@
     "generated_sql": "",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 0.04640000406652689,
+    "llm_latency_ms": 0.040799990529194474,
     "query_latency_ms": 0.0,
-    "render_latency_ms": 0.1770000089891255,
-    "total_latency_ms": 0.381799996830523,
+    "render_latency_ms": 0.1532999740447849,
+    "total_latency_ms": 0.34830000367946923,
     "latency_ms": {
-      "routing": 0.04579999949783087,
+      "routing": 0.04019998596049845,
       "llm": 0.0,
       "validation": 0.0,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.04640000406652689
+      "total": 0.040799990529194474
     },
     "presented_response": {
       "response_type": "error",
@@ -12529,7 +12529,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "2f32ca88-cf89-437a-835b-550544ad637f",
+      "conversation_id": "2342af99-8ca3-43f5-8e2a-00cb63cc7a02",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -12564,7 +12564,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "2f32ca88-cf89-437a-835b-550544ad637f",
+      "conversation_id": "2342af99-8ca3-43f5-8e2a-00cb63cc7a02",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -12731,17 +12731,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 1",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 43.19070000201464,
-    "query_latency_ms": 21.580500004347414,
-    "render_latency_ms": 0.9399999980814755,
-    "total_latency_ms": 66.04760000482202,
+    "llm_latency_ms": 43.83609999786131,
+    "query_latency_ms": 22.647500009043142,
+    "render_latency_ms": 0.7986999989952892,
+    "total_latency_ms": 67.58470000931993,
     "latency_ms": {
-      "routing": 43.158299988135695,
+      "routing": 43.80699998000637,
       "llm": 0.0,
-      "validation": 0.03060000017285347,
+      "validation": 0.027700007194653153,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 43.19070000201464
+      "total": 43.83609999786131
     },
     "presented_response": {
       "response_type": "table",
@@ -12767,7 +12767,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "2f32ca88-cf89-437a-835b-550544ad637f",
+      "conversation_id": "2342af99-8ca3-43f5-8e2a-00cb63cc7a02",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -12883,7 +12883,7 @@
       "last_output": "table"
     },
     "state_after": {
-      "conversation_id": "2f32ca88-cf89-437a-835b-550544ad637f",
+      "conversation_id": "2342af99-8ca3-43f5-8e2a-00cb63cc7a02",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -13066,17 +13066,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 0.26300002355128527,
-    "query_latency_ms": 26.80250001139939,
-    "render_latency_ms": 1.0859000030905008,
-    "total_latency_ms": 355.1535999868065,
+    "llm_latency_ms": 0.2410000015515834,
+    "query_latency_ms": 22.99569998285733,
+    "render_latency_ms": 1.0012999991886318,
+    "total_latency_ms": 350.14359999331646,
     "latency_ms": {
-      "routing": 0.24059999850578606,
+      "routing": 0.218400004087016,
       "llm": 0.0,
-      "validation": 0.020800012862309813,
+      "validation": 0.020899984519928694,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.26300002355128527
+      "total": 0.2410000015515834
     },
     "presented_response": {
       "response_type": "chart",
@@ -13102,7 +13102,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "2f32ca88-cf89-437a-835b-550544ad637f",
+      "conversation_id": "2342af99-8ca3-43f5-8e2a-00cb63cc7a02",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -13218,7 +13218,7 @@
       "last_output": "bar"
     },
     "state_after": {
-      "conversation_id": "2f32ca88-cf89-437a-835b-550544ad637f",
+      "conversation_id": "2342af99-8ca3-43f5-8e2a-00cb63cc7a02",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -13437,17 +13437,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\" BETWEEN ? AND ? GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 0.2803000097628683,
-    "query_latency_ms": 25.49980001640506,
-    "render_latency_ms": 0.8059999963734299,
-    "total_latency_ms": 56.69009999837726,
+    "llm_latency_ms": 0.27320001390762627,
+    "query_latency_ms": 25.31910000834614,
+    "render_latency_ms": 0.7904999947641045,
+    "total_latency_ms": 55.917899997439235,
     "latency_ms": {
-      "routing": 0.2547000185586512,
+      "routing": 0.24789999588392675,
       "llm": 0.0,
-      "validation": 0.024100008886307478,
+      "validation": 0.023600005079060793,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.2803000097628683
+      "total": 0.27320001390762627
     },
     "presented_response": {
       "response_type": "chart",
@@ -13473,7 +13473,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "f76720e3-6659-45c7-a87c-b28735fc8df4",
+      "conversation_id": "5303dd22-0af3-41e9-9d88-8651bcb2b28c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -13508,7 +13508,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "f76720e3-6659-45c7-a87c-b28735fc8df4",
+      "conversation_id": "5303dd22-0af3-41e9-9d88-8651bcb2b28c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -13691,17 +13691,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" AS \"ten_ton_that\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 45.0233000156004,
-    "query_latency_ms": 22.344400000292808,
-    "render_latency_ms": 0.824799994006753,
-    "total_latency_ms": 68.51700000697747,
+    "llm_latency_ms": 44.70559998298995,
+    "query_latency_ms": 24.131200014380738,
+    "render_latency_ms": 0.8017999934963882,
+    "total_latency_ms": 69.95470001129434,
     "latency_ms": {
-      "routing": 44.9951000045985,
+      "routing": 44.67579998890869,
       "llm": 0.0,
-      "validation": 0.026599998818710446,
+      "validation": 0.028000009479001164,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 45.0233000156004
+      "total": 44.70559998298995
     },
     "presented_response": {
       "response_type": "table",
@@ -13727,7 +13727,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "f76720e3-6659-45c7-a87c-b28735fc8df4",
+      "conversation_id": "5303dd22-0af3-41e9-9d88-8651bcb2b28c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -13843,7 +13843,7 @@
       "last_output": "table"
     },
     "state_after": {
-      "conversation_id": "f76720e3-6659-45c7-a87c-b28735fc8df4",
+      "conversation_id": "5303dd22-0af3-41e9-9d88-8651bcb2b28c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -14030,17 +14030,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" = ? GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"row_count\" DESC LIMIT 1",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 0.25409998488612473,
-    "query_latency_ms": 25.185000005876645,
-    "render_latency_ms": 0.7969999860506505,
-    "total_latency_ms": 26.544099993770942,
+    "llm_latency_ms": 0.3370000049471855,
+    "query_latency_ms": 22.469300020020455,
+    "render_latency_ms": 0.8393000171054155,
+    "total_latency_ms": 23.946900008013472,
     "latency_ms": {
-      "routing": 0.2342999796383083,
+      "routing": 0.22810001973994076,
       "llm": 0.0,
-      "validation": 0.018799997633323073,
+      "validation": 0.10779997683130205,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.25409998488612473
+      "total": 0.3370000049471855
     },
     "presented_response": {
       "response_type": "table",
@@ -14066,7 +14066,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "f76720e3-6659-45c7-a87c-b28735fc8df4",
+      "conversation_id": "5303dd22-0af3-41e9-9d88-8651bcb2b28c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -14196,7 +14196,7 @@
       "last_output": "table"
     },
     "state_after": {
-      "conversation_id": "f76720e3-6659-45c7-a87c-b28735fc8df4",
+      "conversation_id": "5303dd22-0af3-41e9-9d88-8651bcb2b28c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -14383,17 +14383,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" = ? GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"row_count\" DESC LIMIT 1",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 0.19680001423694193,
-    "query_latency_ms": 24.290400004247203,
-    "render_latency_ms": 0.7471999851986766,
-    "total_latency_ms": 25.535099994158372,
+    "llm_latency_ms": 0.23509998572990298,
+    "query_latency_ms": 24.57109998795204,
+    "render_latency_ms": 0.8975999953690916,
+    "total_latency_ms": 26.080999989062548,
     "latency_ms": {
-      "routing": 0.17640000442042947,
+      "routing": 0.21269998978823423,
       "llm": 0.0,
-      "validation": 0.01920000067912042,
+      "validation": 0.02099998528137803,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.19680001423694193
+      "total": 0.23509998572990298
     },
     "presented_response": {
       "response_type": "report",
@@ -14419,7 +14419,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "c646bcbb-e1ff-4392-928e-20296c50fa6d",
+      "conversation_id": "997a7389-e83b-4721-8b03-ec36ede35e90",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -14454,7 +14454,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "c646bcbb-e1ff-4392-928e-20296c50fa6d",
+      "conversation_id": "997a7389-e83b-4721-8b03-ec36ede35e90",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -14646,17 +14646,17 @@
     "generated_sql": "SELECT date_trunc('month', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") AS \"thoi_gian_bat_dau\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY date_trunc('month', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") ORDER BY \"thoi_gian_bat_dau\" ASC, \"total_duration_seconds\" DESC LIMIT 20",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 43.00659999717027,
-    "query_latency_ms": 22.7084000071045,
-    "render_latency_ms": 1.0895000013988465,
-    "total_latency_ms": 67.1602999791503,
+    "llm_latency_ms": 43.8809999905061,
+    "query_latency_ms": 22.746399976313114,
+    "render_latency_ms": 1.361000002361834,
+    "total_latency_ms": 68.36179998936132,
     "latency_ms": {
-      "routing": 42.97959999530576,
+      "routing": 43.8519999734126,
       "llm": 0.0,
-      "validation": 0.025899993488565087,
+      "validation": 0.027700007194653153,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 43.00659999717027
+      "total": 43.8809999905061
     },
     "presented_response": {
       "response_type": "table",
@@ -14682,7 +14682,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "c646bcbb-e1ff-4392-928e-20296c50fa6d",
+      "conversation_id": "997a7389-e83b-4721-8b03-ec36ede35e90",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -14806,7 +14806,7 @@
       "last_output": "table"
     },
     "state_after": {
-      "conversation_id": "c646bcbb-e1ff-4392-928e-20296c50fa6d",
+      "conversation_id": "997a7389-e83b-4721-8b03-ec36ede35e90",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -15027,17 +15027,17 @@
     "generated_sql": "SELECT date_trunc('month', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") AS \"thoi_gian_bat_dau\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\" BETWEEN ? AND ? GROUP BY date_trunc('month', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") ORDER BY \"thoi_gian_bat_dau\" ASC, \"total_duration_seconds\" DESC LIMIT 20",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 0.2271000121254474,
-    "query_latency_ms": 23.16919999429956,
-    "render_latency_ms": 0.9953999833669513,
-    "total_latency_ms": 24.768199975369498,
+    "llm_latency_ms": 0.22260000696405768,
+    "query_latency_ms": 21.951000002445653,
+    "render_latency_ms": 0.9309000161010772,
+    "total_latency_ms": 23.454299982404336,
     "latency_ms": {
-      "routing": 0.2046000154223293,
+      "routing": 0.20000000949949026,
       "llm": 0.0,
-      "validation": 0.021199986804276705,
+      "validation": 0.021500018192455173,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.2271000121254474
+      "total": 0.22260000696405768
     },
     "presented_response": {
       "response_type": "table",
@@ -15063,7 +15063,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "c646bcbb-e1ff-4392-928e-20296c50fa6d",
+      "conversation_id": "997a7389-e83b-4721-8b03-ec36ede35e90",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -15219,7 +15219,7 @@
       "last_output": "table"
     },
     "state_after": {
-      "conversation_id": "c646bcbb-e1ff-4392-928e-20296c50fa6d",
+      "conversation_id": "997a7389-e83b-4721-8b03-ec36ede35e90",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -15451,17 +15451,17 @@
     "generated_sql": "WITH base AS (SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\") SELECT \"may\", \"row_count\", CASE WHEN SUM(\"row_count\") OVER () = 0 THEN NULL ELSE (\"row_count\" * 100.0 / NULLIF(SUM(\"row_count\") OVER (), 0)) END AS \"percentage\" FROM base ORDER BY \"row_count\" DESC LIMIT 20",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 43.68500001146458,
-    "query_latency_ms": 22.448500007158145,
-    "render_latency_ms": 0.9837000106927007,
-    "total_latency_ms": 67.49960000161082,
+    "llm_latency_ms": 41.06590000446886,
+    "query_latency_ms": 21.009499992942438,
+    "render_latency_ms": 0.9489000076428056,
+    "total_latency_ms": 63.34880000213161,
     "latency_ms": {
-      "routing": 43.65830001188442,
+      "routing": 41.0445999877993,
       "llm": 0.0,
-      "validation": 0.02500001573935151,
+      "validation": 0.019800005247816443,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 43.68500001146458
+      "total": 41.06590000446886
     },
     "presented_response": {
       "response_type": "table",
@@ -15487,7 +15487,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "ae3c45a2-88ea-4ac7-970a-b9c30fbdd594",
+      "conversation_id": "e7700cd8-2b67-443a-b757-c7fe9644febc",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -15522,7 +15522,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "ae3c45a2-88ea-4ac7-970a-b9c30fbdd594",
+      "conversation_id": "e7700cd8-2b67-443a-b757-c7fe9644febc",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -15689,17 +15689,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", avg(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"avg_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"avg_duration_seconds\" DESC LIMIT 1",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 43.21429997798987,
-    "query_latency_ms": 21.666099986759946,
-    "render_latency_ms": 0.7812999829184264,
-    "total_latency_ms": 65.97500000498258,
+    "llm_latency_ms": 42.436999996425584,
+    "query_latency_ms": 22.15140001499094,
+    "render_latency_ms": 0.8341000066138804,
+    "total_latency_ms": 65.73390000266954,
     "latency_ms": {
-      "routing": 43.18740000599064,
+      "routing": 42.411500005982816,
       "llm": 0.0,
-      "validation": 0.025399989681318402,
+      "validation": 0.024199980543926358,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 43.21429997798987
+      "total": 42.436999996425584
     },
     "presented_response": {
       "response_type": "table",
@@ -15725,7 +15725,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "ae3c45a2-88ea-4ac7-970a-b9c30fbdd594",
+      "conversation_id": "e7700cd8-2b67-443a-b757-c7fe9644febc",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -15841,7 +15841,7 @@
       "last_output": "text"
     },
     "state_after": {
-      "conversation_id": "ae3c45a2-88ea-4ac7-970a-b9c30fbdd594",
+      "conversation_id": "e7700cd8-2b67-443a-b757-c7fe9644febc",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -16027,17 +16027,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", avg(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"avg_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" = ? GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"avg_duration_seconds\" DESC LIMIT 1",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 0.18760000239126384,
-    "query_latency_ms": 23.109600006137043,
-    "render_latency_ms": 0.9575999865774065,
-    "total_latency_ms": 24.613599991425872,
+    "llm_latency_ms": 0.17710000975057483,
+    "query_latency_ms": 23.141500016208738,
+    "render_latency_ms": 0.7222999993246049,
+    "total_latency_ms": 24.35140000307001,
     "latency_ms": {
-      "routing": 0.16629998572170734,
+      "routing": 0.15549999079667032,
       "llm": 0.0,
-      "validation": 0.020100007532164454,
+      "validation": 0.02060001133941114,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.18760000239126384
+      "total": 0.17710000975057483
     },
     "presented_response": {
       "response_type": "table",
@@ -16063,7 +16063,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "ae3c45a2-88ea-4ac7-970a-b9c30fbdd594",
+      "conversation_id": "e7700cd8-2b67-443a-b757-c7fe9644febc",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -16192,7 +16192,7 @@
       "last_output": "text"
     },
     "state_after": {
-      "conversation_id": "ae3c45a2-88ea-4ac7-970a-b9c30fbdd594",
+      "conversation_id": "e7700cd8-2b67-443a-b757-c7fe9644febc",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -16394,17 +16394,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", avg(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"avg_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" = ? AND \"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\" > ? GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"avg_duration_seconds\" DESC LIMIT 1",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 0.23170001804828644,
-    "query_latency_ms": 24.706199998036027,
-    "render_latency_ms": 0.7922000077087432,
-    "total_latency_ms": 26.08939999481663,
+    "llm_latency_ms": 0.20589999621734023,
+    "query_latency_ms": 22.3454000079073,
+    "render_latency_ms": 0.7547999848611653,
+    "total_latency_ms": 23.63330000662245,
     "latency_ms": {
-      "routing": 0.20140002015978098,
+      "routing": 0.18319999799132347,
       "llm": 0.0,
-      "validation": 0.02880001557059586,
+      "validation": 0.02169999061152339,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.23170001804828644
+      "total": 0.20589999621734023
     },
     "presented_response": {
       "response_type": "table",
@@ -16430,7 +16430,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "4dd9ad45-965f-4469-8ca7-1530cb5f3cdf",
+      "conversation_id": "86296b78-7aa3-44bf-874b-fe32dce278a3",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -16465,7 +16465,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "4dd9ad45-965f-4469-8ca7-1530cb5f3cdf",
+      "conversation_id": "86296b78-7aa3-44bf-874b-fe32dce278a3",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -16632,17 +16632,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" AS \"nhom_ton_that\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 44.94630001136102,
-    "query_latency_ms": 22.251699992921203,
-    "render_latency_ms": 0.7864999934099615,
-    "total_latency_ms": 68.31329999840818,
+    "llm_latency_ms": 42.258999979821965,
+    "query_latency_ms": 25.142300000879914,
+    "render_latency_ms": 1.3019000180065632,
+    "total_latency_ms": 69.04839997878298,
     "latency_ms": {
-      "routing": 44.91500000585802,
+      "routing": 42.222199990646914,
       "llm": 0.0,
-      "validation": 0.0295999925583601,
+      "validation": 0.03519997699186206,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 44.94630001136102
+      "total": 42.258999979821965
     },
     "presented_response": {
       "response_type": "table",
@@ -16668,7 +16668,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "4dd9ad45-965f-4469-8ca7-1530cb5f3cdf",
+      "conversation_id": "86296b78-7aa3-44bf-874b-fe32dce278a3",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -16784,7 +16784,7 @@
       "last_output": "text"
     },
     "state_after": {
-      "conversation_id": "4dd9ad45-965f-4469-8ca7-1530cb5f3cdf",
+      "conversation_id": "86296b78-7aa3-44bf-874b-fe32dce278a3",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -16951,17 +16951,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" AS \"nhom_ton_that\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" ORDER BY \"total_duration_seconds\" DESC LIMIT 1",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 0.1928000128827989,
-    "query_latency_ms": 24.13089998299256,
-    "render_latency_ms": 0.7649000035598874,
-    "total_latency_ms": 25.38589999312535,
+    "llm_latency_ms": 0.1951000012923032,
+    "query_latency_ms": 22.973300016019493,
+    "render_latency_ms": 0.8941999985836446,
+    "total_latency_ms": 24.401299975579605,
     "latency_ms": {
-      "routing": 0.17270000535063446,
+      "routing": 0.17450001905672252,
       "llm": 0.0,
-      "validation": 0.01889999839477241,
+      "validation": 0.01930000144056976,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.1928000128827989
+      "total": 0.1951000012923032
     },
     "presented_response": {
       "response_type": "table",
@@ -16987,7 +16987,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "4dd9ad45-965f-4469-8ca7-1530cb5f3cdf",
+      "conversation_id": "86296b78-7aa3-44bf-874b-fe32dce278a3",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -17103,7 +17103,7 @@
       "last_output": "text"
     },
     "state_after": {
-      "conversation_id": "4dd9ad45-965f-4469-8ca7-1530cb5f3cdf",
+      "conversation_id": "86296b78-7aa3-44bf-874b-fe32dce278a3",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -17290,17 +17290,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" AS \"ten_ton_that\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" = ? GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" ORDER BY \"total_duration_seconds\" DESC LIMIT 1",
     "passed": false,
     "failure_type": "MANUAL_REVIEW",
-    "llm_latency_ms": 0.2072000061161816,
-    "query_latency_ms": 23.320899985264987,
-    "render_latency_ms": 0.9803999855648726,
-    "total_latency_ms": 24.866699997801334,
+    "llm_latency_ms": 0.26550001348368824,
+    "query_latency_ms": 22.463300003437325,
+    "render_latency_ms": 0.7393999840132892,
+    "total_latency_ms": 23.83910000207834,
     "latency_ms": {
-      "routing": 0.1852000132203102,
+      "routing": 0.21930001094006002,
       "llm": 0.0,
-      "validation": 0.020800012862309813,
+      "validation": 0.0447999918833375,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.2072000061161816
+      "total": 0.26550001348368824
     },
     "presented_response": {
       "response_type": "table",
@@ -17326,7 +17326,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "5ca78a10-e381-43ac-98d4-0cdfc9d446be",
+      "conversation_id": "fedae829-45e8-42c9-b084-fd4c8f3e1222",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -17361,7 +17361,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "5ca78a10-e381-43ac-98d4-0cdfc9d446be",
+      "conversation_id": "fedae829-45e8-42c9-b084-fd4c8f3e1222",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -17565,17 +17565,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 44.29409999283962,
-    "query_latency_ms": 22.03890000237152,
-    "render_latency_ms": 0.8248999947682023,
-    "total_latency_ms": 125.77109999256209,
+    "llm_latency_ms": 45.77860000426881,
+    "query_latency_ms": 23.283699993044138,
+    "render_latency_ms": 0.8691999828442931,
+    "total_latency_ms": 136.90360001055524,
     "latency_ms": {
-      "routing": 44.26450000028126,
+      "routing": 45.74760000105016,
       "llm": 0.0,
-      "validation": 0.027400004910305142,
+      "validation": 0.02889998722821474,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 44.29409999283962
+      "total": 45.77860000426881
     },
     "presented_response": {
       "response_type": "chart",
@@ -17601,7 +17601,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "417c5d42-3cfd-4e85-a04c-6507217bbf0c",
+      "conversation_id": "46ba4d0d-05b4-4227-bc14-c8066506ab80",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -17636,7 +17636,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "417c5d42-3cfd-4e85-a04c-6507217bbf0c",
+      "conversation_id": "46ba4d0d-05b4-4227-bc14-c8066506ab80",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -17973,17 +17973,17 @@
     "generated_sql": "SELECT date_trunc('day', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") AS \"thoi_gian_bat_dau\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY date_trunc('day', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") ORDER BY \"thoi_gian_bat_dau\" ASC, \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 48.7274999904912,
-    "query_latency_ms": 25.960299972211942,
-    "render_latency_ms": 1.3241000124253333,
-    "total_latency_ms": 147.57680002367124,
+    "llm_latency_ms": 44.22539999359287,
+    "query_latency_ms": 23.750399996060878,
+    "render_latency_ms": 1.5138000017032027,
+    "total_latency_ms": 134.78749999194406,
     "latency_ms": {
-      "routing": 48.69389999657869,
+      "routing": 44.19650000636466,
       "llm": 0.0,
-      "validation": 0.031099974876269698,
+      "validation": 0.026900001103058457,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 48.7274999904912
+      "total": 44.22539999359287
     },
     "presented_response": {
       "response_type": "chart",
@@ -18009,7 +18009,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "23dd369a-7881-4a5e-bef1-3cf26b8f1690",
+      "conversation_id": "312787c5-51f6-454e-addc-f3fd31fd3bde",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -18044,7 +18044,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "23dd369a-7881-4a5e-bef1-3cf26b8f1690",
+      "conversation_id": "312787c5-51f6-454e-addc-f3fd31fd3bde",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -18216,17 +18216,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" AS \"nhom_ton_that\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 44.976299977861345,
-    "query_latency_ms": 23.973299976205453,
-    "render_latency_ms": 0.8690000104252249,
-    "total_latency_ms": 131.41390000237152,
+    "llm_latency_ms": 43.04670001147315,
+    "query_latency_ms": 21.48480000323616,
+    "render_latency_ms": 0.8153000089805573,
+    "total_latency_ms": 122.15619999915361,
     "latency_ms": {
-      "routing": 44.94739999063313,
+      "routing": 43.01389999454841,
       "llm": 0.0,
-      "validation": 0.026899971999228,
+      "validation": 0.030700000934302807,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 44.976299977861345
+      "total": 43.04670001147315
     },
     "presented_response": {
       "response_type": "chart",
@@ -18252,7 +18252,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "509e82b2-100a-4852-864a-e1002a6aa1a4",
+      "conversation_id": "ff8b8a1d-326d-43f2-9655-42fe13108d90",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -18287,7 +18287,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "509e82b2-100a-4852-864a-e1002a6aa1a4",
+      "conversation_id": "ff8b8a1d-326d-43f2-9655-42fe13108d90",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -18454,17 +18454,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 47.67030000220984,
-    "query_latency_ms": 21.337600017432123,
-    "render_latency_ms": 0.8065999718382955,
-    "total_latency_ms": 70.13429998187348,
+    "llm_latency_ms": 44.081600004574284,
+    "query_latency_ms": 20.77339999959804,
+    "render_latency_ms": 0.8169000211637467,
+    "total_latency_ms": 65.9874000120908,
     "latency_ms": {
-      "routing": 47.63980000279844,
+      "routing": 44.05100000440143,
       "llm": 0.0,
-      "validation": 0.029000017093494534,
+      "validation": 0.02880001557059586,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 47.67030000220984
+      "total": 44.081600004574284
     },
     "presented_response": {
       "response_type": "dashboard",
@@ -18490,7 +18490,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "8bb081ef-3a65-4a20-9a6b-a48a248cd166",
+      "conversation_id": "6656e92f-5e49-4803-9cc1-a858aa5331e0",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -18525,7 +18525,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "8bb081ef-3a65-4a20-9a6b-a48a248cd166",
+      "conversation_id": "6656e92f-5e49-4803-9cc1-a858aa5331e0",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -18692,17 +18692,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 43.33290000795387,
-    "query_latency_ms": 21.113499999046326,
-    "render_latency_ms": 0.7874000002630055,
-    "total_latency_ms": 65.54229999892414,
+    "llm_latency_ms": 43.21960001834668,
+    "query_latency_ms": 21.275500010233372,
+    "render_latency_ms": 0.7894000154919922,
+    "total_latency_ms": 65.58110000332817,
     "latency_ms": {
-      "routing": 43.30180000397377,
+      "routing": 43.17839999566786,
       "llm": 0.0,
-      "validation": 0.029399991035461426,
+      "validation": 0.03950000973418355,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 43.33290000795387
+      "total": 43.21960001834668
     },
     "presented_response": {
       "response_type": "report",
@@ -18728,7 +18728,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "1451e89d-ee7e-48fd-98d9-73f20890d322",
+      "conversation_id": "e3a41b02-4574-4988-8a47-373956b98d14",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -18763,7 +18763,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "1451e89d-ee7e-48fd-98d9-73f20890d322",
+      "conversation_id": "e3a41b02-4574-4988-8a47-373956b98d14",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19038,17 +19038,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 42.33860000385903,
-    "query_latency_ms": 22.738900006515905,
-    "render_latency_ms": 0.9740999958012253,
-    "total_latency_ms": 95.01840002485551,
+    "llm_latency_ms": 43.63430000375956,
+    "query_latency_ms": 23.097500001313165,
+    "render_latency_ms": 0.9617999894544482,
+    "total_latency_ms": 95.86999999010004,
     "latency_ms": {
-      "routing": 42.30529998312704,
+      "routing": 43.60099998302758,
       "llm": 0.0,
-      "validation": 0.03090000245720148,
+      "validation": 0.031200004741549492,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 42.33860000385903
+      "total": 43.63430000375956
     },
     "presented_response": {
       "response_type": "report",
@@ -19074,7 +19074,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "fb15e04a-3ac0-4584-9732-06f80ae3dbd2",
+      "conversation_id": "094e02fe-93c3-42b4-b771-feab1ce15874",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19109,7 +19109,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "fb15e04a-3ac0-4584-9732-06f80ae3dbd2",
+      "conversation_id": "094e02fe-93c3-42b4-b771-feab1ce15874",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19172,17 +19172,17 @@
     "generated_sql": "",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 0.054500007536262274,
+    "llm_latency_ms": 0.05649999366141856,
     "query_latency_ms": 0.0,
-    "render_latency_ms": 0.21349999587982893,
-    "total_latency_ms": 0.451300002168864,
+    "render_latency_ms": 0.2057999954558909,
+    "total_latency_ms": 0.4416999872773886,
     "latency_ms": {
-      "routing": 0.05370000144466758,
+      "routing": 0.05569998756982386,
       "llm": 0.0,
       "validation": 0.0,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.054500007536262274
+      "total": 0.05649999366141856
     },
     "presented_response": {
       "response_type": "clarification",
@@ -19208,7 +19208,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "cc132cbd-a05f-4bf3-be70-2c659a10dd1f",
+      "conversation_id": "783e005d-92f7-4d38-bb7f-66d86474d194",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19243,7 +19243,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "cc132cbd-a05f-4bf3-be70-2c659a10dd1f",
+      "conversation_id": "783e005d-92f7-4d38-bb7f-66d86474d194",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19306,17 +19306,17 @@
     "generated_sql": "",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 0.04019998596049845,
+    "llm_latency_ms": 0.0418000272475183,
     "query_latency_ms": 0.0,
-    "render_latency_ms": 0.17220000154338777,
-    "total_latency_ms": 0.371600006474182,
+    "render_latency_ms": 0.1598999951966107,
+    "total_latency_ms": 0.35930000012740493,
     "latency_ms": {
-      "routing": 0.03959998139180243,
+      "routing": 0.04120002267882228,
       "llm": 0.0,
       "validation": 0.0,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.04019998596049845
+      "total": 0.0418000272475183
     },
     "presented_response": {
       "response_type": "clarification",
@@ -19342,7 +19342,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "453d4cd9-34a2-4ad5-a2c6-344b9f17a582",
+      "conversation_id": "dd4b56cf-afe0-4a10-9a38-f9d6f2b38206",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19377,7 +19377,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "453d4cd9-34a2-4ad5-a2c6-344b9f17a582",
+      "conversation_id": "dd4b56cf-afe0-4a10-9a38-f9d6f2b38206",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19440,17 +19440,17 @@
     "generated_sql": "",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 0.03460000152699649,
+    "llm_latency_ms": 0.03369999467395246,
     "query_latency_ms": 0.0,
-    "render_latency_ms": 0.1548999862279743,
-    "total_latency_ms": 0.3443000023253262,
+    "render_latency_ms": 0.152900000102818,
+    "total_latency_ms": 0.3415999817661941,
     "latency_ms": {
-      "routing": 0.03399999695830047,
+      "routing": 0.03320001997053623,
       "llm": 0.0,
       "validation": 0.0,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.03460000152699649
+      "total": 0.03369999467395246
     },
     "presented_response": {
       "response_type": "clarification",
@@ -19476,7 +19476,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "372f00ca-7382-49f3-86b0-c6cc81f46676",
+      "conversation_id": "29e9080b-8b36-49d9-8611-d4d97f06ca0d",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19511,7 +19511,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "372f00ca-7382-49f3-86b0-c6cc81f46676",
+      "conversation_id": "29e9080b-8b36-49d9-8611-d4d97f06ca0d",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19574,17 +19574,17 @@
     "generated_sql": "",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 0.033899996196851134,
+    "llm_latency_ms": 0.03360002301633358,
     "query_latency_ms": 0.0,
-    "render_latency_ms": 0.15330000314861536,
-    "total_latency_ms": 0.35089999437332153,
+    "render_latency_ms": 0.15720000374130905,
+    "total_latency_ms": 0.34589998540468514,
     "latency_ms": {
-      "routing": 0.03329999162815511,
+      "routing": 0.03290001768618822,
       "llm": 0.0,
       "validation": 0.0,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.033899996196851134
+      "total": 0.03360002301633358
     },
     "presented_response": {
       "response_type": "clarification",
@@ -19610,7 +19610,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "2d9d06f3-ffc9-49c7-ab61-69b176c88749",
+      "conversation_id": "a1b20d37-2ed9-44f7-9e3f-b68f2c2447f5",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19645,7 +19645,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "2d9d06f3-ffc9-49c7-ab61-69b176c88749",
+      "conversation_id": "a1b20d37-2ed9-44f7-9e3f-b68f2c2447f5",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19708,17 +19708,17 @@
     "generated_sql": "",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 0.034900003811344504,
+    "llm_latency_ms": 0.033899996196851134,
     "query_latency_ms": 0.0,
-    "render_latency_ms": 0.15580002218484879,
-    "total_latency_ms": 0.34669999149627984,
+    "render_latency_ms": 0.15300000086426735,
+    "total_latency_ms": 0.3404000017326325,
     "latency_ms": {
-      "routing": 0.03429999924264848,
+      "routing": 0.03339999238960445,
       "llm": 0.0,
       "validation": 0.0,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.034900003811344504
+      "total": 0.033899996196851134
     },
     "presented_response": {
       "response_type": "error",
@@ -19744,7 +19744,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "ece6ec62-f036-41ff-a71e-36afc0744505",
+      "conversation_id": "4ee25043-575c-44d3-8d7b-b13459dea569",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19779,7 +19779,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "ece6ec62-f036-41ff-a71e-36afc0744505",
+      "conversation_id": "4ee25043-575c-44d3-8d7b-b13459dea569",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19844,10 +19844,10 @@
     "failure_type": null,
     "llm_latency_ms": 0.03819999983534217,
     "query_latency_ms": 0.0,
-    "render_latency_ms": 0.1540999801363796,
-    "total_latency_ms": 0.3471999953035265,
+    "render_latency_ms": 0.152299995534122,
+    "total_latency_ms": 0.34420000156387687,
     "latency_ms": {
-      "routing": 0.03759999526664615,
+      "routing": 0.037600024370476604,
       "llm": 0.0,
       "validation": 0.0,
       "query": 0.0,
@@ -19878,7 +19878,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "f740a185-c010-4835-91b7-4d0d3d3e429e",
+      "conversation_id": "781f3f47-817d-4c38-ab01-e70fec79a32c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19913,7 +19913,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "f740a185-c010-4835-91b7-4d0d3d3e429e",
+      "conversation_id": "781f3f47-817d-4c38-ab01-e70fec79a32c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -19976,17 +19976,17 @@
     "generated_sql": "",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 0.03470000228844583,
+    "llm_latency_ms": 0.03500000457279384,
     "query_latency_ms": 0.0,
-    "render_latency_ms": 0.16299998969770968,
-    "total_latency_ms": 0.3536999865900725,
+    "render_latency_ms": 0.15109998639672995,
+    "total_latency_ms": 0.3414000093471259,
     "latency_ms": {
-      "routing": 0.03409999771974981,
+      "routing": 0.03440000000409782,
       "llm": 0.0,
       "validation": 0.0,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.03470000228844583
+      "total": 0.03500000457279384
     },
     "presented_response": {
       "response_type": "error",
@@ -20012,7 +20012,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "29f6832a-0ba5-41c1-884a-69bcfb072152",
+      "conversation_id": "e73b44ad-aa1f-4d5a-a2c3-50aacb9ddffb",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -20047,7 +20047,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "29f6832a-0ba5-41c1-884a-69bcfb072152",
+      "conversation_id": "e73b44ad-aa1f-4d5a-a2c3-50aacb9ddffb",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -20110,17 +20110,17 @@
     "generated_sql": "",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 0.03259998629800975,
+    "llm_latency_ms": 0.03220001235604286,
     "query_latency_ms": 0.0,
-    "render_latency_ms": 0.15010000788606703,
-    "total_latency_ms": 0.33599999733269215,
+    "render_latency_ms": 0.1511000155005604,
+    "total_latency_ms": 0.33519999124109745,
     "latency_ms": {
-      "routing": 0.03209998249076307,
+      "routing": 0.03160000778734684,
       "llm": 0.0,
       "validation": 0.0,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 0.03259998629800975
+      "total": 0.03220001235604286
     },
     "presented_response": {
       "response_type": "error",
@@ -20146,7 +20146,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "7261fcab-23f7-499c-b3ed-db6daac56f2c",
+      "conversation_id": "26a228e1-1fa9-4f51-bda7-27d59f179ea5",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -20181,7 +20181,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "7261fcab-23f7-499c-b3ed-db6daac56f2c",
+      "conversation_id": "26a228e1-1fa9-4f51-bda7-27d59f179ea5",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -20316,17 +20316,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" = ? GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"may\" ASC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 43.55360000045039,
-    "query_latency_ms": 20.76330001000315,
-    "render_latency_ms": 0.5423999973572791,
-    "total_latency_ms": 92.26880001369864,
+    "llm_latency_ms": 40.77810002490878,
+    "query_latency_ms": 20.76640000450425,
+    "render_latency_ms": 0.575500016566366,
+    "total_latency_ms": 89.21869998448528,
     "latency_ms": {
-      "routing": 43.52609999477863,
+      "routing": 40.75139999622479,
       "llm": 0.0,
-      "validation": 0.025599991204217076,
+      "validation": 0.02440001117065549,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 43.55360000045039
+      "total": 40.77810002490878
     },
     "presented_response": {
       "response_type": "table",
@@ -20352,7 +20352,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "31d8ddf4-1143-49ba-a9fd-bc6d4c9c9d3b",
+      "conversation_id": "289b13c2-5a34-461e-9de6-8d8c96f74c5c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -20387,7 +20387,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "31d8ddf4-1143-49ba-a9fd-bc6d4c9c9d3b",
+      "conversation_id": "289b13c2-5a34-461e-9de6-8d8c96f74c5c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -20568,17 +20568,17 @@
     "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\" BETWEEN ? AND ? ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 43.66150000714697,
-    "query_latency_ms": 20.993200014345348,
-    "render_latency_ms": 0.09280000813305378,
-    "total_latency_ms": 92.44849998503923,
+    "llm_latency_ms": 45.61010000179522,
+    "query_latency_ms": 23.912000004202127,
+    "render_latency_ms": 0.10380000458098948,
+    "total_latency_ms": 97.31349998037331,
     "latency_ms": {
-      "routing": 43.62730000866577,
+      "routing": 45.573600014904514,
       "llm": 0.0,
-      "validation": 0.03199998172931373,
+      "validation": 0.034199998481199145,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 43.66150000714697
+      "total": 45.61010000179522
     },
     "presented_response": {
       "response_type": "scalar",
@@ -20604,7 +20604,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "e05238c4-0c7e-46b2-9af0-998d04adb491",
+      "conversation_id": "b044a934-20ea-465a-af36-e4c4d2d6712d",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -20639,7 +20639,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "e05238c4-0c7e-46b2-9af0-998d04adb491",
+      "conversation_id": "b044a934-20ea-465a-af36-e4c4d2d6712d",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -20774,17 +20774,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" AS \"ten_ton_that\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE lower(CAST(\"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" AS VARCHAR)) LIKE lower(?) GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" ORDER BY \"ten_ton_that\" ASC LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 59.89129998488352,
-    "query_latency_ms": 20.85199998691678,
-    "render_latency_ms": 0.5776000034529716,
-    "total_latency_ms": 109.61060001864098,
+    "llm_latency_ms": 62.43769999127835,
+    "query_latency_ms": 23.240800015628338,
+    "render_latency_ms": 0.6716999923810363,
+    "total_latency_ms": 115.69370000506751,
     "latency_ms": {
-      "routing": 59.85949997557327,
+      "routing": 62.40369999432005,
       "llm": 0.0,
-      "validation": 0.029999995604157448,
+      "validation": 0.03160000778734684,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 59.89129998488352
+      "total": 62.43769999127835
     },
     "presented_response": {
       "response_type": "table",
@@ -20810,7 +20810,7 @@
     "llm_call_count": 0,
     "fallback_used": false,
     "state_before": {
-      "conversation_id": "80b91212-0ea3-47c5-aa1a-63f5cbd0a930",
+      "conversation_id": "980c1c51-832a-4dac-99cf-a6440fad13f2",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -20845,7 +20845,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "80b91212-0ea3-47c5-aa1a-63f5cbd0a930",
+      "conversation_id": "980c1c51-832a-4dac-99cf-a6440fad13f2",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -20954,17 +20954,17 @@
     "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".* FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"duration_seconds\" > ? LIMIT 20",
     "passed": true,
     "failure_type": null,
-    "llm_latency_ms": 44.44060000241734,
-    "query_latency_ms": 22.773200005758554,
-    "render_latency_ms": 5.06120000500232,
-    "total_latency_ms": 99.00400001788512,
+    "llm_latency_ms": 44.16479999781586,
+    "query_latency_ms": 22.155200014822185,
+    "render_latency_ms": 6.570599973201752,
+    "total_latency_ms": 103.175199998077,
     "latency_ms": {
-      "routing": 44.408799993107095,
+      "routing": 44.131899980129674,
       "llm": 0.0,
-      "validation": 0.029900023946538568,
+      "validation": 0.03029999788850546,
       "query": 0.0,
       "rendering": 0.0,
-      "total": 44.44060000241734
+      "total": 44.16479999781586
     },
     "presented_response": {
       "response_type": "table",

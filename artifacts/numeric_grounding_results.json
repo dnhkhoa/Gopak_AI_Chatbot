@@ -1,716 +1,2638 @@
 {
   "summary": {
-    "checked": 0,
-    "passed": 0,
-    "status": "not fully instrumented"
+    "total": 131,
+    "passed": 131,
+    "accuracy": 1.0
+  },
+  "row_level_summary": {
+    "sample_file_available": false,
+    "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+    "total": 81,
+    "passed": 81,
+    "accuracy": 1.0,
+    "p50_latency_ms": 547.7,
+    "p95_latency_ms": 866.0
   },
   "results": [
     {
       "id": "DEV-001",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #1",
+          "latency_ms": 97.4,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-002",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #2",
+          "latency_ms": 33.6,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-003",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #3",
+          "latency_ms": 121.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-009",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 179.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-010",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 151.7,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-013",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #13",
+          "latency_ms": 35.1,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-014",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #14",
+          "latency_ms": 31.5,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-015",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #15",
+          "latency_ms": 117.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-021",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 151.7,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-022",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 129.2,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-025",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #25",
+          "latency_ms": 34.3,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-026",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #26",
+          "latency_ms": 32.5,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-027",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #27",
+          "latency_ms": 110.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-033",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 141.4,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-034",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 125.2,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-037",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #37",
+          "latency_ms": 31.6,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-038",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #38",
+          "latency_ms": 30.8,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-039",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #39",
+          "latency_ms": 109.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-045",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 146.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-046",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 125.8,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-049",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #49",
+          "latency_ms": 32.1,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-050",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #50",
+          "latency_ms": 31.2,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-051",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #51",
+          "latency_ms": 186.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-057",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 142.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-058",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 125.5,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-061",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #61",
+          "latency_ms": 36.0,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-062",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #62",
+          "latency_ms": 33.4,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-063",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #63",
+          "latency_ms": 112.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-069",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 150.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-070",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 143.3,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-073",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #73",
+          "latency_ms": 29.2,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-074",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #74",
+          "latency_ms": 31.8,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-075",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #75",
+          "latency_ms": 108.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-081",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 145.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-082",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 126.6,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-085",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #85",
+          "latency_ms": 34.5,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-086",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #86",
+          "latency_ms": 32.5,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-087",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #87",
+          "latency_ms": 108.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-093",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 139.6,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-094",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 123.5,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-097",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #97",
+          "latency_ms": 32.9,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-098",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #98",
+          "latency_ms": 32.6,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-099",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #99",
+          "latency_ms": 107.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-105",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 139.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-106",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 126.6,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-109",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #109",
+          "latency_ms": 32.5,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-110",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #110",
+          "latency_ms": 33.1,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-111",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #111",
+          "latency_ms": 116.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-117",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 143.3,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-118",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 123.4,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-121",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #121",
+          "latency_ms": 35.1,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-122",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #122",
+          "latency_ms": 33.0,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-123",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #123",
+          "latency_ms": 111.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-129",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 145.0,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-130",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 124.3,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-133",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #133",
+          "latency_ms": 37.5,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-134",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #134",
+          "latency_ms": 32.1,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-135",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #135",
+          "latency_ms": 110.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-141",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 142.9,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-142",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 125.1,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-145",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #145",
+          "latency_ms": 32.8,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-146",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #146",
+          "latency_ms": 31.3,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-147",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #147",
+          "latency_ms": 108.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-153",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 141.7,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-154",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 130.3,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-157",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? #157",
+          "latency_ms": 34.0,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-158",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? #158",
+          "latency_ms": 33.3,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "DEV-159",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime #159",
+          "latency_ms": 110.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-163",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #163",
+          "latency_ms": 140.7,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-167",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #167",
+          "latency_ms": 129.4,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-171",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #171",
+          "latency_ms": 138.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-175",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #175",
+          "latency_ms": 131.1,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-179",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #179",
+          "latency_ms": 153.6,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-183",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #183",
+          "latency_ms": 128.7,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-187",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #187",
+          "latency_ms": 141.3,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-191",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #191",
+          "latency_ms": 126.8,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-195",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #195",
+          "latency_ms": 141.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-199",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #199",
+          "latency_ms": 129.4,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-203",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #203",
+          "latency_ms": 145.4,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-207",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #207",
+          "latency_ms": 132.1,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-211",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #211",
+          "latency_ms": 137.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-215",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #215",
+          "latency_ms": 125.1,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-219",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #219",
+          "latency_ms": 139.8,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-223",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #223",
+          "latency_ms": 131.1,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-227",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #227",
+          "latency_ms": 143.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-231",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #231",
+          "latency_ms": 124.2,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-235",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #235",
+          "latency_ms": 141.3,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-239",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #239",
+          "latency_ms": 127.2,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-164",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 492.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-165",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 142.5,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-168",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? holdout 8",
+          "latency_ms": 35.1,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-169",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? holdout 9",
+          "latency_ms": 33.7,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-170",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime holdout 10",
+          "latency_ms": 118.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-176",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 141.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-177",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 132.6,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-180",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? holdout 20",
+          "latency_ms": 32.9,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-181",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? holdout 21",
+          "latency_ms": 30.9,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-182",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime holdout 22",
+          "latency_ms": 113.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-188",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 145.8,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-189",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 131.4,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-192",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? holdout 32",
+          "latency_ms": 33.6,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-193",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? holdout 33",
+          "latency_ms": 33.4,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-194",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime holdout 34",
+          "latency_ms": 108.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-200",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 144.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-201",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 154.8,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-204",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? holdout 44",
+          "latency_ms": 36.8,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-205",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? holdout 45",
+          "latency_ms": 30.6,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-206",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime holdout 46",
+          "latency_ms": 109.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-212",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 141.6,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-213",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 127.8,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-216",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? holdout 56",
+          "latency_ms": 33.3,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-217",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? holdout 57",
+          "latency_ms": 30.4,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-218",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime holdout 58",
+          "latency_ms": 110.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-224",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 143.0,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-225",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 125.9,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-228",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? holdout 68",
+          "latency_ms": 32.0,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-229",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "schema file co nhung cot nao? holdout 69",
+          "latency_ms": 30.3,
+          "checks": {
+            "response_type": "schema",
+            "execution_mode": "SCHEMA_INSPECTION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-230",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "top 5 may theo downtime holdout 70",
+          "latency_ms": 109.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-236",
       "category": "multipart",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh",
+          "latency_ms": 142.2,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-237",
       "category": "row_level_interval",
-      "numeric_grounding_checked": false,
-      "passed": false,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung?",
+          "latency_ms": 127.7,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     },
     {
       "id": "HOL-240",
       "category": "simple_deterministic",
-      "numeric_grounding_checked": false,
       "passed": true,
-      "reason": "No deterministic numeric oracle attached for this case yet."
+      "turns": [
+        {
+          "message": "No 1 la gi? holdout 80",
+          "latency_ms": 34.4,
+          "checks": {
+            "response_type": "record_detail",
+            "execution_mode": "RECORD_LOOKUP",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-084",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #84",
+          "latency_ms": 129.5,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-088",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #88",
+          "latency_ms": 139.4,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-092",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #92",
+          "latency_ms": 125.7,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-096",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #96",
+          "latency_ms": 133.6,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-100",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #100",
+          "latency_ms": 137.8,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-104",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #104",
+          "latency_ms": 145.7,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-108",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #108",
+          "latency_ms": 132.5,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-112",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #112",
+          "latency_ms": 141.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-116",
+      "category": "row_level_interval",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May 8 ngay 12/12 co bao nhieu lan dung? #116",
+          "latency_ms": 128.6,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-120",
+      "category": "multipart",
+      "passed": true,
+      "turns": [
+        {
+          "message": "trong thang gan nhat tim 5 may co tong downtime cao nhat hien thi them so lan dung va thoi luong trung binh #120",
+          "latency_ms": 144.0,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
     }
   ]
 }

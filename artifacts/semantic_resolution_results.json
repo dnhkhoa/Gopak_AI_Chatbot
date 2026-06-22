@@ -1,0 +1,1009 @@
+{
+  "summary": {
+    "total": 50,
+    "passed": 50,
+    "accuracy": 1.0
+  },
+  "results": [
+    {
+      "id": "DEV-012",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9436.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-024",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 8258.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-036",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9267.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-048",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9301.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-060",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9230.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-072",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9262.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-084",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9310.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-096",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9135.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-108",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9113.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-120",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9287.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-132",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9289.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-144",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 8081.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-156",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9126.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-161",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #161",
+          "latency_ms": 9388.0,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-162",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #162",
+          "latency_ms": 7936.1,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-169",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #169",
+          "latency_ms": 17188.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-170",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #170",
+          "latency_ms": 9174.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-177",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #177",
+          "latency_ms": 9303.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-178",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #178",
+          "latency_ms": 7921.8,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-185",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #185",
+          "latency_ms": 9346.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-186",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #186",
+          "latency_ms": 10102.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-193",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #193",
+          "latency_ms": 9388.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-194",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #194",
+          "latency_ms": 9038.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-201",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #201",
+          "latency_ms": 9432.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-202",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #202",
+          "latency_ms": 9619.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-209",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #209",
+          "latency_ms": 17136.3,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-210",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #210",
+          "latency_ms": 10017.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-217",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #217",
+          "latency_ms": 17275.3,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-218",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #218",
+          "latency_ms": 8983.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-225",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #225",
+          "latency_ms": 9442.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-226",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #226",
+          "latency_ms": 7925.6,
+          "checks": {
+            "response_type": "scalar",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-233",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #233",
+          "latency_ms": 9396.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "DEV-234",
+      "set": "development",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #234",
+          "latency_ms": 9665.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-167",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9522.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-179",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9236.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-191",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9260.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-203",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9262.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-215",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9296.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-227",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9096.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOL-239",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat?",
+          "latency_ms": 9324.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-086",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #86",
+          "latency_ms": 10246.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-087",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #87",
+          "latency_ms": 9918.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-094",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #94",
+          "latency_ms": 9382.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-095",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #95",
+          "latency_ms": 9019.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-102",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #102",
+          "latency_ms": 9296.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-103",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #103",
+          "latency_ms": 9011.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-110",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #110",
+          "latency_ms": 17124.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-111",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #111",
+          "latency_ms": 8967.9,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-118",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao co ve gay van de nhieu nhat? #118",
+          "latency_ms": 16956.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HOLD-119",
+      "set": "holdout",
+      "passed": true,
+      "turns": [
+        {
+          "message": "May nao bat thuong ve downtime? #119",
+          "latency_ms": 8765.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
+            "llm_called": true,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

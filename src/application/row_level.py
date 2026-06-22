@@ -57,7 +57,7 @@ def try_row_level_response(conversation_id: str, message: str, catalog: dict, st
             response.summary = "Interpreted row as the normalized data record after the detected header. " + response.summary
         return response
 
-    if any(term in q for term in ["gan nhat", "latest", "cuoi cung"]):
+    if any(term in q for term in ["gan nhat", "latest", "cuoi cung"]) and _asks_latest_record(q):
         machine = _machine_filter(q, df, roles.get("machine"))
         if machine == "__AMBIGUOUS__":
             return _machine_clarification(conversation_id, state, debug, started)
@@ -75,6 +75,8 @@ def try_row_level_response(conversation_id: str, message: str, catalog: dict, st
 
     explicit_date = _parse_date(q, df, roles.get("start_time"))
     if explicit_date and (roles.get("start_time") and roles.get("end_time")):
+        if any(term in q for term in ["bao nhieu lan", "may lan", "so lan"]) and not any(term in q for term in ["tu ", "den ", "luc ", "overlap"]):
+            return None
         machine = _machine_filter(q, df, roles.get("machine"))
         if machine == "__AMBIGUOUS__":
             return _machine_clarification(conversation_id, state, debug, started)
@@ -104,7 +106,7 @@ def try_row_level_response(conversation_id: str, message: str, catalog: dict, st
             return _duration_response(conversation_id, out, roles, state, debug, started, "INTERVAL_OVERLAP", start_dt, end_dt, assumption)
         return _records_response(conversation_id, out.head(100), "timeline", "Downtime intervals", state, debug, started, "TIME_WINDOW_RECORDS", "interval_overlap", {"date_assumption": assumption})
 
-    if any(term in q for term in ["duplicate", "trung", "trung lap"]):
+    if _asks_duplicate_quality(q):
         out = df[df.get("_is_exact_duplicate") == True].copy() if "_is_exact_duplicate" in df.columns else df.iloc[0:0].copy()
         return _records_response(conversation_id, out.head(100), "record_table", "Duplicate records", state, debug, started, "DATA_QUALITY", "exact_duplicate")
 
@@ -392,6 +394,16 @@ def _interval_overlap(df: pd.DataFrame, start_col: str, end_col: str, start: dat
 
 def _asks_operating_time(q: str) -> bool:
     return any(term in q for term in ["hoat dong", "chay lien tuc", "chay luc nao", "operating"])
+
+
+def _asks_latest_record(q: str) -> bool:
+    if any(term in q for term in ["top", "tong", "theo", "hien thi them", "so lan", "dem", "bao nhieu"]):
+        return False
+    return any(term in q for term in ["ban ghi", "record", "event", "su kien", "dong"])
+
+
+def _asks_duplicate_quality(q: str) -> bool:
+    return any(term in q for term in ["duplicate", "trung lap", "record trung", "ban ghi trung", "co record trung"])
 
 
 def _machine_clarification(conversation_id: str, state, debug: bool, started: float) -> ChatResponse:

@@ -1,12 +1,26 @@
 {
-  "summary": {
-    "sample_file_available": false,
-    "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
-    "total": 81,
-    "passed": 81,
-    "accuracy": 1.0,
-    "p50_latency_ms": 547.7,
-    "p95_latency_ms": 866.0
+  "completed": 81,
+  "last_case": {
+    "id": "ROW-081",
+    "category": "operating_time",
+    "question": "Máy 11 hoat dong luc nao ngay 03/02/2026? #5",
+    "expected_intent": "clarification",
+    "expected_records": [],
+    "expected_source_rows": [],
+    "expected_fields": {},
+    "interval_mode": "",
+    "duration_policy": "reported_duration_seconds",
+    "expected_no_sql": true,
+    "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+    "actual_intent": "OPERATING_TIME_CLARIFICATION",
+    "actual_response_type": "clarification",
+    "actual_records": [],
+    "actual_source_rows": [],
+    "actual_fields": {},
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": 333.2,
+    "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
   },
   "results": [
     {
