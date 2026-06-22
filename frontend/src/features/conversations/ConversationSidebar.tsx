@@ -65,7 +65,7 @@ function HistoryItem(props: {
           ref={inputRef}
           className="conversation-rename"
           value={draft}
-          aria-label="Đổi tên conversation"
+          aria-label="Rename conversation"
           onChange={(event) => setDraft(event.target.value)}
           onBlur={commitRename}
           onKeyDown={(event) => {
@@ -85,7 +85,7 @@ function HistoryItem(props: {
       {!editing ? (
         <button
           className="conversation-menu-btn"
-          aria-label="Tùy chọn conversation"
+          aria-label="Conversation options"
           aria-expanded={menuOpen}
           aria-haspopup="menu"
           onClick={() => setMenuOpen((open) => !open)}
@@ -105,17 +105,17 @@ function HistoryItem(props: {
               setEditing(true);
             }}
           >
-            <Pencil size={15} /> Đổi tên
+            <Pencil size={15} /> Rename
           </button>
           <button
             className="menu-item danger"
             role="menuitem"
             onClick={() => {
               setMenuOpen(false);
-              if (window.confirm(`Xóa "${props.item.title}"?`)) props.onDelete();
+              if (window.confirm(`Delete "${props.item.title}"?`)) props.onDelete();
             }}
           >
-            <Trash2 size={15} /> Xóa
+            <Trash2 size={15} /> Delete
           </button>
         </div>
       ) : null}
@@ -129,10 +129,10 @@ export function ConversationSidebar(props: Props) {
   if (props.collapsed) {
     return (
       <aside className="sidebar collapsed">
-        <button className="icon-button" onClick={props.onToggleCollapsed} aria-label="Mở sidebar">
+        <button className="icon-button" onClick={props.onToggleCollapsed} aria-label="Open sidebar">
           <Menu size={18} />
         </button>
-        <button className="icon-button" onClick={props.onNew} aria-label="Chat mới">
+        <button className="icon-button" onClick={props.onNew} aria-label="New chat">
           <Plus size={18} />
         </button>
       </aside>
@@ -143,7 +143,7 @@ export function ConversationSidebar(props: Props) {
     <aside className="sidebar">
       <div className="sidebar-top">
         <Brand />
-        <button className="icon-button" onClick={props.onToggleCollapsed} aria-label="Thu gọn sidebar">
+        <button className="icon-button" onClick={props.onToggleCollapsed} aria-label="Collapse sidebar">
           <ChevronLeft size={18} />
         </button>
       </div>
@@ -167,12 +167,12 @@ export function ConversationSidebar(props: Props) {
             />
           ))
         ) : (
-          <div className="empty-inline">Chưa có cuộc trò chuyện nào.</div>
+          <div className="empty-inline">No conversations yet.</div>
         )}
       </div>
 
       <div className="sidebar-footer">
-        {degraded ? <div className="system-warning">Hệ thống đang hoạt động hạn chế</div> : null}
+        {degraded ? <div className="system-warning">Some services are degraded</div> : null}
       </div>
     </aside>
   );

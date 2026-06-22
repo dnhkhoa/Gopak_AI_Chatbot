@@ -1,0 +1,58 @@
+# API Integration Requirements — Gopak Frontend
+
+The frontend depends only on the `GopakApi` contract (`frontend/src/api/contract.ts`).
+Two adapters implement it: **real** (FastAPI, `frontend/src/api/*.ts`) and **mock**
+(`frontend/src/mocks/mockApi.ts`). Mode is chosen by `VITE_API_MODE` (`real` | `mock`).
+
+Base URL: `VITE_API_BASE_URL` (default `http://127.0.0.1:8000/api`).
+
+| Feature | Method | Endpoint | Request | Response | Backend status | Frontend status |
+|---|---|---|---|---|---|---|
+| Health | GET | `/health` | – | `{status, ollama_available, database_available, memory_available, model}` | ✅ exists | Integrated (real + mock) |
+| List conversations | GET | `/conversations` | – | `ConversationPayload[]` | ✅ exists | Integrated |
+| Create conversation | POST | `/conversations` | `{title?}` | `ConversationPayload` | ✅ exists | Integrated |
+| Get conversation | GET | `/conversations/{id}` | – | `ConversationDetail` (with `messages[]`) | ✅ exists | Integrated |
+| Rename conversation | PATCH | `/conversations/{id}` | `{title}` | `ConversationPayload` | ✅ exists | Integrated |
+| Delete conversation | DELETE | `/conversations/{id}` | – | `204` | ✅ exists | Integrated |
+| Reset context | POST | `/conversations/{id}/reset-context` | – | `ConversationDetail` | ✅ exists | Client method ready (not surfaced in UI this round) |
+| Send message | POST | `/conversations/{id}/messages` | `{message, debug?}` | `ChatResponse` | ✅ exists | Integrated |
+| Artifact download | GET | `/artifacts/{artifact_id}/download` | – | file stream | ✅ exists | Integrated (download links) |
+| **List files** | GET | `/files` | – | `UploadedFile[]` | ❌ **BACKEND REQUIRED** | Mock only |
+| **Upload file** | POST | `/files/upload` | `multipart/form-data` (`file`, `.xlsx`) | `UploadedFile` | ❌ **BACKEND REQUIRED** | Mock only |
+| **File status** | GET | `/files/{file_id}/status` | – | `UploadedFile` | ❌ **BACKEND REQUIRED** | Mock only |
+| **Delete file** | DELETE | `/files/{file_id}` | – | `204` | ❌ **BACKEND REQUIRED** | Mock only |
+
+## BACKEND REQUIRED — file endpoints (for the AI/Backend Engineer)
+
+The current FastAPI app (`backend/api/`) exposes `health`, `conversations`, `chat`,
+`artifacts`, `data` — there is **no** files router. The frontend Uploaded Files panel is
+fully built against the contract below and runs today in **mock mode**. To go live:
+
+- `POST /api/files/upload` — accept a single `.xlsx`, validate **extension AND MIME**
+  server-side (never trust the client), sanitize the filename, generate an internal
+  file ID, save into the allowed upload dir, then run it through the **existing
+  ingestion pipeline** (`src/ingestion/…`) → header detection → normalization → Parquet
+  cache → DuckDB registration → catalog refresh. Return `{id, filename, size_bytes,
+  status: "processing"}`.
+- `GET /api/files/{id}/status` — return `status` ∈ `uploading|processing|ready|failed`
+  (+ `error` when failed). On ingestion failure: `status=failed`, do **not** register a
+  broken table, do not crash.
+- `GET /api/files` — list previously uploaded files (persisted, so they survive refresh).
+- `DELETE /api/files/{id}` — remove the file only after backend confirmation; never expose
+  or accept a local filesystem path.
+
+`UploadedFile` shape expected by the frontend (`frontend/src/types/files.ts`):
+
+```json
+{ "id": "string", "filename": "name.xlsx", "size_bytes": 12345,
+  "status": "uploading|processing|ready|failed", "error": null, "uploaded_at": "ISO" }
+```
+
+Frontend never parses Excel, never computes aggregations, never generates SQL or
+QueryPlan. It only renders what the backend returns.
+
+## Endpoint-name confirmations needed
+
+If any existing endpoint differs from the paths above (e.g. message field names, the
+`reset-context` path, or the artifact download shape), please confirm — the frontend will
+not guess; update this table and the matching `frontend/src/api/*.ts` module.

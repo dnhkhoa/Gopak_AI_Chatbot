@@ -1,51 +1,37 @@
-import type { ChatResponse, ConversationDetail, ConversationPayload, HealthStatus } from "../types/api";
+import { mockApi } from "../mocks/mockApi";
+import { artifactUrl } from "./artifacts";
+import {
+  createConversation,
+  deleteConversation,
+  getConversation,
+  listConversations,
+  renameConversation,
+  resetContext
+} from "./conversations";
+import type { GopakApi } from "./contract";
+import { deleteFile, getFileStatus, listFiles, uploadFile } from "./files";
+import { health } from "./health";
+import { API_BASE_URL, API_MODE } from "./http";
+import { sendMessage } from "./messages";
 
-export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:8000/api";
+export { API_BASE_URL, API_MODE };
 
-async function request<T>(path: string, options?: RequestInit): Promise<T> {
-  const response = await fetch(`${API_BASE_URL}${path}`, {
-    ...options,
-    headers: {
-      "Content-Type": "application/json",
-      ...(options?.headers ?? {})
-    }
-  });
-  if (!response.ok) {
-    const detail = await response.json().catch(() => ({}));
-    throw new Error(detail.detail ?? "Không thể kết nối với hệ thống xử lý.");
-  }
-  if (response.status === 204) {
-    return undefined as T;
-  }
-  return response.json() as Promise<T>;
-}
-
-export const api = {
-  health: () => request<HealthStatus>("/health"),
-  listConversations: () => request<ConversationPayload[]>("/conversations"),
-  createConversation: (title?: string) =>
-    request<ConversationPayload>("/conversations", {
-      method: "POST",
-      body: JSON.stringify({ title })
-    }),
-  getConversation: (id: string) => request<ConversationDetail>(`/conversations/${id}`),
-  renameConversation: (id: string, title: string) =>
-    request<ConversationPayload>(`/conversations/${id}`, {
-      method: "PATCH",
-      body: JSON.stringify({ title })
-    }),
-  deleteConversation: (id: string) =>
-    request<void>(`/conversations/${id}`, {
-      method: "DELETE"
-    }),
-  resetContext: (id: string) =>
-    request<ConversationDetail>(`/conversations/${id}/reset-context`, {
-      method: "POST"
-    }),
-  sendMessage: (id: string, message: string, debug: boolean) =>
-    request<ChatResponse>(`/conversations/${id}/messages`, {
-      method: "POST",
-      body: JSON.stringify({ message, debug })
-    }),
-  artifactUrl: (id: string) => `${API_BASE_URL}/artifacts/${encodeURIComponent(id)}/download`
+const realApi: GopakApi = {
+  health,
+  listConversations,
+  createConversation,
+  getConversation,
+  renameConversation,
+  deleteConversation,
+  resetContext,
+  sendMessage,
+  listFiles,
+  uploadFile,
+  getFileStatus,
+  deleteFile,
+  artifactUrl
 };
+
+// UI imports `api` only; the transport (real FastAPI vs in-browser mock) is
+// chosen by VITE_API_MODE. Components are identical in both modes.
+export const api: GopakApi = API_MODE === "mock" ? mockApi : realApi;

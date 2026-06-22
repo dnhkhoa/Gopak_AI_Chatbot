@@ -2,7 +2,7 @@ export function ErrorMessage({ text, onRetry }: { text: string; onRetry?: () => 
   return (
     <div className="error-message">
       <span>{text}</span>
-      {onRetry ? <button onClick={onRetry}>Thử lại</button> : null}
+      {onRetry ? <button onClick={onRetry}>Retry</button> : null}
     </div>
   );
 }

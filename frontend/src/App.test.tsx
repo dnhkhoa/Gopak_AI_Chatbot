@@ -26,14 +26,17 @@ beforeEach(() => {
     if (url.endsWith("/conversations/c1")) {
       return Response.json({ ...conversation, messages: [] });
     }
+    if (url.endsWith("/files")) {
+      return Response.json([]);
+    }
     if (url.endsWith("/conversations/c1/messages")) {
       return Response.json({
         message_id: "m2",
         conversation_id: "c1",
         response_type: "scalar",
-        title: "Tổng thời gian downtime",
-        summary: "Tương đương 82 ngày.",
-        primary_value: "1.989,56 giờ",
+        title: "Total downtime",
+        summary: "Equivalent to 82 days.",
+        primary_value: "1,989.56 hours",
         secondary_value: null,
         table: null,
         chart: null,
@@ -54,9 +57,9 @@ afterEach(() => {
 
 test("loads a conversation and sends a message", async () => {
   render(<App />);
-  const input = await screen.findByLabelText("Tin nhắn");
-  await userEvent.type(input, "Tổng downtime là bao nhiêu?");
-  await userEvent.click(screen.getByLabelText("Gửi"));
-  expect(await screen.findByText("1.989,56 giờ")).toBeInTheDocument();
+  const input = await screen.findByLabelText("Message");
+  await userEvent.type(input, "What is the total downtime?");
+  await userEvent.click(screen.getByLabelText("Send"));
+  expect(await screen.findByText("1,989.56 hours")).toBeInTheDocument();
   await waitFor(() => expect(fetch).toHaveBeenCalled());
 });

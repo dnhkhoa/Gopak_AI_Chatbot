@@ -26,7 +26,7 @@ function assistant(response: ChatResponse): UiMessage {
 test("renders scalar, sources, download and debug", () => {
   render(<ChatMessage message={assistant(baseResponse)} debug />);
   expect(screen.getByText("1.989,56 giờ")).toBeInTheDocument();
-  expect(screen.getByText("Nguồn và bộ lọc")).toBeInTheDocument();
+  expect(screen.getByText("Sources and filters")).toBeInTheDocument();
   expect(screen.getByText("Tải HTML")).toBeInTheDocument();
   expect(screen.getByText("Debug")).toBeInTheDocument();
 });

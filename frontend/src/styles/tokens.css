@@ -1,0 +1,52 @@
+/* =========================================================================
+   Gopak design tokens — single source of truth for color, radius, spacing.
+   Components must reference these variables, never hardcode the hex values.
+   ========================================================================= */
+
+:root {
+  /* Color tokens */
+  --page: #F8F8FB;
+  --sidebar: #F1F3F7;
+  --surface: #FFFFFF;
+  --user: #EEF2FF;
+  --user-border: #DEE5FB;
+  --border: #E5E7EF;
+  --border-strong: #D7DBE6;
+  --primary: #356FD8;
+  --primary-hover: #2E62C2;
+  --primary-soft: #AEBCE8;
+  --green-soft: #C8DCC8;
+  --text: #20263A;
+  --muted: #747B8C;
+  --success: #18B76A;
+  --danger: #C2455A;
+  --danger-soft: #F3D7DD;
+  --warn: #B8862B;
+  --warn-soft: #FBF1DC;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Elevation */
+  --shadow-soft: 0 1px 2px rgba(32, 38, 58, .04), 0 4px 16px rgba(32, 38, 58, .04);
+  --shadow-pop: 0 8px 28px rgba(32, 38, 58, .14);
+
+  /* Layout */
+  --sidebar-width: 280px;
+  --content-width: 760px;
+  --font-base: 15px;
+  --row-pad: 9px;
+  --msg-gap: 20px;
+}
+
+/* Font scale (reserved for future settings; default medium) */
+html[data-font="small"]  { --font-base: 14px; }
+html[data-font="medium"] { --font-base: 15px; }
+html[data-font="large"]  { --font-base: 16px; }
+
+/* Density */
+html[data-density="compact"]     { --row-pad: 6px; --msg-gap: 12px; }
+html[data-density="comfortable"] { --row-pad: 9px; --msg-gap: 20px; }

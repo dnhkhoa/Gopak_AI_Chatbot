@@ -5,6 +5,8 @@ import { ChatMessage } from "./components/ChatMessage";
 import { ErrorMessage } from "./components/ErrorMessage";
 import { ChatComposer } from "./features/chat/ChatComposer";
 import { ConversationSidebar } from "./features/conversations/ConversationSidebar";
+import { UploadedFilesPanel } from "./features/files/UploadedFilesPanel";
+import { useFiles } from "./hooks/useFiles";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import type { ConversationPayload, HealthStatus, UiMessage } from "./types/api";
 
@@ -32,6 +34,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const files = useFiles();
 
   const selected = useMemo(() => conversations.find((item) => item.id === selectedId), [conversations, selectedId]);
 
@@ -62,7 +65,7 @@ export default function App() {
       setHealth(nextHealth);
       await loadConversation(nextId);
     } catch {
-      setError("Không thể kết nối với hệ thống xử lý.");
+      setError("Unable to reach the analysis service.");
     } finally {
       setLoading(false);
     }
@@ -78,7 +81,7 @@ export default function App() {
     try {
       await loadConversation(id);
     } catch {
-      setError("Không thể tải conversation.");
+      setError("Couldn't load this conversation.");
     }
   };
 
@@ -128,7 +131,7 @@ export default function App() {
       const refreshed = await api.listConversations();
       setConversations(refreshed);
     } catch {
-      setError("Không thể kết nối với hệ thống xử lý.");
+      setError("Unable to reach the analysis service.");
     } finally {
       setSending(false);
     }
@@ -154,14 +157,14 @@ export default function App() {
         <div className="message-scroll">
           {loading ? (
             <div className="empty-state">
-              <div className="empty-sub">Đang tải…</div>
+              <div className="empty-sub">Loading…</div>
             </div>
           ) : null}
           {!loading && !messages.length ? (
             <div className="empty-state">
               <img className="empty-logo" src={logoUrl} alt="i-Soft" />
-              <div className="empty-title">Tôi có thể giúp gì cho bạn?</div>
-              <div className="empty-sub">Đặt câu hỏi về dữ liệu của bạn.</div>
+              <div className="empty-title">How can I help you?</div>
+              <div className="empty-sub">Ask questions about your data.</div>
             </div>
           ) : null}
           {messages.map((message) => (
@@ -170,15 +173,16 @@ export default function App() {
           {sending ? (
             <div className="thinking">
               <span className="dots"><span /><span /><span /></span>
-              Đang phân tích…
+              Analyzing…
             </div>
           ) : null}
           {error ? <ErrorMessage text={error} onRetry={() => void bootstrap()} /> : null}
         </div>
         <div className="composer-wrap">
-          <ChatComposer disabled={sending || !selectedId} onSend={sendMessage} />
+          <ChatComposer disabled={sending || !selectedId} onSend={sendMessage} onUpload={(list) => void files.upload(list)} />
         </div>
       </main>
+      <UploadedFilesPanel files={files} />
     </div>
   );
 }
