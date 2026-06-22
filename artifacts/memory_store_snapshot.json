@@ -1,0 +1,11 @@
+{
+  "db_path": "C:\\Users\\adim\\AppData\\Local\\Temp\\tmp7j7mnn9w\\memory.db",
+  "counts": {
+    "conversations": 2,
+    "conversation_turns": 1,
+    "conversation_states": 2,
+    "result_cache": 0
+  },
+  "persistence_degraded": false,
+  "error": null
+}

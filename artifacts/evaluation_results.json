@@ -1,0 +1,1008 @@
+[
+  {
+    "id": "E001",
+    "question": "Tổng downtime là bao nhiêu?",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds"
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "total_duration_seconds": 7162405.0
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4075.1369999998133,
+    "query_latency_ms": 27.47550000094634,
+    "total_latency_ms": 4104.7412999996595,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E002",
+    "question": "Máy nào có thời gian downtime cao nhất?",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds"
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "table",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "may": "Máy 11",
+        "total_duration_seconds": 1488867.0
+      },
+      {
+        "may": "Máy 12",
+        "total_duration_seconds": 1163357.0
+      },
+      {
+        "may": "Máy 29",
+        "total_duration_seconds": 1060811.0
+      },
+      {
+        "may": "Máy 8",
+        "total_duration_seconds": 827918.0
+      },
+      {
+        "may": "Máy 9",
+        "total_duration_seconds": 667150.0
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4048.948299998301,
+    "query_latency_ms": 32.60760000011942,
+    "total_latency_ms": 4082.5461000003997,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E003",
+    "question": "Top 5 nguyên nhân gây tổn thất.",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "ten_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds"
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 5,
+      "output": "table",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "ten_ton_that": "MÁY LỖI PHẦN CƠ",
+        "total_duration_seconds": 2027950.0
+      },
+      {
+        "ten_ton_that": "RỈ ĐƯỜNG HÀN ĐÁY",
+        "total_duration_seconds": 1731457.0
+      },
+      {
+        "ten_ton_that": "MÁY ÁO BỊ HƯ",
+        "total_duration_seconds": 1182468.0
+      },
+      {
+        "ten_ton_that": "MÁY LỖI PHẦN ĐIỆN",
+        "total_duration_seconds": 556059.0
+      },
+      {
+        "ten_ton_that": "KẸT ĐÁY LIÊN TỤC",
+        "total_duration_seconds": 470211.0
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4021.217700001216,
+    "query_latency_ms": 32.19340000032389,
+    "total_latency_ms": 4054.3111999995745,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E004",
+    "question": "Vẽ biểu đồ downtime theo ngày.",
+    "expected_intent": "chart",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "chart",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "thoi_gian_bat_dau"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds"
+        }
+      ],
+      "time_granularity": "day",
+      "sort": [],
+      "limit": 20,
+      "output": "line",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "thoi_gian_bat_dau": "2025-11-21 00:00:00",
+        "total_duration_seconds": 183543.0
+      },
+      {
+        "thoi_gian_bat_dau": "2025-11-22 00:00:00",
+        "total_duration_seconds": 180513.0
+      },
+      {
+        "thoi_gian_bat_dau": "2025-12-24 00:00:00",
+        "total_duration_seconds": 172621.0
+      },
+      {
+        "thoi_gian_bat_dau": "2025-12-04 00:00:00",
+        "total_duration_seconds": 170137.0
+      },
+      {
+        "thoi_gian_bat_dau": "2025-12-18 00:00:00",
+        "total_duration_seconds": 150851.0
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4051.8152999993617,
+    "query_latency_ms": 32.02009999949951,
+    "total_latency_ms": 4084.8894999999175,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E005",
+    "question": "Tạo dashboard tổng quan.",
+    "expected_intent": "dashboard",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "dashboard",
+      "tables": [
+        "entrytransaction_20260203_164943_report_0ec1e3"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "no"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "aggregation": "count",
+          "column": null
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 10,
+      "output": "dashboard",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "no": 1,
+        "row_count": 1
+      },
+      {
+        "no": 2,
+        "row_count": 1
+      },
+      {
+        "no": 3,
+        "row_count": 1
+      },
+      {
+        "no": 4,
+        "row_count": 1
+      },
+      {
+        "no": 5,
+        "row_count": 1
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4050.7959999995364,
+    "query_latency_ms": 30.000099999597296,
+    "total_latency_ms": 4081.669899998815,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E006",
+    "question": "Xuất báo cáo phân tích downtime.",
+    "expected_intent": "report",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "report",
+      "tables": [
+        "entrytransaction_20260203_164943_report_0ec1e3"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "no"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "aggregation": "count",
+          "column": null
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "report",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "no": 1,
+        "row_count": 1
+      },
+      {
+        "no": 2,
+        "row_count": 1
+      },
+      {
+        "no": 3,
+        "row_count": 1
+      },
+      {
+        "no": 4,
+        "row_count": 1
+      },
+      {
+        "no": 5,
+        "row_count": 1
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4028.036900001098,
+    "query_latency_ms": 25.925500000084867,
+    "total_latency_ms": 4105.476200000339,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E007",
+    "question": "Downtime trung bình là bao nhiêu?",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "entrytransaction_20260203_164943_report_0ec1e3"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "row_count",
+          "aggregation": "count",
+          "column": null
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "row_count": 1294
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4072.410500000842,
+    "query_latency_ms": 24.74179999990156,
+    "total_latency_ms": 4098.287200000414,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E008",
+    "question": "Đếm số dòng downtime.",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "entrytransaction_20260203_164943_report_0ec1e3"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "row_count",
+          "aggregation": "count",
+          "column": null
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "row_count": 1294
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4064.6004999998695,
+    "query_latency_ms": 24.48250000088592,
+    "total_latency_ms": 4089.8089000002074,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E009",
+    "question": "Top 3 máy downtime cao nhất.",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "entrytransaction_20260203_164943_report_0ec1e3"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "no"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "aggregation": "count",
+          "column": null
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 3,
+      "output": "table",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "no": 1,
+        "row_count": 1
+      },
+      {
+        "no": 2,
+        "row_count": 1
+      },
+      {
+        "no": 3,
+        "row_count": 1
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4088.032199999361,
+    "query_latency_ms": 26.9189999999071,
+    "total_latency_ms": 4115.77539999962,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E010",
+    "question": "Các nguyên nhân liên quan đến QC là gì?",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "nhom_ton_that",
+          "operator": "contains",
+          "value": "QC"
+        }
+      ],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "aggregation": "count",
+          "column": null
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "table",
+      "clarification_question": null
+    },
+    "actual_result": [],
+    "pass": true,
+    "planner_latency_ms": 4093.3722000008856,
+    "query_latency_ms": 25.90770000097109,
+    "total_latency_ms": 4120.073899999625,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E011",
+    "question": "Chỉ lấy nhóm bảo trì.",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "nhom_ton_that",
+          "operator": "contains",
+          "value": "Bảo trì"
+        }
+      ],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "aggregation": "count",
+          "column": null
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "table",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "may": "Máy 12",
+        "row_count": 1654
+      },
+      {
+        "may": "Máy 29",
+        "row_count": 1603
+      },
+      {
+        "may": "Máy 11",
+        "row_count": 1469
+      },
+      {
+        "may": "Máy 31",
+        "row_count": 824
+      },
+      {
+        "may": "Máy 9",
+        "row_count": 821
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4057.9293000009784,
+    "query_latency_ms": 29.948899998998968,
+    "total_latency_ms": 4088.6334000006173,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E012",
+    "question": "Trong kết quả trên, vẽ top 5.",
+    "expected_intent": "chart",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "chart",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds"
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 5,
+      "output": "bar",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "may": "Máy 11",
+        "total_duration_seconds": 1488867.0
+      },
+      {
+        "may": "Máy 12",
+        "total_duration_seconds": 1163357.0
+      },
+      {
+        "may": "Máy 29",
+        "total_duration_seconds": 1060811.0
+      },
+      {
+        "may": "Máy 8",
+        "total_duration_seconds": 827918.0
+      },
+      {
+        "may": "Máy 9",
+        "total_duration_seconds": 667150.0
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4063.0113999995956,
+    "query_latency_ms": 35.291500000312226,
+    "total_latency_ms": 4099.241000001712,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E013",
+    "question": "Tổng thời gian dừng tháng 11.",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "operator": "date_between",
+          "value": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds"
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "total_duration_seconds": 2552478.0
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4045.4063000015594,
+    "query_latency_ms": 28.22779999951308,
+    "total_latency_ms": 4074.501999999484,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E014",
+    "question": "So sánh downtime giữa các máy.",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "aggregation": "count",
+          "column": null
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "table",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "may": "Máy 12",
+        "row_count": 1654
+      },
+      {
+        "may": "Máy 29",
+        "row_count": 1603
+      },
+      {
+        "may": "Máy 11",
+        "row_count": 1469
+      },
+      {
+        "may": "Máy 31",
+        "row_count": 824
+      },
+      {
+        "may": "Máy 9",
+        "row_count": 821
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4069.704499999716,
+    "query_latency_ms": 30.210800001441385,
+    "total_latency_ms": 4100.725899999816,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E015",
+    "question": "Nhóm tổn thất nào xuất hiện nhiều nhất?",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "ten_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds"
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "table",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "ten_ton_that": "MÁY LỖI PHẦN CƠ",
+        "total_duration_seconds": 2027950.0
+      },
+      {
+        "ten_ton_that": "RỈ ĐƯỜNG HÀN ĐÁY",
+        "total_duration_seconds": 1731457.0
+      },
+      {
+        "ten_ton_that": "MÁY ÁO BỊ HƯ",
+        "total_duration_seconds": 1182468.0
+      },
+      {
+        "ten_ton_that": "MÁY LỖI PHẦN ĐIỆN",
+        "total_duration_seconds": 556059.0
+      },
+      {
+        "ten_ton_that": "KẸT ĐÁY LIÊN TỤC",
+        "total_duration_seconds": 470211.0
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4044.9134999998932,
+    "query_latency_ms": 31.26200000042445,
+    "total_latency_ms": 4076.918200000364,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E016",
+    "question": "Máy nào có số lần dừng nhiều nhất?",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds"
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "table",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "may": "Máy 11",
+        "total_duration_seconds": 1488867.0
+      },
+      {
+        "may": "Máy 12",
+        "total_duration_seconds": 1163357.0
+      },
+      {
+        "may": "Máy 29",
+        "total_duration_seconds": 1060811.0
+      },
+      {
+        "may": "Máy 8",
+        "total_duration_seconds": 827918.0
+      },
+      {
+        "may": "Máy 9",
+        "total_duration_seconds": 667150.0
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4083.821000000171,
+    "query_latency_ms": 32.06789999967441,
+    "total_latency_ms": 4116.6921999993065,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E017",
+    "question": "Biểu đồ top nguyên nhân.",
+    "expected_intent": "chart",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "chart",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "ten_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds"
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "bar",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "ten_ton_that": "MÁY LỖI PHẦN CƠ",
+        "total_duration_seconds": 2027950.0
+      },
+      {
+        "ten_ton_that": "RỈ ĐƯỜNG HÀN ĐÁY",
+        "total_duration_seconds": 1731457.0
+      },
+      {
+        "ten_ton_that": "MÁY ÁO BỊ HƯ",
+        "total_duration_seconds": 1182468.0
+      },
+      {
+        "ten_ton_that": "MÁY LỖI PHẦN ĐIỆN",
+        "total_duration_seconds": 556059.0
+      },
+      {
+        "ten_ton_that": "KẸT ĐÁY LIÊN TỤC",
+        "total_duration_seconds": 470211.0
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4081.180099999983,
+    "query_latency_ms": 30.58699999928649,
+    "total_latency_ms": 4112.467700000707,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E018",
+    "question": "Có dữ liệu cổng ra vào không?",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "entrytransaction_20260203_164943_report_0ec1e3"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "no"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "aggregation": "count",
+          "column": null
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "table",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "no": 1,
+        "row_count": 1
+      },
+      {
+        "no": 2,
+        "row_count": 1
+      },
+      {
+        "no": 3,
+        "row_count": 1
+      },
+      {
+        "no": 4,
+        "row_count": 1
+      },
+      {
+        "no": 5,
+        "row_count": 1
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4059.880600001634,
+    "query_latency_ms": 24.781000000075437,
+    "total_latency_ms": 4085.856199999398,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E019",
+    "question": "Tổng giá trị cân là bao nhiêu?",
+    "expected_intent": "query",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "entrytransaction_20260203_164943_report_0ec1e3"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "row_count",
+          "aggregation": "count",
+          "column": null
+        }
+      ],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "clarification_question": null
+    },
+    "actual_result": [
+      {
+        "row_count": 1294
+      }
+    ],
+    "pass": true,
+    "planner_latency_ms": 4035.7403000016348,
+    "query_latency_ms": 27.452199999970617,
+    "total_latency_ms": 4063.8591999995697,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  },
+  {
+    "id": "E020",
+    "question": "Câu hỏi mơ hồ về hiệu suất.",
+    "expected_intent": "clarification",
+    "expected_result": "Intent must match and query must execute without error.",
+    "actual_plan": {
+      "intent": "clarification",
+      "tables": [],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [],
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "clarification_question": "Bạn muốn phân tích hiệu suất theo chỉ số nào trong dữ liệu Excel hiện có?"
+    },
+    "actual_result": "Bạn muốn phân tích hiệu suất theo chỉ số nào trong dữ liệu Excel hiện có?",
+    "pass": true,
+    "planner_latency_ms": 4047.994700000345,
+    "query_latency_ms": 0.0,
+    "total_latency_ms": 4048.039200000858,
+    "error": "",
+    "notes": "Uses Ollama when available; otherwise schema-driven heuristic fallback."
+  }
+]

@@ -1,0 +1,5174 @@
+[
+  {
+    "id": "CQ-001",
+    "category": "multiple_metrics",
+    "question": "Hãy tìm top 5 máy có tổng downtime cao nhất, đồng thời hiển thị số lần dừng và thời lượng trung bình.",
+    "conversation_id": "eb9f58ac-de9e-4f78-bfb0-b7ad1b2039b6",
+    "turn": 1,
+    "turn_type": "CHANGE_RANKING",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "eb9f58ac-de9e-4f78-bfb0-b7ad1b2039b6",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "eb9f58ac-de9e-4f78-bfb0-b7ad1b2039b6",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "total_duration_seconds",
+        "alias": "total_duration_seconds",
+        "aggregation": "sum",
+        "column": "thoi_luong_seconds",
+        "percentage_of_total": false
+      },
+      "active_metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "active_dimensions": [
+        "may"
+      ],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 5,
+      "active_output": "table",
+      "last_entities": {
+        "top_machine": "Máy 11"
+      },
+      "last_result_summary": {
+        "row_count": 5,
+        "columns": [
+          "may",
+          "total_duration_seconds",
+          "row_count",
+          "avg_duration_seconds"
+        ],
+        "first_row": {
+          "may": "Máy 11",
+          "total_duration_seconds": 1488867.0,
+          "row_count": 1469,
+          "avg_duration_seconds": 1013.5241660993873
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          },
+          {
+            "name": "avg_duration_seconds",
+            "alias": "avg_duration_seconds",
+            "aggregation": "avg",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 5,
+        "output": "table",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": null,
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "last_output": "table"
+    },
+    "expected_plan": {
+      "columns": [
+        "may",
+        "total_duration_seconds",
+        "row_count",
+        "avg_duration_seconds"
+      ],
+      "limit": 5,
+      "metrics": 3
+    },
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 5,
+      "output": "table",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "may",
+        "total_duration_seconds",
+        "row_count",
+        "avg_duration_seconds"
+      ],
+      "limit": 5,
+      "metrics": 3
+    },
+    "actual_result": {
+      "records": [
+        {
+          "may": "Máy 11",
+          "total_duration_seconds": 1488867.0,
+          "row_count": 1469,
+          "avg_duration_seconds": 1013.5241660993873
+        },
+        {
+          "may": "Máy 12",
+          "total_duration_seconds": 1163357.0,
+          "row_count": 1654,
+          "avg_duration_seconds": 703.3597339782345
+        },
+        {
+          "may": "Máy 29",
+          "total_duration_seconds": 1060811.0,
+          "row_count": 1603,
+          "avg_duration_seconds": 661.7660636306924
+        },
+        {
+          "may": "Máy 8",
+          "total_duration_seconds": 827918.0,
+          "row_count": 653,
+          "avg_duration_seconds": 1267.8683001531394
+        },
+        {
+          "may": "Máy 9",
+          "total_duration_seconds": 667150.0,
+          "row_count": 821,
+          "avg_duration_seconds": 812.6065773447016
+        }
+      ]
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 54.67230000067502,
+      "query": 27.196099996217526,
+      "total": 82.21330000378657
+    },
+    "notes": "Passed expectation checks."
+  },
+  {
+    "id": "CQ-002",
+    "category": "multiple_metrics",
+    "question": "Top 3 nguyên nhân theo tổng downtime, hiển thị thêm số lần dừng và thời lượng trung bình.",
+    "conversation_id": "8f70aa5e-9903-470b-9fe5-53c769f72333",
+    "turn": 1,
+    "turn_type": "CHANGE_RANKING",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "8f70aa5e-9903-470b-9fe5-53c769f72333",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "8f70aa5e-9903-470b-9fe5-53c769f72333",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "total_duration_seconds",
+        "alias": "total_duration_seconds",
+        "aggregation": "sum",
+        "column": "thoi_luong_seconds",
+        "percentage_of_total": false
+      },
+      "active_metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "active_dimensions": [
+        "ten_ton_that"
+      ],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 3,
+      "active_output": "table",
+      "last_entities": {
+        "top_loss_name": "MÁY LỖI PHẦN CƠ"
+      },
+      "last_result_summary": {
+        "row_count": 3,
+        "columns": [
+          "ten_ton_that",
+          "total_duration_seconds",
+          "row_count",
+          "avg_duration_seconds"
+        ],
+        "first_row": {
+          "ten_ton_that": "MÁY LỖI PHẦN CƠ",
+          "total_duration_seconds": 2027950.0,
+          "row_count": 3688,
+          "avg_duration_seconds": 549.8779826464208
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "ten_ton_that"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          },
+          {
+            "name": "avg_duration_seconds",
+            "alias": "avg_duration_seconds",
+            "aggregation": "avg",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 3,
+        "output": "table",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": null,
+      "dimensions": [
+        "ten_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "last_output": "table"
+    },
+    "expected_plan": {
+      "columns": [
+        "ten_ton_that",
+        "total_duration_seconds",
+        "row_count",
+        "avg_duration_seconds"
+      ],
+      "limit": 3,
+      "metrics": 3
+    },
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "ten_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 3,
+      "output": "table",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "ten_ton_that",
+        "total_duration_seconds",
+        "row_count",
+        "avg_duration_seconds"
+      ],
+      "limit": 3,
+      "metrics": 3
+    },
+    "actual_result": {
+      "records": [
+        {
+          "ten_ton_that": "MÁY LỖI PHẦN CƠ",
+          "total_duration_seconds": 2027950.0,
+          "row_count": 3688,
+          "avg_duration_seconds": 549.8779826464208
+        },
+        {
+          "ten_ton_that": "RỈ ĐƯỜNG HÀN ĐÁY",
+          "total_duration_seconds": 1731457.0,
+          "row_count": 1085,
+          "avg_duration_seconds": 1595.8129032258064
+        },
+        {
+          "ten_ton_that": "MÁY ÁO BỊ HƯ",
+          "total_duration_seconds": 1182468.0,
+          "row_count": 731,
+          "avg_duration_seconds": 1617.6032831737346
+        }
+      ]
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 46.98249998909887,
+      "query": 28.270599999814294,
+      "total": 75.50569999148138
+    },
+    "notes": "Passed expectation checks."
+  },
+  {
+    "id": "CQ-003",
+    "category": "percentage",
+    "question": "Xếp hạng nguyên nhân theo tỷ lệ phần trăm số lần dừng.",
+    "conversation_id": "33990275-fba2-4ba2-a001-fd988a2857f1",
+    "turn": 1,
+    "turn_type": "CHANGE_RANKING",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "33990275-fba2-4ba2-a001-fd988a2857f1",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "33990275-fba2-4ba2-a001-fd988a2857f1",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "row_count",
+        "alias": "row_count",
+        "aggregation": "count",
+        "column": null,
+        "percentage_of_total": true
+      },
+      "active_metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": true
+        }
+      ],
+      "active_dimensions": [
+        "ten_ton_that"
+      ],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "row_count",
+          "field": "row_count",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 20,
+      "active_output": "table",
+      "last_entities": {
+        "top_loss_name": "MÁY LỖI PHẦN CƠ"
+      },
+      "last_result_summary": {
+        "row_count": 13,
+        "columns": [
+          "ten_ton_that",
+          "row_count",
+          "percentage"
+        ],
+        "first_row": {
+          "ten_ton_that": "MÁY LỖI PHẦN CƠ",
+          "row_count": 3688,
+          "percentage": 40.30160638181619
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "ten_ton_that"
+        ],
+        "metrics": [
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": true
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "row_count",
+            "field": "row_count",
+            "direction": "desc"
+          }
+        ],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": null,
+      "dimensions": [
+        "ten_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": true
+        }
+      ],
+      "last_output": "table"
+    },
+    "expected_plan": {
+      "columns": [
+        "ten_ton_that",
+        "row_count",
+        "percentage"
+      ],
+      "percentage_sum": true
+    },
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "ten_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": true
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "row_count",
+          "field": "row_count",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "table",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "ten_ton_that",
+        "row_count",
+        "percentage"
+      ],
+      "percentage_sum": true
+    },
+    "actual_result": {
+      "records": [
+        {
+          "ten_ton_that": "MÁY LỖI PHẦN CƠ",
+          "row_count": 3688,
+          "percentage": 40.30160638181619
+        },
+        {
+          "ten_ton_that": "KẸT ĐÁY LIÊN TỤC",
+          "row_count": 1494,
+          "percentage": 16.326084580920117
+        },
+        {
+          "ten_ton_that": "RỈ ĐƯỜNG HÀN ĐÁY",
+          "row_count": 1085,
+          "percentage": 11.856627690962735
+        },
+        {
+          "ten_ton_that": "MÁY LỖI PHẦN ĐIỆN",
+          "row_count": 932,
+          "percentage": 10.184679270025134
+        },
+        {
+          "ten_ton_that": "MÁY ÁO BỊ HƯ",
+          "row_count": 731,
+          "percentage": 7.988198011146323
+        },
+        {
+          "ten_ton_that": "HỞ RIM",
+          "row_count": 304,
+          "percentage": 3.3220413069609878
+        },
+        {
+          "ten_ton_that": "RỈ HOẶC KHÔNG HÀN BIÊN",
+          "row_count": 300,
+          "percentage": 3.278330237132554
+        },
+        {
+          "ten_ton_that": "KHÔNG HÚT GIẤY",
+          "row_count": 179,
+          "percentage": 1.9560703748224237
+        },
+        {
+          "ten_ton_that": "LỖI MÁY KIỂM TRA",
+          "row_count": 143,
+          "percentage": 1.5626707463665173
+        },
+        {
+          "ten_ton_that": "KẸT GIẤY LIÊN TỤC",
+          "row_count": 96,
+          "percentage": 1.0490656758824173
+        },
+        {
+          "ten_ton_that": "KÍCH THƯỚC KHÔNG ĐẠT",
+          "row_count": 92,
+          "percentage": 1.005354606053983
+        },
+        {
+          "ten_ton_that": "TRÓC ĐÁY LY",
+          "row_count": 65,
+          "percentage": 0.7103048847120533
+        },
+        {
+          "ten_ton_that": "GẤP ĐƯỜNG HÀN BIÊN",
+          "row_count": 42,
+          "percentage": 0.45896623319855756
+        }
+      ]
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 47.762599991983734,
+      "query": 25.771300002816133,
+      "total": 73.72840000607539
+    },
+    "notes": "Passed expectation checks."
+  },
+  {
+    "id": "CQ-004",
+    "category": "percentage",
+    "question": "Tỷ trọng của từng nhóm tổn thất trên tổng số lần dừng là bao nhiêu?",
+    "conversation_id": "2633285e-7cc2-4e16-8ab8-878c0befa543",
+    "turn": 1,
+    "turn_type": "NEW_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "2633285e-7cc2-4e16-8ab8-878c0befa543",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "2633285e-7cc2-4e16-8ab8-878c0befa543",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "row_count",
+        "alias": "row_count",
+        "aggregation": "count",
+        "column": null,
+        "percentage_of_total": true
+      },
+      "active_metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": true
+        }
+      ],
+      "active_dimensions": [
+        "nhom_ton_that"
+      ],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "row_count",
+          "field": "row_count",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 20,
+      "active_output": "pie",
+      "last_entities": {
+        "top_group": "Bảo trì"
+      },
+      "last_result_summary": {
+        "row_count": 1,
+        "columns": [
+          "nhom_ton_that",
+          "row_count",
+          "percentage"
+        ],
+        "first_row": {
+          "nhom_ton_that": "Bảo trì",
+          "row_count": 9151,
+          "percentage": 100.0
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "nhom_ton_that"
+        ],
+        "metrics": [
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": true
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "row_count",
+            "field": "row_count",
+            "direction": "desc"
+          }
+        ],
+        "limit": 20,
+        "output": "pie",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": null,
+      "dimensions": [
+        "nhom_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": true
+        }
+      ],
+      "last_output": "pie"
+    },
+    "expected_plan": {
+      "columns": [
+        "nhom_ton_that",
+        "row_count",
+        "percentage"
+      ],
+      "percentage_sum": true
+    },
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "nhom_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": true
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "row_count",
+          "field": "row_count",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "pie",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "nhom_ton_that",
+        "row_count",
+        "percentage"
+      ],
+      "percentage_sum": true
+    },
+    "actual_result": {
+      "records": [
+        {
+          "nhom_ton_that": "Bảo trì",
+          "row_count": 9151,
+          "percentage": 100.0
+        }
+      ]
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 49.35570000088774,
+      "query": 23.31850001064595,
+      "total": 72.87560000258964
+    },
+    "notes": "Passed expectation checks."
+  },
+  {
+    "id": "CQ-005",
+    "category": "above_average",
+    "question": "Các máy có tổng downtime cao hơn mức trung bình theo máy.",
+    "conversation_id": "1a4f2258-a5ff-466d-a5bb-8d7a94d744d8",
+    "turn": 1,
+    "turn_type": "NEW_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "1a4f2258-a5ff-466d-a5bb-8d7a94d744d8",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "1a4f2258-a5ff-466d-a5bb-8d7a94d744d8",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "total_duration_seconds",
+        "alias": "total_duration_seconds",
+        "aggregation": "sum",
+        "column": "thoi_luong_seconds",
+        "percentage_of_total": false
+      },
+      "active_metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "active_dimensions": [
+        "may"
+      ],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [
+        {
+          "metric_alias": "total_duration_seconds",
+          "operator": "greater_than",
+          "comparison": "group_average",
+          "value": null
+        }
+      ],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 20,
+      "active_output": "text",
+      "last_entities": {
+        "top_machine": "Máy 11"
+      },
+      "last_result_summary": {
+        "row_count": 4,
+        "columns": [
+          "may",
+          "total_duration_seconds"
+        ],
+        "first_row": {
+          "may": "Máy 11",
+          "total_duration_seconds": 1488867.0
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [
+          {
+            "metric_alias": "total_duration_seconds",
+            "operator": "greater_than",
+            "comparison": "group_average",
+            "value": null
+          }
+        ],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": null,
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "last_output": "text"
+    },
+    "expected_plan": {
+      "columns": [
+        "may",
+        "total_duration_seconds"
+      ],
+      "having": "group_average",
+      "first": {
+        "may": "Máy 11"
+      }
+    },
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [
+        {
+          "metric_alias": "total_duration_seconds",
+          "operator": "greater_than",
+          "comparison": "group_average",
+          "value": null
+        }
+      ],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "may",
+        "total_duration_seconds"
+      ],
+      "having": "group_average",
+      "first": {
+        "may": "Máy 11"
+      }
+    },
+    "actual_result": {
+      "records": [
+        {
+          "may": "Máy 11",
+          "total_duration_seconds": 1488867.0
+        },
+        {
+          "may": "Máy 12",
+          "total_duration_seconds": 1163357.0
+        },
+        {
+          "may": "Máy 29",
+          "total_duration_seconds": 1060811.0
+        },
+        {
+          "may": "Máy 8",
+          "total_duration_seconds": 827918.0
+        }
+      ]
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 48.98449999745935,
+      "query": 26.537300000200048,
+      "total": 75.77510000555776
+    },
+    "notes": "Passed expectation checks."
+  },
+  {
+    "id": "CQ-006",
+    "category": "above_average",
+    "question": "Chỉ giữ các nhóm tổn thất có tổng downtime cao hơn mức trung bình của các nhóm.",
+    "conversation_id": "59fc8e91-c902-4b03-8c46-1711eee75ff9",
+    "turn": 1,
+    "turn_type": "ADD_FILTER",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "59fc8e91-c902-4b03-8c46-1711eee75ff9",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "59fc8e91-c902-4b03-8c46-1711eee75ff9",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "total_duration_seconds",
+        "alias": "total_duration_seconds",
+        "aggregation": "sum",
+        "column": "thoi_luong_seconds",
+        "percentage_of_total": false
+      },
+      "active_metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "active_dimensions": [
+        "nhom_ton_that"
+      ],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [
+        {
+          "metric_alias": "total_duration_seconds",
+          "operator": "greater_than",
+          "comparison": "group_average",
+          "value": null
+        }
+      ],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 20,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": {
+        "row_count": 0,
+        "columns": []
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "nhom_ton_that"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [
+          {
+            "metric_alias": "total_duration_seconds",
+            "operator": "greater_than",
+            "comparison": "group_average",
+            "value": null
+          }
+        ],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": null,
+      "dimensions": [
+        "nhom_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "last_output": "text"
+    },
+    "expected_plan": {
+      "columns": [
+        "nhom_ton_that",
+        "total_duration_seconds"
+      ],
+      "having": "group_average"
+    },
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "nhom_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [
+        {
+          "metric_alias": "total_duration_seconds",
+          "operator": "greater_than",
+          "comparison": "group_average",
+          "value": null
+        }
+      ],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "nhom_ton_that",
+        "total_duration_seconds"
+      ],
+      "having": "group_average"
+    },
+    "actual_result": {
+      "records": []
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 48.23630000464618,
+      "query": 24.337299997569062,
+      "total": 72.67660000070464
+    },
+    "notes": "Passed expectation checks."
+  },
+  {
+    "id": "CQ-007",
+    "category": "windowed_top_n",
+    "question": "Top máy theo từng tháng.",
+    "conversation_id": "f0e3b1db-4793-4a8a-9938-4d53366ad719",
+    "turn": 1,
+    "turn_type": "CHANGE_RANKING",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "f0e3b1db-4793-4a8a-9938-4d53366ad719",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "f0e3b1db-4793-4a8a-9938-4d53366ad719",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "total_duration_seconds",
+        "alias": "total_duration_seconds",
+        "aggregation": "sum",
+        "column": "thoi_luong_seconds",
+        "percentage_of_total": false
+      },
+      "active_metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "active_dimensions": [
+        "thoi_gian_bat_dau",
+        "may"
+      ],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": {
+        "partition_by": [
+          "thoi_gian_bat_dau"
+        ],
+        "order_by": "total_duration_seconds",
+        "direction": "desc",
+        "rank_type": "row_number",
+        "top_n": null
+      },
+      "active_sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 500,
+      "active_output": "table",
+      "last_entities": {
+        "top_machine": "Máy 11"
+      },
+      "last_result_summary": {
+        "row_count": 30,
+        "columns": [
+          "thoi_gian_bat_dau",
+          "may",
+          "total_duration_seconds",
+          "_rank"
+        ],
+        "first_row": {
+          "thoi_gian_bat_dau": "2025-11-01 00:00:00",
+          "may": "Máy 11",
+          "total_duration_seconds": 542072.0,
+          "_rank": 1
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "thoi_gian_bat_dau",
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": {
+          "partition_by": [
+            "thoi_gian_bat_dau"
+          ],
+          "order_by": "total_duration_seconds",
+          "direction": "desc",
+          "rank_type": "row_number",
+          "top_n": null
+        },
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": "month",
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 500,
+        "output": "table",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": null,
+      "dimensions": [
+        "thoi_gian_bat_dau",
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "last_output": "table"
+    },
+    "expected_plan": {
+      "columns": [
+        "thoi_gian_bat_dau",
+        "may",
+        "total_duration_seconds",
+        "_rank"
+      ],
+      "ranking": true
+    },
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "thoi_gian_bat_dau",
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": {
+        "partition_by": [
+          "thoi_gian_bat_dau"
+        ],
+        "order_by": "total_duration_seconds",
+        "direction": "desc",
+        "rank_type": "row_number",
+        "top_n": null
+      },
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": "month",
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 500,
+      "output": "table",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "thoi_gian_bat_dau",
+        "may",
+        "total_duration_seconds",
+        "_rank"
+      ],
+      "ranking": true
+    },
+    "actual_result": {
+      "records": [
+        {
+          "thoi_gian_bat_dau": "2025-11-01T00:00:00",
+          "may": "Máy 11",
+          "total_duration_seconds": 542072.0,
+          "_rank": 1
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-01T00:00:00",
+          "may": "Máy 9",
+          "total_duration_seconds": 377209.0,
+          "_rank": 2
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-01T00:00:00",
+          "may": "Máy 12",
+          "total_duration_seconds": 355336.0,
+          "_rank": 3
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-01T00:00:00",
+          "may": "Máy 8",
+          "total_duration_seconds": 354817.0,
+          "_rank": 4
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-01T00:00:00",
+          "may": "Máy 29",
+          "total_duration_seconds": 346984.0,
+          "_rank": 5
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-01T00:00:00",
+          "may": "Máy 30",
+          "total_duration_seconds": 208402.0,
+          "_rank": 6
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-01T00:00:00",
+          "may": "Máy 31",
+          "total_duration_seconds": 180320.0,
+          "_rank": 7
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-01T00:00:00",
+          "may": "Máy 3",
+          "total_duration_seconds": 127479.0,
+          "_rank": 8
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-01T00:00:00",
+          "may": "Máy 3A",
+          "total_duration_seconds": 59859.0,
+          "_rank": 9
+        },
+        {
+          "thoi_gian_bat_dau": "2025-12-01T00:00:00",
+          "may": "Máy 11",
+          "total_duration_seconds": 685559.0,
+          "_rank": 1
+        },
+        {
+          "thoi_gian_bat_dau": "2025-12-01T00:00:00",
+          "may": "Máy 12",
+          "total_duration_seconds": 580366.0,
+          "_rank": 2
+        },
+        {
+          "thoi_gian_bat_dau": "2025-12-01T00:00:00",
+          "may": "Máy 8",
+          "total_duration_seconds": 473101.0,
+          "_rank": 3
+        },
+        {
+          "thoi_gian_bat_dau": "2025-12-01T00:00:00",
+          "may": "Máy 29",
+          "total_duration_seconds": 342778.0,
+          "_rank": 4
+        },
+        {
+          "thoi_gian_bat_dau": "2025-12-01T00:00:00",
+          "may": "Máy 3A",
+          "total_duration_seconds": 287286.0,
+          "_rank": 5
+        },
+        {
+          "thoi_gian_bat_dau": "2025-12-01T00:00:00",
+          "may": "Máy 9",
+          "total_duration_seconds": 247285.0,
+          "_rank": 6
+        },
+        {
+          "thoi_gian_bat_dau": "2025-12-01T00:00:00",
+          "may": "Máy 30",
+          "total_duration_seconds": 160981.0,
+          "_rank": 7
+        },
+        {
+          "thoi_gian_bat_dau": "2025-12-01T00:00:00",
+          "may": "Máy 3",
+          "total_duration_seconds": 151971.0,
+          "_rank": 8
+        },
+        {
+          "thoi_gian_bat_dau": "2025-12-01T00:00:00",
+          "may": "Máy 31",
+          "total_duration_seconds": 132753.0,
+          "_rank": 9
+        },
+        {
+          "thoi_gian_bat_dau": "2026-01-01T00:00:00",
+          "may": "Máy 29",
+          "total_duration_seconds": 343289.0,
+          "_rank": 1
+        },
+        {
+          "thoi_gian_bat_dau": "2026-01-01T00:00:00",
+          "may": "Máy 11",
+          "total_duration_seconds": 242866.0,
+          "_rank": 2
+        }
+      ]
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 50.61950000526849,
+      "query": 29.138500001863576,
+      "total": 80.01520000107121
+    },
+    "notes": "Passed expectation checks."
+  },
+  {
+    "id": "CQ-008",
+    "category": "windowed_top_n",
+    "question": "Với mỗi tháng, tìm top 3 máy có tổng downtime cao nhất.",
+    "conversation_id": "814493be-9b66-44da-b918-bb96c21adc62",
+    "turn": 1,
+    "turn_type": "CHANGE_RANKING",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "814493be-9b66-44da-b918-bb96c21adc62",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "814493be-9b66-44da-b918-bb96c21adc62",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "total_duration_seconds",
+        "alias": "total_duration_seconds",
+        "aggregation": "sum",
+        "column": "thoi_luong_seconds",
+        "percentage_of_total": false
+      },
+      "active_metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "active_dimensions": [
+        "thoi_gian_bat_dau",
+        "may"
+      ],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": {
+        "partition_by": [
+          "thoi_gian_bat_dau"
+        ],
+        "order_by": "total_duration_seconds",
+        "direction": "desc",
+        "rank_type": "row_number",
+        "top_n": 3
+      },
+      "active_sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 500,
+      "active_output": "table",
+      "last_entities": {
+        "top_machine": "Máy 11"
+      },
+      "last_result_summary": {
+        "row_count": 12,
+        "columns": [
+          "thoi_gian_bat_dau",
+          "may",
+          "total_duration_seconds",
+          "_rank"
+        ],
+        "first_row": {
+          "thoi_gian_bat_dau": "2025-11-01 00:00:00",
+          "may": "Máy 11",
+          "total_duration_seconds": 542072.0,
+          "_rank": 1
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "thoi_gian_bat_dau",
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": {
+          "partition_by": [
+            "thoi_gian_bat_dau"
+          ],
+          "order_by": "total_duration_seconds",
+          "direction": "desc",
+          "rank_type": "row_number",
+          "top_n": 3
+        },
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": "month",
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 500,
+        "output": "table",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": null,
+      "dimensions": [
+        "thoi_gian_bat_dau",
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "last_output": "table"
+    },
+    "expected_plan": {
+      "columns": [
+        "thoi_gian_bat_dau",
+        "may",
+        "total_duration_seconds",
+        "_rank"
+      ],
+      "ranking": true,
+      "max_rank": 3
+    },
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "thoi_gian_bat_dau",
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": {
+        "partition_by": [
+          "thoi_gian_bat_dau"
+        ],
+        "order_by": "total_duration_seconds",
+        "direction": "desc",
+        "rank_type": "row_number",
+        "top_n": 3
+      },
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": "month",
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 500,
+      "output": "table",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "thoi_gian_bat_dau",
+        "may",
+        "total_duration_seconds",
+        "_rank"
+      ],
+      "ranking": true,
+      "max_rank": 3
+    },
+    "actual_result": {
+      "records": [
+        {
+          "thoi_gian_bat_dau": "2025-11-01T00:00:00",
+          "may": "Máy 11",
+          "total_duration_seconds": 542072.0,
+          "_rank": 1
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-01T00:00:00",
+          "may": "Máy 9",
+          "total_duration_seconds": 377209.0,
+          "_rank": 2
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-01T00:00:00",
+          "may": "Máy 12",
+          "total_duration_seconds": 355336.0,
+          "_rank": 3
+        },
+        {
+          "thoi_gian_bat_dau": "2025-12-01T00:00:00",
+          "may": "Máy 11",
+          "total_duration_seconds": 685559.0,
+          "_rank": 1
+        },
+        {
+          "thoi_gian_bat_dau": "2025-12-01T00:00:00",
+          "may": "Máy 12",
+          "total_duration_seconds": 580366.0,
+          "_rank": 2
+        },
+        {
+          "thoi_gian_bat_dau": "2025-12-01T00:00:00",
+          "may": "Máy 8",
+          "total_duration_seconds": 473101.0,
+          "_rank": 3
+        },
+        {
+          "thoi_gian_bat_dau": "2026-01-01T00:00:00",
+          "may": "Máy 29",
+          "total_duration_seconds": 343289.0,
+          "_rank": 1
+        },
+        {
+          "thoi_gian_bat_dau": "2026-01-01T00:00:00",
+          "may": "Máy 11",
+          "total_duration_seconds": 242866.0,
+          "_rank": 2
+        },
+        {
+          "thoi_gian_bat_dau": "2026-01-01T00:00:00",
+          "may": "Máy 12",
+          "total_duration_seconds": 227655.0,
+          "_rank": 3
+        },
+        {
+          "thoi_gian_bat_dau": "2026-02-01T00:00:00",
+          "may": "Máy 29",
+          "total_duration_seconds": 27760.0,
+          "_rank": 1
+        },
+        {
+          "thoi_gian_bat_dau": "2026-02-01T00:00:00",
+          "may": "Máy 30",
+          "total_duration_seconds": 26521.0,
+          "_rank": 2
+        },
+        {
+          "thoi_gian_bat_dau": "2026-02-01T00:00:00",
+          "may": "Máy 11",
+          "total_duration_seconds": 18370.0,
+          "_rank": 3
+        }
+      ]
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 46.43660000874661,
+      "query": 32.14310000475962,
+      "total": 78.80410000507254
+    },
+    "notes": "Passed expectation checks."
+  },
+  {
+    "id": "CQ-009",
+    "category": "date_range",
+    "question": "Trong tháng gần nhất có trong dữ liệu, tìm top 5 máy theo tổng downtime.",
+    "conversation_id": "fd4a44fa-bb1d-4bab-9486-e777a7c76a2f",
+    "turn": 1,
+    "turn_type": "CHANGE_TIME",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "simple",
+    "state_before": {
+      "conversation_id": "fd4a44fa-bb1d-4bab-9486-e777a7c76a2f",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "fd4a44fa-bb1d-4bab-9486-e777a7c76a2f",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "total_duration_seconds",
+        "alias": "total_duration_seconds",
+        "aggregation": "sum",
+        "column": "thoi_luong_seconds",
+        "percentage_of_total": false
+      },
+      "active_metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "active_dimensions": [
+        "may"
+      ],
+      "active_filters": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "operator": "date_between",
+          "value": [
+            "2026-02-01",
+            "2026-03-01"
+          ]
+        }
+      ],
+      "active_time_range": {
+        "column": "thoi_gian_bat_dau",
+        "value": [
+          "2026-02-01",
+          "2026-03-01"
+        ]
+      },
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 5,
+      "active_output": "pie",
+      "last_entities": {
+        "thoi_gian_bat_dau": [
+          "2026-02-01",
+          "2026-03-01"
+        ],
+        "top_machine": "Máy 29"
+      },
+      "last_result_summary": {
+        "row_count": 4,
+        "columns": [
+          "may",
+          "total_duration_seconds"
+        ],
+        "first_row": {
+          "may": "Máy 29",
+          "total_duration_seconds": 27760.0
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "thoi_gian_bat_dau",
+            "operator": "date_between",
+            "value": [
+              "2026-02-01",
+              "2026-03-01"
+            ]
+          }
+        ],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 5,
+        "output": "pie",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": [
+        "2026-02-01",
+        "2026-03-01"
+      ],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "last_output": "pie"
+    },
+    "expected_plan": {
+      "columns": [
+        "may",
+        "total_duration_seconds"
+      ],
+      "time_filter": true,
+      "limit": 5
+    },
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "operator": "date_between",
+          "value": [
+            "2026-02-01",
+            "2026-03-01"
+          ]
+        }
+      ],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 5,
+      "output": "pie",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "may",
+        "total_duration_seconds"
+      ],
+      "time_filter": true,
+      "limit": 5
+    },
+    "actual_result": {
+      "records": [
+        {
+          "may": "Máy 29",
+          "total_duration_seconds": 27760.0
+        },
+        {
+          "may": "Máy 30",
+          "total_duration_seconds": 26521.0
+        },
+        {
+          "may": "Máy 11",
+          "total_duration_seconds": 18370.0
+        },
+        {
+          "may": "Máy 3A",
+          "total_duration_seconds": 540.0
+        }
+      ]
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 48.15000000235159,
+      "query": 23.311099997954443,
+      "total": 71.68669998645782
+    },
+    "notes": "Passed expectation checks."
+  },
+  {
+    "id": "CQ-010",
+    "category": "long_combined",
+    "question": "Trong tháng gần nhất có trong dữ liệu, hãy tìm 5 máy có tổng downtime cao nhất, hiển thị thêm số lần dừng và thời lượng trung bình, sắp xếp giảm dần và vẽ biểu đồ cột.",
+    "conversation_id": "4d507cfc-d6d0-489d-9865-d0fc04990bb3",
+    "turn": 1,
+    "turn_type": "CHANGE_TIME",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "4d507cfc-d6d0-489d-9865-d0fc04990bb3",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "4d507cfc-d6d0-489d-9865-d0fc04990bb3",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "total_duration_seconds",
+        "alias": "total_duration_seconds",
+        "aggregation": "sum",
+        "column": "thoi_luong_seconds",
+        "percentage_of_total": false
+      },
+      "active_metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "active_dimensions": [
+        "may"
+      ],
+      "active_filters": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "operator": "date_between",
+          "value": [
+            "2026-02-01",
+            "2026-03-01"
+          ]
+        }
+      ],
+      "active_time_range": {
+        "column": "thoi_gian_bat_dau",
+        "value": [
+          "2026-02-01",
+          "2026-03-01"
+        ]
+      },
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 1,
+      "active_output": "pie",
+      "last_entities": {
+        "thoi_gian_bat_dau": [
+          "2026-02-01",
+          "2026-03-01"
+        ],
+        "top_machine": "Máy 29"
+      },
+      "last_result_summary": {
+        "row_count": 1,
+        "columns": [
+          "may",
+          "total_duration_seconds",
+          "row_count",
+          "avg_duration_seconds"
+        ],
+        "first_row": {
+          "may": "Máy 29",
+          "total_duration_seconds": 27760.0,
+          "row_count": 48,
+          "avg_duration_seconds": 578.3333333333334
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "chart",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "thoi_gian_bat_dau",
+            "operator": "date_between",
+            "value": [
+              "2026-02-01",
+              "2026-03-01"
+            ]
+          }
+        ],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          },
+          {
+            "name": "avg_duration_seconds",
+            "alias": "avg_duration_seconds",
+            "aggregation": "avg",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 1,
+        "output": "pie",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": [
+        "2026-02-01",
+        "2026-03-01"
+      ],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "last_output": "pie"
+    },
+    "expected_plan": {
+      "columns": [
+        "may",
+        "total_duration_seconds"
+      ],
+      "time_filter": true,
+      "output": "bar"
+    },
+    "actual_plan": {
+      "intent": "chart",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "operator": "date_between",
+          "value": [
+            "2026-02-01",
+            "2026-03-01"
+          ]
+        }
+      ],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 1,
+      "output": "pie",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "may",
+        "total_duration_seconds"
+      ],
+      "time_filter": true,
+      "output": "bar"
+    },
+    "actual_result": {
+      "records": [
+        {
+          "may": "Máy 29",
+          "total_duration_seconds": 27760.0,
+          "row_count": 48,
+          "avg_duration_seconds": 578.3333333333334
+        }
+      ]
+    },
+    "passed": false,
+    "failure_type": "COMPLEX_DECOMPOSITION_ERROR",
+    "latency_ms": {
+      "planner": 43.60790000646375,
+      "query": 25.373600001330487,
+      "total": 69.19019999622833
+    },
+    "notes": "Wrong output."
+  },
+  {
+    "id": "CQ-011",
+    "category": "long_combined",
+    "question": "Trong tháng gần nhất, tìm top 5 máy theo tổng downtime, chỉ giữ máy cao hơn mức trung bình, và vẽ biểu đồ cột.",
+    "conversation_id": "fd4f41ea-6073-4c9f-8e3c-651e65e1ad01",
+    "turn": 1,
+    "turn_type": "CHANGE_TIME",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "fd4f41ea-6073-4c9f-8e3c-651e65e1ad01",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "fd4f41ea-6073-4c9f-8e3c-651e65e1ad01",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "total_duration_seconds",
+        "alias": "total_duration_seconds",
+        "aggregation": "sum",
+        "column": "thoi_luong_seconds",
+        "percentage_of_total": false
+      },
+      "active_metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "active_dimensions": [
+        "may"
+      ],
+      "active_filters": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "operator": "date_between",
+          "value": [
+            "2026-02-01",
+            "2026-03-01"
+          ]
+        }
+      ],
+      "active_time_range": {
+        "column": "thoi_gian_bat_dau",
+        "value": [
+          "2026-02-01",
+          "2026-03-01"
+        ]
+      },
+      "active_having": [
+        {
+          "metric_alias": "total_duration_seconds",
+          "operator": "greater_than",
+          "comparison": "group_average",
+          "value": null
+        }
+      ],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 5,
+      "active_output": "pie",
+      "last_entities": {
+        "thoi_gian_bat_dau": [
+          "2026-02-01",
+          "2026-03-01"
+        ],
+        "top_machine": "Máy 29"
+      },
+      "last_result_summary": {
+        "row_count": 3,
+        "columns": [
+          "may",
+          "total_duration_seconds"
+        ],
+        "first_row": {
+          "may": "Máy 29",
+          "total_duration_seconds": 27760.0
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "chart",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "thoi_gian_bat_dau",
+            "operator": "date_between",
+            "value": [
+              "2026-02-01",
+              "2026-03-01"
+            ]
+          }
+        ],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [
+          {
+            "metric_alias": "total_duration_seconds",
+            "operator": "greater_than",
+            "comparison": "group_average",
+            "value": null
+          }
+        ],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 5,
+        "output": "pie",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": [
+        "2026-02-01",
+        "2026-03-01"
+      ],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "last_output": "pie"
+    },
+    "expected_plan": {
+      "columns": [
+        "may",
+        "total_duration_seconds"
+      ],
+      "time_filter": true,
+      "having": "group_average",
+      "output": "bar"
+    },
+    "actual_plan": {
+      "intent": "chart",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "operator": "date_between",
+          "value": [
+            "2026-02-01",
+            "2026-03-01"
+          ]
+        }
+      ],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [
+        {
+          "metric_alias": "total_duration_seconds",
+          "operator": "greater_than",
+          "comparison": "group_average",
+          "value": null
+        }
+      ],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 5,
+      "output": "pie",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "may",
+        "total_duration_seconds"
+      ],
+      "time_filter": true,
+      "having": "group_average",
+      "output": "bar"
+    },
+    "actual_result": {
+      "records": [
+        {
+          "may": "Máy 29",
+          "total_duration_seconds": 27760.0
+        },
+        {
+          "may": "Máy 30",
+          "total_duration_seconds": 26521.0
+        },
+        {
+          "may": "Máy 11",
+          "total_duration_seconds": 18370.0
+        }
+      ]
+    },
+    "passed": false,
+    "failure_type": "COMPLEX_DECOMPOSITION_ERROR",
+    "latency_ms": {
+      "planner": 43.60540000197943,
+      "query": 23.554100000183098,
+      "total": 67.34449999930803
+    },
+    "notes": "Wrong output."
+  },
+  {
+    "id": "CQ-012",
+    "category": "semantic_multi",
+    "question": "Các nguyên nhân liên quan đến QC, kiểm tra chất lượng, chỉnh màu hoặc duyệt màu.",
+    "conversation_id": "98e6aab9-1a1c-4b68-b5e8-84981f60876f",
+    "turn": 1,
+    "turn_type": "NEW_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "simple",
+    "state_before": {
+      "conversation_id": "98e6aab9-1a1c-4b68-b5e8-84981f60876f",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "98e6aab9-1a1c-4b68-b5e8-84981f60876f",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [
+        "ten_ton_that"
+      ],
+      "active_filters": [
+        {
+          "column": "ten_ton_that",
+          "operator": "contains",
+          "value": "QC"
+        }
+      ],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "ten_ton_that",
+          "field": "ten_ton_that",
+          "direction": "asc"
+        }
+      ],
+      "active_limit": 20,
+      "active_output": "table",
+      "last_entities": {
+        "ten_ton_that": "QC"
+      },
+      "last_result_summary": {
+        "row_count": 0,
+        "columns": []
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "ten_ton_that",
+            "operator": "contains",
+            "value": "QC"
+          }
+        ],
+        "dimensions": [
+          "ten_ton_that"
+        ],
+        "metrics": [],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "ten_ton_that",
+            "field": "ten_ton_that",
+            "direction": "asc"
+          }
+        ],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": null,
+      "dimensions": [
+        "ten_ton_that"
+      ],
+      "metrics": [],
+      "last_output": "table"
+    },
+    "expected_plan": {
+      "columns": [
+        "ten_ton_that"
+      ],
+      "no_empty_required": false
+    },
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "ten_ton_that",
+          "operator": "contains",
+          "value": "QC"
+        }
+      ],
+      "dimensions": [
+        "ten_ton_that"
+      ],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "ten_ton_that",
+          "field": "ten_ton_that",
+          "direction": "asc"
+        }
+      ],
+      "limit": 20,
+      "output": "table",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "ten_ton_that"
+      ],
+      "no_empty_required": false
+    },
+    "actual_result": {
+      "records": []
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 73.08039999043103,
+      "query": 22.89500000188127,
+      "total": 96.06329999223817
+    },
+    "notes": "Passed expectation checks."
+  },
+  {
+    "id": "CQ-013",
+    "category": "chart",
+    "question": "Vẽ biểu đồ tròn tỷ trọng của từng nhóm tổn thất theo số lần dừng.",
+    "conversation_id": "7c9614b5-04a4-42d1-bbf7-5530c695d5a5",
+    "turn": 1,
+    "turn_type": "CHANGE_OUTPUT",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "7c9614b5-04a4-42d1-bbf7-5530c695d5a5",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "7c9614b5-04a4-42d1-bbf7-5530c695d5a5",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "row_count",
+        "alias": "row_count",
+        "aggregation": "count",
+        "column": null,
+        "percentage_of_total": true
+      },
+      "active_metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": true
+        }
+      ],
+      "active_dimensions": [
+        "nhom_ton_that"
+      ],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "row_count",
+          "field": "row_count",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 20,
+      "active_output": "pie",
+      "last_entities": {
+        "top_group": "Bảo trì"
+      },
+      "last_result_summary": {
+        "row_count": 1,
+        "columns": [
+          "nhom_ton_that",
+          "row_count",
+          "percentage"
+        ],
+        "first_row": {
+          "nhom_ton_that": "Bảo trì",
+          "row_count": 9151,
+          "percentage": 100.0
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "chart",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "nhom_ton_that"
+        ],
+        "metrics": [
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": true
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "row_count",
+            "field": "row_count",
+            "direction": "desc"
+          }
+        ],
+        "limit": 20,
+        "output": "pie",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": null,
+      "dimensions": [
+        "nhom_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": true
+        }
+      ],
+      "last_output": "pie"
+    },
+    "expected_plan": {
+      "columns": [
+        "nhom_ton_that",
+        "row_count",
+        "percentage"
+      ],
+      "output": "pie"
+    },
+    "actual_plan": {
+      "intent": "chart",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "nhom_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": true
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "row_count",
+          "field": "row_count",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "pie",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "nhom_ton_that",
+        "row_count",
+        "percentage"
+      ],
+      "output": "pie"
+    },
+    "actual_result": {
+      "records": [
+        {
+          "nhom_ton_that": "Bảo trì",
+          "row_count": 9151,
+          "percentage": 100.0
+        }
+      ]
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 42.87530000146944,
+      "query": 21.166600010474212,
+      "total": 64.22000000020489
+    },
+    "notes": "Passed expectation checks."
+  },
+  {
+    "id": "CQ-014",
+    "category": "report",
+    "question": "Xuất báo cáo top 5 máy theo tổng downtime, kèm số lần dừng và thời lượng trung bình.",
+    "conversation_id": "a9a461e9-87e6-47c6-95fc-9b94c9963d8f",
+    "turn": 1,
+    "turn_type": "CHANGE_OUTPUT",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "a9a461e9-87e6-47c6-95fc-9b94c9963d8f",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "a9a461e9-87e6-47c6-95fc-9b94c9963d8f",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "total_duration_seconds",
+        "alias": "total_duration_seconds",
+        "aggregation": "sum",
+        "column": "thoi_luong_seconds",
+        "percentage_of_total": false
+      },
+      "active_metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "active_dimensions": [
+        "may"
+      ],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 5,
+      "active_output": "report",
+      "last_entities": {
+        "top_machine": "Máy 11"
+      },
+      "last_result_summary": {
+        "row_count": 5,
+        "columns": [
+          "may",
+          "total_duration_seconds",
+          "row_count",
+          "avg_duration_seconds"
+        ],
+        "first_row": {
+          "may": "Máy 11",
+          "total_duration_seconds": 1488867.0,
+          "row_count": 1469,
+          "avg_duration_seconds": 1013.5241660993873
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "report",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          },
+          {
+            "name": "avg_duration_seconds",
+            "alias": "avg_duration_seconds",
+            "aggregation": "avg",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 5,
+        "output": "report",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": null,
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "last_output": "report"
+    },
+    "expected_plan": {
+      "columns": [
+        "may",
+        "total_duration_seconds"
+      ],
+      "output": "report"
+    },
+    "actual_plan": {
+      "intent": "report",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 5,
+      "output": "report",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "may",
+        "total_duration_seconds"
+      ],
+      "output": "report"
+    },
+    "actual_result": {
+      "records": [
+        {
+          "may": "Máy 11",
+          "total_duration_seconds": 1488867.0,
+          "row_count": 1469,
+          "avg_duration_seconds": 1013.5241660993873
+        },
+        {
+          "may": "Máy 12",
+          "total_duration_seconds": 1163357.0,
+          "row_count": 1654,
+          "avg_duration_seconds": 703.3597339782345
+        },
+        {
+          "may": "Máy 29",
+          "total_duration_seconds": 1060811.0,
+          "row_count": 1603,
+          "avg_duration_seconds": 661.7660636306924
+        },
+        {
+          "may": "Máy 8",
+          "total_duration_seconds": 827918.0,
+          "row_count": 653,
+          "avg_duration_seconds": 1267.8683001531394
+        },
+        {
+          "may": "Máy 9",
+          "total_duration_seconds": 667150.0,
+          "row_count": 821,
+          "avg_duration_seconds": 812.6065773447016
+        }
+      ]
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 42.37409999768715,
+      "query": 25.955099990824237,
+      "total": 68.68840000242926
+    },
+    "notes": "Passed expectation checks."
+  },
+  {
+    "id": "CQ-015",
+    "category": "dashboard",
+    "question": "Tạo dashboard tổng quan có tổng downtime và số lần dừng theo máy.",
+    "conversation_id": "ad5bdae8-2bd9-4054-831c-6dd511156955",
+    "turn": 1,
+    "turn_type": "CHANGE_OUTPUT",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "ad5bdae8-2bd9-4054-831c-6dd511156955",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "ad5bdae8-2bd9-4054-831c-6dd511156955",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "total_duration_seconds",
+        "alias": "total_duration_seconds",
+        "aggregation": "sum",
+        "column": "thoi_luong_seconds",
+        "percentage_of_total": false
+      },
+      "active_metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "active_dimensions": [
+        "may"
+      ],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 20,
+      "active_output": "dashboard",
+      "last_entities": {
+        "top_machine": "Máy 11"
+      },
+      "last_result_summary": {
+        "row_count": 9,
+        "columns": [
+          "may",
+          "total_duration_seconds",
+          "row_count",
+          "avg_duration_seconds"
+        ],
+        "first_row": {
+          "may": "Máy 11",
+          "total_duration_seconds": 1488867.0,
+          "row_count": 1469,
+          "avg_duration_seconds": 1013.5241660993873
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "dashboard",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          },
+          {
+            "name": "avg_duration_seconds",
+            "alias": "avg_duration_seconds",
+            "aggregation": "avg",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 20,
+        "output": "dashboard",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": null,
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "last_output": "dashboard"
+    },
+    "expected_plan": {
+      "columns": [
+        "may",
+        "total_duration_seconds",
+        "row_count"
+      ],
+      "output": "dashboard"
+    },
+    "actual_plan": {
+      "intent": "dashboard",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "dashboard",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "may",
+        "total_duration_seconds",
+        "row_count"
+      ],
+      "output": "dashboard"
+    },
+    "actual_result": {
+      "records": [
+        {
+          "may": "Máy 11",
+          "total_duration_seconds": 1488867.0,
+          "row_count": 1469,
+          "avg_duration_seconds": 1013.5241660993873
+        },
+        {
+          "may": "Máy 12",
+          "total_duration_seconds": 1163357.0,
+          "row_count": 1654,
+          "avg_duration_seconds": 703.3597339782345
+        },
+        {
+          "may": "Máy 29",
+          "total_duration_seconds": 1060811.0,
+          "row_count": 1603,
+          "avg_duration_seconds": 661.7660636306924
+        },
+        {
+          "may": "Máy 8",
+          "total_duration_seconds": 827918.0,
+          "row_count": 653,
+          "avg_duration_seconds": 1267.8683001531394
+        },
+        {
+          "may": "Máy 9",
+          "total_duration_seconds": 667150.0,
+          "row_count": 821,
+          "avg_duration_seconds": 812.6065773447016
+        },
+        {
+          "may": "Máy 30",
+          "total_duration_seconds": 585158.0,
+          "row_count": 598,
+          "avg_duration_seconds": 978.5250836120401
+        },
+        {
+          "may": "Máy 31",
+          "total_duration_seconds": 494638.0,
+          "row_count": 824,
+          "avg_duration_seconds": 600.2888349514564
+        },
+        {
+          "may": "Máy 3A",
+          "total_duration_seconds": 485124.0,
+          "row_count": 743,
+          "avg_duration_seconds": 652.9259757738896
+        },
+        {
+          "may": "Máy 3",
+          "total_duration_seconds": 389382.0,
+          "row_count": 786,
+          "avg_duration_seconds": 495.39694656488547
+        }
+      ]
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 52.68560000695288,
+      "query": 34.510299999965355,
+      "total": 87.43980000144802
+    },
+    "notes": "Passed expectation checks."
+  },
+  {
+    "id": "CQ-016",
+    "category": "period_comparison",
+    "question": "So sánh tháng đầu tiên và tháng gần nhất về tổng downtime, số lần dừng và thời lượng trung bình.",
+    "conversation_id": "708fa98f-8083-47b9-a852-f4bfbce07b90",
+    "turn": 1,
+    "turn_type": "CHANGE_TIME",
+    "execution_mode": "REAL_LLM",
+    "query_complexity": "simple",
+    "state_before": {
+      "conversation_id": "708fa98f-8083-47b9-a852-f4bfbce07b90",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "708fa98f-8083-47b9-a852-f4bfbce07b90",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "total_downtime_first_month",
+        "alias": "total_downtime_first_month",
+        "aggregation": "sum",
+        "column": "thoi_luong_seconds",
+        "percentage_of_total": false
+      },
+      "active_metrics": [
+        {
+          "name": "total_downtime_first_month",
+          "alias": "total_downtime_first_month",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "stop_count_first_month",
+          "alias": "stop_count_first_month",
+          "aggregation": "count",
+          "column": "no",
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_first_month",
+          "alias": "avg_duration_first_month",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "active_dimensions": [
+        "thoi_gian_bat_dau",
+        "thoi_gian_bat_dau"
+      ],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "field": "thoi_gian_bat_dau",
+          "direction": "asc"
+        }
+      ],
+      "active_limit": 20,
+      "active_output": "table",
+      "last_entities": {},
+      "last_result_summary": {
+        "row_count": 20,
+        "columns": [
+          "thoi_gian_bat_dau",
+          "thoi_gian_bat_dau_1",
+          "total_downtime_first_month",
+          "stop_count_first_month",
+          "avg_duration_first_month"
+        ],
+        "first_row": {
+          "thoi_gian_bat_dau": "2025-11-03 09:57:29.892000",
+          "thoi_gian_bat_dau_1": "2025-11-03 09:57:29.892000",
+          "total_downtime_first_month": 2190.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 2190.0
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "thoi_gian_bat_dau",
+          "thoi_gian_bat_dau"
+        ],
+        "metrics": [
+          {
+            "name": "total_downtime_first_month",
+            "alias": "total_downtime_first_month",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          {
+            "name": "stop_count_first_month",
+            "alias": "stop_count_first_month",
+            "aggregation": "count",
+            "column": "no",
+            "percentage_of_total": false
+          },
+          {
+            "name": "avg_duration_first_month",
+            "alias": "avg_duration_first_month",
+            "aggregation": "avg",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "thoi_gian_bat_dau",
+            "field": "thoi_gian_bat_dau",
+            "direction": "asc"
+          }
+        ],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": null,
+      "dimensions": [
+        "thoi_gian_bat_dau",
+        "thoi_gian_bat_dau"
+      ],
+      "metrics": [
+        {
+          "name": "total_downtime_first_month",
+          "alias": "total_downtime_first_month",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "stop_count_first_month",
+          "alias": "stop_count_first_month",
+          "aggregation": "count",
+          "column": "no",
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_first_month",
+          "alias": "avg_duration_first_month",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "last_output": "table"
+    },
+    "expected_plan": {
+      "columns": [
+        "thoi_gian_bat_dau",
+        "total_duration_seconds"
+      ],
+      "time_or_group": true
+    },
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "thoi_gian_bat_dau",
+        "thoi_gian_bat_dau"
+      ],
+      "metrics": [
+        {
+          "name": "total_downtime_first_month",
+          "alias": "total_downtime_first_month",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "stop_count_first_month",
+          "alias": "stop_count_first_month",
+          "aggregation": "count",
+          "column": "no",
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_first_month",
+          "alias": "avg_duration_first_month",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "field": "thoi_gian_bat_dau",
+          "direction": "asc"
+        }
+      ],
+      "limit": 20,
+      "output": "table",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "thoi_gian_bat_dau",
+        "total_duration_seconds"
+      ],
+      "time_or_group": true
+    },
+    "actual_result": {
+      "records": [
+        {
+          "thoi_gian_bat_dau": "2025-11-03T09:57:29.892000",
+          "thoi_gian_bat_dau_1": "2025-11-03T09:57:29.892000",
+          "total_downtime_first_month": 2190.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 2190.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T10:14:11.531000",
+          "thoi_gian_bat_dau_1": "2025-11-03T10:14:11.531000",
+          "total_downtime_first_month": 121.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 121.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T11:02:07.730000",
+          "thoi_gian_bat_dau_1": "2025-11-03T11:02:07.730000",
+          "total_downtime_first_month": 300.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 300.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T12:09:55.987000",
+          "thoi_gian_bat_dau_1": "2025-11-03T12:09:55.987000",
+          "total_downtime_first_month": 1748.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 1748.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T12:35:45.912000",
+          "thoi_gian_bat_dau_1": "2025-11-03T12:35:45.912000",
+          "total_downtime_first_month": 4190.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 4190.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T13:20:29.838000",
+          "thoi_gian_bat_dau_1": "2025-11-03T13:20:29.838000",
+          "total_downtime_first_month": 96.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 96.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T14:08:39.721000",
+          "thoi_gian_bat_dau_1": "2025-11-03T14:08:39.721000",
+          "total_downtime_first_month": 141.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 141.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T14:30:24.931000",
+          "thoi_gian_bat_dau_1": "2025-11-03T14:30:24.931000",
+          "total_downtime_first_month": 1036.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 1036.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T14:47:44.738000",
+          "thoi_gian_bat_dau_1": "2025-11-03T14:47:44.738000",
+          "total_downtime_first_month": 498.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 498.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T14:58:51.253000",
+          "thoi_gian_bat_dau_1": "2025-11-03T14:58:51.253000",
+          "total_downtime_first_month": 19.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 19.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T15:16:07.046000",
+          "thoi_gian_bat_dau_1": "2025-11-03T15:16:07.046000",
+          "total_downtime_first_month": 131.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 131.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T15:19:11.542000",
+          "thoi_gian_bat_dau_1": "2025-11-03T15:19:11.542000",
+          "total_downtime_first_month": 278.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 278.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T15:22:09.517000",
+          "thoi_gian_bat_dau_1": "2025-11-03T15:22:09.517000",
+          "total_downtime_first_month": 93.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 93.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T15:22:37.013000",
+          "thoi_gian_bat_dau_1": "2025-11-03T15:22:37.013000",
+          "total_downtime_first_month": 784.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 784.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T15:26:53.293000",
+          "thoi_gian_bat_dau_1": "2025-11-03T15:26:53.293000",
+          "total_downtime_first_month": 227.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 227.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T15:36:17.060000",
+          "thoi_gian_bat_dau_1": "2025-11-03T15:36:17.060000",
+          "total_downtime_first_month": 371.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 371.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T15:36:18.609000",
+          "thoi_gian_bat_dau_1": "2025-11-03T15:36:18.609000",
+          "total_downtime_first_month": 5476.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 5476.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T15:45:23.835000",
+          "thoi_gian_bat_dau_1": "2025-11-03T15:45:23.835000",
+          "total_downtime_first_month": 5977.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 5977.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T15:45:35.211000",
+          "thoi_gian_bat_dau_1": "2025-11-03T15:45:35.211000",
+          "total_downtime_first_month": 440.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 440.0
+        },
+        {
+          "thoi_gian_bat_dau": "2025-11-03T17:25:47.421000",
+          "thoi_gian_bat_dau_1": "2025-11-03T17:25:47.421000",
+          "total_downtime_first_month": 1475.0,
+          "stop_count_first_month": 1,
+          "avg_duration_first_month": 1475.0
+        }
+      ]
+    },
+    "passed": false,
+    "failure_type": "RESULT_COMPARISON_ERROR",
+    "latency_ms": {
+      "planner": 12864.395800002967,
+      "query": 34.77790000033565,
+      "total": 12899.492800002918
+    },
+    "notes": "Missing column total_duration_seconds."
+  },
+  {
+    "id": "CQ-017",
+    "category": "nested",
+    "question": "Xác định máy có downtime cao nhất, sau đó lấy top nguyên nhân của máy đó.",
+    "conversation_id": "47ec9eba-9e8a-4815-99c9-161eb01ff1bd",
+    "turn": 1,
+    "turn_type": "REFERENCE_ENTITY",
+    "execution_mode": "CLARIFICATION",
+    "query_complexity": "simple",
+    "state_before": {
+      "conversation_id": "47ec9eba-9e8a-4815-99c9-161eb01ff1bd",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "47ec9eba-9e8a-4815-99c9-161eb01ff1bd",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "expected_plan": {
+      "columns": [
+        "ten_ton_that",
+        "total_duration_seconds"
+      ],
+      "nested": true
+    },
+    "actual_plan": {
+      "intent": "clarification",
+      "tables": [],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": "Mình chưa có thực thể trước đó để tham chiếu. Bạn muốn chọn máy, nhóm hoặc nguyên nhân nào?"
+    },
+    "expected_result": {
+      "columns": [
+        "ten_ton_that",
+        "total_duration_seconds"
+      ],
+      "nested": true
+    },
+    "actual_result": {
+      "records": []
+    },
+    "passed": false,
+    "failure_type": "COMPLEX_DECOMPOSITION_ERROR",
+    "latency_ms": {
+      "planner": 0.16239999968092889,
+      "query": 0.0,
+      "total": 0.16400001186411828
+    },
+    "notes": "Non-executable plan: clarification"
+  },
+  {
+    "id": "CQ-018",
+    "category": "clarification",
+    "question": "Hãy phân tích hiệu quả tốt nhất.",
+    "conversation_id": "4cf4e668-85d6-444b-b775-0d73f9a73b70",
+    "turn": 1,
+    "turn_type": null,
+    "execution_mode": "CLARIFICATION",
+    "query_complexity": "simple",
+    "state_before": {
+      "conversation_id": "4cf4e668-85d6-444b-b775-0d73f9a73b70",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "4cf4e668-85d6-444b-b775-0d73f9a73b70",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "expected_plan": {
+      "intent": [
+        "clarification",
+        "refusal"
+      ]
+    },
+    "actual_plan": {
+      "intent": "clarification",
+      "tables": [],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": "Bạn muốn đánh giá theo thời gian downtime, số lần dừng, hay một tiêu chí khác?"
+    },
+    "expected_result": {
+      "intent": [
+        "clarification",
+        "refusal"
+      ]
+    },
+    "actual_result": {
+      "records": []
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 0.05060000694356859,
+      "query": 0.0,
+      "total": 0.05149999924469739
+    },
+    "notes": "Intent expectation."
+  },
+  {
+    "id": "CQ-019",
+    "category": "refusal",
+    "question": "Dự báo doanh thu tháng sau từ dữ liệu downtime.",
+    "conversation_id": "db77d1aa-591d-4df6-8731-54090f99e49f",
+    "turn": 1,
+    "turn_type": null,
+    "execution_mode": "REFUSAL",
+    "query_complexity": "simple",
+    "state_before": {
+      "conversation_id": "db77d1aa-591d-4df6-8731-54090f99e49f",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "db77d1aa-591d-4df6-8731-54090f99e49f",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "expected_plan": {
+      "intent": [
+        "refusal"
+      ]
+    },
+    "actual_plan": {
+      "intent": "refusal",
+      "tables": [],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": "Dữ liệu hiện tại không hỗ trợ câu hỏi này."
+    },
+    "expected_result": {
+      "intent": [
+        "refusal"
+      ]
+    },
+    "actual_result": {
+      "records": []
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 0.04650000482797623,
+      "query": 0.0,
+      "total": 0.047299996367655694
+    },
+    "notes": "Intent expectation."
+  },
+  {
+    "id": "CQ-020",
+    "category": "filter",
+    "question": "Top 5 máy trong tháng 12/2025 có các lần dừng trên 1 giờ, hiển thị tổng downtime và số lần dừng.",
+    "conversation_id": "c33f2dc7-151c-4201-8b35-2884202bcf17",
+    "turn": 1,
+    "turn_type": "ADD_FILTER",
+    "execution_mode": "DETERMINISTIC",
+    "query_complexity": "complex",
+    "state_before": {
+      "conversation_id": "c33f2dc7-151c-4201-8b35-2884202bcf17",
+      "active_table": null,
+      "active_metric": null,
+      "active_metrics": [],
+      "active_dimensions": [],
+      "active_filters": [],
+      "active_time_range": null,
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [],
+      "active_limit": null,
+      "active_output": "text",
+      "last_entities": {},
+      "last_result_summary": null,
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": null,
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [],
+      "time_range": null,
+      "dimensions": [],
+      "metrics": [],
+      "last_output": null
+    },
+    "state_changes": {},
+    "state_after": {
+      "conversation_id": "c33f2dc7-151c-4201-8b35-2884202bcf17",
+      "active_table": "machine_downtime_20260203_100753_report_3c3f6d",
+      "active_metric": {
+        "name": "total_duration_seconds",
+        "alias": "total_duration_seconds",
+        "aggregation": "sum",
+        "column": "thoi_luong_seconds",
+        "percentage_of_total": false
+      },
+      "active_metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "active_dimensions": [
+        "may"
+      ],
+      "active_filters": [
+        {
+          "column": "thoi_luong_seconds",
+          "operator": "greater_than",
+          "value": 3600.0
+        },
+        {
+          "column": "thoi_gian_bat_dau",
+          "operator": "date_between",
+          "value": [
+            "2025-12-01",
+            "2026-01-01"
+          ]
+        }
+      ],
+      "active_time_range": {
+        "column": "thoi_gian_bat_dau",
+        "value": [
+          "2025-12-01",
+          "2026-01-01"
+        ]
+      },
+      "active_having": [],
+      "active_ranking": null,
+      "active_sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "active_limit": 5,
+      "active_output": "pie",
+      "last_entities": {
+        "thoi_luong_seconds": 3600.0,
+        "thoi_gian_bat_dau": [
+          "2025-12-01",
+          "2026-01-01"
+        ],
+        "top_machine": "Máy 11"
+      },
+      "last_result_summary": {
+        "row_count": 5,
+        "columns": [
+          "may",
+          "total_duration_seconds",
+          "row_count",
+          "avg_duration_seconds"
+        ],
+        "first_row": {
+          "may": "Máy 11",
+          "total_duration_seconds": 256607.0,
+          "row_count": 40,
+          "avg_duration_seconds": 6415.175
+        }
+      },
+      "last_result_cache_id": null,
+      "last_result_reference": null,
+      "last_plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "thoi_luong_seconds",
+            "operator": "greater_than",
+            "value": 3600.0
+          },
+          {
+            "column": "thoi_gian_bat_dau",
+            "operator": "date_between",
+            "value": [
+              "2025-12-01",
+              "2026-01-01"
+            ]
+          }
+        ],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          },
+          {
+            "name": "avg_duration_seconds",
+            "alias": "avg_duration_seconds",
+            "aggregation": "avg",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 5,
+        "output": "pie",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "recent_turn_ids": [],
+      "conversation_summary": null,
+      "active_tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "time_range": [
+        "2025-12-01",
+        "2026-01-01"
+      ],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "last_output": "pie"
+    },
+    "expected_plan": {
+      "columns": [
+        "may",
+        "total_duration_seconds"
+      ],
+      "time_filter": true,
+      "duration_filter": true
+    },
+    "actual_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "thoi_luong_seconds",
+          "operator": "greater_than",
+          "value": 3600.0
+        },
+        {
+          "column": "thoi_gian_bat_dau",
+          "operator": "date_between",
+          "value": [
+            "2025-12-01",
+            "2026-01-01"
+          ]
+        }
+      ],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        },
+        {
+          "name": "avg_duration_seconds",
+          "alias": "avg_duration_seconds",
+          "aggregation": "avg",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 5,
+      "output": "pie",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "expected_result": {
+      "columns": [
+        "may",
+        "total_duration_seconds"
+      ],
+      "time_filter": true,
+      "duration_filter": true
+    },
+    "actual_result": {
+      "records": [
+        {
+          "may": "Máy 11",
+          "total_duration_seconds": 256607.0,
+          "row_count": 40,
+          "avg_duration_seconds": 6415.175
+        },
+        {
+          "may": "Máy 8",
+          "total_duration_seconds": 229083.0,
+          "row_count": 31,
+          "avg_duration_seconds": 7389.774193548387
+        },
+        {
+          "may": "Máy 12",
+          "total_duration_seconds": 156721.0,
+          "row_count": 29,
+          "avg_duration_seconds": 5404.172413793103
+        },
+        {
+          "may": "Máy 3A",
+          "total_duration_seconds": 78586.0,
+          "row_count": 14,
+          "avg_duration_seconds": 5613.285714285715
+        },
+        {
+          "may": "Máy 9",
+          "total_duration_seconds": 76594.0,
+          "row_count": 13,
+          "avg_duration_seconds": 5891.846153846154
+        }
+      ]
+    },
+    "passed": true,
+    "failure_type": null,
+    "latency_ms": {
+      "planner": 43.61740000604186,
+      "query": 22.991799996816553,
+      "total": 66.82700000237674
+    },
+    "notes": "Passed expectation checks."
+  }
+]

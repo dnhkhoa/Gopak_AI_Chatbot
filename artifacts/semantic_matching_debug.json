@@ -1,0 +1,2106 @@
+[
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "MÁY LỖI PHẦN CƠ",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 1.0,
+        "method": "substring"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [
+      "MÁY LỖI PHẦN CƠ"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "phrase": "VALUE_THAT_SHOULD_NOT_EXIST",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.298,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KHÔNG HÚT GIẤY",
+        "score": 0.293,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.286,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ ĐƯỜNG HÀN ĐÁY",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.273,
+        "method": "fuzzy"
+      },
+      {
+        "value": "LỖI MÁY KIỂM TRA",
+        "score": 0.233,
+        "method": "fuzzy"
+      },
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.211,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.298
+  },
+  {
+    "phrase": "MÁY LỖI PHẦN CƠ",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 1.0,
+        "method": "substring"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [
+      "MÁY LỖI PHẦN CƠ"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "phrase": "VALUE_THAT_SHOULD_NOT_EXIST",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.298,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KHÔNG HÚT GIẤY",
+        "score": 0.293,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.286,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ ĐƯỜNG HÀN ĐÁY",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.273,
+        "method": "fuzzy"
+      },
+      {
+        "value": "LỖI MÁY KIỂM TRA",
+        "score": 0.233,
+        "method": "fuzzy"
+      },
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.211,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.298
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "MÁY LỖI PHẦN CƠ",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 1.0,
+        "method": "substring"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [
+      "MÁY LỖI PHẦN CƠ"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "phrase": "VALUE_THAT_SHOULD_NOT_EXIST",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.298,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KHÔNG HÚT GIẤY",
+        "score": 0.293,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.286,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ ĐƯỜNG HÀN ĐÁY",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.273,
+        "method": "fuzzy"
+      },
+      {
+        "value": "LỖI MÁY KIỂM TRA",
+        "score": 0.233,
+        "method": "fuzzy"
+      },
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.211,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.298
+  },
+  {
+    "phrase": "MÁY LỖI PHẦN CƠ",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 1.0,
+        "method": "substring"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [
+      "MÁY LỖI PHẦN CƠ"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "phrase": "VALUE_THAT_SHOULD_NOT_EXIST",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.298,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KHÔNG HÚT GIẤY",
+        "score": 0.293,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.286,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ ĐƯỜNG HÀN ĐÁY",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.273,
+        "method": "fuzzy"
+      },
+      {
+        "value": "LỖI MÁY KIỂM TRA",
+        "score": 0.233,
+        "method": "fuzzy"
+      },
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.211,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.298
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "MÁY LỖI PHẦN CƠ",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 1.0,
+        "method": "substring"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [
+      "MÁY LỖI PHẦN CƠ"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "phrase": "VALUE_THAT_SHOULD_NOT_EXIST",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.298,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KHÔNG HÚT GIẤY",
+        "score": 0.293,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.286,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ ĐƯỜNG HÀN ĐÁY",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.273,
+        "method": "fuzzy"
+      },
+      {
+        "value": "LỖI MÁY KIỂM TRA",
+        "score": 0.233,
+        "method": "fuzzy"
+      },
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.211,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.298
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "MÁY LỖI PHẦN CƠ",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 1.0,
+        "method": "substring"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [
+      "MÁY LỖI PHẦN CƠ"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "phrase": "VALUE_THAT_SHOULD_NOT_EXIST",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.298,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KHÔNG HÚT GIẤY",
+        "score": 0.293,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.286,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ ĐƯỜNG HÀN ĐÁY",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.273,
+        "method": "fuzzy"
+      },
+      {
+        "value": "LỖI MÁY KIỂM TRA",
+        "score": 0.233,
+        "method": "fuzzy"
+      },
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.211,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.298
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "MÁY LỖI PHẦN CƠ",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 1.0,
+        "method": "substring"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [
+      "MÁY LỖI PHẦN CƠ"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "phrase": "VALUE_THAT_SHOULD_NOT_EXIST",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.298,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KHÔNG HÚT GIẤY",
+        "score": 0.293,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.286,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ ĐƯỜNG HÀN ĐÁY",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.273,
+        "method": "fuzzy"
+      },
+      {
+        "value": "LỖI MÁY KIỂM TRA",
+        "score": 0.233,
+        "method": "fuzzy"
+      },
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.211,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.298
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "MÁY LỖI PHẦN CƠ",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 1.0,
+        "method": "substring"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [
+      "MÁY LỖI PHẦN CƠ"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "phrase": "VALUE_THAT_SHOULD_NOT_EXIST",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.298,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KHÔNG HÚT GIẤY",
+        "score": 0.293,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.286,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ ĐƯỜNG HÀN ĐÁY",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.273,
+        "method": "fuzzy"
+      },
+      {
+        "value": "LỖI MÁY KIỂM TRA",
+        "score": 0.233,
+        "method": "fuzzy"
+      },
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.211,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.298
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "MÁY LỖI PHẦN CƠ",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 1.0,
+        "method": "substring"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [
+      "MÁY LỖI PHẦN CƠ"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "phrase": "VALUE_THAT_SHOULD_NOT_EXIST",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.298,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KHÔNG HÚT GIẤY",
+        "score": 0.293,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.286,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ ĐƯỜNG HÀN ĐÁY",
+        "score": 0.279,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.273,
+        "method": "fuzzy"
+      },
+      {
+        "value": "LỖI MÁY KIỂM TRA",
+        "score": 0.233,
+        "method": "fuzzy"
+      },
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.211,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.298
+  }
+]

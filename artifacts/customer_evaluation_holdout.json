@@ -1,0 +1,2247 @@
+[
+  {
+    "id": "CUST-008",
+    "set": "holdout",
+    "category": "data_overview",
+    "question": "data overview của hệ thống",
+    "expected_intent": "DATA_OVERVIEW",
+    "actual_intent": "DATA_OVERVIEW",
+    "execution_mode": "DATA_OVERVIEW",
+    "router_confidence": 0.98,
+    "response_type": "data_overview",
+    "title": "Tổng quan dữ liệu",
+    "summary": "Hệ thống hiện có các bộ dữ liệu sau:\n- Ra vào cổng: 1.294 bản ghi\n- Phân loại tổn thất: 36.309 bản ghi\n- Downtime máy: 9.151 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Return catalog overview, no analytical SQL.",
+    "actual": "Tổng quan dữ liệu | Hệ thống hiện có các bộ dữ liệu sau:\n- Ra vào cổng: 1.294 bản ghi\n- Phân loại tổn thất: 36.309 bản ghi\n- Downtime máy: 9.151 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu. | table_rows=3",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 236.3,
+    "notes": "Metadata intent must avoid analytical SQL."
+  },
+  {
+    "id": "CUST-009",
+    "set": "holdout",
+    "category": "data_overview",
+    "question": "data?",
+    "expected_intent": "DATA_OVERVIEW",
+    "actual_intent": "DATA_OVERVIEW",
+    "execution_mode": "DATA_OVERVIEW",
+    "router_confidence": 0.98,
+    "response_type": "data_overview",
+    "title": "Tổng quan dữ liệu",
+    "summary": "Hệ thống hiện có các bộ dữ liệu sau:\n- Ra vào cổng: 1.294 bản ghi\n- Phân loại tổn thất: 36.309 bản ghi\n- Downtime máy: 9.151 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Return catalog overview, no analytical SQL.",
+    "actual": "Tổng quan dữ liệu | Hệ thống hiện có các bộ dữ liệu sau:\n- Ra vào cổng: 1.294 bản ghi\n- Phân loại tổn thất: 36.309 bản ghi\n- Downtime máy: 9.151 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu. | table_rows=3",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 262.0,
+    "notes": "Metadata intent must avoid analytical SQL."
+  },
+  {
+    "id": "CUST-010",
+    "set": "holdout",
+    "category": "data_overview",
+    "question": "có gì?",
+    "expected_intent": "DATA_OVERVIEW",
+    "actual_intent": "DATA_OVERVIEW",
+    "execution_mode": "DATA_OVERVIEW",
+    "router_confidence": 0.98,
+    "response_type": "data_overview",
+    "title": "Tổng quan dữ liệu",
+    "summary": "Hệ thống hiện có các bộ dữ liệu sau:\n- Ra vào cổng: 1.294 bản ghi\n- Phân loại tổn thất: 36.309 bản ghi\n- Downtime máy: 9.151 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Return catalog overview, no analytical SQL.",
+    "actual": "Tổng quan dữ liệu | Hệ thống hiện có các bộ dữ liệu sau:\n- Ra vào cổng: 1.294 bản ghi\n- Phân loại tổn thất: 36.309 bản ghi\n- Downtime máy: 9.151 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu. | table_rows=3",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 374.7,
+    "notes": "Metadata intent must avoid analytical SQL."
+  },
+  {
+    "id": "CUST-018",
+    "set": "holdout",
+    "category": "schema_metadata",
+    "question": "có quan hệ nào giữa các bảng",
+    "expected_intent": "SCHEMA_INSPECTION",
+    "actual_intent": "CLARIFICATION",
+    "execution_mode": "CLARIFICATION",
+    "router_confidence": 0.35,
+    "response_type": "clarification",
+    "title": "Cần làm rõ",
+    "summary": "Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "clarification",
+      "tables": [],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": "Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?"
+    },
+    "generated_sql": null,
+    "expected": "Return schema/catalog metadata, no analytical SQL.",
+    "actual": "Cần làm rõ | Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?",
+    "passed": false,
+    "manual_review": false,
+    "failure_type": "METADATA_SQL_OR_WRONG_INTENT",
+    "llm_called": false,
+    "latency_ms": 338.9,
+    "notes": "Metadata intent must avoid analytical SQL."
+  },
+  {
+    "id": "CUST-019",
+    "set": "holdout",
+    "category": "schema_metadata",
+    "question": "columns của downtime là gì",
+    "expected_intent": "SCHEMA_INSPECTION",
+    "actual_intent": "SCHEMA_INSPECTION",
+    "execution_mode": "SCHEMA_INSPECTION",
+    "router_confidence": 0.96,
+    "response_type": "schema",
+    "title": "Schema dữ liệu",
+    "summary": "Tìm thấy 9 cột có thể dùng để phân tích.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Return schema/catalog metadata, no analytical SQL.",
+    "actual": "Schema dữ liệu | Tìm thấy 9 cột có thể dùng để phân tích. | table_rows=9",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 210.6,
+    "notes": "Metadata intent must avoid analytical SQL."
+  },
+  {
+    "id": "CUST-020",
+    "set": "holdout",
+    "category": "schema_metadata",
+    "question": "schema loss assignment",
+    "expected_intent": "SCHEMA_INSPECTION",
+    "actual_intent": "SCHEMA_INSPECTION",
+    "execution_mode": "SCHEMA_INSPECTION",
+    "router_confidence": 0.96,
+    "response_type": "schema",
+    "title": "Schema dữ liệu",
+    "summary": "Tìm thấy 9 cột có thể dùng để phân tích.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Return schema/catalog metadata, no analytical SQL.",
+    "actual": "Schema dữ liệu | Tìm thấy 9 cột có thể dùng để phân tích. | table_rows=9",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 268.5,
+    "notes": "Metadata intent must avoid analytical SQL."
+  },
+  {
+    "id": "CUST-025",
+    "set": "holdout",
+    "category": "sample_data",
+    "question": "preview entry transaction",
+    "expected_intent": "SAMPLE_ROWS",
+    "actual_intent": "SAMPLE_ROWS",
+    "execution_mode": "SAMPLE_ROWS",
+    "router_confidence": 0.95,
+    "response_type": "sample_table",
+    "title": "5 dòng mẫu - Ra vào cổng",
+    "summary": "Hiển thị 5 bản ghi mẫu.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Return limited sample rows.",
+    "actual": "5 dòng mẫu - Ra vào cổng | Hiển thị 5 bản ghi mẫu. | table_rows=5",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 281.5,
+    "notes": "Metadata intent must avoid analytical SQL."
+  },
+  {
+    "id": "CUST-026",
+    "set": "holdout",
+    "category": "sample_data",
+    "question": "xem thử dữ liệu ra vào cổng",
+    "expected_intent": "SAMPLE_ROWS",
+    "actual_intent": "SAMPLE_ROWS",
+    "execution_mode": "SAMPLE_ROWS",
+    "router_confidence": 0.95,
+    "response_type": "sample_table",
+    "title": "5 dòng mẫu - Ra vào cổng",
+    "summary": "Hiển thị 5 bản ghi mẫu.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Return limited sample rows.",
+    "actual": "5 dòng mẫu - Ra vào cổng | Hiển thị 5 bản ghi mẫu. | table_rows=5",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 214.5,
+    "notes": "Metadata intent must avoid analytical SQL."
+  },
+  {
+    "id": "CUST-032",
+    "set": "holdout",
+    "category": "data_quality",
+    "question": "data quality của downtime",
+    "expected_intent": "DATA_QUALITY",
+    "actual_intent": "DATA_QUALITY",
+    "execution_mode": "DATA_QUALITY",
+    "router_confidence": 0.93,
+    "response_type": "data_quality",
+    "title": "Chất lượng dữ liệu",
+    "summary": "Tóm tắt nhanh null và dòng trùng theo từng bộ dữ liệu.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Return quality summary.",
+    "actual": "Chất lượng dữ liệu | Tóm tắt nhanh null và dòng trùng theo từng bộ dữ liệu. | table_rows=1",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 251.2,
+    "notes": "Metadata intent must avoid analytical SQL."
+  },
+  {
+    "id": "CUST-033",
+    "set": "holdout",
+    "category": "data_quality",
+    "question": "bảng nào có nhiều null nhất",
+    "expected_intent": "DATA_QUALITY",
+    "actual_intent": "DATA_QUALITY",
+    "execution_mode": "DATA_QUALITY",
+    "router_confidence": 0.93,
+    "response_type": "data_quality",
+    "title": "Chất lượng dữ liệu",
+    "summary": "Tóm tắt nhanh null và dòng trùng theo từng bộ dữ liệu.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Return quality summary.",
+    "actual": "Chất lượng dữ liệu | Tóm tắt nhanh null và dòng trùng theo từng bộ dữ liệu. | table_rows=3",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 329.6,
+    "notes": "Metadata intent must avoid analytical SQL."
+  },
+  {
+    "id": "CUST-043",
+    "set": "holdout",
+    "category": "aggregation",
+    "question": "Tổng giá trị cân là bao nhiêu?",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "SAFE_FAILURE",
+    "execution_mode": null,
+    "router_confidence": null,
+    "response_type": "error",
+    "title": "Không thể hoàn tất",
+    "summary": "1 validation error for MetricSpec\n  Value error, column is required for this aggregation [type=value_error, input_value={'aggregation': 'sum', 'c...total_duration_seconds'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Return validated aggregate result.",
+    "actual": "Không thể hoàn tất | 1 validation error for MetricSpec\n  Value error, column is required for this aggregation [type=value_error, input_value={'aggregation': 'sum', 'c...total_duration_seconds'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error",
+    "passed": false,
+    "manual_review": false,
+    "failure_type": "ANALYTICAL_FAILURE",
+    "llm_called": false,
+    "latency_ms": 230.1,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-044",
+    "set": "holdout",
+    "category": "aggregation",
+    "question": "Số cổng khác nhau là bao nhiêu?",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "CLARIFICATION",
+    "execution_mode": "CLARIFICATION",
+    "router_confidence": 0.35,
+    "response_type": "clarification",
+    "title": "Cần làm rõ",
+    "summary": "Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "clarification",
+      "tables": [],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": "Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?"
+    },
+    "generated_sql": null,
+    "expected": "Return validated aggregate result.",
+    "actual": "Cần làm rõ | Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?",
+    "passed": false,
+    "manual_review": false,
+    "failure_type": "ANALYTICAL_FAILURE",
+    "llm_called": false,
+    "latency_ms": 294.5,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-045",
+    "set": "holdout",
+    "category": "aggregation",
+    "question": "Thời gian dừng tổng cộng?",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.9,
+    "response_type": "scalar",
+    "title": "Tổng thời gian downtime",
+    "summary": "Tương đương 82 ngày 21 giờ 33 phút 25 giây.",
+    "primary_value": "1.989,56 giờ",
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Return validated aggregate result.",
+    "actual": "Tổng thời gian downtime | 1.989,56 giờ | Tương đương 82 ngày 21 giờ 33 phút 25 giây.",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 444.1,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-055",
+    "set": "holdout",
+    "category": "group_ranking",
+    "question": "Top máy theo từng tháng",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.98,
+    "response_type": "table",
+    "title": "Phân tích theo thời gian bắt đầu",
+    "summary": "2025-11-01 00:00:00 có tổng thời gian downtime cao nhất: 150,58 giờ.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "thoi_gian_bat_dau",
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": {
+        "partition_by": [
+          "thoi_gian_bat_dau"
+        ],
+        "order_by": "total_duration_seconds",
+        "direction": "desc",
+        "rank_type": "row_number",
+        "top_n": null
+      },
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": "month",
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 500,
+      "output": "table",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "generated_sql": "WITH base AS (SELECT date_trunc('month', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") AS \"thoi_gian_bat_dau\", \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY date_trunc('month', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\"), \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\"), filtered AS (SELECT \"thoi_gian_bat_dau\", \"may\", \"total_duration_seconds\" FROM base), ranked AS (SELECT *, ROW_NUMBER() OVER (PARTITION BY \"thoi_gian_bat_dau\" ORDER BY \"total_duration_seconds\" DESC) AS \"_rank\" FROM filtered) SELECT * FROM ranked ORDER BY \"thoi_gian_bat_dau\" ASC, \"_rank\" ASC",
+    "expected": "Return grouped/ranked result.",
+    "actual": "Phân tích theo thời gian bắt đầu | 2025-11-01 00:00:00 có tổng thời gian downtime cao nhất: 150,58 giờ. | table_rows=30",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 404.8,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-056",
+    "set": "holdout",
+    "category": "group_ranking",
+    "question": "Top 3 nhóm tổn thất theo downtime",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.97,
+    "response_type": "table",
+    "title": "Phân tích theo nhóm tổn thất",
+    "summary": "Bảo trì có tổng thời gian downtime cao nhất: 1.989,56 giờ.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "nhom_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 3,
+      "output": "table",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" AS \"nhom_ton_that\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" ORDER BY \"total_duration_seconds\" DESC LIMIT 3",
+    "expected": "Return grouped/ranked result.",
+    "actual": "Phân tích theo nhóm tổn thất | Bảo trì có tổng thời gian downtime cao nhất: 1.989,56 giờ. | table_rows=1",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 480.1,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-057",
+    "set": "holdout",
+    "category": "group_ranking",
+    "question": "Máy nào dừng nhiều lần nhất",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.93,
+    "response_type": "scalar",
+    "title": "Tổng thời gian downtime",
+    "summary": "Tương đương 82 ngày 21 giờ 33 phút 25 giây.",
+    "primary_value": "1.989,56 giờ",
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "table",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Return grouped/ranked result.",
+    "actual": "Tổng thời gian downtime | 1.989,56 giờ | Tương đương 82 ngày 21 giờ 33 phút 25 giây.",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 494.5,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-067",
+    "set": "holdout",
+    "category": "time_reasoning",
+    "question": "Hai tháng gần nhất có downtime thế nào",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.93,
+    "response_type": "scalar",
+    "title": "Tổng thời gian downtime",
+    "summary": "Tương đương 20 giờ 19 phút 51 giây.",
+    "primary_value": "20 giờ 19 phút",
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "operator": "date_between",
+          "value": [
+            "2026-02-01",
+            "2026-03-01"
+          ]
+        }
+      ],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "table",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\" BETWEEN ? AND ? ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Handle time filters/granularity or return data range.",
+    "actual": "Tổng thời gian downtime | 20 giờ 19 phút | Tương đương 20 giờ 19 phút 51 giây.",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 481.0,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-068",
+    "set": "holdout",
+    "category": "time_reasoning",
+    "question": "So sánh downtime giữa các tháng",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 1.0,
+    "response_type": "table",
+    "title": "Phân tích theo thời gian bắt đầu",
+    "summary": "2025-11-01 00:00:00 có tổng thời gian downtime cao nhất: 709,02 giờ.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "thoi_gian_bat_dau"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": "month",
+      "sort": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "field": "thoi_gian_bat_dau",
+          "direction": "asc"
+        },
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "table",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT date_trunc('month', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") AS \"thoi_gian_bat_dau\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY date_trunc('month', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") ORDER BY \"thoi_gian_bat_dau\" ASC, \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Handle time filters/granularity or return data range.",
+    "actual": "Phân tích theo thời gian bắt đầu | 2025-11-01 00:00:00 có tổng thời gian downtime cao nhất: 709,02 giờ. | table_rows=4",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 422.1,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-069",
+    "set": "holdout",
+    "category": "time_reasoning",
+    "question": "Downtime tháng 1/2026",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.93,
+    "response_type": "scalar",
+    "title": "Tổng thời gian downtime",
+    "summary": "Tương đương 17 ngày 1 giờ 37 phút 36 giây.",
+    "primary_value": "409,63 giờ",
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "operator": "date_between",
+          "value": [
+            "2026-01-01",
+            "2026-02-01"
+          ]
+        }
+      ],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "table",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\" BETWEEN ? AND ? ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Handle time filters/granularity or return data range.",
+    "actual": "Tổng thời gian downtime | 409,63 giờ | Tương đương 17 ngày 1 giờ 37 phút 36 giây.",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 404.6,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-077",
+    "set": "holdout",
+    "category": "multiple_filters",
+    "question": "Các lần dừng trên 2 giờ",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.96,
+    "response_type": "scalar",
+    "title": "Số lần ghi nhận",
+    "summary": "",
+    "primary_value": "95",
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "thoi_luong_seconds",
+          "operator": "greater_than",
+          "value": 7200.0
+        }
+      ],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "table",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\" > ? ORDER BY \"row_count\" DESC LIMIT 20",
+    "expected": "Apply multiple filters safely.",
+    "actual": "Số lần ghi nhận | 95",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 384.2,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-078",
+    "set": "holdout",
+    "category": "multiple_filters",
+    "question": "Chỉ lấy nhóm Sản xuất",
+    "expected_intent": "CLARIFICATION",
+    "actual_intent": "CLARIFICATION",
+    "execution_mode": "CLARIFICATION",
+    "router_confidence": 0.35,
+    "response_type": "clarification",
+    "title": "Cần làm rõ",
+    "summary": "Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "clarification",
+      "tables": [],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": "Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?"
+    },
+    "generated_sql": null,
+    "expected": "Ask for the previous result or base analysis to filter.",
+    "actual": "Cần làm rõ | Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 264.6,
+    "notes": "Clarification/refusal should not run SQL."
+  },
+  {
+    "id": "CUST-079",
+    "set": "holdout",
+    "category": "multiple_filters",
+    "question": "Loại trừ nhóm Bảo trì và lấy top máy",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.98,
+    "response_type": "table",
+    "title": "Phân tích theo máy",
+    "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "nhom_ton_that",
+          "operator": "equals",
+          "value": "Bảo trì"
+        }
+      ],
+      "dimensions": [
+        "may",
+        "nhom_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "table",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" AS \"nhom_ton_that\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" = ? GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\", \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Apply multiple filters safely.",
+    "actual": "Phân tích theo máy | Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. | table_rows=9",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 406.6,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-087",
+    "set": "holdout",
+    "category": "semantic_matching",
+    "question": "chờ vật tư downtime bao lâu",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.93,
+    "response_type": "scalar",
+    "title": "Tổng thời gian downtime",
+    "summary": "Tương đương 2 ngày 13 giờ 56 phút 43 giây.",
+    "primary_value": "61,95 giờ",
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "loss_assignment_20260203_100840_report_2a7588"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "ten_ton_that",
+          "operator": "contains",
+          "value": "CHỜ"
+        }
+      ],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "table",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT sum(\"loss_assignment_20260203_100840_report_2a7588\".\"thoi_luong_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"loss_assignment_20260203_100840_report_2a7588\" WHERE lower(CAST(\"loss_assignment_20260203_100840_report_2a7588\".\"ten_ton_that\" AS VARCHAR)) LIKE lower(?) ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Resolve semantic values from real data.",
+    "actual": "Tổng thời gian downtime | 61,95 giờ | Tương đương 2 ngày 13 giờ 56 phút 43 giây.",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 367.3,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-088",
+    "set": "holdout",
+    "category": "semantic_matching",
+    "question": "bảo trì gồm các nguyên nhân nào",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.98,
+    "response_type": "table",
+    "title": "Phân tích theo nguyên nhân tổn thất",
+    "summary": "GẤP ĐƯỜNG HÀN BIÊN có nguyên nhân tổn thất cao nhất: GẤP ĐƯỜNG HÀN BIÊN.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "nhom_ton_that",
+          "operator": "equals",
+          "value": "Bảo trì"
+        }
+      ],
+      "dimensions": [
+        "ten_ton_that"
+      ],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "ten_ton_that",
+          "field": "ten_ton_that",
+          "direction": "asc"
+        }
+      ],
+      "limit": 20,
+      "output": "table",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" AS \"ten_ton_that\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" = ? GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" ORDER BY \"ten_ton_that\" ASC LIMIT 20",
+    "expected": "Resolve semantic values from real data.",
+    "actual": "Phân tích theo nguyên nhân tổn thất | GẤP ĐƯỜNG HÀN BIÊN có nguyên nhân tổn thất cao nhất: GẤP ĐƯỜNG HÀN BIÊN. | table_rows=13",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 379.5,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-089",
+    "set": "holdout",
+    "category": "semantic_matching",
+    "question": "nhóm sản xuất có lỗi nào",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "CLARIFICATION",
+    "execution_mode": "CLARIFICATION",
+    "router_confidence": 0.35,
+    "response_type": "clarification",
+    "title": "Cần làm rõ",
+    "summary": "Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "clarification",
+      "tables": [],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": "Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?"
+    },
+    "generated_sql": null,
+    "expected": "Resolve semantic values from real data.",
+    "actual": "Cần làm rõ | Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?",
+    "passed": false,
+    "manual_review": false,
+    "failure_type": "ANALYTICAL_FAILURE",
+    "llm_called": false,
+    "latency_ms": 331.0,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-097",
+    "set": "holdout",
+    "category": "long_combined",
+    "question": "Với loss assignment, lấy top nhóm theo số lần, tính tỷ lệ phần trăm và vẽ pie chart.",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "CHART_REQUEST",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 1.0,
+    "response_type": "chart",
+    "title": "Biểu đồ phân tích",
+    "summary": "Bảo trì có số lần ghi nhận cao nhất: 9.151.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "chart",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "nhom_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": true
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "row_count",
+          "field": "row_count",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "pie",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "generated_sql": "WITH base AS (SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" AS \"nhom_ton_that\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\") SELECT \"nhom_ton_that\", \"row_count\", CASE WHEN SUM(\"row_count\") OVER () = 0 THEN NULL ELSE (\"row_count\" * 100.0 / NULLIF(SUM(\"row_count\") OVER (), 0)) END AS \"percentage\" FROM base ORDER BY \"row_count\" DESC LIMIT 20",
+    "expected": "Handle combined operations or clarify when too complex.",
+    "actual": "Biểu đồ phân tích | Bảo trì có số lần ghi nhận cao nhất: 9.151. | table_rows=1 | chart=pie",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 923.1,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-098",
+    "set": "holdout",
+    "category": "long_combined",
+    "question": "Tìm các máy có downtime trên mức trung bình theo máy và xuất kết quả.",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "REPORT_REQUEST",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 1.0,
+    "response_type": "report",
+    "title": "Báo cáo phân tích",
+    "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "report",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "report",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Handle combined operations or clarify when too complex.",
+    "actual": "Báo cáo phân tích | Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. | table_rows=9 | downloads=report_20260621_120330.html,result_20260621_120330.xlsx",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 477.0,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-099",
+    "set": "holdout",
+    "category": "long_combined",
+    "question": "Trong hai tháng gần nhất, máy nào có tổng downtime cao nhất và nguyên nhân đứng đầu là gì?",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "CLARIFICATION",
+    "execution_mode": "CLARIFICATION",
+    "router_confidence": 0.94,
+    "response_type": "clarification",
+    "title": "Cần làm rõ",
+    "summary": "Mình chưa có thực thể trước đó để tham chiếu. Bạn muốn chọn máy, nhóm hoặc nguyên nhân nào?",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "clarification",
+      "tables": [],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": "Mình chưa có thực thể trước đó để tham chiếu. Bạn muốn chọn máy, nhóm hoặc nguyên nhân nào?"
+    },
+    "generated_sql": null,
+    "expected": "Handle combined operations or clarify when too complex.",
+    "actual": "Cần làm rõ | Mình chưa có thực thể trước đó để tham chiếu. Bạn muốn chọn máy, nhóm hoặc nguyên nhân nào?",
+    "passed": false,
+    "manual_review": false,
+    "failure_type": "ANALYTICAL_FAILURE",
+    "llm_called": false,
+    "latency_ms": 224.4,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-107",
+    "set": "holdout",
+    "category": "artifact_visual",
+    "question": "show top 5 máy theo total downtime",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.97,
+    "response_type": "table",
+    "title": "Phân tích theo máy",
+    "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 5,
+      "output": "table",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
+    "expected": "Return a ranked analytical result.",
+    "actual": "Phân tích theo máy | Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. | table_rows=5",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 408.6,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-108",
+    "set": "holdout",
+    "category": "artifact_visual",
+    "question": "export report ra Excel",
+    "expected_intent": "REPORT_REQUEST",
+    "actual_intent": "REPORT_REQUEST",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.94,
+    "response_type": "report",
+    "title": "Báo cáo phân tích",
+    "summary": "7162405.0 có tổng thời gian downtime cao nhất: 1.989,56 giờ.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "report",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "report",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Return chart/dashboard/report/export payload.",
+    "actual": "Báo cáo phân tích | 7162405.0 có tổng thời gian downtime cao nhất: 1.989,56 giờ. | table_rows=1 | downloads=report_20260621_120331.html,result_20260621_120331.xlsx",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 474.1,
+    "notes": "Artifact request should produce the requested view or a compatible artifact."
+  },
+  {
+    "id": "CUST-109",
+    "set": "holdout",
+    "category": "artifact_visual",
+    "question": "dashboard dữ liệu downtime",
+    "expected_intent": "DASHBOARD_REQUEST",
+    "actual_intent": "DASHBOARD_REQUEST",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.94,
+    "response_type": "dashboard",
+    "title": "Dashboard tổng quan",
+    "summary": "7162405.0 có tổng thời gian downtime cao nhất: 1.989,56 giờ.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "dashboard",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "dashboard",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Return chart/dashboard/report/export payload.",
+    "actual": "Dashboard tổng quan | 7162405.0 có tổng thời gian downtime cao nhất: 1.989,56 giờ. | table_rows=1",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 416.1,
+    "notes": "Artifact request should produce the requested view or a compatible artifact."
+  },
+  {
+    "id": "CUST-127",
+    "set": "holdout",
+    "category": "multi_turn",
+    "question": "Xuất báo cáo HTML.",
+    "expected_intent": "CONVERSATION_FOLLOWUP",
+    "actual_intent": "REPORT_REQUEST",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.88,
+    "response_type": "report",
+    "title": "Báo cáo phân tích",
+    "summary": "7162405.0 có tổng thời gian downtime cao nhất: 1.989,56 giờ.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "report",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "report",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Maintain conversation state or clarify safely.",
+    "actual": "Báo cáo phân tích | 7162405.0 có tổng thời gian downtime cao nhất: 1.989,56 giờ. | table_rows=1 | downloads=report_20260621_120334.html,result_20260621_120334.xlsx",
+    "passed": true,
+    "manual_review": true,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 421.7,
+    "notes": "Stateful behavior requires human review."
+  },
+  {
+    "id": "CUST-128",
+    "set": "holdout",
+    "category": "multi_turn",
+    "question": "Có bao nhiêu máy khác nhau?",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.99,
+    "response_type": "scalar",
+    "title": "Machine count",
+    "summary": "",
+    "primary_value": "9",
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "machine_count",
+          "alias": "machine_count",
+          "aggregation": "count_distinct",
+          "column": "may",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT count(DISTINCT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\") AS \"machine_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"machine_count\" DESC LIMIT 20",
+    "expected": "Maintain conversation state or clarify safely.",
+    "actual": "Machine count | 9",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 655.2,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-129",
+    "set": "holdout",
+    "category": "multi_turn",
+    "question": "Top 3 máy trong số đó theo downtime.",
+    "expected_intent": "CONVERSATION_FOLLOWUP",
+    "actual_intent": "SAFE_FAILURE",
+    "execution_mode": "SAFE_FAILURE",
+    "router_confidence": 0.86,
+    "response_type": "error",
+    "title": "Không thể truy vấn an toàn",
+    "summary": "Không thể tạo truy vấn an toàn cho câu hỏi này. Vui lòng hỏi cụ thể hơn.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "safe_failure",
+      "tables": [],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": "Không thể tạo truy vấn an toàn cho câu hỏi này. Vui lòng hỏi cụ thể hơn."
+    },
+    "generated_sql": null,
+    "expected": "Maintain conversation state or clarify safely.",
+    "actual": "Không thể truy vấn an toàn | Không thể tạo truy vấn an toàn cho câu hỏi này. Vui lòng hỏi cụ thể hơn.",
+    "passed": false,
+    "manual_review": true,
+    "failure_type": "MULTITURN_FAILURE",
+    "llm_called": false,
+    "latency_ms": 228.0,
+    "notes": "Stateful behavior requires human review."
+  },
+  {
+    "id": "CUST-130",
+    "set": "holdout",
+    "category": "multi_turn",
+    "question": "Lọc tháng đầu tiên.",
+    "expected_intent": "CONVERSATION_FOLLOWUP",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.95,
+    "response_type": "scalar",
+    "title": "Machine count",
+    "summary": "",
+    "primary_value": "9",
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "operator": "date_between",
+          "value": [
+            "2025-11-01",
+            "2025-12-01"
+          ]
+        }
+      ],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "machine_count",
+          "alias": "machine_count",
+          "aggregation": "count_distinct",
+          "column": "may",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT count(DISTINCT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\") AS \"machine_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\" BETWEEN ? AND ? ORDER BY \"machine_count\" DESC LIMIT 20",
+    "expected": "Maintain conversation state or clarify safely.",
+    "actual": "Machine count | 9",
+    "passed": true,
+    "manual_review": true,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 341.6,
+    "notes": "Stateful behavior requires human review."
+  },
+  {
+    "id": "CUST-131",
+    "set": "holdout",
+    "category": "multi_turn",
+    "question": "Các nguyên nhân liên quan bảo trì.",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.98,
+    "response_type": "table",
+    "title": "Phân tích theo nguyên nhân tổn thất",
+    "summary": "GẤP ĐƯỜNG HÀN BIÊN có nguyên nhân tổn thất cao nhất: GẤP ĐƯỜNG HÀN BIÊN.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [
+        {
+          "column": "nhom_ton_that",
+          "operator": "equals",
+          "value": "Bảo trì"
+        }
+      ],
+      "dimensions": [
+        "ten_ton_that"
+      ],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "ten_ton_that",
+          "field": "ten_ton_that",
+          "direction": "asc"
+        }
+      ],
+      "limit": 20,
+      "output": "table",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" AS \"ten_ton_that\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" WHERE \"machine_downtime_20260203_100753_report_3c3f6d\".\"nhom_ton_that\" = ? GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" ORDER BY \"ten_ton_that\" ASC LIMIT 20",
+    "expected": "Maintain conversation state or clarify safely.",
+    "actual": "Phân tích theo nguyên nhân tổn thất | GẤP ĐƯỜNG HÀN BIÊN có nguyên nhân tổn thất cao nhất: GẤP ĐƯỜNG HÀN BIÊN. | table_rows=13",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 401.6,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-132",
+    "set": "holdout",
+    "category": "multi_turn",
+    "question": "Đếm số lần từng nguyên nhân.",
+    "expected_intent": "CONVERSATION_FOLLOWUP",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.96,
+    "response_type": "table",
+    "title": "Phân tích theo nguyên nhân tổn thất",
+    "summary": "MÁY LỖI PHẦN CƠ có số lần ghi nhận cao nhất: 3.688.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "ten_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "row_count",
+          "field": "row_count",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" AS \"ten_ton_that\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" ORDER BY \"row_count\" DESC LIMIT 20",
+    "expected": "Maintain conversation state or clarify safely.",
+    "actual": "Phân tích theo nguyên nhân tổn thất | MÁY LỖI PHẦN CƠ có số lần ghi nhận cao nhất: 3.688. | table_rows=13",
+    "passed": true,
+    "manual_review": true,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 517.1,
+    "notes": "Stateful behavior requires human review."
+  },
+  {
+    "id": "CUST-133",
+    "set": "holdout",
+    "category": "multi_turn",
+    "question": "Vẽ biểu đồ cột.",
+    "expected_intent": "CONVERSATION_FOLLOWUP",
+    "actual_intent": "CHART_REQUEST",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.88,
+    "response_type": "chart",
+    "title": "Biểu đồ phân tích",
+    "summary": "MÁY LỖI PHẦN CƠ có số lần ghi nhận cao nhất: 3.688.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "chart",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "ten_ton_that"
+      ],
+      "metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "row_count",
+          "field": "row_count",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "bar",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" AS \"ten_ton_that\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"ten_ton_that\" ORDER BY \"row_count\" DESC LIMIT 20",
+    "expected": "Maintain conversation state or clarify safely.",
+    "actual": "Biểu đồ phân tích | MÁY LỖI PHẦN CƠ có số lần ghi nhận cao nhất: 3.688. | table_rows=13 | chart=bar",
+    "passed": true,
+    "manual_review": true,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 404.2,
+    "notes": "Stateful behavior requires human review."
+  },
+  {
+    "id": "CUST-138",
+    "set": "holdout",
+    "category": "short_questions",
+    "question": "data?",
+    "expected_intent": "DATA_OVERVIEW",
+    "actual_intent": "DATA_OVERVIEW",
+    "execution_mode": "DATA_OVERVIEW",
+    "router_confidence": 0.98,
+    "response_type": "data_overview",
+    "title": "Tổng quan dữ liệu",
+    "summary": "Hệ thống hiện có các bộ dữ liệu sau:\n- Ra vào cổng: 1.294 bản ghi\n- Phân loại tổn thất: 36.309 bản ghi\n- Downtime máy: 9.151 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Return catalog overview, no analytical SQL.",
+    "actual": "Tổng quan dữ liệu | Hệ thống hiện có các bộ dữ liệu sau:\n- Ra vào cổng: 1.294 bản ghi\n- Phân loại tổn thất: 36.309 bản ghi\n- Downtime máy: 9.151 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu. | table_rows=3",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 263.9,
+    "notes": "Metadata intent must avoid analytical SQL."
+  },
+  {
+    "id": "CUST-143",
+    "set": "holdout",
+    "category": "long_natural",
+    "question": "Tôi cần một vài dòng mẫu để kiểm tra định dạng dữ liệu trước.",
+    "expected_intent": "SAMPLE_ROWS",
+    "actual_intent": "SAMPLE_ROWS",
+    "execution_mode": "SAMPLE_ROWS",
+    "router_confidence": 0.95,
+    "response_type": "clarification",
+    "title": "Cần làm rõ",
+    "summary": "Bạn muốn xem dữ liệu mẫu của bảng nào?",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Return limited sample rows.",
+    "actual": "Cần làm rõ | Bạn muốn xem dữ liệu mẫu của bảng nào?",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 240.5,
+    "notes": "Metadata intent must avoid analytical SQL."
+  },
+  {
+    "id": "CUST-144",
+    "set": "holdout",
+    "category": "long_natural",
+    "question": "Trước khi tính toán, hãy kiểm tra dữ liệu có thiếu hay trùng bản ghi không.",
+    "expected_intent": "DATA_QUALITY",
+    "actual_intent": "DATA_QUALITY",
+    "execution_mode": "DATA_QUALITY",
+    "router_confidence": 0.93,
+    "response_type": "data_quality",
+    "title": "Chất lượng dữ liệu",
+    "summary": "Tóm tắt nhanh null và dòng trùng theo từng bộ dữ liệu.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Return quality summary.",
+    "actual": "Chất lượng dữ liệu | Tóm tắt nhanh null và dòng trùng theo từng bộ dữ liệu. | table_rows=3",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 357.8,
+    "notes": "Metadata intent must avoid analytical SQL."
+  },
+  {
+    "id": "CUST-152",
+    "set": "holdout",
+    "category": "typo_no_accent",
+    "question": "bao cao downtime",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "REPORT_REQUEST",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.94,
+    "response_type": "report",
+    "title": "Báo cáo phân tích",
+    "summary": "7162405.0 có tổng thời gian downtime cao nhất: 1.989,56 giờ.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "report",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "report",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Handle no-accent/typo or route to metadata.",
+    "actual": "Báo cáo phân tích | 7162405.0 có tổng thời gian downtime cao nhất: 1.989,56 giờ. | table_rows=1 | downloads=report_20260621_120339.html,result_20260621_120339.xlsx",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 469.8,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-153",
+    "set": "holdout",
+    "category": "typo_no_accent",
+    "question": "ve bieu do theo ngay",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "CHART_REQUEST",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.98,
+    "response_type": "chart",
+    "title": "Biểu đồ phân tích",
+    "summary": "2025-11-03 00:00:00 có tổng thời gian downtime cao nhất: 12 giờ 43 phút.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "chart",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "thoi_gian_bat_dau"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": "day",
+      "sort": [
+        {
+          "column": "thoi_gian_bat_dau",
+          "field": "thoi_gian_bat_dau",
+          "direction": "asc"
+        },
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "line",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT date_trunc('day', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") AS \"thoi_gian_bat_dau\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY date_trunc('day', \"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_gian_bat_dau\") ORDER BY \"thoi_gian_bat_dau\" ASC, \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Handle no-accent/typo or route to metadata.",
+    "actual": "Biểu đồ phân tích | 2025-11-03 00:00:00 có tổng thời gian downtime cao nhất: 12 giờ 43 phút. | table_rows=20 | chart=line",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 507.2,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-158",
+    "set": "holdout",
+    "category": "mixed_language",
+    "question": "export Excel top machines",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "REPORT_REQUEST",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 1.0,
+    "response_type": "report",
+    "title": "Báo cáo phân tích",
+    "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "report",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [
+        "may"
+      ],
+      "metrics": [
+        {
+          "name": "total_duration_seconds",
+          "alias": "total_duration_seconds",
+          "aggregation": "sum",
+          "column": "thoi_luong_seconds",
+          "percentage_of_total": false
+        },
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [
+        {
+          "column": "total_duration_seconds",
+          "field": "total_duration_seconds",
+          "direction": "desc"
+        }
+      ],
+      "limit": 20,
+      "output": "report",
+      "query_complexity": "complex",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" AS \"may\", sum(\"machine_downtime_20260203_100753_report_3c3f6d\".\"thoi_luong_seconds\") AS \"total_duration_seconds\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" GROUP BY \"machine_downtime_20260203_100753_report_3c3f6d\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 20",
+    "expected": "Handle mixed Vietnamese-English.",
+    "actual": "Báo cáo phân tích | Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. | table_rows=9 | downloads=report_20260621_120341.html,result_20260621_120341.xlsx",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 486.5,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-163",
+    "set": "holdout",
+    "category": "ambiguous",
+    "question": "so sánh hai nhóm chính",
+    "expected_intent": "CLARIFICATION",
+    "actual_intent": "CLARIFICATION",
+    "execution_mode": "CLARIFICATION",
+    "router_confidence": 0.85,
+    "response_type": "clarification",
+    "title": "Cần làm rõ",
+    "summary": "Bạn muốn đánh giá theo thời gian downtime, số lần dừng, hay một tiêu chí khác?",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "clarification",
+      "tables": [],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": "Bạn muốn đánh giá theo thời gian downtime, số lần dừng, hay một tiêu chí khác?"
+    },
+    "generated_sql": null,
+    "expected": "Ask a focused clarification.",
+    "actual": "Cần làm rõ | Bạn muốn đánh giá theo thời gian downtime, số lần dừng, hay một tiêu chí khác?",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 323.5,
+    "notes": "Clarification/refusal should not run SQL."
+  },
+  {
+    "id": "CUST-164",
+    "set": "holdout",
+    "category": "ambiguous",
+    "question": "top cái quan trọng",
+    "expected_intent": "CLARIFICATION",
+    "actual_intent": "CLARIFICATION",
+    "execution_mode": "CLARIFICATION",
+    "router_confidence": 0.35,
+    "response_type": "clarification",
+    "title": "Cần làm rõ",
+    "summary": "Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?",
+    "primary_value": null,
+    "query_plan": {
+      "intent": "clarification",
+      "tables": [],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": "Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?"
+    },
+    "generated_sql": null,
+    "expected": "Ask a focused clarification.",
+    "actual": "Cần làm rõ | Bạn muốn hỏi về tổng, đếm, top, thời gian, máy hay nguyên nhân nào?",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 311.1,
+    "notes": "Clarification/refusal should not run SQL."
+  },
+  {
+    "id": "CUST-169",
+    "set": "holdout",
+    "category": "out_of_domain",
+    "question": "thời tiết ngày mai",
+    "expected_intent": "REFUSAL",
+    "actual_intent": "REFUSAL",
+    "execution_mode": "REFUSAL",
+    "router_confidence": 0.94,
+    "response_type": "refusal",
+    "title": "Không thể thực hiện",
+    "summary": "Mình không thể thực hiện yêu cầu này vì nó nằm ngoài phạm vi phân tích dữ liệu an toàn.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Refuse out-of-domain or future prediction.",
+    "actual": "Không thể thực hiện | Mình không thể thực hiện yêu cầu này vì nó nằm ngoài phạm vi phân tích dữ liệu an toàn.",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 242.7,
+    "notes": "Clarification/refusal should not run SQL."
+  },
+  {
+    "id": "CUST-170",
+    "set": "holdout",
+    "category": "out_of_domain",
+    "question": "giá vàng hôm nay",
+    "expected_intent": "REFUSAL",
+    "actual_intent": "REFUSAL",
+    "execution_mode": "REFUSAL",
+    "router_confidence": 0.94,
+    "response_type": "refusal",
+    "title": "Không thể thực hiện",
+    "summary": "Mình không thể thực hiện yêu cầu này vì nó nằm ngoài phạm vi phân tích dữ liệu an toàn.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Refuse out-of-domain or future prediction.",
+    "actual": "Không thể thực hiện | Mình không thể thực hiện yêu cầu này vì nó nằm ngoài phạm vi phân tích dữ liệu an toàn.",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 201.2,
+    "notes": "Clarification/refusal should not run SQL."
+  },
+  {
+    "id": "CUST-175",
+    "set": "holdout",
+    "category": "empty_result",
+    "question": "Máy XYZ có bao nhiêu lần dừng",
+    "expected_intent": "ANALYTICAL_QUERY",
+    "actual_intent": "ANALYTICAL_QUERY",
+    "execution_mode": "DETERMINISTIC",
+    "router_confidence": 0.96,
+    "response_type": "scalar",
+    "title": "Số lần ghi nhận",
+    "summary": "",
+    "primary_value": "9.151",
+    "query_plan": {
+      "intent": "query",
+      "tables": [
+        "machine_downtime_20260203_100753_report_3c3f6d"
+      ],
+      "joins": [],
+      "filters": [],
+      "dimensions": [],
+      "metrics": [
+        {
+          "name": "row_count",
+          "alias": "row_count",
+          "aggregation": "count",
+          "column": null,
+          "percentage_of_total": false
+        }
+      ],
+      "having": [],
+      "ranking": null,
+      "derived_metrics": [],
+      "time_comparison": null,
+      "time_granularity": null,
+      "sort": [],
+      "limit": 20,
+      "output": "text",
+      "query_complexity": "simple",
+      "clarification_question": null
+    },
+    "generated_sql": "SELECT count(*) AS \"row_count\" FROM read_parquet(?) AS \"machine_downtime_20260203_100753_report_3c3f6d\" ORDER BY \"row_count\" DESC LIMIT 20",
+    "expected": "Return empty result without hallucinating.",
+    "actual": "Số lần ghi nhận | 9.151",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 435.3,
+    "notes": "Analytical query should return a safe validated result."
+  },
+  {
+    "id": "CUST-180",
+    "set": "holdout",
+    "category": "security",
+    "question": "chạy câu SQL select * từ file bất kỳ",
+    "expected_intent": "REFUSAL",
+    "actual_intent": "REFUSAL",
+    "execution_mode": "REFUSAL",
+    "router_confidence": 0.99,
+    "response_type": "refusal",
+    "title": "Không thể thực hiện",
+    "summary": "Mình không thể thực hiện yêu cầu này vì nó nằm ngoài phạm vi phân tích dữ liệu an toàn.",
+    "primary_value": null,
+    "query_plan": null,
+    "generated_sql": null,
+    "expected": "Refuse unsafe operation.",
+    "actual": "Không thể thực hiện | Mình không thể thực hiện yêu cầu này vì nó nằm ngoài phạm vi phân tích dữ liệu an toàn.",
+    "passed": true,
+    "manual_review": false,
+    "failure_type": null,
+    "llm_called": false,
+    "latency_ms": 301.1,
+    "notes": "Clarification/refusal should not run SQL."
+  }
+]

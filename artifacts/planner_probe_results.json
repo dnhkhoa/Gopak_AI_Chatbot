@@ -1,0 +1,4049 @@
+{
+  "summary": {
+    "total_runs": 60,
+    "parseable": 60,
+    "valid_plans": 60,
+    "json_validity_rate": 1.0,
+    "valid_plan_rate": 1.0
+  },
+  "rows": [
+    {
+      "question": "Tổng downtime là bao nhiêu?",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.9,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 62.89429999014828,
+          "llm": 0.0,
+          "validation": 0.03509999078232795,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 62.9313999961596
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 63.149499997962266
+    },
+    {
+      "question": "Tổng downtime là bao nhiêu?",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.9,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 57.522399991285056,
+          "llm": 0.0,
+          "validation": 0.02370000584051013,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 57.54879998858087
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 57.67639999976382
+    },
+    {
+      "question": "Tổng downtime là bao nhiêu?",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.9,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 58.33520001033321,
+          "llm": 0.0,
+          "validation": 0.021799991372972727,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 58.35920000390615
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 58.46739999833517
+    },
+    {
+      "question": "Tổng số bản ghi downtime là bao nhiêu?",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.96,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 57.32880000141449,
+          "llm": 0.0,
+          "validation": 0.02710000262595713,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 57.35840000852477
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 57.46470000303816
+    },
+    {
+      "question": "Tổng số bản ghi downtime là bao nhiêu?",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.96,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 57.56750000000466,
+          "llm": 0.0,
+          "validation": 0.017700003809295595,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 57.58730000525247
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 57.702700010850094
+    },
+    {
+      "question": "Tổng số bản ghi downtime là bao nhiêu?",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.96,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 55.48660000204109,
+          "llm": 0.0,
+          "validation": 0.016400008462369442,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 55.50500001118053
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 55.60799999511801
+    },
+    {
+      "question": "Thời gian downtime trung bình?",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "avg_duration_seconds",
+            "alias": "avg_duration_seconds",
+            "aggregation": "avg",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.94,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 55.291799988481216,
+          "llm": 0.0,
+          "validation": 0.02269999822601676,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 55.316599988145754
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 55.42319999949541
+    },
+    {
+      "question": "Thời gian downtime trung bình?",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "avg_duration_seconds",
+            "alias": "avg_duration_seconds",
+            "aggregation": "avg",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.94,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 55.30710000311956,
+          "llm": 0.0,
+          "validation": 0.02200000744778663,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 55.331100011244416
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 55.43609999585897
+    },
+    {
+      "question": "Thời gian downtime trung bình?",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "avg_duration_seconds",
+            "alias": "avg_duration_seconds",
+            "aggregation": "avg",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.94,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 55.33160000049975,
+          "llm": 0.0,
+          "validation": 0.022100008209235966,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 55.35549999331124
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 55.47919998934958
+    },
+    {
+      "question": "Downtime lớn nhất là bao nhiêu?",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "max_duration_seconds",
+            "alias": "max_duration_seconds",
+            "aggregation": "max",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.92,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 54.14779999409802,
+          "llm": 0.0,
+          "validation": 0.018999999156221747,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 54.168999995454215
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 54.272699999273755
+    },
+    {
+      "question": "Downtime lớn nhất là bao nhiêu?",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "max_duration_seconds",
+            "alias": "max_duration_seconds",
+            "aggregation": "max",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.92,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 54.46179999853484,
+          "llm": 0.0,
+          "validation": 0.01960000372491777,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 54.48330000217538
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 54.59020000125747
+    },
+    {
+      "question": "Downtime lớn nhất là bao nhiêu?",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "max_duration_seconds",
+            "alias": "max_duration_seconds",
+            "aggregation": "max",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.92,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 52.23380000097677,
+          "llm": 0.0,
+          "validation": 0.01960000372491777,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 52.25609999615699
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 52.36699999659322
+    },
+    {
+      "question": "Có bao nhiêu máy khác nhau?",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "machine_count",
+            "alias": "machine_count",
+            "aggregation": "count_distinct",
+            "column": "may",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.99,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 53.327499990700744,
+          "llm": 0.0,
+          "validation": 0.022899999748915434,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 53.352400005678646
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 53.457100002560765
+    },
+    {
+      "question": "Có bao nhiêu máy khác nhau?",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "machine_count",
+            "alias": "machine_count",
+            "aggregation": "count_distinct",
+            "column": "may",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.99,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 53.55309999140445,
+          "llm": 0.0,
+          "validation": 0.01850000990089029,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 53.5735999874305
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 53.67729999125004
+    },
+    {
+      "question": "Có bao nhiêu máy khác nhau?",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "machine_count",
+            "alias": "machine_count",
+            "aggregation": "count_distinct",
+            "column": "may",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.99,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 52.044500000192784,
+          "llm": 0.0,
+          "validation": 0.01990000600926578,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 52.06630000611767
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 52.17280000215396
+    },
+    {
+      "question": "Top 5 máy theo tổng downtime.",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 5,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.97,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 53.52339999808464,
+          "llm": 0.0,
+          "validation": 0.02479999966453761,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 53.55019999842625
+        },
+        "turn_type": "CHANGE_RANKING",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 53.66399999184068
+    },
+    {
+      "question": "Top 5 máy theo tổng downtime.",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 5,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.97,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 50.94509999617003,
+          "llm": 0.0,
+          "validation": 0.023200002033263445,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 50.97050000040326
+        },
+        "turn_type": "CHANGE_RANKING",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 51.081300000078045
+    },
+    {
+      "question": "Top 5 máy theo tổng downtime.",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 5,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.97,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 50.39129999931902,
+          "llm": 0.0,
+          "validation": 0.021200001356191933,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 50.41429999982938
+        },
+        "turn_type": "CHANGE_RANKING",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 50.519900003564544
+    },
+    {
+      "question": "Top 10 nguyên nhân theo số lần xuất hiện.",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "ten_ton_that"
+        ],
+        "metrics": [
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "row_count",
+            "field": "row_count",
+            "direction": "desc"
+          }
+        ],
+        "limit": 10,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 1.0,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 47.555800003465265,
+          "llm": 0.0,
+          "validation": 0.01960000372491777,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 47.5777000101516
+        },
+        "turn_type": "CHANGE_OUTPUT",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 47.68250000779517
+    },
+    {
+      "question": "Top 10 nguyên nhân theo số lần xuất hiện.",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "ten_ton_that"
+        ],
+        "metrics": [
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "row_count",
+            "field": "row_count",
+            "direction": "desc"
+          }
+        ],
+        "limit": 10,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 1.0,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 47.37030000251252,
+          "llm": 0.0,
+          "validation": 0.018300008377991617,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 47.39079999853857
+        },
+        "turn_type": "CHANGE_OUTPUT",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 47.495200007688254
+    },
+    {
+      "question": "Top 10 nguyên nhân theo số lần xuất hiện.",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "ten_ton_that"
+        ],
+        "metrics": [
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "row_count",
+            "field": "row_count",
+            "direction": "desc"
+          }
+        ],
+        "limit": 10,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 1.0,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 48.48189999756869,
+          "llm": 0.0,
+          "validation": 0.020100007532164454,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 48.50399999122601
+        },
+        "turn_type": "CHANGE_OUTPUT",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 48.61160001019016
+    },
+    {
+      "question": "Máy có downtime trung bình cao nhất.",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "avg_duration_seconds",
+            "alias": "avg_duration_seconds",
+            "aggregation": "avg",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "avg_duration_seconds",
+            "field": "avg_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 1,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 1.0,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 50.79780000960454,
+          "llm": 0.0,
+          "validation": 0.0236999912885949,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 50.82330000004731
+        },
+        "turn_type": "CHANGE_RANKING",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 50.938999993377365
+    },
+    {
+      "question": "Máy có downtime trung bình cao nhất.",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "avg_duration_seconds",
+            "alias": "avg_duration_seconds",
+            "aggregation": "avg",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "avg_duration_seconds",
+            "field": "avg_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 1,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 1.0,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 46.09530000016093,
+          "llm": 0.0,
+          "validation": 0.022799998987466097,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 46.12020000058692
+        },
+        "turn_type": "CHANGE_RANKING",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 46.22780000499915
+    },
+    {
+      "question": "Máy có downtime trung bình cao nhất.",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "avg_duration_seconds",
+            "alias": "avg_duration_seconds",
+            "aggregation": "avg",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "avg_duration_seconds",
+            "field": "avg_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 1,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 1.0,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 46.37770001136232,
+          "llm": 0.0,
+          "validation": 0.02239999594166875,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 46.40200000721961
+        },
+        "turn_type": "CHANGE_RANKING",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 46.508200000971556
+    },
+    {
+      "question": "Downtime theo ngày.",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "thoi_gian_bat_dau"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": "day",
+        "sort": [
+          {
+            "column": "thoi_gian_bat_dau",
+            "field": "thoi_gian_bat_dau",
+            "direction": "asc"
+          },
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.96,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 46.97690000466537,
+          "llm": 0.0,
+          "validation": 0.02579999272711575,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 47.00489999959245
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 47.12569998810068
+    },
+    {
+      "question": "Downtime theo ngày.",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "thoi_gian_bat_dau"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": "day",
+        "sort": [
+          {
+            "column": "thoi_gian_bat_dau",
+            "field": "thoi_gian_bat_dau",
+            "direction": "asc"
+          },
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.96,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 50.37730000913143,
+          "llm": 0.0,
+          "validation": 0.02239999594166875,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 50.40190000727307
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 50.51639999146573
+    },
+    {
+      "question": "Downtime theo ngày.",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "thoi_gian_bat_dau"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": "day",
+        "sort": [
+          {
+            "column": "thoi_gian_bat_dau",
+            "field": "thoi_gian_bat_dau",
+            "direction": "asc"
+          },
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.96,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 47.91550000663847,
+          "llm": 0.0,
+          "validation": 0.022799998987466097,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 47.94060000858735
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 48.05080000369344
+    },
+    {
+      "question": "Tổng downtime tháng 12/2025.",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "thoi_gian_bat_dau",
+            "operator": "date_between",
+            "value": [
+              "2025-12-01",
+              "2026-01-01"
+            ]
+          }
+        ],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.93,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 48.78209999878891,
+          "llm": 0.0,
+          "validation": 0.032800002372823656,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 48.816700000315905
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 48.939600004814565
+    },
+    {
+      "question": "Tổng downtime tháng 12/2025.",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "thoi_gian_bat_dau",
+            "operator": "date_between",
+            "value": [
+              "2025-12-01",
+              "2026-01-01"
+            ]
+          }
+        ],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.93,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 50.3238999954192,
+          "llm": 0.0,
+          "validation": 0.02649999805726111,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 50.35239999415353
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 50.464300002204254
+    },
+    {
+      "question": "Tổng downtime tháng 12/2025.",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "thoi_gian_bat_dau",
+            "operator": "date_between",
+            "value": [
+              "2025-12-01",
+              "2026-01-01"
+            ]
+          }
+        ],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.93,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 49.240199994528666,
+          "llm": 0.0,
+          "validation": 0.022400010493583977,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 49.264799992670305
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 49.40229999192525
+    },
+    {
+      "question": "Máy 29 downtime tháng 12/2025 bao lâu?",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "may",
+            "operator": "equals",
+            "value": "Máy 29"
+          },
+          {
+            "column": "thoi_gian_bat_dau",
+            "operator": "date_between",
+            "value": [
+              "2025-12-01",
+              "2026-01-01"
+            ]
+          }
+        ],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.99,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 50.73800000536721,
+          "llm": 0.0,
+          "validation": 0.027999994927085936,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 50.76810000173282
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 50.88550000800751
+    },
+    {
+      "question": "Máy 29 downtime tháng 12/2025 bao lâu?",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "may",
+            "operator": "equals",
+            "value": "Máy 29"
+          },
+          {
+            "column": "thoi_gian_bat_dau",
+            "operator": "date_between",
+            "value": [
+              "2025-12-01",
+              "2026-01-01"
+            ]
+          }
+        ],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.99,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 50.63269998936448,
+          "llm": 0.0,
+          "validation": 0.07119998917914927,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 50.70619999605697
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 50.83079999894835
+    },
+    {
+      "question": "Máy 29 downtime tháng 12/2025 bao lâu?",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "may",
+            "operator": "equals",
+            "value": "Máy 29"
+          },
+          {
+            "column": "thoi_gian_bat_dau",
+            "operator": "date_between",
+            "value": [
+              "2025-12-01",
+              "2026-01-01"
+            ]
+          }
+        ],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.99,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 48.606399999698624,
+          "llm": 0.0,
+          "validation": 0.028599999495781958,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 48.637200001394376
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 48.75020000326913
+    },
+    {
+      "question": "Các lần dừng trên 30 phút.",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "thoi_luong_seconds",
+            "operator": "greater_than",
+            "value": 1800.0
+          }
+        ],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.96,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 50.31970000709407,
+          "llm": 0.0,
+          "validation": 0.023600005079060793,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 50.3453000128502
+        },
+        "turn_type": "ADD_FILTER",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 50.45000000973232
+    },
+    {
+      "question": "Các lần dừng trên 30 phút.",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "thoi_luong_seconds",
+            "operator": "greater_than",
+            "value": 1800.0
+          }
+        ],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.96,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 51.272199998493306,
+          "llm": 0.0,
+          "validation": 0.02370000584051013,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 51.29800000577234
+        },
+        "turn_type": "ADD_FILTER",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 51.40850000316277
+    },
+    {
+      "question": "Các lần dừng trên 30 phút.",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "thoi_luong_seconds",
+            "operator": "greater_than",
+            "value": 1800.0
+          }
+        ],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.96,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 48.71770000318065,
+          "llm": 0.0,
+          "validation": 0.02479999966453761,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 48.74490000656806
+        },
+        "turn_type": "ADD_FILTER",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 48.860499999136664
+    },
+    {
+      "question": "Tổng downtime của Máy 11 và Máy 29.",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "may",
+            "operator": "in",
+            "value": [
+              "Máy 11",
+              "Máy 29"
+            ]
+          }
+        ],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.96,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 48.12289999972563,
+          "llm": 0.0,
+          "validation": 0.025699991965666413,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 48.15079999389127
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 48.26579999644309
+    },
+    {
+      "question": "Tổng downtime của Máy 11 và Máy 29.",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "may",
+            "operator": "in",
+            "value": [
+              "Máy 11",
+              "Máy 29"
+            ]
+          }
+        ],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.96,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 54.97910000849515,
+          "llm": 0.0,
+          "validation": 0.042800005758181214,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 55.02629998954944
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 55.18139999185223
+    },
+    {
+      "question": "Tổng downtime của Máy 11 và Máy 29.",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "may",
+            "operator": "in",
+            "value": [
+              "Máy 11",
+              "Máy 29"
+            ]
+          }
+        ],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.96,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 59.23790000088047,
+          "llm": 0.0,
+          "validation": 0.02609999501146376,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 59.266199998091906
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 59.3869000003906
+    },
+    {
+      "question": "Vẽ biểu đồ downtime theo ngày.",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "chart",
+      "plan": {
+        "intent": "chart",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "thoi_gian_bat_dau"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": "day",
+        "sort": [
+          {
+            "column": "thoi_gian_bat_dau",
+            "field": "thoi_gian_bat_dau",
+            "direction": "asc"
+          },
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 20,
+        "output": "line",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 1.0,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 48.85119998652954,
+          "llm": 0.0,
+          "validation": 0.022899999748915434,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 48.87609998695552
+        },
+        "turn_type": "CHANGE_OUTPUT",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 48.985400004312396
+    },
+    {
+      "question": "Vẽ biểu đồ downtime theo ngày.",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "chart",
+      "plan": {
+        "intent": "chart",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "thoi_gian_bat_dau"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": "day",
+        "sort": [
+          {
+            "column": "thoi_gian_bat_dau",
+            "field": "thoi_gian_bat_dau",
+            "direction": "asc"
+          },
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 20,
+        "output": "line",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 1.0,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 48.19169999973383,
+          "llm": 0.0,
+          "validation": 0.023200002033263445,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 48.21720000472851
+        },
+        "turn_type": "CHANGE_OUTPUT",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 48.326299991458654
+    },
+    {
+      "question": "Vẽ biểu đồ downtime theo ngày.",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "chart",
+      "plan": {
+        "intent": "chart",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "thoi_gian_bat_dau"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": "day",
+        "sort": [
+          {
+            "column": "thoi_gian_bat_dau",
+            "field": "thoi_gian_bat_dau",
+            "direction": "asc"
+          },
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 20,
+        "output": "line",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 1.0,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 50.624199997400865,
+          "llm": 0.0,
+          "validation": 0.02370000584051013,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 50.64999999012798
+        },
+        "turn_type": "CHANGE_OUTPUT",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 50.778899996657856
+    },
+    {
+      "question": "Tạo dashboard tổng quan.",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "dashboard",
+      "plan": {
+        "intent": "dashboard",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "dashboard",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.94,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 51.28030000196304,
+          "llm": 0.0,
+          "validation": 0.02340000355616212,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 51.308499998413026
+        },
+        "turn_type": "CHANGE_OUTPUT",
+        "query_complexity": "complex"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 51.43419999512844
+    },
+    {
+      "question": "Tạo dashboard tổng quan.",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "dashboard",
+      "plan": {
+        "intent": "dashboard",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "dashboard",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.94,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 49.96080001001246,
+          "llm": 0.0,
+          "validation": 0.022599997464567423,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 49.985699995886534
+        },
+        "turn_type": "CHANGE_OUTPUT",
+        "query_complexity": "complex"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 50.094299993361346
+    },
+    {
+      "question": "Tạo dashboard tổng quan.",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "dashboard",
+      "plan": {
+        "intent": "dashboard",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "dashboard",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.94,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 50.74819999572355,
+          "llm": 0.0,
+          "validation": 0.02340000355616212,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 50.773800001479685
+        },
+        "turn_type": "CHANGE_OUTPUT",
+        "query_complexity": "complex"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 50.880299997515976
+    },
+    {
+      "question": "Tạo báo cáo HTML downtime.",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "report",
+      "plan": {
+        "intent": "report",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "report",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.94,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 48.953900011838414,
+          "llm": 0.0,
+          "validation": 0.022199994418770075,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 48.978200007695705
+        },
+        "turn_type": "CHANGE_OUTPUT",
+        "query_complexity": "complex"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 49.084900005254894
+    },
+    {
+      "question": "Tạo báo cáo HTML downtime.",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "report",
+      "plan": {
+        "intent": "report",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "report",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.94,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 47.804600006202236,
+          "llm": 0.0,
+          "validation": 0.023100001271814108,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 47.82980000891257
+        },
+        "turn_type": "CHANGE_OUTPUT",
+        "query_complexity": "complex"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 47.9361999896355
+    },
+    {
+      "question": "Tạo báo cáo HTML downtime.",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "report",
+      "plan": {
+        "intent": "report",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          {
+            "name": "row_count",
+            "alias": "row_count",
+            "aggregation": "count",
+            "column": null,
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "report",
+        "query_complexity": "complex",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.94,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 46.17160001362208,
+          "llm": 0.0,
+          "validation": 0.02269999822601676,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 46.19619999721181
+        },
+        "turn_type": "CHANGE_OUTPUT",
+        "query_complexity": "complex"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 46.302500006277114
+    },
+    {
+      "question": "Máy nào tốt nhất?",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "clarification",
+      "plan": {
+        "intent": "clarification",
+        "tables": [],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": "Bạn muốn đánh giá theo thời gian downtime, số lần dừng, hay một tiêu chí khác?"
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "CLARIFICATION",
+        "router_confidence": 0.85,
+        "routing_reason": "Question asks for a ranking without an explicit metric.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 0.03819999983534217,
+          "llm": 0.0,
+          "validation": 0.0,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 0.03959999594371766
+        }
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 0.10739998833741993
+    },
+    {
+      "question": "Máy nào tốt nhất?",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "clarification",
+      "plan": {
+        "intent": "clarification",
+        "tables": [],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": "Bạn muốn đánh giá theo thời gian downtime, số lần dừng, hay một tiêu chí khác?"
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "CLARIFICATION",
+        "router_confidence": 0.85,
+        "routing_reason": "Question asks for a ranking without an explicit metric.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 0.03029999788850546,
+          "llm": 0.0,
+          "validation": 0.0,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 0.031200004741549492
+        }
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 0.06310000026132911
+    },
+    {
+      "question": "Máy nào tốt nhất?",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "clarification",
+      "plan": {
+        "intent": "clarification",
+        "tables": [],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": "Bạn muốn đánh giá theo thời gian downtime, số lần dừng, hay một tiêu chí khác?"
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "CLARIFICATION",
+        "router_confidence": 0.85,
+        "routing_reason": "Question asks for a ranking without an explicit metric.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 0.02540000423323363,
+          "llm": 0.0,
+          "validation": 0.0,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 0.0261999957729131
+        }
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 0.05400000372901559
+    },
+    {
+      "question": "Doanh thu năm 2024 là bao nhiêu?",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "refusal",
+      "plan": {
+        "intent": "refusal",
+        "tables": [],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": "Dữ liệu hiện tại không hỗ trợ câu hỏi này."
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "REFUSAL",
+        "router_confidence": 0.99,
+        "routing_reason": "Question is outside supported historical Excel analytics scope.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 0.028099995688535273,
+          "llm": 0.0,
+          "validation": 0.0,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 0.028599999495781958
+        }
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 0.055500000598840415
+    },
+    {
+      "question": "Doanh thu năm 2024 là bao nhiêu?",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "refusal",
+      "plan": {
+        "intent": "refusal",
+        "tables": [],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": "Dữ liệu hiện tại không hỗ trợ câu hỏi này."
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "REFUSAL",
+        "router_confidence": 0.99,
+        "routing_reason": "Question is outside supported historical Excel analytics scope.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 0.02409999433439225,
+          "llm": 0.0,
+          "validation": 0.0,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 0.024599998141638935
+        }
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 0.04959999932907522
+    },
+    {
+      "question": "Doanh thu năm 2024 là bao nhiêu?",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "refusal",
+      "plan": {
+        "intent": "refusal",
+        "tables": [],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": "Dữ liệu hiện tại không hỗ trợ câu hỏi này."
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "REFUSAL",
+        "router_confidence": 0.99,
+        "routing_reason": "Question is outside supported historical Excel analytics scope.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 0.022899999748915434,
+          "llm": 0.0,
+          "validation": 0.0,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 0.023300002794712782
+        }
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 0.04780000017490238
+    },
+    {
+      "question": "So sánh downtime với loss assignment theo từng dòng.",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "refusal",
+      "plan": {
+        "intent": "refusal",
+        "tables": [],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": "Không có khóa nối dòng-đến-dòng đủ chắc chắn để thực hiện truy vấn này."
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "REFUSAL",
+        "router_confidence": 0.95,
+        "routing_reason": "Requested row-level join is not proven by catalog relationships.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 0.03509999078232795,
+          "llm": 0.0,
+          "validation": 0.0,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 0.035599994589574635
+        }
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 0.060999998822808266
+    },
+    {
+      "question": "So sánh downtime với loss assignment theo từng dòng.",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "refusal",
+      "plan": {
+        "intent": "refusal",
+        "tables": [],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": "Không có khóa nối dòng-đến-dòng đủ chắc chắn để thực hiện truy vấn này."
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "REFUSAL",
+        "router_confidence": 0.95,
+        "routing_reason": "Requested row-level join is not proven by catalog relationships.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 0.03310000465717167,
+          "llm": 0.0,
+          "validation": 0.0,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 0.03359999391250312
+        }
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 0.05750000127591193
+    },
+    {
+      "question": "So sánh downtime với loss assignment theo từng dòng.",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "refusal",
+      "plan": {
+        "intent": "refusal",
+        "tables": [],
+        "joins": [],
+        "filters": [],
+        "dimensions": [],
+        "metrics": [],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [],
+        "limit": 20,
+        "output": "text",
+        "query_complexity": "simple",
+        "clarification_question": "Không có khóa nối dòng-đến-dòng đủ chắc chắn để thực hiện truy vấn này."
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "REFUSAL",
+        "router_confidence": 0.95,
+        "routing_reason": "Requested row-level join is not proven by catalog relationships.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 0.031799994758330286,
+          "llm": 0.0,
+          "validation": 0.0,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 0.03229999856557697
+        }
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 0.056899996707215905
+    },
+    {
+      "question": "Dữ liệu của máy KHÔNG_TỒN_TẠI là gì?",
+      "run": 1,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "may",
+            "operator": "equals",
+            "value": "KHÔNG_TỒN_TẠI"
+          }
+        ],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "may",
+            "field": "may",
+            "direction": "asc"
+          }
+        ],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.98,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 51.551599986851215,
+          "llm": 0.0,
+          "validation": 0.022499996703118086,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 51.57609999878332
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 51.65069999929983
+    },
+    {
+      "question": "Dữ liệu của máy KHÔNG_TỒN_TẠI là gì?",
+      "run": 2,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "may",
+            "operator": "equals",
+            "value": "KHÔNG_TỒN_TẠI"
+          }
+        ],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "may",
+            "field": "may",
+            "direction": "asc"
+          }
+        ],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.98,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 49.80510000314098,
+          "llm": 0.0,
+          "validation": 0.02130000211764127,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 49.82830000517424
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 49.970899999607354
+    },
+    {
+      "question": "Dữ liệu của máy KHÔNG_TỒN_TẠI là gì?",
+      "run": 3,
+      "parseable": true,
+      "valid_plan": true,
+      "intent": "query",
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "joins": [],
+        "filters": [
+          {
+            "column": "may",
+            "operator": "equals",
+            "value": "KHÔNG_TỒN_TẠI"
+          }
+        ],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "may",
+            "field": "may",
+            "direction": "asc"
+          }
+        ],
+        "limit": 20,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "raw_response": "",
+      "used_fallback": false,
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.98,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "machine_downtime_20260203_100753_report_3c3f6d"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 49.174300002050586,
+          "llm": 0.0,
+          "validation": 0.020500010577961802,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 49.1970000002766
+        },
+        "turn_type": "NEW_QUERY",
+        "query_complexity": "simple"
+      },
+      "error": null,
+      "validation_error": null,
+      "latency_ms": 49.306900007650256
+    }
+  ]
+}

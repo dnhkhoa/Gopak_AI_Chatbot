@@ -1,0 +1,11 @@
+pandas>=2.2
+openpyxl>=3.1
+pyarrow>=16
+duckdb>=1.0
+pydantic>=2.7
+plotly>=5.22
+streamlit>=1.36
+rapidfuzz>=3.9
+fastapi>=0.115
+uvicorn[standard]>=0.32
+pytest>=8.0

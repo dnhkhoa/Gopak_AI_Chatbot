@@ -1,0 +1,20 @@
+{
+  "total_groups": 1,
+  "consistent_groups": 1,
+  "groups": [
+    {
+      "group": "total_duration",
+      "total": 6,
+      "passed": 6,
+      "consistent": true,
+      "case_ids": [
+        "EVAL-033",
+        "EVAL-034",
+        "EVAL-035",
+        "EVAL-036",
+        "EVAL-037",
+        "EVAL-038"
+      ]
+    }
+  ]
+}
