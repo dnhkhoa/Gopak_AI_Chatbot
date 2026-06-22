@@ -27,9 +27,9 @@ export const mockConversations: ConversationPayload[] = [
 ];
 
 export const mockFiles: UploadedFile[] = [
-  { id: "file-1", filename: "Machine_Downtime_20260203_100753.xlsx", size_bytes: 2_516_582, status: "ready", uploaded_at: now },
-  { id: "file-2", filename: "Loss_Assignment_20260203_100840.xlsx", size_bytes: 1_887_436, status: "ready", uploaded_at: now },
-  { id: "file-3", filename: "EntryTransaction_20260203_164943.xlsx", size_bytes: 3_250_585, status: "ready", uploaded_at: now }
+  { id: "file-1", filename: "Machine_Downtime_20260203_100753.xlsx", size_bytes: 2_516_582, status: "ready", uploaded_at: now, row_count: 9151, sheet_count: 1 },
+  { id: "file-2", filename: "Loss_Assignment_20260203_100840.xlsx", size_bytes: 1_887_436, status: "ready", uploaded_at: now, row_count: 4210, sheet_count: 2 },
+  { id: "file-3", filename: "EntryTransaction_20260203_164943.xlsx", size_bytes: 3_250_585, status: "ready", uploaded_at: now, row_count: 12894, sheet_count: 1 }
 ];
 
 function base(responseType: ResponseType, conversationId: string, overrides: Partial<ChatResponse>): ChatResponse {

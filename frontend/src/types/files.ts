@@ -8,6 +8,10 @@ export interface UploadedFile {
   status: FileStatus;
   error?: string | null;
   uploaded_at?: string | null;
+  // Optional display-only metadata. Rendered in File details only when present;
+  // the frontend never parses Excel to derive these (see API_INTEGRATION_REQUIREMENTS.md).
+  row_count?: number | null;
+  sheet_count?: number | null;
 }
 
 export const ALLOWED_UPLOAD_EXTENSION = ".xlsx";

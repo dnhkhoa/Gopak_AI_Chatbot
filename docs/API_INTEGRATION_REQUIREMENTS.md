@@ -44,8 +44,15 @@ Current backend behavior:
 
 ```json
 { "id": "string", "filename": "name.xlsx", "size_bytes": 12345,
-  "status": "uploading|processing|ready|failed", "error": null, "uploaded_at": "ISO" }
+  "status": "uploading|processing|ready|failed", "error": null, "uploaded_at": "ISO",
+  "row_count": 9151, "sheet_count": 1 }
 ```
+
+`row_count` and `sheet_count` are **optional (BACKEND OPTIONAL)** display-only fields
+shown in the File details popover. If the backend can surface them after ingestion
+(it already knows row/sheet counts from the DuckDB registration step), please include
+them — they are additive and break nothing. When absent, the frontend simply hides those
+rows; it never parses Excel to compute them.
 
 Frontend never parses Excel, never computes aggregations, never generates SQL or
 QueryPlan. It only renders what the backend returns.
