@@ -1,4 +1,5 @@
 import type {
+  ActiveFilePayload,
   ChatResponse,
   ConversationDetail,
   ConversationPayload,
@@ -19,6 +20,7 @@ export interface GopakApi {
   renameConversation(id: string, title: string): Promise<ConversationPayload>;
   deleteConversation(id: string): Promise<void>;
   resetContext(id: string): Promise<ConversationDetail>;
+  setActiveFile(id: string, fileId: string): Promise<ActiveFilePayload>;
 
   sendMessage(id: string, message: string, debug?: boolean): Promise<ChatResponse>;
 

@@ -1,0 +1,32 @@
+[
+  {
+    "file_id": "2ad2989784fc41ffb9fef3225034db54",
+    "filename": "EntryTransaction_20260203_164943.xlsx",
+    "set_active_status": "ready",
+    "scoped_table_count": 1,
+    "scoped_table_file_ids": [
+      "2ad2989784fc41ffb9fef3225034db54"
+    ],
+    "elapsed_ms": 215.1
+  },
+  {
+    "file_id": "a329169db4984cab80ed5fea5880bb4f",
+    "filename": "Loss_Assignment_20260203_100840.xlsx",
+    "set_active_status": "ready",
+    "scoped_table_count": 1,
+    "scoped_table_file_ids": [
+      "a329169db4984cab80ed5fea5880bb4f"
+    ],
+    "elapsed_ms": 299.6
+  },
+  {
+    "file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+    "filename": "Machine_Downtime_20260203_100753.xlsx",
+    "set_active_status": "ready",
+    "scoped_table_count": 1,
+    "scoped_table_file_ids": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59"
+    ],
+    "elapsed_ms": 250.4
+  }
+]

@@ -39,12 +39,14 @@ def test_parquet_cache_real_files():
     files = find_excel_files(settings.root)
     assert len(files) == 3
     tables = ParquetCache(settings.cache_dir).refresh(files, force=False)
-    assert len(tables) == 3
+    assert len(tables) >= 3
     assert all(Path(table["parquet_path"]).exists() for table in tables)
+    assert {"EntryTransaction_20260203_164943.xlsx", "Loss_Assignment_20260203_100840.xlsx", "Machine_Downtime_20260203_100753.xlsx"}.issubset(
+        {Path(str(table.get("source_file") or table.get("source_path") or "")).name for table in tables}
+    )
 
 
 def test_build_catalog_real_files():
     catalog = ingest(force=False)
-    assert len(catalog["tables"]) == 3
+    assert len(catalog["tables"]) >= 3
     assert any(table["row_count"] > 9000 for table in catalog["tables"])
-

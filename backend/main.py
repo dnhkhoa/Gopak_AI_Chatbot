@@ -11,6 +11,7 @@ from fastapi.responses import JSONResponse
 
 from backend.api import routes_artifacts, routes_chat, routes_conversations, routes_data, routes_files, routes_health
 from src.config import _load_dotenv, ROOT
+from src.files.lifecycle import FileLifecycleService
 
 
 _load_dotenv(ROOT / ".env")
@@ -24,7 +25,7 @@ def create_app() -> FastAPI:
         CORSMiddleware,
         allow_origins=[frontend_origin, "http://127.0.0.1:5173"],
         allow_credentials=False,
-        allow_methods=["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
+        allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
         allow_headers=["*"],
     )
 
@@ -48,6 +49,15 @@ def create_app() -> FastAPI:
     app.include_router(routes_artifacts.router)
     app.include_router(routes_data.router)
     app.include_router(routes_files.router)
+
+    @app.on_event("startup")
+    def reconcile_uploaded_files_on_startup() -> None:
+        try:
+            result = FileLifecycleService().reconcile_uploaded_files(auto_retry=True)
+            logger.info("upload reconciliation completed: %s", result)
+        except Exception:
+            logger.exception("upload reconciliation failed")
+
     return app
 
 

@@ -6,7 +6,8 @@ import {
   getConversation,
   listConversations,
   renameConversation,
-  resetContext
+  resetContext,
+  setActiveFile
 } from "./conversations";
 import type { GopakApi } from "./contract";
 import { deleteFile, getFileStatus, listFiles, uploadFile } from "./files";
@@ -24,6 +25,7 @@ const realApi: GopakApi = {
   renameConversation,
   deleteConversation,
   resetContext,
+  setActiveFile,
   sendMessage,
   listFiles,
   uploadFile,

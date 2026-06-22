@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pydantic import BaseModel, Field, field_validator
 
-from src.application.schemas import ConversationDetail, ConversationPayload
+from src.application.schemas import ActiveFilePayload, ConversationDetail, ConversationPayload
 
 
 class ConversationCreateRequest(BaseModel):
@@ -18,4 +18,15 @@ class ConversationPatchRequest(BaseModel):
         return value.strip()
 
 
-__all__ = ["ConversationCreateRequest", "ConversationDetail", "ConversationPatchRequest", "ConversationPayload"]
+class ActiveFileRequest(BaseModel):
+    file_id: str = Field(min_length=1, max_length=128)
+
+
+__all__ = [
+    "ActiveFilePayload",
+    "ActiveFileRequest",
+    "ConversationCreateRequest",
+    "ConversationDetail",
+    "ConversationPatchRequest",
+    "ConversationPayload",
+]

@@ -1,0 +1,18 @@
+{
+  "previous_bug": "backend/api/routes_files.py set status=ready after pd.ExcelFile opened, without parquet/cache/catalog/readiness validation.",
+  "new_entrypoints": [
+    "src/files/lifecycle.py",
+    "ParquetCache.refresh_uploaded_file",
+    "FileLifecycleService.validate_readiness"
+  ],
+  "ready_contract": [
+    "raw file exists",
+    "sha256 matches metadata",
+    "catalog table has file_id",
+    "parquet exists",
+    "DuckDB COUNT succeeds",
+    "_source_file_id provenance matches file_id"
+  ],
+  "existing_files_checked": 3,
+  "existing_files_all_queryable": true
+}

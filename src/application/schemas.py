@@ -19,6 +19,9 @@ ResponseType = Literal[
     "schema",
     "sample_table",
     "data_quality",
+    "record_detail",
+    "record_table",
+    "timeline",
 ]
 
 
@@ -102,6 +105,8 @@ class ConversationPayload(BaseModel):
     created_at: str
     updated_at: str
     status: str
+    active_file_id: str | None = None
+    active_file_name: str | None = None
 
 
 class ConversationMessage(BaseModel):
@@ -114,6 +119,13 @@ class ConversationMessage(BaseModel):
 
 class ConversationDetail(ConversationPayload):
     messages: list[ConversationMessage] = Field(default_factory=list)
+
+
+class ActiveFilePayload(BaseModel):
+    conversation_id: str
+    active_file_id: str | None = None
+    active_file_name: str | None = None
+    status: str
 
 
 class HealthStatus(BaseModel):

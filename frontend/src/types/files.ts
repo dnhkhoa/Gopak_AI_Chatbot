@@ -1,4 +1,4 @@
-export type FileStatus = "uploading" | "processing" | "ready" | "failed";
+export type FileStatus = "uploaded" | "uploading" | "processing" | "ready" | "failed" | "deleting";
 
 /** Shape returned by the (planned) /api/files endpoints. snake_case to match FastAPI. */
 export interface UploadedFile {
@@ -6,12 +6,20 @@ export interface UploadedFile {
   filename: string;
   size_bytes: number;
   status: FileStatus;
-  error?: string | null;
+  error?: string | { code?: string; message?: string } | null;
+  error_code?: string | null;
+  error_message?: string | null;
   uploaded_at?: string | null;
+  processing_stage?: string | null;
+  progress?: number | null;
+  queryable?: boolean | null;
   // Optional display-only metadata. Rendered in File details only when present;
   // the frontend never parses Excel to derive these (see API_INTEGRATION_REQUIREMENTS.md).
   row_count?: number | null;
   sheet_count?: number | null;
+  table_count?: number | null;
+  ready_at?: string | null;
+  failed_at?: string | null;
 }
 
 export const ALLOWED_UPLOAD_EXTENSION = ".xlsx";

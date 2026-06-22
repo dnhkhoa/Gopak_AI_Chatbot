@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime, time, timedelta
+from datetime import time, timedelta
 from hashlib import sha1
 import math
 import re
@@ -11,7 +11,7 @@ import pandas as pd
 
 
 def strip_accents(value: str) -> str:
-    value = str(value).replace("đ", "d").replace("Đ", "D")
+    value = str(value).replace("đ", "d").replace("Đ", "D").replace("Ä‘", "d").replace("Ä", "D")
     text = unicodedata.normalize("NFKD", value)
     return "".join(ch for ch in text if not unicodedata.combining(ch))
 
@@ -55,7 +55,6 @@ def parse_duration_seconds(value: object) -> float | None:
     if isinstance(value, (int, float)):
         if value < 0:
             return None
-        # Excel times are fractions of a day. Large values are treated as minutes.
         return float(value * 86400 if value <= 3 else value * 60)
     text = str(value).strip()
     if not text:
@@ -69,16 +68,14 @@ def parse_duration_seconds(value: object) -> float | None:
         return float(days * 86400 + hours * 3600 + minutes * 60 + seconds)
     numeric = re.fullmatch(r"\d+(?:[.,]\d+)?", text)
     if numeric:
-        number = float(text.replace(",", "."))
-        return number * 60
+        return float(text.replace(",", ".")) * 60
     return None
 
 
 def parse_datetime_series(series: pd.Series) -> pd.Series:
-    parsed = pd.to_datetime(series, errors="coerce", dayfirst=False)
-    if parsed.notna().mean() < 0.5:
-        parsed = pd.to_datetime(series, errors="coerce", dayfirst=True)
-    return parsed
+    dayfirst = pd.to_datetime(series, errors="coerce", dayfirst=True)
+    monthfirst = pd.to_datetime(series, errors="coerce", dayfirst=False)
+    return dayfirst if dayfirst.notna().mean() >= monthfirst.notna().mean() else monthfirst
 
 
 def stable_table_name(source_file: str, source_sheet: str) -> str:
@@ -89,6 +86,7 @@ def stable_table_name(source_file: str, source_sheet: str) -> str:
 
 
 SEMANTIC_ALIASES = {
+    "record_no": {"no", "record_no", "stt"},
     "machine": {"may", "machine", "machine_name", "ten_may"},
     "duration": {"thoi_luong", "duration", "downtime", "time_loss"},
     "start_time": {"thoi_gian_bat_dau", "start", "start_time"},

@@ -6,13 +6,22 @@ import { FileDetailsPopover } from "./FileDetailsPopover";
 import { FileUploadDropzone } from "./FileUploadDropzone";
 import { UploadedFileItem } from "./UploadedFileItem";
 
-export function UploadedFilesPanel({ files }: { files: UseFiles }) {
+export function UploadedFilesPanel({
+  files,
+  activeFileId = null,
+  onSelectActive = () => undefined
+}: {
+  files: UseFiles;
+  activeFileId?: string | null;
+  onSelectActive?: (fileId: string) => void;
+}) {
   const [open, setOpen] = useState(true);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [detailsOpen, setDetailsOpen] = useState(false);
 
   const totalBytes = files.files.reduce((sum, f) => sum + f.size_bytes, 0);
   const selectedFile = files.files.find((f) => f.id === selectedId) ?? null;
+  const displaySelectedId = activeFileId ?? selectedId;
 
   const closeDetails = () => setDetailsOpen(false);
 
@@ -48,10 +57,11 @@ export function UploadedFilesPanel({ files }: { files: UseFiles }) {
                   <li key={file.id}>
                     <UploadedFileItem
                       file={file}
-                      selected={file.id === selectedId}
+                      selected={file.id === displaySelectedId}
+                      using={file.id === activeFileId}
                       onSelect={() => {
                         setSelectedId(file.id);
-                        setDetailsOpen(true);
+                        if (file.status === "ready") onSelectActive(file.id);
                       }}
                       onViewDetails={() => {
                         setSelectedId(file.id);

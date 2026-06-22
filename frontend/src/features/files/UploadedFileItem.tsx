@@ -3,24 +3,27 @@ import { useEffect, useRef, useState } from "react";
 import { formatBytes, type UploadedFile } from "../../types/files";
 
 const STATUS_LABEL: Record<UploadedFile["status"], string> = {
+  uploaded: "Uploaded",
   uploading: "Uploading",
   processing: "Processing",
   ready: "Ready",
-  failed: "Failed"
+  failed: "Failed",
+  deleting: "Deleting"
 };
 
 interface Props {
   file: UploadedFile;
   selected: boolean;
+  using: boolean;
   onSelect: () => void;
   onViewDetails: () => void;
   onRemove: () => void;
 }
 
-export function UploadedFileItem({ file, selected, onSelect, onViewDetails, onRemove }: Props) {
+export function UploadedFileItem({ file, selected, using, onSelect, onViewDetails, onRemove }: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
-  const busy = file.status === "uploading" || file.status === "processing";
+  const busy = file.status === "uploaded" || file.status === "uploading" || file.status === "processing" || file.status === "deleting";
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -41,11 +44,11 @@ export function UploadedFileItem({ file, selected, onSelect, onViewDetails, onRe
   return (
     <div ref={rootRef} className="file-item-wrap">
       <div
-        className={`file-item ${selected ? "selected" : ""}`}
+        className={`file-item ${selected ? "selected" : ""} ${using ? "using" : ""}`}
         role="button"
         tabIndex={0}
         aria-selected={selected}
-        aria-label={`${file.filename}, ${formatBytes(file.size_bytes)}, ${STATUS_LABEL[file.status]}`}
+        aria-label={`${file.filename}, ${formatBytes(file.size_bytes)}, ${STATUS_LABEL[file.status]}${using ? ", Using" : ""}`}
         onClick={onSelect}
         onKeyDown={(event) => {
           if (event.key === "Enter" || event.key === " ") {
@@ -61,6 +64,7 @@ export function UploadedFileItem({ file, selected, onSelect, onViewDetails, onRe
         <div className="file-main">
           <span className="file-name" title={file.filename}>
             {file.filename}
+            {using ? <span className="file-using-badge">Using</span> : null}
           </span>
           <span className="file-meta">
             <span className="file-size">{formatBytes(file.size_bytes)}</span>
@@ -68,6 +72,7 @@ export function UploadedFileItem({ file, selected, onSelect, onViewDetails, onRe
             <span className={`file-status status-${file.status}`}>
               {busy ? <Loader2 size={12} className="spin" /> : null}
               {STATUS_LABEL[file.status]}
+              {busy && file.progress != null ? ` ${file.progress}%` : ""}
             </span>
           </span>
         </div>

@@ -31,6 +31,8 @@ export default function App() {
   const [conversations, setConversations] = useState<ConversationPayload[]>([]);
   const [messages, setMessages] = useState<UiMessage[]>([]);
   const [health, setHealth] = useState<HealthStatus | null>(null);
+  const [activeFileId, setActiveFileId] = useState<string | null>(null);
+  const [activeFileName, setActiveFileName] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -55,6 +57,8 @@ export default function App() {
   const loadConversation = useCallback(async (id: string) => {
     const detail = await api.getConversation(id);
     setMessages(toUiMessages(detail.messages));
+    setActiveFileId(detail.active_file_id ?? null);
+    setActiveFileName(detail.active_file_name ?? null);
   }, []);
 
   const bootstrap = useCallback(async () => {
@@ -90,6 +94,8 @@ export default function App() {
     setConversations((current) => [created, ...current]);
     setSelectedId(created.id);
     setMessages([]);
+    setActiveFileId(null);
+    setActiveFileName(null);
   };
 
   const deleteConversation = async (id: string) => {
@@ -137,6 +143,33 @@ export default function App() {
     }
   };
 
+  const selectActiveFile = async (fileId: string) => {
+    if (!selectedId) return;
+    setError(null);
+    try {
+      const active = await api.setActiveFile(selectedId, fileId);
+      setActiveFileId(active.active_file_id ?? null);
+      setActiveFileName(active.active_file_name ?? null);
+      setConversations((current) =>
+        current.map((item) =>
+          item.id === selectedId
+            ? { ...item, active_file_id: active.active_file_id ?? null, active_file_name: active.active_file_name ?? null }
+            : item
+        )
+      );
+    } catch {
+      setError("Couldn't select this file.");
+    }
+  };
+
+  const removeFile = async (fileId: string) => {
+    await files.remove(fileId);
+    if (activeFileId === fileId) {
+      setActiveFileId(null);
+      setActiveFileName(null);
+    }
+  };
+
   return (
     <div className="app-shell">
       <ConversationSidebar
@@ -179,10 +212,13 @@ export default function App() {
           {error ? <ErrorMessage text={error} onRetry={() => void bootstrap()} /> : null}
         </div>
         <div className="composer-wrap">
+          {activeFileName ? (
+            <div className="active-file-pill">Using: {activeFileName}</div>
+          ) : null}
           <ChatComposer disabled={sending || !selectedId} onSend={sendMessage} onUpload={(list) => void files.upload(list)} />
         </div>
       </main>
-      <UploadedFilesPanel files={files} />
+      <UploadedFilesPanel files={{ ...files, remove: removeFile }} activeFileId={activeFileId} onSelectActive={(id) => void selectActiveFile(id)} />
     </div>
   );
 }

@@ -86,7 +86,12 @@ def build_catalog(table_entries: list[dict], cache_dir: Path) -> dict:
                 "table_name": table_name,
                 "source": f"{entry['source_file']} / {entry['source_sheet']}",
                 "source_path": entry["source_path"],
+                "source_file": entry.get("source_file"),
+                "source_sheet": entry.get("source_sheet"),
                 "parquet_path": entry["parquet_path"],
+                "file_id": entry.get("file_id") or entry.get("source_file_id"),
+                "source_file_id": entry.get("source_file_id") or entry.get("file_id"),
+                "sha256": entry.get("sha256"),
                 "row_count": len(df),
                 "columns": column_profiles,
                 "metrics": metrics,
@@ -102,4 +107,3 @@ def build_catalog(table_entries: list[dict], cache_dir: Path) -> dict:
 
 def load_catalog(cache_dir: Path) -> dict:
     return json.loads((cache_dir / "data_catalog.json").read_text(encoding="utf-8"))
-

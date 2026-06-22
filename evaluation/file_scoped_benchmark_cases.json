@@ -1,0 +1,3202 @@
+[
+  {
+    "id": "FSB-001",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Top 5 may theo tong downtime #1",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-002",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong downtime la bao nhieu #2",
+    "active_file_key": "machine",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-003",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Dem so dong downtime #3",
+    "active_file_key": "machine",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-004",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Ve bieu do cot top 5 may theo downtime #4",
+    "active_file_key": "machine",
+    "expected_response_type": "chart",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-005",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Top 5 nguyen nhan ton that #5",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-006",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong thoi luong ton that #6",
+    "active_file_key": "loss",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-007",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Theo nhom ton that dem so lan #7",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-008",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong gia tri can la bao nhieu #8",
+    "active_file_key": "entry",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-009",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Co bao nhieu cong khac nhau #9",
+    "active_file_key": "entry",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-010",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Top 5 may theo tong downtime #10",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-011",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong downtime la bao nhieu #11",
+    "active_file_key": "machine",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-012",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Dem so dong downtime #12",
+    "active_file_key": "machine",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-013",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Ve bieu do cot top 5 may theo downtime #13",
+    "active_file_key": "machine",
+    "expected_response_type": "chart",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-014",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Top 5 nguyen nhan ton that #14",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-015",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong thoi luong ton that #15",
+    "active_file_key": "loss",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-016",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Theo nhom ton that dem so lan #16",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-017",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong gia tri can la bao nhieu #17",
+    "active_file_key": "entry",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-018",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Co bao nhieu cong khac nhau #18",
+    "active_file_key": "entry",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-019",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Top 5 may theo tong downtime #19",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-020",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong downtime la bao nhieu #20",
+    "active_file_key": "machine",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-021",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Dem so dong downtime #21",
+    "active_file_key": "machine",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-022",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Ve bieu do cot top 5 may theo downtime #22",
+    "active_file_key": "machine",
+    "expected_response_type": "chart",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-023",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Top 5 nguyen nhan ton that #23",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-024",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong thoi luong ton that #24",
+    "active_file_key": "loss",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-025",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Theo nhom ton that dem so lan #25",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-026",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong gia tri can la bao nhieu #26",
+    "active_file_key": "entry",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-027",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Co bao nhieu cong khac nhau #27",
+    "active_file_key": "entry",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-028",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Top 5 may theo tong downtime #28",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-029",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong downtime la bao nhieu #29",
+    "active_file_key": "machine",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-030",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Dem so dong downtime #30",
+    "active_file_key": "machine",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-031",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Ve bieu do cot top 5 may theo downtime #31",
+    "active_file_key": "machine",
+    "expected_response_type": "chart",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-032",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Top 5 nguyen nhan ton that #32",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-033",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong thoi luong ton that #33",
+    "active_file_key": "loss",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-034",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Theo nhom ton that dem so lan #34",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-035",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong gia tri can la bao nhieu #35",
+    "active_file_key": "entry",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-036",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Co bao nhieu cong khac nhau #36",
+    "active_file_key": "entry",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-037",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Top 5 may theo tong downtime #37",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-038",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong downtime la bao nhieu #38",
+    "active_file_key": "machine",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-039",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Dem so dong downtime #39",
+    "active_file_key": "machine",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-040",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Ve bieu do cot top 5 may theo downtime #40",
+    "active_file_key": "machine",
+    "expected_response_type": "chart",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-041",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Top 5 nguyen nhan ton that #41",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-042",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong thoi luong ton that #42",
+    "active_file_key": "loss",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-043",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Theo nhom ton that dem so lan #43",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-044",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Tong gia tri can la bao nhieu #44",
+    "active_file_key": "entry",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-045",
+    "split": "dev",
+    "category": "deterministic",
+    "question": "Co bao nhieu cong khac nhau #45",
+    "active_file_key": "entry",
+    "expected_response_type": "scalar",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-046",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #1",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-047",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "So sanh may co downtime cao voi may con lai #2",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-048",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #3",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-049",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Cho toi mot insight ngan ve luong xe ra vao cong #4",
+    "active_file_key": "entry",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-050",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #5",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-051",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "So sanh may co downtime cao voi may con lai #6",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-052",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #7",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-053",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Cho toi mot insight ngan ve luong xe ra vao cong #8",
+    "active_file_key": "entry",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-054",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #9",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-055",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "So sanh may co downtime cao voi may con lai #10",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-056",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #11",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-057",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Cho toi mot insight ngan ve luong xe ra vao cong #12",
+    "active_file_key": "entry",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-058",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #13",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-059",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "So sanh may co downtime cao voi may con lai #14",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-060",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #15",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-061",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Cho toi mot insight ngan ve luong xe ra vao cong #16",
+    "active_file_key": "entry",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-062",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #17",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-063",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "So sanh may co downtime cao voi may con lai #18",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-064",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #19",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-065",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Cho toi mot insight ngan ve luong xe ra vao cong #20",
+    "active_file_key": "entry",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-066",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #21",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-067",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "So sanh may co downtime cao voi may con lai #22",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-068",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #23",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-069",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Cho toi mot insight ngan ve luong xe ra vao cong #24",
+    "active_file_key": "entry",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-070",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #25",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-071",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "So sanh may co downtime cao voi may con lai #26",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-072",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #27",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-073",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Cho toi mot insight ngan ve luong xe ra vao cong #28",
+    "active_file_key": "entry",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-074",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #29",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-075",
+    "split": "dev",
+    "category": "real_llm_candidate",
+    "question": "So sanh may co downtime cao voi may con lai #30",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-076",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #1",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-077",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #2",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-078",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #3",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-079",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #4",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-080",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #5",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-081",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #6",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-082",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #7",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-083",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #8",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-084",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #9",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-085",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #10",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-086",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #11",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-087",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #12",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-088",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #13",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-089",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #14",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-090",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #15",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-091",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #16",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-092",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #17",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-093",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #18",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-094",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #19",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-095",
+    "split": "dev",
+    "category": "clarification",
+    "question": "Cau nay mo ho ve hieu suat #20",
+    "active_file_key": "machine",
+    "expected_response_type": "clarification",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-096",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Du bao downtime ngay mai #1",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-097",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Gia co phieu cua cong ty la bao nhieu #2",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-098",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Viet email cho khach hang #3",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-099",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Noi dung cua Loss_Assignment khi dang chon file khac #4",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-100",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Du bao downtime ngay mai #5",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-101",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Gia co phieu cua cong ty la bao nhieu #6",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-102",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Viet email cho khach hang #7",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-103",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Noi dung cua Loss_Assignment khi dang chon file khac #8",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-104",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Du bao downtime ngay mai #9",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-105",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Gia co phieu cua cong ty la bao nhieu #10",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-106",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Viet email cho khach hang #11",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-107",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Noi dung cua Loss_Assignment khi dang chon file khac #12",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-108",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Du bao downtime ngay mai #13",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-109",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Gia co phieu cua cong ty la bao nhieu #14",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-110",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Viet email cho khach hang #15",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-111",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Noi dung cua Loss_Assignment khi dang chon file khac #16",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-112",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Du bao downtime ngay mai #17",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-113",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Gia co phieu cua cong ty la bao nhieu #18",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-114",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Viet email cho khach hang #19",
+    "active_file_key": "entry",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-115",
+    "split": "dev",
+    "category": "refusal",
+    "question": "Noi dung cua Loss_Assignment khi dang chon file khac #20",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-116",
+    "split": "dev",
+    "category": "safe_failure",
+    "question": "Truy van khong an toan bang SQL delete #1",
+    "active_file_key": "machine",
+    "expected_response_type": "error",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-117",
+    "split": "dev",
+    "category": "safe_failure",
+    "question": "Truy van khong an toan bang SQL delete #2",
+    "active_file_key": "machine",
+    "expected_response_type": "error",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-118",
+    "split": "dev",
+    "category": "safe_failure",
+    "question": "Truy van khong an toan bang SQL delete #3",
+    "active_file_key": "machine",
+    "expected_response_type": "error",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-119",
+    "split": "dev",
+    "category": "safe_failure",
+    "question": "Truy van khong an toan bang SQL delete #4",
+    "active_file_key": "machine",
+    "expected_response_type": "error",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-120",
+    "split": "dev",
+    "category": "safe_failure",
+    "question": "Truy van khong an toan bang SQL delete #5",
+    "active_file_key": "machine",
+    "expected_response_type": "error",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-121",
+    "split": "dev",
+    "category": "safe_failure",
+    "question": "Truy van khong an toan bang SQL delete #6",
+    "active_file_key": "machine",
+    "expected_response_type": "error",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-122",
+    "split": "dev",
+    "category": "safe_failure",
+    "question": "Truy van khong an toan bang SQL delete #7",
+    "active_file_key": "machine",
+    "expected_response_type": "error",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-123",
+    "split": "dev",
+    "category": "safe_failure",
+    "question": "Truy van khong an toan bang SQL delete #8",
+    "active_file_key": "machine",
+    "expected_response_type": "error",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-124",
+    "split": "dev",
+    "category": "safe_failure",
+    "question": "Truy van khong an toan bang SQL delete #9",
+    "active_file_key": "machine",
+    "expected_response_type": "error",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-125",
+    "split": "dev",
+    "category": "safe_failure",
+    "question": "Truy van khong an toan bang SQL delete #10",
+    "active_file_key": "machine",
+    "expected_response_type": "error",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-126",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "noi dung cua data #1",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-127",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "cho toi xem schema #2",
+    "active_file_key": "loss",
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-128",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "xem 5 dong mau #3",
+    "active_file_key": "entry",
+    "expected_response_type": "sample_table",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-129",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "du lieu tu ngay nao #4",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-130",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "chat luong du lieu #5",
+    "active_file_key": "loss",
+    "expected_response_type": "data_quality",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-131",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "noi dung cua data #6",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-132",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "cho toi xem schema #7",
+    "active_file_key": "loss",
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-133",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "xem 5 dong mau #8",
+    "active_file_key": "entry",
+    "expected_response_type": "sample_table",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-134",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "du lieu tu ngay nao #9",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-135",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "chat luong du lieu #10",
+    "active_file_key": "loss",
+    "expected_response_type": "data_quality",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-136",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "noi dung cua data #11",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-137",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "cho toi xem schema #12",
+    "active_file_key": "loss",
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-138",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "xem 5 dong mau #13",
+    "active_file_key": "entry",
+    "expected_response_type": "sample_table",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-139",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "du lieu tu ngay nao #14",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-140",
+    "split": "dev",
+    "category": "file_scope",
+    "question": "chat luong du lieu #15",
+    "active_file_key": "loss",
+    "expected_response_type": "data_quality",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-141",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "noi dung cua data #16",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-142",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "cho toi xem schema #17",
+    "active_file_key": "loss",
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-143",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "xem 5 dong mau #18",
+    "active_file_key": "entry",
+    "expected_response_type": "sample_table",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-144",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "du lieu tu ngay nao #19",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-145",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "chat luong du lieu #20",
+    "active_file_key": "loss",
+    "expected_response_type": "data_quality",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-146",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "noi dung cua data #21",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-147",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "cho toi xem schema #22",
+    "active_file_key": "loss",
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-148",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "xem 5 dong mau #23",
+    "active_file_key": "entry",
+    "expected_response_type": "sample_table",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-149",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "du lieu tu ngay nao #24",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-150",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "chat luong du lieu #25",
+    "active_file_key": "loss",
+    "expected_response_type": "data_quality",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-151",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "noi dung cua data #26",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-152",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "cho toi xem schema #27",
+    "active_file_key": "loss",
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-153",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "xem 5 dong mau #28",
+    "active_file_key": "entry",
+    "expected_response_type": "sample_table",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-154",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "du lieu tu ngay nao #29",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-155",
+    "split": "holdout",
+    "category": "file_scope",
+    "question": "chat luong du lieu #30",
+    "active_file_key": "loss",
+    "expected_response_type": "data_quality",
+    "expected_no_sql": true,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-156",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 5 may, chi thang gan nhat, ve bieu do cot #1",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-157",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 10 nguyen nhan, gom theo nhom, sap xep giam dan #2",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-158",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Tong downtime va so lan dung theo may #3",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-159",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Bao cao HTML top downtime va bang chi tiet #4",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-160",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "So sanh theo thang va ve line chart #5",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-161",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 5 may, chi thang gan nhat, ve bieu do cot #6",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-162",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 10 nguyen nhan, gom theo nhom, sap xep giam dan #7",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-163",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Tong downtime va so lan dung theo may #8",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-164",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Bao cao HTML top downtime va bang chi tiet #9",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-165",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "So sanh theo thang va ve line chart #10",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-166",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 5 may, chi thang gan nhat, ve bieu do cot #11",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-167",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 10 nguyen nhan, gom theo nhom, sap xep giam dan #12",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-168",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Tong downtime va so lan dung theo may #13",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-169",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Bao cao HTML top downtime va bang chi tiet #14",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-170",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "So sanh theo thang va ve line chart #15",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-171",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 5 may, chi thang gan nhat, ve bieu do cot #16",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-172",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 10 nguyen nhan, gom theo nhom, sap xep giam dan #17",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-173",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Tong downtime va so lan dung theo may #18",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-174",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Bao cao HTML top downtime va bang chi tiet #19",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-175",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "So sanh theo thang va ve line chart #20",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-176",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 5 may, chi thang gan nhat, ve bieu do cot #21",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-177",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 10 nguyen nhan, gom theo nhom, sap xep giam dan #22",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-178",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Tong downtime va so lan dung theo may #23",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-179",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Bao cao HTML top downtime va bang chi tiet #24",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-180",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "So sanh theo thang va ve line chart #25",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-181",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 5 may, chi thang gan nhat, ve bieu do cot #26",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-182",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 10 nguyen nhan, gom theo nhom, sap xep giam dan #27",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-183",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Tong downtime va so lan dung theo may #28",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-184",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Bao cao HTML top downtime va bang chi tiet #29",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-185",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "So sanh theo thang va ve line chart #30",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-186",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 5 may, chi thang gan nhat, ve bieu do cot #31",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-187",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Top 10 nguyen nhan, gom theo nhom, sap xep giam dan #32",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-188",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Tong downtime va so lan dung theo may #33",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-189",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "Bao cao HTML top downtime va bang chi tiet #34",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-190",
+    "split": "holdout",
+    "category": "multipart",
+    "question": "So sanh theo thang va ve line chart #35",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": null
+  },
+  {
+    "id": "FSB-191",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 may theo tong downtime",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-01"
+  },
+  {
+    "id": "FSB-192",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-01"
+  },
+  {
+    "id": "FSB-193",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-01"
+  },
+  {
+    "id": "FSB-194",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-01"
+  },
+  {
+    "id": "FSB-195",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-01"
+  },
+  {
+    "id": "FSB-196",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-01"
+  },
+  {
+    "id": "FSB-197",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-02"
+  },
+  {
+    "id": "FSB-198",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-02"
+  },
+  {
+    "id": "FSB-199",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-02"
+  },
+  {
+    "id": "FSB-200",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-02"
+  },
+  {
+    "id": "FSB-201",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-02"
+  },
+  {
+    "id": "FSB-202",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-02"
+  },
+  {
+    "id": "FSB-203",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 may theo tong downtime",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-03"
+  },
+  {
+    "id": "FSB-204",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-03"
+  },
+  {
+    "id": "FSB-205",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-03"
+  },
+  {
+    "id": "FSB-206",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-03"
+  },
+  {
+    "id": "FSB-207",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-03"
+  },
+  {
+    "id": "FSB-208",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-03"
+  },
+  {
+    "id": "FSB-209",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-04"
+  },
+  {
+    "id": "FSB-210",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-04"
+  },
+  {
+    "id": "FSB-211",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-04"
+  },
+  {
+    "id": "FSB-212",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-04"
+  },
+  {
+    "id": "FSB-213",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-04"
+  },
+  {
+    "id": "FSB-214",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-04"
+  },
+  {
+    "id": "FSB-215",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 may theo tong downtime",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-05"
+  },
+  {
+    "id": "FSB-216",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-05"
+  },
+  {
+    "id": "FSB-217",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-05"
+  },
+  {
+    "id": "FSB-218",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-05"
+  },
+  {
+    "id": "FSB-219",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-05"
+  },
+  {
+    "id": "FSB-220",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-05"
+  },
+  {
+    "id": "FSB-221",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-06"
+  },
+  {
+    "id": "FSB-222",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-06"
+  },
+  {
+    "id": "FSB-223",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-06"
+  },
+  {
+    "id": "FSB-224",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-06"
+  },
+  {
+    "id": "FSB-225",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-06"
+  },
+  {
+    "id": "FSB-226",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-06"
+  },
+  {
+    "id": "FSB-227",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 may theo tong downtime",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-07"
+  },
+  {
+    "id": "FSB-228",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-07"
+  },
+  {
+    "id": "FSB-229",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-07"
+  },
+  {
+    "id": "FSB-230",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-07"
+  },
+  {
+    "id": "FSB-231",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-07"
+  },
+  {
+    "id": "FSB-232",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-07"
+  },
+  {
+    "id": "FSB-233",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-08"
+  },
+  {
+    "id": "FSB-234",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-08"
+  },
+  {
+    "id": "FSB-235",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-08"
+  },
+  {
+    "id": "FSB-236",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-08"
+  },
+  {
+    "id": "FSB-237",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-08"
+  },
+  {
+    "id": "FSB-238",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-08"
+  },
+  {
+    "id": "FSB-239",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 may theo tong downtime",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-09"
+  },
+  {
+    "id": "FSB-240",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-09"
+  },
+  {
+    "id": "FSB-241",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-09"
+  },
+  {
+    "id": "FSB-242",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-09"
+  },
+  {
+    "id": "FSB-243",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-09"
+  },
+  {
+    "id": "FSB-244",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-09"
+  },
+  {
+    "id": "FSB-245",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-10"
+  },
+  {
+    "id": "FSB-246",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-10"
+  },
+  {
+    "id": "FSB-247",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-10"
+  },
+  {
+    "id": "FSB-248",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-10"
+  },
+  {
+    "id": "FSB-249",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-10"
+  },
+  {
+    "id": "FSB-250",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-10"
+  },
+  {
+    "id": "FSB-251",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 may theo tong downtime",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-11"
+  },
+  {
+    "id": "FSB-252",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-11"
+  },
+  {
+    "id": "FSB-253",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-11"
+  },
+  {
+    "id": "FSB-254",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-11"
+  },
+  {
+    "id": "FSB-255",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-11"
+  },
+  {
+    "id": "FSB-256",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-11"
+  },
+  {
+    "id": "FSB-257",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-12"
+  },
+  {
+    "id": "FSB-258",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-12"
+  },
+  {
+    "id": "FSB-259",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-12"
+  },
+  {
+    "id": "FSB-260",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-12"
+  },
+  {
+    "id": "FSB-261",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-12"
+  },
+  {
+    "id": "FSB-262",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-12"
+  },
+  {
+    "id": "FSB-263",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 may theo tong downtime",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-13"
+  },
+  {
+    "id": "FSB-264",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-13"
+  },
+  {
+    "id": "FSB-265",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-13"
+  },
+  {
+    "id": "FSB-266",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-13"
+  },
+  {
+    "id": "FSB-267",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-13"
+  },
+  {
+    "id": "FSB-268",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-13"
+  },
+  {
+    "id": "FSB-269",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-14"
+  },
+  {
+    "id": "FSB-270",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-14"
+  },
+  {
+    "id": "FSB-271",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-14"
+  },
+  {
+    "id": "FSB-272",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-14"
+  },
+  {
+    "id": "FSB-273",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-14"
+  },
+  {
+    "id": "FSB-274",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-14"
+  },
+  {
+    "id": "FSB-275",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Top 5 may theo tong downtime",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-15"
+  },
+  {
+    "id": "FSB-276",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Chi lay thang gan nhat",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-15"
+  },
+  {
+    "id": "FSB-277",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Ve bieu do cot",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-15"
+  },
+  {
+    "id": "FSB-278",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Quay lai cau dau tien",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-15"
+  },
+  {
+    "id": "FSB-279",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Doi thanh top 3",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-15"
+  },
+  {
+    "id": "FSB-280",
+    "split": "holdout",
+    "category": "context_sequence",
+    "question": "Xem schema",
+    "active_file_key": "machine",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "CTX-15"
+  },
+  {
+    "id": "FSB-281",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "noi dung cua data",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-01"
+  },
+  {
+    "id": "FSB-282",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Loss_Assignment",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-01"
+  },
+  {
+    "id": "FSB-283",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "XFILE-01"
+  },
+  {
+    "id": "FSB-284",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Machine_Downtime",
+    "active_file_key": "loss",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-01"
+  },
+  {
+    "id": "FSB-285",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "noi dung cua data",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-02"
+  },
+  {
+    "id": "FSB-286",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Loss_Assignment",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-02"
+  },
+  {
+    "id": "FSB-287",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "XFILE-02"
+  },
+  {
+    "id": "FSB-288",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Machine_Downtime",
+    "active_file_key": "loss",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-02"
+  },
+  {
+    "id": "FSB-289",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "noi dung cua data",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-03"
+  },
+  {
+    "id": "FSB-290",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Loss_Assignment",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-03"
+  },
+  {
+    "id": "FSB-291",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "XFILE-03"
+  },
+  {
+    "id": "FSB-292",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Machine_Downtime",
+    "active_file_key": "loss",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-03"
+  },
+  {
+    "id": "FSB-293",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "noi dung cua data",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-04"
+  },
+  {
+    "id": "FSB-294",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Loss_Assignment",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-04"
+  },
+  {
+    "id": "FSB-295",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "XFILE-04"
+  },
+  {
+    "id": "FSB-296",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Machine_Downtime",
+    "active_file_key": "loss",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-04"
+  },
+  {
+    "id": "FSB-297",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "noi dung cua data",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-05"
+  },
+  {
+    "id": "FSB-298",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Loss_Assignment",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-05"
+  },
+  {
+    "id": "FSB-299",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "XFILE-05"
+  },
+  {
+    "id": "FSB-300",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Machine_Downtime",
+    "active_file_key": "loss",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-05"
+  },
+  {
+    "id": "FSB-301",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "noi dung cua data",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-06"
+  },
+  {
+    "id": "FSB-302",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Loss_Assignment",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-06"
+  },
+  {
+    "id": "FSB-303",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "XFILE-06"
+  },
+  {
+    "id": "FSB-304",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Machine_Downtime",
+    "active_file_key": "loss",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-06"
+  },
+  {
+    "id": "FSB-305",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "noi dung cua data",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-07"
+  },
+  {
+    "id": "FSB-306",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Loss_Assignment",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-07"
+  },
+  {
+    "id": "FSB-307",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "XFILE-07"
+  },
+  {
+    "id": "FSB-308",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Machine_Downtime",
+    "active_file_key": "loss",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-07"
+  },
+  {
+    "id": "FSB-309",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "noi dung cua data",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-08"
+  },
+  {
+    "id": "FSB-310",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Loss_Assignment",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-08"
+  },
+  {
+    "id": "FSB-311",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "XFILE-08"
+  },
+  {
+    "id": "FSB-312",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Machine_Downtime",
+    "active_file_key": "loss",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-08"
+  },
+  {
+    "id": "FSB-313",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "noi dung cua data",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-09"
+  },
+  {
+    "id": "FSB-314",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Loss_Assignment",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-09"
+  },
+  {
+    "id": "FSB-315",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "XFILE-09"
+  },
+  {
+    "id": "FSB-316",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Machine_Downtime",
+    "active_file_key": "loss",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-09"
+  },
+  {
+    "id": "FSB-317",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "noi dung cua data",
+    "active_file_key": "machine",
+    "expected_response_type": "data_overview",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-10"
+  },
+  {
+    "id": "FSB-318",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Loss_Assignment",
+    "active_file_key": "machine",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-10"
+  },
+  {
+    "id": "FSB-319",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "Top 5 nguyen nhan ton that",
+    "active_file_key": "loss",
+    "expected_response_type": "table",
+    "expected_no_sql": false,
+    "sequence_id": "XFILE-10"
+  },
+  {
+    "id": "FSB-320",
+    "split": "holdout",
+    "category": "cross_file_sequence",
+    "question": "hoi ve Machine_Downtime",
+    "active_file_key": "loss",
+    "expected_response_type": "refusal",
+    "expected_no_sql": true,
+    "sequence_id": "XFILE-10"
+  }
+]

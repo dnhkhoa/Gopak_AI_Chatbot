@@ -11,7 +11,10 @@ export type ResponseType =
   | "data_overview"
   | "schema"
   | "sample_table"
-  | "data_quality";
+  | "data_quality"
+  | "record_detail"
+  | "record_table"
+  | "timeline";
 
 export interface TablePayload {
   columns: string[];
@@ -73,6 +76,8 @@ export interface ConversationPayload {
   created_at: string;
   updated_at: string;
   status: string;
+  active_file_id?: string | null;
+  active_file_name?: string | null;
 }
 
 export interface ConversationMessage {
@@ -85,6 +90,13 @@ export interface ConversationMessage {
 
 export interface ConversationDetail extends ConversationPayload {
   messages: ConversationMessage[];
+}
+
+export interface ActiveFilePayload {
+  conversation_id: string;
+  active_file_id?: string | null;
+  active_file_name?: string | null;
+  status: string;
 }
 
 export interface UiMessage {

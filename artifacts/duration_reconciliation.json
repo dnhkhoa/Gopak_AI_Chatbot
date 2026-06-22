@@ -1,0 +1,6 @@
+{
+  "reported_parse_non_null": 9151,
+  "calculated_parse_non_null": 9151,
+  "duration_anomalies": 0,
+  "policy": "duration_seconds = duration_reported_seconds when valid"
+}

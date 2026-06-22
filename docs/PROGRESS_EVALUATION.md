@@ -407,6 +407,182 @@ Priority fixes:
 2. Improve deterministic handling for ambiguity/refusal, semantic matching, bottom-N, date ranges, and multi-turn filters.
 3. Add chart-specific comparators for x/y data and tooltip formatting once planner correctness improves.
 
+## FILE-SCOPED QUERY ROUTING, MULTI-PART COVERAGE AND TOPIC MEMORY BENCHMARK
+
+Updated: 2026-06-22
+
+Status: FILE-SCOPE ENFORCEMENT IMPLEMENTED, BENCHMARK NOT PRODUCTION READY
+
+Implemented:
+
+- Added conversation-level `active_file_id` and `active_file_name`.
+- Added per-file memory containers in `ConversationState`.
+- Added `PUT /api/conversations/{conversation_id}/active-file`.
+- Added `ChatApplicationService.get_catalog_for_file(file_id)`.
+- Changed the production message path so metadata, planner, validator, executor, chart builder, and source renderer receive only the selected-file catalog.
+- Added plan-table subset validation before DuckDB execution.
+- Added no-SQL preflight for no selected file, missing/deleted file, non-ready file, and questions that mention another uploaded file.
+- Added response metadata: `active_file_id`, `active_file_name`, `file_scope_validated`.
+- Wired React file selection to the backend active-file endpoint.
+- Added regression tests for the new file-selection contract and no-file clarification.
+
+Audit proof before the change:
+
+- Runtime catalog had 3 tables loaded at once: EntryTransaction, Loss_Assignment, and Machine_Downtime.
+- `process_message()` previously passed the full catalog into metadata responders, `QueryPlanner`, and `SafeQueryExecutor`.
+- The frontend selected file state was local-only and did not affect backend execution.
+
+Smoke proof after the change:
+
+- No file selected returns `clarification` with `generated_sql=None`.
+- Selecting `Machine_Downtime_20260203_100753.xlsx` and asking `noi dung cua data` returns one selected-file overview row.
+- Asking about `Loss_Assignment` while Machine_Downtime is selected returns refusal with no SQL.
+
+Benchmark:
+
+- Runner: `evaluation/run_file_scoped_benchmark.py`
+- Cases artifact: `evaluation/file_scoped_benchmark_cases.json`
+- Latest expanded run: 320 turn-cases.
+- Passed: 166/320 = 51.88%.
+- Dev: 77/140 = 55.00%.
+- Holdout: 89/180 = 49.44%.
+- Clarification/refusal no-SQL: 100%.
+- Cross-file sequence: 75%.
+- File-scope metadata cases: 60%.
+- Multipart/context/REAL_LLM candidate behavior remains below acceptance quality.
+
+Artifacts:
+
+- `artifacts/file_scoped_benchmark_dev.json`
+- `artifacts/file_scoped_benchmark_holdout.json`
+- `artifacts/routing_confusion_matrix.csv`
+- `artifacts/routing_metrics.json`
+- `artifacts/multipart_coverage.json`
+- `artifacts/context_switch_traces.json`
+- `artifacts/file_switch_traces.json`
+- `artifacts/file_scope_violations.json`
+- `artifacts/benchmark_failures.md`
+- `artifacts/benchmark_summary.md`
+- `artifacts/benchmark_latency.csv`
+- `artifacts/customer_benchmark_questions.xlsx`
+
+Verification:
+
+- `python -m compileall src backend`: passed.
+- `python -m pytest -q`: 64 passed.
+- `npm test -- --run`: 18 passed.
+- `npm run build`: passed with the existing non-blocking Vite chunk-size warning.
+
+Remaining work:
+
+1. Strengthen topic-frame restoration for A/B/A semantic switching.
+2. Improve multipart decomposition so chart/time/ranking/filter requirements are all preserved.
+3. Add stricter safe-failure policy for destructive SQL-like phrasing.
+4. Improve REAL_LLM candidate routing with qwen3.5 JSON/schema adherence.
+
+## DYNAMIC HEADER DETECTION, ROW-LEVEL QUERY AND INTERVAL SEMANTICS
+
+Updated: 2026-06-22
+
+Status: IMPLEMENTED FOR AVAILABLE WORKBOOK, SAMPLE ORACLE FILE NOT PRESENT
+
+Requested sample file `Operation_Downtime_20251212_101824 (2)(1).xlsx` was not available in the workspace or `D:\` during this session. The implementation supports it by filename when added, but the benchmark artifacts were generated using the available selected fallback workbook `Machine_Downtime_20260203_100753.xlsx`.
+
+Header detection before:
+
+- Simple first-100-row scoring.
+- No explicit metadata-row rejection.
+- Candidate area could include trailing garbage.
+- `Note` was dropped when all-null.
+
+Header detection after:
+
+- Scans at least 200 rows.
+- Rejects report metadata rows.
+- Scores semantic headers, density, contiguous columns, and consecutive valid records.
+- Detects repeated headers/footer rows.
+- Keeps business all-null columns such as `Note`.
+- Drops trailing numeric/blank artifact columns.
+
+Fallback workbook header result:
+
+- Header row: 35.
+- First data row: 36.
+- Last data row: 9186.
+- Source columns: D:L.
+- Normalized records: 9,151.
+- Garbage columns included: 0.
+
+Normalized provenance fields:
+
+- `_source_file_id`
+- `_source_file_name`
+- `_source_sheet`
+- `_source_excel_row`
+- `_source_header_row`
+- `_data_row_index`
+- `_record_no`
+- `_import_id`
+
+Row query capabilities:
+
+- Record lookup by `No.` / `_record_no`.
+- Lookup by physical Excel row.
+- Lookup by normalized data-row index.
+- First/latest/earliest event by datetime.
+- Machine/date/time-window row queries using interval overlap.
+- Duplicate, missing-classification, duration > 24 hours, and negative-interval queries.
+- Operating-time questions return clarification instead of asserting machine runtime from downtime records.
+
+Duration policy:
+
+- Preserve `duration_reported_text`.
+- Parse `duration_reported_seconds`.
+- Compute `duration_calculated_seconds`.
+- Store `duration_difference_seconds` and `duration_anomaly`.
+- Canonical `duration_seconds` currently uses reported duration.
+
+Duplicate policy:
+
+- No duplicate rows are silently deleted.
+- `_is_exact_duplicate`, `_duplicate_group_id`, and `_duplicate_group_size` are persisted.
+- Raw record count remains distinct from deduplicated event count.
+
+Interval policy:
+
+- Row-level date/time filters use interval overlap:
+  `event_start < window_end AND event_end >= window_start`.
+- Cross-midnight records are detected in validation artifacts.
+- Generic analytical planner date filters still need deeper clipped-duration support.
+
+Benchmark results:
+
+- Header detection benchmark: 15/15 passed = 100%.
+- Row-level benchmark: 81/81 passed = 100% on fallback workbook.
+- Row-level P50 latency: 225.6 ms.
+- Row-level P95 latency: 675.2 ms.
+
+Artifacts:
+
+- `artifacts/header_detection_results.json`
+- `artifacts/header_detection_failures.md`
+- `artifacts/row_level_benchmark_results.json`
+- `artifacts/row_level_benchmark_failures.md`
+- `artifacts/record_provenance_checks.json`
+- `artifacts/interval_query_checks.json`
+- `artifacts/duration_reconciliation.json`
+- `artifacts/duplicate_and_overlap_report.json`
+- `artifacts/row_query_latency.csv`
+- `docs/ROW_LEVEL_AND_HEADER_AUDIT.md`
+- `docs/ROW_LEVEL_QUERY_ARCHITECTURE.md`
+- `docs/HEADER_DETECTION_DESIGN.md`
+
+Remaining limitations:
+
+1. Requested Operation workbook oracle values were not verified because the file is missing.
+2. Row-level implementation currently sits as a deterministic service layer before planner, not as full first-class `QueryPlan` variants for every row intent.
+3. Clipped-duration analytical totals by day are not yet generalized through SQL builder/planner.
+
 ## COMPLEX QUERY AND PERSISTENT MEMORY — ROUND 3
 
 Updated: 2026-06-21T06:50:00
@@ -689,3 +865,60 @@ Category coverage includes overview, schema, sample data, data quality, aggregat
 - `python -m pytest tests\test_customer_query_understanding.py -q`: 5 passed.
 - `python evaluation\run_customer_evaluation.py --set development`: 128/130 passed.
 - `python evaluation\run_customer_evaluation.py --set holdout`: 44/50 passed.
+
+## Upload Ingestion Readiness Contract
+
+Updated: 2026-06-22
+
+Status: IMPLEMENTED AND VERIFIED
+
+### Root bug fixed
+
+The old upload API marked a workbook `ready` after `pd.ExcelFile` could open it. That did not prove the file was available to the query layer.
+
+The new lifecycle marks a file `ready` only after:
+
+- raw upload exists and SHA-256 matches metadata;
+- workbook scanner produced at least one table;
+- parquet cache exists and DuckDB can count rows;
+- catalog contains scoped `file_id/source_file_id`;
+- `_source_file_id` provenance matches the selected upload id.
+
+### Implementation
+
+- Added `src/files/lifecycle.py` with upload, process, readiness validation, delete cleanup, and startup reconciliation.
+- Added uploaded-file ingestion support to `ParquetCache.refresh_uploaded_file`.
+- Catalog table entries now carry `file_id`, `source_file_id`, `source_file`, `source_sheet`, `sha256`, and parquet path.
+- Active file selection validates `ready && queryable`.
+- Chat preflight blocks SQL for missing, processing, failed, deleted, or non-queryable files.
+- Delete clears active file references before removing raw/cache/catalog/metadata.
+- Frontend file types now understand `uploaded`, `deleting`, `progress`, `queryable`, `row_count`, `sheet_count`, and `table_count`.
+
+### Existing uploaded files after reconciliation
+
+| File | Status | Queryable | Rows |
+| --- | --- | ---: | ---: |
+| `EntryTransaction_20260203_164943.xlsx` | ready | true | 1,294 |
+| `Loss_Assignment_20260203_100840.xlsx` | ready | true | 36,309 |
+| `Machine_Downtime_20260203_100753.xlsx` | ready | true | 9,151 |
+
+### Artifacts
+
+- `docs/UPLOAD_INGESTION_AUDIT.md`
+- `docs/FILE_UPLOAD_AND_INGESTION_FLOW.md`
+- `docs/FILE_READINESS_CONTRACT.md`
+- `docs/FILE_SELECTION_QUERY_SCOPE.md`
+- `artifacts/upload_ingestion_audit.json`
+- `artifacts/existing_files_readiness.json`
+- `artifacts/upload_lifecycle_tests.json`
+- `artifacts/query_readiness_checks.json`
+- `artifacts/file_scope_checks.json`
+- `artifacts/restart_reconciliation.json`
+- `artifacts/upload_ingestion_failures.md`
+
+### Verification
+
+- `python -m compileall src backend`: passed.
+- `python -m pytest tests/test_customer_query_understanding.py tests/test_web_api.py -q`: 13 passed.
+- `npm test -- --run`: 18 passed.
+- `npm run build`: passed with existing non-blocking Vite chunk-size warning.

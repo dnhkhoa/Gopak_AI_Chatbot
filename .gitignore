@@ -1,12 +1,17 @@
 .env
 .env.local
 *.log
+logs/
 
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.venv/
 
 cache/
+*.db
+*.sqlite
+*.sqlite3
 data/*.db
 data/*.db-*
 data/uploaded_files.json
@@ -18,6 +23,7 @@ artifacts/frontend*.log
 artifacts/streamlit*.log
 
 frontend/node_modules/
+node_modules/
 frontend/dist/
 frontend/*.tsbuildinfo
 frontend/vite.config.js

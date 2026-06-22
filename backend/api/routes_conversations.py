@@ -3,7 +3,7 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, HTTPException, status
 
 from backend.dependencies import get_chat_service
-from backend.schemas.conversation import ConversationCreateRequest, ConversationPatchRequest
+from backend.schemas.conversation import ActiveFilePayload, ActiveFileRequest, ConversationCreateRequest, ConversationPatchRequest
 from src.application import ChatApplicationService
 from src.application.schemas import ConversationDetail, ConversationPayload
 
@@ -66,3 +66,20 @@ def reset_context(
     if not conversation:
         raise HTTPException(status_code=404, detail="Conversation not found")
     return conversation
+
+
+@router.put("/{conversation_id}/active-file", response_model=ActiveFilePayload)
+def set_active_file(
+    conversation_id: str,
+    payload: ActiveFileRequest,
+    service: ChatApplicationService = Depends(get_chat_service),
+) -> ActiveFilePayload:
+    try:
+        active_file = service.set_active_file(conversation_id, payload.file_id)
+    except ValueError as exc:
+        message = str(exc)
+        code = 404 if message == "File not found" else 409
+        raise HTTPException(status_code=code, detail=message) from exc
+    if not active_file:
+        raise HTTPException(status_code=404, detail="Conversation not found")
+    return active_file

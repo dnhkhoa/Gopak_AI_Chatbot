@@ -57,6 +57,49 @@ rows; it never parses Excel to compute them.
 Frontend never parses Excel, never computes aggregations, never generates SQL or
 QueryPlan. It only renders what the backend returns.
 
+## Updated Upload Readiness Contract
+
+Updated: 2026-06-22
+
+The backend now treats `Ready` as queryable, not just uploaded/readable.
+
+`UploadedFile.status` values:
+
+- `uploaded`
+- `uploading` (legacy/mock compatible)
+- `processing`
+- `ready`
+- `failed`
+- `deleting`
+
+Frontend may select/use a file only when:
+
+```ts
+file.status === "ready" && file.queryable === true
+```
+
+Additional additive fields returned by the backend:
+
+```json
+{
+  "processing_stage": "file_validation|sheet_scanning|parquet_write|catalog_update|query_validation|ready|failed|deleting",
+  "progress": 0,
+  "queryable": false,
+  "row_count": 9151,
+  "sheet_count": 1,
+  "table_count": 1,
+  "ready_at": "ISO",
+  "failed_at": "ISO",
+  "error": {"code": "READINESS_FAILED", "message": "..."},
+  "error_code": "READINESS_FAILED",
+  "error_message": "..."
+}
+```
+
+`POST /api/files/upload` now saves the raw `.xlsx`, runs ingestion, writes parquet/cache/catalog, validates with DuckDB, and then returns `ready` or `failed`.
+
+`PUT /api/conversations/{id}/active-file` returns conflict/error for files that are not `ready && queryable`.
+
 ## Endpoint-name confirmations needed
 
 If any existing endpoint differs from the paths above (e.g. message field names, the

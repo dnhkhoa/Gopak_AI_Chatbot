@@ -36,9 +36,9 @@ export function useFiles(): UseFiles {
     void refresh();
   }, [refresh]);
 
-  // Poll while any file is still uploading/processing.
+  // Poll while any file is still moving through the backend ingestion lifecycle.
   useEffect(() => {
-    const pending = files.filter((f) => f.status === "uploading" || f.status === "processing");
+    const pending = files.filter((f) => f.status === "uploaded" || f.status === "uploading" || f.status === "processing" || f.status === "deleting");
     if (!pending.length) return;
     const timer = setTimeout(async () => {
       try {

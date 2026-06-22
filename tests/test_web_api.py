@@ -6,10 +6,12 @@ from pathlib import Path
 import pandas as pd
 from fastapi.testclient import TestClient
 
-from backend.api import routes_files
 from backend.dependencies import get_chat_service
 from backend.main import create_app
+from src.files import lifecycle
+from src.files import upload_store
 from src.application.schemas import (
+    ActiveFilePayload,
     ArtifactPayload,
     ChatResponse,
     ConversationDetail,
@@ -58,6 +60,16 @@ class FakeService:
     def reset_context(self, conversation_id):
         return self.get_conversation(conversation_id)
 
+    def set_active_file(self, conversation_id, file_id):
+        if conversation_id != "c1":
+            return None
+        return ActiveFilePayload(
+            conversation_id=conversation_id,
+            active_file_id=file_id,
+            active_file_name="Machine_Downtime_20260203_100753.xlsx",
+            status="ready",
+        )
+
     def process_message(self, conversation_id, message, debug=False):
         return ChatResponse(
             message_id="m1",
@@ -105,6 +117,7 @@ def test_conversation_crud_contract(tmp_path: Path) -> None:
     assert c.get("/api/conversations").json()[0]["id"] == "c1"
     assert c.get("/api/conversations/c1").json()["messages"][0]["content"] == "Xin chào"
     assert c.patch("/api/conversations/c1", json={"title": "Tên mới"}).json()["title"] == "Tên mới"
+    assert c.put("/api/conversations/c1/active-file", json={"file_id": "file-1"}).json()["active_file_id"] == "file-1"
     assert c.post("/api/conversations/c1/reset-context").status_code == 200
     assert c.delete("/api/conversations/c1").status_code == 204
 
@@ -136,8 +149,9 @@ def test_artifact_download_safety(tmp_path: Path) -> None:
 
 
 def test_file_upload_contract(tmp_path: Path, monkeypatch) -> None:
-    monkeypatch.setattr(routes_files, "_metadata_path", lambda: tmp_path / "uploaded_files.json")
-    monkeypatch.setattr(routes_files, "_upload_dir", lambda: tmp_path / "uploads")
+    monkeypatch.setattr(upload_store, "metadata_path", lambda: tmp_path / "uploaded_files.json")
+    monkeypatch.setattr(upload_store, "upload_dir", lambda: tmp_path / "uploads")
+    monkeypatch.setattr(lifecycle, "upload_dir", lambda: tmp_path / "uploads")
     c = client(tmp_path)
 
     assert c.get("/api/files").json() == []
@@ -148,7 +162,15 @@ def test_file_upload_contract(tmp_path: Path, monkeypatch) -> None:
     assert invalid.status_code == 400
 
     workbook = BytesIO()
-    pd.DataFrame({"value": [1, 2]}).to_excel(workbook, index=False)
+    pd.DataFrame(
+        {
+            "No": [1, 2],
+            "Machine": ["M01", "M02"],
+            "Start": ["2026-01-01 08:00:00", "2026-01-01 09:00:00"],
+            "End": ["2026-01-01 08:30:00", "2026-01-01 09:45:00"],
+            "Duration": [30, 45],
+        }
+    ).to_excel(workbook, index=False)
     workbook.seek(0)
     uploaded = c.post(
         "/api/files/upload",
@@ -164,6 +186,8 @@ def test_file_upload_contract(tmp_path: Path, monkeypatch) -> None:
     payload = uploaded.json()
     assert payload["filename"] == "demo.xlsx"
     assert payload["status"] == "ready"
+    assert payload["queryable"] is True
+    assert payload["row_count"] >= 1
     assert "stored_name" not in payload
 
     assert c.get(f"/api/files/{payload['id']}/status").json()["status"] == "ready"

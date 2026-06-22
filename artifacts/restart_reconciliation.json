@@ -1,0 +1,56 @@
+{
+  "checked": 3,
+  "results": [
+    {
+      "file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "filename": "EntryTransaction_20260203_164943.xlsx",
+      "status": "ready",
+      "queryable": true,
+      "row_count": 1294,
+      "table_count": 1,
+      "sheet_count": 1,
+      "tables": [
+        {
+          "table_name": "col_2ad2989784fc41ffb9fef3225034db54_report_1256ce",
+          "source_sheet": "Report",
+          "row_count": 1294,
+          "parquet_path": "D:\\Gopak Chatbot\\cache\\tables\\col_2ad2989784fc41ffb9fef3225034db54_report_1256ce_2ad2989784fc.parquet"
+        }
+      ]
+    },
+    {
+      "file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "filename": "Loss_Assignment_20260203_100840.xlsx",
+      "status": "ready",
+      "queryable": true,
+      "row_count": 36309,
+      "table_count": 1,
+      "sheet_count": 1,
+      "tables": [
+        {
+          "table_name": "a329169db4984cab80ed5fea5880bb4f_report_bf2c25",
+          "source_sheet": "Report",
+          "row_count": 36309,
+          "parquet_path": "D:\\Gopak Chatbot\\cache\\tables\\a329169db4984cab80ed5fea5880bb4f_report_bf2c25_a329169db498.parquet"
+        }
+      ]
+    },
+    {
+      "file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "filename": "Machine_Downtime_20260203_100753.xlsx",
+      "status": "ready",
+      "queryable": true,
+      "row_count": 9151,
+      "table_count": 1,
+      "sheet_count": 1,
+      "tables": [
+        {
+          "table_name": "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337",
+          "source_sheet": "Report",
+          "row_count": 9151,
+          "parquet_path": "D:\\Gopak Chatbot\\cache\\tables\\e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337_e385c6e2a4ff.parquet"
+        }
+      ]
+    }
+  ]
+}

@@ -51,6 +51,23 @@ export const mockApi: GopakApi = {
     return { ...conversation, messages: (transcripts.get(id) ?? []).map((m) => ({ ...m })) };
   },
 
+  async setActiveFile(id: string, fileId: string) {
+    await delay(100);
+    const conversation = conversations.find((c) => c.id === id);
+    const file = files.find((f) => f.id === fileId);
+    if (!conversation) throw new Error("Conversation not found.");
+    if (!file || file.status !== "ready") throw new Error("File not ready.");
+    conversation.active_file_id = file.id;
+    conversation.active_file_name = file.filename;
+    touch(id);
+    return {
+      conversation_id: id,
+      active_file_id: file.id,
+      active_file_name: file.filename,
+      status: file.status
+    };
+  },
+
   async renameConversation(id: string, title: string) {
     await delay(100);
     conversations = conversations.map((c) => (c.id === id ? { ...c, title } : c));

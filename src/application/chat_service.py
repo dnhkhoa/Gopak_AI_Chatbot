@@ -9,6 +9,7 @@ import pandas as pd
 
 from scripts_ingest import main as run_ingest
 from src.application.schemas import (
+    ActiveFilePayload,
     ArtifactPayload,
     ChartPayload,
     ChatResponse,
@@ -27,6 +28,9 @@ from src.catalog.profiler import load_catalog
 from src.config import Settings, get_settings
 from src.conversation.memory_service import ConversationMemoryService
 from src.application.customer_intents import CustomerIntentResult, detect_customer_intent
+from src.application.row_level import try_row_level_response
+from src.files.lifecycle import FileLifecycleService
+from src.files.upload_store import find_uploaded_file, list_uploaded_files
 from src.llm.ollama_client import OllamaClient
 from src.llm.planner import QueryPlanner
 from src.query.executor import SafeQueryExecutor
@@ -60,6 +64,24 @@ class ChatApplicationService:
             else:
                 self._catalog = load_catalog(self.settings.cache_dir)
         return self._catalog
+
+    def get_catalog_for_file(self, file_id: str) -> dict:
+        catalog = self.get_catalog()
+        record = find_uploaded_file(file_id)
+        if not record:
+            return {**catalog, "tables": []}
+        filename = str(record.get("filename") or "")
+        exact_tables = [
+            table
+            for table in catalog.get("tables", [])
+            if _table_file_id(table) == file_id
+        ]
+        tables = exact_tables or [
+            table
+            for table in catalog.get("tables", [])
+            if _table_source_filename(table).lower() == filename.lower()
+        ]
+        return {**catalog, "tables": tables}
 
     def reload_data(self) -> DataStatus:
         catalog = self.get_catalog(force=True)
@@ -130,6 +152,77 @@ class ChatApplicationService:
             return None
         self.memory_service.reset_conversation(conversation_id)
         return self.get_conversation(conversation_id)
+
+    def create_conversation(self, title: str | None = None) -> ConversationPayload:
+        state = self.memory_service.create_conversation(title=title)
+        record = self.memory_service.get_conversation(state.conversation_id)
+        return _conversation_payload(
+            record or {"id": state.conversation_id, "title": title or "Cuoc tro chuyen", "created_at": "", "updated_at": "", "status": "active"},
+            state,
+        )
+
+    def list_conversations(self) -> list[ConversationPayload]:
+        payloads = []
+        for item in self.memory_service.list_conversations():
+            state = self.memory_service.load_conversation(str(item.get("id", "")))
+            payloads.append(_conversation_payload(item, state))
+        return payloads
+
+    def get_conversation(self, conversation_id: str, limit: int = 200) -> ConversationDetail | None:
+        record = self.memory_service.get_conversation(conversation_id)
+        if not record or record.get("status") == "deleted":
+            return None
+        state = self.memory_service.load_conversation(conversation_id)
+        if state.active_file_id and not find_uploaded_file(state.active_file_id):
+            state.active_file_id = None
+            state.active_file_name = None
+            self.memory_service.save_state(state)
+        turns = self.memory_service.load_recent_turns(conversation_id, limit)
+        return ConversationDetail(
+            **_conversation_payload(record, state).model_dump(),
+            messages=[
+                ConversationMessage(
+                    id=row.get("id"),
+                    role=row.get("role", "assistant"),
+                    content=row.get("content", ""),
+                    created_at=row.get("created_at"),
+                    execution_mode=row.get("execution_mode"),
+                )
+                for row in turns
+            ],
+        )
+
+    def update_conversation(self, conversation_id: str, title: str) -> ConversationPayload | None:
+        if not self.memory_service.get_conversation(conversation_id):
+            return None
+        self.memory_service.update_conversation(conversation_id, title=title.strip()[:120])
+        record = self.memory_service.get_conversation(conversation_id)
+        state = self.memory_service.load_conversation(conversation_id)
+        return _conversation_payload(record, state) if record else None
+
+    def set_active_file(self, conversation_id: str, file_id: str) -> ActiveFilePayload | None:
+        if not self.memory_service.get_conversation(conversation_id):
+            return None
+        record = find_uploaded_file(file_id)
+        if not record:
+            raise ValueError("File not found")
+        if record.get("status") != "ready" or not record.get("queryable"):
+            raise ValueError("File is not ready")
+        readiness = FileLifecycleService(self.settings).validate_readiness(file_id, catalog=self.get_catalog())
+        if not readiness.get("ok"):
+            raise ValueError(str(readiness.get("message") or "File is not queryable"))
+        state = self.memory_service.load_conversation(conversation_id)
+        state.save_file_context()
+        state.active_file_id = str(record.get("id") or "")
+        state.active_file_name = str(record.get("filename") or "")
+        state.restore_file_context(state.active_file_id)
+        self.memory_service.save_state(state)
+        return ActiveFilePayload(
+            conversation_id=conversation_id,
+            active_file_id=state.active_file_id,
+            active_file_name=state.active_file_name,
+            status="ready",
+        )
 
     def process_message(self, conversation_id: str, message: str, debug: bool = False) -> ChatResponse:
         started = perf_counter()
@@ -223,6 +316,284 @@ class ChatApplicationService:
             )
             self.memory_service.save_turn(state, role="assistant", content=response.summary, execution_mode="ERROR")
             return response
+
+    def process_message(self, conversation_id: str, message: str, debug: bool = False) -> ChatResponse:
+        started = perf_counter()
+        message = message.strip()
+        state = self.memory_service.load_conversation(conversation_id)
+        if not self.memory_service.get_conversation(conversation_id):
+            state = self.memory_service.create_conversation()
+            conversation_id = state.conversation_id
+
+        self._set_title_from_first_message(conversation_id, message)
+        self.memory_service.save_turn(state, role="user", content=message)
+
+        preflight = self._preflight_file_scope(conversation_id, state, message, debug, started)
+        if preflight is not None:
+            self.memory_service.save_turn(
+                state,
+                role="assistant",
+                content=preflight.summary or preflight.title,
+                execution_mode=preflight.metadata.get("execution_mode"),
+            )
+            return preflight
+
+        catalog = self.get_catalog_for_file(state.active_file_id or "")
+        if not catalog.get("tables"):
+            response = self._file_scope_response(
+                conversation_id,
+                "error",
+                "Khong the dung file nay",
+                "File dang chon chua co bang du lieu trong catalog. Vui long nap lai du lieu hoac chon file khac.",
+                "SAFE_FAILURE",
+                debug,
+                started,
+                state,
+                file_scope_validated=False,
+            )
+            self.memory_service.save_turn(state, role="assistant", content=response.summary, execution_mode="SAFE_FAILURE")
+            return response
+
+        row_response = try_row_level_response(conversation_id, message, catalog, state, debug, started)
+        if row_response is not None:
+            self.memory_service.save_turn(
+                state,
+                role="assistant",
+                content=row_response.summary or row_response.title,
+                execution_mode=row_response.metadata.get("execution_mode"),
+                query_plan=None,
+                result_summary=None,
+            )
+            return row_response
+
+        customer_intent = detect_customer_intent(message)
+        metadata_response = self._try_metadata_response(conversation_id, message, customer_intent, catalog, debug, started)
+        if metadata_response is not None:
+            self._attach_file_scope_metadata(metadata_response, state, True)
+            self.memory_service.save_turn(
+                state,
+                role="assistant",
+                content=metadata_response.summary or metadata_response.title,
+                execution_mode=metadata_response.metadata.get("execution_mode"),
+                query_plan=None,
+                result_summary=None,
+            )
+            return metadata_response
+
+        result = None
+        html_path: Path | None = None
+        xlsx_path: Path | None = None
+        timings: dict[str, Any] = {}
+
+        try:
+            planner = QueryPlanner(catalog, self.settings)
+            planned = planner.plan(message, state)
+            plan = planned.plan
+            metadata = dict(planned.metadata or {})
+            metadata["persistence_degraded"] = self.memory_service.persistence_degraded
+            self._attach_file_scope_to_metadata(metadata, state, True)
+
+            if not self._plan_within_file_scope(plan, catalog):
+                metadata["execution_mode"] = "SAFE_FAILURE"
+                metadata["file_scope_validated"] = False
+                allowed = {table["table_name"] for table in catalog.get("tables", [])}
+                metadata["file_scope_violation"] = sorted(set(plan.tables) - allowed)
+                plan = QueryPlan(
+                    intent="safe_failure",
+                    output="text",
+                    clarification_question="Khong the tao truy van an toan trong pham vi file dang chon.",
+                )
+
+            if plan.intent in {"clarification", "refusal", "safe_failure"}:
+                presented = build_presented_response(message, plan, pd.DataFrame(), catalog, [])
+            else:
+                query_started = perf_counter()
+                result = SafeQueryExecutor(catalog).execute(plan)
+                timings["query_latency_ms"] = round(result.latency_ms, 1)
+                timings["query_wall_ms"] = round((perf_counter() - query_started) * 1000, 1)
+                chart = build_chart(result.dataframe, plan, catalog)
+                sources = self._sources_for_plan(plan, catalog)
+                presented = build_presented_response(message, plan, result.dataframe, catalog, sources, chart)
+                export_summary = " ".join(part for part in [presented.title, presented.primary_value, presented.summary] if part)
+                if plan.intent == "report" or plan.output == "report":
+                    html_path = export_html_report(message, export_summary, result.dataframe, plan, sources, self.settings.reports_dir)
+                    xlsx_path = export_excel_result(message, export_summary, result.dataframe, sources, self.settings.reports_dir)
+                state.update_from_plan(plan, plan.output)
+                state.update_from_result(result.dataframe)
+
+            metadata.setdefault("latency_ms", {})
+            if isinstance(metadata["latency_ms"], dict):
+                metadata["latency_ms"]["total"] = round((perf_counter() - started) * 1000, 1)
+                metadata["latency_ms"].update(timings)
+            metadata["debug"] = self._debug_payload(debug, plan, result.sql if result else None, state)
+            if isinstance(metadata.get("debug"), dict):
+                metadata["debug"]["scoped_catalog_tables"] = [table.get("table_name") for table in catalog.get("tables", [])]
+
+            response = self._response_from_presented(
+                conversation_id=conversation_id,
+                presented=presented,
+                plan=plan,
+                raw_dataframe=result.dataframe if result else None,
+                catalog=catalog,
+                metadata=metadata,
+                html_path=html_path,
+                xlsx_path=xlsx_path,
+            )
+            assistant_content = response.primary_value or response.summary or response.title
+            self.memory_service.save_turn(
+                state,
+                role="assistant",
+                content=assistant_content,
+                execution_mode=metadata.get("execution_mode") or metadata.get("mode"),
+                query_plan=plan.model_dump(),
+                result_summary=state.last_result_summary,
+                result_dataframe=result.dataframe if result is not None else None,
+            )
+            return response
+        except Exception as exc:
+            response = ChatResponse(
+                message_id=str(uuid4()),
+                conversation_id=conversation_id,
+                response_type="error",
+                title="Khong the hoan tat",
+                summary="Khong the ket noi voi he thong xu ly." if not debug else str(exc),
+                metadata={
+                    "latency_ms": {"total": round((perf_counter() - started) * 1000, 1)},
+                    "active_file_id": state.active_file_id,
+                    "active_file_name": state.active_file_name,
+                    "file_scope_validated": False,
+                },
+            )
+            self.memory_service.save_turn(state, role="assistant", content=response.summary, execution_mode="ERROR")
+            return response
+
+    def _preflight_file_scope(self, conversation_id: str, state, message: str, debug: bool, started: float) -> ChatResponse | None:
+        if not state.active_file_id:
+            return self._file_scope_response(
+                conversation_id,
+                "clarification",
+                "Can chon file",
+                "Vui long chon mot file Excel dang Ready truoc khi dat cau hoi ve du lieu.",
+                "CLARIFICATION",
+                debug,
+                started,
+                state,
+                file_scope_validated=False,
+            )
+        record = find_uploaded_file(state.active_file_id)
+        if not record:
+            state.active_file_id = None
+            state.active_file_name = None
+            self.memory_service.save_state(state)
+            return self._file_scope_response(
+                conversation_id,
+                "clarification",
+                "File dang chon khong con ton tai",
+                "File dang chon da bi xoa. Vui long chon lai mot file Ready.",
+                "CLARIFICATION",
+                debug,
+                started,
+                state,
+                file_scope_validated=False,
+            )
+        state.active_file_name = str(record.get("filename") or state.active_file_name or "")
+        if record.get("status") != "ready" or not record.get("queryable"):
+            status = str(record.get("status") or "")
+            summary = (
+                "File dang duoc xu ly. Vui long doi den khi trang thai Ready roi hoi tiep."
+                if status in {"uploaded", "uploading", "processing"}
+                else "File dang chon chua query duoc. Vui long upload lai file hoac chon file khac."
+            )
+            return self._file_scope_response(
+                conversation_id,
+                "error",
+                "File chua san sang",
+                summary,
+                "SAFE_FAILURE",
+                debug,
+                started,
+                state,
+                file_scope_validated=False,
+            )
+        other = self._mentioned_other_file(message, state.active_file_id)
+        if other:
+            return self._file_scope_response(
+                conversation_id,
+                "refusal",
+                "Dang dung file khac",
+                f"Cuoc hoi thoai nay dang dung file {state.active_file_name}. Neu muon hoi ve {other}, hay chon file do truoc.",
+                "REFUSAL",
+                debug,
+                started,
+                state,
+                file_scope_validated=False,
+            )
+        return None
+
+    def _mentioned_other_file(self, message: str, active_file_id: str) -> str | None:
+        normalized = _ascii_text(message)
+        aliases = {
+            "EntryTransaction": ["entrytransaction", "entry transaction", "entry_transaction", "ra vao cong", "vao cong", "cong"],
+            "Loss_Assignment": ["loss assignment", "loss_assignment", "phan loai ton that", "ton that"],
+            "Machine_Downtime": ["machine downtime", "machine_downtime", "downtime", "may dung", "dung may"],
+        }
+        active = find_uploaded_file(active_file_id) or {}
+        active_name = str(active.get("filename") or "")
+        active_key = next((key for key in aliases if key.lower() in active_name.lower()), "")
+        for record in list_uploaded_files():
+            if record.get("id") == active_file_id:
+                continue
+            filename = str(record.get("filename") or "")
+            key = next((item for item in aliases if item.lower() in filename.lower()), "")
+            terms = aliases.get(key, []) + [_ascii_text(Path(filename).stem)]
+            if key and key != active_key and any(term and term in normalized for term in terms):
+                return filename
+        return None
+
+    def _file_scope_response(
+        self,
+        conversation_id: str,
+        response_type: str,
+        title: str,
+        summary: str,
+        execution_mode: str,
+        debug: bool,
+        started: float,
+        state,
+        file_scope_validated: bool,
+    ) -> ChatResponse:
+        metadata = {
+            "execution_mode": execution_mode,
+            "router_confidence": 1.0,
+            "routing_reason": "file_scope_preflight",
+            "llm_called": False,
+            "generated_sql": None,
+            "latency_ms": {"total": round((perf_counter() - started) * 1000, 1)},
+            "debug": {"state_after": state.model_dump()} if debug else None,
+        }
+        self._attach_file_scope_to_metadata(metadata, state, file_scope_validated)
+        return ChatResponse(
+            message_id=str(uuid4()),
+            conversation_id=conversation_id,
+            response_type=response_type,
+            title=title,
+            summary=summary,
+            metadata=metadata,
+        )
+
+    def _attach_file_scope_metadata(self, response: ChatResponse, state, file_scope_validated: bool) -> None:
+        self._attach_file_scope_to_metadata(response.metadata, state, file_scope_validated)
+
+    def _attach_file_scope_to_metadata(self, metadata: dict[str, Any], state, file_scope_validated: bool) -> None:
+        metadata["active_file_id"] = state.active_file_id
+        metadata["active_file_name"] = state.active_file_name
+        metadata["file_scope_validated"] = file_scope_validated
+
+    def _plan_within_file_scope(self, plan: QueryPlan, catalog: dict) -> bool:
+        if plan.intent in {"clarification", "refusal", "safe_failure"}:
+            return True
+        allowed = {table["table_name"] for table in catalog.get("tables", [])}
+        return bool(plan.tables) and set(plan.tables).issubset(allowed)
 
     def describe_artifact(self, artifact_id: str) -> ArtifactPayload | None:
         path = self.resolve_artifact(artifact_id)
@@ -691,3 +1062,33 @@ def _json_safe(value: Any) -> Any:
         except Exception:
             pass
     return value
+
+
+def _conversation_payload(item: dict[str, Any], state: Any | None = None) -> ConversationPayload:
+    return ConversationPayload(
+        id=str(item.get("id", "")),
+        title=_display_title(str(item.get("title") or "Cuoc tro chuyen")),
+        created_at=str(item.get("created_at") or ""),
+        updated_at=str(item.get("updated_at") or ""),
+        status=str(item.get("status") or "active"),
+        active_file_id=getattr(state, "active_file_id", None),
+        active_file_name=getattr(state, "active_file_name", None),
+    )
+
+
+def _table_source_filename(table: dict) -> str:
+    source = str(table.get("source") or "")
+    file_part = source.split(" / ", 1)[0]
+    return Path(file_part).name
+
+
+def _table_file_id(table: dict) -> str:
+    profile = table.get("profile") if isinstance(table.get("profile"), dict) else {}
+    return str(table.get("file_id") or table.get("source_file_id") or profile.get("source_file_id") or "")
+
+
+def _ascii_text(text: str) -> str:
+    import unicodedata
+
+    normalized = unicodedata.normalize("NFKD", text.lower().replace("đ", "d").replace("Đ", "d"))
+    return "".join(ch for ch in normalized if not unicodedata.combining(ch))

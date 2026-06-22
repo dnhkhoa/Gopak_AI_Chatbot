@@ -8,6 +8,12 @@ from pydantic import BaseModel, Field
 class ConversationState(BaseModel):
     conversation_id: str = Field(default_factory=lambda: str(uuid4()))
 
+    active_file_id: str | None = None
+    active_file_name: str | None = None
+    file_contexts: dict[str, dict] = Field(default_factory=dict)
+    current_topic: str | None = None
+    topic_frames: list[dict] = Field(default_factory=list)
+
     active_table: str | None = None
     active_metric: dict | None = None
     active_metrics: list[dict] = Field(default_factory=list)
@@ -85,10 +91,77 @@ class ConversationState(BaseModel):
         if "nhom_ton_that" in first:
             self.last_entities["top_group"] = first["nhom_ton_that"]
 
+    def save_file_context(self) -> None:
+        if not self.active_file_id:
+            return
+        self.file_contexts[self.active_file_id] = {
+            "active_table": self.active_table,
+            "active_metric": self.active_metric,
+            "active_metrics": self.active_metrics,
+            "active_dimensions": self.active_dimensions,
+            "active_filters": self.active_filters,
+            "active_time_range": self.active_time_range,
+            "active_having": self.active_having,
+            "active_ranking": self.active_ranking,
+            "active_sort": self.active_sort,
+            "active_limit": self.active_limit,
+            "active_output": self.active_output,
+            "last_entities": self.last_entities,
+            "last_result_summary": self.last_result_summary,
+            "last_result_cache_id": self.last_result_cache_id,
+            "last_result_reference": self.last_result_reference,
+            "last_plan": self.last_plan,
+            "active_tables": self.active_tables,
+            "time_range": self.time_range,
+            "dimensions": self.dimensions,
+            "metrics": self.metrics,
+            "last_output": self.last_output,
+            "current_topic": self.current_topic,
+            "topic_frames": self.topic_frames,
+        }
+
+    def restore_file_context(self, file_id: str) -> None:
+        context = self.file_contexts.get(file_id)
+        self.clear_analysis_context()
+        if not context:
+            return
+        for key, value in context.items():
+            if hasattr(self, key):
+                setattr(self, key, value)
+
+    def clear_analysis_context(self) -> None:
+        keep_id = self.conversation_id
+        keep_recent = list(self.recent_turn_ids)
+        keep_summary = self.conversation_summary
+        keep_file_id = self.active_file_id
+        keep_file_name = self.active_file_name
+        keep_contexts = dict(self.file_contexts)
+        self.__dict__.update(
+            ConversationState(
+                conversation_id=keep_id,
+                recent_turn_ids=keep_recent,
+                conversation_summary=keep_summary,
+                active_file_id=keep_file_id,
+                active_file_name=keep_file_name,
+                file_contexts=keep_contexts,
+            ).model_dump()
+        )
+
     def to_prompt_dict(self) -> dict:
         return self.model_dump()
 
     def reset(self) -> None:
         conversation_id = self.conversation_id
         recent_turn_ids = list(self.recent_turn_ids)
-        self.__dict__.update(ConversationState(conversation_id=conversation_id, recent_turn_ids=recent_turn_ids).model_dump())
+        active_file_id = self.active_file_id
+        active_file_name = self.active_file_name
+        file_contexts = dict(self.file_contexts)
+        self.__dict__.update(
+            ConversationState(
+                conversation_id=conversation_id,
+                recent_turn_ids=recent_turn_ids,
+                active_file_id=active_file_id,
+                active_file_name=active_file_name,
+                file_contexts=file_contexts,
+            ).model_dump()
+        )

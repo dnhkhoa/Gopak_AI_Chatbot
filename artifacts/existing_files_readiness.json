@@ -1,0 +1,62 @@
+[
+  {
+    "filename": "EntryTransaction_20260203_164943.xlsx",
+    "file_id": "2ad2989784fc41ffb9fef3225034db54",
+    "raw_file_exists": true,
+    "metadata_status": "ready",
+    "stored_name": "2ad2989784fc41ffb9fef3225034db54.xlsx",
+    "parquet_exists": true,
+    "catalog_exists": true,
+    "duckdb_queryable": true,
+    "catalog_table_count": 1,
+    "counts": [
+      {
+        "table_name": "entrytransaction_20260203_164943_report_0ec1e3",
+        "row_count": 1294
+      }
+    ],
+    "actual_readiness": true,
+    "action_taken": "baseline_only_no_state_change",
+    "smoke_error": null
+  },
+  {
+    "filename": "Loss_Assignment_20260203_100840.xlsx",
+    "file_id": "a329169db4984cab80ed5fea5880bb4f",
+    "raw_file_exists": true,
+    "metadata_status": "ready",
+    "stored_name": "a329169db4984cab80ed5fea5880bb4f.xlsx",
+    "parquet_exists": true,
+    "catalog_exists": true,
+    "duckdb_queryable": true,
+    "catalog_table_count": 1,
+    "counts": [
+      {
+        "table_name": "loss_assignment_20260203_100840_report_2a7588",
+        "row_count": 36309
+      }
+    ],
+    "actual_readiness": true,
+    "action_taken": "baseline_only_no_state_change",
+    "smoke_error": null
+  },
+  {
+    "filename": "Machine_Downtime_20260203_100753.xlsx",
+    "file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+    "raw_file_exists": true,
+    "metadata_status": "ready",
+    "stored_name": "e385c6e2a4ff41a8baf63f323dfc0b59.xlsx",
+    "parquet_exists": true,
+    "catalog_exists": true,
+    "duckdb_queryable": true,
+    "catalog_table_count": 1,
+    "counts": [
+      {
+        "table_name": "machine_downtime_20260203_100753_report_3c3f6d",
+        "row_count": 9151
+      }
+    ],
+    "actual_readiness": true,
+    "action_taken": "baseline_only_no_state_change",
+    "smoke_error": null
+  }
+]

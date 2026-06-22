@@ -1,0 +1,24 @@
+{
+  "pytest_targets": [
+    "tests/test_web_api.py::test_file_upload_contract",
+    "tests/test_customer_query_understanding.py"
+  ],
+  "frontend_tests": "npm test -- --run passed before docs generation",
+  "frontend_build": "npm run build passed before docs generation",
+  "row_level_smoke": {
+    "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+    "response_type": "record_detail",
+    "title": "Record No. 1",
+    "summary": "Found 1 matching record(s).",
+    "file_scope_validated": true,
+    "execution_mode": "RECORD_LOOKUP"
+  },
+  "final_verification": {
+    "python_compileall": "passed: python -m compileall src backend evaluation",
+    "pytest": "passed: 64 passed, 17 warnings (Starlette/httpx and FastAPI on_event deprecations)",
+    "frontend_tests": "passed: npm test -- --run, 18 passed",
+    "frontend_build": "passed: npm run build, Vite chunk-size warning only",
+    "browser_smoke": "http://127.0.0.1:5173/ shows 3 uploaded files, all Ready",
+    "api_smoke": "GET http://127.0.0.1:8000/api/files returned 3 ready/queryable files"
+  }
+}

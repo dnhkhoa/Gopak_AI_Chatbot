@@ -1,0 +1,2099 @@
+[
+  {
+    "file_id": "2ad2989784fc41ffb9fef3225034db54",
+    "filename": "EntryTransaction_20260203_164943.xlsx",
+    "metadata_status": "ready",
+    "metadata_queryable": true,
+    "metadata_row_count": 1294,
+    "readiness": {
+      "ok": true,
+      "file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "table_count": 1,
+      "row_count": 1294,
+      "tables": [
+        {
+          "table_name": "col_2ad2989784fc41ffb9fef3225034db54_report_1256ce",
+          "source": "EntryTransaction_20260203_164943.xlsx / Report",
+          "source_path": "D:\\Gopak Chatbot\\data\\uploads\\2ad2989784fc41ffb9fef3225034db54.xlsx",
+          "source_file": "EntryTransaction_20260203_164943.xlsx",
+          "source_sheet": "Report",
+          "parquet_path": "D:\\Gopak Chatbot\\cache\\tables\\col_2ad2989784fc41ffb9fef3225034db54_report_1256ce_2ad2989784fc.parquet",
+          "file_id": "2ad2989784fc41ffb9fef3225034db54",
+          "source_file_id": "2ad2989784fc41ffb9fef3225034db54",
+          "sha256": "6d28c40f95ab36e9756f01fbf5b1a2ba1786afbb630786ba618e30b565f1beca",
+          "row_count": 1294,
+          "columns": [
+            {
+              "original_name": "No.",
+              "normalized_name": "no",
+              "dtype": "int64",
+              "semantic_role": "record_no",
+              "null_ratio": 0.0,
+              "cardinality": 1294,
+              "sample_values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+              ],
+              "description": "Column from source header No..",
+              "min": 1,
+              "max": 1294
+            },
+            {
+              "original_name": "Cổng",
+              "normalized_name": "cong",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 2,
+              "sample_values": [
+                "Cổng 1",
+                "Cổng 2"
+              ],
+              "description": "Column from source header Cổng."
+            },
+            {
+              "original_name": "Loại truy cập",
+              "normalized_name": "loai_truy_cap",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 2,
+              "sample_values": [
+                "Ra",
+                "Vào"
+              ],
+              "description": "Column from source header Loại truy cập."
+            },
+            {
+              "original_name": "Mã đăng ký",
+              "normalized_name": "ma_dang_ky",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.2141,
+              "cardinality": 455,
+              "sample_values": [
+                "xCpTVH",
+                "Fjfe9B",
+                "8yt08G",
+                "2cvv5U",
+                "ncELXb",
+                "z0csxy",
+                "EBHoWm",
+                "KlHZBa"
+              ],
+              "description": "Column from source header Mã đăng ký."
+            },
+            {
+              "original_name": "Thời gian thực thi",
+              "normalized_name": "thoi_gian_thuc_thi",
+              "dtype": "datetime64[ns]",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1294,
+              "sample_values": [
+                "2026-02-03 16:48:37.841",
+                "2026-02-03 16:48:34.368",
+                "2026-02-03 16:48:28.964",
+                "2026-02-03 16:48:01.499",
+                "2026-02-03 16:47:40.634",
+                "2026-02-03 16:47:23.357",
+                "2026-02-03 16:47:14.092",
+                "2026-02-03 16:46:52.039"
+              ],
+              "description": "Column from source header Thời gian thực thi.",
+              "min": "2026-02-03T00:00:09.379000",
+              "max": "2026-02-03T16:48:37.841000"
+            },
+            {
+              "original_name": "Vai trò truy cập",
+              "normalized_name": "vai_tro_truy_cap",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.0495,
+              "cardinality": 5,
+              "sample_values": [
+                "Nhân viên",
+                "Tài xế",
+                "Khách",
+                "Nhà thầu thi công",
+                "Nhà thầu thường xuyên"
+              ],
+              "description": "Column from source header Vai trò truy cập."
+            },
+            {
+              "original_name": "Họ và tên",
+              "normalized_name": "ho_va_ten",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.1128,
+              "cardinality": 517,
+              "sample_values": [
+                "Nguyễn Lê Xuân Giang",
+                "Lư trí cao",
+                "Nguyễn Viết Hải",
+                "Trần Bảo Khánh",
+                "Trần tuấn vũ",
+                "NGUYỄN PHÚ CƯỜNG",
+                "Lê Thái Anh",
+                "Trần Anh Thịnh"
+              ],
+              "description": "Column from source header Họ và tên."
+            },
+            {
+              "original_name": "Số CMND/CCCD",
+              "normalized_name": "so_cmnd_cccd",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.1468,
+              "cardinality": 488,
+              "sample_values": [
+                "056091006620",
+                "0460740000541",
+                "0937660113",
+                "093095007027",
+                "001084022527",
+                "030074000143",
+                "001081031550",
+                "091096000627"
+              ],
+              "description": "Column from source header Số CMND/CCCD."
+            },
+            {
+              "original_name": "Công ty chủ quản",
+              "normalized_name": "cong_ty_chu_quan",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.4042,
+              "cardinality": 110,
+              "sample_values": [
+                "Fpt",
+                "APC",
+                "LICONIN",
+                "Giải pháp fos",
+                "Gamma",
+                "CCBV",
+                "Liconin",
+                "gamma"
+              ],
+              "description": "Column from source header Công ty chủ quản."
+            },
+            {
+              "original_name": "Công ty vận tải",
+              "normalized_name": "cong_ty_van_tai",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.813,
+              "cardinality": 25,
+              "sample_values": [
+                "Bình Vinh",
+                "Thành Mỹ",
+                "Hòa Phát",
+                "THINH GIA PHAT",
+                "Nguyên Ngọc",
+                "API",
+                "PCL",
+                "DC"
+              ],
+              "description": "Column from source header Công ty vận tải."
+            },
+            {
+              "original_name": "Biển số xe (OCR)",
+              "normalized_name": "bien_so_xe_ocr",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.0896,
+              "cardinality": 476,
+              "sample_values": [
+                "59D160530",
+                "79C16663",
+                "59P308944",
+                "50H14588",
+                "51L46822",
+                "51L80889",
+                "30A55931",
+                "51K41875"
+              ],
+              "description": "Column from source header Biển số xe (OCR)."
+            },
+            {
+              "original_name": "Biển số xe đã chỉnh",
+              "normalized_name": "bien_so_xe_da_chinh",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.391,
+              "cardinality": 15,
+              "sample_values": [
+                "",
+                "51L46822",
+                "50H19817",
+                "29H13347",
+                "51C81034",
+                "50H69563",
+                "51C41360",
+                "51C93511"
+              ],
+              "description": "Column from source header Biển số xe đã chỉnh."
+            },
+            {
+              "original_name": "Loại xe",
+              "normalized_name": "loai_xe",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 4,
+              "sample_values": [
+                "Xe gắn máy",
+                "Xe tải",
+                "Xe ôtô",
+                "Không có"
+              ],
+              "description": "Column from source header Loại xe."
+            },
+            {
+              "original_name": "Giá trị cân",
+              "normalized_name": "gia_tri_can",
+              "dtype": "float64",
+              "semantic_role": null,
+              "null_ratio": 0.7604,
+              "cardinality": 220,
+              "sample_values": [
+                "20050.0",
+                "50670.0",
+                "50870.0",
+                "20500.0",
+                "0.0",
+                "49880.0",
+                "16110.0",
+                "9730.0"
+              ],
+              "description": "Column from source header Giá trị cân.",
+              "min": 0.0,
+              "max": 51720.0
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_file_id",
+              "dtype": "object",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "2ad2989784fc41ffb9fef3225034db54"
+              ],
+              "description": "Column from source header _source_file_id."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_file_name",
+              "dtype": "object",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "EntryTransaction_20260203_164943.xlsx"
+              ],
+              "description": "Column from source header _source_file_name."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_file",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "EntryTransaction_20260203_164943.xlsx"
+              ],
+              "description": "Column from source header _source_file."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_sheet",
+              "dtype": "object",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "Report"
+              ],
+              "description": "Column from source header _source_sheet."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_excel_row",
+              "dtype": "int64",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1294,
+              "sample_values": [
+                "36",
+                "37",
+                "38",
+                "39",
+                "40",
+                "41",
+                "42",
+                "43"
+              ],
+              "description": "Column from source header _source_excel_row.",
+              "min": 36,
+              "max": 1329
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_header_row",
+              "dtype": "int64",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "35"
+              ],
+              "description": "Column from source header _source_header_row.",
+              "min": 35,
+              "max": 35
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_data_row_index",
+              "dtype": "int64",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1294,
+              "sample_values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+              ],
+              "description": "Column from source header _data_row_index.",
+              "min": 1,
+              "max": 1294
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_record_no",
+              "dtype": "int64",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1294,
+              "sample_values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+              ],
+              "description": "Column from source header _record_no.",
+              "min": 1,
+              "max": 1294
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_row",
+              "dtype": "int64",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1294,
+              "sample_values": [
+                "36",
+                "37",
+                "38",
+                "39",
+                "40",
+                "41",
+                "42",
+                "43"
+              ],
+              "description": "Column from source header _source_row.",
+              "min": 36,
+              "max": 1329
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_import_id",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "ce8101d9-e9d1-45c4-9999-df3421740bd9"
+              ],
+              "description": "Column from source header _import_id."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_is_exact_duplicate",
+              "dtype": "bool",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "False"
+              ],
+              "description": "Column from source header _is_exact_duplicate.",
+              "min": "False",
+              "max": "False"
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_duplicate_group_id",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 1.0,
+              "cardinality": 0,
+              "sample_values": [],
+              "description": "Column from source header _duplicate_group_id."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_duplicate_group_size",
+              "dtype": "int64",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "1"
+              ],
+              "description": "Column from source header _duplicate_group_size.",
+              "min": 1,
+              "max": 1
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_overlaps_same_machine",
+              "dtype": "bool",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "False"
+              ],
+              "description": "Column from source header _overlaps_same_machine.",
+              "min": "False",
+              "max": "False"
+            }
+          ],
+          "metrics": [
+            {
+              "name": "avg_no",
+              "aggregation": "avg",
+              "column": "no"
+            },
+            {
+              "name": "avg_gia_tri_can",
+              "aggregation": "avg",
+              "column": "gia_tri_can"
+            },
+            {
+              "name": "avg__source_excel_row",
+              "aggregation": "avg",
+              "column": "_source_excel_row"
+            },
+            {
+              "name": "avg__source_header_row",
+              "aggregation": "avg",
+              "column": "_source_header_row"
+            },
+            {
+              "name": "avg__data_row_index",
+              "aggregation": "avg",
+              "column": "_data_row_index"
+            },
+            {
+              "name": "avg__record_no",
+              "aggregation": "avg",
+              "column": "_record_no"
+            },
+            {
+              "name": "avg__source_row",
+              "aggregation": "avg",
+              "column": "_source_row"
+            },
+            {
+              "name": "avg__duplicate_group_size",
+              "aggregation": "avg",
+              "column": "_duplicate_group_size"
+            },
+            {
+              "name": "row_count",
+              "aggregation": "count",
+              "column": null
+            }
+          ],
+          "profile": {
+            "source_file": "EntryTransaction_20260203_164943.xlsx",
+            "source_sheet": "Report",
+            "table_name": "col_2ad2989784fc41ffb9fef3225034db54_report_1256ce",
+            "header_row": 35,
+            "data_start_row": 36,
+            "row_count": 1294,
+            "column_count": 28,
+            "last_data_row": 1329,
+            "first_column": "D",
+            "last_column": "Q",
+            "header_confidence": 0.9371666666666667,
+            "header_evidence": [
+              "row=35",
+              "columns=D:R",
+              "semantic_hits=1",
+              "data_density=0.66",
+              "consecutive_records=1294",
+              "data ended before blank streak at row 1332"
+            ],
+            "original_columns": [
+              "No.",
+              "Cổng",
+              "Loại truy cập",
+              "Mã đăng ký",
+              "Thời gian thực thi",
+              "Vai trò truy cập",
+              "Họ và tên",
+              "Số CMND/CCCD",
+              "Công ty chủ quản",
+              "Công ty vận tải",
+              "Biển số xe (OCR)",
+              "Biển số xe đã chỉnh",
+              "Loại xe",
+              "Giá trị cân"
+            ],
+            "normalized_columns": [
+              "no",
+              "cong",
+              "loai_truy_cap",
+              "ma_dang_ky",
+              "thoi_gian_thuc_thi",
+              "vai_tro_truy_cap",
+              "ho_va_ten",
+              "so_cmnd_cccd",
+              "cong_ty_chu_quan",
+              "cong_ty_van_tai",
+              "bien_so_xe_ocr",
+              "bien_so_xe_da_chinh",
+              "loai_xe",
+              "gia_tri_can",
+              "_source_file_id",
+              "_source_file_name",
+              "_source_file",
+              "_source_sheet",
+              "_source_excel_row",
+              "_source_header_row",
+              "_data_row_index",
+              "_record_no",
+              "_source_row",
+              "_import_id",
+              "_is_exact_duplicate",
+              "_duplicate_group_id",
+              "_duplicate_group_size",
+              "_overlaps_same_machine"
+            ],
+            "column_mapping": {
+              "No.": "no",
+              "Cổng": "cong",
+              "Loại truy cập": "loai_truy_cap",
+              "Mã đăng ký": "ma_dang_ky",
+              "Thời gian thực thi": "thoi_gian_thuc_thi",
+              "Vai trò truy cập": "vai_tro_truy_cap",
+              "Họ và tên": "ho_va_ten",
+              "Số CMND/CCCD": "so_cmnd_cccd",
+              "Công ty chủ quản": "cong_ty_chu_quan",
+              "Công ty vận tải": "cong_ty_van_tai",
+              "Biển số xe (OCR)": "bien_so_xe_ocr",
+              "Biển số xe đã chỉnh": "bien_so_xe_da_chinh",
+              "Loại xe": "loai_xe",
+              "Giá trị cân": "gia_tri_can"
+            },
+            "semantic_roles": {
+              "no": "record_no",
+              "_source_file_id": "provenance",
+              "_source_file_name": "provenance",
+              "_source_sheet": "provenance",
+              "_source_excel_row": "provenance",
+              "_source_header_row": "provenance",
+              "_data_row_index": "provenance",
+              "_record_no": "provenance"
+            },
+            "issues": [
+              "Dropped all-null columns: col_8"
+            ],
+            "validation": {
+              "header_row": 35,
+              "first_data_row": 36,
+              "last_data_row": 1329,
+              "first_column": "D",
+              "last_column": "Q",
+              "duplicate_records": 0,
+              "overlap_pairs": 0,
+              "cross_midnight_records": 0,
+              "negative_intervals": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "file_id": "a329169db4984cab80ed5fea5880bb4f",
+    "filename": "Loss_Assignment_20260203_100840.xlsx",
+    "metadata_status": "ready",
+    "metadata_queryable": true,
+    "metadata_row_count": 36309,
+    "readiness": {
+      "ok": true,
+      "file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "table_count": 1,
+      "row_count": 36309,
+      "tables": [
+        {
+          "table_name": "a329169db4984cab80ed5fea5880bb4f_report_bf2c25",
+          "source": "Loss_Assignment_20260203_100840.xlsx / Report",
+          "source_path": "D:\\Gopak Chatbot\\data\\uploads\\a329169db4984cab80ed5fea5880bb4f.xlsx",
+          "source_file": "Loss_Assignment_20260203_100840.xlsx",
+          "source_sheet": "Report",
+          "parquet_path": "D:\\Gopak Chatbot\\cache\\tables\\a329169db4984cab80ed5fea5880bb4f_report_bf2c25_a329169db498.parquet",
+          "file_id": "a329169db4984cab80ed5fea5880bb4f",
+          "source_file_id": "a329169db4984cab80ed5fea5880bb4f",
+          "sha256": "c63cd1167af00c570a76be1fad1746d69215735da880505a76cc8c445ef33a8a",
+          "row_count": 36309,
+          "columns": [
+            {
+              "original_name": "No.",
+              "normalized_name": "no",
+              "dtype": "int64",
+              "semantic_role": "record_no",
+              "null_ratio": 0.0,
+              "cardinality": 36309,
+              "sample_values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+              ],
+              "description": "Column from source header No..",
+              "min": 1,
+              "max": 36309
+            },
+            {
+              "original_name": "Máy",
+              "normalized_name": "may",
+              "dtype": "object",
+              "semantic_role": "machine",
+              "null_ratio": 0.0,
+              "cardinality": 11,
+              "sample_values": [
+                "Flexo 2",
+                "Máy 3A",
+                "Máy 29",
+                "Máy 11",
+                "Máy 30",
+                "Máy 31",
+                "Máy 3",
+                "Máy 12"
+              ],
+              "description": "Machine or production line identifier."
+            },
+            {
+              "original_name": "Thời gian bắt đầu",
+              "normalized_name": "thoi_gian_bat_dau",
+              "dtype": "datetime64[ns]",
+              "semantic_role": "start_time",
+              "null_ratio": 0.0,
+              "cardinality": 36292,
+              "sample_values": [
+                "2026-02-03 10:07:17.606",
+                "2026-02-03 10:07:16.625",
+                "2026-02-03 10:04:54.064",
+                "2026-02-03 10:02:53.444",
+                "2026-02-03 09:36:11.707",
+                "2026-02-03 09:23:38.981",
+                "2026-02-03 08:49:02.242",
+                "2026-02-03 08:48:01.919"
+              ],
+              "description": "Datetime column parsed from Excel.",
+              "min": "2025-11-03T09:35:56.342000",
+              "max": "2026-02-03T10:07:17.606000"
+            },
+            {
+              "original_name": "Thời gian kết thúc",
+              "normalized_name": "thoi_gian_ket_thuc",
+              "dtype": "datetime64[ns]",
+              "semantic_role": "end_time",
+              "null_ratio": 0.0,
+              "cardinality": 36295,
+              "sample_values": [
+                "2026-02-03 10:08:36.166",
+                "2026-02-03 10:08:35.645",
+                "2026-02-03 10:06:36.126",
+                "2026-02-03 10:03:15.831",
+                "2026-02-03 09:37:43.851",
+                "2026-02-03 09:24:19.589",
+                "2026-02-03 08:50:55.202",
+                "2026-02-03 08:48:56.120"
+              ],
+              "description": "Datetime column parsed from Excel.",
+              "min": "2025-11-03T10:10:49.918000",
+              "max": "2026-02-03T10:08:36.166000"
+            },
+            {
+              "original_name": "Thời lượng",
+              "normalized_name": "thoi_luong",
+              "dtype": "object",
+              "semantic_role": "duration",
+              "null_ratio": 0.0,
+              "cardinality": 3191,
+              "sample_values": [
+                "00:01:18",
+                "00:01:19",
+                "00:01:42",
+                "00:00:22",
+                "00:01:32",
+                "00:00:40",
+                "00:01:52",
+                "00:00:54"
+              ],
+              "description": "Original duration value from Excel."
+            },
+            {
+              "original_name": "Tên tổn thất",
+              "normalized_name": "ten_ton_that",
+              "dtype": "object",
+              "semantic_role": "loss_name",
+              "null_ratio": 0.0023,
+              "cardinality": 30,
+              "sample_values": [
+                "IN MÀU BỊ LỖI",
+                "VẬN HÀNH KHÔNG KHAI BÁO",
+                "SETUP MÁY",
+                "MÁY LỖI PHẦN CƠ",
+                "RỈ ĐƯỜNG HÀN ĐÁY",
+                "ĐẦU CA DỪNG MÁY DO QC TEST RỈ",
+                "HẾT CA DỪNG MÁY VỆ SINH",
+                "KẸT ĐÁY LIÊN TỤC"
+              ],
+              "description": "Downtime/loss reason or event name."
+            },
+            {
+              "original_name": "Nhóm tổn thất",
+              "normalized_name": "nhom_ton_that",
+              "dtype": "object",
+              "semantic_role": "loss_group",
+              "null_ratio": 0.0023,
+              "cardinality": 2,
+              "sample_values": [
+                "Sản xuất",
+                "Bảo trì"
+              ],
+              "description": "Loss category/group."
+            },
+            {
+              "original_name": "Loại tổn thất",
+              "normalized_name": "loai_ton_that",
+              "dtype": "object",
+              "semantic_role": "loss_type",
+              "null_ratio": 0.0023,
+              "cardinality": 2,
+              "sample_values": [
+                "Dừng vận hành",
+                "Dừng do máy"
+              ],
+              "description": "Column from source header Loại tổn thất."
+            },
+            {
+              "original_name": "Note",
+              "normalized_name": "note",
+              "dtype": "object",
+              "semantic_role": "record_no",
+              "null_ratio": 1.0,
+              "cardinality": 0,
+              "sample_values": [],
+              "description": "Column from source header Note."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_file_id",
+              "dtype": "object",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "a329169db4984cab80ed5fea5880bb4f"
+              ],
+              "description": "Column from source header _source_file_id."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_file_name",
+              "dtype": "object",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "Loss_Assignment_20260203_100840.xlsx"
+              ],
+              "description": "Column from source header _source_file_name."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_file",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "Loss_Assignment_20260203_100840.xlsx"
+              ],
+              "description": "Column from source header _source_file."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_sheet",
+              "dtype": "object",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "Report"
+              ],
+              "description": "Column from source header _source_sheet."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_excel_row",
+              "dtype": "int64",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 36309,
+              "sample_values": [
+                "36",
+                "37",
+                "38",
+                "39",
+                "40",
+                "41",
+                "42",
+                "43"
+              ],
+              "description": "Column from source header _source_excel_row.",
+              "min": 36,
+              "max": 36344
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_header_row",
+              "dtype": "int64",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "35"
+              ],
+              "description": "Column from source header _source_header_row.",
+              "min": 35,
+              "max": 35
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_data_row_index",
+              "dtype": "int64",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 36309,
+              "sample_values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+              ],
+              "description": "Column from source header _data_row_index.",
+              "min": 1,
+              "max": 36309
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_record_no",
+              "dtype": "int64",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 36309,
+              "sample_values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+              ],
+              "description": "Column from source header _record_no.",
+              "min": 1,
+              "max": 36309
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_row",
+              "dtype": "int64",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 36309,
+              "sample_values": [
+                "36",
+                "37",
+                "38",
+                "39",
+                "40",
+                "41",
+                "42",
+                "43"
+              ],
+              "description": "Column from source header _source_row.",
+              "min": 36,
+              "max": 36344
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_import_id",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "8f06623a-1d3c-4afd-a005-73325f96dffe"
+              ],
+              "description": "Column from source header _import_id."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "duration_reported_text",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 3191,
+              "sample_values": [
+                "00:01:18",
+                "00:01:19",
+                "00:01:42",
+                "00:00:22",
+                "00:01:32",
+                "00:00:40",
+                "00:01:52",
+                "00:00:54"
+              ],
+              "description": "Column from source header duration_reported_text."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "duration_reported_seconds",
+              "dtype": "float64",
+              "semantic_role": "duration_reported_seconds",
+              "null_ratio": 0.0,
+              "cardinality": 3191,
+              "sample_values": [
+                "78.0",
+                "79.0",
+                "102.0",
+                "22.0",
+                "92.0",
+                "40.0",
+                "112.0",
+                "54.0"
+              ],
+              "description": "Column from source header duration_reported_seconds.",
+              "min": 5.0,
+              "max": 164766.0
+            },
+            {
+              "original_name": null,
+              "normalized_name": "duration_calculated_seconds",
+              "dtype": "float64",
+              "semantic_role": "duration_calculated_seconds",
+              "null_ratio": 0.0,
+              "cardinality": 29565,
+              "sample_values": [
+                "78.56",
+                "79.02",
+                "102.062",
+                "22.387",
+                "92.144",
+                "40.608",
+                "112.96",
+                "54.201"
+              ],
+              "description": "Column from source header duration_calculated_seconds.",
+              "min": 5.001,
+              "max": 164766.304
+            },
+            {
+              "original_name": null,
+              "normalized_name": "duration_difference_seconds",
+              "dtype": "float64",
+              "semantic_role": "duration_difference_seconds",
+              "null_ratio": 0.0,
+              "cardinality": 5167,
+              "sample_values": [
+                "0.5600000000000023",
+                "0.01999999999999602",
+                "0.06199999999999761",
+                "0.38700000000000045",
+                "0.14400000000000546",
+                "0.607999999999997",
+                "0.9599999999999937",
+                "0.2010000000000005"
+              ],
+              "description": "Column from source header duration_difference_seconds.",
+              "min": 0.0,
+              "max": 0.9990000000000236
+            },
+            {
+              "original_name": null,
+              "normalized_name": "duration_anomaly",
+              "dtype": "bool",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "False"
+              ],
+              "description": "Column from source header duration_anomaly.",
+              "min": "False",
+              "max": "False"
+            },
+            {
+              "original_name": null,
+              "normalized_name": "duration_seconds",
+              "dtype": "float64",
+              "semantic_role": "duration_seconds",
+              "null_ratio": 0.0,
+              "cardinality": 3191,
+              "sample_values": [
+                "78.0",
+                "79.0",
+                "102.0",
+                "22.0",
+                "92.0",
+                "40.0",
+                "112.0",
+                "54.0"
+              ],
+              "description": "Duration normalized to seconds for aggregation.",
+              "min": 5.0,
+              "max": 164766.0
+            },
+            {
+              "original_name": null,
+              "normalized_name": "thoi_luong_seconds",
+              "dtype": "float64",
+              "semantic_role": "duration_seconds",
+              "null_ratio": 0.0,
+              "cardinality": 3191,
+              "sample_values": [
+                "78.0",
+                "79.0",
+                "102.0",
+                "22.0",
+                "92.0",
+                "40.0",
+                "112.0",
+                "54.0"
+              ],
+              "description": "Duration normalized to seconds for aggregation.",
+              "min": 5.0,
+              "max": 164766.0
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_duplicate_group_size",
+              "dtype": "int64",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 3,
+              "sample_values": [
+                "1",
+                "4",
+                "11"
+              ],
+              "description": "Column from source header _duplicate_group_size.",
+              "min": 1,
+              "max": 11
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_is_exact_duplicate",
+              "dtype": "bool",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 2,
+              "sample_values": [
+                "False",
+                "True"
+              ],
+              "description": "Column from source header _is_exact_duplicate.",
+              "min": "False",
+              "max": "True"
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_duplicate_group_id",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.9996,
+              "cardinality": 2,
+              "sample_values": [
+                "dup-3745",
+                "dup-29130"
+              ],
+              "description": "Column from source header _duplicate_group_id."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_overlaps_same_machine",
+              "dtype": "bool",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 2,
+              "sample_values": [
+                "False",
+                "True"
+              ],
+              "description": "Column from source header _overlaps_same_machine.",
+              "min": "False",
+              "max": "True"
+            }
+          ],
+          "metrics": [
+            {
+              "name": "avg_no",
+              "aggregation": "avg",
+              "column": "no"
+            },
+            {
+              "name": "avg__source_excel_row",
+              "aggregation": "avg",
+              "column": "_source_excel_row"
+            },
+            {
+              "name": "avg__source_header_row",
+              "aggregation": "avg",
+              "column": "_source_header_row"
+            },
+            {
+              "name": "avg__data_row_index",
+              "aggregation": "avg",
+              "column": "_data_row_index"
+            },
+            {
+              "name": "avg__record_no",
+              "aggregation": "avg",
+              "column": "_record_no"
+            },
+            {
+              "name": "avg__source_row",
+              "aggregation": "avg",
+              "column": "_source_row"
+            },
+            {
+              "name": "avg_duration_reported_seconds",
+              "aggregation": "avg",
+              "column": "duration_reported_seconds"
+            },
+            {
+              "name": "avg_duration_calculated_seconds",
+              "aggregation": "avg",
+              "column": "duration_calculated_seconds"
+            },
+            {
+              "name": "avg_duration_difference_seconds",
+              "aggregation": "avg",
+              "column": "duration_difference_seconds"
+            },
+            {
+              "name": "sum_duration_seconds",
+              "aggregation": "sum",
+              "column": "duration_seconds"
+            },
+            {
+              "name": "avg_duration_seconds",
+              "aggregation": "avg",
+              "column": "duration_seconds"
+            },
+            {
+              "name": "sum_thoi_luong_seconds",
+              "aggregation": "sum",
+              "column": "thoi_luong_seconds"
+            },
+            {
+              "name": "avg_thoi_luong_seconds",
+              "aggregation": "avg",
+              "column": "thoi_luong_seconds"
+            },
+            {
+              "name": "avg__duplicate_group_size",
+              "aggregation": "avg",
+              "column": "_duplicate_group_size"
+            },
+            {
+              "name": "row_count",
+              "aggregation": "count",
+              "column": null
+            }
+          ],
+          "profile": {
+            "source_file": "Loss_Assignment_20260203_100840.xlsx",
+            "source_sheet": "Report",
+            "table_name": "a329169db4984cab80ed5fea5880bb4f_report_bf2c25",
+            "header_row": 35,
+            "data_start_row": 36,
+            "row_count": 36309,
+            "column_count": 30,
+            "last_data_row": 36344,
+            "first_column": "D",
+            "last_column": "L",
+            "header_confidence": 0.99,
+            "header_evidence": [
+              "row=35",
+              "columns=D:M",
+              "semantic_hits=9",
+              "data_density=0.81",
+              "consecutive_records=36309",
+              "data ended before blank streak at row 36347"
+            ],
+            "original_columns": [
+              "No.",
+              "Máy",
+              "Thời gian bắt đầu",
+              "Thời gian kết thúc",
+              "Thời lượng",
+              "Tên tổn thất",
+              "Nhóm tổn thất",
+              "Loại tổn thất",
+              "Note"
+            ],
+            "normalized_columns": [
+              "no",
+              "may",
+              "thoi_gian_bat_dau",
+              "thoi_gian_ket_thuc",
+              "thoi_luong",
+              "ten_ton_that",
+              "nhom_ton_that",
+              "loai_ton_that",
+              "note",
+              "_source_file_id",
+              "_source_file_name",
+              "_source_file",
+              "_source_sheet",
+              "_source_excel_row",
+              "_source_header_row",
+              "_data_row_index",
+              "_record_no",
+              "_source_row",
+              "_import_id",
+              "duration_reported_text",
+              "duration_reported_seconds",
+              "duration_calculated_seconds",
+              "duration_difference_seconds",
+              "duration_anomaly",
+              "duration_seconds",
+              "thoi_luong_seconds",
+              "_duplicate_group_size",
+              "_is_exact_duplicate",
+              "_duplicate_group_id",
+              "_overlaps_same_machine"
+            ],
+            "column_mapping": {
+              "No.": "no",
+              "Máy": "may",
+              "Thời gian bắt đầu": "thoi_gian_bat_dau",
+              "Thời gian kết thúc": "thoi_gian_ket_thuc",
+              "Thời lượng": "thoi_luong",
+              "Tên tổn thất": "ten_ton_that",
+              "Nhóm tổn thất": "nhom_ton_that",
+              "Loại tổn thất": "loai_ton_that",
+              "Note": "note"
+            },
+            "semantic_roles": {
+              "no": "record_no",
+              "may": "machine",
+              "thoi_gian_bat_dau": "start_time",
+              "thoi_gian_ket_thuc": "end_time",
+              "thoi_luong": "duration",
+              "ten_ton_that": "loss_name",
+              "nhom_ton_that": "loss_group",
+              "loai_ton_that": "loss_type",
+              "note": "record_no",
+              "thoi_luong_seconds": "duration_seconds",
+              "duration_reported_seconds": "duration_reported_seconds",
+              "duration_calculated_seconds": "duration_calculated_seconds",
+              "duration_difference_seconds": "duration_difference_seconds",
+              "duration_seconds": "duration_seconds",
+              "_source_file_id": "provenance",
+              "_source_file_name": "provenance",
+              "_source_sheet": "provenance",
+              "_source_excel_row": "provenance",
+              "_source_header_row": "provenance",
+              "_data_row_index": "provenance",
+              "_record_no": "provenance"
+            },
+            "issues": [
+              "Dropped all-null columns: col_8",
+              "Added parsed duration_reported_seconds"
+            ],
+            "validation": {
+              "header_row": 35,
+              "first_data_row": 36,
+              "last_data_row": 36344,
+              "first_column": "D",
+              "last_column": "L",
+              "duplicate_records": 15,
+              "overlap_pairs": 15,
+              "cross_midnight_records": 136,
+              "negative_intervals": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+    "filename": "Machine_Downtime_20260203_100753.xlsx",
+    "metadata_status": "ready",
+    "metadata_queryable": true,
+    "metadata_row_count": 9151,
+    "readiness": {
+      "ok": true,
+      "file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "table_count": 1,
+      "row_count": 9151,
+      "tables": [
+        {
+          "table_name": "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337",
+          "source": "Machine_Downtime_20260203_100753.xlsx / Report",
+          "source_path": "D:\\Gopak Chatbot\\data\\uploads\\e385c6e2a4ff41a8baf63f323dfc0b59.xlsx",
+          "source_file": "Machine_Downtime_20260203_100753.xlsx",
+          "source_sheet": "Report",
+          "parquet_path": "D:\\Gopak Chatbot\\cache\\tables\\e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337_e385c6e2a4ff.parquet",
+          "file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "sha256": "5dbf77becfd1fe8ab39d22d6185dcfb4053af0ae594967ea7ef3333dd7e28de2",
+          "row_count": 9151,
+          "columns": [
+            {
+              "original_name": "No.",
+              "normalized_name": "no",
+              "dtype": "int64",
+              "semantic_role": "record_no",
+              "null_ratio": 0.0,
+              "cardinality": 9151,
+              "sample_values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+              ],
+              "description": "Column from source header No..",
+              "min": 1,
+              "max": 9151
+            },
+            {
+              "original_name": "Máy",
+              "normalized_name": "may",
+              "dtype": "object",
+              "semantic_role": "machine",
+              "null_ratio": 0.0,
+              "cardinality": 9,
+              "sample_values": [
+                "Máy 11",
+                "Máy 29",
+                "Máy 30",
+                "Máy 3A",
+                "Máy 31",
+                "Máy 3",
+                "Máy 12",
+                "Máy 9"
+              ],
+              "description": "Machine or production line identifier."
+            },
+            {
+              "original_name": "Thời gian bắt đầu",
+              "normalized_name": "thoi_gian_bat_dau",
+              "dtype": "datetime64[ns]",
+              "semantic_role": "start_time",
+              "null_ratio": 0.0,
+              "cardinality": 9151,
+              "sample_values": [
+                "2026-02-03 07:54:23.731",
+                "2026-02-03 07:41:21.220",
+                "2026-02-03 07:22:59.135",
+                "2026-02-03 06:48:03.351",
+                "2026-02-03 06:40:49.499",
+                "2026-02-03 05:15:12.117",
+                "2026-02-03 05:10:05.313",
+                "2026-02-03 04:32:23.584"
+              ],
+              "description": "Datetime column parsed from Excel.",
+              "min": "2025-11-03T09:57:29.892000",
+              "max": "2026-02-03T07:54:23.731000"
+            },
+            {
+              "original_name": "Thời gian kết thúc",
+              "normalized_name": "thoi_gian_ket_thuc",
+              "dtype": "datetime64[ns]",
+              "semantic_role": "end_time",
+              "null_ratio": 0.0,
+              "cardinality": 9151,
+              "sample_values": [
+                "2026-02-03 07:57:17.734",
+                "2026-02-03 07:52:06.301",
+                "2026-02-03 07:34:18.435",
+                "2026-02-03 07:14:11.574",
+                "2026-02-03 06:44:42.823",
+                "2026-02-03 05:27:22.409",
+                "2026-02-03 05:53:20.181",
+                "2026-02-03 04:36:00.660"
+              ],
+              "description": "Datetime column parsed from Excel.",
+              "min": "2025-11-03T10:16:13.227000",
+              "max": "2026-02-03T07:57:17.734000"
+            },
+            {
+              "original_name": "Thời lượng",
+              "normalized_name": "thoi_luong",
+              "dtype": "object",
+              "semantic_role": "duration",
+              "null_ratio": 0.0,
+              "cardinality": 2402,
+              "sample_values": [
+                "00:02:54",
+                "00:10:45",
+                "00:11:19",
+                "00:26:08",
+                "00:03:53",
+                "00:12:10",
+                "00:43:14",
+                "00:03:37"
+              ],
+              "description": "Original duration value from Excel."
+            },
+            {
+              "original_name": "Tên tổn thất",
+              "normalized_name": "ten_ton_that",
+              "dtype": "object",
+              "semantic_role": "loss_name",
+              "null_ratio": 0.0,
+              "cardinality": 13,
+              "sample_values": [
+                "MÁY LỖI PHẦN CƠ",
+                "RỈ ĐƯỜNG HÀN ĐÁY",
+                "KẸT ĐÁY LIÊN TỤC",
+                "HỞ RIM",
+                "MÁY ÁO BỊ HƯ",
+                "RỈ HOẶC KHÔNG HÀN BIÊN",
+                "TRÓC ĐÁY LY",
+                "LỖI MÁY KIỂM TRA"
+              ],
+              "description": "Downtime/loss reason or event name."
+            },
+            {
+              "original_name": "Nhóm tổn thất",
+              "normalized_name": "nhom_ton_that",
+              "dtype": "object",
+              "semantic_role": "loss_group",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "Bảo trì"
+              ],
+              "description": "Loss category/group."
+            },
+            {
+              "original_name": "Loại tổn thất",
+              "normalized_name": "loai_ton_that",
+              "dtype": "object",
+              "semantic_role": "loss_type",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "Dừng do máy"
+              ],
+              "description": "Column from source header Loại tổn thất."
+            },
+            {
+              "original_name": "Note",
+              "normalized_name": "note",
+              "dtype": "object",
+              "semantic_role": "record_no",
+              "null_ratio": 1.0,
+              "cardinality": 0,
+              "sample_values": [],
+              "description": "Column from source header Note."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_file_id",
+              "dtype": "object",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "e385c6e2a4ff41a8baf63f323dfc0b59"
+              ],
+              "description": "Column from source header _source_file_id."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_file_name",
+              "dtype": "object",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "Machine_Downtime_20260203_100753.xlsx"
+              ],
+              "description": "Column from source header _source_file_name."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_file",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "Machine_Downtime_20260203_100753.xlsx"
+              ],
+              "description": "Column from source header _source_file."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_sheet",
+              "dtype": "object",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "Report"
+              ],
+              "description": "Column from source header _source_sheet."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_excel_row",
+              "dtype": "int64",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 9151,
+              "sample_values": [
+                "36",
+                "37",
+                "38",
+                "39",
+                "40",
+                "41",
+                "42",
+                "43"
+              ],
+              "description": "Column from source header _source_excel_row.",
+              "min": 36,
+              "max": 9186
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_header_row",
+              "dtype": "int64",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "35"
+              ],
+              "description": "Column from source header _source_header_row.",
+              "min": 35,
+              "max": 35
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_data_row_index",
+              "dtype": "int64",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 9151,
+              "sample_values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+              ],
+              "description": "Column from source header _data_row_index.",
+              "min": 1,
+              "max": 9151
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_record_no",
+              "dtype": "int64",
+              "semantic_role": "provenance",
+              "null_ratio": 0.0,
+              "cardinality": 9151,
+              "sample_values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+              ],
+              "description": "Column from source header _record_no.",
+              "min": 1,
+              "max": 9151
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_source_row",
+              "dtype": "int64",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 9151,
+              "sample_values": [
+                "36",
+                "37",
+                "38",
+                "39",
+                "40",
+                "41",
+                "42",
+                "43"
+              ],
+              "description": "Column from source header _source_row.",
+              "min": 36,
+              "max": 9186
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_import_id",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "569e9b5f-4190-4273-b24e-22bf84d42bd3"
+              ],
+              "description": "Column from source header _import_id."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "duration_reported_text",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 2402,
+              "sample_values": [
+                "00:02:54",
+                "00:10:45",
+                "00:11:19",
+                "00:26:08",
+                "00:03:53",
+                "00:12:10",
+                "00:43:14",
+                "00:03:37"
+              ],
+              "description": "Column from source header duration_reported_text."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "duration_reported_seconds",
+              "dtype": "float64",
+              "semantic_role": "duration_reported_seconds",
+              "null_ratio": 0.0,
+              "cardinality": 2402,
+              "sample_values": [
+                "174.0",
+                "645.0",
+                "679.0",
+                "1568.0",
+                "233.0",
+                "730.0",
+                "2594.0",
+                "217.0"
+              ],
+              "description": "Column from source header duration_reported_seconds.",
+              "min": 5.0,
+              "max": 33269.0
+            },
+            {
+              "original_name": null,
+              "normalized_name": "duration_calculated_seconds",
+              "dtype": "float64",
+              "semantic_role": "duration_calculated_seconds",
+              "null_ratio": 0.0,
+              "cardinality": 9081,
+              "sample_values": [
+                "174.003",
+                "645.081",
+                "679.3",
+                "1568.223",
+                "233.324",
+                "730.292",
+                "2594.868",
+                "217.076"
+              ],
+              "description": "Column from source header duration_calculated_seconds.",
+              "min": 5.558,
+              "max": 33269.216
+            },
+            {
+              "original_name": null,
+              "normalized_name": "duration_difference_seconds",
+              "dtype": "float64",
+              "semantic_role": "duration_difference_seconds",
+              "null_ratio": 0.0,
+              "cardinality": 3552,
+              "sample_values": [
+                "0.002999999999985903",
+                "0.08100000000001728",
+                "0.2999999999999545",
+                "0.22299999999995634",
+                "0.3240000000000123",
+                "0.29200000000003",
+                "0.8679999999999382",
+                "0.0759999999999934"
+              ],
+              "description": "Column from source header duration_difference_seconds.",
+              "min": 0.0,
+              "max": 0.9990000000000236
+            },
+            {
+              "original_name": null,
+              "normalized_name": "duration_anomaly",
+              "dtype": "bool",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "False"
+              ],
+              "description": "Column from source header duration_anomaly.",
+              "min": "False",
+              "max": "False"
+            },
+            {
+              "original_name": null,
+              "normalized_name": "duration_seconds",
+              "dtype": "float64",
+              "semantic_role": "duration_seconds",
+              "null_ratio": 0.0,
+              "cardinality": 2402,
+              "sample_values": [
+                "174.0",
+                "645.0",
+                "679.0",
+                "1568.0",
+                "233.0",
+                "730.0",
+                "2594.0",
+                "217.0"
+              ],
+              "description": "Duration normalized to seconds for aggregation.",
+              "min": 5.0,
+              "max": 33269.0
+            },
+            {
+              "original_name": null,
+              "normalized_name": "thoi_luong_seconds",
+              "dtype": "float64",
+              "semantic_role": "duration_seconds",
+              "null_ratio": 0.0,
+              "cardinality": 2402,
+              "sample_values": [
+                "174.0",
+                "645.0",
+                "679.0",
+                "1568.0",
+                "233.0",
+                "730.0",
+                "2594.0",
+                "217.0"
+              ],
+              "description": "Duration normalized to seconds for aggregation.",
+              "min": 5.0,
+              "max": 33269.0
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_duplicate_group_size",
+              "dtype": "int64",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "1"
+              ],
+              "description": "Column from source header _duplicate_group_size.",
+              "min": 1,
+              "max": 1
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_is_exact_duplicate",
+              "dtype": "bool",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "False"
+              ],
+              "description": "Column from source header _is_exact_duplicate.",
+              "min": "False",
+              "max": "False"
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_duplicate_group_id",
+              "dtype": "object",
+              "semantic_role": null,
+              "null_ratio": 1.0,
+              "cardinality": 0,
+              "sample_values": [],
+              "description": "Column from source header _duplicate_group_id."
+            },
+            {
+              "original_name": null,
+              "normalized_name": "_overlaps_same_machine",
+              "dtype": "bool",
+              "semantic_role": null,
+              "null_ratio": 0.0,
+              "cardinality": 1,
+              "sample_values": [
+                "False"
+              ],
+              "description": "Column from source header _overlaps_same_machine.",
+              "min": "False",
+              "max": "False"
+            }
+          ],
+          "metrics": [
+            {
+              "name": "avg_no",
+              "aggregation": "avg",
+              "column": "no"
+            },
+            {
+              "name": "avg__source_excel_row",
+              "aggregation": "avg",
+              "column": "_source_excel_row"
+            },
+            {
+              "name": "avg__source_header_row",
+              "aggregation": "avg",
+              "column": "_source_header_row"
+            },
+            {
+              "name": "avg__data_row_index",
+              "aggregation": "avg",
+              "column": "_data_row_index"
+            },
+            {
+              "name": "avg__record_no",
+              "aggregation": "avg",
+              "column": "_record_no"
+            },
+            {
+              "name": "avg__source_row",
+              "aggregation": "avg",
+              "column": "_source_row"
+            },
+            {
+              "name": "avg_duration_reported_seconds",
+              "aggregation": "avg",
+              "column": "duration_reported_seconds"
+            },
+            {
+              "name": "avg_duration_calculated_seconds",
+              "aggregation": "avg",
+              "column": "duration_calculated_seconds"
+            },
+            {
+              "name": "avg_duration_difference_seconds",
+              "aggregation": "avg",
+              "column": "duration_difference_seconds"
+            },
+            {
+              "name": "sum_duration_seconds",
+              "aggregation": "sum",
+              "column": "duration_seconds"
+            },
+            {
+              "name": "avg_duration_seconds",
+              "aggregation": "avg",
+              "column": "duration_seconds"
+            },
+            {
+              "name": "sum_thoi_luong_seconds",
+              "aggregation": "sum",
+              "column": "thoi_luong_seconds"
+            },
+            {
+              "name": "avg_thoi_luong_seconds",
+              "aggregation": "avg",
+              "column": "thoi_luong_seconds"
+            },
+            {
+              "name": "avg__duplicate_group_size",
+              "aggregation": "avg",
+              "column": "_duplicate_group_size"
+            },
+            {
+              "name": "row_count",
+              "aggregation": "count",
+              "column": null
+            }
+          ],
+          "profile": {
+            "source_file": "Machine_Downtime_20260203_100753.xlsx",
+            "source_sheet": "Report",
+            "table_name": "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337",
+            "header_row": 35,
+            "data_start_row": 36,
+            "row_count": 9151,
+            "column_count": 30,
+            "last_data_row": 9186,
+            "first_column": "D",
+            "last_column": "L",
+            "header_confidence": 0.99,
+            "header_evidence": [
+              "row=35",
+              "columns=D:M",
+              "semantic_hits=9",
+              "data_density=0.81",
+              "consecutive_records=9151",
+              "data ended before blank streak at row 9189"
+            ],
+            "original_columns": [
+              "No.",
+              "Máy",
+              "Thời gian bắt đầu",
+              "Thời gian kết thúc",
+              "Thời lượng",
+              "Tên tổn thất",
+              "Nhóm tổn thất",
+              "Loại tổn thất",
+              "Note"
+            ],
+            "normalized_columns": [
+              "no",
+              "may",
+              "thoi_gian_bat_dau",
+              "thoi_gian_ket_thuc",
+              "thoi_luong",
+              "ten_ton_that",
+              "nhom_ton_that",
+              "loai_ton_that",
+              "note",
+              "_source_file_id",
+              "_source_file_name",
+              "_source_file",
+              "_source_sheet",
+              "_source_excel_row",
+              "_source_header_row",
+              "_data_row_index",
+              "_record_no",
+              "_source_row",
+              "_import_id",
+              "duration_reported_text",
+              "duration_reported_seconds",
+              "duration_calculated_seconds",
+              "duration_difference_seconds",
+              "duration_anomaly",
+              "duration_seconds",
+              "thoi_luong_seconds",
+              "_duplicate_group_size",
+              "_is_exact_duplicate",
+              "_duplicate_group_id",
+              "_overlaps_same_machine"
+            ],
+            "column_mapping": {
+              "No.": "no",
+              "Máy": "may",
+              "Thời gian bắt đầu": "thoi_gian_bat_dau",
+              "Thời gian kết thúc": "thoi_gian_ket_thuc",
+              "Thời lượng": "thoi_luong",
+              "Tên tổn thất": "ten_ton_that",
+              "Nhóm tổn thất": "nhom_ton_that",
+              "Loại tổn thất": "loai_ton_that",
+              "Note": "note"
+            },
+            "semantic_roles": {
+              "no": "record_no",
+              "may": "machine",
+              "thoi_gian_bat_dau": "start_time",
+              "thoi_gian_ket_thuc": "end_time",
+              "thoi_luong": "duration",
+              "ten_ton_that": "loss_name",
+              "nhom_ton_that": "loss_group",
+              "loai_ton_that": "loss_type",
+              "note": "record_no",
+              "thoi_luong_seconds": "duration_seconds",
+              "duration_reported_seconds": "duration_reported_seconds",
+              "duration_calculated_seconds": "duration_calculated_seconds",
+              "duration_difference_seconds": "duration_difference_seconds",
+              "duration_seconds": "duration_seconds",
+              "_source_file_id": "provenance",
+              "_source_file_name": "provenance",
+              "_source_sheet": "provenance",
+              "_source_excel_row": "provenance",
+              "_source_header_row": "provenance",
+              "_data_row_index": "provenance",
+              "_record_no": "provenance"
+            },
+            "issues": [
+              "Dropped all-null columns: col_8",
+              "Added parsed duration_reported_seconds"
+            ],
+            "validation": {
+              "header_row": 35,
+              "first_data_row": 36,
+              "last_data_row": 9186,
+              "first_column": "D",
+              "last_column": "L",
+              "duplicate_records": 0,
+              "overlap_pairs": 0,
+              "cross_midnight_records": 81,
+              "negative_intervals": 0
+            }
+          }
+        }
+      ]
+    }
+  }
+]
