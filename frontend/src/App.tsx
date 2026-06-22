@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+import logoUrl from "./assets/isoft-logo.png";
 import { api } from "./api/client";
 import { ChatMessage } from "./components/ChatMessage";
 import { ErrorMessage } from "./components/ErrorMessage";
@@ -6,6 +7,11 @@ import { ChatComposer } from "./features/chat/ChatComposer";
 import { ConversationSidebar } from "./features/conversations/ConversationSidebar";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import type { ConversationPayload, HealthStatus, UiMessage } from "./types/api";
+
+// Developer tools (debug panel, raw metadata) are hidden from the customer UI by
+// default; only enabled when VITE_ENABLE_DEVELOPER_TOOLS=true. The capability
+// remains in the backend and components for evaluation / developer mode.
+const DEVELOPER_TOOLS = import.meta.env.VITE_ENABLE_DEVELOPER_TOOLS === "true";
 
 function toUiMessages(messages: { id?: string | null; role: string; content: string }[]): UiMessage[] {
   return messages
@@ -19,7 +25,6 @@ function toUiMessages(messages: { id?: string | null; role: string; content: str
 
 export default function App() {
   const [selectedId, setSelectedId] = useLocalStorage<string | null>("gopak:selected-conversation", null);
-  const [debug, setDebug] = useLocalStorage("gopak:debug", false);
   const [collapsed, setCollapsed] = useLocalStorage("gopak:sidebar-collapsed", false);
   const [conversations, setConversations] = useState<ConversationPayload[]>([]);
   const [messages, setMessages] = useState<UiMessage[]>([]);
@@ -88,6 +93,9 @@ export default function App() {
     await api.deleteConversation(id);
     const remaining = conversations.filter((item) => item.id !== id);
     setConversations(remaining);
+    if (id !== selectedId) {
+      return;
+    }
     if (!remaining.length) {
       await createConversation();
       return;
@@ -95,9 +103,9 @@ export default function App() {
     await selectConversation(remaining[0].id);
   };
 
-  const resetContext = async (id: string) => {
-    await api.resetContext(id);
-    await loadConversation(id);
+  const renameConversation = async (id: string, title: string) => {
+    const updated = await api.renameConversation(id, title);
+    setConversations((current) => current.map((item) => (item.id === id ? { ...item, ...updated } : item)));
   };
 
   const sendMessage = async (message: string) => {
@@ -109,7 +117,7 @@ export default function App() {
     setSending(true);
     setError(null);
     try {
-      const response = await api.sendMessage(selectedId, message, debug);
+      const response = await api.sendMessage(selectedId, message, DEVELOPER_TOOLS);
       const assistantMessage: UiMessage = {
         id: response.message_id,
         role: "assistant",
@@ -132,29 +140,44 @@ export default function App() {
         conversations={conversations}
         activeId={selectedId}
         collapsed={collapsed}
-        debug={debug}
         health={health}
         onToggleCollapsed={() => setCollapsed(!collapsed)}
         onNew={() => void createConversation()}
         onSelect={(id) => void selectConversation(id)}
         onDelete={(id) => void deleteConversation(id)}
-        onReset={(id) => void resetContext(id)}
-        onDebugChange={setDebug}
+        onRename={(id, title) => void renameConversation(id, title)}
       />
       <main className="chat-panel">
         <div className="chat-header">
           <div className="chat-title">{selected?.title ?? "Gopak"}</div>
         </div>
         <div className="message-scroll">
-          {loading ? <div className="empty-state">Đang tải...</div> : null}
-          {!loading && !messages.length ? <div className="empty-state">Tôi có thể giúp gì cho bạn?</div> : null}
+          {loading ? (
+            <div className="empty-state">
+              <div className="empty-sub">Đang tải…</div>
+            </div>
+          ) : null}
+          {!loading && !messages.length ? (
+            <div className="empty-state">
+              <img className="empty-logo" src={logoUrl} alt="i-Soft" />
+              <div className="empty-title">Tôi có thể giúp gì cho bạn?</div>
+              <div className="empty-sub">Đặt câu hỏi về dữ liệu của bạn.</div>
+            </div>
+          ) : null}
           {messages.map((message) => (
-            <ChatMessage key={message.id} message={message} debug={debug} />
+            <ChatMessage key={message.id} message={message} debug={DEVELOPER_TOOLS} />
           ))}
-          {sending ? <div className="thinking">Đang phân tích...</div> : null}
+          {sending ? (
+            <div className="thinking">
+              <span className="dots"><span /><span /><span /></span>
+              Đang phân tích…
+            </div>
+          ) : null}
           {error ? <ErrorMessage text={error} onRetry={() => void bootstrap()} /> : null}
         </div>
-        <ChatComposer disabled={sending || !selectedId} onSend={sendMessage} />
+        <div className="composer-wrap">
+          <ChatComposer disabled={sending || !selectedId} onSend={sendMessage} />
+        </div>
       </main>
     </div>
   );

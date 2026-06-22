@@ -12,7 +12,16 @@ import { ScalarResult } from "./ScalarResult";
 import { SampleRowsTable } from "./SampleRowsTable";
 import { SchemaTable } from "./SchemaTable";
 import { SourceDetails } from "./SourceDetails";
+import { Sparkles } from "lucide-react";
 import type { UiMessage } from "../types/api";
+
+function AssistantAvatar() {
+  return (
+    <div className="assistant-avatar" aria-hidden="true">
+      <Sparkles size={16} />
+    </div>
+  );
+}
 
 export function ChatMessage({ message, debug }: { message: UiMessage; debug: boolean }) {
   if (message.role === "user") {
@@ -20,10 +29,16 @@ export function ChatMessage({ message, debug }: { message: UiMessage; debug: boo
   }
   const response = message.response;
   if (!response) {
-    return <div className="message-row assistant"><div className="assistant-content">{message.content}</div></div>;
+    return (
+      <div className="message-row assistant">
+        <AssistantAvatar />
+        <div className="assistant-content">{message.content}</div>
+      </div>
+    );
   }
   return (
     <div className="message-row assistant">
+      <AssistantAvatar />
       <div className="assistant-content">
         {response.response_type === "scalar" ? <ScalarResult response={response} /> : null}
         {response.response_type === "clarification" ? <ClarificationMessage text={response.summary} /> : null}

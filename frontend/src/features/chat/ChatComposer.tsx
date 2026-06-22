@@ -1,4 +1,4 @@
-import { Send } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { KeyboardEvent, useRef, useState } from "react";
 
 export function ChatComposer({ disabled, onSend }: { disabled: boolean; onSend: (message: string) => void }) {
@@ -28,6 +28,7 @@ export function ChatComposer({ disabled, onSend }: { disabled: boolean; onSend: 
         rows={1}
         value={value}
         disabled={disabled}
+        placeholder=""
         aria-label="Tin nhắn"
         onKeyDown={onKeyDown}
         onChange={(event) => {
@@ -36,8 +37,8 @@ export function ChatComposer({ disabled, onSend }: { disabled: boolean; onSend: 
           event.currentTarget.style.height = `${Math.min(event.currentTarget.scrollHeight, 180)}px`;
         }}
       />
-      <button aria-label="Gửi" disabled={disabled || !value.trim()} onClick={submit}>
-        <Send size={18} />
+      <button className="composer-send" aria-label="Gửi" disabled={disabled || !value.trim()} onClick={submit}>
+        <ArrowUp size={18} />
       </button>
     </div>
   );
