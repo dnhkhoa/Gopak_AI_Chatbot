@@ -26,7 +26,7 @@ Mode: `VITE_API_MODE` = `real` (FastAPI) | `mock` (in-browser fixtures).
 | Error / safe failure | ✅ | ✅ | ✅ | friendly, no stack trace |
 | Sources & filters disclosure | ✅ | ✅ | ✅ | collapsed by default |
 | Artifact downloads (HTML/Excel) | ✅ | ✅ | ⚠️ | by artifact ID; real download needs real artifacts |
-| Uploaded files panel (list/totals/status) | ✅ | ✅ | ✅ | `/api/files*` implemented |
+| Uploaded files panel (list/totals/status) | ✅ | ✅ | ✅ | `/api/files*` implemented; card items + details popover + ⋮ menu |
 | Upload `.xlsx` (composer + panel) | ✅ | ✅ | ✅ | `.xlsx` extension and MIME validated server-side |
 | File status polling | ✅ | ✅ | ✅ | poll `GET /files/{id}/status` |
 | Remove file | ✅ | ✅ | ✅ | confirm when Ready |
@@ -48,5 +48,7 @@ Legend: ✅ done · ⚠️ partial / indirect coverage · ❌ not available.
   as an optional follow-up.
 
 ## Tests
-`npm test -- --run` → 5 files / 14 tests passing (App flow, response components, mock
-adapter, files panel, `.xlsx`-only upload rule). `npm run build` passes.
+`npm test -- --run` → 5 files / 18 tests passing (App flow, response components, mock
+adapter, `.xlsx`-only upload rule, and the redesigned files panel: Excel icon, long-name
+truncation+tooltip, select/reselect, Enter→details, ⋮ menu remove with/without
+confirmation, status rendering). `npm run build` passes.
