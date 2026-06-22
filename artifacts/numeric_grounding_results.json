@@ -1,0 +1,716 @@
+{
+  "summary": {
+    "checked": 0,
+    "passed": 0,
+    "status": "not fully instrumented"
+  },
+  "results": [
+    {
+      "id": "DEV-001",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-002",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-003",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-009",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-010",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-013",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-014",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-015",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-021",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-022",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-025",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-026",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-027",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-033",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-034",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-037",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-038",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-039",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-045",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-046",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-049",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-050",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-051",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-057",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-058",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-061",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-062",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-063",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-069",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-070",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-073",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-074",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-075",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-081",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-082",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-085",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-086",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-087",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-093",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-094",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-097",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-098",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-099",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-105",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-106",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-109",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-110",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-111",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-117",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-118",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-121",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-122",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-123",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-129",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-130",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-133",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-134",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-135",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-141",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-142",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-145",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-146",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-147",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-153",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-154",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-157",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-158",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "DEV-159",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-164",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-165",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-168",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-169",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-170",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-176",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-177",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-180",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-181",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-182",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-188",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-189",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-192",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-193",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-194",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-200",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-201",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-204",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-205",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-206",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-212",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-213",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-216",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-217",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-218",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-224",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-225",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-228",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-229",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-230",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-236",
+      "category": "multipart",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-237",
+      "category": "row_level_interval",
+      "numeric_grounding_checked": false,
+      "passed": false,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    },
+    {
+      "id": "HOL-240",
+      "category": "simple_deterministic",
+      "numeric_grounding_checked": false,
+      "passed": true,
+      "reason": "No deterministic numeric oracle attached for this case yet."
+    }
+  ]
+}

@@ -1,16 +1,16 @@
 {
   "total": 320,
-  "passed": 166,
-  "accuracy": 0.5188,
+  "passed": 88,
+  "accuracy": 0.275,
   "dev": {
     "total": 140,
-    "passed": 77,
-    "accuracy": 0.55
+    "passed": 49,
+    "accuracy": 0.35
   },
   "holdout": {
     "total": 180,
-    "passed": 89,
-    "accuracy": 0.4944
+    "passed": 39,
+    "accuracy": 0.2167
   },
   "by_category": {
     "clarification": {
@@ -20,8 +20,8 @@
     },
     "context_sequence": {
       "total": 90,
-      "passed": 32,
-      "accuracy": 0.3556
+      "passed": 0,
+      "accuracy": 0.0
     },
     "cross_file_sequence": {
       "total": 40,
@@ -30,8 +30,8 @@
     },
     "deterministic": {
       "total": 45,
-      "passed": 20,
-      "accuracy": 0.4444
+      "passed": 0,
+      "accuracy": 0.0
     },
     "file_scope": {
       "total": 30,
@@ -40,13 +40,13 @@
     },
     "multipart": {
       "total": 35,
-      "passed": 18,
-      "accuracy": 0.5143
+      "passed": 0,
+      "accuracy": 0.0
     },
     "real_llm_candidate": {
       "total": 30,
-      "passed": 8,
-      "accuracy": 0.2667
+      "passed": 0,
+      "accuracy": 0.0
     },
     "refusal": {
       "total": 20,
@@ -59,5 +59,5 @@
       "accuracy": 0.0
     }
   },
-  "p50_latency_ms": 233.25
+  "p50_latency_ms": 197.10000000000002
 }

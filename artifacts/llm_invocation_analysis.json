@@ -1,0 +1,1446 @@
+{
+  "ollama_policy_observed": "REAL_LLM was not invoked in benchmark; semantic recall remains blocker.",
+  "total_llm_calls": 0,
+  "results": [
+    {
+      "id": "DEV-001",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-002",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-003",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-004",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-005",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-006",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-007",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-008",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-009",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-010",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-011",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-012",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-013",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-014",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-015",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-016",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-017",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-018",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-019",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-020",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-021",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-022",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-023",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-024",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-025",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-026",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-027",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-028",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-029",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-030",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-031",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-032",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-033",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-034",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-035",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-036",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-037",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-038",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-039",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-040",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-041",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-042",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-043",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-044",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-045",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-046",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-047",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-048",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-049",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-050",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-051",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-052",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-053",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-054",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-055",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-056",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-057",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-058",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-059",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-060",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-061",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-062",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-063",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-064",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-065",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-066",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-067",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-068",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-069",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-070",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-071",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-072",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-073",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-074",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-075",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-076",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-077",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-078",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-079",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-080",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-081",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-082",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-083",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-084",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-085",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-086",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-087",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-088",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-089",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-090",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-091",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-092",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-093",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-094",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-095",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-096",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-097",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-098",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-099",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-100",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-101",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-102",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-103",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-104",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-105",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-106",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-107",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-108",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-109",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-110",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-111",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-112",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-113",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-114",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-115",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-116",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-117",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-118",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-119",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-120",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-121",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-122",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-123",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-124",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-125",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-126",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-127",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-128",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-129",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-130",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-131",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-132",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-133",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-134",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-135",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-136",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-137",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-138",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-139",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-140",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-141",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-142",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-143",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-144",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-145",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-146",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-147",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-148",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-149",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-150",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-151",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-152",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-153",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-154",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-155",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-156",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-157",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-158",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "DEV-159",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "DEV-160",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-161",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-162",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-163",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-164",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-165",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-166",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-167",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-168",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-169",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-170",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-171",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-172",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-173",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-174",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-175",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-176",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-177",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-178",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-179",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-180",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-181",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-182",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-183",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-184",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-185",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-186",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-187",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-188",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-189",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-190",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-191",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-192",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-193",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-194",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-195",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-196",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-197",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-198",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-199",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-200",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-201",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-202",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-203",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-204",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-205",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-206",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-207",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-208",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-209",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-210",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-211",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-212",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-213",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-214",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-215",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-216",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-217",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-218",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-219",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-220",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-221",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-222",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-223",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-224",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-225",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-226",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-227",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-228",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-229",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-230",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-231",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-232",
+      "category": "clarification_resolution",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-233",
+      "category": "topic_switch_during_clarification",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-234",
+      "category": "topic_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-235",
+      "category": "file_context_restoration",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-236",
+      "category": "multipart",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-237",
+      "category": "row_level_interval",
+      "llm_calls": 0,
+      "passed": false
+    },
+    {
+      "id": "HOL-238",
+      "category": "safety_refusal",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-239",
+      "category": "semantic_natural_language",
+      "llm_calls": 0,
+      "passed": true
+    },
+    {
+      "id": "HOL-240",
+      "category": "simple_deterministic",
+      "llm_calls": 0,
+      "passed": true
+    }
+  ]
+}

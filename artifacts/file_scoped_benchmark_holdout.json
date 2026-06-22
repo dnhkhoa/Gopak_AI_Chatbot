@@ -14,7 +14,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 166.7,
+    "latency_ms": 206.4,
     "passed": true
   },
   {
@@ -32,7 +32,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 175.3,
+    "latency_ms": 200.2,
     "passed": true
   },
   {
@@ -50,7 +50,7 @@
     "active_file_name": "EntryTransaction_20260203_164943.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 266.9,
+    "latency_ms": 175.0,
     "passed": false
   },
   {
@@ -68,7 +68,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 166.4,
+    "latency_ms": 190.6,
     "passed": true
   },
   {
@@ -86,7 +86,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 283.7,
+    "latency_ms": 257.1,
     "passed": false
   },
   {
@@ -104,7 +104,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 158.5,
+    "latency_ms": 183.4,
     "passed": true
   },
   {
@@ -122,7 +122,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 174.8,
+    "latency_ms": 183.5,
     "passed": true
   },
   {
@@ -140,7 +140,7 @@
     "active_file_name": "EntryTransaction_20260203_164943.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 175.0,
+    "latency_ms": 175.8,
     "passed": false
   },
   {
@@ -158,7 +158,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 192.0,
+    "latency_ms": 270.3,
     "passed": true
   },
   {
@@ -176,7 +176,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 166.2,
+    "latency_ms": 199.0,
     "passed": false
   },
   {
@@ -194,7 +194,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 200.0,
+    "latency_ms": 166.7,
     "passed": true
   },
   {
@@ -212,7 +212,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 173.6,
+    "latency_ms": 207.1,
     "passed": true
   },
   {
@@ -230,7 +230,7 @@
     "active_file_name": "EntryTransaction_20260203_164943.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 375.4,
+    "latency_ms": 173.9,
     "passed": false
   },
   {
@@ -248,7 +248,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 175.0,
+    "latency_ms": 175.1,
     "passed": true
   },
   {
@@ -266,7 +266,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 200.3,
+    "latency_ms": 199.0,
     "passed": false
   },
   {
@@ -278,14 +278,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "record_detail",
+    "execution_mode": "LAST_RECORD",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 383.4,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 241.1,
+    "passed": false
   },
   {
     "id": "FSB-157",
@@ -302,7 +302,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 166.4,
+    "latency_ms": 199.9,
     "passed": false
   },
   {
@@ -314,14 +314,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 333.2,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 207.2,
+    "passed": false
   },
   {
     "id": "FSB-159",
@@ -338,7 +338,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 200.6,
+    "latency_ms": 165.5,
     "passed": false
   },
   {
@@ -350,14 +350,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 408.2,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 182.1,
+    "passed": false
   },
   {
     "id": "FSB-161",
@@ -368,13 +368,13 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "clarification",
-    "execution_mode": "CLARIFICATION",
+    "actual_response_type": "record_detail",
+    "execution_mode": "LAST_RECORD",
     "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 199.7,
+    "latency_ms": 226.3,
     "passed": false
   },
   {
@@ -386,14 +386,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 327.5,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 183.2,
+    "passed": false
   },
   {
     "id": "FSB-163",
@@ -410,7 +410,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 258.2,
+    "latency_ms": 139.5,
     "passed": false
   },
   {
@@ -422,14 +422,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "report",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 350.2,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 173.6,
+    "passed": false
   },
   {
     "id": "FSB-165",
@@ -446,7 +446,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 249.7,
+    "latency_ms": 208.5,
     "passed": false
   },
   {
@@ -458,14 +458,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "record_detail",
+    "execution_mode": "LAST_RECORD",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 341.9,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 259.4,
+    "passed": false
   },
   {
     "id": "FSB-167",
@@ -482,7 +482,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 227.3,
+    "latency_ms": 215.5,
     "passed": false
   },
   {
@@ -494,14 +494,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 341.7,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 182.0,
+    "passed": false
   },
   {
     "id": "FSB-169",
@@ -518,7 +518,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 158.6,
+    "latency_ms": 166.6,
     "passed": false
   },
   {
@@ -530,14 +530,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 420.9,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 169.3,
+    "passed": false
   },
   {
     "id": "FSB-171",
@@ -548,13 +548,13 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "clarification",
-    "execution_mode": "CLARIFICATION",
+    "actual_response_type": "record_detail",
+    "execution_mode": "LAST_RECORD",
     "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 275.1,
+    "latency_ms": 215.3,
     "passed": false
   },
   {
@@ -566,14 +566,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 308.7,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 224.9,
+    "passed": false
   },
   {
     "id": "FSB-173",
@@ -590,7 +590,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 182.7,
+    "latency_ms": 165.7,
     "passed": false
   },
   {
@@ -602,14 +602,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "report",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 361.2,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 225.3,
+    "passed": false
   },
   {
     "id": "FSB-175",
@@ -626,7 +626,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 203.4,
+    "latency_ms": 333.7,
     "passed": false
   },
   {
@@ -638,14 +638,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "record_detail",
+    "execution_mode": "LAST_RECORD",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 383.1,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 191.8,
+    "passed": false
   },
   {
     "id": "FSB-177",
@@ -662,7 +662,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 167.2,
+    "latency_ms": 175.0,
     "passed": false
   },
   {
@@ -674,14 +674,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 400.3,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 343.9,
+    "passed": false
   },
   {
     "id": "FSB-179",
@@ -698,7 +698,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 175.2,
+    "latency_ms": 155.4,
     "passed": false
   },
   {
@@ -710,14 +710,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 408.4,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 176.5,
+    "passed": false
   },
   {
     "id": "FSB-181",
@@ -728,13 +728,13 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "clarification",
-    "execution_mode": "CLARIFICATION",
+    "actual_response_type": "record_detail",
+    "execution_mode": "LAST_RECORD",
     "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 152.4,
+    "latency_ms": 257.2,
     "passed": false
   },
   {
@@ -746,14 +746,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 401.1,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 245.1,
+    "passed": false
   },
   {
     "id": "FSB-183",
@@ -770,7 +770,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 186.3,
+    "latency_ms": 276.6,
     "passed": false
   },
   {
@@ -782,14 +782,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "report",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 369.5,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 230.1,
+    "passed": false
   },
   {
     "id": "FSB-185",
@@ -806,7 +806,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 191.6,
+    "latency_ms": 265.7,
     "passed": false
   },
   {
@@ -818,14 +818,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "record_detail",
+    "execution_mode": "LAST_RECORD",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 385.8,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 217.2,
+    "passed": false
   },
   {
     "id": "FSB-187",
@@ -842,7 +842,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 166.2,
+    "latency_ms": 198.7,
     "passed": false
   },
   {
@@ -854,14 +854,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 342.7,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 226.5,
+    "passed": false
   },
   {
     "id": "FSB-189",
@@ -878,7 +878,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 175.5,
+    "latency_ms": 158.4,
     "passed": false
   },
   {
@@ -890,14 +890,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": null,
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 375.9,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 165.4,
+    "passed": false
   },
   {
     "id": "FSB-191",
@@ -908,14 +908,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-01",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 335.8,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 158.2,
+    "passed": false
   },
   {
     "id": "FSB-192",
@@ -926,14 +926,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-01",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 275.2,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 139.0,
+    "passed": false
   },
   {
     "id": "FSB-193",
@@ -944,14 +944,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-01",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 475.1,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 165.2,
+    "passed": false
   },
   {
     "id": "FSB-194",
@@ -968,7 +968,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 308.1,
+    "latency_ms": 166.9,
     "passed": false
   },
   {
@@ -980,14 +980,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-01",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 308.5,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 165.5,
+    "passed": false
   },
   {
     "id": "FSB-196",
@@ -1004,7 +1004,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 177.4,
+    "latency_ms": 181.8,
     "passed": false
   },
   {
@@ -1022,7 +1022,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 200.2,
+    "latency_ms": 265.1,
     "passed": false
   },
   {
@@ -1040,7 +1040,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 182.8,
+    "latency_ms": 150.0,
     "passed": false
   },
   {
@@ -1058,7 +1058,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 158.1,
+    "latency_ms": 166.3,
     "passed": false
   },
   {
@@ -1076,7 +1076,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 183.3,
+    "latency_ms": 193.1,
     "passed": false
   },
   {
@@ -1094,7 +1094,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 202.6,
+    "latency_ms": 183.3,
     "passed": false
   },
   {
@@ -1112,7 +1112,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 169.2,
+    "latency_ms": 223.3,
     "passed": false
   },
   {
@@ -1124,14 +1124,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-03",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 316.5,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 196.9,
+    "passed": false
   },
   {
     "id": "FSB-204",
@@ -1142,14 +1142,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-03",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 275.1,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 158.5,
+    "passed": false
   },
   {
     "id": "FSB-205",
@@ -1160,14 +1160,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-03",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 277.3,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 141.6,
+    "passed": false
   },
   {
     "id": "FSB-206",
@@ -1184,7 +1184,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 221.2,
+    "latency_ms": 151.4,
     "passed": false
   },
   {
@@ -1196,14 +1196,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-03",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 311.2,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 178.0,
+    "passed": false
   },
   {
     "id": "FSB-208",
@@ -1220,7 +1220,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 233.2,
+    "latency_ms": 200.0,
     "passed": false
   },
   {
@@ -1238,7 +1238,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 183.6,
+    "latency_ms": 202.6,
     "passed": false
   },
   {
@@ -1256,7 +1256,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 233.2,
+    "latency_ms": 262.0,
     "passed": false
   },
   {
@@ -1274,7 +1274,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 235.9,
+    "latency_ms": 195.5,
     "passed": false
   },
   {
@@ -1292,7 +1292,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 216.8,
+    "latency_ms": 242.7,
     "passed": false
   },
   {
@@ -1310,7 +1310,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 191.2,
+    "latency_ms": 181.7,
     "passed": false
   },
   {
@@ -1328,7 +1328,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 158.6,
+    "latency_ms": 216.7,
     "passed": false
   },
   {
@@ -1340,14 +1340,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-05",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 317.1,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 181.7,
+    "passed": false
   },
   {
     "id": "FSB-216",
@@ -1358,14 +1358,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-05",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 282.9,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 233.4,
+    "passed": false
   },
   {
     "id": "FSB-217",
@@ -1376,14 +1376,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-05",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 358.5,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 158.1,
+    "passed": false
   },
   {
     "id": "FSB-218",
@@ -1400,7 +1400,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 210.9,
+    "latency_ms": 168.3,
     "passed": false
   },
   {
@@ -1412,14 +1412,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-05",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 357.9,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 208.4,
+    "passed": false
   },
   {
     "id": "FSB-220",
@@ -1436,7 +1436,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 219.9,
+    "latency_ms": 168.0,
     "passed": false
   },
   {
@@ -1454,7 +1454,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 280.2,
+    "latency_ms": 241.2,
     "passed": false
   },
   {
@@ -1472,7 +1472,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 258.7,
+    "latency_ms": 223.6,
     "passed": false
   },
   {
@@ -1490,7 +1490,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 200.2,
+    "latency_ms": 150.1,
     "passed": false
   },
   {
@@ -1508,7 +1508,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 175.2,
+    "latency_ms": 156.8,
     "passed": false
   },
   {
@@ -1526,7 +1526,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 152.4,
+    "latency_ms": 191.8,
     "passed": false
   },
   {
@@ -1544,7 +1544,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 177.9,
+    "latency_ms": 250.1,
     "passed": false
   },
   {
@@ -1556,14 +1556,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-07",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 316.9,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 150.1,
+    "passed": false
   },
   {
     "id": "FSB-228",
@@ -1574,14 +1574,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-07",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 286.2,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 165.0,
+    "passed": false
   },
   {
     "id": "FSB-229",
@@ -1592,14 +1592,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-07",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 391.4,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 250.3,
+    "passed": false
   },
   {
     "id": "FSB-230",
@@ -1616,7 +1616,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 225.1,
+    "latency_ms": 216.5,
     "passed": false
   },
   {
@@ -1628,14 +1628,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-07",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 352.7,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 165.1,
+    "passed": false
   },
   {
     "id": "FSB-232",
@@ -1652,7 +1652,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 166.7,
+    "latency_ms": 191.9,
     "passed": false
   },
   {
@@ -1670,7 +1670,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 299.5,
+    "latency_ms": 266.4,
     "passed": false
   },
   {
@@ -1688,7 +1688,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 213.1,
+    "latency_ms": 242.5,
     "passed": false
   },
   {
@@ -1706,7 +1706,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 166.6,
+    "latency_ms": 224.9,
     "passed": false
   },
   {
@@ -1724,7 +1724,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 225.4,
+    "latency_ms": 216.6,
     "passed": false
   },
   {
@@ -1742,7 +1742,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 219.4,
+    "latency_ms": 173.1,
     "passed": false
   },
   {
@@ -1760,7 +1760,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 191.5,
+    "latency_ms": 189.2,
     "passed": false
   },
   {
@@ -1772,14 +1772,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-09",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 402.8,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 201.6,
+    "passed": false
   },
   {
     "id": "FSB-240",
@@ -1790,14 +1790,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-09",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 311.7,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 148.4,
+    "passed": false
   },
   {
     "id": "FSB-241",
@@ -1808,14 +1808,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-09",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 366.2,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 188.8,
+    "passed": false
   },
   {
     "id": "FSB-242",
@@ -1832,7 +1832,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 236.4,
+    "latency_ms": 184.0,
     "passed": false
   },
   {
@@ -1844,14 +1844,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-09",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 300.2,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 165.0,
+    "passed": false
   },
   {
     "id": "FSB-244",
@@ -1868,7 +1868,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 200.0,
+    "latency_ms": 201.6,
     "passed": false
   },
   {
@@ -1886,7 +1886,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 204.9,
+    "latency_ms": 223.2,
     "passed": false
   },
   {
@@ -1904,7 +1904,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 227.6,
+    "latency_ms": 191.3,
     "passed": false
   },
   {
@@ -1922,7 +1922,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 167.3,
+    "latency_ms": 158.6,
     "passed": false
   },
   {
@@ -1940,7 +1940,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 158.4,
+    "latency_ms": 223.5,
     "passed": false
   },
   {
@@ -1958,7 +1958,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 158.6,
+    "latency_ms": 160.8,
     "passed": false
   },
   {
@@ -1976,7 +1976,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 191.8,
+    "latency_ms": 208.0,
     "passed": false
   },
   {
@@ -1988,14 +1988,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-11",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 319.4,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 166.7,
+    "passed": false
   },
   {
     "id": "FSB-252",
@@ -2006,14 +2006,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-11",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 400.1,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 165.0,
+    "passed": false
   },
   {
     "id": "FSB-253",
@@ -2024,14 +2024,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-11",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 325.2,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 298.2,
+    "passed": false
   },
   {
     "id": "FSB-254",
@@ -2048,7 +2048,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 240.6,
+    "latency_ms": 233.5,
     "passed": false
   },
   {
@@ -2060,14 +2060,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-11",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 325.2,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 198.2,
+    "passed": false
   },
   {
     "id": "FSB-256",
@@ -2084,7 +2084,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 158.8,
+    "latency_ms": 173.6,
     "passed": false
   },
   {
@@ -2102,7 +2102,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 149.8,
+    "latency_ms": 197.3,
     "passed": false
   },
   {
@@ -2120,7 +2120,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 175.3,
+    "latency_ms": 175.0,
     "passed": false
   },
   {
@@ -2138,7 +2138,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 215.3,
+    "latency_ms": 233.5,
     "passed": false
   },
   {
@@ -2156,7 +2156,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 183.4,
+    "latency_ms": 198.3,
     "passed": false
   },
   {
@@ -2174,7 +2174,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 158.6,
+    "latency_ms": 176.9,
     "passed": false
   },
   {
@@ -2192,7 +2192,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 186.2,
+    "latency_ms": 234.7,
     "passed": false
   },
   {
@@ -2204,14 +2204,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-13",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 320.2,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 166.7,
+    "passed": false
   },
   {
     "id": "FSB-264",
@@ -2222,14 +2222,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-13",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 340.7,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 160.2,
+    "passed": false
   },
   {
     "id": "FSB-265",
@@ -2240,14 +2240,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-13",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 308.7,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 175.0,
+    "passed": false
   },
   {
     "id": "FSB-266",
@@ -2264,7 +2264,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 250.0,
+    "latency_ms": 164.7,
     "passed": false
   },
   {
@@ -2276,14 +2276,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-13",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 333.8,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 372.3,
+    "passed": false
   },
   {
     "id": "FSB-268",
@@ -2300,7 +2300,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 213.4,
+    "latency_ms": 181.4,
     "passed": false
   },
   {
@@ -2318,7 +2318,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 166.3,
+    "latency_ms": 198.1,
     "passed": false
   },
   {
@@ -2336,7 +2336,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 194.4,
+    "latency_ms": 216.8,
     "passed": false
   },
   {
@@ -2354,7 +2354,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 166.8,
+    "latency_ms": 199.6,
     "passed": false
   },
   {
@@ -2372,7 +2372,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 174.9,
+    "latency_ms": 215.2,
     "passed": false
   },
   {
@@ -2390,7 +2390,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 160.8,
+    "latency_ms": 240.6,
     "passed": false
   },
   {
@@ -2408,7 +2408,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 225.2,
+    "latency_ms": 190.0,
     "passed": false
   },
   {
@@ -2420,14 +2420,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-15",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 308.5,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 256.4,
+    "passed": false
   },
   {
     "id": "FSB-276",
@@ -2438,14 +2438,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-15",
-    "actual_response_type": "table",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 275.0,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 316.6,
+    "passed": false
   },
   {
     "id": "FSB-277",
@@ -2456,14 +2456,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-15",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 295.0,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 151.6,
+    "passed": false
   },
   {
     "id": "FSB-278",
@@ -2480,7 +2480,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 332.8,
+    "latency_ms": 243.1,
     "passed": false
   },
   {
@@ -2492,14 +2492,14 @@
     "expected_response_type": "table",
     "expected_no_sql": false,
     "sequence_id": "CTX-15",
-    "actual_response_type": "chart",
-    "execution_mode": "DETERMINISTIC",
+    "actual_response_type": "clarification",
+    "execution_mode": "CLARIFICATION",
     "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
-    "sql_present": true,
-    "latency_ms": 333.1,
-    "passed": true
+    "sql_present": false,
+    "latency_ms": 225.1,
+    "passed": false
   },
   {
     "id": "FSB-280",
@@ -2516,7 +2516,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 167.5,
+    "latency_ms": 167.1,
     "passed": false
   },
   {
@@ -2534,7 +2534,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 149.8,
+    "latency_ms": 217.5,
     "passed": true
   },
   {
@@ -2552,7 +2552,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 215.7,
+    "latency_ms": 206.3,
     "passed": true
   },
   {
@@ -2570,7 +2570,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 183.8,
+    "latency_ms": 285.9,
     "passed": false
   },
   {
@@ -2588,7 +2588,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 191.4,
+    "latency_ms": 175.0,
     "passed": true
   },
   {
@@ -2606,7 +2606,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 227.8,
+    "latency_ms": 299.9,
     "passed": true
   },
   {
@@ -2624,7 +2624,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 175.3,
+    "latency_ms": 191.1,
     "passed": true
   },
   {
@@ -2642,7 +2642,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 158.2,
+    "latency_ms": 216.2,
     "passed": false
   },
   {
@@ -2660,7 +2660,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 166.5,
+    "latency_ms": 176.4,
     "passed": true
   },
   {
@@ -2678,7 +2678,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 199.7,
+    "latency_ms": 198.5,
     "passed": true
   },
   {
@@ -2696,7 +2696,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 158.5,
+    "latency_ms": 200.1,
     "passed": true
   },
   {
@@ -2714,7 +2714,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 185.9,
+    "latency_ms": 225.2,
     "passed": false
   },
   {
@@ -2732,7 +2732,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 202.9,
+    "latency_ms": 158.3,
     "passed": true
   },
   {
@@ -2750,7 +2750,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 158.4,
+    "latency_ms": 198.2,
     "passed": true
   },
   {
@@ -2768,7 +2768,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 150.4,
+    "latency_ms": 177.0,
     "passed": true
   },
   {
@@ -2786,7 +2786,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 167.1,
+    "latency_ms": 225.3,
     "passed": false
   },
   {
@@ -2804,7 +2804,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 191.3,
+    "latency_ms": 182.9,
     "passed": true
   },
   {
@@ -2822,7 +2822,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 204.8,
+    "latency_ms": 240.8,
     "passed": true
   },
   {
@@ -2840,7 +2840,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 166.8,
+    "latency_ms": 168.9,
     "passed": true
   },
   {
@@ -2858,7 +2858,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 216.1,
+    "latency_ms": 200.1,
     "passed": false
   },
   {
@@ -2876,7 +2876,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 182.9,
+    "latency_ms": 177.0,
     "passed": true
   },
   {
@@ -2894,7 +2894,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 161.4,
+    "latency_ms": 181.0,
     "passed": true
   },
   {
@@ -2912,7 +2912,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 184.0,
+    "latency_ms": 202.1,
     "passed": true
   },
   {
@@ -2930,7 +2930,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 150.0,
+    "latency_ms": 256.5,
     "passed": false
   },
   {
@@ -2948,7 +2948,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 241.7,
+    "latency_ms": 176.0,
     "passed": true
   },
   {
@@ -2966,7 +2966,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 160.8,
+    "latency_ms": 181.2,
     "passed": true
   },
   {
@@ -2984,7 +2984,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 150.2,
+    "latency_ms": 251.9,
     "passed": true
   },
   {
@@ -3002,7 +3002,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 201.7,
+    "latency_ms": 266.9,
     "passed": false
   },
   {
@@ -3020,7 +3020,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 242.3,
+    "latency_ms": 206.4,
     "passed": true
   },
   {
@@ -3038,7 +3038,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 333.2,
+    "latency_ms": 235.3,
     "passed": true
   },
   {
@@ -3056,7 +3056,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 225.1,
+    "latency_ms": 204.9,
     "passed": true
   },
   {
@@ -3074,7 +3074,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 169.0,
+    "latency_ms": 216.6,
     "passed": false
   },
   {
@@ -3092,7 +3092,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 166.8,
+    "latency_ms": 172.9,
     "passed": true
   },
   {
@@ -3110,7 +3110,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 199.9,
+    "latency_ms": 193.9,
     "passed": true
   },
   {
@@ -3128,7 +3128,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 150.2,
+    "latency_ms": 154.6,
     "passed": true
   },
   {
@@ -3146,7 +3146,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 175.2,
+    "latency_ms": 246.5,
     "passed": false
   },
   {
@@ -3164,7 +3164,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 162.0,
+    "latency_ms": 165.8,
     "passed": true
   },
   {
@@ -3182,7 +3182,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 175.1,
+    "latency_ms": 200.2,
     "passed": true
   },
   {
@@ -3200,7 +3200,7 @@
     "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 158.4,
+    "latency_ms": 181.0,
     "passed": true
   },
   {
@@ -3218,7 +3218,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": true,
     "sql_present": false,
-    "latency_ms": 169.1,
+    "latency_ms": 210.7,
     "passed": false
   },
   {
@@ -3236,7 +3236,7 @@
     "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
     "file_scope_validated": false,
     "sql_present": false,
-    "latency_ms": 150.2,
+    "latency_ms": 175.3,
     "passed": true
   }
 ]

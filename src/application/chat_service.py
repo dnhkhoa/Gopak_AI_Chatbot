@@ -25,6 +25,7 @@ from src.application.schemas import (
     TablePayload,
 )
 from src.catalog.profiler import load_catalog
+from src.conversation.clarification import ClarificationResolver, build_plan_from_resolved_message
 from src.config import Settings, get_settings
 from src.conversation.memory_service import ConversationMemoryService
 from src.application.customer_intents import CustomerIntentResult, detect_customer_intent
@@ -354,6 +355,42 @@ class ChatApplicationService:
             self.memory_service.save_turn(state, role="assistant", content=response.summary, execution_mode="SAFE_FAILURE")
             return response
 
+        clarification = ClarificationResolver(catalog).resolve_pending(
+            conversation_id,
+            message,
+            state,
+            debug=debug,
+            started=started,
+        )
+        if clarification.response is not None:
+            self.memory_service.save_turn(
+                state,
+                role="assistant",
+                content=clarification.response.summary or clarification.response.title,
+                execution_mode=clarification.response.metadata.get("execution_mode"),
+            )
+            return clarification.response
+        if clarification.resolved_message:
+            message = clarification.resolved_message
+        forced_plan = build_plan_from_resolved_message(catalog, state, message) if clarification.resolved_message else None
+        if forced_plan is None and state.pending_clarification is None and _starts_slot_clarification(message):
+            started_clarification = ClarificationResolver(catalog).maybe_start(
+                conversation_id,
+                message,
+                state,
+                QueryPlan(intent="clarification", output="text", clarification_question="Cần làm rõ yêu cầu."),
+                debug=debug,
+                started=started,
+            )
+            if started_clarification is not None:
+                self.memory_service.save_turn(
+                    state,
+                    role="assistant",
+                    content=started_clarification.summary or started_clarification.title,
+                    execution_mode=started_clarification.metadata.get("execution_mode"),
+                )
+                return started_clarification
+
         row_response = try_row_level_response(conversation_id, message, catalog, state, debug, started)
         if row_response is not None:
             self.memory_service.save_turn(
@@ -386,10 +423,22 @@ class ChatApplicationService:
         timings: dict[str, Any] = {}
 
         try:
-            planner = QueryPlanner(catalog, self.settings)
-            planned = planner.plan(message, state)
-            plan = planned.plan
-            metadata = dict(planned.metadata or {})
+            if forced_plan is not None:
+                plan = forced_plan
+                metadata = {
+                    "execution_mode": "DETERMINISTIC",
+                    "router_confidence": 1.0,
+                    "routing_reason": "pending_clarification_resolved",
+                    "llm_called": False,
+                    "llm_call_count": 0,
+                    "clarification_resolution": "COMPLETE",
+                    "selected_tables": forced_plan.tables,
+                }
+            else:
+                planner = QueryPlanner(catalog, self.settings)
+                planned = planner.plan(message, state)
+                plan = planned.plan
+                metadata = dict(planned.metadata or {})
             metadata["persistence_degraded"] = self.memory_service.persistence_degraded
             self._attach_file_scope_to_metadata(metadata, state, True)
 
@@ -405,6 +454,24 @@ class ChatApplicationService:
                 )
 
             if plan.intent in {"clarification", "refusal", "safe_failure"}:
+                started_clarification = ClarificationResolver(catalog).maybe_start(
+                    conversation_id,
+                    message,
+                    state,
+                    plan,
+                    debug=debug,
+                    started=started,
+                )
+                if started_clarification is not None:
+                    metadata.update(started_clarification.metadata)
+                    self.memory_service.save_turn(
+                        state,
+                        role="assistant",
+                        content=started_clarification.summary or started_clarification.title,
+                        execution_mode=started_clarification.metadata.get("execution_mode"),
+                        query_plan=plan.model_dump(),
+                    )
+                    return started_clarification
                 presented = build_presented_response(message, plan, pd.DataFrame(), catalog, [])
             else:
                 query_started = perf_counter()
@@ -420,6 +487,7 @@ class ChatApplicationService:
                     xlsx_path = export_excel_result(message, export_summary, result.dataframe, sources, self.settings.reports_dir)
                 state.update_from_plan(plan, plan.output)
                 state.update_from_result(result.dataframe)
+                state.remember_topic(plan)
 
             metadata.setdefault("latency_ms", {})
             if isinstance(metadata["latency_ms"], dict):
@@ -1085,6 +1153,11 @@ def _table_source_filename(table: dict) -> str:
 def _table_file_id(table: dict) -> str:
     profile = table.get("profile") if isinstance(table.get("profile"), dict) else {}
     return str(table.get("file_id") or table.get("source_file_id") or profile.get("source_file_id") or "")
+
+
+def _starts_slot_clarification(message: str) -> bool:
+    q = _ascii_text(message).strip(" ?.!;:")
+    return q in {"top", "top may", "top nguyen nhan", "ve bieu do tong quan", "bieu do tong quan"}
 
 
 def _ascii_text(text: str) -> str:

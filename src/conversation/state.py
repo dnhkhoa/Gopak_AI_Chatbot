@@ -5,6 +5,44 @@ from uuid import uuid4
 from pydantic import BaseModel, Field
 
 
+class PendingClarification(BaseModel):
+    clarification_id: str = Field(default_factory=lambda: str(uuid4()))
+    active_file_id: str
+    original_message: str
+    original_intent: str
+    partial_request: dict = Field(default_factory=dict)
+    missing_slots: list[str] = Field(default_factory=list)
+    resolved_slots: dict[str, object] = Field(default_factory=dict)
+    allowed_metrics: list[str] = Field(default_factory=list)
+    allowed_dimensions: list[str] = Field(default_factory=list)
+    allowed_outputs: list[str] = Field(default_factory=list)
+    allowed_values: dict[str, list[str]] = Field(default_factory=dict)
+    last_question: str
+    attempts: int = 0
+
+
+class TopicFrame(BaseModel):
+    topic_id: str = Field(default_factory=lambda: str(uuid4()))
+    active_file_id: str
+    label: str
+    intent: str
+    metrics: list[dict] = Field(default_factory=list)
+    dimensions: list[str] = Field(default_factory=list)
+    filters: list[dict] = Field(default_factory=list)
+    time_range: dict | None = None
+    ranking: dict | None = None
+    output_type: str = "text"
+    last_query_plan: dict | None = None
+    last_result_summary: dict | None = None
+
+
+class FileConversationContext(BaseModel):
+    file_id: str
+    active_topic_id: str | None = None
+    topic_frames: list[TopicFrame] = Field(default_factory=list)
+    pending_clarification: PendingClarification | None = None
+
+
 class ConversationState(BaseModel):
     conversation_id: str = Field(default_factory=lambda: str(uuid4()))
 
@@ -13,6 +51,10 @@ class ConversationState(BaseModel):
     file_contexts: dict[str, dict] = Field(default_factory=dict)
     current_topic: str | None = None
     topic_frames: list[dict] = Field(default_factory=list)
+    pending_clarification: PendingClarification | None = None
+    current_message: str | None = None
+    resolved_request: dict | None = None
+    last_execution_mode: str | None = None
 
     active_table: str | None = None
     active_metric: dict | None = None
@@ -118,6 +160,7 @@ class ConversationState(BaseModel):
             "last_output": self.last_output,
             "current_topic": self.current_topic,
             "topic_frames": self.topic_frames,
+            "pending_clarification": self.pending_clarification.model_dump() if self.pending_clarification else None,
         }
 
     def restore_file_context(self, file_id: str) -> None:
@@ -127,6 +170,8 @@ class ConversationState(BaseModel):
             return
         for key, value in context.items():
             if hasattr(self, key):
+                if key == "pending_clarification" and isinstance(value, dict):
+                    value = PendingClarification.model_validate(value)
                 setattr(self, key, value)
 
     def clear_analysis_context(self) -> None:
@@ -165,3 +210,28 @@ class ConversationState(BaseModel):
                 file_contexts=file_contexts,
             ).model_dump()
         )
+
+    def remember_topic(self, plan, label: str | None = None) -> None:
+        if not self.active_file_id or not getattr(plan, "tables", None):
+            return
+        frame = TopicFrame(
+            active_file_id=self.active_file_id,
+            label=label or _topic_label(plan),
+            intent=getattr(plan, "intent", "query"),
+            metrics=[metric.model_dump() for metric in getattr(plan, "metrics", [])],
+            dimensions=list(getattr(plan, "dimensions", []) or []),
+            filters=[flt.model_dump() for flt in getattr(plan, "filters", [])],
+            time_range=self.active_time_range if isinstance(self.active_time_range, dict) else None,
+            ranking=getattr(plan, "ranking", None).model_dump() if getattr(plan, "ranking", None) else None,
+            output_type=getattr(plan, "output", "text"),
+            last_query_plan=plan.model_dump() if hasattr(plan, "model_dump") else None,
+            last_result_summary=self.last_result_summary,
+        )
+        self.current_topic = frame.topic_id
+        self.topic_frames = [item for item in self.topic_frames if item.get("topic_id") != frame.topic_id][-9:] + [frame.model_dump()]
+
+
+def _topic_label(plan) -> str:
+    dimensions = ", ".join(getattr(plan, "dimensions", []) or [])
+    metrics = ", ".join((getattr(metric, "name", None) or getattr(metric, "aggregation", "")) for metric in getattr(plan, "metrics", []) or [])
+    return " / ".join(part for part in [getattr(plan, "intent", "query"), metrics, dimensions] if part)

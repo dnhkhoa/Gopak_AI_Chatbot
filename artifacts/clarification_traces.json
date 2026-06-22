@@ -1,0 +1,1958 @@
+{
+  "summary": {
+    "total": 39,
+    "passed": 39
+  },
+  "results": [
+    {
+      "id": "DEV-004",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 15.5,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 15.7,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 76.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 107.8
+    },
+    {
+      "id": "DEV-005",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan #5",
+          "latency_ms": 35.9,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 15.1,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 501.0,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 552.0
+    },
+    {
+      "id": "DEV-016",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 15.5,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 16.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 627.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 659.1
+    },
+    {
+      "id": "DEV-017",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan #17",
+          "latency_ms": 31.4,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 15.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 171.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 217.4
+    },
+    {
+      "id": "DEV-028",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 15.3,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 14.8,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 5039.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 5069.6
+    },
+    {
+      "id": "DEV-029",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan #29",
+          "latency_ms": 33.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 21.3,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 116.6,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 170.8
+    },
+    {
+      "id": "DEV-040",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 14.8,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 16.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 73.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 104.5
+    },
+    {
+      "id": "DEV-041",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan #41",
+          "latency_ms": 30.7,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 14.5,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 105.8,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 151.0
+    },
+    {
+      "id": "DEV-052",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 16.1,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 16.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 82.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 114.9
+    },
+    {
+      "id": "DEV-053",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan #53",
+          "latency_ms": 32.2,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 16.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 112.9,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 161.1
+    },
+    {
+      "id": "DEV-064",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 14.4,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 15.6,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 69.2,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 99.2
+    },
+    {
+      "id": "DEV-065",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan #65",
+          "latency_ms": 29.9,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 14.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 101.4,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 145.3
+    },
+    {
+      "id": "DEV-076",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 14.1,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 21.2,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 85.5,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 120.8
+    },
+    {
+      "id": "DEV-077",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan #77",
+          "latency_ms": 31.9,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 14.4,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 106.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 152.5
+    },
+    {
+      "id": "DEV-088",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 15.3,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 14.4,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 71.8,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 101.5
+    },
+    {
+      "id": "DEV-089",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan #89",
+          "latency_ms": 32.5,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 14.6,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 103.5,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 150.7
+    },
+    {
+      "id": "DEV-100",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 14.3,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 15.4,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 73.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 103.3
+    },
+    {
+      "id": "DEV-101",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan #101",
+          "latency_ms": 28.5,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 13.7,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 100.0,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 142.2
+    },
+    {
+      "id": "DEV-112",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 14.7,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 15.5,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 74.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 104.5
+    },
+    {
+      "id": "DEV-113",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan #113",
+          "latency_ms": 28.7,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 14.7,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 101.3,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 144.7
+    },
+    {
+      "id": "DEV-124",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 14.6,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 20.3,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 83.3,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 118.2
+    },
+    {
+      "id": "DEV-125",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan #125",
+          "latency_ms": 29.2,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 14.6,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 112.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 155.9
+    },
+    {
+      "id": "DEV-136",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 14.3,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 16.3,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 76.4,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 107.0
+    },
+    {
+      "id": "DEV-137",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan #137",
+          "latency_ms": 34.3,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 17.1,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 103.4,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 154.8
+    },
+    {
+      "id": "DEV-148",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 25.5,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 14.6,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 71.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 111.6
+    },
+    {
+      "id": "DEV-149",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan #149",
+          "latency_ms": 32.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 14.6,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 112.7,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 159.3
+    },
+    {
+      "id": "DEV-160",
+      "set": "development",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 14.7,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 14.3,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 124.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 153.1
+    },
+    {
+      "id": "HOL-171",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 15.4,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 15.9,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 71.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 103.0
+    },
+    {
+      "id": "HOL-172",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan",
+          "latency_ms": 15.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 15.3,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 97.7,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 128.0
+    },
+    {
+      "id": "HOL-183",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 16.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 15.7,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 74.1,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 105.8
+    },
+    {
+      "id": "HOL-184",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan",
+          "latency_ms": 16.3,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 15.6,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 98.0,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 129.8
+    },
+    {
+      "id": "HOL-195",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 15.6,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 16.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 75.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 107.3
+    },
+    {
+      "id": "HOL-196",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan",
+          "latency_ms": 14.5,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 16.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 101.1,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 131.6
+    },
+    {
+      "id": "HOL-207",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 13.7,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 14.3,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 68.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 96.6
+    },
+    {
+      "id": "HOL-208",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan",
+          "latency_ms": 16.6,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 15.8,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 101.8,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 134.2
+    },
+    {
+      "id": "HOL-219",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 16.0,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 15.5,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 69.6,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 101.1
+    },
+    {
+      "id": "HOL-220",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan",
+          "latency_ms": 16.2,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 15.8,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 103.8,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 135.9
+    },
+    {
+      "id": "HOL-231",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "top",
+          "latency_ms": 17.1,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "5",
+          "latency_ms": 14.3,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 71.7,
+          "checks": {
+            "response_type": "table",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 103.1
+    },
+    {
+      "id": "HOL-232",
+      "set": "holdout",
+      "category": "clarification_resolution",
+      "passed": true,
+      "failure_reasons": [],
+      "repeated_loop": false,
+      "turns": [
+        {
+          "message": "ve bieu do tong quan",
+          "latency_ms": 16.1,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "tong",
+          "latency_ms": 15.4,
+          "checks": {
+            "response_type": "clarification",
+            "execution_mode": "CLARIFICATION",
+            "llm_called": false,
+            "sql_executed": false,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": true
+          },
+          "passed": true
+        },
+        {
+          "message": "may",
+          "latency_ms": 150.6,
+          "checks": {
+            "response_type": "chart",
+            "execution_mode": "DETERMINISTIC",
+            "llm_called": false,
+            "sql_executed": true,
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "pending_after": false
+          },
+          "passed": true
+        }
+      ],
+      "latency_ms": 182.2
+    }
+  ]
+}

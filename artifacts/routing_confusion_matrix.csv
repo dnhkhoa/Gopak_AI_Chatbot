@@ -1,5 +1,5 @@
 expected,actual,count
-chart,chart,5
+chart,clarification,5
 clarification,clarification,20
 data_overview,data_overview,22
 data_quality,clarification,6
@@ -7,14 +7,10 @@ error,refusal,10
 refusal,clarification,5
 refusal,refusal,35
 sample_table,clarification,6
-scalar,clarification,10
-scalar,error,5
-scalar,scalar,10
+scalar,clarification,25
 schema,schema,6
-table,chart,24
-table,clarification,87
+table,clarification,143
 table,data_quality,8
+table,record_detail,7
 table,refusal,7
-table,report,3
 table,schema,15
-table,table,36

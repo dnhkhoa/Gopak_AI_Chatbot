@@ -1,0 +1,10 @@
+criterion,weight,candidate_a_score,candidate_b_score,candidate_c_score,notes
+End-to-end correctness,20,58.33,0,0,A measured on 240 production-path sequences; B/C not production implemented
+Context/clarification accuracy,20,65,0,0,A resolves short slot filling but loops remain
+Core regression risk,15,85,55,60,A preserves core; B/C add orchestration dependencies
+Migration size,10,80,45,55,A small surface area
+Restart persistence,10,70,85,45,A uses existing SQLite; B likely stronger if adopted
+Debuggability,10,65,80,60,A requires custom traces
+Latency,5,90,70,75,A P95 152.4ms for benchmark harness
+Dependency/lock-in risk,5,90,45,55,A no new dependency
+Maintainability,5,70,70,65,A centralized enough but needs more discipline
