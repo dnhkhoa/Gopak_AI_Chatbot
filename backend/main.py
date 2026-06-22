@@ -9,7 +9,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from backend.api import routes_artifacts, routes_chat, routes_conversations, routes_data, routes_health
+from backend.api import routes_artifacts, routes_chat, routes_conversations, routes_data, routes_files, routes_health
 from src.config import _load_dotenv, ROOT
 
 
@@ -47,6 +47,7 @@ def create_app() -> FastAPI:
     app.include_router(routes_chat.router)
     app.include_router(routes_artifacts.router)
     app.include_router(routes_data.router)
+    app.include_router(routes_files.router)
     return app
 
 

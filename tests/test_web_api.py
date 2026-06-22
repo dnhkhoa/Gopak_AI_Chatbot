@@ -1,9 +1,12 @@
 from __future__ import annotations
 
+from io import BytesIO
 from pathlib import Path
 
+import pandas as pd
 from fastapi.testclient import TestClient
 
+from backend.api import routes_files
 from backend.dependencies import get_chat_service
 from backend.main import create_app
 from src.application.schemas import (
@@ -130,3 +133,40 @@ def test_artifact_download_safety(tmp_path: Path) -> None:
     c = client(tmp_path)
     assert c.get("/api/artifacts/report.html/download").status_code == 200
     assert c.get("/api/artifacts/..%2Fapp.py/download").status_code == 404
+
+
+def test_file_upload_contract(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr(routes_files, "_metadata_path", lambda: tmp_path / "uploaded_files.json")
+    monkeypatch.setattr(routes_files, "_upload_dir", lambda: tmp_path / "uploads")
+    c = client(tmp_path)
+
+    assert c.get("/api/files").json() == []
+    invalid = c.post(
+        "/api/files/upload",
+        files={"file": ("notes.txt", b"not excel", "text/plain")},
+    )
+    assert invalid.status_code == 400
+
+    workbook = BytesIO()
+    pd.DataFrame({"value": [1, 2]}).to_excel(workbook, index=False)
+    workbook.seek(0)
+    uploaded = c.post(
+        "/api/files/upload",
+        files={
+            "file": (
+                "../demo.xlsx",
+                workbook.getvalue(),
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            )
+        },
+    )
+    assert uploaded.status_code == 201
+    payload = uploaded.json()
+    assert payload["filename"] == "demo.xlsx"
+    assert payload["status"] == "ready"
+    assert "stored_name" not in payload
+
+    assert c.get(f"/api/files/{payload['id']}/status").json()["status"] == "ready"
+    assert len(c.get("/api/files").json()) == 1
+    assert c.delete(f"/api/files/{payload['id']}").status_code == 204
+    assert c.get("/api/files").json() == []

@@ -17,28 +17,27 @@ Base URL: `VITE_API_BASE_URL` (default `http://127.0.0.1:8000/api`).
 | Reset context | POST | `/conversations/{id}/reset-context` | – | `ConversationDetail` | ✅ exists | Client method ready (not surfaced in UI this round) |
 | Send message | POST | `/conversations/{id}/messages` | `{message, debug?}` | `ChatResponse` | ✅ exists | Integrated |
 | Artifact download | GET | `/artifacts/{artifact_id}/download` | – | file stream | ✅ exists | Integrated (download links) |
-| **List files** | GET | `/files` | – | `UploadedFile[]` | ❌ **BACKEND REQUIRED** | Mock only |
-| **Upload file** | POST | `/files/upload` | `multipart/form-data` (`file`, `.xlsx`) | `UploadedFile` | ❌ **BACKEND REQUIRED** | Mock only |
-| **File status** | GET | `/files/{file_id}/status` | – | `UploadedFile` | ❌ **BACKEND REQUIRED** | Mock only |
-| **Delete file** | DELETE | `/files/{file_id}` | – | `204` | ❌ **BACKEND REQUIRED** | Mock only |
+| **List files** | GET | `/files` | – | `UploadedFile[]` | ✅ exists | Integrated |
+| **Upload file** | POST | `/files/upload` | `multipart/form-data` (`file`, `.xlsx`) | `UploadedFile` | ✅ exists | Integrated |
+| **File status** | GET | `/files/{file_id}/status` | – | `UploadedFile` | ✅ exists | Integrated |
+| **Delete file** | DELETE | `/files/{file_id}` | – | `204` | ✅ exists | Integrated |
 
-## BACKEND REQUIRED — file endpoints (for the AI/Backend Engineer)
+## File Endpoints
 
 The current FastAPI app (`backend/api/`) exposes `health`, `conversations`, `chat`,
-`artifacts`, `data` — there is **no** files router. The frontend Uploaded Files panel is
-fully built against the contract below and runs today in **mock mode**. To go live:
+`artifacts`, `data`, and `files`. The frontend Uploaded Files panel can run in real mode.
+Current backend behavior:
 
-- `POST /api/files/upload` — accept a single `.xlsx`, validate **extension AND MIME**
+- `POST /api/files/upload` — accepts a single `.xlsx`, validates **extension AND MIME**
   server-side (never trust the client), sanitize the filename, generate an internal
-  file ID, save into the allowed upload dir, then run it through the **existing
-  ingestion pipeline** (`src/ingestion/…`) → header detection → normalization → Parquet
-  cache → DuckDB registration → catalog refresh. Return `{id, filename, size_bytes,
-  status: "processing"}`.
-- `GET /api/files/{id}/status` — return `status` ∈ `uploading|processing|ready|failed`
+  file ID, saves into the allowed upload dir, checks the workbook is readable, and returns
+  `{id, filename, size_bytes, status}`. Dynamic catalog ingestion/registration is still a
+  backend follow-up.
+- `GET /api/files/{id}/status` — returns `status` ∈ `uploading|processing|ready|failed`
   (+ `error` when failed). On ingestion failure: `status=failed`, do **not** register a
   broken table, do not crash.
-- `GET /api/files` — list previously uploaded files (persisted, so they survive refresh).
-- `DELETE /api/files/{id}` — remove the file only after backend confirmation; never expose
+- `GET /api/files` — lists previously uploaded files (persisted, so they survive refresh).
+- `DELETE /api/files/{id}` — removes the file only after backend confirmation; never exposes
   or accept a local filesystem path.
 
 `UploadedFile` shape expected by the frontend (`frontend/src/types/files.ts`):

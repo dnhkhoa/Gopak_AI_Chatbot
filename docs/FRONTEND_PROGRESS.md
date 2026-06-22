@@ -26,10 +26,10 @@ Mode: `VITE_API_MODE` = `real` (FastAPI) | `mock` (in-browser fixtures).
 | Error / safe failure | ✅ | ✅ | ✅ | friendly, no stack trace |
 | Sources & filters disclosure | ✅ | ✅ | ✅ | collapsed by default |
 | Artifact downloads (HTML/Excel) | ✅ | ✅ | ⚠️ | by artifact ID; real download needs real artifacts |
-| Uploaded files panel (list/totals/status) | ✅ | ❌ | ✅ | **BACKEND REQUIRED**: `/api/files*` |
-| Upload `.xlsx` (composer + panel) | ✅ | ❌ | ✅ | `.xlsx`-only enforced client-side; backend pending |
-| File status polling | ✅ | ❌ | ⚠️ | poll `GET /files/{id}/status` |
-| Remove file | ✅ | ❌ | ✅ | confirm when Ready |
+| Uploaded files panel (list/totals/status) | ✅ | ✅ | ✅ | `/api/files*` implemented |
+| Upload `.xlsx` (composer + panel) | ✅ | ✅ | ✅ | `.xlsx` extension and MIME validated server-side |
+| File status polling | ✅ | ✅ | ✅ | poll `GET /files/{id}/status` |
+| Remove file | ✅ | ✅ | ✅ | confirm when Ready |
 | Retry failed upload | ✅ | ❌ | ⚠️ | |
 
 Legend: ✅ done · ⚠️ partial / indirect coverage · ❌ not available.
@@ -38,9 +38,9 @@ Legend: ✅ done · ⚠️ partial / indirect coverage · ❌ not available.
 - **Conversations, messages and all response renderers are integrated against real,
   existing backend endpoints.** History and follow-up memory work in real mode and persist
   across refresh (backend-owned).
-- **File upload/list/status/delete are MOCK ONLY.** The backend has no `/api/files`
-  endpoints yet (see `docs/API_INTEGRATION_REQUIREMENTS.md`). This is NOT complete in real
-  mode and must not be reported as such.
+- **File upload/list/status/delete are now wired in real mode.** Backend endpoints exist
+  and persist upload metadata. Dynamic ingestion of uploaded workbooks into the analytics
+  catalog is still a backend follow-up.
 - Settings/Debug intentionally absent (per brief §15).
 - Tech note: Tailwind/shadcn/TanStack Query/React Router from the suggested stack were
   **not** adopted this round to avoid destabilizing the working app; styling uses a CSS
