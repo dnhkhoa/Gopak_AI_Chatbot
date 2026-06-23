@@ -13,6 +13,14 @@ def _needs_semantic_resolution(q: str) -> bool:
     if q.strip(" ?.!;:") in exact_simple:
         return False
     semantic_terms = [
+        "dua tren toan bo",
+        "toan bo du lieu",
+        "giai thich",
+        "nhan xet",
+        "phan tich",
+        "so sanh",
+        "gioi han",
+        "ket luan",
         "lien quan",
         "giong",
         "gan voi",
@@ -41,12 +49,42 @@ def _needs_semantic_resolution(q: str) -> bool:
         "dung dau",
         "ket qua",
         "quay lai",
+        "them",
+        "bo bieu do",
     ]
     return any(term in q for term in semantic_terms)
 
 
 def _semantic_override(q: str) -> bool:
-    return any(term in q for term in ["co ve", "dang chu y", "bat thuong", "hop ly", "lo nhat", "gay van de"])
+    return any(
+        term in q
+        for term in [
+            "co ve",
+            "dang chu y",
+            "diem dang chu y",
+            "bat thuong",
+            "hop ly",
+            "lo nhat",
+            "gay van de",
+            "giai thich",
+            "nhan xet",
+            "phan tich",
+            "so sanh",
+            "gioi han",
+            "ket luan",
+            "bo bieu do",
+        ]
+    )
+
+
+def _multipart_requires_semantic(q: str) -> bool:
+    requested_parts = 0
+    requested_parts += int(any(term in q for term in ["top", "cao nhat", "nhieu nhat", "pho bien", "dung dau"]))
+    requested_parts += int(any(term in q for term in ["them", "dong thoi", "kem", "va "]))
+    requested_parts += int(any(term in q for term in ["ty le", "ty trong", "phan tram"]))
+    requested_parts += int(any(term in q for term in ["nhan xet", "giai thich", "phan tich", "so sanh"]))
+    requested_parts += int(any(term in q for term in ["so lan", "trung binh", "tong downtime", "tong thoi gian"]))
+    return requested_parts >= 3
 
 
 class HybridRouter:
@@ -58,14 +96,14 @@ class HybridRouter:
         if policy:
             return policy
         q = normalize_text(question)
+        if _semantic_override(q) or _multipart_requires_semantic(q):
+            confidence = candidate.confidence if candidate else 0.62
+            return RouteDecision(ExecutionMode.REAL_LLM, confidence, "Semantic or multipart request requires REAL_LLM structured resolution.", True), None
         if candidate and candidate.plan and candidate.confidence >= self.settings.deterministic_confidence_threshold:
             return (
                 RouteDecision(ExecutionMode.DETERMINISTIC, candidate.confidence, candidate.reason, requires_llm=False),
                 candidate.plan,
             )
-        if _semantic_override(q):
-            confidence = candidate.confidence if candidate else 0.62
-            return RouteDecision(ExecutionMode.REAL_LLM, confidence, "Question contains judgmental/semantic language that should be resolved by REAL_LLM.", True), None
         if candidate and candidate.plan and 0.60 <= candidate.confidence < self.settings.deterministic_confidence_threshold:
             if _needs_semantic_resolution(q):
                 return RouteDecision(ExecutionMode.REAL_LLM, candidate.confidence, "Candidate is not high confidence and needs semantic/context reasoning.", True), None

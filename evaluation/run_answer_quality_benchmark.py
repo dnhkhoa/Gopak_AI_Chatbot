@@ -13,8 +13,10 @@ Outputs:
 from __future__ import annotations
 
 import json
+import subprocess
 import sys
 import tempfile
+from dataclasses import replace
 from pathlib import Path
 from typing import Any
 
@@ -154,9 +156,12 @@ def run() -> dict[str, Any]:
     settings = get_settings()
     results: list[dict[str, Any]] = []
     multipart: list[dict[str, Any]] = []
+    public_payloads: list[dict[str, Any]] = []
+    examples: list[dict[str, str]] = []
     with tempfile.TemporaryDirectory(prefix="gopak-answer-quality-", ignore_cleanup_errors=True) as tmp:
         memory = ConversationMemoryService(db_path=Path(tmp) / "m.db", cache_root=settings.cache_dir, enabled=True, recent_turns_limit=settings.recent_turns_limit)
         app = ChatApplicationService(settings=settings, memory_service=memory)
+        public_app = ChatApplicationService(settings=replace(settings, show_internal_debug_metadata=False), memory_service=memory)
         for case in _cases():
             record = _record(files, case["file"])
             conv = app.create_conversation(case["id"])
@@ -165,6 +170,15 @@ def run() -> dict[str, Any]:
             turn_results = []
             for turn in case["turns"]:
                 response = app.process_message(conv.id, turn["m"], debug=True)
+                public_response = public_app.public_chat_response(response)
+                public_payload = public_response.model_dump(mode="json")
+                public_payloads.append(public_payload)
+                if len(examples) < 10:
+                    examples.append({
+                        "question": turn["m"],
+                        "response_type": public_response.response_type,
+                        "answer": public_response.summary or public_response.primary_value or public_response.title or "",
+                    })
                 checks = _score(response, turn.get("expect", {}))
                 turn_passed = all(checks.values()) if checks else True
                 entry = {
@@ -203,10 +217,88 @@ def run() -> dict[str, Any]:
             if turn["response_type"] == "clarification" and turn["checks"].get("no_unwanted_clarification") is False
         ),
     }
-    (ARTIFACTS / "answer_quality_results.json").write_text(json.dumps({"summary": summary, "results": results}, ensure_ascii=False, indent=2), encoding="utf-8")
+    answer_payload = {"summary": summary, "results": results}
+    leakage = _leakage_report(public_payloads)
+    numeric_grounding = _numeric_grounding_report(results)
+    (ARTIFACTS / "answer_quality_results.json").write_text(json.dumps(answer_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    (ARTIFACTS / "answer_quality_baseline.json").write_text(json.dumps(_load_baseline(), ensure_ascii=False, indent=2), encoding="utf-8")
+    (ARTIFACTS / "answer_quality_final_results.json").write_text(json.dumps(answer_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    (ARTIFACTS / "numeric_grounding_results.json").write_text(json.dumps(numeric_grounding, ensure_ascii=False, indent=2), encoding="utf-8")
+    (ARTIFACTS / "internal_metadata_leakage_results.json").write_text(json.dumps(leakage, ensure_ascii=False, indent=2), encoding="utf-8")
+    (ARTIFACTS / "public_api_contract_results.json").write_text(json.dumps({"summary": {"status": "passed" if leakage["summary"]["leak_count"] == 0 else "failed"}, "checks": leakage["checks"]}, ensure_ascii=False, indent=2), encoding="utf-8")
+    (ARTIFACTS / "customer_answer_examples.md").write_text(_examples_markdown(examples), encoding="utf-8")
     (ARTIFACTS / "multipart_intent_results.json").write_text(json.dumps({"summary": {"total": len(multipart), "complete": summary["multipart_complete"], "missing_requirement_count": summary["missing_requirement_count"]}, "cases": multipart}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=True, indent=2))
     return summary
+
+
+def _load_baseline() -> dict[str, Any]:
+    try:
+        result = subprocess.run(
+            ["git", "show", "HEAD:artifacts/answer_quality_results.json"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=10,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            return {"source": "HEAD:artifacts/answer_quality_results.json", "payload": json.loads(result.stdout)}
+    except Exception:
+        pass
+    return {"source": "unavailable", "payload": {}}
+
+
+def _numeric_grounding_report(results: list[dict[str, Any]]) -> dict[str, Any]:
+    numeric_cases = [
+        item for item in results
+        if item["category"] in {"scalar", "ranking", "multi_metric", "multi_part", "chart_request"}
+    ]
+    failed = [
+        item["id"] for item in numeric_cases
+        if not item["passed"]
+    ]
+    return {
+        "summary": {
+            "total": len(numeric_cases),
+            "passed": len(numeric_cases) - len(failed),
+            "failed": len(failed),
+            "status": "passed" if not failed else "failed",
+        },
+        "failed_case_ids": failed,
+    }
+
+
+def _leakage_report(payloads: list[dict[str, Any]]) -> dict[str, Any]:
+    forbidden = ["REAL_LLM", "DETERMINISTIC", "fallback", "llm_model", "qwen3.5", "execution_mode", "router_confidence", "routing_reason", "latency_ms"]
+    checks = []
+    for idx, payload in enumerate(payloads):
+        text = json.dumps(payload, ensure_ascii=False)
+        found = [term for term in forbidden if term.lower() in text.lower()]
+        checks.append({"index": idx, "forbidden_terms": found, "passed": not found})
+    return {
+        "summary": {
+            "payload_count": len(payloads),
+            "leak_count": sum(1 for item in checks if not item["passed"]),
+        },
+        "checks": checks,
+    }
+
+
+def _examples_markdown(examples: list[dict[str, str]]) -> str:
+    lines = ["# Customer Answer Examples", ""]
+    for item in examples:
+        lines.extend([
+            f"## {item['response_type']}",
+            "",
+            f"**Q:** {item['question']}",
+            "",
+            item["answer"].strip() or "(empty)",
+            "",
+        ])
+    return "\n".join(lines)
 
 
 def _coverage(requirements: list[str], response: Any, expect: dict[str, Any]) -> list[str]:

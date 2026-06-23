@@ -19,7 +19,7 @@
     "actual_fields": {},
     "passed": true,
     "failure_type": null,
-    "latency_ms": 824.6,
+    "latency_ms": 226.1,
     "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
   },
   "results": [
@@ -64,7 +64,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 999.4,
+      "latency_ms": 196.3,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -108,7 +108,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 611.9,
+      "latency_ms": 187.2,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -152,7 +152,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 684.3,
+      "latency_ms": 215.8,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -196,7 +196,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 599.2,
+      "latency_ms": 194.9,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -240,7 +240,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 640.8,
+      "latency_ms": 182.3,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -284,7 +284,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 624.5,
+      "latency_ms": 207.5,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -328,7 +328,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 632.0,
+      "latency_ms": 182.7,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -372,7 +372,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 674.6,
+      "latency_ms": 190.6,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -444,7 +444,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 643.3,
+      "latency_ms": 191.0,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -488,7 +488,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 679.7,
+      "latency_ms": 198.6,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -532,7 +532,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 757.1,
+      "latency_ms": 223.9,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -576,7 +576,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 682.7,
+      "latency_ms": 207.3,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -620,7 +620,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 715.2,
+      "latency_ms": 207.2,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -664,7 +664,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 707.5,
+      "latency_ms": 199.0,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -708,7 +708,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 606.9,
+      "latency_ms": 206.5,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -752,7 +752,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 598.9,
+      "latency_ms": 262.7,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -796,7 +796,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 589.9,
+      "latency_ms": 210.0,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -840,7 +840,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 599.2,
+      "latency_ms": 253.6,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -884,7 +884,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 708.2,
+      "latency_ms": 194.2,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -928,7 +928,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 706.5,
+      "latency_ms": 206.6,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -972,7 +972,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 764.4,
+      "latency_ms": 232.1,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1022,7 +1022,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 682.6,
+      "latency_ms": 215.6,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1072,7 +1072,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 658.1,
+      "latency_ms": 277.9,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1122,7 +1122,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 705.9,
+      "latency_ms": 235.6,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1172,7 +1172,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 805.8,
+      "latency_ms": 479.8,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1222,7 +1222,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 699.8,
+      "latency_ms": 342.1,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1272,7 +1272,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 663.7,
+      "latency_ms": 223.4,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1322,7 +1322,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 564.7,
+      "latency_ms": 264.1,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1372,7 +1372,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 778.6,
+      "latency_ms": 237.4,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1422,7 +1422,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 673.4,
+      "latency_ms": 239.5,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1472,7 +1472,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 701.9,
+      "latency_ms": 243.9,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1522,7 +1522,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 594.2,
+      "latency_ms": 348.7,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1572,7 +1572,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 744.1,
+      "latency_ms": 408.2,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1622,7 +1622,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 632.2,
+      "latency_ms": 220.9,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1672,7 +1672,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 741.1,
+      "latency_ms": 203.0,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1722,7 +1722,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 605.5,
+      "latency_ms": 235.2,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1744,7 +1744,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 631.1,
+      "latency_ms": 198.4,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1766,7 +1766,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 724.5,
+      "latency_ms": 260.6,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1788,7 +1788,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 613.2,
+      "latency_ms": 260.3,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1810,7 +1810,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 623.6,
+      "latency_ms": 206.7,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1832,7 +1832,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 623.0,
+      "latency_ms": 206.3,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1854,7 +1854,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 714.4,
+      "latency_ms": 198.1,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1876,7 +1876,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 714.8,
+      "latency_ms": 215.2,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1898,7 +1898,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 615.7,
+      "latency_ms": 222.0,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1920,7 +1920,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 689.0,
+      "latency_ms": 214.8,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1942,7 +1942,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 848.4,
+      "latency_ms": 219.5,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1964,7 +1964,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 606.0,
+      "latency_ms": 249.9,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -1986,7 +1986,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 573.2,
+      "latency_ms": 214.8,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2026,7 +2026,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 889.9,
+      "latency_ms": 298.5,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2066,7 +2066,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 630.9,
+      "latency_ms": 202.8,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2106,7 +2106,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 672.4,
+      "latency_ms": 214.6,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2146,7 +2146,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 606.7,
+      "latency_ms": 222.8,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2186,7 +2186,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 922.4,
+      "latency_ms": 209.8,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2226,7 +2226,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 648.8,
+      "latency_ms": 197.9,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2266,7 +2266,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 672.1,
+      "latency_ms": 219.5,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2306,7 +2306,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 622.6,
+      "latency_ms": 206.2,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2346,7 +2346,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 689.7,
+      "latency_ms": 234.8,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2386,7 +2386,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 628.5,
+      "latency_ms": 236.2,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2462,7 +2462,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 942.7,
+      "latency_ms": 273.3,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2538,7 +2538,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 714.1,
+      "latency_ms": 224.2,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2614,7 +2614,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 614.2,
+      "latency_ms": 207.9,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2690,7 +2690,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 688.6,
+      "latency_ms": 243.3,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2766,7 +2766,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 931.8,
+      "latency_ms": 256.2,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2842,7 +2842,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 613.7,
+      "latency_ms": 222.5,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2918,7 +2918,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 614.1,
+      "latency_ms": 242.2,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -2994,7 +2994,7 @@
       },
       "passed": true,
       "failure_type": null,
-      "latency_ms": 797.1,
+      "latency_ms": 228.3,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3016,7 +3016,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 648.4,
+      "latency_ms": 199.7,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3038,7 +3038,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 904.2,
+      "latency_ms": 189.8,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3060,7 +3060,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 630.5,
+      "latency_ms": 240.8,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3082,7 +3082,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 914.4,
+      "latency_ms": 221.6,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3104,7 +3104,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 588.4,
+      "latency_ms": 196.9,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3126,7 +3126,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 797.7,
+      "latency_ms": 273.7,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3148,7 +3148,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 722.0,
+      "latency_ms": 284.3,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3170,7 +3170,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 806.1,
+      "latency_ms": 251.9,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3192,7 +3192,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 980.2,
+      "latency_ms": 221.9,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3214,7 +3214,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 622.5,
+      "latency_ms": 189.4,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3236,7 +3236,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 905.5,
+      "latency_ms": 197.9,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3258,7 +3258,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 647.4,
+      "latency_ms": 188.0,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3280,7 +3280,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 830.2,
+      "latency_ms": 197.8,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3302,7 +3302,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 661.2,
+      "latency_ms": 235.2,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     },
     {
@@ -3324,7 +3324,7 @@
       "actual_fields": {},
       "passed": true,
       "failure_type": null,
-      "latency_ms": 824.6,
+      "latency_ms": 226.1,
       "notes": "Sample file Operation_Downtime_20251212_101824 (2)(1).xlsx was not available; used Machine_Downtime_20260203_100753.xlsx fallback."
     }
   ]

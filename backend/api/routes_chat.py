@@ -19,7 +19,9 @@ def send_message(
     if not service.get_conversation(conversation_id):
         raise HTTPException(status_code=404, detail="Conversation not found")
     try:
-        return service.process_message(conversation_id, payload.message, payload.debug, source_file_id=payload.source_file_id)
+        response = service.process_message(conversation_id, payload.message, payload.debug, source_file_id=payload.source_file_id)
+        sanitizer = getattr(service, "public_chat_response", None)
+        return sanitizer(response) if sanitizer else response
     except ValueError as exc:
         if str(exc) == "CONVERSATION_FILE_MISMATCH":
             raise HTTPException(

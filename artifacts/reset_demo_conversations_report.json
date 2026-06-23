@@ -1,18 +1,18 @@
 {
   "database_path": "D:\\Gopak Chatbot\\data\\app_memory.db",
-  "backup_dir": "D:\\Gopak Chatbot\\backups\\demo_reset\\20260623-083500",
+  "backup_dir": "D:\\Gopak Chatbot\\backups\\demo_reset\\20260623-154522",
   "backup_integrity": "ok",
   "before_counts": {
-    "result_cache": 24,
-    "conversation_turns": 79,
-    "conversation_states": 13,
-    "conversations": 13
+    "result_cache": 38,
+    "conversation_turns": 120,
+    "conversation_states": 20,
+    "conversations": 20
   },
   "deleted_counts": {
-    "result_cache": 24,
-    "conversation_turns": 79,
-    "conversation_states": 13,
-    "conversations": 13
+    "result_cache": 38,
+    "conversation_turns": 120,
+    "conversation_states": 20,
+    "conversations": 20
   },
   "after_counts": {
     "result_cache": 0,

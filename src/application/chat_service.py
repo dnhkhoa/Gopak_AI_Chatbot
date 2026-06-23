@@ -557,6 +557,10 @@ class ChatApplicationService:
                 if commentary:
                     response.summary = f"{response.summary}\n\n{commentary}".strip() if response.summary else commentary
                     response.metadata["commentary_attached"] = True
+                    response.metadata["grounded_composer_called"] = True
+                    response.metadata["llm_called"] = True
+                    response.metadata["llm_call_count"] = int(response.metadata.get("llm_call_count") or 0) + 1
+                    response.metadata["composer_model"] = self.settings.ollama_model
             assistant_content = response.primary_value or response.summary or response.title
             self._save_assistant_response(
                 state,
@@ -762,7 +766,7 @@ class ChatApplicationService:
         # query runs), so we must NOT hijack the intent here.
         if _has_new_analytics_request(q) and not _references_prior_result(q):
             return None
-        if not state.last_result_summary and not state.last_plan:
+        if not state.last_result_summary and not state.last_plan and not _requires_dataset_level_semantic(q):
             return self._file_scope_response(
                 conversation_id,
                 "clarification",
@@ -804,7 +808,12 @@ class ChatApplicationService:
                 metadata={
                     "execution_mode": "SAFE_FAILURE",
                     "routing_reason": "semantic_followup_llm_error",
-                    "llm_called": False,
+                    "llm_called": True,
+                    "llm_call_count": 1,
+                    "llm_request_started": True,
+                    "llm_request_completed": False,
+                    "fallback_used": True,
+                    "fallback_reason": "semantic_followup_llm_error",
                     "llm_model": self.settings.ollama_model,
                     "latency_ms": {"total": round((perf_counter() - started) * 1000, 1)},
                     "active_file_id": state.active_file_id,
@@ -927,6 +936,23 @@ class ChatApplicationService:
         if path.suffix.lower() not in {".html", ".xlsx"}:
             return None
         return path
+
+    def public_chat_response(self, response: ChatResponse) -> ChatResponse:
+        if self.settings.show_internal_debug_metadata:
+            return response
+        return _customer_safe_response(response)
+
+    def public_conversation_detail(self, detail: ConversationDetail) -> ConversationDetail:
+        if self.settings.show_internal_debug_metadata:
+            return detail
+        messages = [
+            message.model_copy(update={
+                "execution_mode": None,
+                "response": _customer_safe_response(message.response) if message.response else None,
+            })
+            for message in detail.messages
+        ]
+        return detail.model_copy(update={"messages": messages})
 
     def _try_metadata_response(
         self,
@@ -1288,12 +1314,13 @@ class ChatApplicationService:
         if response_type == "dashboard" and raw_dataframe is not None:
             dashboard = DashboardPayload(cards=kpi_cards(raw_dataframe), table=table, chart=chart)
         downloads = [_download_payload(path) for path in [html_path, xlsx_path] if path and path.exists()]
+        summary = _rich_result_summary(presented, plan, raw_dataframe, metadata, response_type)
         return ChatResponse(
             message_id=str(uuid4()),
             conversation_id=conversation_id,
             response_type=response_type,
             title=presented.title,
-            summary=presented.summary,
+            summary=summary,
             primary_value=presented.primary_value,
             secondary_value=presented.secondary_value,
             table=table if response_type != "scalar" else None,
@@ -1444,6 +1471,56 @@ def _stored_chat_response(value: Any) -> ChatResponse | None:
         return ChatResponse.model_validate(payload)
     except Exception:
         return None
+
+
+def _customer_safe_response(response: ChatResponse) -> ChatResponse:
+    safe_metadata = {}
+    for key in ["active_file_id", "active_file_name", "file_scope_validated"]:
+        if key in response.metadata:
+            safe_metadata[key] = response.metadata[key]
+    return response.model_copy(deep=True, update={"metadata": safe_metadata})
+
+
+def _rich_result_summary(
+    presented: PresentedResponse,
+    plan: QueryPlan,
+    raw_dataframe: pd.DataFrame | None,
+    metadata: dict[str, Any],
+    response_type: str,
+) -> str:
+    base = (presented.summary or presented.primary_value or "").strip()
+    source = str(metadata.get("active_file_name") or "")
+    scope = "Kết quả được tính trên file đang chọn"
+    if source:
+        scope = f"Kết quả được tính trên file {source}"
+    if plan.filters:
+        scope += " với các bộ lọc đang hiển thị bên dưới."
+    else:
+        scope += " và không áp dụng bộ lọc bổ sung."
+
+    if response_type == "scalar":
+        direct = base or (presented.primary_value or "")
+        return " ".join(part for part in [direct, scope] if part).strip()
+
+    if raw_dataframe is not None and not raw_dataframe.empty and (plan.ranking or plan.limit or plan.sort):
+        metric_note = "Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu."
+        return " ".join(part for part in [base, metric_note, scope] if part).strip()
+
+    if response_type == "chart":
+        return " ".join(
+            part
+            for part in [
+                base,
+                "Biểu đồ dùng cùng dữ liệu và đơn vị với bảng kết quả, nên có thể dùng để so sánh trực quan các nhóm nổi bật.",
+                scope,
+            ]
+            if part
+        ).strip()
+
+    if response_type in {"table", "report"}:
+        return " ".join(part for part in [base, "Bảng bên dưới giữ nguyên thứ tự và giá trị đã tính từ truy vấn.", scope] if part).strip()
+
+    return base
 
 
 def _internal_debug_metadata(response: ChatResponse, plan: QueryPlan | None, model: str) -> dict[str, Any]:
@@ -1607,9 +1684,9 @@ _PRIOR_RESULT_REFS = [
     "vua roi", "tren day", "ket qua tren", "ket qua nay", "ket qua do", "ket qua vua roi",
     "bang nay", "bang tren", "bang vua roi", "bang do", "bieu do nay", "o tren", "phia tren", "vua xong",
 ]
-_ANALYTICS_RANKING_WORDS = ["top", "bottom", "cao nhat", "thap nhat", "nhieu nhat", "it nhat", "dung dau", "xep hang", "pho bien"]
+_ANALYTICS_RANKING_WORDS = ["top", "bottom", "cao nhat", "thap nhat", "nhieu nhat", "it nhat", "dung dau", "xep hang", "pho bien", "quan trong"]
 _ANALYTICS_DIM_NOUNS = ["may", "machine", "nhom", "ton that", "nguyen nhan", "cong", "loai", "thang", "ngay"]
-_ANALYTICS_METRIC_WORDS = ["downtime", "thoi gian", "thoi luong", "so lan", "so luot", "ghi nhan", "dem", "tong", "trung binh", "gia tri", "count"]
+_ANALYTICS_METRIC_WORDS = ["downtime", "thoi gian", "thoi luong", "so lan", "so luot", "ghi nhan", "dem", "tong", "trung binh", "gia tri", "count", "luong xe", "ra vao"]
 
 
 def _requests_commentary(q: str) -> bool:
@@ -1619,6 +1696,27 @@ def _requests_commentary(q: str) -> bool:
 
 def _references_prior_result(q: str) -> bool:
     return any(term in q for term in _PRIOR_RESULT_REFS)
+
+
+def _requires_dataset_level_semantic(q: str) -> bool:
+    return any(
+        term in q
+        for term in [
+            "toan bo du lieu",
+            "dua tren toan bo",
+            "diem dang chu y",
+            "dang quan tam",
+            "bat thuong",
+            "so sanh",
+            "gioi han",
+            "ket luan",
+            "insight",
+            "quan trong",
+            "luong xe",
+            "ra vao cong",
+            "nhom ton that",
+        ]
+    )
 
 
 def _has_new_analytics_request(q: str) -> bool:

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import logging
 import os
+import subprocess
 from time import perf_counter
 from uuid import uuid4
 
@@ -10,7 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from backend.api import routes_artifacts, routes_chat, routes_conversations, routes_data, routes_files, routes_health
-from src.config import _load_dotenv, ROOT
+from src.config import _load_dotenv, get_settings, ROOT
 from src.files.lifecycle import FileLifecycleService
 
 
@@ -52,6 +53,14 @@ def create_app() -> FastAPI:
 
     @app.on_event("startup")
     def reconcile_uploaded_files_on_startup() -> None:
+        settings = get_settings()
+        logger.info(
+            "backend startup commit=%s ollama_base_url=%s ollama_model=%s internal_debug=%s",
+            _git_commit(),
+            settings.ollama_base_url,
+            settings.ollama_model,
+            settings.show_internal_debug_metadata,
+        )
         try:
             result = FileLifecycleService().reconcile_uploaded_files(auto_retry=True)
             logger.info("upload reconciliation completed: %s", result)
@@ -62,3 +71,11 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
+
+
+def _git_commit() -> str:
+    try:
+        result = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, capture_output=True, text=True, check=False, timeout=5)
+        return result.stdout.strip() or "unknown"
+    except Exception:
+        return "unknown"

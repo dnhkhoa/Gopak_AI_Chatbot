@@ -5,7 +5,7 @@
 - Accuracy: 100.00%
 - Dev accuracy: 100.00%
 - Holdout accuracy: 100.00%
-- P50 latency: 92.65 ms
+- P50 latency: 111.4 ms
 
 ## Category Metrics
 

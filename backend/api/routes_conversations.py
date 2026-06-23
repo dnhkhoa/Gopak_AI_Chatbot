@@ -27,7 +27,7 @@ def create_conversation(
     )
 
 
-@router.get("/{conversation_id}", response_model=ConversationDetail)
+@router.get("/{conversation_id}", response_model=ConversationDetail, response_model_exclude_none=True)
 def get_conversation(
     conversation_id: str,
     service: ChatApplicationService = Depends(get_chat_service),
@@ -35,7 +35,8 @@ def get_conversation(
     conversation = service.get_conversation(conversation_id)
     if not conversation:
         raise HTTPException(status_code=404, detail="Conversation not found")
-    return conversation
+    sanitizer = getattr(service, "public_conversation_detail", None)
+    return sanitizer(conversation) if sanitizer else conversation
 
 
 @router.patch("/{conversation_id}", response_model=ConversationPayload)
@@ -60,7 +61,7 @@ def delete_conversation(
     service.delete_conversation(conversation_id)
 
 
-@router.post("/{conversation_id}/reset-context", response_model=ConversationDetail)
+@router.post("/{conversation_id}/reset-context", response_model=ConversationDetail, response_model_exclude_none=True)
 def reset_context(
     conversation_id: str,
     service: ChatApplicationService = Depends(get_chat_service),

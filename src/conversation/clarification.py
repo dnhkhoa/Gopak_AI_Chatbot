@@ -35,7 +35,7 @@ class ClarificationResolver:
         if pending is None:
             return ClarificationResolution()
         q = normalize_text(message)
-        if _is_new_topic(q):
+        if _is_new_topic(q) and not _is_slot_answer(q):
             state.pending_clarification = None
             return ClarificationResolution(resolution="UNRELATED_NEW_TOPIC")
 
@@ -320,4 +320,36 @@ def _extract_int(q: str) -> int | None:
 
 
 def _is_new_topic(q: str) -> bool:
-    return any(term in q for term in ["schema", "cot nao", "du lieu mau", "noi dung data", "file co gi"])
+    semantic_new_request = any(
+        term in q
+        for term in [
+            "schema",
+            "cot nao",
+            "du lieu mau",
+            "noi dung data",
+            "file co gi",
+            "bo bieu do",
+            "phan tich",
+            "nhan xet",
+            "giai thich",
+            "so sanh",
+            "top",
+            "ty le",
+            "ty trong",
+            "phan tram",
+            "quay lai",
+        ]
+    )
+    return semantic_new_request
+
+
+def _is_slot_answer(q: str) -> bool:
+    words = q.strip().split()
+    if len(words) > 6:
+        return False
+    return (
+        _metric_from_text(q) is not None
+        or _dimension_from_text(q) is not None
+        or _output_from_text(q) is not None
+        or _extract_int(q) is not None
+    )

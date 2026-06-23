@@ -109,7 +109,7 @@ def log_planner_context_sample(question: str, context: dict) -> None:
         rows = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
     except json.JSONDecodeError:
         rows = []
-    prompt_estimate = len(json.dumps(context, ensure_ascii=False)) // 4
+    prompt_estimate = len(json.dumps(context, ensure_ascii=False, default=str)) // 4
     rows.append(
         {
             "question": question,
@@ -123,7 +123,7 @@ def log_planner_context_sample(question: str, context: dict) -> None:
             "schema_linking_score": context["schema_linking"]["scores"],
         }
     )
-    path.write_text(json.dumps(rows[-200:], ensure_ascii=False, indent=2), encoding="utf-8")
+    path.write_text(json.dumps(rows[-200:], ensure_ascii=False, indent=2, default=str), encoding="utf-8")
 
 
 def planner_messages(selected_catalog: dict, state: dict, question: str, validation_error: str | None = None, previous_response: str | None = None) -> list[dict]:
@@ -151,8 +151,8 @@ def planner_messages(selected_catalog: dict, state: dict, question: str, validat
     if validation_error:
         user_payload["validation_errors"] = validation_error
         user_payload["previous_invalid_response"] = previous_response
-    return [{"role": "system", "content": system}, {"role": "user", "content": json.dumps(user_payload, ensure_ascii=False)}]
+    return [{"role": "system", "content": system}, {"role": "user", "content": json.dumps(user_payload, ensure_ascii=False, default=str)}]
 
 
 def planner_prompt(catalog: dict, state: dict, question: str) -> str:
-    return json.dumps({"question": question, "catalog": select_catalog_context(catalog, question), "state": state}, ensure_ascii=False)
+    return json.dumps({"question": question, "catalog": select_catalog_context(catalog, question), "state": state}, ensure_ascii=False, default=str)

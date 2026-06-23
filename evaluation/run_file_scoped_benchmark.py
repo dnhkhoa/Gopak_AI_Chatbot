@@ -183,17 +183,19 @@ def run() -> dict[str, Any]:
         active_conversations: dict[str, str] = {}
         for case in cases:
             sequence_id = case.get("sequence_id") or case["id"]
-            conversation_id = active_conversations.get(sequence_id)
-            if not conversation_id:
-                conversation_id = app.create_conversation(title=sequence_id).id
-                active_conversations[sequence_id] = conversation_id
             expected_file_key = case.get("active_file_key")
+            record = records.get(expected_file_key or "") or {}
+            conversation_key = f"{sequence_id}:{expected_file_key or 'no-file'}"
+            conversation_id = active_conversations.get(conversation_key)
             if expected_file_key:
-                record = records.get(expected_file_key) or {}
-                if record.get("id"):
-                    app.set_active_file(conversation_id, str(record["id"]))
+                if not conversation_id:
+                    conversation_id = app.create_conversation(title=sequence_id, source_file_id=str(record["id"]) if record.get("id") else None).id
+                    active_conversations[conversation_key] = conversation_id
+            elif not conversation_id:
+                conversation_id = app.create_conversation(title=sequence_id).id
+                active_conversations[conversation_key] = conversation_id
             start = perf_counter()
-            response = app.process_message(conversation_id, case["question"], debug=True)
+            response = app.process_message(conversation_id, case["question"], debug=True, source_file_id=str(record["id"]) if record.get("id") else None)
             latency_ms = round((perf_counter() - start) * 1000, 1)
             metadata = response.metadata or {}
             debug = metadata.get("debug") if isinstance(metadata.get("debug"), dict) else {}

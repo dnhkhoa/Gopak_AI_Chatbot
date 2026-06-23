@@ -1,0 +1,207 @@
+{
+  "summary": {
+    "health": {
+      "status": "ok",
+      "ollama_available": true,
+      "model": "qwen3.5:9b",
+      "database_available": true,
+      "memory_available": true
+    },
+    "conversation_count": 11,
+    "structured_response_pass_rate": 1.0,
+    "reload_exact_match_count": 11,
+    "mismatch_rejected": true,
+    "critical_failures": [],
+    "status": "passed"
+  },
+  "mismatch": {
+    "conversation_id": "cc2129f4-51d5-44b4-bb39-04ae0f8f543a",
+    "conversation_source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+    "attempted_source_file_id": "2ad2989784fc41ffb9fef3225034db54",
+    "http_status": 409,
+    "message_count_before": 10,
+    "message_count_after": 10,
+    "passed": true,
+    "detail": {
+      "error": "HTTP 409 POST /conversations/cc2129f4-51d5-44b4-bb39-04ae0f8f543a/messages: {\"detail\":{\"code\":\"CONVERSATION_FILE_MISMATCH\",\"message\":\"This conversation belongs to another Excel file. Start a new chat for the selected file.\"}}"
+    }
+  },
+  "checks": [
+    {
+      "conversation_id": "cc2129f4-51d5-44b4-bb39-04ae0f8f543a",
+      "title": "08 - Casual User Questions",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 10,
+      "assistant_count": 5,
+      "structured_response_count": 5,
+      "table_response_count": 2,
+      "chart_response_count": 1,
+      "debug_metadata_count": 5,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "1de8e5af-fad8-4649-9559-ac07450ec7b7",
+      "title": "07 - File Context Switching - Machine_Downtime_20260203_100753",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 2,
+      "assistant_count": 1,
+      "structured_response_count": 1,
+      "table_response_count": 1,
+      "chart_response_count": 0,
+      "debug_metadata_count": 1,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "858264d7-cd2b-4927-9de5-21cb0bb3048c",
+      "title": "07 - File Context Switching - EntryTransaction_20260203_164943",
+      "source_file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "source_file_name": "EntryTransaction_20260203_164943.xlsx",
+      "message_count": 2,
+      "assistant_count": 1,
+      "structured_response_count": 1,
+      "table_response_count": 0,
+      "chart_response_count": 0,
+      "debug_metadata_count": 1,
+      "distinct_response_source_ids": [
+        "2ad2989784fc41ffb9fef3225034db54"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "c44d929a-f7a8-4c47-b857-d65848b0ea96",
+      "title": "07 - File Context Switching - Loss_Assignment_20260203_100840",
+      "source_file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "source_file_name": "Loss_Assignment_20260203_100840.xlsx",
+      "message_count": 2,
+      "assistant_count": 1,
+      "structured_response_count": 1,
+      "table_response_count": 1,
+      "chart_response_count": 0,
+      "debug_metadata_count": 1,
+      "distinct_response_source_ids": [
+        "a329169db4984cab80ed5fea5880bb4f"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "909c82cd-0115-42bb-8baa-49eec352cb05",
+      "title": "07 - File Context Switching",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 2,
+      "assistant_count": 1,
+      "structured_response_count": 1,
+      "table_response_count": 1,
+      "chart_response_count": 0,
+      "debug_metadata_count": 1,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "3baa3e8c-010d-48b4-8b31-7bef44c92c78",
+      "title": "06 - Topic Restore",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 10,
+      "assistant_count": 5,
+      "structured_response_count": 5,
+      "table_response_count": 5,
+      "chart_response_count": 3,
+      "debug_metadata_count": 5,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "d436d466-8025-40f3-94a4-3b7b48e53b3e",
+      "title": "05 - Clarification Demo",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 6,
+      "assistant_count": 3,
+      "structured_response_count": 3,
+      "table_response_count": 1,
+      "chart_response_count": 1,
+      "debug_metadata_count": 3,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "1b80c66d-c1e0-484a-847f-265a056e92ad",
+      "title": "04 - Machine Downtime",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 10,
+      "assistant_count": 5,
+      "structured_response_count": 5,
+      "table_response_count": 4,
+      "chart_response_count": 1,
+      "debug_metadata_count": 5,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "04e9622a-59ae-4684-be52-f27c926c2386",
+      "title": "03 - Loss Classification",
+      "source_file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "source_file_name": "Loss_Assignment_20260203_100840.xlsx",
+      "message_count": 10,
+      "assistant_count": 5,
+      "structured_response_count": 5,
+      "table_response_count": 5,
+      "chart_response_count": 2,
+      "debug_metadata_count": 5,
+      "distinct_response_source_ids": [
+        "a329169db4984cab80ed5fea5880bb4f"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "9c8b5982-a5b5-448e-8de3-3f251880027f",
+      "title": "02 - Transaction Analysis",
+      "source_file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "source_file_name": "EntryTransaction_20260203_164943.xlsx",
+      "message_count": 10,
+      "assistant_count": 5,
+      "structured_response_count": 5,
+      "table_response_count": 3,
+      "chart_response_count": 1,
+      "debug_metadata_count": 5,
+      "distinct_response_source_ids": [
+        "2ad2989784fc41ffb9fef3225034db54"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "7bccca77-6edd-45db-a289-7bfe7f2ede87",
+      "title": "01 - Data Overview",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 10,
+      "assistant_count": 5,
+      "structured_response_count": 5,
+      "table_response_count": 4,
+      "chart_response_count": 0,
+      "debug_metadata_count": 5,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    }
+  ]
+}

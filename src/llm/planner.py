@@ -167,7 +167,9 @@ class QueryPlanner:
             return PlannerResult(plan=plan, latency_ms=metadata.latency_ms["total"], raw_response="", used_fallback=False, metadata=metadata.model_dump())
 
         health = self.client.health()
-        if route.requires_llm and health.get("ok") and health.get("model_available"):
+        metadata.extra["model_health_ok"] = bool(health.get("ok"))
+        metadata.extra["model_available"] = bool(health.get("model_available"))
+        if route.requires_llm:
             selected_catalog = select_catalog_context(self.catalog, question)
             metadata.selected_tables = [table["table_name"] for table in selected_catalog.get("tables", [])]
             metadata.selected_columns = [col["name"] for table in selected_catalog.get("tables", []) for col in table.get("columns", [])]
@@ -176,6 +178,7 @@ class QueryPlanner:
                 metadata.llm_call_count = 1
                 metadata.extra["llm_model"] = self.settings.ollama_model
                 metadata.extra["llm_request_started"] = True
+                metadata.extra["retry_count"] = 0
                 llm_start = perf_counter()
                 response = self.client.chat(
                     planner_messages(selected_catalog, state.to_prompt_dict(), question),
@@ -186,6 +189,8 @@ class QueryPlanner:
                 metadata.extra["llm_request_completed"] = True
                 raw = response.text
                 plan = QueryPlan.model_validate(self._coerce_plan_json(raw, selected_catalog))
+                self._apply_question_requirements(plan, question, deterministic.plan if deterministic else None)
+                plan = self._rescue_llm_clarification(plan, deterministic.plan if deterministic else None, metadata)
                 metadata.extra["structured_output_valid"] = True
                 validation_start = perf_counter()
                 PlanValidator(self.catalog).validate(plan)
@@ -195,10 +200,13 @@ class QueryPlanner:
                 return PlannerResult(plan=plan, latency_ms=metadata.latency_ms["total"], raw_response=raw, used_fallback=False, metadata=metadata.model_dump())
             except Exception as exc:
                 first_error = str(exc)
+                metadata.extra["structured_output_valid"] = False
+                metadata.extra["schema_validation_errors"] = [first_error]
                 try:
                     metadata.llm_call_count += 1
                     metadata.extra["llm_model"] = self.settings.ollama_model
                     metadata.extra["llm_request_started"] = True
+                    metadata.extra["retry_count"] = 1
                     llm_start = perf_counter()
                     response = self.client.chat(
                         planner_messages(selected_catalog, state.to_prompt_dict(), question, validation_error=first_error, previous_response=raw),
@@ -209,6 +217,8 @@ class QueryPlanner:
                     metadata.extra["llm_request_completed"] = True
                     raw = response.text
                     plan = QueryPlan.model_validate(self._coerce_plan_json(raw, selected_catalog))
+                    self._apply_question_requirements(plan, question, deterministic.plan if deterministic else None)
+                    plan = self._rescue_llm_clarification(plan, deterministic.plan if deterministic else None, metadata)
                     metadata.extra["structured_output_valid"] = True
                     validation_start = perf_counter()
                     PlanValidator(self.catalog).validate(plan)
@@ -226,7 +236,10 @@ class QueryPlanner:
                             metadata.validation_passed = True
                             metadata.latency_ms["validation"] = (perf_counter() - validation_start) * 1000
                             metadata.extra["semantic_fallback_after_llm_failure"] = True
+                            metadata.fallback_used = True
+                            metadata.fallback_reason = "semantic_llm_failed_after_retry"
                             metadata.extra["retry_error"] = str(retry_exc)
+                            metadata.extra["schema_validation_errors"] = [first_error, str(retry_exc)]
                             metadata.selected_tables = deterministic.plan.tables
                             metadata.latency_ms["total"] = (perf_counter() - start) * 1000
                             return PlannerResult(plan=deterministic.plan, latency_ms=metadata.latency_ms["total"], raw_response=raw, used_fallback=True, error=str(retry_exc), metadata=metadata.model_dump())
@@ -234,9 +247,6 @@ class QueryPlanner:
                             pass
                     if not (self.settings.enable_heuristic_fallback and self.settings.force_legacy_fallback_mode):
                         return self._safe_failure(start, raw, metadata, str(retry_exc))
-        elif route.requires_llm and not (self.settings.enable_heuristic_fallback and self.settings.force_legacy_fallback_mode):
-            return self._safe_failure(start, raw, metadata, f"Ollama/model unavailable: {health}")
-
         if self.settings.enable_heuristic_fallback and self.settings.force_legacy_fallback_mode:
             plan = self._heuristic_plan(question, state)
             metadata.execution_mode = ExecutionMode.LEGACY_FALLBACK.value
@@ -245,6 +255,36 @@ class QueryPlanner:
             metadata.latency_ms["total"] = (perf_counter() - start) * 1000
             return PlannerResult(plan=plan, latency_ms=metadata.latency_ms["total"], raw_response=raw, used_fallback=True, metadata=metadata.model_dump())
         return self._safe_failure(start, raw, metadata, "No safe route produced an executable plan.")
+
+    def _apply_question_requirements(self, plan: QueryPlan, question: str, deterministic_plan: QueryPlan | None) -> None:
+        q = _ascii(question)
+        if deterministic_plan is not None:
+            if not plan.dimensions and deterministic_plan.dimensions:
+                plan.dimensions = list(deterministic_plan.dimensions)
+            if not plan.sort and deterministic_plan.sort:
+                plan.sort = list(deterministic_plan.sort)
+            if plan.limit == 20 and deterministic_plan.limit != 20:
+                plan.limit = deterministic_plan.limit
+            if any(term in q for term in ["gan nhat", "thang", "ngay", "tuan"]) and deterministic_plan.filters:
+                existing = {(flt.column, flt.operator, str(flt.value)) for flt in plan.filters}
+                for flt in deterministic_plan.filters:
+                    key = (flt.column, flt.operator, str(flt.value))
+                    if key not in existing:
+                        plan.filters.append(flt)
+        if any(term in q for term in ["phan tram", "ty le", "ty trong"]):
+            if not plan.dimensions and deterministic_plan is not None:
+                plan.dimensions = list(deterministic_plan.dimensions)
+            if plan.metrics:
+                plan.metrics[0].percentage_of_total = True
+
+    def _rescue_llm_clarification(self, plan: QueryPlan, deterministic_plan: QueryPlan | None, metadata: ExecutionMetadata) -> QueryPlan:
+        if plan.intent == "clarification" and deterministic_plan is not None and deterministic_plan.intent not in {"clarification", "refusal", "safe_failure"}:
+            metadata.fallback_used = True
+            metadata.fallback_reason = "semantic_llm_returned_clarification_with_valid_deterministic_candidate"
+            metadata.extra["semantic_rescue_from_clarification"] = True
+            metadata.selected_tables = deterministic_plan.tables
+            return deterministic_plan
+        return plan
 
     def _safe_failure(self, start: float, raw: str, metadata: ExecutionMetadata, error: str) -> PlannerResult:
         metadata.execution_mode = ExecutionMode.SAFE_FAILURE.value
