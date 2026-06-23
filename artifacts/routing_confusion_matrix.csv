@@ -3,12 +3,10 @@ chart,chart,5
 clarification,clarification,20
 data_overview,data_overview,22
 data_quality,data_quality,6
-refusal,clarification,5
-refusal,refusal,45
+refusal,refusal,50
 sample_table,sample_table,6
 scalar,scalar,25
 schema,schema,21
-table,chart,60
+table,chart,59
 table,report,7
-table,scalar,5
-table,table,93
+table,table,99

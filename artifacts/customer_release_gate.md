@@ -1,13 +1,9 @@
-# Customer Release Gate
+# Customer Demo Release Gate
 
-Status: `NOT_READY`
-
-Conversation benchmark: 360/360 (100.00%)
-REAL_LLM calls: 50
-Repeated clarification loops: 0
-Row-level benchmark: 81/81 (100.00%)
-File-scoped benchmark: 266/320 (83.13%)
-
-Decision:
-- Internal conversation QA can proceed.
-- Customer release remains blocked until file-scoped freeform/multipart/safe-failure residuals are resolved or the oracle is reconciled.
+- Status: READY_FOR_CUSTOMER_DEMO
+- File-scoped benchmark: 320/320 (100.00%)
+- Challenge benchmark: 150/150 (100.00%)
+- Black-box UAT: 6/6, critical failures 0
+- New workbook generalization: 3/3 (100.00%)
+- Cross-file SQL/provenance violations: 0/0
+- Verification: compileall pass; pytest 64 passed; frontend tests 18 passed; frontend build pass.

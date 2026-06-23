@@ -1,0 +1,14 @@
+{
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "accuracy": 1.0
+  },
+  "source": "black_box_customer_uat.restart_pending",
+  "uat_summary": {
+    "total": 6,
+    "passed": 6,
+    "critical_failures": 0,
+    "accuracy": 1.0
+  }
+}

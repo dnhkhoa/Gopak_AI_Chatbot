@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "file_scoped_p50_ms": 92.65,
+    "challenge_p50_ms": 99.6,
+    "challenge_p95_ms": 152.1,
+    "file_scoped_max_ms": 677.0,
+    "pytest_seconds": 220.13,
+    "frontend_test_seconds": 6.08,
+    "frontend_build_seconds": 7.19
+  },
+  "notes": [
+    "Full pytest: 64 passed in 220.13s.",
+    "Frontend Vitest: 18 passed in 6.08s.",
+    "Vite build passed with existing chunk-size warning."
+  ]
+}

@@ -5,6 +5,25 @@
     "accuracy": 1.0,
     "requires_customer_workbook": true
   },
+  "cleanup": {
+    "deleted_uploads": [
+      "feaaf77b31274a3b95603eae4e30bb5b",
+      "8e81bca343eb4175b8b695ca7961e905",
+      "3472625694444a8cb9d3e12c55362e21"
+    ],
+    "removed_fixtures": [
+      "D:\\Gopak Chatbot\\artifacts\\workbook_fixtures\\Challenge_Irregular_Downtime_8831012c.xlsx",
+      "D:\\Gopak Chatbot\\artifacts\\workbook_fixtures\\Challenge_Transaction_8831012c.xlsx",
+      "D:\\Gopak Chatbot\\artifacts\\workbook_fixtures\\Challenge_Unseen_Schema_8831012c.xlsx"
+    ],
+    "errors": []
+  },
+  "checks": {
+    "upload_ready": true,
+    "select_active_file": true,
+    "query_uploaded_file": true,
+    "delete_cleanup": true
+  },
   "results": [
     {
       "workbook_type": "irregular_downtime",
@@ -228,18 +247,5 @@
         }
       ]
     }
-  ],
-  "cleanup": {
-    "deleted_uploads": [
-      "feaaf77b31274a3b95603eae4e30bb5b",
-      "8e81bca343eb4175b8b695ca7961e905",
-      "3472625694444a8cb9d3e12c55362e21"
-    ],
-    "removed_fixtures": [
-      "D:\\Gopak Chatbot\\artifacts\\workbook_fixtures\\Challenge_Irregular_Downtime_8831012c.xlsx",
-      "D:\\Gopak Chatbot\\artifacts\\workbook_fixtures\\Challenge_Transaction_8831012c.xlsx",
-      "D:\\Gopak Chatbot\\artifacts\\workbook_fixtures\\Challenge_Unseen_Schema_8831012c.xlsx"
-    ],
-    "errors": []
-  }
+  ]
 }

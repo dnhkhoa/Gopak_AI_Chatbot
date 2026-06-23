@@ -24,7 +24,7 @@ from src.application.schemas import (
     SourcePayload,
     TablePayload,
 )
-from src.catalog.profiler import load_catalog
+from src.catalog.profiler import build_catalog, load_catalog
 from src.conversation.clarification import ClarificationResolver, build_plan_from_resolved_message, restore_topic_plan
 from src.config import Settings, get_settings
 from src.conversation.memory_service import ConversationMemoryService
@@ -32,6 +32,7 @@ from src.application.customer_intents import CustomerIntentResult, detect_custom
 from src.application.row_level import try_row_level_response
 from src.files.lifecycle import FileLifecycleService
 from src.files.upload_store import find_uploaded_file, list_uploaded_files
+from src.ingestion.cache_manager import ParquetCache
 from src.llm.ollama_client import OllamaClient
 from src.llm.planner import QueryPlanner
 from src.query.executor import SafeQueryExecutor
@@ -66,6 +67,14 @@ class ChatApplicationService:
                 self._catalog = load_catalog(self.settings.cache_dir)
         return self._catalog
 
+    def reload_catalog_from_cache(self) -> dict:
+        if (self.settings.cache_dir / "data_catalog.json").exists():
+            self._catalog = load_catalog(self.settings.cache_dir)
+        else:
+            cache = ParquetCache(self.settings.cache_dir)
+            self._catalog = build_catalog(cache.load_tables(), self.settings.cache_dir)
+        return self._catalog
+
     def get_catalog_for_file(self, file_id: str) -> dict:
         catalog = self.get_catalog()
         record = find_uploaded_file(file_id)
@@ -83,7 +92,7 @@ class ChatApplicationService:
             if _table_source_filename(table).lower() == filename.lower()
         ]
         if not tables:
-            catalog = self.get_catalog(force=True)
+            catalog = self.reload_catalog_from_cache()
             exact_tables = [
                 table
                 for table in catalog.get("tables", [])
@@ -221,7 +230,10 @@ class ChatApplicationService:
             raise ValueError("File not found")
         if record.get("status") != "ready" or not record.get("queryable"):
             raise ValueError("File is not ready")
-        readiness = FileLifecycleService(self.settings).validate_readiness(file_id, catalog=self.get_catalog(force=True))
+        catalog = self.get_catalog()
+        if not any(_table_file_id(table) == file_id for table in catalog.get("tables", [])):
+            catalog = self.reload_catalog_from_cache()
+        readiness = FileLifecycleService(self.settings).validate_readiness(file_id, catalog=catalog)
         if not readiness.get("ok"):
             raise ValueError(str(readiness.get("message") or "File is not queryable"))
         state = self.memory_service.load_conversation(conversation_id)

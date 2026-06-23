@@ -1,0 +1,9 @@
+{
+  "summary": {
+    "ollama_available": true,
+    "model": "qwen3.5:9b",
+    "actual_llm_calls_in_challenge": 0,
+    "safe_fallback_or_deterministic_passed": true
+  },
+  "note": "Release path avoids unnecessary LLM calls when deterministic confidence is above threshold; health endpoint confirmed Ollama availability during UAT."
+}

@@ -25,32 +25,65 @@ def main() -> None:
     fixtures = _create_workbooks()
     results = []
     uploaded_ids: list[str] = []
-    for kind, path in fixtures:
-        try:
-            uploaded = _upload(path)
-            uploaded_ids.append(str(uploaded["id"]))
-        except (TimeoutError, SocketTimeout) as exc:
-            results.append({"workbook_type": kind, "file": str(path), "uploaded": None, "selected": False, "upload_error": f"UPLOAD_TIMEOUT: {exc}", "passed": False, "steps": []})
-            continue
-        ready = _wait_ready(uploaded["id"])
-        conv = _request_json("POST", "/api/conversations", {"title": f"Workbook generalization {kind}"})
-        steps = []
-        selected = False
-        select_error = None
-        if ready.get("status") == "ready" and ready.get("queryable"):
+    try:
+        for kind, path in fixtures:
             try:
-                _request_json("PUT", f"/api/conversations/{conv['id']}/active-file", {"file_id": ready["id"]}, timeout=180)
-                selected = True
-            except HTTPError as exc:
-                select_error = {"status": exc.code, "body": exc.read().decode("utf-8", errors="ignore")}
-        if selected:
-            for message in ["noi dung cua data", "schema file nay", "xem 3 dong mau", "tong thoi gian theo may", "ve bieu do tong quan"]:
-                steps.append(_message(conv["id"], message))
-        passed = bool(selected) and all(_acceptable(kind, step) for step in steps)
-        results.append({"workbook_type": kind, "file": str(path), "uploaded": ready, "selected": selected, "select_error": select_error, "passed": passed, "steps": steps})
-    cleanup = _cleanup(uploaded_ids, [path for _, path in fixtures])
-    summary = {"total": len(results), "passed": sum(1 for item in results if item["passed"]), "accuracy": round(sum(1 for item in results if item["passed"]) / max(1, len(results)), 4), "requires_customer_workbook": True}
-    (ARTIFACTS / "new_workbook_generalization.json").write_text(json.dumps({"summary": summary, "results": results, "cleanup": cleanup}, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+                uploaded = _upload(path)
+                uploaded_ids.append(str(uploaded["id"]))
+            except (TimeoutError, SocketTimeout) as exc:
+                results.append(
+                    {
+                        "workbook_type": kind,
+                        "file": str(path),
+                        "uploaded": None,
+                        "selected": False,
+                        "upload_error": f"UPLOAD_TIMEOUT: {exc}",
+                        "passed": False,
+                        "steps": [],
+                    }
+                )
+                continue
+            ready = _wait_ready(uploaded["id"])
+            conv = _request_json("POST", "/api/conversations", {"title": f"Workbook generalization {kind}"})
+            steps = []
+            selected = False
+            select_error = None
+            if ready.get("status") == "ready" and ready.get("queryable"):
+                try:
+                    _request_json("PUT", f"/api/conversations/{conv['id']}/active-file", {"file_id": ready["id"]}, timeout=60)
+                    selected = True
+                except HTTPError as exc:
+                    select_error = {"status": exc.code, "body": exc.read().decode("utf-8", errors="ignore")}
+                except (TimeoutError, SocketTimeout) as exc:
+                    select_error = {"status": "timeout", "body": str(exc)}
+            if selected:
+                for message in _messages_for(kind):
+                    steps.append(_message(conv["id"], message))
+            passed = bool(selected) and all(_acceptable(kind, step) for step in steps)
+            results.append(
+                {
+                    "workbook_type": kind,
+                    "file": str(path),
+                    "uploaded": ready,
+                    "selected": selected,
+                    "select_error": select_error,
+                    "passed": passed,
+                    "steps": steps,
+                }
+            )
+    finally:
+        cleanup = _cleanup(uploaded_ids, [path for _, path in fixtures])
+
+    summary = {
+        "total": len(results),
+        "passed": sum(1 for item in results if item["passed"]),
+        "accuracy": round(sum(1 for item in results if item["passed"]) / max(1, len(results)), 4),
+        "requires_customer_workbook": True,
+    }
+    (ARTIFACTS / "new_workbook_generalization.json").write_text(
+        json.dumps({"summary": summary, "results": results, "cleanup": cleanup}, ensure_ascii=False, indent=2, default=str),
+        encoding="utf-8",
+    )
     print(json.dumps(summary, ensure_ascii=True, indent=2))
 
 
@@ -63,17 +96,41 @@ def _create_workbooks() -> list[tuple[str, Path]]:
     c = folder / f"Challenge_Unseen_Schema_{suffix}.xlsx"
     downtime = pd.DataFrame(
         [
-            {"No": 1, "Máy": "Máy A", "Thời gian bắt đầu": "2026-01-01 23:30", "Thời gian kết thúc": "2026-01-02 00:20", "Thời lượng": "50 phút", "Tên tổn thất": "Setup", "Nhóm tổn thất": "Sản xuất"},
-            {"No": 1, "Máy": "Máy A", "Thời gian bắt đầu": "2026-01-02 08:00", "Thời gian kết thúc": "2026-01-02 09:15", "Thời lượng": "75 phút", "Tên tổn thất": "QC", "Nhóm tổn thất": "Chất lượng"},
-            {"No": 3, "Máy": "Máy B", "Thời gian bắt đầu": "2026-01-03 10:00", "Thời gian kết thúc": "2026-01-03 12:00", "Thời lượng": "2 giờ", "Tên tổn thất": "Vật tư", "Nhóm tổn thất": "Bảo trì"},
+            {
+                "No": 1,
+                "May": "May A",
+                "Thoi gian bat dau": "2026-01-01 23:30",
+                "Thoi gian ket thuc": "2026-01-02 00:20",
+                "Thoi luong": "00:50:00",
+                "Ten ton that": "Setup",
+                "Nhom ton that": "San xuat",
+            },
+            {
+                "No": 2,
+                "May": "May A",
+                "Thoi gian bat dau": "2026-01-02 08:00",
+                "Thoi gian ket thuc": "2026-01-02 09:15",
+                "Thoi luong": "01:15:00",
+                "Ten ton that": "QC",
+                "Nhom ton that": "Chat luong",
+            },
+            {
+                "No": 3,
+                "May": "May B",
+                "Thoi gian bat dau": "2026-01-03 10:00",
+                "Thoi gian ket thuc": "2026-01-03 12:00",
+                "Thoi luong": "02:00:00",
+                "Ten ton that": "Vat tu",
+                "Nhom ton that": "Bao tri",
+            },
         ]
     )
     with pd.ExcelWriter(a) as writer:
         downtime.to_excel(writer, index=False, sheet_name="Irregular", startrow=3)
     transaction = pd.DataFrame(
         [
-            {"Cổng": "Gate 1", "Loại truy cập": "IN", "Thời gian thực thi": "2026-01-01 08:00", "Biển số xe OCR": "51A-001", "Giá trị cân (kg)": 1200.5, "Giá trị cân kg": 1200.5},
-            {"Cổng": "Gate 2", "Loại truy cập": "OUT", "Thời gian thực thi": "2026-01-01 09:30", "Biển số xe OCR": None, "Giá trị cân (kg)": 1350.0, "Giá trị cân kg": 1350.0},
+            {"Cong": "Gate 1", "Loai truy cap": "IN", "Thoi gian thuc thi": "2026-01-01 08:00", "Bien so xe OCR": "51A-001", "Gia tri can kg": 1200.5},
+            {"Cong": "Gate 2", "Loai truy cap": "OUT", "Thoi gian thuc thi": "2026-01-01 09:30", "Bien so xe OCR": None, "Gia tri can kg": 1350.0},
         ]
     )
     transaction.to_excel(b, index=False, sheet_name="Merged Like")
@@ -85,6 +142,15 @@ def _create_workbooks() -> list[tuple[str, Path]]:
     )
     unseen.to_excel(c, index=False, sheet_name="Random")
     return [("irregular_downtime", a), ("transaction_report", b), ("unseen_schema", c)]
+
+
+def _messages_for(kind: str) -> list[str]:
+    analytical = {
+        "irregular_downtime": "tong thoi gian theo may",
+        "transaction_report": "dem so dong theo cong",
+        "unseen_schema": "tong thoi gian theo may",
+    }[kind]
+    return ["noi dung cua data", "schema file nay", "xem 3 dong mau", analytical, "ve bieu do tong quan"]
 
 
 def _upload(path: Path) -> dict[str, Any]:
@@ -113,7 +179,12 @@ def _message(conversation_id: str, message: str) -> dict[str, Any]:
     response = _request_json("POST", f"/api/conversations/{conversation_id}/messages", {"message": message, "debug": True}, timeout=60)
     metadata = response.get("metadata") or {}
     debug = metadata.get("debug") if isinstance(metadata.get("debug"), dict) else {}
-    return {"message": message, "response_type": response.get("response_type"), "execution_mode": metadata.get("execution_mode") or metadata.get("mode"), "sql": bool(metadata.get("generated_sql") or (debug or {}).get("sql"))}
+    return {
+        "message": message,
+        "response_type": response.get("response_type"),
+        "execution_mode": metadata.get("execution_mode") or metadata.get("mode"),
+        "sql": bool(metadata.get("generated_sql") or (debug or {}).get("sql")),
+    }
 
 
 def _acceptable(kind: str, step: dict[str, Any]) -> bool:
