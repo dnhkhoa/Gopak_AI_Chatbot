@@ -9,6 +9,10 @@ PRAGMA foreign_keys = ON;
 CREATE TABLE IF NOT EXISTS conversations (
     id TEXT PRIMARY KEY,
     title TEXT,
+    source_file_id TEXT,
+    source_file_name TEXT,
+    source_file_sha256 TEXT,
+    source_catalog_version TEXT,
     created_at TEXT NOT NULL,
     updated_at TEXT NOT NULL,
     status TEXT NOT NULL
@@ -50,7 +54,11 @@ CREATE TABLE IF NOT EXISTS result_cache (
 
 def run_migrations(con: sqlite3.Connection) -> None:
     con.executescript(SCHEMA_SQL)
-    columns = {row[1] for row in con.execute("PRAGMA table_info(conversation_turns)").fetchall()}
-    if "response_json" not in columns:
+    turn_columns = {row[1] for row in con.execute("PRAGMA table_info(conversation_turns)").fetchall()}
+    if "response_json" not in turn_columns:
         con.execute("ALTER TABLE conversation_turns ADD COLUMN response_json TEXT")
+    conversation_columns = {row[1] for row in con.execute("PRAGMA table_info(conversations)").fetchall()}
+    for column in ["source_file_id", "source_file_name", "source_file_sha256", "source_catalog_version"]:
+        if column not in conversation_columns:
+            con.execute(f"ALTER TABLE conversations ADD COLUMN {column} TEXT")
     con.commit()

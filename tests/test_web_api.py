@@ -30,6 +30,9 @@ class FakeService:
             created_at="2026-06-21T00:00:00Z",
             updated_at="2026-06-21T00:00:00Z",
             status="active",
+            source_file_id="file-1",
+            source_file_name="Machine_Downtime_20260203_100753.xlsx",
+            source_available=True,
         )
         self.artifact_dir = artifact_dir
         self.artifact_dir.mkdir(parents=True, exist_ok=True)
@@ -41,8 +44,13 @@ class FakeService:
     def list_conversations(self):
         return [self.conversation]
 
-    def create_conversation(self, title=None):
-        return self.conversation.model_copy(update={"title": title or self.conversation.title})
+    def create_conversation(self, title=None, source_file_id=None):
+        return self.conversation.model_copy(
+            update={
+                "title": title or self.conversation.title,
+                "source_file_id": source_file_id or self.conversation.source_file_id,
+            }
+        )
 
     def get_conversation(self, conversation_id, limit=200):
         if conversation_id != "c1":
@@ -63,6 +71,8 @@ class FakeService:
     def set_active_file(self, conversation_id, file_id):
         if conversation_id != "c1":
             return None
+        if self.conversation.source_file_id and self.conversation.source_file_id != file_id:
+            raise ValueError("CONVERSATION_FILE_MISMATCH")
         return ActiveFilePayload(
             conversation_id=conversation_id,
             active_file_id=file_id,
@@ -70,7 +80,9 @@ class FakeService:
             status="ready",
         )
 
-    def process_message(self, conversation_id, message, debug=False):
+    def process_message(self, conversation_id, message, debug=False, source_file_id=None):
+        if source_file_id and source_file_id != self.conversation.source_file_id:
+            raise ValueError("CONVERSATION_FILE_MISMATCH")
         return ChatResponse(
             message_id="m1",
             conversation_id=conversation_id,
@@ -129,6 +141,13 @@ def test_send_message_and_invalid_payload(tmp_path: Path) -> None:
     assert ok.json()["response_type"] == "scalar"
     bad = c.post("/api/conversations/c1/messages", json={"message": ""})
     assert bad.status_code == 422
+
+
+def test_message_file_mismatch_is_rejected(tmp_path: Path) -> None:
+    c = client(tmp_path)
+    response = c.post("/api/conversations/c1/messages", json={"message": "Hello", "source_file_id": "file-2"})
+    assert response.status_code == 409
+    assert response.json()["detail"]["code"] == "CONVERSATION_FILE_MISMATCH"
 
 
 def test_invalid_conversation(tmp_path: Path) -> None:

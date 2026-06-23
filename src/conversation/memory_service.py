@@ -26,17 +26,35 @@ class ConversationMemoryService:
                 self.persistence_degraded = True
                 self.last_error = str(exc)
 
-    def create_conversation(self, title: str | None = None) -> ConversationState:
+    def create_conversation(
+        self,
+        title: str | None = None,
+        *,
+        source_file_id: str | None = None,
+        source_file_name: str | None = None,
+        source_file_sha256: str | None = None,
+        source_catalog_version: str | None = None,
+    ) -> ConversationState:
         if not self.store:
-            return ConversationState()
+            return ConversationState(active_file_id=source_file_id, active_file_name=source_file_name)
         try:
-            record = self.store.create_conversation(title=title)
-            state = ConversationState(conversation_id=record.id)
+            record = self.store.create_conversation(
+                title=title,
+                source_file_id=source_file_id,
+                source_file_name=source_file_name,
+                source_file_sha256=source_file_sha256,
+                source_catalog_version=source_catalog_version,
+            )
+            state = ConversationState(
+                conversation_id=record.id,
+                active_file_id=source_file_id,
+                active_file_name=source_file_name,
+            )
             self.store.save_state(state, summary=state.conversation_summary)
             return state
         except Exception as exc:
             self._degrade(exc)
-            return ConversationState()
+            return ConversationState(active_file_id=source_file_id, active_file_name=source_file_name)
 
     def load_conversation(self, conversation_id: str) -> ConversationState:
         if not self.store:
@@ -130,13 +148,50 @@ class ConversationMemoryService:
             self._degrade(exc)
             return None
 
-    def update_conversation(self, conversation_id: str, *, title: str | None = None, status: str | None = None) -> None:
+    def update_conversation(
+        self,
+        conversation_id: str,
+        *,
+        title: str | None = None,
+        status: str | None = None,
+        source_file_id: str | None = None,
+        source_file_name: str | None = None,
+        source_file_sha256: str | None = None,
+        source_catalog_version: str | None = None,
+    ) -> None:
         if not self.store:
             return
         try:
-            self.store.update_conversation(conversation_id, title=title, status=status)
+            self.store.update_conversation(
+                conversation_id,
+                title=title,
+                status=status,
+                source_file_id=source_file_id,
+                source_file_name=source_file_name,
+                source_file_sha256=source_file_sha256,
+                source_catalog_version=source_catalog_version,
+            )
         except Exception as exc:
             self._degrade(exc)
+
+    def bind_conversation_source(
+        self,
+        conversation_id: str,
+        *,
+        source_file_id: str,
+        source_file_name: str,
+        source_file_sha256: str | None = None,
+        source_catalog_version: str | None = None,
+    ) -> None:
+        if not self.store:
+            return
+        self.store.update_conversation(
+            conversation_id,
+            source_file_id=source_file_id,
+            source_file_name=source_file_name,
+            source_file_sha256=source_file_sha256,
+            source_catalog_version=source_catalog_version,
+        )
 
     def load_recent_turns(self, conversation_id: str, limit: int | None = None) -> list[dict[str, Any]]:
         if not self.store:

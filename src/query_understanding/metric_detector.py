@@ -22,8 +22,10 @@ def detect_metric(question: str, duration_col: str | None, machine_col: str | No
         return DetectionResult({"aggregation": "max", "column": duration_col, "name": "max_duration_seconds"}, 0.92, ["maximum duration"])
     if any(term in q for term in ["bao nhieu gio", "chiem bao nhieu gio"]):
         return DetectionResult({"aggregation": "sum", "column": duration_col, "name": "total_duration_seconds"}, 0.92, ["sum duration in hours"])
-    if any(term in q for term in ["dem", "so lan", "bao nhieu lan", "lan dung", "lan downtime", "cac lan dung", "nhung lan dung", "xuat hien"]):
+    if any(term in q for term in ["dem", "so lan", "bao nhieu lan", "lan dung", "lan downtime", "cac lan dung", "nhung lan dung", "xuat hien", "pho bien", "thuong gap", "hay gap", "thuong xuyen", "so luot", "luot ghi nhan", "so lan ghi nhan"]):
         return DetectionResult({"aggregation": "count", "column": None, "name": "row_count"}, 0.93, ["event count"])
+    if "phan bo" in q and not any(term in q for term in ["thoi gian", "thoi luong", "downtime", "gio", "duration"]):
+        return DetectionResult({"aggregation": "count", "column": None, "name": "row_count"}, 0.90, ["distribution count"])
     if any(term in q for term in ["downtime", "thoi gian", "thoi luong", "dung", "ngung", "dt", "tong", "bao lau", "bao nhieu gio"]):
         return DetectionResult({"aggregation": "sum", "column": duration_col, "name": "total_duration_seconds"}, 0.90, ["sum duration"])
     return DetectionResult(None, 0.0, unresolved_terms=["metric"])

@@ -71,7 +71,12 @@ class DeterministicPlanner:
         ranking = None
 
         if any(term in q for term in ["phan tram", "ph?n tr?m", "ty le", "t? l?", "ty trong"]):
-            dim = loss_name if any(term in q for term in ["nguyen nhan", "nguy?n nh?n", "loi", "su co"]) else loss_group if any(term in q for term in ["nhom", "nh?m"]) else machine
+            dim = (
+                loss_name if any(term in q for term in ["nguyen nhan", "nguy?n nh?n", "loi", "su co"])
+                else loss_group if any(term in q for term in ["nhom", "nh?m"])
+                else machine if any(term in q for term in ["may", "m?y"])
+                else None
+            )
             metric_payloads = [{"aggregation": "count", "column": None, "name": "row_count", "percentage_of_total": True}]
             dims = [dim] if dim else list(dimensions.value or [])
             confidence = 0.93 if dims else 0.60
@@ -197,6 +202,19 @@ class DeterministicPlanner:
                 output="table",
             )
             return DeterministicParse(plan, 0.92, "EntryTransaction freeform insight mapped to scoped gate/access volume.", evidence=["entry_insight"])
+        if "cong" in cols and any(term in q for term in ["theo cong", "theo tung cong", "tung cong", "moi cong", "theo cac cong", "phan bo theo cong"]):
+            output = "bar" if any(term in q for term in ["bieu do", "chart", "ve ", "ve bieu do", "ve cot"]) else "table"
+            intent = "chart" if output == "bar" else "query"
+            plan = QueryPlan(
+                intent=intent,
+                tables=[table_name],
+                dimensions=["cong"],
+                metrics=[MetricSpec(aggregation="count", column=None, name="row_count")],
+                sort=[SortSpec(column="row_count", direction="desc")],
+                limit=20,
+                output=output,
+            )
+            return DeterministicParse(plan, 0.93, "EntryTransaction record count grouped by gate.", evidence=["entry_gate_count"])
         if ("gia_tri_can" in q or "gia tri can" in q) and "gia_tri_can" in cols:
             plan = QueryPlan(
                 intent="query",

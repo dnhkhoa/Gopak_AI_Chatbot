@@ -150,7 +150,7 @@ class StateMerger:
         if "dashboard" in q:
             plan.intent = "dashboard"
             plan.output = "dashboard"
-        elif "bao cao" in q or "excel" in q or "xuat" in q:
+        elif "bao cao" in q or "excel" in q or any(term in q for term in ["xuat excel", "xuat file", "xuat bao cao", "xuat ket qua", "xuat ra"]):
             plan.intent = "report"
             plan.output = "report"
         elif "pie" in q or "tron" in q:
@@ -161,6 +161,8 @@ class StateMerger:
             plan.output = "bar"
 
     def _metrics_from_question(self, q: str, duration: str | None) -> list[MetricSpec]:
+        if any(term in q for term in ["ty le", "phan tram", "ty trong"]):
+            return [MetricSpec(aggregation="count", column=None, name="row_count", percentage_of_total=True)]
         if any(term in q for term in ["tong", "downtime"]):
             return [MetricSpec(aggregation="sum", column=duration, name="total_duration_seconds")]
         if any(term in q for term in ["so lan", "dem"]):

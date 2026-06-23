@@ -159,12 +159,26 @@ button:disabled { cursor: default; opacity: .45; }
   flex: 1 1 auto;
   min-width: 0;
   text-align: left;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
   background: none;
   padding: 8px 0;
   font-size: .94rem;
+}
+.conversation-title-main,
+.conversation-source {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.conversation-source {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: .74rem;
 }
 .conversation-rename {
   flex: 1 1 auto;
@@ -388,6 +402,7 @@ button:disabled { cursor: default; opacity: .45; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.active-file-pill.unavailable { color: #a15c48; }
 .composer {
   width: var(--content-width);
   max-width: 100%;

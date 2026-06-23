@@ -42,22 +42,20 @@ def classify_turn(question: str, has_state: bool) -> TurnClassification:
         return TurnClassification(TurnType.REMOVE_FILTER, 0.90, "Remove filter phrase.")
     if any(term in q for term in ["chi giu", "chi lay", "loc", "tren 1 gio", "tren mot gio", "tren 30 phut"]):
         return TurnClassification(TurnType.ADD_FILTER, 0.86, "Filter refinement phrase.")
-    if any(term in q for term in ["ve", "bieu do", "chart", "excel", "bao cao", "dashboard", "xuat"]):
+    ranking_words = ["top", "bottom", "dung dau", "cao nhat", "thap nhat", "nhieu nhat", "it nhat", "pho bien", "xep hang"]
+    dim_nouns = ["may", "machine", "nguyen nhan", "ton that", "nhom", "cong", "loai", "thang", "ngay"]
+    # A self-contained ranking question that names its own dimension is a NEW query,
+    # not a refinement of the previous result. Checked before output/ranking refinements.
+    if any(w in q for w in ranking_words) and any(d in q for d in dim_nouns):
+        return TurnClassification(TurnType.NEW_QUERY, 0.90, "Complete ranking query naming its own dimension.")
+    if any(term in q for term in ["ve", "bieu do", "chart", "excel", "bao cao", "dashboard", "xuat excel", "xuat file", "xuat bao cao", "xuat ket qua", "xuat ra"]):
         return TurnClassification(TurnType.CHANGE_OUTPUT, 0.88, "Output change phrase.")
-    explicit_ranking_query = (
-        any(term in q for term in ["top", "bottom", "dung dau", "cao nhat", "thap nhat", "xep hang"])
-        and "theo" in q
-        and any(term in q for term in ["may", "nguyen nhan", "nhom", "thang", "ngay"])
-        and any(term in q for term in ["downtime", "thoi gian", "thoi luong", "so lan", "dem", "tong"])
-    )
-    if explicit_ranking_query:
-        return TurnClassification(TurnType.NEW_QUERY, 0.90, "Complete ranking query with metric and dimension.")
-    if any(term in q for term in ["top", "bottom", "dung dau", "cao nhat", "thap nhat", "xep hang"]):
+    if any(term in q for term in ranking_words):
         return TurnClassification(TurnType.CHANGE_RANKING, 0.86, "Ranking change phrase.")
     if any(term in q for term in ["trung binh", "tong", "so lan", "dem", "ty le", "ty trong", "phan tram"]):
-        return TurnClassification(TurnType.CHANGE_METRIC if has_state else TurnType.NEW_QUERY, 0.78, "Metric phrase.")
+        return TurnClassification(TurnType.CHANGE_METRIC if has_state else TurnType.NEW_QUERY, 0.82 if has_state else 0.78, "Metric phrase.")
     if any(term in q for term in ["theo may", "theo nguyen nhan", "theo nhom", "theo ngay", "theo thang"]):
-        return TurnClassification(TurnType.CHANGE_DIMENSION if has_state else TurnType.NEW_QUERY, 0.78, "Dimension phrase.")
+        return TurnClassification(TurnType.CHANGE_DIMENSION if has_state else TurnType.NEW_QUERY, 0.82 if has_state else 0.78, "Dimension phrase.")
     if has_state and len(q.split()) <= 7:
         return TurnClassification(TurnType.REFINE_PREVIOUS, 0.60, "Short follow-up with active state.")
     return TurnClassification(TurnType.NEW_QUERY, 0.75, "Independent query.")

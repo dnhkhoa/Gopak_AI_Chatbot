@@ -28,6 +28,7 @@ ResponseType = Literal[
 class ChatMessageRequest(BaseModel):
     message: str = Field(min_length=1, max_length=4000)
     debug: bool = False
+    source_file_id: str | None = Field(default=None, max_length=128)
 
     @field_validator("message")
     @classmethod
@@ -105,6 +106,11 @@ class ConversationPayload(BaseModel):
     created_at: str
     updated_at: str
     status: str
+    source_file_id: str | None = None
+    source_file_name: str | None = None
+    source_file_sha256: str | None = None
+    source_catalog_version: str | None = None
+    source_available: bool = True
     active_file_id: str | None = None
     active_file_name: str | None = None
 

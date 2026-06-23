@@ -7,6 +7,7 @@ from src.application.schemas import ActiveFilePayload, ConversationDetail, Conve
 
 class ConversationCreateRequest(BaseModel):
     title: str | None = Field(default=None, max_length=120)
+    source_file_id: str | None = Field(default=None, min_length=1, max_length=128)
 
 
 class ConversationPatchRequest(BaseModel):

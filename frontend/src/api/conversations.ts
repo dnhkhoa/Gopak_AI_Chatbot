@@ -3,10 +3,10 @@ import type { ActiveFilePayload, ConversationDetail, ConversationPayload } from 
 
 export const listConversations = () => request<ConversationPayload[]>("/conversations");
 
-export const createConversation = (title?: string) =>
+export const createConversation = (title?: string, sourceFileId?: string) =>
   request<ConversationPayload>("/conversations", {
     method: "POST",
-    body: JSON.stringify({ title })
+    body: JSON.stringify({ title, source_file_id: sourceFileId })
   });
 
 export const getConversation = (id: string) =>

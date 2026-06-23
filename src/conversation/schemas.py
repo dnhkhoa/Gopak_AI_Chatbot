@@ -14,6 +14,10 @@ def utc_now_iso() -> str:
 class ConversationRecord(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid4()))
     title: str = "Hoi thoai moi"
+    source_file_id: str | None = None
+    source_file_name: str | None = None
+    source_file_sha256: str | None = None
+    source_catalog_version: str | None = None
     created_at: str = Field(default_factory=utc_now_iso)
     updated_at: str = Field(default_factory=utc_now_iso)
     status: Literal["active", "reset", "deleted"] = "active"

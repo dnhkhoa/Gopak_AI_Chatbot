@@ -1,0 +1,232 @@
+[
+  {
+    "scenario": "01_overview(machine)",
+    "turns": [
+      {
+        "q": "File này chứa dữ liệu gì?",
+        "type": "data_overview",
+        "mode": "DATA_OVERVIEW",
+        "turn_type": null,
+        "summary": "Hệ thống hiện có các bộ dữ liệu sau:\n- Downtime máy: 9.151 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu",
+        "has_table": true,
+        "has_chart": false,
+        "missing_slots": null
+      },
+      {
+        "q": "File có bao nhiêu bản ghi?",
+        "type": "scalar",
+        "mode": "ROW_COUNT",
+        "turn_type": null,
+        "summary": "Downtime máy hiện có 9.151 bản ghi. Con số được tính trên toàn bộ bảng của file đang chọn và không áp dụng bộ lọc bổ sung.",
+        "has_table": false,
+        "has_chart": false,
+        "missing_slots": null
+      },
+      {
+        "q": "Có dữ liệu trống hoặc trùng không?",
+        "type": "data_quality",
+        "mode": "DATA_QUALITY",
+        "turn_type": null,
+        "summary": "Tóm tắt nhanh null và dòng trùng theo từng bộ dữ liệu.",
+        "has_table": true,
+        "has_chart": false,
+        "missing_slots": null
+      },
+      {
+        "q": "Cho tôi xem 5 dòng mẫu.",
+        "type": "sample_table",
+        "mode": "SAMPLE_ROWS",
+        "turn_type": null,
+        "summary": "Hiển thị 5 bản ghi mẫu.",
+        "has_table": true,
+        "has_chart": false,
+        "missing_slots": null
+      }
+    ]
+  },
+  {
+    "scenario": "02_entry(entry)",
+    "turns": [
+      {
+        "q": "File giao dịch này chứa dữ liệu gì?",
+        "type": "data_overview",
+        "mode": "DATA_OVERVIEW",
+        "turn_type": null,
+        "summary": "Hệ thống hiện có các bộ dữ liệu sau:\n- Ra vào cổng: 1.294 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu.",
+        "has_table": true,
+        "has_chart": false,
+        "missing_slots": null
+      },
+      {
+        "q": "Cho tôi bảng số lượt ghi nhận theo từng cổng.",
+        "type": "table",
+        "mode": "DETERMINISTIC",
+        "turn_type": null,
+        "summary": "Cổng 1 có số lần ghi nhận cao nhất: 1.048.",
+        "has_table": true,
+        "has_chart": false,
+        "missing_slots": null
+      },
+      {
+        "q": "Vẽ biểu đồ số lượt ghi nhận theo cổng.",
+        "type": "chart",
+        "mode": "DETERMINISTIC",
+        "turn_type": null,
+        "summary": "Cổng 1 có số lần ghi nhận cao nhất: 1.048.",
+        "has_table": true,
+        "has_chart": true,
+        "missing_slots": null
+      }
+    ]
+  },
+  {
+    "scenario": "03_loss(loss)",
+    "turns": [
+      {
+        "q": "Loại tổn thất nào xuất hiện nhiều nhất?",
+        "type": "table",
+        "mode": "DETERMINISTIC",
+        "turn_type": null,
+        "summary": "SETUP MÁY có số lần ghi nhận cao nhất: 20.824.",
+        "has_table": true,
+        "has_chart": false,
+        "missing_slots": null
+      },
+      {
+        "q": "Cho tôi top 5 tên tổn thất phổ biến nhất.",
+        "type": "table",
+        "mode": "DETERMINISTIC",
+        "turn_type": null,
+        "summary": "SETUP MÁY có số lần ghi nhận cao nhất: 20.824.",
+        "has_table": true,
+        "has_chart": false,
+        "missing_slots": null
+      },
+      {
+        "q": "Vẽ biểu đồ phân bố tổn thất theo loại.",
+        "type": "chart",
+        "mode": "DETERMINISTIC",
+        "turn_type": null,
+        "summary": "SETUP MÁY có số lần ghi nhận cao nhất: 20.824.",
+        "has_table": true,
+        "has_chart": true,
+        "missing_slots": null
+      },
+      {
+        "q": "Thêm tỷ lệ phần trăm vào kết quả trước.",
+        "type": "chart",
+        "mode": "DETERMINISTIC",
+        "turn_type": null,
+        "summary": "SETUP MÁY có số lần ghi nhận cao nhất: 20.824.",
+        "has_table": true,
+        "has_chart": true,
+        "missing_slots": null
+      }
+    ]
+  },
+  {
+    "scenario": "04_machine(machine)",
+    "turns": [
+      {
+        "q": "Cho tôi top 5 máy theo tổng thời gian downtime.",
+        "type": "table",
+        "mode": "DETERMINISTIC",
+        "turn_type": null,
+        "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+        "has_table": true,
+        "has_chart": false,
+        "missing_slots": null
+      },
+      {
+        "q": "Thêm số lần dừng và thời lượng trung bình của từng máy.",
+        "type": "table",
+        "mode": "DETERMINISTIC",
+        "turn_type": null,
+        "summary": "Máy 12 có số lần ghi nhận cao nhất: 1.654.",
+        "has_table": true,
+        "has_chart": false,
+        "missing_slots": null
+      },
+      {
+        "q": "Vẽ biểu đồ cột cho kết quả này.",
+        "type": "chart",
+        "mode": "DETERMINISTIC",
+        "turn_type": null,
+        "summary": "Máy 12 có số lần ghi nhận cao nhất: 1.654.",
+        "has_table": true,
+        "has_chart": true,
+        "missing_slots": null
+      }
+    ]
+  },
+  {
+    "scenario": "06_topic(machine)",
+    "turns": [
+      {
+        "q": "Cho tôi top 5 máy có tổng downtime cao nhất trong tháng gần nhất.",
+        "type": "chart",
+        "mode": "DETERMINISTIC",
+        "turn_type": null,
+        "summary": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút.",
+        "has_table": true,
+        "has_chart": true,
+        "missing_slots": null
+      },
+      {
+        "q": "Cột nào có nhiều giá trị trống nhất?",
+        "type": "data_quality",
+        "mode": "COLUMN_NULLS",
+        "turn_type": null,
+        "summary": "Cột có nhiều giá trị trống nhất là “Note” với 9.151 giá trị trống (100% trên 9.151 bản ghi). Bảng dưới liệt kê các cột theo số giá trị trống giảm dần.",
+        "has_table": true,
+        "has_chart": false,
+        "missing_slots": null
+      },
+      {
+        "q": "Quay lại phần top máy lúc nãy.",
+        "type": "chart",
+        "mode": "DETERMINISTIC",
+        "turn_type": null,
+        "summary": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút.",
+        "has_table": true,
+        "has_chart": true,
+        "missing_slots": null
+      }
+    ]
+  },
+  {
+    "scenario": "08_casual(machine)",
+    "turns": [
+      {
+        "q": "Phân tích giúp tôi đi.",
+        "type": "clarification",
+        "mode": "CLARIFICATION",
+        "turn_type": null,
+        "summary": "Bạn muốn mình nhận xét dựa trên kết quả nào? Hãy hỏi một bảng, biểu đồ hoặc thống kê cụ thể trước.",
+        "has_table": false,
+        "has_chart": false,
+        "missing_slots": null
+      },
+      {
+        "q": "Vẽ biểu đồ cột top 5 máy theo downtime.",
+        "type": "chart",
+        "mode": "DETERMINISTIC",
+        "turn_type": null,
+        "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+        "has_table": true,
+        "has_chart": true,
+        "missing_slots": null
+      },
+      {
+        "q": "Kết quả này lấy từ file nào?",
+        "type": "text",
+        "mode": "PROVENANCE",
+        "turn_type": null,
+        "summary": "Kết quả trong cuộc trò chuyện này được lấy từ file nguồn: Machine_Downtime_20260203_100753.xlsx · Report. Mọi phân tích chỉ dựa trên dữ liệu của file này.",
+        "has_table": false,
+        "has_chart": false,
+        "missing_slots": null
+      }
+    ]
+  }
+]

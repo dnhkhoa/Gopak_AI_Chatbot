@@ -15,14 +15,14 @@ export interface GopakApi {
   health(): Promise<HealthStatus>;
 
   listConversations(): Promise<ConversationPayload[]>;
-  createConversation(title?: string): Promise<ConversationPayload>;
+  createConversation(title?: string, sourceFileId?: string): Promise<ConversationPayload>;
   getConversation(id: string): Promise<ConversationDetail>;
   renameConversation(id: string, title: string): Promise<ConversationPayload>;
   deleteConversation(id: string): Promise<void>;
   resetContext(id: string): Promise<ConversationDetail>;
   setActiveFile(id: string, fileId: string): Promise<ActiveFilePayload>;
 
-  sendMessage(id: string, message: string, debug?: boolean): Promise<ChatResponse>;
+  sendMessage(id: string, message: string, debug?: boolean, sourceFileId?: string | null): Promise<ChatResponse>;
 
   listFiles(): Promise<UploadedFile[]>;
   uploadFile(file: File): Promise<UploadedFile>;

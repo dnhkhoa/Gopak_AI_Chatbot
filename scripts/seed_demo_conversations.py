@@ -32,65 +32,99 @@ def main() -> None:
     conversations: list[dict[str, Any]] = []
 
     for scenario in scenarios:
-        conversation = _request_json("POST", "/conversations", {"title": scenario["title"]})
-        conversation_id = conversation["id"]
+        conversation: dict[str, Any] | None = None
+        conversation_id: str | None = None
         active_file_id = None
         active_file_name = None
         repeated_clarifications = 0
         previous_type = None
         file_sequence = []
         turns = []
-        for index, step in enumerate(scenario["steps"], start=1):
+        segment = 0
+
+        def finish_conversation() -> None:
+            if not conversation_id:
+                return
+            conversations.append(
+                {
+                    "demo_id": scenario["id"],
+                    "title": conversation["title"] if conversation else scenario["title"],
+                    "conversation_id": conversation_id,
+                    "file_sequence": file_sequence.copy(),
+                    "turn_count": len(turns),
+                    "llm_call_count": sum(1 for turn in turns if turn["llm_called"]),
+                    "repeated_clarifications": repeated_clarifications,
+                    "status": "passed" if turns and all(turn["passed"] for turn in turns) else "failed",
+                    "turns": turns.copy(),
+                }
+            )
+
+        for step in scenario["steps"]:
             file_key = step.get("file")
             if file_key:
                 target = files.get(file_key)
                 if not target:
-                    turns.append(_skipped_turn(scenario["id"], conversation_id, index, step, f"Ready file not found for {file_key}"))
+                    skipped_conversation_id = conversation_id or "not-created"
+                    turns.append(_skipped_turn(scenario["id"], skipped_conversation_id, len(turns) + 1, step, f"Ready file not found for {file_key}"))
                     continue
-                _request_json("PUT", f"/conversations/{conversation_id}/active-file", {"file_id": target["id"]}, timeout=60)
+                if active_file_id and active_file_id != target["id"]:
+                    finish_conversation()
+                    turns = []
+                    file_sequence = []
+                    repeated_clarifications = 0
+                    previous_type = None
+                    conversation = None
+                    conversation_id = None
+                if not conversation_id:
+                    segment += 1
+                    title = scenario["title"] if segment == 1 else f"{scenario['title']} - {Path(str(target['filename'])).stem}"
+                    conversation = _request_json("POST", "/conversations", {"title": title, "source_file_id": target["id"]})
+                    conversation_id = conversation["id"]
                 active_file_id = target["id"]
                 active_file_name = target["filename"]
                 file_sequence.append(active_file_name)
 
-            message = step["message"]
-            started = time.perf_counter()
-            try:
-                response = _request_json("POST", f"/conversations/{conversation_id}/messages", {"message": message, "debug": False}, timeout=240)
-                elapsed_ms = round((time.perf_counter() - started) * 1000, 1)
-                turn = _validate_turn(
+            if not conversation_id:
+                turn = _failed_turn(scenario["id"], "not-created", len(turns) + 1, step["message"], "No source file selected before message", active_file_id, active_file_name)
+                turns.append(turn)
+                results.append(turn)
+                continue
+
+            pending_messages = [step["message"]]
+            scripted_answers = list(step.get("clarification_answers") or [])
+            final_turn: dict[str, Any] | None = None
+            while pending_messages:
+                message = pending_messages.pop(0)
+                turn, response = _send_turn(
                     scenario["id"],
                     conversation_id,
-                    index,
+                    len(turns) + 1,
                     message,
-                    response,
                     active_file_id,
                     active_file_name,
                     require_chart=bool(step.get("require_chart")),
-                    elapsed_ms=elapsed_ms,
+                    require_semantic=bool(step.get("require_semantic")),
                 )
-            except Exception as exc:
-                turn = _failed_turn(scenario["id"], conversation_id, index, message, str(exc), active_file_id, active_file_name)
-            if turn["response_type"] == "clarification" and previous_type == "clarification":
-                repeated_clarifications += 1
-                turn["passed"] = False
-                turn["issues"].append("repeated clarification")
-            previous_type = turn["response_type"]
-            turns.append(turn)
-            results.append(turn)
+                if turn["response_type"] == "clarification" and previous_type == "clarification":
+                    if turns and turn["assistant_response"] == turns[-1].get("assistant_response"):
+                        repeated_clarifications += 1
+                        turn["passed"] = False
+                        turn["issues"].append("repeated clarification")
+                previous_type = turn["response_type"]
+                turns.append(turn)
+                results.append(turn)
+                final_turn = turn
+                if turn["response_type"] != "clarification":
+                    break
+                answer = scripted_answers.pop(0) if scripted_answers else _choose_clarification_reply(response)
+                if not answer:
+                    break
+                pending_messages.append(answer)
+            if step.get("require_chart") and final_turn and final_turn["response_type"] == "clarification":
+                final_turn["passed"] = False
+                final_turn["issues"].append("clarification did not resolve to chart")
 
-        conversations.append(
-            {
-                "demo_id": scenario["id"],
-                "title": scenario["title"],
-                "conversation_id": conversation_id,
-                "file_sequence": file_sequence,
-                "turn_count": len(turns),
-                "llm_call_count": sum(1 for turn in turns if turn["llm_called"]),
-                "repeated_clarifications": repeated_clarifications,
-                "status": "passed" if all(turn["passed"] for turn in turns) else "failed",
-                "turns": turns,
-            }
-        )
+        finish_conversation()
 
     summary = _summary(results, conversations, health)
     payload = {"summary": summary, "conversations": conversations, "turns": results}
@@ -109,83 +143,91 @@ def _scenarios() -> list[dict[str, Any]]:
             "id": "demo_01",
             "title": "01 - Data Overview",
             "steps": [
-                {"file": "machine", "message": "noi dung cua data"},
-                {"message": "dem so dong downtime"},
-                {"message": "cho toi xem schema"},
-                {"message": "chat luong du lieu"},
-                {"message": "xem 5 dong mau"},
+                {"file": "machine", "message": "File này chứa dữ liệu gì?"},
+                {"message": "File có bao nhiêu bản ghi?"},
+                {"message": "File này có những cột nào?"},
+                {"message": "Có dữ liệu trống hoặc trùng không?"},
+                {"message": "Cho tôi xem 5 dòng mẫu."},
             ],
         },
         {
             "id": "demo_02",
             "title": "02 - Transaction Analysis",
             "steps": [
-                {"file": "entry", "message": "noi dung cua data"},
-                {"message": "Tong gia tri can la bao nhieu?"},
-                {"message": "Co bao nhieu cong khac nhau?"},
-                {"message": "Cho toi mot insight ngan ve luong xe ra vao cong."},
-                {"message": "dem so dong theo cong"},
+                {"file": "entry", "message": "File giao dịch này chứa dữ liệu gì?"},
+                {"message": "Tổng giá trị cân trong toàn bộ file là bao nhiêu?"},
+                {"message": "Có bao nhiêu cổng khác nhau?"},
+                {"message": "Cho tôi bảng số lượt ghi nhận theo từng cổng."},
+                {"message": "Vẽ biểu đồ số lượt ghi nhận theo cổng.", "require_chart": True},
             ],
         },
         {
             "id": "demo_03",
             "title": "03 - Loss Classification",
             "steps": [
-                {"file": "loss", "message": "File nay co nhung nhom ton that nao?"},
-                {"message": "Loai ton that nao xuat hien nhieu nhat?"},
-                {"message": "Cho toi top 5 ten ton that pho bien nhat."},
-                {"message": "Ve bieu do phan bo ton that theo loai.", "require_chart": True},
-                {"message": "Them ty le phan tram vao ket qua truoc."},
+                {"file": "loss", "message": "File này có những nhóm tổn thất nào?"},
+                {"message": "Loại tổn thất nào xuất hiện nhiều nhất?"},
+                {"message": "Cho tôi top 5 tên tổn thất phổ biến nhất."},
+                {"message": "Vẽ biểu đồ phân bố tổn thất theo loại.", "require_chart": True},
+                {"message": "Thêm tỷ lệ phần trăm vào kết quả trước."},
             ],
         },
         {
             "id": "demo_04",
             "title": "04 - Machine Downtime",
             "steps": [
-                {"file": "machine", "message": "May nao co tong thoi gian downtime cao nhat?"},
-                {"message": "Cho toi top 5 may theo tong thoi gian downtime."},
-                {"message": "Them so lan dung va thoi luong trung binh cua tung may."},
-                {"message": "Ve bieu do cot cho ket qua nay.", "require_chart": True},
-                {"message": "Ket qua nay dang tinh trong khoang thoi gian nao?"},
+                {"file": "machine", "message": "Máy nào có tổng thời gian downtime cao nhất?"},
+                {"message": "Cho tôi top 5 máy theo tổng thời gian downtime."},
+                {"message": "Thêm số lần dừng và thời lượng trung bình của từng máy."},
+                {"message": "Vẽ biểu đồ cột cho kết quả này.", "require_chart": True},
+                {"message": "Kết quả này đang tính trong khoảng thời gian nào?"},
             ],
         },
         {
             "id": "demo_05",
             "title": "05 - Clarification Demo",
             "steps": [
-                {"file": "machine", "message": "Ve bieu do tong quan."},
-                {"message": "tong thoi gian theo may top 5", "require_chart": True},
+                {
+                    "file": "machine",
+                    "message": "Vẽ biểu đồ tổng quan.",
+                    "require_chart": True,
+                    "clarification_answers": ["Tổng thời gian downtime.", "Theo máy.", "Chỉ lấy top 5."],
+                },
             ],
         },
         {
             "id": "demo_06",
             "title": "06 - Topic Restore",
             "steps": [
-                {"file": "machine", "message": "Cho toi top 5 may co tong downtime cao nhat trong thang gan nhat."},
-                {"message": "File nay co nhung cot nao?"},
-                {"message": "Cot nao co nhieu gia tri trong nhat?"},
-                {"message": "Quay lai phan top may luc nay."},
-                {"message": "Them so lan dung cua tung may."},
+                {"file": "machine", "message": "Cho tôi top 5 máy có tổng downtime cao nhất trong tháng gần nhất."},
+                {"message": "File này có những cột nào?"},
+                {"message": "Cột nào có nhiều giá trị trống nhất?"},
+                {"message": "Quay lại phần top máy lúc nãy."},
+                {"message": "Thêm số lần dừng của từng máy."},
             ],
         },
         {
             "id": "demo_07",
             "title": "07 - File Context Switching",
             "steps": [
-                {"file": "machine", "message": "Top 5 may theo tong downtime."},
-                {"file": "loss", "message": "Top 5 nhom ton that theo so lan ghi nhan."},
-                {"file": "entry", "message": "Tong gia tri can la bao nhieu?"},
-                {"file": "machine", "message": "Tiep tuc phan top may luc nay va them thoi luong trung binh."},
+                {"file": "machine", "message": "Top 5 máy theo tổng downtime."},
+                {"file": "loss", "message": "Top 5 nhóm tổn thất theo số lần ghi nhận."},
+                {"file": "entry", "message": "Tổng giá trị cân là bao nhiêu?"},
+                {"file": "machine", "message": "Tiếp tục phần top máy lúc nãy và thêm thời lượng trung bình."},
             ],
         },
         {
             "id": "demo_08",
             "title": "08 - Casual User Questions",
             "steps": [
-                {"file": "machine", "message": "Top 5 may theo tong downtime."},
-                {"message": "Ket qua tren noi len dieu gi?"},
-                {"message": "Ve bieu do cot top 5 may theo downtime.", "require_chart": True},
-                {"message": "xem 5 dong mau"},
+                {
+                    "file": "machine",
+                    "message": "Phân tích giúp tôi đi.",
+                    "clarification_answers": ["Tôi muốn xem top 5 máy theo tổng thời gian downtime."],
+                },
+                {"message": "Kết quả trên nói lên điều gì?", "require_semantic": True},
+                {"message": "Vẽ biểu đồ cột top 5 máy theo downtime.", "require_chart": True},
+                {"message": "Kết quả này lấy từ file nào?"},
             ],
         },
     ]
@@ -210,6 +252,78 @@ def _ready_files() -> dict[str, dict[str, Any]]:
     return mapped
 
 
+def _send_turn(
+    demo_id: str,
+    conversation_id: str,
+    turn_index: int,
+    message: str,
+    active_file_id: str | None,
+    active_file_name: str | None,
+    *,
+    require_chart: bool,
+    require_semantic: bool,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    started = time.perf_counter()
+    try:
+        response = _request_json(
+            "POST",
+            f"/conversations/{conversation_id}/messages",
+            {"message": message, "debug": False, "source_file_id": active_file_id},
+            timeout=240,
+        )
+        elapsed_ms = round((time.perf_counter() - started) * 1000, 1)
+        turn = _validate_turn(
+            demo_id,
+            conversation_id,
+            turn_index,
+            message,
+            response,
+            active_file_id,
+            active_file_name,
+            require_chart=require_chart,
+            require_semantic=require_semantic,
+            elapsed_ms=elapsed_ms,
+        )
+        return turn, response
+    except Exception as exc:
+        return _failed_turn(demo_id, conversation_id, turn_index, message, str(exc), active_file_id, active_file_name), {}
+
+
+def _choose_clarification_reply(response: dict[str, Any]) -> str | None:
+    metadata = response.get("metadata") if isinstance(response.get("metadata"), dict) else {}
+    pending = metadata.get("pending_clarification_after") if isinstance(metadata.get("pending_clarification_after"), dict) else {}
+    missing = pending.get("missing_slots") if isinstance(pending.get("missing_slots"), list) else []
+    slot = str(missing[0]) if missing else ""
+    question = str(response.get("summary") or "").lower()
+    file_name = str(metadata.get("active_file_name") or "").lower()
+    is_machine = "machine_downtime" in file_name or "downtime" in file_name
+    is_loss = "loss_assignment" in file_name or "tổn thất" in file_name
+    is_entry = "entrytransaction" in file_name or "transaction" in file_name
+    if slot == "metric":
+        if "số lần" in question or "ban ghi" in question:
+            return "Số lần ghi nhận."
+        if is_loss:
+            return "Số lần ghi nhận theo từng nhóm tổn thất."
+        if is_entry:
+            return "Số lượt ghi nhận theo từng cổng."
+        return "Tổng thời gian downtime."
+    if slot == "dimension":
+        if "nguyên nhân" in question or "tổn thất" in question or is_loss:
+            return "Theo nhóm tổn thất."
+        if is_entry:
+            return "Theo cổng."
+        return "Theo máy."
+    if slot == "limit":
+        return "Top 5."
+    if slot == "output":
+        return "Biểu đồ cột."
+    if "tổng thời lượng" in question or "thời gian" in question:
+        if is_loss:
+            return "Tổng thời gian theo nhóm tổn thất, top 5."
+        return "Tổng thời gian downtime theo máy, top 5."
+    return None
+
+
 def _validate_turn(
     demo_id: str,
     conversation_id: str,
@@ -220,6 +334,7 @@ def _validate_turn(
     active_file_name: str | None,
     *,
     require_chart: bool,
+    require_semantic: bool,
     elapsed_ms: float,
 ) -> dict[str, Any]:
     metadata = response.get("metadata") if isinstance(response.get("metadata"), dict) else {}
@@ -231,8 +346,15 @@ def _validate_turn(
         issues.append("empty response")
     if active_file_id and metadata.get("active_file_id") not in {active_file_id, None}:
         issues.append("wrong active file")
-    if require_chart and response_type != "chart" and not response.get("chart"):
+    if require_chart and response_type != "clarification" and response_type != "chart" and not response.get("chart"):
         issues.append("missing chart")
+    if require_semantic:
+        if response_type == "clarification":
+            pass
+        elif response_type != "text":
+            issues.append("semantic follow-up returned structured query instead of narrative")
+        if response_type != "clarification" and str(metadata.get("execution_mode") or metadata.get("mode")) != "REAL_LLM":
+            issues.append("semantic follow-up did not use real LLM")
     if re.search(r"[A-Za-z]:\\\\", text):
         issues.append("absolute local path shown")
     if "Traceback" in text:

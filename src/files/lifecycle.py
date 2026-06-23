@@ -315,22 +315,10 @@ class FileLifecycleService:
         return {"checked": len(results), "results": results}
 
     def clear_active_file_references(self, file_id: str) -> int:
-        memory = ConversationMemoryService(
-            db_path=self.settings.memory_db_path,
-            cache_root=self.settings.cache_dir,
-            enabled=self.settings.enable_persistent_memory,
-            recent_turns_limit=self.settings.recent_turns_limit,
-        )
-        cleared = 0
-        for item in memory.list_conversations():
-            conversation_id = str(item.get("id") or "")
-            state = memory.load_conversation(conversation_id)
-            if state.active_file_id == file_id:
-                state.active_file_id = None
-                state.active_file_name = None
-                memory.save_state(state)
-                cleared += 1
-        return cleared
+        # Conversation source bindings are immutable. Deleting an uploaded file
+        # must not erase historical provenance; old chats render from persisted
+        # snapshots and expose the source as unavailable.
+        return 0
 
     def _set_status(self, record: dict[str, Any], status: str, stage: str, progress: int) -> None:
         record.update({"status": status, "processing_stage": stage, "progress": progress, "queryable": False})

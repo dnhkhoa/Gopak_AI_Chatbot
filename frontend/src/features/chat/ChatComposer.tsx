@@ -6,12 +6,16 @@ interface Props {
   disabled: boolean;
   onSend: (message: string) => void;
   onUpload?: (files: FileList) => void;
+  value?: string;
+  onValueChange?: (value: string) => void;
 }
 
-export function ChatComposer({ disabled, onSend, onUpload }: Props) {
-  const [value, setValue] = useState("");
+export function ChatComposer({ disabled, onSend, onUpload, value: controlledValue, onValueChange }: Props) {
+  const [localValue, setLocalValue] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const fileRef = useRef<HTMLInputElement | null>(null);
+  const value = controlledValue ?? localValue;
+  const setValue = onValueChange ?? setLocalValue;
 
   const submit = () => {
     const message = value.trim();

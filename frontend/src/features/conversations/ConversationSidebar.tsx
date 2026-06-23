@@ -1,4 +1,4 @@
-import { ChevronLeft, Menu, MoreHorizontal, Pencil, Plus, Trash2 } from "lucide-react";
+import { ChevronLeft, FileSpreadsheet, Menu, MoreHorizontal, Pencil, Plus, Trash2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import logoUrl from "../../assets/isoft-logo.png";
 import type { ConversationPayload, HealthStatus } from "../../types/api";
@@ -78,7 +78,14 @@ function HistoryItem(props: {
         />
       ) : (
         <button className="conversation-title" onClick={props.onSelect} title={props.item.title}>
-          {props.item.title}
+          <span className="conversation-title-main">{props.item.title}</span>
+          {props.item.source_file_name ? (
+            <span className="conversation-source" title={props.item.source_file_name}>
+              <FileSpreadsheet size={12} />
+              {props.item.source_available === false ? "Unavailable: " : "Source: "}
+              {props.item.source_file_name}
+            </span>
+          ) : null}
         </button>
       )}
 

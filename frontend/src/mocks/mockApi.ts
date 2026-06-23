@@ -30,14 +30,21 @@ export const mockApi: GopakApi = {
     return conversations.map((c) => ({ ...c }));
   },
 
-  async createConversation(title?: string) {
+  async createConversation(title?: string, sourceFileId?: string) {
     await delay(120);
+    const file = sourceFileId ? files.find((item) => item.id === sourceFileId) : null;
+    if (sourceFileId && (!file || file.status !== "ready")) throw new Error("File not ready.");
     const conversation: ConversationPayload = {
       id: nextId("conv"),
       title: title?.trim() || "New conversation",
       created_at: new Date(0).toISOString(),
       updated_at: new Date(0).toISOString(),
-      status: "active"
+      status: "active",
+      source_file_id: file?.id ?? null,
+      source_file_name: file?.filename ?? null,
+      source_available: true,
+      active_file_id: file?.id ?? null,
+      active_file_name: file?.filename ?? null
     };
     conversations = [conversation, ...conversations];
     transcripts.set(conversation.id, []);
@@ -57,6 +64,11 @@ export const mockApi: GopakApi = {
     const file = files.find((f) => f.id === fileId);
     if (!conversation) throw new Error("Conversation not found.");
     if (!file || file.status !== "ready") throw new Error("File not ready.");
+    if (conversation.source_file_id && conversation.source_file_id !== file.id) {
+      throw new Error("This conversation belongs to another Excel file. Start a new chat for the selected file.");
+    }
+    conversation.source_file_id = file.id;
+    conversation.source_file_name = file.filename;
     conversation.active_file_id = file.id;
     conversation.active_file_name = file.filename;
     touch(id);
@@ -88,8 +100,12 @@ export const mockApi: GopakApi = {
     return this.getConversation(id);
   },
 
-  async sendMessage(id: string, message: string): Promise<ChatResponse> {
+  async sendMessage(id: string, message: string, _debug?: boolean, sourceFileId?: string | null): Promise<ChatResponse> {
     await delay(650);
+    const conversation = conversations.find((c) => c.id === id);
+    if (sourceFileId && conversation?.source_file_id && sourceFileId !== conversation.source_file_id) {
+      throw new Error("This conversation belongs to another Excel file. Start a new chat for the selected file.");
+    }
     const response = buildMockResponse(id, message);
     const turn = transcripts.get(id) ?? [];
     turn.push({ id: nextId("m"), role: "user", content: message });
@@ -101,7 +117,6 @@ export const mockApi: GopakApi = {
     });
     transcripts.set(id, turn);
     // Auto-title from the first user message (mock parity with backend behaviour).
-    const conversation = conversations.find((c) => c.id === id);
     if (conversation && (conversation.title === "New conversation") && turn.length === 2) {
       conversation.title = message.slice(0, 48);
     }

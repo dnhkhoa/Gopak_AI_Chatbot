@@ -1,0 +1,401 @@
+[
+  {
+    "title": "01 - Data Overview",
+    "src": "Machine_Downtime_20260203_100753.xlsx",
+    "turns": [
+      {
+        "u": "File này chứa dữ liệu gì?"
+      },
+      {
+        "a": "Hệ thống hiện có các bộ dữ liệu sau:\n- Downtime máy: 9.151 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu,",
+        "type": "data_overview",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "File có bao nhiêu bản ghi?"
+      },
+      {
+        "a": "9.151",
+        "type": "scalar",
+        "chart": false,
+        "table": false
+      },
+      {
+        "u": "File này có những cột nào?"
+      },
+      {
+        "a": "Tìm thấy 16 cột có thể dùng để phân tích.",
+        "type": "schema",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "Có dữ liệu trống hoặc trùng không?"
+      },
+      {
+        "a": "Tóm tắt nhanh null và dòng trùng theo từng bộ dữ liệu.",
+        "type": "data_quality",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "Cho tôi xem 5 dòng mẫu."
+      },
+      {
+        "a": "Hiển thị 5 bản ghi mẫu.",
+        "type": "sample_table",
+        "chart": false,
+        "table": true
+      }
+    ]
+  },
+  {
+    "title": "02 - Transaction Analysis",
+    "src": "EntryTransaction_20260203_164943.xlsx",
+    "turns": [
+      {
+        "u": "File giao dịch này chứa dữ liệu gì?"
+      },
+      {
+        "a": "Hệ thống hiện có các bộ dữ liệu sau:\n- Ra vào cổng: 1.294 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, ",
+        "type": "data_overview",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "Tổng giá trị cân trong toàn bộ file là bao nhiêu?"
+      },
+      {
+        "a": "4.985.500",
+        "type": "scalar",
+        "chart": false,
+        "table": false
+      },
+      {
+        "u": "Có bao nhiêu cổng khác nhau?"
+      },
+      {
+        "a": "2",
+        "type": "scalar",
+        "chart": false,
+        "table": false
+      },
+      {
+        "u": "Cho tôi bảng số lượt ghi nhận theo từng cổng."
+      },
+      {
+        "a": "Cổng 1 có số lần ghi nhận cao nhất: 1.048.",
+        "type": "table",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "Vẽ biểu đồ số lượt ghi nhận theo cổng."
+      },
+      {
+        "a": "Cổng 1 có số lần ghi nhận cao nhất: 1.048.",
+        "type": "chart",
+        "chart": true,
+        "table": true
+      }
+    ]
+  },
+  {
+    "title": "03 - Loss Classification",
+    "src": "Loss_Assignment_20260203_100840.xlsx",
+    "turns": [
+      {
+        "u": "File này có những nhóm tổn thất nào?"
+      },
+      {
+        "a": "Bảo trì có nhóm tổn thất cao nhất: Bảo trì.",
+        "type": "table",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "Loại tổn thất nào xuất hiện nhiều nhất?"
+      },
+      {
+        "a": "SETUP MÁY có số lần ghi nhận cao nhất: 20.824.",
+        "type": "table",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "Cho tôi top 5 tên tổn thất phổ biến nhất."
+      },
+      {
+        "a": "SETUP MÁY có số lần ghi nhận cao nhất: 20.824.",
+        "type": "table",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "Vẽ biểu đồ phân bố tổn thất theo loại."
+      },
+      {
+        "a": "SETUP MÁY có số lần ghi nhận cao nhất: 20.824.",
+        "type": "chart",
+        "chart": true,
+        "table": true
+      },
+      {
+        "u": "Thêm tỷ lệ phần trăm vào kết quả trước."
+      },
+      {
+        "a": "SETUP MÁY có số lần ghi nhận cao nhất: 20.824.",
+        "type": "chart",
+        "chart": true,
+        "table": true
+      }
+    ]
+  },
+  {
+    "title": "04 - Machine Downtime",
+    "src": "Machine_Downtime_20260203_100753.xlsx",
+    "turns": [
+      {
+        "u": "Máy nào có tổng thời gian downtime cao nhất?"
+      },
+      {
+        "a": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+        "type": "table",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "Cho tôi top 5 máy theo tổng thời gian downtime."
+      },
+      {
+        "a": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+        "type": "table",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "Thêm số lần dừng và thời lượng trung bình của từng máy."
+      },
+      {
+        "a": "Máy 12 có số lần ghi nhận cao nhất: 1.654.",
+        "type": "table",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "Vẽ biểu đồ cột cho kết quả này."
+      },
+      {
+        "a": "Máy 12 có số lần ghi nhận cao nhất: 1.654.",
+        "type": "chart",
+        "chart": true,
+        "table": true
+      },
+      {
+        "u": "Kết quả này đang tính trong khoảng thời gian nào?"
+      },
+      {
+        "a": "1.989,56 giờ",
+        "type": "scalar",
+        "chart": false,
+        "table": false
+      }
+    ]
+  },
+  {
+    "title": "05 - Clarification Demo",
+    "src": "Machine_Downtime_20260203_100753.xlsx",
+    "turns": [
+      {
+        "u": "Vẽ biểu đồ tổng quan."
+      },
+      {
+        "a": "Bạn muốn biểu đồ tổng thời lượng hay số lần dừng?",
+        "type": "clarification",
+        "chart": false,
+        "table": false
+      },
+      {
+        "u": "Tổng thời gian downtime."
+      },
+      {
+        "a": "Bạn muốn nhóm biểu đồ theo máy hay nguyên nhân?",
+        "type": "clarification",
+        "chart": false,
+        "table": false
+      },
+      {
+        "u": "Theo máy."
+      },
+      {
+        "a": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+        "type": "chart",
+        "chart": true,
+        "table": true
+      }
+    ]
+  },
+  {
+    "title": "06 - Topic Restore",
+    "src": "Machine_Downtime_20260203_100753.xlsx",
+    "turns": [
+      {
+        "u": "Cho tôi top 5 máy có tổng downtime cao nhất trong tháng gần nhất."
+      },
+      {
+        "a": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút.",
+        "type": "chart",
+        "chart": true,
+        "table": true
+      },
+      {
+        "u": "File này có những cột nào?"
+      },
+      {
+        "a": "Tìm thấy 16 cột có thể dùng để phân tích.",
+        "type": "schema",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "Cột nào có nhiều giá trị trống nhất?"
+      },
+      {
+        "a": "Cột có nhiều giá trị trống nhất là “Note” với 9.151 giá trị trống (100% trên 9.151 bản ghi). Bảng dưới liệt kê",
+        "type": "data_quality",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "Quay lại phần top máy lúc nãy."
+      },
+      {
+        "a": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút.",
+        "type": "chart",
+        "chart": true,
+        "table": true
+      },
+      {
+        "u": "Thêm số lần dừng của từng máy."
+      },
+      {
+        "a": "Máy 29 có số lần ghi nhận cao nhất: 48.",
+        "type": "chart",
+        "chart": true,
+        "table": true
+      }
+    ]
+  },
+  {
+    "title": "07 - File Context Switching",
+    "src": "Machine_Downtime_20260203_100753.xlsx",
+    "turns": [
+      {
+        "u": "Top 5 máy theo tổng downtime."
+      },
+      {
+        "a": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+        "type": "table",
+        "chart": false,
+        "table": true
+      }
+    ]
+  },
+  {
+    "title": "07 - File Context Switching - Loss_Assignment_20260203_100840",
+    "src": "Loss_Assignment_20260203_100840.xlsx",
+    "turns": [
+      {
+        "u": "Top 5 nhóm tổn thất theo số lần ghi nhận."
+      },
+      {
+        "a": "Sản xuất có số lần ghi nhận cao nhất: 26.892.",
+        "type": "table",
+        "chart": false,
+        "table": true
+      }
+    ]
+  },
+  {
+    "title": "07 - File Context Switching - EntryTransaction_20260203_164943",
+    "src": "EntryTransaction_20260203_164943.xlsx",
+    "turns": [
+      {
+        "u": "Tổng giá trị cân là bao nhiêu?"
+      },
+      {
+        "a": "4.985.500",
+        "type": "scalar",
+        "chart": false,
+        "table": false
+      }
+    ]
+  },
+  {
+    "title": "07 - File Context Switching - Machine_Downtime_20260203_100753",
+    "src": "Machine_Downtime_20260203_100753.xlsx",
+    "turns": [
+      {
+        "u": "Tiếp tục phần top máy lúc nãy và thêm thời lượng trung bình."
+      },
+      {
+        "a": "Máy 8 có thời gian downtime trung bình cao nhất: 21 phút 8 giây.",
+        "type": "table",
+        "chart": false,
+        "table": true
+      }
+    ]
+  },
+  {
+    "title": "08 - Casual User Questions",
+    "src": "Machine_Downtime_20260203_100753.xlsx",
+    "turns": [
+      {
+        "u": "Phân tích giúp tôi đi."
+      },
+      {
+        "a": "Bạn muốn mình nhận xét dựa trên kết quả nào? Hãy hỏi một bảng, biểu đồ hoặc thống kê cụ thể trước.",
+        "type": "clarification",
+        "chart": false,
+        "table": false
+      },
+      {
+        "u": "Tôi muốn xem top 5 máy theo tổng thời gian downtime."
+      },
+      {
+        "a": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+        "type": "table",
+        "chart": false,
+        "table": true
+      },
+      {
+        "u": "Kết quả trên nói lên điều gì?"
+      },
+      {
+        "a": "Dữ liệu cho thấy trong tháng **tháng 5**, máy có thời gian ngừng hoạt động (downtime) dài nhất là **Máy 11** v",
+        "type": "text",
+        "chart": false,
+        "table": false
+      },
+      {
+        "u": "Vẽ biểu đồ cột top 5 máy theo downtime."
+      },
+      {
+        "a": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+        "type": "chart",
+        "chart": true,
+        "table": true
+      },
+      {
+        "u": "Kết quả này lấy từ file nào?"
+      },
+      {
+        "a": "Machine_Downtime_20260203_100753.xlsx",
+        "type": "text",
+        "chart": false,
+        "table": false
+      }
+    ]
+  }
+]

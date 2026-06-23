@@ -9,10 +9,13 @@ from src.query_understanding.text import normalize_text
 CustomerIntent = Literal[
     "DATA_OVERVIEW",
     "TABLE_OVERVIEW",
+    "ROW_COUNT",
     "SCHEMA_INSPECTION",
+    "COLUMN_NULLS",
     "SAMPLE_ROWS",
     "DATA_RANGE",
     "DATA_QUALITY",
+    "PROVENANCE",
     "ANALYTICAL_QUERY",
     "CHART_REQUEST",
     "DASHBOARD_REQUEST",
@@ -48,6 +51,21 @@ def detect_customer_intent(question: str) -> CustomerIntentResult:
     if any(term in q for term in out_of_domain):
         return CustomerIntentResult("REFUSAL", 0.94, "Question is outside the loaded operational datasets.", table_hint, limit)
 
+    provenance_terms = [
+        "lay tu file nao",
+        "tu file nao",
+        "la file nao",
+        "thuoc file nao",
+        "tu nguon nao",
+        "nguon du lieu nao",
+        "lay tu dau",
+        "tu dau ra",
+        "du lieu tu dau",
+        "nguon cua ket qua",
+    ]
+    if any(term in q for term in provenance_terms):
+        return CustomerIntentResult("PROVENANCE", 0.95, "Question asks which source file/data the result came from.", table_hint, limit)
+
     overview_terms = [
         "data co gi",
         "data co nhung gi",
@@ -67,9 +85,39 @@ def detect_customer_intent(question: str) -> CustomerIntentResult:
         "data overview",
         "file nay chua gi",
         "file nay co gi",
+        "chua du lieu gi",
+        "chua nhung du lieu gi",
+        "chua nhung gi",
+        "chua thong tin gi",
+        "du lieu gi",
+        "noi dung gi",
+        "thong tin gi",
+        "gom nhung gi",
+        "co nhung gi",
+        "chua noi dung gi",
     ]
     if any(term in q for term in overview_terms) or q_clean in {"data", "co gi"}:
         return CustomerIntentResult("DATA_OVERVIEW", 0.98, "Question asks for data/catalog overview.", table_hint, limit)
+
+    row_count_terms = [
+        "bao nhieu ban ghi",
+        "bao nhieu dong",
+        "bao nhieu giao dich",
+        "bao nhieu records",
+        "bao nhieu dong du lieu",
+        "tong so ban ghi",
+        "tong so dong",
+        "so luong ban ghi",
+        "so luong dong",
+        "co bao nhieu ban ghi",
+        "co bao nhieu dong",
+    ]
+    if any(term in q for term in row_count_terms) and "khac nhau" not in q:
+        return CustomerIntentResult("ROW_COUNT", 0.96, "Question asks for total record count.", table_hint, limit)
+
+    null_column_terms = ["null", "trong", "rong", "thieu", "khuyet", "bo trong"]
+    if "cot nao" in q and any(term in q for term in null_column_terms):
+        return CustomerIntentResult("COLUMN_NULLS", 0.95, "Question asks which column has the most missing values.", table_hint, limit)
 
     schema_terms = [
         "schema",
@@ -108,7 +156,12 @@ def detect_customer_intent(question: str) -> CustomerIntentResult:
     if any(term in q for term in sample_terms):
         return CustomerIntentResult("SAMPLE_ROWS", 0.95, "Question asks for sample rows.", table_hint, limit or 5)
 
-    quality_terms = ["null", "missing", "thieu du lieu", "duplicate", "dong trung", "ban ghi trung", "trung ban ghi", "duration am", "ket thuc truoc", "data quality", "chat luong du lieu"]
+    quality_terms = [
+        "null", "missing", "thieu du lieu", "duplicate", "dong trung", "ban ghi trung", "trung ban ghi",
+        "duration am", "ket thuc truoc", "data quality", "chat luong du lieu",
+        "du lieu trong", "gia tri trong", "o trong", "bi trong", "de trong", "con trong", "cot trong", "dong trong",
+        "trong khong", "trung lap", "bi trung", "trung nhau", "hoac trung", "co trung", "lap lai",
+    ]
     analytical_anomaly = "bat thuong" in q and any(
         term in q
         for term in ["phan tich", "tom tat", "bang", "nhan xet", "insight", "may nao", "downtime", "thoi gian", "theo may"]

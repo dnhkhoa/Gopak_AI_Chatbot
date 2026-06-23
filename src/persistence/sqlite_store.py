@@ -23,38 +23,106 @@ class SQLiteMemoryStore:
         con.execute("PRAGMA foreign_keys = ON")
         return con
 
-    def create_conversation(self, title: str | None = None) -> ConversationRecord:
-        record = ConversationRecord(title=title or "Hoi thoai moi")
+    def create_conversation(
+        self,
+        title: str | None = None,
+        *,
+        source_file_id: str | None = None,
+        source_file_name: str | None = None,
+        source_file_sha256: str | None = None,
+        source_catalog_version: str | None = None,
+    ) -> ConversationRecord:
+        record = ConversationRecord(
+            title=title or "Hoi thoai moi",
+            source_file_id=source_file_id,
+            source_file_name=source_file_name,
+            source_file_sha256=source_file_sha256,
+            source_catalog_version=source_catalog_version,
+        )
         with self.connect() as con:
             with con:
                 con.execute(
-                    "INSERT INTO conversations (id, title, created_at, updated_at, status) VALUES (?, ?, ?, ?, ?)",
-                    (record.id, record.title, record.created_at, record.updated_at, record.status),
+                    """
+                    INSERT INTO conversations
+                    (id, title, source_file_id, source_file_name, source_file_sha256, source_catalog_version, created_at, updated_at, status)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        record.id,
+                        record.title,
+                        record.source_file_id,
+                        record.source_file_name,
+                        record.source_file_sha256,
+                        record.source_catalog_version,
+                        record.created_at,
+                        record.updated_at,
+                        record.status,
+                    ),
                 )
         return record
 
     def list_conversations(self) -> list[ConversationRecord]:
         with self.connect() as con:
             rows = con.execute(
-                "SELECT id, title, created_at, updated_at, status FROM conversations WHERE status <> 'deleted' ORDER BY updated_at DESC"
+                """
+                SELECT id, title, source_file_id, source_file_name, source_file_sha256, source_catalog_version, created_at, updated_at, status
+                FROM conversations
+                WHERE status <> 'deleted'
+                ORDER BY updated_at DESC
+                """
             ).fetchall()
         return [ConversationRecord(**dict(row)) for row in rows]
 
-    def update_conversation(self, conversation_id: str, *, title: str | None = None, status: str | None = None) -> None:
+    def update_conversation(
+        self,
+        conversation_id: str,
+        *,
+        title: str | None = None,
+        status: str | None = None,
+        source_file_id: str | None = None,
+        source_file_name: str | None = None,
+        source_file_sha256: str | None = None,
+        source_catalog_version: str | None = None,
+    ) -> None:
         current = self.get_conversation(conversation_id)
         if not current:
             return
+        if source_file_id and current.source_file_id and current.source_file_id != source_file_id:
+            raise ValueError("CONVERSATION_FILE_MISMATCH")
         with self.connect() as con:
             with con:
                 con.execute(
-                    "UPDATE conversations SET title = ?, status = ?, updated_at = ? WHERE id = ?",
-                    (title or current.title, status or current.status, utc_now_iso(), conversation_id),
+                    """
+                    UPDATE conversations
+                    SET title = ?,
+                        status = ?,
+                        source_file_id = ?,
+                        source_file_name = ?,
+                        source_file_sha256 = ?,
+                        source_catalog_version = ?,
+                        updated_at = ?
+                    WHERE id = ?
+                    """,
+                    (
+                        title or current.title,
+                        status or current.status,
+                        source_file_id if source_file_id is not None else current.source_file_id,
+                        source_file_name if source_file_name is not None else current.source_file_name,
+                        source_file_sha256 if source_file_sha256 is not None else current.source_file_sha256,
+                        source_catalog_version if source_catalog_version is not None else current.source_catalog_version,
+                        utc_now_iso(),
+                        conversation_id,
+                    ),
                 )
 
     def get_conversation(self, conversation_id: str) -> ConversationRecord | None:
         with self.connect() as con:
             row = con.execute(
-                "SELECT id, title, created_at, updated_at, status FROM conversations WHERE id = ?",
+                """
+                SELECT id, title, source_file_id, source_file_name, source_file_sha256, source_catalog_version, created_at, updated_at, status
+                FROM conversations
+                WHERE id = ?
+                """,
                 (conversation_id,),
             ).fetchone()
         return ConversationRecord(**dict(row)) if row else None

@@ -21,7 +21,10 @@ def create_conversation(
     payload: ConversationCreateRequest | None = None,
     service: ChatApplicationService = Depends(get_chat_service),
 ) -> ConversationPayload:
-    return service.create_conversation(title=payload.title if payload else None)
+    return service.create_conversation(
+        title=payload.title if payload else None,
+        source_file_id=payload.source_file_id if payload else None,
+    )
 
 
 @router.get("/{conversation_id}", response_model=ConversationDetail)
@@ -78,8 +81,17 @@ def set_active_file(
         active_file = service.set_active_file(conversation_id, payload.file_id)
     except ValueError as exc:
         message = str(exc)
-        code = 404 if message == "File not found" else 409
-        raise HTTPException(status_code=code, detail=message) from exc
+        if message == "File not found":
+            raise HTTPException(status_code=404, detail=message) from exc
+        if message == "CONVERSATION_FILE_MISMATCH":
+            raise HTTPException(
+                status_code=409,
+                detail={
+                    "code": "CONVERSATION_FILE_MISMATCH",
+                    "message": "This conversation belongs to another Excel file. Start a new chat for the selected file.",
+                },
+            ) from exc
+        raise HTTPException(status_code=409, detail=message) from exc
     if not active_file:
         raise HTTPException(status_code=404, detail="Conversation not found")
     return active_file

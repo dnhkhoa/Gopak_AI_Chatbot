@@ -177,8 +177,15 @@ class ChatApplicationService:
         self.memory_service.reset_conversation(conversation_id)
         return self.get_conversation(conversation_id)
 
-    def create_conversation(self, title: str | None = None) -> ConversationPayload:
-        state = self.memory_service.create_conversation(title=title)
+    def create_conversation(self, title: str | None = None, source_file_id: str | None = None) -> ConversationPayload:
+        file_record = self._validate_ready_file(source_file_id) if source_file_id else None
+        state = self.memory_service.create_conversation(
+            title=title,
+            source_file_id=str(file_record.get("id")) if file_record else None,
+            source_file_name=str(file_record.get("filename")) if file_record else None,
+            source_file_sha256=str(file_record.get("sha256") or "") if file_record and file_record.get("sha256") else None,
+            source_catalog_version=str(file_record.get("catalog_version") or "") if file_record and file_record.get("catalog_version") else None,
+        )
         record = self.memory_service.get_conversation(state.conversation_id)
         return _conversation_payload(
             record or {"id": state.conversation_id, "title": title or "Cuoc tro chuyen", "created_at": "", "updated_at": "", "status": "active"},
@@ -189,6 +196,7 @@ class ChatApplicationService:
         payloads = []
         for item in self.memory_service.list_conversations():
             state = self.memory_service.load_conversation(str(item.get("id", "")))
+            self._backfill_source_from_state(item, state)
             payloads.append(_conversation_payload(item, state))
         return payloads
 
@@ -197,10 +205,8 @@ class ChatApplicationService:
         if not record or record.get("status") == "deleted":
             return None
         state = self.memory_service.load_conversation(conversation_id)
-        if state.active_file_id and not find_uploaded_file(state.active_file_id):
-            state.active_file_id = None
-            state.active_file_name = None
-            self.memory_service.save_state(state)
+        self._backfill_source_from_state(record, state)
+        self._sync_state_to_conversation_source(record, state)
         turns = self.memory_service.load_recent_turns(conversation_id, limit)
         return ConversationDetail(
             **_conversation_payload(record, state).model_dump(),
@@ -226,23 +232,24 @@ class ChatApplicationService:
         return _conversation_payload(record, state) if record else None
 
     def set_active_file(self, conversation_id: str, file_id: str) -> ActiveFilePayload | None:
-        if not self.memory_service.get_conversation(conversation_id):
+        conversation = self.memory_service.get_conversation(conversation_id)
+        if not conversation:
             return None
-        record = find_uploaded_file(file_id)
-        if not record:
-            raise ValueError("File not found")
-        if record.get("status") != "ready" or not record.get("queryable"):
-            raise ValueError("File is not ready")
-        catalog = self.get_catalog()
-        if not any(_table_file_id(table) == file_id for table in catalog.get("tables", [])):
-            catalog = self.reload_catalog_from_cache()
-        readiness = FileLifecycleService(self.settings).validate_readiness(file_id, catalog=catalog)
-        if not readiness.get("ok"):
-            raise ValueError(str(readiness.get("message") or "File is not queryable"))
+        record = self._validate_ready_file(file_id)
+        existing_source = str(conversation.get("source_file_id") or "")
+        if existing_source and existing_source != file_id:
+            raise ValueError("CONVERSATION_FILE_MISMATCH")
         state = self.memory_service.load_conversation(conversation_id)
-        state.save_file_context()
-        state.active_file_id = str(record.get("id") or "")
-        state.active_file_name = str(record.get("filename") or "")
+        if not existing_source:
+            self.memory_service.bind_conversation_source(
+                conversation_id,
+                source_file_id=str(record.get("id") or ""),
+                source_file_name=str(record.get("filename") or ""),
+                source_file_sha256=str(record.get("sha256") or "") if record.get("sha256") else None,
+                source_catalog_version=str(record.get("catalog_version") or "") if record.get("catalog_version") else None,
+            )
+        state.active_file_id = existing_source or str(record.get("id") or "")
+        state.active_file_name = str(conversation.get("source_file_name") or record.get("filename") or "")
         state.restore_file_context(state.active_file_id)
         self.memory_service.save_state(state)
         return ActiveFilePayload(
@@ -252,14 +259,31 @@ class ChatApplicationService:
             status="ready",
         )
 
-    def process_message(self, conversation_id: str, message: str, debug: bool = False) -> ChatResponse:
+    def process_message(self, conversation_id: str, message: str, debug: bool = False, source_file_id: str | None = None) -> ChatResponse:
         started = perf_counter()
         message = message.strip()
         catalog = self.get_catalog()
         state = self.memory_service.load_conversation(conversation_id)
-        if not self.memory_service.get_conversation(conversation_id):
+        conversation = self.memory_service.get_conversation(conversation_id)
+        if not conversation:
             state = self.memory_service.create_conversation()
             conversation_id = state.conversation_id
+            conversation = self.memory_service.get_conversation(conversation_id) or {}
+        self._backfill_source_from_state(conversation, state)
+        conversation_source_id = str(conversation.get("source_file_id") or state.active_file_id or "")
+        if source_file_id and conversation_source_id and source_file_id != conversation_source_id:
+            raise ValueError("CONVERSATION_FILE_MISMATCH")
+        if source_file_id and not conversation_source_id:
+            file_record = self._validate_ready_file(source_file_id)
+            self.memory_service.bind_conversation_source(
+                conversation_id,
+                source_file_id=str(file_record.get("id") or ""),
+                source_file_name=str(file_record.get("filename") or ""),
+                source_file_sha256=str(file_record.get("sha256") or "") if file_record.get("sha256") else None,
+                source_catalog_version=str(file_record.get("catalog_version") or "") if file_record.get("catalog_version") else None,
+            )
+            conversation = self.memory_service.get_conversation(conversation_id) or conversation
+        self._sync_state_to_conversation_source(conversation, state)
 
         self._set_title_from_first_message(conversation_id, message)
         self.memory_service.save_turn(state, role="user", content=message)
@@ -267,9 +291,9 @@ class ChatApplicationService:
         customer_intent = detect_customer_intent(message)
         metadata_response = self._try_metadata_response(conversation_id, message, customer_intent, catalog, debug, started)
         if metadata_response is not None:
-            self.memory_service.save_turn(
+            self._save_assistant_response(
                 state,
-                role="assistant",
+                metadata_response,
                 content=metadata_response.summary or metadata_response.title,
                 execution_mode=metadata_response.metadata.get("execution_mode"),
                 query_plan=None,
@@ -345,13 +369,30 @@ class ChatApplicationService:
             self.memory_service.save_turn(state, role="assistant", content=response.summary, execution_mode="ERROR")
             return response
 
-    def process_message(self, conversation_id: str, message: str, debug: bool = False) -> ChatResponse:
+    def process_message(self, conversation_id: str, message: str, debug: bool = False, source_file_id: str | None = None) -> ChatResponse:
         started = perf_counter()
         message = message.strip()
         state = self.memory_service.load_conversation(conversation_id)
-        if not self.memory_service.get_conversation(conversation_id):
+        conversation = self.memory_service.get_conversation(conversation_id)
+        if not conversation:
             state = self.memory_service.create_conversation()
             conversation_id = state.conversation_id
+            conversation = self.memory_service.get_conversation(conversation_id) or {}
+        self._backfill_source_from_state(conversation, state)
+        conversation_source_id = str(conversation.get("source_file_id") or state.active_file_id or "")
+        if source_file_id and conversation_source_id and source_file_id != conversation_source_id:
+            raise ValueError("CONVERSATION_FILE_MISMATCH")
+        if source_file_id and not conversation_source_id:
+            file_record = self._validate_ready_file(source_file_id)
+            self.memory_service.bind_conversation_source(
+                conversation_id,
+                source_file_id=str(file_record.get("id") or ""),
+                source_file_name=str(file_record.get("filename") or ""),
+                source_file_sha256=str(file_record.get("sha256") or "") if file_record.get("sha256") else None,
+                source_catalog_version=str(file_record.get("catalog_version") or "") if file_record.get("catalog_version") else None,
+            )
+            conversation = self.memory_service.get_conversation(conversation_id) or conversation
+        self._sync_state_to_conversation_source(conversation, state)
 
         self._set_title_from_first_message(conversation_id, message)
         self.memory_service.save_turn(state, role="user", content=message)
@@ -366,8 +407,8 @@ class ChatApplicationService:
             response = self._file_scope_response(
                 conversation_id,
                 "error",
-                "Khong the dung file nay",
-                "File dang chon chua co bang du lieu trong catalog. Vui long nap lai du lieu hoac chon file khac.",
+                "Source file is not queryable",
+                "The selected Excel file does not have queryable tables in the catalog. Reload the data or start a new chat with another Ready file.",
                 "SAFE_FAILURE",
                 debug,
                 started,
@@ -404,6 +445,11 @@ class ChatApplicationService:
             if started_clarification is not None:
                 self._save_assistant_response(state, started_clarification)
                 return started_clarification
+
+        semantic_followup = self._try_semantic_followup_response(conversation_id, message, state, debug, started)
+        if semantic_followup is not None:
+            self._save_assistant_response(state, semantic_followup)
+            return semantic_followup
 
         row_response = try_row_level_response(conversation_id, message, catalog, state, debug, started)
         if row_response is not None:
@@ -450,7 +496,7 @@ class ChatApplicationService:
                 plan = QueryPlan(
                     intent="safe_failure",
                     output="text",
-                    clarification_question="Khong the tao truy van an toan trong pham vi file dang chon.",
+                    clarification_question="Unable to build a safe query within the selected Excel file.",
                 )
 
             if plan.intent in {"clarification", "refusal", "safe_failure"}:
@@ -518,8 +564,8 @@ class ChatApplicationService:
                 message_id=str(uuid4()),
                 conversation_id=conversation_id,
                 response_type="error",
-                title="Khong the hoan tat",
-                summary="Khong the ket noi voi he thong xu ly." if not debug else str(exc),
+                title="Unable to complete the request",
+                summary="The analysis service could not complete this request." if not debug else str(exc),
                 metadata={
                     "latency_ms": {"total": round((perf_counter() - started) * 1000, 1)},
                     "active_file_id": state.active_file_id,
@@ -535,8 +581,8 @@ class ChatApplicationService:
             return self._file_scope_response(
                 conversation_id,
                 "clarification",
-                "Can chon file",
-                "Vui long chon mot file Excel dang Ready truoc khi dat cau hoi ve du lieu.",
+                "No Excel file selected",
+                "Please select a Ready Excel file before asking data questions.",
                 "CLARIFICATION",
                 debug,
                 started,
@@ -545,15 +591,12 @@ class ChatApplicationService:
             )
         record = find_uploaded_file(state.active_file_id)
         if not record:
-            state.active_file_id = None
-            state.active_file_name = None
-            self.memory_service.save_state(state)
             return self._file_scope_response(
                 conversation_id,
-                "clarification",
-                "File dang chon khong con ton tai",
-                "File dang chon da bi xoa. Vui long chon lai mot file Ready.",
-                "CLARIFICATION",
+                "error",
+                "Source file is unavailable",
+                "The source file for this conversation is no longer available. Select another file to start a new chat.",
+                "SAFE_FAILURE",
                 debug,
                 started,
                 state,
@@ -563,14 +606,14 @@ class ChatApplicationService:
         if record.get("status") != "ready" or not record.get("queryable"):
             status = str(record.get("status") or "")
             summary = (
-                "File dang duoc xu ly. Vui long doi den khi trang thai Ready roi hoi tiep."
+                "The selected Excel file is still processing. Please wait until it is Ready before asking data questions."
                 if status in {"uploaded", "uploading", "processing"}
-                else "File dang chon chua query duoc. Vui long upload lai file hoac chon file khac."
+                else "The selected Excel file is not queryable. Please re-upload it or start a new chat with another Ready file."
             )
             return self._file_scope_response(
                 conversation_id,
                 "error",
-                "File chua san sang",
+                "Excel file is not ready",
                 summary,
                 "SAFE_FAILURE",
                 debug,
@@ -583,8 +626,8 @@ class ChatApplicationService:
             return self._file_scope_response(
                 conversation_id,
                 "refusal",
-                "Dang dung file khac",
-                f"Cuoc hoi thoai nay dang dung file {state.active_file_name}. Neu muon hoi ve {other}, hay chon file do truoc.",
+                "Different source file requested",
+                f"This conversation is bound to {state.active_file_name}. Start a new chat to ask questions about {other}.",
                 "REFUSAL",
                 debug,
                 started,
@@ -592,6 +635,56 @@ class ChatApplicationService:
                 file_scope_validated=False,
             )
         return None
+
+    def _validate_ready_file(self, file_id: str | None) -> dict[str, Any]:
+        if not file_id:
+            raise ValueError("File not found")
+        record = find_uploaded_file(file_id)
+        if not record:
+            raise ValueError("File not found")
+        if record.get("status") != "ready" or not record.get("queryable"):
+            raise ValueError("File is not ready")
+        catalog = self.get_catalog()
+        if not any(_table_file_id(table) == file_id for table in catalog.get("tables", [])):
+            catalog = self.reload_catalog_from_cache()
+        readiness = FileLifecycleService(self.settings).validate_readiness(file_id, catalog=catalog)
+        if not readiness.get("ok"):
+            raise ValueError(str(readiness.get("message") or "File is not queryable"))
+        return record
+
+    def _backfill_source_from_state(self, record: dict[str, Any], state) -> None:
+        if record.get("source_file_id") or not getattr(state, "active_file_id", None):
+            return
+        try:
+            self.memory_service.bind_conversation_source(
+                str(record.get("id") or state.conversation_id),
+                source_file_id=str(state.active_file_id),
+                source_file_name=str(state.active_file_name or ""),
+            )
+            record["source_file_id"] = state.active_file_id
+            record["source_file_name"] = state.active_file_name
+        except ValueError:
+            pass
+
+    def _sync_state_to_conversation_source(self, record: dict[str, Any], state) -> None:
+        source_file_id = str(record.get("source_file_id") or "")
+        if not source_file_id:
+            return
+        source_file_name = str(record.get("source_file_name") or state.active_file_name or "")
+        file_changed = bool(state.active_file_id) and state.active_file_id != source_file_id
+        if file_changed:
+            # Switching to a different workbook: preserve the previous file's analysis
+            # context, then restore (or start fresh on) the new file's context.
+            state.save_file_context()
+            state.active_file_id = source_file_id
+            state.active_file_name = source_file_name
+            state.restore_file_context(source_file_id)
+            self.memory_service.save_state(state)
+        else:
+            # Same workbook (or first bind): keep the live analysis context
+            # (last_plan, topic_frames, dimensions) so follow-up turns can merge.
+            state.active_file_id = source_file_id
+            state.active_file_name = source_file_name
 
     def _mentioned_other_file(self, message: str, active_file_id: str) -> str | None:
         normalized = _ascii_text(message)
@@ -612,6 +705,100 @@ class ChatApplicationService:
             if key and key != active_key and any(term and term in normalized for term in terms):
                 return filename
         return None
+
+    def _try_semantic_followup_response(
+        self,
+        conversation_id: str,
+        message: str,
+        state,
+        debug: bool,
+        started: float,
+    ) -> ChatResponse | None:
+        q = _ascii_text(message)
+        semantic_terms = [
+            "insight",
+            "nhan xet",
+            "danh gia",
+            "noi len dieu gi",
+            "y nghia",
+            "dang chu y",
+            "quan trong nhat",
+            "phan tich giup",
+        ]
+        if not any(term in q for term in semantic_terms):
+            return None
+        if not state.last_result_summary and not state.last_plan:
+            return self._file_scope_response(
+                conversation_id,
+                "clarification",
+                "Cần có kết quả trước đó",
+                "Bạn muốn mình nhận xét dựa trên kết quả nào? Hãy hỏi một bảng, biểu đồ hoặc thống kê cụ thể trước.",
+                "CLARIFICATION",
+                debug,
+                started,
+                state,
+                file_scope_validated=True,
+            )
+        context = {
+            "source_file_name": state.active_file_name,
+            "last_plan": state.last_plan,
+            "last_result_summary": state.last_result_summary,
+        }
+        prompt = (
+            "Bạn là trợ lý phân tích dữ liệu cho demo nội bộ. "
+            "Dựa CHỈ trên context JSON bên dưới, trả lời ngắn gọn bằng tiếng Việt có dấu. "
+            "Không bịa số mới, không nhắc đường dẫn local, không nói chung chung. "
+            "Nếu context không đủ để kết luận, nói rõ giới hạn.\n\n"
+            f"Câu hỏi người dùng: {message}\n"
+            f"Context JSON: {json.dumps(context, ensure_ascii=False, default=str)}"
+        )
+        try:
+            llm = OllamaClient(self.settings).chat(
+                [
+                    {"role": "system", "content": "Bạn trả lời phân tích dữ liệu ngắn gọn, có căn cứ, bằng tiếng Việt có dấu."},
+                    {"role": "user", "content": prompt},
+                ]
+            )
+        except Exception as exc:
+            return ChatResponse(
+                message_id=str(uuid4()),
+                conversation_id=conversation_id,
+                response_type="error",
+                title="Unable to generate analysis",
+                summary="The language model could not generate this follow-up analysis." if not debug else str(exc),
+                metadata={
+                    "execution_mode": "SAFE_FAILURE",
+                    "routing_reason": "semantic_followup_llm_error",
+                    "llm_called": False,
+                    "llm_model": self.settings.ollama_model,
+                    "latency_ms": {"total": round((perf_counter() - started) * 1000, 1)},
+                    "active_file_id": state.active_file_id,
+                    "active_file_name": state.active_file_name,
+                    "file_scope_validated": True,
+                },
+            )
+        summary = llm.text.strip()
+        metadata = {
+            "execution_mode": "REAL_LLM",
+            "routing_reason": "semantic_followup_from_last_result",
+            "llm_called": True,
+            "llm_call_count": 1,
+            "llm_model": self.settings.ollama_model,
+            "llm_latency_ms": round(llm.latency_ms, 1),
+            "latency_ms": {"total": round((perf_counter() - started) * 1000, 1), "llm": round(llm.latency_ms, 1)},
+            "active_file_id": state.active_file_id,
+            "active_file_name": state.active_file_name,
+            "file_scope_validated": True,
+            "debug": {"semantic_followup_context": context} if debug else None,
+        }
+        return ChatResponse(
+            message_id=str(uuid4()),
+            conversation_id=conversation_id,
+            response_type="text",
+            title="Nhận xét kết quả",
+            summary=summary or "Mình chưa có đủ thông tin để đưa ra nhận xét chắc chắn.",
+            metadata=metadata,
+        )
 
     def _file_scope_response(
         self,
@@ -719,6 +906,12 @@ class ChatApplicationService:
             return self._data_overview_response(conversation_id, intent, catalog, debug, started)
         if intent.intent == "TABLE_OVERVIEW":
             return self._table_overview_response(conversation_id, intent, catalog, debug, started)
+        if intent.intent == "ROW_COUNT":
+            return self._row_count_response(conversation_id, intent, catalog, debug, started)
+        if intent.intent == "PROVENANCE":
+            return self._provenance_response(conversation_id, intent, catalog, debug, started)
+        if intent.intent == "COLUMN_NULLS":
+            return self._column_nulls_response(conversation_id, intent, catalog, debug, started)
         if intent.intent == "SCHEMA_INSPECTION":
             return self._schema_response(conversation_id, intent, catalog, debug, started)
         if intent.intent == "SAMPLE_ROWS":
@@ -883,6 +1076,104 @@ class ChatApplicationService:
             "Chất lượng dữ liệu",
             "Tóm tắt nhanh null và dòng trùng theo từng bộ dữ liệu.",
             TablePayload(columns=["Bộ dữ liệu", "Số bản ghi", "Dòng trùng", "Cột thiếu nhiều nhất", "Số giá trị thiếu"], rows=rows),
+            intent,
+            debug,
+            started,
+        )
+
+    def _row_count_response(self, conversation_id: str, intent: CustomerIntentResult, catalog: dict, debug: bool, started: float) -> ChatResponse:
+        table = self._resolve_table(intent, catalog) or (catalog.get("tables") or [None])[0]
+        if not table:
+            return self._simple_response(conversation_id, "clarification", "Cần làm rõ", "Bạn muốn đếm số bản ghi của bộ dữ liệu nào?", intent, debug, started)
+        count = int(table.get("row_count") or 0)
+        name = _readable_table_name(table)
+        value = format_vn_number(count, 0)
+        summary = (
+            f"{name} hiện có {value} bản ghi. "
+            "Con số được tính trên toàn bộ bảng của file đang chọn và không áp dụng bộ lọc bổ sung."
+        )
+        return ChatResponse(
+            message_id=str(uuid4()),
+            conversation_id=conversation_id,
+            response_type="scalar",
+            title="Số bản ghi",
+            primary_value=value,
+            summary=summary,
+            sources=[SourcePayload(name=_safe_source_name(str(table.get("source", ""))), rows=count)],
+            metadata=_metadata_for_customer_intent(intent, debug, started),
+        )
+
+    def _provenance_response(self, conversation_id: str, intent: CustomerIntentResult, catalog: dict, debug: bool, started: float) -> ChatResponse:
+        tables = list(catalog.get("tables", []))
+        if not tables:
+            return self._simple_response(conversation_id, "text", "Nguồn dữ liệu", "Hiện chưa có file dữ liệu nào được chọn cho cuộc trò chuyện này.", intent, debug, started)
+        names: list[str] = []
+        sources: list[SourcePayload] = []
+        for table in tables:
+            src = _safe_source_name(str(table.get("source", ""))) or _readable_table_name(table)
+            src = _clean_source_filename(src)
+            if src and src not in names:
+                names.append(src)
+                sources.append(SourcePayload(name=src, rows=int(table.get("row_count") or 0)))
+        source_text = ", ".join(names)
+        summary = (
+            f"Kết quả trong cuộc trò chuyện này được lấy từ file nguồn: {source_text}. "
+            "Mọi phân tích chỉ dựa trên dữ liệu của file này."
+        )
+        return ChatResponse(
+            message_id=str(uuid4()),
+            conversation_id=conversation_id,
+            response_type="text",
+            title="Nguồn dữ liệu",
+            primary_value=source_text,
+            summary=summary,
+            sources=sources,
+            metadata=_metadata_for_customer_intent(intent, debug, started),
+        )
+
+    def _column_nulls_response(self, conversation_id: str, intent: CustomerIntentResult, catalog: dict, debug: bool, started: float) -> ChatResponse:
+        table = self._resolve_table(intent, catalog) or (catalog.get("tables") or [None])[0]
+        if not table:
+            return self._simple_response(conversation_id, "clarification", "Cần làm rõ", "Bạn muốn kiểm tra giá trị trống của bộ dữ liệu nào?", intent, debug, started)
+        path = _resolve_parquet_path(table.get("parquet_path") or table.get("cache_path"))
+        if not path:
+            return self._simple_response(conversation_id, "error", "Không có dữ liệu", "Không tìm thấy dữ liệu cache cho bộ dữ liệu này.", intent, debug, started)
+        df = pd.read_parquet(path)
+        total = len(df)
+        business = set(_business_column_names(table))
+        keep = [col for col in df.columns if str(col) in business] if business else [col for col in df.columns if not str(col).startswith("_")]
+        null_counts = df[keep].isna().sum().sort_values(ascending=False) if keep else df.isna().sum().sort_values(ascending=False)
+        rows = []
+        for col, cnt in null_counts.items():
+            name = str(col)
+            if name.startswith("_"):
+                continue
+            cnt = int(cnt)
+            pct = (cnt / total * 100) if total else 0.0
+            rows.append(
+                {
+                    "Cột": humanize_column_name(name, catalog),
+                    "Số giá trị trống": format_vn_number(cnt, 0),
+                    "Tỷ lệ trống": f"{format_vn_number(pct, 1)}%",
+                }
+            )
+        rows = rows[:10]
+        if len(null_counts) and int(null_counts.iloc[0]) > 0:
+            top_name = humanize_column_name(str(null_counts.index[0]), catalog)
+            top_cnt = int(null_counts.iloc[0])
+            summary = (
+                f"Cột có nhiều giá trị trống nhất là “{top_name}” với {format_vn_number(top_cnt, 0)} giá trị trống "
+                f"({format_vn_number(top_cnt / total * 100, 1)}% trên {format_vn_number(total, 0)} bản ghi). "
+                "Bảng dưới liệt kê các cột theo số giá trị trống giảm dần."
+            )
+        else:
+            summary = f"Không phát hiện giá trị trống nào trong {format_vn_number(total, 0)} bản ghi của bộ dữ liệu này."
+        return self._metadata_response(
+            conversation_id,
+            "data_quality",
+            "Cột có nhiều giá trị trống nhất",
+            summary,
+            TablePayload(columns=["Cột", "Số giá trị trống", "Tỷ lệ trống"], rows=rows),
             intent,
             debug,
             started,
@@ -1081,6 +1372,17 @@ def _safe_source_name(source: str) -> str:
     return Path(source).name or source
 
 
+def _clean_source_filename(source: str) -> str:
+    """Return just the workbook filename, dropping any ' · sheet/report' suffix."""
+    text = str(source or "").strip()
+    lowered = text.lower()
+    for ext in (".xlsx", ".xls"):
+        idx = lowered.rfind(ext)
+        if idx != -1:
+            return text[: idx + len(ext)]
+    return text.split(" · ")[0].strip()
+
+
 def _mime_type(path: Path) -> str:
     if path.suffix.lower() == ".html":
         return "text/html"
@@ -1212,14 +1514,21 @@ def _json_safe(value: Any) -> Any:
 
 
 def _conversation_payload(item: dict[str, Any], state: Any | None = None) -> ConversationPayload:
+    source_file_id = str(item.get("source_file_id") or getattr(state, "active_file_id", "") or "") or None
+    source_file_name = str(item.get("source_file_name") or getattr(state, "active_file_name", "") or "") or None
     return ConversationPayload(
         id=str(item.get("id", "")),
         title=_display_title(str(item.get("title") or "Cuoc tro chuyen")),
         created_at=str(item.get("created_at") or ""),
         updated_at=str(item.get("updated_at") or ""),
         status=str(item.get("status") or "active"),
-        active_file_id=getattr(state, "active_file_id", None),
-        active_file_name=getattr(state, "active_file_name", None),
+        source_file_id=source_file_id,
+        source_file_name=source_file_name,
+        source_file_sha256=str(item.get("source_file_sha256") or "") or None,
+        source_catalog_version=str(item.get("source_catalog_version") or "") or None,
+        source_available=bool(find_uploaded_file(source_file_id)) if source_file_id else True,
+        active_file_id=source_file_id,
+        active_file_name=source_file_name,
     )
 
 

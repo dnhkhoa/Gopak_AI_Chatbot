@@ -37,6 +37,7 @@ export default function App() {
   const [activeFileName, setActiveFileName] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [sending, setSending] = useState(false);
+  const [draft, setDraft] = useState("");
   const [error, setError] = useState<string | null>(null);
   const files = useFiles();
 
@@ -100,6 +101,16 @@ export default function App() {
     setActiveFileName(null);
   };
 
+  const createConversationForFile = async (fileId: string) => {
+    const created = await api.createConversation(undefined, fileId);
+    setConversations((current) => [created, ...current.filter((item) => item.id !== created.id)]);
+    setSelectedId(created.id);
+    setMessages([]);
+    setActiveFileId(created.source_file_id ?? created.active_file_id ?? null);
+    setActiveFileName(created.source_file_name ?? created.active_file_name ?? null);
+    return created;
+  };
+
   const deleteConversation = async (id: string) => {
     await api.deleteConversation(id);
     const remaining = conversations.filter((item) => item.id !== id);
@@ -128,7 +139,7 @@ export default function App() {
     setSending(true);
     setError(null);
     try {
-      const response = await api.sendMessage(selectedId, message, DEVELOPER_TOOLS);
+      const response = await api.sendMessage(selectedId, message, DEVELOPER_TOOLS, selected?.source_file_id ?? activeFileId);
       const assistantMessage: UiMessage = {
         id: response.message_id,
         role: "assistant",
@@ -146,19 +157,38 @@ export default function App() {
   };
 
   const selectActiveFile = async (fileId: string) => {
-    if (!selectedId) return;
+    const currentSourceId = selected?.source_file_id ?? activeFileId;
+    if (currentSourceId === fileId) return;
     setError(null);
     try {
-      const active = await api.setActiveFile(selectedId, fileId);
-      setActiveFileId(active.active_file_id ?? null);
-      setActiveFileName(active.active_file_name ?? null);
-      setConversations((current) =>
-        current.map((item) =>
-          item.id === selectedId
-            ? { ...item, active_file_id: active.active_file_id ?? null, active_file_name: active.active_file_name ?? null }
-            : item
-        )
-      );
+      if (draft.trim()) {
+        const proceed = window.confirm(
+          "Switching to another file will start a new chat. Your current conversation will remain unchanged."
+        );
+        if (!proceed) return;
+      }
+      if (!selectedId || !currentSourceId) {
+        if (selectedId) {
+          const active = await api.setActiveFile(selectedId, fileId);
+          setActiveFileId(active.active_file_id ?? null);
+          setActiveFileName(active.active_file_name ?? null);
+          setConversations((current) =>
+            current.map((item) =>
+              item.id === selectedId
+                ? {
+                    ...item,
+                    source_file_id: active.active_file_id ?? null,
+                    source_file_name: active.active_file_name ?? null,
+                    active_file_id: active.active_file_id ?? null,
+                    active_file_name: active.active_file_name ?? null
+                  }
+                : item
+            )
+          );
+          return;
+        }
+      }
+      await createConversationForFile(fileId);
     } catch {
       setError("Couldn't select this file.");
     }
@@ -215,9 +245,18 @@ export default function App() {
         </div>
         <div className="composer-wrap">
           {activeFileName ? (
-            <div className="active-file-pill">Using: {activeFileName}</div>
+            <div className={selected?.source_available === false ? "active-file-pill unavailable" : "active-file-pill"}>
+              {selected?.source_available === false ? "Source unavailable: " : "Using: "}
+              {activeFileName}
+            </div>
           ) : null}
-          <ChatComposer disabled={sending || !selectedId} onSend={sendMessage} onUpload={(list) => void files.upload(list)} />
+          <ChatComposer
+            disabled={sending || !selectedId || selected?.source_available === false}
+            value={draft}
+            onValueChange={setDraft}
+            onSend={sendMessage}
+            onUpload={(list) => void files.upload(list)}
+          />
         </div>
       </main>
       <UploadedFilesPanel files={{ ...files, remove: removeFile }} activeFileId={activeFileId} onSelectActive={(id) => void selectActiveFile(id)} />

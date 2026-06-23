@@ -41,8 +41,9 @@ def build_presented_response(
     chart: Any | None = None,
 ) -> PresentedResponse:
     if plan.intent in {"clarification", "refusal", "safe_failure"}:
+        is_clarification = plan.intent == "clarification"
         return PresentedResponse(
-            response_type="clarification" if plan.intent == "clarification" else "error",
+            response_type="clarification" if is_clarification else "error",
             title="Cần làm rõ" if plan.intent == "clarification" else "Không thể truy vấn an toàn",
             summary=plan.clarification_question or "Bạn muốn phân tích theo bảng, cột hoặc khoảng thời gian nào?",
         )
@@ -121,6 +122,14 @@ def _result_title(plan: QueryPlan, catalog: dict) -> str:
 def _table_summary(df: pd.DataFrame, plan: QueryPlan, catalog: dict) -> str:
     if df.empty:
         return "Không tìm thấy dữ liệu phù hợp với điều kiện đã chọn."
+    if not plan.metrics and plan.dimensions and plan.dimensions[0] in df.columns:
+        dim_col = plan.dimensions[0]
+        dim_name = humanize_column_name(dim_col, catalog).lower()
+        values = [str(value) for value in df[dim_col].dropna().unique().tolist()]
+        total = len(values)
+        shown = ", ".join(values[:8])
+        more = f" (và {format_vn_number(total - 8, 0)} giá trị khác)" if total > 8 else ""
+        return f"Có {format_vn_number(total, 0)} {dim_name}: {shown}{more}."
     metric_aliases = [metric.name or f"{metric.aggregation}_{metric.column}" for metric in plan.metrics]
     metric_col = next((column for column in metric_aliases if column in df.columns), df.columns[-1])
     dimension_col = plan.dimensions[0] if plan.dimensions and plan.dimensions[0] in df.columns else df.columns[0]

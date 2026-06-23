@@ -76,6 +76,11 @@ export interface ConversationPayload {
   created_at: string;
   updated_at: string;
   status: string;
+  source_file_id?: string | null;
+  source_file_name?: string | null;
+  source_file_sha256?: string | null;
+  source_catalog_version?: string | null;
+  source_available?: boolean;
   active_file_id?: string | null;
   active_file_name?: string | null;
 }

@@ -15,14 +15,35 @@ export const mockHealth = {
 };
 
 export const mockConversations: ConversationPayload[] = [
-  { id: "conv-1", title: "Top machines by downtime", created_at: now, updated_at: now, status: "active" },
-  { id: "conv-2", title: "Loss assignment overview", created_at: now, updated_at: now, status: "active" },
+  {
+    id: "conv-1",
+    title: "Top machines by downtime",
+    created_at: now,
+    updated_at: now,
+    status: "active",
+    source_file_id: "file-1",
+    source_file_name: "Machine_Downtime_20260203_100753.xlsx",
+    source_available: true
+  },
+  {
+    id: "conv-2",
+    title: "Loss assignment overview",
+    created_at: now,
+    updated_at: now,
+    status: "active",
+    source_file_id: "file-2",
+    source_file_name: "Loss_Assignment_20260203_100840.xlsx",
+    source_available: true
+  },
   {
     id: "conv-3",
     title: "A very long conversation title that should be truncated with an ellipsis in the sidebar",
     created_at: now,
     updated_at: now,
-    status: "active"
+    status: "active",
+    source_file_id: "file-3",
+    source_file_name: "EntryTransaction_20260203_164943.xlsx",
+    source_available: true
   }
 ];
 

@@ -1,0 +1,45 @@
+{
+  "health": {
+    "status": "ok",
+    "ollama_available": true,
+    "model": "qwen3.5:9b",
+    "database_available": true,
+    "memory_available": true
+  },
+  "demo_conversations_created": 11,
+  "total_turns": 37,
+  "passed_turns": 37,
+  "failed_turns": 0,
+  "actual_llm_calls": 1,
+  "deterministic_turns": 24,
+  "real_llm_turns": 1,
+  "clarification_turns": 3,
+  "cross_file_violations": 0,
+  "repeated_clarification_loops": 0,
+  "response_types": {
+    "data_overview": 2,
+    "scalar": 5,
+    "schema": 2,
+    "data_quality": 2,
+    "sample_table": 1,
+    "table": 11,
+    "chart": 9,
+    "clarification": 3,
+    "text": 2
+  },
+  "execution_modes": {
+    "DATA_OVERVIEW": 2,
+    "ROW_COUNT": 1,
+    "SCHEMA_INSPECTION": 2,
+    "DATA_QUALITY": 1,
+    "SAMPLE_ROWS": 1,
+    "DETERMINISTIC": 24,
+    "CLARIFICATION": 3,
+    "COLUMN_NULLS": 1,
+    "REAL_LLM": 1,
+    "PROVENANCE": 1
+  },
+  "average_llm_latency_ms": 5203.0,
+  "p50_llm_latency_ms": 5203.0,
+  "p95_llm_latency_ms": 5203.0
+}
