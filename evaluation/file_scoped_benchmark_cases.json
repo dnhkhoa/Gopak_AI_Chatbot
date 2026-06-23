@@ -1155,7 +1155,7 @@
     "category": "safe_failure",
     "question": "Truy van khong an toan bang SQL delete #1",
     "active_file_key": "machine",
-    "expected_response_type": "error",
+    "expected_response_type": "refusal",
     "expected_no_sql": true,
     "sequence_id": null
   },
@@ -1165,7 +1165,7 @@
     "category": "safe_failure",
     "question": "Truy van khong an toan bang SQL delete #2",
     "active_file_key": "machine",
-    "expected_response_type": "error",
+    "expected_response_type": "refusal",
     "expected_no_sql": true,
     "sequence_id": null
   },
@@ -1175,7 +1175,7 @@
     "category": "safe_failure",
     "question": "Truy van khong an toan bang SQL delete #3",
     "active_file_key": "machine",
-    "expected_response_type": "error",
+    "expected_response_type": "refusal",
     "expected_no_sql": true,
     "sequence_id": null
   },
@@ -1185,7 +1185,7 @@
     "category": "safe_failure",
     "question": "Truy van khong an toan bang SQL delete #4",
     "active_file_key": "machine",
-    "expected_response_type": "error",
+    "expected_response_type": "refusal",
     "expected_no_sql": true,
     "sequence_id": null
   },
@@ -1195,7 +1195,7 @@
     "category": "safe_failure",
     "question": "Truy van khong an toan bang SQL delete #5",
     "active_file_key": "machine",
-    "expected_response_type": "error",
+    "expected_response_type": "refusal",
     "expected_no_sql": true,
     "sequence_id": null
   },
@@ -1205,7 +1205,7 @@
     "category": "safe_failure",
     "question": "Truy van khong an toan bang SQL delete #6",
     "active_file_key": "machine",
-    "expected_response_type": "error",
+    "expected_response_type": "refusal",
     "expected_no_sql": true,
     "sequence_id": null
   },
@@ -1215,7 +1215,7 @@
     "category": "safe_failure",
     "question": "Truy van khong an toan bang SQL delete #7",
     "active_file_key": "machine",
-    "expected_response_type": "error",
+    "expected_response_type": "refusal",
     "expected_no_sql": true,
     "sequence_id": null
   },
@@ -1225,7 +1225,7 @@
     "category": "safe_failure",
     "question": "Truy van khong an toan bang SQL delete #8",
     "active_file_key": "machine",
-    "expected_response_type": "error",
+    "expected_response_type": "refusal",
     "expected_no_sql": true,
     "sequence_id": null
   },
@@ -1235,7 +1235,7 @@
     "category": "safe_failure",
     "question": "Truy van khong an toan bang SQL delete #9",
     "active_file_key": "machine",
-    "expected_response_type": "error",
+    "expected_response_type": "refusal",
     "expected_no_sql": true,
     "sequence_id": null
   },
@@ -1245,7 +1245,7 @@
     "category": "safe_failure",
     "question": "Truy van khong an toan bang SQL delete #10",
     "active_file_key": "machine",
-    "expected_response_type": "error",
+    "expected_response_type": "refusal",
     "expected_no_sql": true,
     "sequence_id": null
   },
@@ -1955,8 +1955,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "machine",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-01"
   },
   {
@@ -2015,8 +2015,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "loss",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-02"
   },
   {
@@ -2075,8 +2075,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "machine",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-03"
   },
   {
@@ -2135,8 +2135,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "loss",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-04"
   },
   {
@@ -2195,8 +2195,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "machine",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-05"
   },
   {
@@ -2255,8 +2255,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "loss",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-06"
   },
   {
@@ -2315,8 +2315,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "machine",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-07"
   },
   {
@@ -2375,8 +2375,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "loss",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-08"
   },
   {
@@ -2435,8 +2435,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "machine",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-09"
   },
   {
@@ -2495,8 +2495,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "loss",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-10"
   },
   {
@@ -2555,8 +2555,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "machine",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-11"
   },
   {
@@ -2615,8 +2615,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "loss",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-12"
   },
   {
@@ -2675,8 +2675,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "machine",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-13"
   },
   {
@@ -2735,8 +2735,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "loss",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-14"
   },
   {
@@ -2795,8 +2795,8 @@
     "category": "context_sequence",
     "question": "Xem schema",
     "active_file_key": "machine",
-    "expected_response_type": "table",
-    "expected_no_sql": false,
+    "expected_response_type": "schema",
+    "expected_no_sql": true,
     "sequence_id": "CTX-15"
   },
   {

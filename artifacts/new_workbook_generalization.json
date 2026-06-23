@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "total": 3,
+    "passed": 0,
+    "accuracy": 0.0,
+    "requires_customer_workbook": true
+  },
+  "results": [
+    {
+      "workbook_type": "irregular_downtime",
+      "file": "D:\\Gopak Chatbot\\artifacts\\workbook_fixtures\\Challenge_Irregular_Downtime_597d27e4.xlsx",
+      "uploaded": null,
+      "selected": false,
+      "upload_error": "UPLOAD_TIMEOUT: timed out",
+      "passed": false,
+      "steps": []
+    },
+    {
+      "workbook_type": "transaction_report",
+      "file": "D:\\Gopak Chatbot\\artifacts\\workbook_fixtures\\Challenge_Transaction_597d27e4.xlsx",
+      "uploaded": null,
+      "selected": false,
+      "upload_error": "UPLOAD_TIMEOUT: timed out",
+      "passed": false,
+      "steps": []
+    },
+    {
+      "workbook_type": "unseen_schema",
+      "file": "D:\\Gopak Chatbot\\artifacts\\workbook_fixtures\\Challenge_Unseen_Schema_597d27e4.xlsx",
+      "uploaded": null,
+      "selected": false,
+      "upload_error": "UPLOAD_TIMEOUT: timed out",
+      "passed": false,
+      "steps": []
+    }
+  ]
+}

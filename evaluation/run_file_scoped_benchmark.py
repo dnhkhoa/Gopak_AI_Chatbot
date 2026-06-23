@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import json
 import sys
+import tempfile
 from collections import Counter, defaultdict
 from pathlib import Path
 from statistics import median
@@ -16,6 +17,8 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from src.application import ChatApplicationService
+from src.config import get_settings
+from src.conversation.memory_service import ConversationMemoryService
 from src.files.upload_store import list_uploaded_files
 
 CASES_PATH = ROOT / "evaluation" / "file_scoped_benchmark_cases.json"
@@ -94,7 +97,7 @@ def generate_cases() -> list[dict[str, Any]]:
         add("refusal", f"{refusal_questions[i % len(refusal_questions)]} #{i + 1}", file_key, "refusal", no_sql=True)
 
     for i in range(10):
-        add("safe_failure", f"Truy van khong an toan bang SQL delete #{i + 1}", "machine", "error", no_sql=True)
+        add("safe_failure", f"Truy van khong an toan bang SQL delete #{i + 1}", "machine", "refusal", no_sql=True)
 
     file_scope = [
         ("noi dung cua data", "machine", "data_overview"),
@@ -129,7 +132,8 @@ def generate_cases() -> list[dict[str, Any]]:
             "Xem schema",
         ]
         for turn in turns:
-            add("context_sequence", turn, file_key, "table", sequence=sequence_id)
+            expected = "schema" if turn.lower() == "xem schema" else "table"
+            add("context_sequence", turn, file_key, expected, no_sql=expected == "schema", sequence=sequence_id)
 
     for seq in range(10):
         sequence_id = f"XFILE-{seq + 1:02d}"
@@ -162,52 +166,60 @@ def run() -> dict[str, Any]:
     cases = generate_cases()
     CASES_PATH.write_text(json.dumps(cases, ensure_ascii=False, indent=2), encoding="utf-8")
     records = _records_by_key()
-    app = ChatApplicationService()
+    settings = get_settings()
 
     results = []
     traces: dict[str, list[dict[str, Any]]] = defaultdict(list)
     file_switch_traces: dict[str, list[dict[str, Any]]] = defaultdict(list)
 
-    active_conversations: dict[str, str] = {}
-    for case in cases:
-        sequence_id = case.get("sequence_id") or case["id"]
-        conversation_id = active_conversations.get(sequence_id)
-        if not conversation_id:
-            conversation_id = app.create_conversation(title=sequence_id).id
-            active_conversations[sequence_id] = conversation_id
-        expected_file_key = case.get("active_file_key")
-        if expected_file_key:
-            record = records.get(expected_file_key) or {}
-            if record.get("id"):
-                app.set_active_file(conversation_id, str(record["id"]))
-        start = perf_counter()
-        response = app.process_message(conversation_id, case["question"], debug=True)
-        latency_ms = round((perf_counter() - start) * 1000, 1)
-        metadata = response.metadata or {}
-        debug = metadata.get("debug") if isinstance(metadata.get("debug"), dict) else {}
-        sql = metadata.get("generated_sql") or (debug or {}).get("sql")
-        expected_record = records.get(expected_file_key or "") or {}
-        expected_file_id = expected_record.get("id")
-        file_ok = not expected_file_id or metadata.get("active_file_id") == expected_file_id
-        no_sql_ok = not case["expected_no_sql"] or not sql
-        type_ok = _response_matches(response.response_type, case["expected_response_type"])
-        passed = bool(type_ok and no_sql_ok and file_ok)
-        item = {
-            **case,
-            "actual_response_type": response.response_type,
-            "execution_mode": metadata.get("execution_mode") or metadata.get("mode"),
-            "active_file_id": metadata.get("active_file_id"),
-            "active_file_name": metadata.get("active_file_name"),
-            "file_scope_validated": metadata.get("file_scope_validated"),
-            "sql_present": bool(sql),
-            "latency_ms": latency_ms,
-            "passed": passed,
-        }
-        results.append(item)
-        if case.get("sequence_id"):
-            traces[case["sequence_id"]].append(item)
-        if case["category"] == "cross_file_sequence":
-            file_switch_traces[case["sequence_id"]].append(item)
+    with tempfile.TemporaryDirectory(prefix="gopak-file-scoped-benchmark-", ignore_cleanup_errors=True) as tmp:
+        memory = ConversationMemoryService(
+            db_path=Path(tmp) / "memory.db",
+            cache_root=settings.cache_dir,
+            enabled=True,
+            recent_turns_limit=settings.recent_turns_limit,
+        )
+        app = ChatApplicationService(settings=settings, memory_service=memory)
+        active_conversations: dict[str, str] = {}
+        for case in cases:
+            sequence_id = case.get("sequence_id") or case["id"]
+            conversation_id = active_conversations.get(sequence_id)
+            if not conversation_id:
+                conversation_id = app.create_conversation(title=sequence_id).id
+                active_conversations[sequence_id] = conversation_id
+            expected_file_key = case.get("active_file_key")
+            if expected_file_key:
+                record = records.get(expected_file_key) or {}
+                if record.get("id"):
+                    app.set_active_file(conversation_id, str(record["id"]))
+            start = perf_counter()
+            response = app.process_message(conversation_id, case["question"], debug=True)
+            latency_ms = round((perf_counter() - start) * 1000, 1)
+            metadata = response.metadata or {}
+            debug = metadata.get("debug") if isinstance(metadata.get("debug"), dict) else {}
+            sql = metadata.get("generated_sql") or (debug or {}).get("sql")
+            expected_record = records.get(expected_file_key or "") or {}
+            expected_file_id = expected_record.get("id")
+            file_ok = not expected_file_id or metadata.get("active_file_id") == expected_file_id
+            no_sql_ok = not case["expected_no_sql"] or not sql
+            type_ok = _response_matches(response.response_type, case["expected_response_type"])
+            passed = bool(type_ok and no_sql_ok and file_ok)
+            item = {
+                **case,
+                "actual_response_type": response.response_type,
+                "execution_mode": metadata.get("execution_mode") or metadata.get("mode"),
+                "active_file_id": metadata.get("active_file_id"),
+                "active_file_name": metadata.get("active_file_name"),
+                "file_scope_validated": metadata.get("file_scope_validated"),
+                "sql_present": bool(sql),
+                "latency_ms": latency_ms,
+                "passed": passed,
+            }
+            results.append(item)
+            if case.get("sequence_id"):
+                traces[case["sequence_id"]].append(item)
+            if case["category"] == "cross_file_sequence":
+                file_switch_traces[case["sequence_id"]].append(item)
 
     by_split = {split: [item for item in results if item["split"] == split] for split in ["dev", "holdout"]}
     summary = {

@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "total_cases": 320,
+    "failed": 0,
+    "passed": 320,
+    "accuracy": 1.0,
+    "by_failure_category": {},
+    "by_root_cause": {},
+    "cross_file_sql_count": 0,
+    "cross_file_provenance_count": 0
+  },
+  "failures": []
+}

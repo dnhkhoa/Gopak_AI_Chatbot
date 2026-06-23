@@ -3079,5 +3079,201 @@
     "llm_selection": null,
     "final_selection": [],
     "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
+  },
+  {
+    "phrase": "QC",
+    "column": "ten_ton_that",
+    "candidates": [
+      {
+        "value": "TRÓC ĐÁY LY",
+        "score": 0.154,
+        "method": "fuzzy"
+      },
+      {
+        "value": "MÁY LỖI PHẦN CƠ",
+        "score": 0.118,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT ĐÁY LIÊN TỤC",
+        "score": 0.111,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KẸT GIẤY LIÊN TỤC",
+        "score": 0.105,
+        "method": "fuzzy"
+      },
+      {
+        "value": "KÍCH THƯỚC KHÔNG ĐẠT",
+        "score": 0.091,
+        "method": "fuzzy"
+      },
+      {
+        "value": "RỈ HOẶC KHÔNG HÀN BIÊN",
+        "score": 0.083,
+        "method": "fuzzy"
+      },
+      {
+        "value": "GẤP ĐƯỜNG HÀN BIÊN",
+        "score": 0.0,
+        "method": "fuzzy"
+      },
+      {
+        "value": "HỞ RIM",
+        "score": 0.0,
+        "method": "fuzzy"
+      }
+    ],
+    "llm_selection": null,
+    "final_selection": [],
+    "confidence": 0.154
   }
 ]

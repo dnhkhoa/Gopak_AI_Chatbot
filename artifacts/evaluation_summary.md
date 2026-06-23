@@ -7,9 +7,9 @@
 - Failed: 1
 - Manual review: 15
 - Accuracy: 81.18%
-- P50 latency: 96.1 ms
-- P95 latency: 115.9 ms
-- Max latency: 129.5 ms
+- P50 latency: 107.5 ms
+- P95 latency: 131.2 ms
+- Max latency: 160.8 ms
 - Readiness: DEMO READY WITH MINOR ISSUES (81.2)
 
 ### Accuracy by Category

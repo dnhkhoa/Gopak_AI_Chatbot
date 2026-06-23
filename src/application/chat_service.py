@@ -82,6 +82,18 @@ class ChatApplicationService:
             for table in catalog.get("tables", [])
             if _table_source_filename(table).lower() == filename.lower()
         ]
+        if not tables:
+            catalog = self.get_catalog(force=True)
+            exact_tables = [
+                table
+                for table in catalog.get("tables", [])
+                if _table_file_id(table) == file_id
+            ]
+            tables = exact_tables or [
+                table
+                for table in catalog.get("tables", [])
+                if _table_source_filename(table).lower() == filename.lower()
+            ]
         return {**catalog, "tables": tables}
 
     def reload_data(self) -> DataStatus:
@@ -209,7 +221,7 @@ class ChatApplicationService:
             raise ValueError("File not found")
         if record.get("status") != "ready" or not record.get("queryable"):
             raise ValueError("File is not ready")
-        readiness = FileLifecycleService(self.settings).validate_readiness(file_id, catalog=self.get_catalog())
+        readiness = FileLifecycleService(self.settings).validate_readiness(file_id, catalog=self.get_catalog(force=True))
         if not readiness.get("ok"):
             raise ValueError(str(readiness.get("message") or "File is not queryable"))
         state = self.memory_service.load_conversation(conversation_id)
@@ -603,9 +615,9 @@ class ChatApplicationService:
     def _mentioned_other_file(self, message: str, active_file_id: str) -> str | None:
         normalized = _ascii_text(message)
         aliases = {
-            "EntryTransaction": ["entrytransaction", "entry transaction", "entry_transaction", "ra vao cong", "vao cong", "cong"],
-            "Loss_Assignment": ["loss assignment", "loss_assignment", "phan loai ton that", "ton that"],
-            "Machine_Downtime": ["machine downtime", "machine_downtime", "downtime", "may dung", "dung may"],
+            "EntryTransaction": ["entrytransaction", "entry transaction", "entry_transaction", "file entrytransaction"],
+            "Loss_Assignment": ["loss assignment", "loss_assignment", "file loss assignment"],
+            "Machine_Downtime": ["machine downtime", "machine_downtime", "file machine downtime"],
         }
         active = find_uploaded_file(active_file_id) or {}
         active_name = str(active.get("filename") or "")
@@ -1165,7 +1177,13 @@ def _starts_slot_clarification(message: str) -> bool:
 
     q = _ascii_text(message).strip(" ?.!;:")
     q = re.sub(r"\s*#\d+\s*$", "", q).strip()
-    return q in {"top", "top may", "top nguyen nhan", "ve bieu do tong quan", "bieu do tong quan"}
+    if q in {"top", "top may", "top nguyen nhan"}:
+        return True
+    chart_requested = any(term in q for term in ["bieu do", "chart", "ve "])
+    overview_requested = any(term in q for term in ["tong quan", "overview"])
+    has_grouping = any(term in q for term in ["theo", "may", "nguyen nhan", "nhom", "cong"])
+    has_metric = any(term in q for term in ["downtime", "thoi gian", "thoi luong", "so lan", "dem", "count"])
+    return chart_requested and overview_requested and not (has_grouping or has_metric)
 
 
 def _ascii_text(text: str) -> str:

@@ -15,11 +15,11 @@ def detect_dimension(question: str, machine_col: str | None, loss_name_col: str 
     skip_machine_dimension = any(term in q for term in ["chinh may", "setup may"]) and any(
         term in q for term in ["loi", "nguyen nhan", "ton that", "lien quan"]
     )
-    if any(term in q for term in ["may", "m?y", "machine"]) and not skip_machine_dimension:
+    if any(term in q for term in ["may", "m?y", "machine", "thep may"]) and not skip_machine_dimension:
         if machine_col:
             dims.append(machine_col)
             evidence.append("machine")
-    if any(term in q for term in ["nguyen nhan", "nguy?n nh?n", "loi", "su co", "ton that"]):
+    if any(term in q for term in ["nguyen nhan", "nguy?n nh?n", "loi", "su co", "ton that", "phan nao"]):
         if loss_name_col and not any(term in q for term in ["nhom ton that", "nhom", "nh?m"]):
             dims.append(loss_name_col)
             evidence.append("loss name")

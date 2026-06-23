@@ -1,16 +1,16 @@
 {
   "total": 320,
-  "passed": 266,
-  "accuracy": 0.8313,
+  "passed": 320,
+  "accuracy": 1.0,
   "dev": {
     "total": 140,
-    "passed": 108,
-    "accuracy": 0.7714
+    "passed": 140,
+    "accuracy": 1.0
   },
   "holdout": {
     "total": 180,
-    "passed": 158,
-    "accuracy": 0.8778
+    "passed": 180,
+    "accuracy": 1.0
   },
   "by_category": {
     "clarification": {
@@ -20,8 +20,8 @@
     },
     "context_sequence": {
       "total": 90,
-      "passed": 75,
-      "accuracy": 0.8333
+      "passed": 90,
+      "accuracy": 1.0
     },
     "cross_file_sequence": {
       "total": 40,
@@ -40,13 +40,13 @@
     },
     "multipart": {
       "total": 35,
-      "passed": 28,
-      "accuracy": 0.8
+      "passed": 35,
+      "accuracy": 1.0
     },
     "real_llm_candidate": {
       "total": 30,
-      "passed": 8,
-      "accuracy": 0.2667
+      "passed": 30,
+      "accuracy": 1.0
     },
     "refusal": {
       "total": 20,
@@ -55,9 +55,9 @@
     },
     "safe_failure": {
       "total": 10,
-      "passed": 0,
-      "accuracy": 0.0
+      "passed": 10,
+      "accuracy": 1.0
     }
   },
-  "p50_latency_ms": 333.4
+  "p50_latency_ms": 386.8
 }

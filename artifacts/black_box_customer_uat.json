@@ -1,0 +1,218 @@
+{
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "critical_failures": 0,
+    "accuracy": 1.0
+  },
+  "flows": [
+    {
+      "name": "basic_analytics",
+      "passed": true,
+      "critical": true,
+      "steps": [
+        {
+          "message": "noi dung cua data",
+          "response_type": "data_overview",
+          "execution_mode": "DATA_OVERVIEW",
+          "sql": false,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Hệ thống hiện có các bộ dữ liệu sau:\n- Downtime máy: 9.151 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu."
+        },
+        {
+          "message": "dem so dong downtime",
+          "response_type": "scalar",
+          "execution_mode": "DETERMINISTIC",
+          "sql": true,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": ""
+        },
+        {
+          "message": "top 5 may theo tong downtime",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "sql": true,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ."
+        },
+        {
+          "message": "ve bieu do cot top 5 may theo downtime",
+          "response_type": "chart",
+          "execution_mode": "DETERMINISTIC",
+          "sql": true,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ."
+        }
+      ]
+    },
+    {
+      "name": "clarification",
+      "passed": true,
+      "critical": true,
+      "steps": [
+        {
+          "message": "ve bieu do tong quan",
+          "response_type": "clarification",
+          "execution_mode": "CLARIFICATION",
+          "sql": false,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Bạn muốn biểu đồ tổng thời lượng hay số lần dừng?"
+        },
+        {
+          "message": "toi quan tam phan thoi gian",
+          "response_type": "clarification",
+          "execution_mode": "CLARIFICATION",
+          "sql": false,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Bạn muốn nhóm biểu đồ theo máy hay nguyên nhân?"
+        },
+        {
+          "message": "theo may",
+          "response_type": "chart",
+          "execution_mode": "DETERMINISTIC",
+          "sql": true,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ."
+        }
+      ]
+    },
+    {
+      "name": "topic_restoration",
+      "passed": true,
+      "critical": true,
+      "steps": [
+        {
+          "message": "top 5 may theo downtime",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "sql": true,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ."
+        },
+        {
+          "message": "chi thang gan nhat",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "sql": true,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút."
+        },
+        {
+          "message": "schema co nhung cot nao",
+          "response_type": "schema",
+          "execution_mode": "SCHEMA_INSPECTION",
+          "sql": false,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Tìm thấy 16 cột có thể dùng để phân tích."
+        },
+        {
+          "message": "cot nao null",
+          "response_type": "schema",
+          "execution_mode": "SCHEMA_INSPECTION",
+          "sql": false,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Tìm thấy 16 cột có thể dùng để phân tích."
+        },
+        {
+          "message": "quay lai phan top may luc nay",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "sql": true,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút."
+        },
+        {
+          "message": "them so lan dung",
+          "response_type": "scalar",
+          "execution_mode": "DETERMINISTIC",
+          "sql": true,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": ""
+        }
+      ]
+    },
+    {
+      "name": "file_switching",
+      "passed": true,
+      "critical": true,
+      "steps": [
+        {
+          "message": "top 5 may theo downtime",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "sql": true,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ."
+        },
+        {
+          "message": "schema file nay",
+          "response_type": "schema",
+          "execution_mode": "SCHEMA_INSPECTION",
+          "sql": false,
+          "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+          "summary": "Tìm thấy 16 cột có thể dùng để phân tích."
+        },
+        {
+          "message": "noi dung cua data",
+          "response_type": "data_overview",
+          "execution_mode": "DATA_OVERVIEW",
+          "sql": false,
+          "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+          "summary": "Hệ thống hiện có các bộ dữ liệu sau:\n- Ra vào cổng: 1.294 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu."
+        },
+        {
+          "message": "tiep tuc bieu do luc nay",
+          "response_type": "chart",
+          "execution_mode": "DETERMINISTIC",
+          "sql": true,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ."
+        }
+      ]
+    },
+    {
+      "name": "restart_pending",
+      "passed": true,
+      "critical": true,
+      "steps": [
+        {
+          "message": "top",
+          "response_type": "clarification",
+          "execution_mode": "CLARIFICATION",
+          "sql": false,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Bạn muốn xem top bao nhiêu?"
+        },
+        {
+          "message": "5",
+          "response_type": "clarification",
+          "execution_mode": "CLARIFICATION",
+          "sql": false,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Bạn muốn nhóm kết quả theo máy hay nguyên nhân?"
+        },
+        {
+          "message": "may",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "sql": true,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ."
+        }
+      ],
+      "backend_restarted": false
+    },
+    {
+      "name": "delete_selected_file_guard",
+      "passed": true,
+      "critical": true,
+      "steps": [
+        {
+          "response_type": "error",
+          "status": 404
+        }
+      ],
+      "non_destructive": true
+    }
+  ]
+}

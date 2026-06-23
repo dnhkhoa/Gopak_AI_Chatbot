@@ -3,7 +3,7 @@
     "id": "EVAL-053",
     "question": "Máy nào có downtime cao nhất?",
     "state_before": {
-      "conversation_id": "2342af99-8ca3-43f5-8e2a-00cb63cc7a02",
+      "conversation_id": "30c33669-cbf4-4454-8621-2fed61a8fb9c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -38,7 +38,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "2342af99-8ca3-43f5-8e2a-00cb63cc7a02",
+      "conversation_id": "30c33669-cbf4-4454-8621-2fed61a8fb9c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -195,7 +195,7 @@
     "id": "EVAL-054",
     "question": "Vẽ top 5 máy.",
     "state_before": {
-      "conversation_id": "2342af99-8ca3-43f5-8e2a-00cb63cc7a02",
+      "conversation_id": "30c33669-cbf4-4454-8621-2fed61a8fb9c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -311,7 +311,7 @@
       "last_output": "table"
     },
     "state_after": {
-      "conversation_id": "2342af99-8ca3-43f5-8e2a-00cb63cc7a02",
+      "conversation_id": "30c33669-cbf4-4454-8621-2fed61a8fb9c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -468,7 +468,7 @@
     "id": "EVAL-055",
     "question": "Chỉ lấy tháng gần nhất.",
     "state_before": {
-      "conversation_id": "2342af99-8ca3-43f5-8e2a-00cb63cc7a02",
+      "conversation_id": "30c33669-cbf4-4454-8621-2fed61a8fb9c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -584,7 +584,7 @@
       "last_output": "bar"
     },
     "state_after": {
-      "conversation_id": "2342af99-8ca3-43f5-8e2a-00cb63cc7a02",
+      "conversation_id": "30c33669-cbf4-4454-8621-2fed61a8fb9c",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -781,7 +781,7 @@
     "id": "EVAL-056",
     "question": "Top 5 nguyên nhân tổn thất là gì?",
     "state_before": {
-      "conversation_id": "5303dd22-0af3-41e9-9d88-8651bcb2b28c",
+      "conversation_id": "a7a49574-30b2-4ac4-97fd-d2455f452f47",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -816,7 +816,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "5303dd22-0af3-41e9-9d88-8651bcb2b28c",
+      "conversation_id": "a7a49574-30b2-4ac4-97fd-d2455f452f47",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -973,7 +973,7 @@
     "id": "EVAL-057",
     "question": "Nguyên nhân đứng đầu xảy ra nhiều nhất trên máy nào?",
     "state_before": {
-      "conversation_id": "5303dd22-0af3-41e9-9d88-8651bcb2b28c",
+      "conversation_id": "a7a49574-30b2-4ac4-97fd-d2455f452f47",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1089,7 +1089,7 @@
       "last_output": "table"
     },
     "state_after": {
-      "conversation_id": "5303dd22-0af3-41e9-9d88-8651bcb2b28c",
+      "conversation_id": "a7a49574-30b2-4ac4-97fd-d2455f452f47",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1266,7 +1266,7 @@
     "id": "EVAL-058",
     "question": "Xuất kết quả thành biểu đồ.",
     "state_before": {
-      "conversation_id": "5303dd22-0af3-41e9-9d88-8651bcb2b28c",
+      "conversation_id": "a7a49574-30b2-4ac4-97fd-d2455f452f47",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1396,7 +1396,7 @@
       "last_output": "table"
     },
     "state_after": {
-      "conversation_id": "5303dd22-0af3-41e9-9d88-8651bcb2b28c",
+      "conversation_id": "a7a49574-30b2-4ac4-97fd-d2455f452f47",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1573,7 +1573,7 @@
     "id": "EVAL-059",
     "question": "So sánh downtime giữa các tháng.",
     "state_before": {
-      "conversation_id": "997a7389-e83b-4721-8b03-ec36ede35e90",
+      "conversation_id": "3cf6f174-ce84-47b9-93c3-1ef940145f38",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1608,7 +1608,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "997a7389-e83b-4721-8b03-ec36ede35e90",
+      "conversation_id": "3cf6f174-ce84-47b9-93c3-1ef940145f38",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1778,7 +1778,7 @@
     "id": "EVAL-060",
     "question": "Chỉ giữ hai tháng gần nhất.",
     "state_before": {
-      "conversation_id": "997a7389-e83b-4721-8b03-ec36ede35e90",
+      "conversation_id": "3cf6f174-ce84-47b9-93c3-1ef940145f38",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -1902,7 +1902,7 @@
       "last_output": "table"
     },
     "state_after": {
-      "conversation_id": "997a7389-e83b-4721-8b03-ec36ede35e90",
+      "conversation_id": "3cf6f174-ce84-47b9-93c3-1ef940145f38",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2113,7 +2113,7 @@
     "id": "EVAL-061",
     "question": "Tháng nào cao hơn và cao hơn bao nhiêu phần trăm?",
     "state_before": {
-      "conversation_id": "997a7389-e83b-4721-8b03-ec36ede35e90",
+      "conversation_id": "3cf6f174-ce84-47b9-93c3-1ef940145f38",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2269,7 +2269,7 @@
       "last_output": "table"
     },
     "state_after": {
-      "conversation_id": "997a7389-e83b-4721-8b03-ec36ede35e90",
+      "conversation_id": "3cf6f174-ce84-47b9-93c3-1ef940145f38",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2450,7 +2450,7 @@
     "id": "EVAL-062",
     "question": "Tìm máy có downtime trung bình cao nhất.",
     "state_before": {
-      "conversation_id": "e7700cd8-2b67-443a-b757-c7fe9644febc",
+      "conversation_id": "0a7af6fc-6a77-46bf-866f-9d32ec190c54",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2485,7 +2485,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "e7700cd8-2b67-443a-b757-c7fe9644febc",
+      "conversation_id": "0a7af6fc-6a77-46bf-866f-9d32ec190c54",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2642,7 +2642,7 @@
     "id": "EVAL-063",
     "question": "Cho tôi các bản ghi của máy đó.",
     "state_before": {
-      "conversation_id": "e7700cd8-2b67-443a-b757-c7fe9644febc",
+      "conversation_id": "0a7af6fc-6a77-46bf-866f-9d32ec190c54",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2758,7 +2758,7 @@
       "last_output": "text"
     },
     "state_after": {
-      "conversation_id": "e7700cd8-2b67-443a-b757-c7fe9644febc",
+      "conversation_id": "0a7af6fc-6a77-46bf-866f-9d32ec190c54",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -2934,7 +2934,7 @@
     "id": "EVAL-064",
     "question": "Chỉ giữ các lần trên 1 giờ.",
     "state_before": {
-      "conversation_id": "e7700cd8-2b67-443a-b757-c7fe9644febc",
+      "conversation_id": "0a7af6fc-6a77-46bf-866f-9d32ec190c54",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -3063,7 +3063,7 @@
       "last_output": "text"
     },
     "state_after": {
-      "conversation_id": "e7700cd8-2b67-443a-b757-c7fe9644febc",
+      "conversation_id": "0a7af6fc-6a77-46bf-866f-9d32ec190c54",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -3255,7 +3255,7 @@
     "id": "EVAL-065",
     "question": "Tổng hợp theo nhóm tổn thất.",
     "state_before": {
-      "conversation_id": "86296b78-7aa3-44bf-874b-fe32dce278a3",
+      "conversation_id": "dbb5e92b-baaf-41d7-a4d4-1f9e9e632269",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -3290,7 +3290,7 @@
       "last_output": null
     },
     "state_after": {
-      "conversation_id": "86296b78-7aa3-44bf-874b-fe32dce278a3",
+      "conversation_id": "dbb5e92b-baaf-41d7-a4d4-1f9e9e632269",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -3447,7 +3447,7 @@
     "id": "EVAL-066",
     "question": "Chọn nhóm đứng đầu.",
     "state_before": {
-      "conversation_id": "86296b78-7aa3-44bf-874b-fe32dce278a3",
+      "conversation_id": "dbb5e92b-baaf-41d7-a4d4-1f9e9e632269",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -3563,7 +3563,7 @@
       "last_output": "text"
     },
     "state_after": {
-      "conversation_id": "86296b78-7aa3-44bf-874b-fe32dce278a3",
+      "conversation_id": "dbb5e92b-baaf-41d7-a4d4-1f9e9e632269",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -3720,7 +3720,7 @@
     "id": "EVAL-067",
     "question": "Phân tích top nguyên nhân bên trong nhóm đó.",
     "state_before": {
-      "conversation_id": "86296b78-7aa3-44bf-874b-fe32dce278a3",
+      "conversation_id": "dbb5e92b-baaf-41d7-a4d4-1f9e9e632269",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},
@@ -3836,7 +3836,7 @@
       "last_output": "text"
     },
     "state_after": {
-      "conversation_id": "86296b78-7aa3-44bf-874b-fe32dce278a3",
+      "conversation_id": "dbb5e92b-baaf-41d7-a4d4-1f9e9e632269",
       "active_file_id": null,
       "active_file_name": null,
       "file_contexts": {},

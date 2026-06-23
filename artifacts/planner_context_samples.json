@@ -1,965 +1,5 @@
 [
   {
-    "question": "Các lần dừng trên 30 phút.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1347,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -3.549,
-      "loss_assignment_20260203_100840_report_2a7588": 7.937,
-      "machine_downtime_20260203_100753_report_3c3f6d": 10.937
-    }
-  },
-  {
-    "question": "Các lần dừng trên 2 giờ.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1347,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -3.355,
-      "loss_assignment_20260203_100840_report_2a7588": 7.925,
-      "machine_downtime_20260203_100753_report_3c3f6d": 10.972
-    }
-  },
-  {
-    "question": "Tổng downtime của Máy 29 trong tháng 12/2025.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1347,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -3.729,
-      "loss_assignment_20260203_100840_report_2a7588": 16.892,
-      "machine_downtime_20260203_100753_report_3c3f6d": 20.946
-    }
-  },
-  {
-    "question": "Nhóm Bảo trì trên Máy 11 có bao nhiêu lần dừng?",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1347,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -7.526,
-      "loss_assignment_20260203_100840_report_2a7588": 14.849,
-      "machine_downtime_20260203_100753_report_3c3f6d": 18.892
-    }
-  },
-  {
-    "question": "Đếm các lần downtime lớn hơn 1 giờ.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1346,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -3.54,
-      "loss_assignment_20260203_100840_report_2a7588": 8.09,
-      "machine_downtime_20260203_100753_report_3c3f6d": 11.303
-    }
-  },
-  {
-    "question": "Máy 29 bị MÁY LỖI PHẦN CƠ trong tháng 1/2026 bao lâu?",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1347,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": 0.086,
-      "loss_assignment_20260203_100840_report_2a7588": 15.776,
-      "machine_downtime_20260203_100753_report_3c3f6d": 18.788
-    }
-  },
-  {
-    "question": "Tổng downtime không thuộc nhóm Bảo trì.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1347,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -9.44,
-      "loss_assignment_20260203_100840_report_2a7588": 11.142,
-      "machine_downtime_20260203_100753_report_3c3f6d": 15.202
-    }
-  },
-  {
-    "question": "Tổng downtime của Máy 11 và Máy 29.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1347,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -5.818,
-      "loss_assignment_20260203_100840_report_2a7588": 16.821,
-      "machine_downtime_20260203_100753_report_3c3f6d": 20.968
-    }
-  },
-  {
-    "question": "Cộng toàn bộ thời gian máy bị dừng.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1346,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": 5.654,
-      "loss_assignment_20260203_100840_report_2a7588": 6.193,
-      "machine_downtime_20260203_100753_report_3c3f6d": 9.187
-    }
-  },
-  {
-    "question": "Tất cả các lần dừng máy chiếm bao nhiêu giờ?",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1346,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -5.394,
-      "loss_assignment_20260203_100840_report_2a7588": 5.809,
-      "machine_downtime_20260203_100753_report_3c3f6d": 8.915
-    }
-  },
-  {
-    "question": "Tổng thời lượng ngưng hoạt động là bao lâu?",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1347,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -9.581,
-      "loss_assignment_20260203_100840_report_2a7588": 9.184,
-      "machine_downtime_20260203_100753_report_3c3f6d": 13.184
-    }
-  },
-  {
-    "question": "Máy móc đã dừng tổng cộng bao lâu?",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1346,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": 1.714,
-      "loss_assignment_20260203_100840_report_2a7588": 9.036,
-      "machine_downtime_20260203_100753_report_3c3f6d": 13.088
-    }
-  },
-  {
-    "question": "Cho tôi tổng downtime.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1347,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -9.522,
-      "loss_assignment_20260203_100840_report_2a7588": 9.555,
-      "machine_downtime_20260203_100753_report_3c3f6d": 13.844
-    }
-  },
-  {
-    "question": "Tổng DT là bao nhiêu?",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1347,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -9.576,
-      "loss_assignment_20260203_100840_report_2a7588": 9.127,
-      "machine_downtime_20260203_100753_report_3c3f6d": 13.175
-    }
-  },
-  {
-    "question": "Tong dowtime la bao nhieu?",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1346,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -9.664,
-      "loss_assignment_20260203_100840_report_2a7588": 9.09,
-      "machine_downtime_20260203_100753_report_3c3f6d": 13.202
-    }
-  },
-  {
-    "question": "thơi gian dừng tổng cộng?",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1346,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": 1.76,
-      "loss_assignment_20260203_100840_report_2a7588": 9.515,
-      "machine_downtime_20260203_100753_report_3c3f6d": 13.539
-    }
-  },
-  {
-    "question": "may nao downtime cao nhat",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1346,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -5.417,
-      "loss_assignment_20260203_100840_report_2a7588": 6.386,
-      "machine_downtime_20260203_100753_report_3c3f6d": 9.603
-    }
-  },
-  {
-    "question": "DT của máy sx là bao nhiêu?",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1346,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -5.581,
-      "loss_assignment_20260203_100840_report_2a7588": 5.88,
-      "machine_downtime_20260203_100753_report_3c3f6d": 8.95
-    }
-  },
-  {
-    "question": "Các nguyên nhân liên quan đến QC là gì?",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1347,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -9.609,
-      "loss_assignment_20260203_100840_report_2a7588": 8.741,
-      "machine_downtime_20260203_100753_report_3c3f6d": 12.838
-    }
-  },
-  {
-    "question": "Những lỗi liên quan đến chỉnh máy.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1346,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -5.488,
-      "loss_assignment_20260203_100840_report_2a7588": 6.022,
-      "machine_downtime_20260203_100753_report_3c3f6d": 9.047
-    }
-  },
-  {
-    "question": "Các trường hợp liên quan đến bảo trì.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1347,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -9.259,
-      "loss_assignment_20260203_100840_report_2a7588": 11.075,
-      "machine_downtime_20260203_100753_report_3c3f6d": 15.183
-    }
-  },
-  {
-    "question": "Những nguyên nhân giống chờ vật tư.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1347,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -9.571,
-      "loss_assignment_20260203_100840_report_2a7588": 8.879,
-      "machine_downtime_20260203_100753_report_3c3f6d": 12.929
-    }
-  },
-  {
-    "question": "Các sự cố có ý nghĩa gần với setup.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1346,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": 0.534,
-      "loss_assignment_20260203_100840_report_2a7588": 5.844,
-      "machine_downtime_20260203_100753_report_3c3f6d": 6.878
-    }
-  },
-  {
-    "question": "Tổng hợp theo thuộc tính từ downtime và ra vào cổng.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 1346,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": 5.598,
-      "loss_assignment_20260203_100840_report_2a7588": 9.189,
-      "machine_downtime_20260203_100753_report_3c3f6d": 13.304
-    }
-  },
-  {
     "question": "Máy nào có downtime cao nhất?",
     "selected_tables": [
       "machine_downtime_20260203_100753_report_3c3f6d",
@@ -6545,6 +5585,606 @@
     "omitted_tables": [],
     "schema_linking_score": {
       "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.857
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #1",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #5",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #9",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.619
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #13",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #17",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #21",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #25",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #29",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #1",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #5",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #9",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.619
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #13",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #17",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #21",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #25",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #29",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #1",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #5",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #9",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.619
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #13",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #17",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #21",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #25",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #29",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.576
     }
   }
 ]

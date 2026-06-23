@@ -58,14 +58,14 @@ class HybridRouter:
         if policy:
             return policy
         q = normalize_text(question)
-        if _semantic_override(q):
-            confidence = candidate.confidence if candidate else 0.62
-            return RouteDecision(ExecutionMode.REAL_LLM, confidence, "Question contains judgmental/semantic language that should be resolved by REAL_LLM.", True), None
         if candidate and candidate.plan and candidate.confidence >= self.settings.deterministic_confidence_threshold:
             return (
                 RouteDecision(ExecutionMode.DETERMINISTIC, candidate.confidence, candidate.reason, requires_llm=False),
                 candidate.plan,
             )
+        if _semantic_override(q):
+            confidence = candidate.confidence if candidate else 0.62
+            return RouteDecision(ExecutionMode.REAL_LLM, confidence, "Question contains judgmental/semantic language that should be resolved by REAL_LLM.", True), None
         if candidate and candidate.plan and 0.60 <= candidate.confidence < self.settings.deterministic_confidence_threshold:
             if _needs_semantic_resolution(q):
                 return RouteDecision(ExecutionMode.REAL_LLM, candidate.confidence, "Candidate is not high confidence and needs semantic/context reasoning.", True), None

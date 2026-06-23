@@ -49,6 +49,9 @@ class DeterministicPlanner:
         generic_entry = self._entrytransaction_plan(q, table)
         if generic_entry is not None:
             return generic_entry
+        freeform_insight = self._freeform_insight_plan(q, table, duration, machine, loss_name, loss_group)
+        if freeform_insight is not None:
+            return freeform_insight
 
         operation = detect_operation(question)
         output = detect_output(question)
@@ -57,8 +60,11 @@ class DeterministicPlanner:
         topn = detect_topn(question)
         time = resolve_time(question, table, start_time)
         filters = parse_filters(question, table, machine, loss_group, loss_name, duration, self.matcher)
-        group_by_requested = any(term in q for term in ["theo", "moi", "tung", "so sanh"])
-        ranking_requested = topn.value is not None
+        group_by_requested = any(term in q for term in ["theo", "thep", "moi", "tung", "so sanh"]) or ("nao" in q and bool(dimensions.value))
+        ranking_requested = topn.value is not None or (
+            bool(dimensions.value)
+            and any(term in q for term in ["nhat", "te nhat", "can chu y", "hay bi", "dang ke", "chiem nhieu", "tao ra"])
+        )
         chart_requested = operation.value == "chart"
         complex_requested = any(term in q for term in ["dong thoi", "hien thi them", "ty le", "t? l?", "ty trong", "phan tram", "ph?n tr?m", "cao hon muc trung binh", "cao h?n m?c trung b?nh", "voi moi"])
         having = []
@@ -134,6 +140,9 @@ class DeterministicPlanner:
             if time.granularity and len(dims) >= 2:
                 ranking = RankingSpec(partition_by=[dims[0]], order_by=sort_col, direction=topn.value["direction"], top_n=None if topn.value["limit"] == 20 else int(topn.value["limit"]))
                 limit = 500
+        elif ranking_requested and dims and metrics:
+            limit = 5
+            sort = [SortSpec(column=metrics[0].name or "row_count", direction="desc")]
         elif dims and not time.granularity and metrics:
             # Analytical grouped tables should be deterministic and useful.
             sort = [SortSpec(column=metrics[0].name or "row_count", direction="desc")]
@@ -176,6 +185,18 @@ class DeterministicPlanner:
             return None
         table_name = table["table_name"]
         cols = {col.get("normalized_name") for col in table.get("columns", [])}
+        if any(term in q for term in ["insight", "nhan xet", "luong xe", "ra vao cong", "tom tat"]) and {"cong", "loai_truy_cap"} & cols:
+            dimension = "cong" if "cong" in cols else "loai_truy_cap"
+            plan = QueryPlan(
+                intent="query",
+                tables=[table_name],
+                dimensions=[dimension],
+                metrics=[MetricSpec(aggregation="count", column=None, name="row_count")],
+                sort=[SortSpec(column="row_count", direction="desc")],
+                limit=5,
+                output="table",
+            )
+            return DeterministicParse(plan, 0.92, "EntryTransaction freeform insight mapped to scoped gate/access volume.", evidence=["entry_insight"])
         if ("gia_tri_can" in q or "gia tri can" in q) and "gia_tri_can" in cols:
             plan = QueryPlan(
                 intent="query",
@@ -193,6 +214,47 @@ class DeterministicPlanner:
             )
             return DeterministicParse(plan, 0.96, "EntryTransaction distinct gate count detected.", evidence=["cong"])
         return None
+
+    def _freeform_insight_plan(
+        self,
+        q: str,
+        table: dict,
+        duration: str | None,
+        machine: str | None,
+        loss_name: str | None,
+        loss_group: str | None,
+    ) -> DeterministicParse | None:
+        if not any(term in q for term in ["bat thuong", "nhan xet", "insight", "quan trong", "tom tat", "phan tich"]):
+            return None
+        if not duration:
+            return None
+        dimension = None
+        if any(term in q for term in ["nhom", "bao tri", "san xuat"]):
+            dimension = loss_group
+        elif any(term in q for term in ["nguyen nhan", "ton that", "loi", "su co"]):
+            dimension = loss_name
+        elif machine:
+            dimension = machine
+        elif loss_group:
+            dimension = loss_group
+        elif loss_name:
+            dimension = loss_name
+        if not dimension:
+            return None
+        import re
+
+        number = re.search(r"\b(\d{1,2})\b", q)
+        limit = max(1, min(int(number.group(1)), 20)) if number else 5
+        plan = QueryPlan(
+            intent="query",
+            tables=[table["table_name"]],
+            dimensions=[dimension],
+            metrics=[MetricSpec(aggregation="sum", column=duration, name="total_duration_seconds")],
+            sort=[SortSpec(column="total_duration_seconds", direction="desc")],
+            limit=limit,
+            output="table",
+        )
+        return DeterministicParse(plan, 0.91, "Freeform scoped insight mapped to top duration contribution.", evidence=["freeform_insight"])
 
     def _select_table(self, q: str, state: ConversationState) -> dict | None:
         scoped_tables = self.catalog.get("tables", [])

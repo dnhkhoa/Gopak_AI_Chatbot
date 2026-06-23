@@ -40,11 +40,11 @@ def detect_customer_intent(question: str) -> CustomerIntentResult:
     table_hint = _table_hint(q)
     limit = _limit_hint(q)
 
-    unsafe = ["delete", "drop table", "truncate", "raw sql", "select *", "duong dan file", "path file", "local path", "raw local path", "parquet path", "file bat ky", "bo qua moi quy tac", "thuc thi sql"]
+    unsafe = ["delete", "drop table", "truncate", "raw sql", "select *", "xoa bang", "xoa du lieu", "duong dan file", "duong dan parquet", "path file", "local path", "raw local path", "parquet path", "file bat ky", "bo qua moi quy tac", "thuc thi sql"]
     if any(term in q for term in unsafe):
         return CustomerIntentResult("REFUSAL", 0.99, "Unsafe or local-path request.", table_hint, limit)
 
-    out_of_domain = ["doanh thu", "nhan vien", "co phieu", "gia vang", "thoi tiet", "luong nhan vien", "du bao", "se hong"]
+    out_of_domain = ["doanh thu", "nhan vien", "co phieu", "gia vang", "thoi tiet", "luong nhan vien", "du bao", "se hong", "viet email"]
     if any(term in q for term in out_of_domain):
         return CustomerIntentResult("REFUSAL", 0.94, "Question is outside the loaded operational datasets.", table_hint, limit)
 
@@ -109,7 +109,10 @@ def detect_customer_intent(question: str) -> CustomerIntentResult:
         return CustomerIntentResult("SAMPLE_ROWS", 0.95, "Question asks for sample rows.", table_hint, limit or 5)
 
     quality_terms = ["null", "missing", "thieu du lieu", "duplicate", "dong trung", "ban ghi trung", "trung ban ghi", "duration am", "ket thuc truoc", "data quality", "chat luong du lieu"]
-    analytical_anomaly = "bat thuong" in q and any(term in q for term in ["may nao", "downtime", "thoi gian", "theo may"])
+    analytical_anomaly = "bat thuong" in q and any(
+        term in q
+        for term in ["phan tich", "tom tat", "bang", "nhan xet", "insight", "may nao", "downtime", "thoi gian", "theo may"]
+    )
     if any(term in q for term in quality_terms) or ("bat thuong" in q and not analytical_anomaly):
         return CustomerIntentResult("DATA_QUALITY", 0.93, "Question asks for data quality checks.", table_hint, limit)
 

@@ -7,17 +7,17 @@
 - Failed: 1
 - Manual review: 15
 - Accuracy: 81.18%
-- P50 latency: 95.9 ms
-- P95 latency: 131.0 ms
+- P50 latency: 111.3 ms
+- P95 latency: 150.5 ms
 - LLM usage rate: 0.0%
 
 ## By Execution Mode
 
 | Mode | Cases | Passed | Failed | Manual | Accuracy | P50 ms | P95 ms |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| CLARIFICATION | 4 | 4 | 0 | 0 | 100.0% | 0.4 | 0.4 |
-| DETERMINISTIC | 72 | 56 | 1 | 15 | 77.8% | 100.1 | 135.5 |
-| REFUSAL | 9 | 9 | 0 | 0 | 100.0% | 0.3 | 0.8 |
+| CLARIFICATION | 4 | 4 | 0 | 0 | 100.0% | 0.5 | 0.6 |
+| DETERMINISTIC | 72 | 56 | 1 | 15 | 77.8% | 113.6 | 153.6 |
+| REFUSAL | 9 | 9 | 0 | 0 | 100.0% | 0.5 | 0.8 |
 
 ## By Category
 

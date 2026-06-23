@@ -44,6 +44,14 @@ def classify_turn(question: str, has_state: bool) -> TurnClassification:
         return TurnClassification(TurnType.ADD_FILTER, 0.86, "Filter refinement phrase.")
     if any(term in q for term in ["ve", "bieu do", "chart", "excel", "bao cao", "dashboard", "xuat"]):
         return TurnClassification(TurnType.CHANGE_OUTPUT, 0.88, "Output change phrase.")
+    explicit_ranking_query = (
+        any(term in q for term in ["top", "bottom", "dung dau", "cao nhat", "thap nhat", "xep hang"])
+        and "theo" in q
+        and any(term in q for term in ["may", "nguyen nhan", "nhom", "thang", "ngay"])
+        and any(term in q for term in ["downtime", "thoi gian", "thoi luong", "so lan", "dem", "tong"])
+    )
+    if explicit_ranking_query:
+        return TurnClassification(TurnType.NEW_QUERY, 0.90, "Complete ranking query with metric and dimension.")
     if any(term in q for term in ["top", "bottom", "dung dau", "cao nhat", "thap nhat", "xep hang"]):
         return TurnClassification(TurnType.CHANGE_RANKING, 0.86, "Ranking change phrase.")
     if any(term in q for term in ["trung binh", "tong", "so lan", "dem", "ty le", "ty trong", "phan tram"]):
