@@ -174,14 +174,19 @@ class QueryPlanner:
             try:
                 metadata.llm_called = True
                 metadata.llm_call_count = 1
+                metadata.extra["llm_model"] = self.settings.ollama_model
+                metadata.extra["llm_request_started"] = True
                 llm_start = perf_counter()
                 response = self.client.chat(
                     planner_messages(selected_catalog, state.to_prompt_dict(), question),
                     format_schema=QueryPlan.model_json_schema(),
                 )
                 metadata.latency_ms["llm"] += (perf_counter() - llm_start) * 1000
+                metadata.extra["llm_latency_ms"] = round(response.latency_ms, 1)
+                metadata.extra["llm_request_completed"] = True
                 raw = response.text
                 plan = QueryPlan.model_validate(self._coerce_plan_json(raw, selected_catalog))
+                metadata.extra["structured_output_valid"] = True
                 validation_start = perf_counter()
                 PlanValidator(self.catalog).validate(plan)
                 metadata.validation_passed = True
@@ -192,14 +197,19 @@ class QueryPlanner:
                 first_error = str(exc)
                 try:
                     metadata.llm_call_count += 1
+                    metadata.extra["llm_model"] = self.settings.ollama_model
+                    metadata.extra["llm_request_started"] = True
                     llm_start = perf_counter()
                     response = self.client.chat(
                         planner_messages(selected_catalog, state.to_prompt_dict(), question, validation_error=first_error, previous_response=raw),
                         format_schema=QueryPlan.model_json_schema(),
                     )
                     metadata.latency_ms["llm"] += (perf_counter() - llm_start) * 1000
+                    metadata.extra["llm_latency_ms"] = round(response.latency_ms, 1)
+                    metadata.extra["llm_request_completed"] = True
                     raw = response.text
                     plan = QueryPlan.model_validate(self._coerce_plan_json(raw, selected_catalog))
+                    metadata.extra["structured_output_valid"] = True
                     validation_start = perf_counter()
                     PlanValidator(self.catalog).validate(plan)
                     metadata.validation_passed = True

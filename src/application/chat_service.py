@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from time import perf_counter
 from typing import Any
@@ -154,6 +155,7 @@ class ChatApplicationService:
                     content=row.get("content", ""),
                     created_at=row.get("created_at"),
                     execution_mode=row.get("execution_mode"),
+                    response=_stored_chat_response(row.get("response_json")),
                 )
                 for row in turns
             ],
@@ -209,6 +211,7 @@ class ChatApplicationService:
                     content=row.get("content", ""),
                     created_at=row.get("created_at"),
                     execution_mode=row.get("execution_mode"),
+                    response=_stored_chat_response(row.get("response_json")),
                 )
                 for row in turns
             ],
@@ -355,12 +358,7 @@ class ChatApplicationService:
 
         preflight = self._preflight_file_scope(conversation_id, state, message, debug, started)
         if preflight is not None:
-            self.memory_service.save_turn(
-                state,
-                role="assistant",
-                content=preflight.summary or preflight.title,
-                execution_mode=preflight.metadata.get("execution_mode"),
-            )
+            self._save_assistant_response(state, preflight)
             return preflight
 
         catalog = self.get_catalog_for_file(state.active_file_id or "")
@@ -376,7 +374,7 @@ class ChatApplicationService:
                 state,
                 file_scope_validated=False,
             )
-            self.memory_service.save_turn(state, role="assistant", content=response.summary, execution_mode="SAFE_FAILURE")
+            self._save_assistant_response(state, response, execution_mode="SAFE_FAILURE")
             return response
 
         clarification = ClarificationResolver(catalog).resolve_pending(
@@ -387,12 +385,7 @@ class ChatApplicationService:
             started=started,
         )
         if clarification.response is not None:
-            self.memory_service.save_turn(
-                state,
-                role="assistant",
-                content=clarification.response.summary or clarification.response.title,
-                execution_mode=clarification.response.metadata.get("execution_mode"),
-            )
+            self._save_assistant_response(state, clarification.response)
             return clarification.response
         if clarification.resolved_message:
             message = clarification.resolved_message
@@ -409,38 +402,19 @@ class ChatApplicationService:
                 started=started,
             )
             if started_clarification is not None:
-                self.memory_service.save_turn(
-                    state,
-                    role="assistant",
-                    content=started_clarification.summary or started_clarification.title,
-                    execution_mode=started_clarification.metadata.get("execution_mode"),
-                )
+                self._save_assistant_response(state, started_clarification)
                 return started_clarification
 
         row_response = try_row_level_response(conversation_id, message, catalog, state, debug, started)
         if row_response is not None:
-            self.memory_service.save_turn(
-                state,
-                role="assistant",
-                content=row_response.summary or row_response.title,
-                execution_mode=row_response.metadata.get("execution_mode"),
-                query_plan=None,
-                result_summary=None,
-            )
+            self._save_assistant_response(state, row_response, query_plan=None, result_summary=None)
             return row_response
 
         customer_intent = detect_customer_intent(message)
         metadata_response = self._try_metadata_response(conversation_id, message, customer_intent, catalog, debug, started)
         if metadata_response is not None:
             self._attach_file_scope_metadata(metadata_response, state, True)
-            self.memory_service.save_turn(
-                state,
-                role="assistant",
-                content=metadata_response.summary or metadata_response.title,
-                execution_mode=metadata_response.metadata.get("execution_mode"),
-                query_plan=None,
-                result_summary=None,
-            )
+            self._save_assistant_response(state, metadata_response, query_plan=None, result_summary=None)
             return metadata_response
 
         result = None
@@ -490,13 +464,7 @@ class ChatApplicationService:
                 )
                 if started_clarification is not None:
                     metadata.update(started_clarification.metadata)
-                    self.memory_service.save_turn(
-                        state,
-                        role="assistant",
-                        content=started_clarification.summary or started_clarification.title,
-                        execution_mode=started_clarification.metadata.get("execution_mode"),
-                        query_plan=plan.model_dump(),
-                    )
+                    self._save_assistant_response(state, started_clarification, plan=plan, query_plan=plan.model_dump())
                     return started_clarification
                 presented = build_presented_response(message, plan, pd.DataFrame(), catalog, [])
             else:
@@ -534,11 +502,12 @@ class ChatApplicationService:
                 xlsx_path=xlsx_path,
             )
             assistant_content = response.primary_value or response.summary or response.title
-            self.memory_service.save_turn(
+            self._save_assistant_response(
                 state,
-                role="assistant",
+                response,
                 content=assistant_content,
                 execution_mode=metadata.get("execution_mode") or metadata.get("mode"),
+                plan=plan,
                 query_plan=plan.model_dump(),
                 result_summary=state.last_result_summary,
                 result_dataframe=result.dataframe if result is not None else None,
@@ -558,7 +527,7 @@ class ChatApplicationService:
                     "file_scope_validated": False,
                 },
             )
-            self.memory_service.save_turn(state, role="assistant", content=response.summary, execution_mode="ERROR")
+            self._save_assistant_response(state, response, content=response.summary, execution_mode="ERROR")
             return response
 
     def _preflight_file_scope(self, conversation_id: str, state, message: str, debug: bool, started: float) -> ChatResponse | None:
@@ -682,6 +651,37 @@ class ChatApplicationService:
         metadata["active_file_id"] = state.active_file_id
         metadata["active_file_name"] = state.active_file_name
         metadata["file_scope_validated"] = file_scope_validated
+
+    def _prepare_response(self, response: ChatResponse, plan: QueryPlan | None = None) -> ChatResponse:
+        if self.settings.show_internal_debug_metadata:
+            response.metadata["internal_debug_metadata"] = _internal_debug_metadata(response, plan, self.settings.ollama_model)
+        else:
+            response.metadata.pop("internal_debug_metadata", None)
+        return response
+
+    def _save_assistant_response(
+        self,
+        state,
+        response: ChatResponse,
+        *,
+        content: str | None = None,
+        execution_mode: str | None = None,
+        plan: QueryPlan | None = None,
+        query_plan: dict | None = None,
+        result_summary: dict | None = None,
+        result_dataframe: pd.DataFrame | None = None,
+    ) -> None:
+        self._prepare_response(response, plan)
+        self.memory_service.save_turn(
+            state,
+            role="assistant",
+            content=content or response.primary_value or response.summary or response.title,
+            execution_mode=execution_mode or response.metadata.get("execution_mode") or response.metadata.get("mode"),
+            query_plan=query_plan,
+            result_summary=result_summary,
+            response_payload=response.model_dump(mode="json"),
+            result_dataframe=result_dataframe,
+        )
 
     def _plan_within_file_scope(self, plan: QueryPlan, catalog: dict) -> bool:
         if plan.intent in {"clarification", "refusal", "safe_failure"}:
@@ -1097,6 +1097,56 @@ def _unique_columns(columns: list[str]) -> list[str]:
         seen[column] = count + 1
         result.append(column if count == 0 else f"{column} ({count + 1})")
     return result
+
+
+def _stored_chat_response(value: Any) -> ChatResponse | None:
+    if not value:
+        return None
+    try:
+        payload = json.loads(str(value)) if isinstance(value, str) else value
+        return ChatResponse.model_validate(payload)
+    except Exception:
+        return None
+
+
+def _internal_debug_metadata(response: ChatResponse, plan: QueryPlan | None, model: str) -> dict[str, Any]:
+    metadata = response.metadata or {}
+    latency = metadata.get("latency_ms") if isinstance(metadata.get("latency_ms"), dict) else {}
+    llm_latency = metadata.get("llm_latency_ms")
+    if llm_latency is None and isinstance(latency, dict):
+        llm_latency = latency.get("llm")
+    source_file_ids = []
+    active_file_id = metadata.get("active_file_id")
+    if active_file_id:
+        source_file_ids.append(str(active_file_id))
+    filters = []
+    if response.filters:
+        filters = [item.model_dump(mode="json") for item in response.filters]
+    elif plan is not None:
+        filters = [flt.model_dump(mode="json") for flt in plan.filters]
+    query_plan_summary = None
+    if plan is not None:
+        query_plan_summary = {
+            "intent": plan.intent,
+            "output": plan.output,
+            "tables": list(plan.tables),
+            "metrics": [metric.model_dump(mode="json") for metric in plan.metrics],
+            "dimensions": list(plan.dimensions),
+            "limit": plan.limit,
+        }
+    return {
+        "execution_mode": metadata.get("execution_mode") or metadata.get("mode"),
+        "llm_called": bool(metadata.get("llm_called")),
+        "llm_model": metadata.get("llm_model") or (model if metadata.get("llm_called") else None),
+        "llm_latency_ms": llm_latency,
+        "route_reason": metadata.get("routing_reason") or metadata.get("route_reason") or "",
+        "response_type": response.response_type,
+        "active_file_id": active_file_id,
+        "active_file_name": metadata.get("active_file_name"),
+        "source_file_ids": source_file_ids,
+        "filters_summary": filters,
+        "query_plan_summary": query_plan_summary,
+    }
 
 
 def _metadata_for_customer_intent(intent: CustomerIntentResult, debug: bool, started: float) -> dict[str, Any]:

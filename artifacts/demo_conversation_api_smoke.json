@@ -1,0 +1,60 @@
+{
+  "health": {
+    "status": "ok",
+    "ollama_available": true,
+    "model": "qwen3.5:9b",
+    "database_available": true,
+    "memory_available": true
+  },
+  "conversation_count": 8,
+  "checks": [
+    {
+      "title": "08 - Casual User Questions",
+      "messages": 8,
+      "assistant": 4,
+      "hydrated_responses": 4
+    },
+    {
+      "title": "07 - File Context Switching",
+      "messages": 8,
+      "assistant": 4,
+      "hydrated_responses": 4
+    },
+    {
+      "title": "06 - Topic Restore",
+      "messages": 10,
+      "assistant": 5,
+      "hydrated_responses": 5
+    },
+    {
+      "title": "05 - Clarification Demo",
+      "messages": 4,
+      "assistant": 2,
+      "hydrated_responses": 2
+    },
+    {
+      "title": "04 - Machine Downtime",
+      "messages": 10,
+      "assistant": 5,
+      "hydrated_responses": 5
+    },
+    {
+      "title": "03 - Loss Classification",
+      "messages": 10,
+      "assistant": 5,
+      "hydrated_responses": 5
+    },
+    {
+      "title": "02 - Transaction Analysis",
+      "messages": 10,
+      "assistant": 5,
+      "hydrated_responses": 5
+    },
+    {
+      "title": "01 - Data Overview",
+      "messages": 10,
+      "assistant": 5,
+      "hydrated_responses": 5
+    }
+  ]
+}

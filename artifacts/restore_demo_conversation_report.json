@@ -1,0 +1,8 @@
+{
+  "restored_from": "D:\\Gopak Chatbot\\backups\\demo_reset\\20260623-064639-current-demo\\app_memory.db",
+  "source_manifest": "D:\\Gopak Chatbot\\backups\\demo_reset\\20260623-064639-current-demo\\backup_manifest.json",
+  "current_state_backup": "D:\\Gopak Chatbot\\backups\\demo_restore\\20260623-064649",
+  "restored_integrity": "ok",
+  "target_sha256": "a21f61239503ce599bbcc81689a1a30eb72f2f90044696f41f2aab8e666e22c5",
+  "uploaded_files_not_touched": true
+}

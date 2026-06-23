@@ -1,0 +1,50 @@
+{
+  "database_path": "D:\\Gopak Chatbot\\data\\app_memory.db",
+  "backup_dir": "D:\\Gopak Chatbot\\backups\\demo_reset\\20260623-064550",
+  "backup_integrity": "ok",
+  "before_counts": {
+    "result_cache": 35,
+    "conversation_turns": 94,
+    "conversation_states": 14,
+    "conversations": 14
+  },
+  "deleted_counts": {
+    "result_cache": 35,
+    "conversation_turns": 94,
+    "conversation_states": 14,
+    "conversations": 14
+  },
+  "after_counts": {
+    "result_cache": 0,
+    "conversation_turns": 0,
+    "conversation_states": 0,
+    "conversations": 0
+  },
+  "uploaded_files_preserved": [
+    {
+      "id": "2ad2989784fc41ffb9fef3225034db54",
+      "filename": "EntryTransaction_20260203_164943.xlsx",
+      "status": "ready",
+      "queryable": true
+    },
+    {
+      "id": "a329169db4984cab80ed5fea5880bb4f",
+      "filename": "Loss_Assignment_20260203_100840.xlsx",
+      "status": "ready",
+      "queryable": true
+    },
+    {
+      "id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "filename": "Machine_Downtime_20260203_100753.xlsx",
+      "status": "ready",
+      "queryable": true
+    }
+  ],
+  "analytics_not_touched": [
+    "data/uploaded_files.json",
+    "data/uploads",
+    "cache/data_catalog.json",
+    "cache/manifest.json",
+    "cache/tables"
+  ]
+}

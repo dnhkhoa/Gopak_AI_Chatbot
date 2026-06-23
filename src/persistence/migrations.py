@@ -50,4 +50,7 @@ CREATE TABLE IF NOT EXISTS result_cache (
 
 def run_migrations(con: sqlite3.Connection) -> None:
     con.executescript(SCHEMA_SQL)
+    columns = {row[1] for row in con.execute("PRAGMA table_info(conversation_turns)").fetchall()}
+    if "response_json" not in columns:
+        con.execute("ALTER TABLE conversation_turns ADD COLUMN response_json TEXT")
     con.commit()

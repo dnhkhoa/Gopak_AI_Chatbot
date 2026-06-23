@@ -56,6 +56,7 @@ class ConversationMemoryService:
         execution_mode: str | None = None,
         query_plan: dict | None = None,
         result_summary: dict | None = None,
+        response_payload: dict | None = None,
         result_dataframe: pd.DataFrame | None = None,
     ) -> str | None:
         if not self.store:
@@ -69,6 +70,7 @@ class ConversationMemoryService:
                 execution_mode=execution_mode,
                 query_plan_json=dumps_json(query_plan),
                 result_summary_json=dumps_json(result_summary),
+                response_json=dumps_json(response_payload),
             )
             if result_dataframe is not None:
                 cache_record = self.result_cache.save_dataframe(state.conversation_id, turn.id, result_dataframe)

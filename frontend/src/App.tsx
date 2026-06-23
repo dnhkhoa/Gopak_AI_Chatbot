@@ -14,14 +14,16 @@ import type { ConversationPayload, HealthStatus, UiMessage } from "./types/api";
 // default; only enabled when VITE_ENABLE_DEVELOPER_TOOLS=true. The capability
 // remains in the backend and components for evaluation / developer mode.
 const DEVELOPER_TOOLS = import.meta.env.VITE_ENABLE_DEVELOPER_TOOLS === "true";
+const INTERNAL_DEBUG_METADATA = import.meta.env.VITE_SHOW_INTERNAL_DEBUG_METADATA === "true";
 
-function toUiMessages(messages: { id?: string | null; role: string; content: string }[]): UiMessage[] {
+function toUiMessages(messages: { id?: string | null; role: string; content: string; response?: UiMessage["response"] | null }[]): UiMessage[] {
   return messages
     .filter((item) => item.role === "user" || item.role === "assistant")
     .map((item, index) => ({
       id: item.id ?? `stored-${index}`,
       role: item.role as "user" | "assistant",
-      content: item.content
+      content: item.content,
+      response: item.response ?? undefined
     }));
 }
 
@@ -201,7 +203,7 @@ export default function App() {
             </div>
           ) : null}
           {messages.map((message) => (
-            <ChatMessage key={message.id} message={message} debug={DEVELOPER_TOOLS} />
+            <ChatMessage key={message.id} message={message} debug={DEVELOPER_TOOLS} internalDebug={INTERNAL_DEBUG_METADATA} />
           ))}
           {sending ? (
             <div className="thinking">

@@ -43,6 +43,7 @@ class Settings:
     memory_db_path: Path = Path(os.getenv("MEMORY_DB_PATH", str(ROOT / "data" / "app_memory.db")))
     recent_turns_limit: int = int(os.getenv("RECENT_TURNS_LIMIT", "6"))
     result_cache_ttl_days: int = int(os.getenv("RESULT_CACHE_TTL_DAYS", "7"))
+    show_internal_debug_metadata: bool = os.getenv("SHOW_INTERNAL_DEBUG_METADATA", "false").lower() == "true"
 
 
 TARGET_EXCEL_FILES = (

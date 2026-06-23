@@ -115,6 +115,7 @@ class ConversationMessage(BaseModel):
     content: str
     created_at: str | None = None
     execution_mode: str | None = None
+    response: ChatResponse | None = None
 
 
 class ConversationDetail(ConversationPayload):

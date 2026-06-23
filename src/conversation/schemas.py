@@ -28,6 +28,7 @@ class ConversationTurn(BaseModel):
     execution_mode: str | None = None
     query_plan_json: str | None = None
     result_summary_json: str | None = None
+    response_json: str | None = None
     created_at: str = Field(default_factory=utc_now_iso)
 
 

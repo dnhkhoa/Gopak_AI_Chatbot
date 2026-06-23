@@ -71,8 +71,8 @@ class SQLiteMemoryStore:
                 con.execute(
                     """
                     INSERT INTO conversation_turns
-                    (id, conversation_id, turn_index, role, content, execution_mode, query_plan_json, result_summary_json, created_at)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    (id, conversation_id, turn_index, role, content, execution_mode, query_plan_json, result_summary_json, response_json, created_at)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                     """,
                     (
                         turn.id,
@@ -83,6 +83,7 @@ class SQLiteMemoryStore:
                         turn.execution_mode,
                         turn.query_plan_json,
                         turn.result_summary_json,
+                        turn.response_json,
                         turn.created_at,
                     ),
                 )
@@ -139,7 +140,7 @@ class SQLiteMemoryStore:
         with self.connect() as con:
             rows = con.execute(
                 """
-                SELECT id, conversation_id, turn_index, role, content, execution_mode, query_plan_json, result_summary_json, created_at
+                SELECT id, conversation_id, turn_index, role, content, execution_mode, query_plan_json, result_summary_json, response_json, created_at
                 FROM conversation_turns
                 WHERE conversation_id = ?
                 ORDER BY turn_index DESC

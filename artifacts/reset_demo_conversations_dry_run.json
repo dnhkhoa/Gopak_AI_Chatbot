@@ -1,0 +1,29 @@
+{
+  "database_path": "D:\\Gopak Chatbot\\data\\app_memory.db",
+  "database_type": "sqlite",
+  "tables_to_backup": [
+    "result_cache",
+    "conversation_turns",
+    "conversation_states",
+    "conversations"
+  ],
+  "tables_to_delete": [
+    "result_cache",
+    "conversation_turns",
+    "conversation_states",
+    "conversations"
+  ],
+  "counts": {
+    "result_cache": 25,
+    "conversation_turns": 70,
+    "conversation_states": 8,
+    "conversations": 8
+  },
+  "analytics_not_touched": [
+    "data/uploaded_files.json",
+    "data/uploads",
+    "cache/data_catalog.json",
+    "cache/manifest.json",
+    "cache/tables"
+  ]
+}

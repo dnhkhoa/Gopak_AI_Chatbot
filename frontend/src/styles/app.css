@@ -542,18 +542,25 @@ th {
 /* Standalone error row (App-level) keeps centered width */
 .message-scroll > .error-message { width: var(--content-width); max-width: 100%; margin: 0 auto var(--msg-gap); }
 
-.source-details, .debug-panel {
+.source-details, .debug-panel, .internal-debug-metadata {
   margin-top: 12px;
   border-top: 1px solid var(--border);
   padding-top: 10px;
 }
-.source-details summary, .debug-panel summary {
+.source-details summary, .debug-panel summary, .internal-debug-metadata summary {
   color: var(--muted);
   cursor: pointer;
   font-size: .88rem;
   list-style: none;
 }
 .source-details summary::-webkit-details-marker { display: none; }
+.internal-debug-metadata summary::-webkit-details-marker { display: none; }
+.internal-debug-metadata summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  font-size: .78rem;
+}
 .source-details > .muted { margin-top: 6px; font-size: .86rem; }
 .debug-panel pre {
   max-height: 360px;

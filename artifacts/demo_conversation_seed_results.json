@@ -1,0 +1,1669 @@
+{
+  "summary": {
+    "health": {
+      "status": "ok",
+      "ollama_available": true,
+      "model": "qwen3.5:9b",
+      "database_available": true,
+      "memory_available": true
+    },
+    "demo_conversations_created": 8,
+    "total_turns": 35,
+    "passed_turns": 35,
+    "failed_turns": 0,
+    "actual_llm_calls": 1,
+    "deterministic_turns": 24,
+    "real_llm_turns": 1,
+    "clarification_turns": 2,
+    "cross_file_violations": 0,
+    "repeated_clarification_loops": 0,
+    "response_types": {
+      "data_overview": 2,
+      "scalar": 6,
+      "schema": 3,
+      "data_quality": 1,
+      "sample_table": 2,
+      "clarification": 2,
+      "table": 11,
+      "report": 2,
+      "chart": 6
+    },
+    "execution_modes": {
+      "DATA_OVERVIEW": 2,
+      "DETERMINISTIC": 24,
+      "SCHEMA_INSPECTION": 3,
+      "DATA_QUALITY": 1,
+      "SAMPLE_ROWS": 2,
+      "CLARIFICATION": 2,
+      "REAL_LLM": 1
+    },
+    "average_llm_latency_ms": 10364.0,
+    "p50_llm_latency_ms": 10364.0,
+    "p95_llm_latency_ms": 10364.0
+  },
+  "conversations": [
+    {
+      "demo_id": "demo_01",
+      "title": "01 - Data Overview",
+      "conversation_id": "50cf5e0b-db4e-4456-8b1b-8322124eeca5",
+      "file_sequence": [
+        "Machine_Downtime_20260203_100753.xlsx"
+      ],
+      "turn_count": 5,
+      "llm_call_count": 0,
+      "repeated_clarifications": 0,
+      "status": "passed",
+      "turns": [
+        {
+          "demo_id": "demo_01",
+          "conversation_id": "50cf5e0b-db4e-4456-8b1b-8322124eeca5",
+          "turn_index": 1,
+          "user_message": "noi dung cua data",
+          "assistant_response": "Hệ thống hiện có các bộ dữ liệu sau:\n- Downtime máy: 9.151 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu.",
+          "response_type": "data_overview",
+          "execution_mode": "DATA_OVERVIEW",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": null,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 175.1,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_01",
+          "conversation_id": "50cf5e0b-db4e-4456-8b1b-8322124eeca5",
+          "turn_index": 2,
+          "user_message": "dem so dong downtime",
+          "assistant_response": "9.151",
+          "response_type": "scalar",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 357.9,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_01",
+          "conversation_id": "50cf5e0b-db4e-4456-8b1b-8322124eeca5",
+          "turn_index": 3,
+          "user_message": "cho toi xem schema",
+          "assistant_response": "Tìm thấy 16 cột có thể dùng để phân tích.",
+          "response_type": "schema",
+          "execution_mode": "SCHEMA_INSPECTION",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": null,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 233.1,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_01",
+          "conversation_id": "50cf5e0b-db4e-4456-8b1b-8322124eeca5",
+          "turn_index": 4,
+          "user_message": "chat luong du lieu",
+          "assistant_response": "Tóm tắt nhanh null và dòng trùng theo từng bộ dữ liệu.",
+          "response_type": "data_quality",
+          "execution_mode": "DATA_QUALITY",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": null,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 252.3,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_01",
+          "conversation_id": "50cf5e0b-db4e-4456-8b1b-8322124eeca5",
+          "turn_index": 5,
+          "user_message": "xem 5 dong mau",
+          "assistant_response": "Hiển thị 5 bản ghi mẫu.",
+          "response_type": "sample_table",
+          "execution_mode": "SAMPLE_ROWS",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": null,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 268.5,
+          "passed": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_02",
+      "title": "02 - Transaction Analysis",
+      "conversation_id": "beca96b5-0812-4c6c-b497-4af258a45b15",
+      "file_sequence": [
+        "EntryTransaction_20260203_164943.xlsx"
+      ],
+      "turn_count": 5,
+      "llm_call_count": 0,
+      "repeated_clarifications": 0,
+      "status": "passed",
+      "turns": [
+        {
+          "demo_id": "demo_02",
+          "conversation_id": "beca96b5-0812-4c6c-b497-4af258a45b15",
+          "turn_index": 1,
+          "user_message": "noi dung cua data",
+          "assistant_response": "Hệ thống hiện có các bộ dữ liệu sau:\n- Ra vào cổng: 1.294 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu.",
+          "response_type": "data_overview",
+          "execution_mode": "DATA_OVERVIEW",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": null,
+          "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+          "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+          "source_file_ids": [
+            "2ad2989784fc41ffb9fef3225034db54"
+          ],
+          "filters": [],
+          "elapsed_ms": 216.6,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_02",
+          "conversation_id": "beca96b5-0812-4c6c-b497-4af258a45b15",
+          "turn_index": 2,
+          "user_message": "Tong gia tri can la bao nhieu?",
+          "assistant_response": "4.985.500",
+          "response_type": "scalar",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+          "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+          "source_file_ids": [
+            "2ad2989784fc41ffb9fef3225034db54"
+          ],
+          "filters": [],
+          "elapsed_ms": 309.3,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_02",
+          "conversation_id": "beca96b5-0812-4c6c-b497-4af258a45b15",
+          "turn_index": 3,
+          "user_message": "Co bao nhieu cong khac nhau?",
+          "assistant_response": "2",
+          "response_type": "scalar",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+          "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+          "source_file_ids": [
+            "2ad2989784fc41ffb9fef3225034db54"
+          ],
+          "filters": [],
+          "elapsed_ms": 307.8,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_02",
+          "conversation_id": "beca96b5-0812-4c6c-b497-4af258a45b15",
+          "turn_index": 4,
+          "user_message": "Cho toi mot insight ngan ve luong xe ra vao cong.",
+          "assistant_response": "2",
+          "response_type": "scalar",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+          "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+          "source_file_ids": [
+            "2ad2989784fc41ffb9fef3225034db54"
+          ],
+          "filters": [],
+          "elapsed_ms": 291.7,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_02",
+          "conversation_id": "beca96b5-0812-4c6c-b497-4af258a45b15",
+          "turn_index": 5,
+          "user_message": "dem so dong theo cong",
+          "assistant_response": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+          "response_type": "clarification",
+          "execution_mode": "CLARIFICATION",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": null,
+          "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+          "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+          "source_file_ids": [
+            "2ad2989784fc41ffb9fef3225034db54"
+          ],
+          "filters": [],
+          "elapsed_ms": 224.5,
+          "passed": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_03",
+      "title": "03 - Loss Classification",
+      "conversation_id": "2483b506-7ef4-4890-8aab-a69561a6ccc4",
+      "file_sequence": [
+        "Loss_Assignment_20260203_100840.xlsx"
+      ],
+      "turn_count": 5,
+      "llm_call_count": 0,
+      "repeated_clarifications": 0,
+      "status": "passed",
+      "turns": [
+        {
+          "demo_id": "demo_03",
+          "conversation_id": "2483b506-7ef4-4890-8aab-a69561a6ccc4",
+          "turn_index": 1,
+          "user_message": "File nay co nhung nhom ton that nao?",
+          "assistant_response": "Bảo trì có nhóm tổn thất cao nhất: Bảo trì.",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+          "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
+          "source_file_ids": [
+            "a329169db4984cab80ed5fea5880bb4f"
+          ],
+          "filters": [],
+          "elapsed_ms": 405.0,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_03",
+          "conversation_id": "2483b506-7ef4-4890-8aab-a69561a6ccc4",
+          "turn_index": 2,
+          "user_message": "Loai ton that nao xuat hien nhieu nhat?",
+          "assistant_response": "Bảo trì có nhóm tổn thất cao nhất: Bảo trì.",
+          "response_type": "report",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+          "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
+          "source_file_ids": [
+            "a329169db4984cab80ed5fea5880bb4f"
+          ],
+          "filters": [],
+          "elapsed_ms": 396.1,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_03",
+          "conversation_id": "2483b506-7ef4-4890-8aab-a69561a6ccc4",
+          "turn_index": 3,
+          "user_message": "Cho toi top 5 ten ton that pho bien nhat.",
+          "assistant_response": "Bảo trì có nhóm tổn thất cao nhất: Bảo trì.",
+          "response_type": "report",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+          "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
+          "source_file_ids": [
+            "a329169db4984cab80ed5fea5880bb4f"
+          ],
+          "filters": [],
+          "elapsed_ms": 407.4,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_03",
+          "conversation_id": "2483b506-7ef4-4890-8aab-a69561a6ccc4",
+          "turn_index": 4,
+          "user_message": "Ve bieu do phan bo ton that theo loai.",
+          "assistant_response": "Bảo trì có nhóm tổn thất cao nhất: Bảo trì.",
+          "response_type": "chart",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+          "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
+          "source_file_ids": [
+            "a329169db4984cab80ed5fea5880bb4f"
+          ],
+          "filters": [],
+          "elapsed_ms": 359.1,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_03",
+          "conversation_id": "2483b506-7ef4-4890-8aab-a69561a6ccc4",
+          "turn_index": 5,
+          "user_message": "Them ty le phan tram vao ket qua truoc.",
+          "assistant_response": "Máy 29 có số lần ghi nhận cao nhất: 5.268.",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+          "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
+          "source_file_ids": [
+            "a329169db4984cab80ed5fea5880bb4f"
+          ],
+          "filters": [],
+          "elapsed_ms": 374.7,
+          "passed": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_04",
+      "title": "04 - Machine Downtime",
+      "conversation_id": "d37b8587-16fd-4a37-8fe5-654419021921",
+      "file_sequence": [
+        "Machine_Downtime_20260203_100753.xlsx"
+      ],
+      "turn_count": 5,
+      "llm_call_count": 0,
+      "repeated_clarifications": 0,
+      "status": "passed",
+      "turns": [
+        {
+          "demo_id": "demo_04",
+          "conversation_id": "d37b8587-16fd-4a37-8fe5-654419021921",
+          "turn_index": 1,
+          "user_message": "May nao co tong thoi gian downtime cao nhat?",
+          "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 560.9,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_04",
+          "conversation_id": "d37b8587-16fd-4a37-8fe5-654419021921",
+          "turn_index": 2,
+          "user_message": "Cho toi top 5 may theo tong thoi gian downtime.",
+          "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 467.4,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_04",
+          "conversation_id": "d37b8587-16fd-4a37-8fe5-654419021921",
+          "turn_index": 3,
+          "user_message": "Them so lan dung va thoi luong trung binh cua tung may.",
+          "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 515.6,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_04",
+          "conversation_id": "d37b8587-16fd-4a37-8fe5-654419021921",
+          "turn_index": 4,
+          "user_message": "Ve bieu do cot cho ket qua nay.",
+          "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+          "response_type": "chart",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 402.2,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_04",
+          "conversation_id": "d37b8587-16fd-4a37-8fe5-654419021921",
+          "turn_index": 5,
+          "user_message": "Ket qua nay dang tinh trong khoang thoi gian nao?",
+          "assistant_response": "Tương đương 82 ngày 21 giờ 33 phút 25 giây.",
+          "response_type": "scalar",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 397.2,
+          "passed": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_05",
+      "title": "05 - Clarification Demo",
+      "conversation_id": "9027960d-b0f1-4406-83fc-1ec8ff960edf",
+      "file_sequence": [
+        "Machine_Downtime_20260203_100753.xlsx"
+      ],
+      "turn_count": 2,
+      "llm_call_count": 0,
+      "repeated_clarifications": 0,
+      "status": "passed",
+      "turns": [
+        {
+          "demo_id": "demo_05",
+          "conversation_id": "9027960d-b0f1-4406-83fc-1ec8ff960edf",
+          "turn_index": 1,
+          "user_message": "Ve bieu do tong quan.",
+          "assistant_response": "Bạn muốn biểu đồ tổng thời lượng hay số lần dừng?",
+          "response_type": "clarification",
+          "execution_mode": "CLARIFICATION",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": null,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 208.6,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_05",
+          "conversation_id": "9027960d-b0f1-4406-83fc-1ec8ff960edf",
+          "turn_index": 2,
+          "user_message": "tong thoi gian theo may top 5",
+          "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+          "response_type": "chart",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": null,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 425.0,
+          "passed": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_06",
+      "title": "06 - Topic Restore",
+      "conversation_id": "0d7e48d0-422a-46ae-bd2e-98443b8e9352",
+      "file_sequence": [
+        "Machine_Downtime_20260203_100753.xlsx"
+      ],
+      "turn_count": 5,
+      "llm_call_count": 0,
+      "repeated_clarifications": 0,
+      "status": "passed",
+      "turns": [
+        {
+          "demo_id": "demo_06",
+          "conversation_id": "0d7e48d0-422a-46ae-bd2e-98443b8e9352",
+          "turn_index": 1,
+          "user_message": "Cho toi top 5 may co tong downtime cao nhat trong thang gan nhat.",
+          "assistant_response": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút.",
+          "response_type": "chart",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [
+            {
+              "label": "Thời gian bắt đầu",
+              "operator": "date_between",
+              "value": [
+                "2026-02-01",
+                "2026-03-01"
+              ]
+            }
+          ],
+          "elapsed_ms": 508.6,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_06",
+          "conversation_id": "0d7e48d0-422a-46ae-bd2e-98443b8e9352",
+          "turn_index": 2,
+          "user_message": "File nay co nhung cot nao?",
+          "assistant_response": "Tìm thấy 16 cột có thể dùng để phân tích.",
+          "response_type": "schema",
+          "execution_mode": "SCHEMA_INSPECTION",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": null,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 241.7,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_06",
+          "conversation_id": "0d7e48d0-422a-46ae-bd2e-98443b8e9352",
+          "turn_index": 3,
+          "user_message": "Cot nao co nhieu gia tri trong nhat?",
+          "assistant_response": "Tìm thấy 16 cột có thể dùng để phân tích.",
+          "response_type": "schema",
+          "execution_mode": "SCHEMA_INSPECTION",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": null,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 274.2,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_06",
+          "conversation_id": "0d7e48d0-422a-46ae-bd2e-98443b8e9352",
+          "turn_index": 4,
+          "user_message": "Quay lai phan top may luc nay.",
+          "assistant_response": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút.",
+          "response_type": "chart",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": null,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [
+            {
+              "label": "Thời gian bắt đầu",
+              "operator": "date_between",
+              "value": [
+                "2026-02-01",
+                "2026-03-01"
+              ]
+            }
+          ],
+          "elapsed_ms": 344.5,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_06",
+          "conversation_id": "0d7e48d0-422a-46ae-bd2e-98443b8e9352",
+          "turn_index": 5,
+          "user_message": "Them so lan dung cua tung may.",
+          "assistant_response": "Máy 12 có số lần ghi nhận cao nhất: 1.654.",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 389.7,
+          "passed": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_07",
+      "title": "07 - File Context Switching",
+      "conversation_id": "eed9a23f-18b5-4180-a630-a540fe0ca92c",
+      "file_sequence": [
+        "Machine_Downtime_20260203_100753.xlsx",
+        "Loss_Assignment_20260203_100840.xlsx",
+        "EntryTransaction_20260203_164943.xlsx",
+        "Machine_Downtime_20260203_100753.xlsx"
+      ],
+      "turn_count": 4,
+      "llm_call_count": 0,
+      "repeated_clarifications": 0,
+      "status": "passed",
+      "turns": [
+        {
+          "demo_id": "demo_07",
+          "conversation_id": "eed9a23f-18b5-4180-a630-a540fe0ca92c",
+          "turn_index": 1,
+          "user_message": "Top 5 may theo tong downtime.",
+          "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 386.3,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_07",
+          "conversation_id": "eed9a23f-18b5-4180-a630-a540fe0ca92c",
+          "turn_index": 2,
+          "user_message": "Top 5 nhom ton that theo so lan ghi nhan.",
+          "assistant_response": "Sản xuất có số lần ghi nhận cao nhất: 26.892.",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+          "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
+          "source_file_ids": [
+            "a329169db4984cab80ed5fea5880bb4f"
+          ],
+          "filters": [],
+          "elapsed_ms": 461.6,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_07",
+          "conversation_id": "eed9a23f-18b5-4180-a630-a540fe0ca92c",
+          "turn_index": 3,
+          "user_message": "Tong gia tri can la bao nhieu?",
+          "assistant_response": "4.985.500",
+          "response_type": "scalar",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+          "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+          "source_file_ids": [
+            "2ad2989784fc41ffb9fef3225034db54"
+          ],
+          "filters": [],
+          "elapsed_ms": 383.4,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_07",
+          "conversation_id": "eed9a23f-18b5-4180-a630-a540fe0ca92c",
+          "turn_index": 4,
+          "user_message": "Tiep tuc phan top may luc nay va them thoi luong trung binh.",
+          "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": null,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 392.3,
+          "passed": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "demo_id": "demo_08",
+      "title": "08 - Casual User Questions",
+      "conversation_id": "991ff1a6-8431-4d31-9410-0e30c34e6548",
+      "file_sequence": [
+        "Machine_Downtime_20260203_100753.xlsx"
+      ],
+      "turn_count": 4,
+      "llm_call_count": 1,
+      "repeated_clarifications": 0,
+      "status": "passed",
+      "turns": [
+        {
+          "demo_id": "demo_08",
+          "conversation_id": "991ff1a6-8431-4d31-9410-0e30c34e6548",
+          "turn_index": 1,
+          "user_message": "Top 5 may theo tong downtime.",
+          "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+          "response_type": "table",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 466.4,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_08",
+          "conversation_id": "991ff1a6-8431-4d31-9410-0e30c34e6548",
+          "turn_index": 2,
+          "user_message": "Ket qua tren noi len dieu gi?",
+          "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+          "response_type": "table",
+          "execution_mode": "REAL_LLM",
+          "llm_called": true,
+          "llm_model": "qwen3.5:9b",
+          "llm_latency_ms": 10364.0,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 12851.9,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_08",
+          "conversation_id": "991ff1a6-8431-4d31-9410-0e30c34e6548",
+          "turn_index": 3,
+          "user_message": "Ve bieu do cot top 5 may theo downtime.",
+          "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+          "response_type": "chart",
+          "execution_mode": "DETERMINISTIC",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": 0.0,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 424.4,
+          "passed": true,
+          "issues": []
+        },
+        {
+          "demo_id": "demo_08",
+          "conversation_id": "991ff1a6-8431-4d31-9410-0e30c34e6548",
+          "turn_index": 4,
+          "user_message": "xem 5 dong mau",
+          "assistant_response": "Hiển thị 5 bản ghi mẫu.",
+          "response_type": "sample_table",
+          "execution_mode": "SAMPLE_ROWS",
+          "llm_called": false,
+          "llm_model": null,
+          "llm_latency_ms": null,
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "source_file_ids": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59"
+          ],
+          "filters": [],
+          "elapsed_ms": 284.8,
+          "passed": true,
+          "issues": []
+        }
+      ]
+    }
+  ],
+  "turns": [
+    {
+      "demo_id": "demo_01",
+      "conversation_id": "50cf5e0b-db4e-4456-8b1b-8322124eeca5",
+      "turn_index": 1,
+      "user_message": "noi dung cua data",
+      "assistant_response": "Hệ thống hiện có các bộ dữ liệu sau:\n- Downtime máy: 9.151 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu.",
+      "response_type": "data_overview",
+      "execution_mode": "DATA_OVERVIEW",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": null,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 175.1,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_01",
+      "conversation_id": "50cf5e0b-db4e-4456-8b1b-8322124eeca5",
+      "turn_index": 2,
+      "user_message": "dem so dong downtime",
+      "assistant_response": "9.151",
+      "response_type": "scalar",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 357.9,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_01",
+      "conversation_id": "50cf5e0b-db4e-4456-8b1b-8322124eeca5",
+      "turn_index": 3,
+      "user_message": "cho toi xem schema",
+      "assistant_response": "Tìm thấy 16 cột có thể dùng để phân tích.",
+      "response_type": "schema",
+      "execution_mode": "SCHEMA_INSPECTION",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": null,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 233.1,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_01",
+      "conversation_id": "50cf5e0b-db4e-4456-8b1b-8322124eeca5",
+      "turn_index": 4,
+      "user_message": "chat luong du lieu",
+      "assistant_response": "Tóm tắt nhanh null và dòng trùng theo từng bộ dữ liệu.",
+      "response_type": "data_quality",
+      "execution_mode": "DATA_QUALITY",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": null,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 252.3,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_01",
+      "conversation_id": "50cf5e0b-db4e-4456-8b1b-8322124eeca5",
+      "turn_index": 5,
+      "user_message": "xem 5 dong mau",
+      "assistant_response": "Hiển thị 5 bản ghi mẫu.",
+      "response_type": "sample_table",
+      "execution_mode": "SAMPLE_ROWS",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": null,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 268.5,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_02",
+      "conversation_id": "beca96b5-0812-4c6c-b497-4af258a45b15",
+      "turn_index": 1,
+      "user_message": "noi dung cua data",
+      "assistant_response": "Hệ thống hiện có các bộ dữ liệu sau:\n- Ra vào cổng: 1.294 bản ghi\nBạn có thể yêu cầu xem schema, dữ liệu mẫu, khoảng thời gian hoặc thống kê chi tiết của từng bộ dữ liệu.",
+      "response_type": "data_overview",
+      "execution_mode": "DATA_OVERVIEW",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": null,
+      "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+      "source_file_ids": [
+        "2ad2989784fc41ffb9fef3225034db54"
+      ],
+      "filters": [],
+      "elapsed_ms": 216.6,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_02",
+      "conversation_id": "beca96b5-0812-4c6c-b497-4af258a45b15",
+      "turn_index": 2,
+      "user_message": "Tong gia tri can la bao nhieu?",
+      "assistant_response": "4.985.500",
+      "response_type": "scalar",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+      "source_file_ids": [
+        "2ad2989784fc41ffb9fef3225034db54"
+      ],
+      "filters": [],
+      "elapsed_ms": 309.3,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_02",
+      "conversation_id": "beca96b5-0812-4c6c-b497-4af258a45b15",
+      "turn_index": 3,
+      "user_message": "Co bao nhieu cong khac nhau?",
+      "assistant_response": "2",
+      "response_type": "scalar",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+      "source_file_ids": [
+        "2ad2989784fc41ffb9fef3225034db54"
+      ],
+      "filters": [],
+      "elapsed_ms": 307.8,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_02",
+      "conversation_id": "beca96b5-0812-4c6c-b497-4af258a45b15",
+      "turn_index": 4,
+      "user_message": "Cho toi mot insight ngan ve luong xe ra vao cong.",
+      "assistant_response": "2",
+      "response_type": "scalar",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+      "source_file_ids": [
+        "2ad2989784fc41ffb9fef3225034db54"
+      ],
+      "filters": [],
+      "elapsed_ms": 291.7,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_02",
+      "conversation_id": "beca96b5-0812-4c6c-b497-4af258a45b15",
+      "turn_index": 5,
+      "user_message": "dem so dong theo cong",
+      "assistant_response": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+      "response_type": "clarification",
+      "execution_mode": "CLARIFICATION",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": null,
+      "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+      "source_file_ids": [
+        "2ad2989784fc41ffb9fef3225034db54"
+      ],
+      "filters": [],
+      "elapsed_ms": 224.5,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_03",
+      "conversation_id": "2483b506-7ef4-4890-8aab-a69561a6ccc4",
+      "turn_index": 1,
+      "user_message": "File nay co nhung nhom ton that nao?",
+      "assistant_response": "Bảo trì có nhóm tổn thất cao nhất: Bảo trì.",
+      "response_type": "table",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
+      "source_file_ids": [
+        "a329169db4984cab80ed5fea5880bb4f"
+      ],
+      "filters": [],
+      "elapsed_ms": 405.0,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_03",
+      "conversation_id": "2483b506-7ef4-4890-8aab-a69561a6ccc4",
+      "turn_index": 2,
+      "user_message": "Loai ton that nao xuat hien nhieu nhat?",
+      "assistant_response": "Bảo trì có nhóm tổn thất cao nhất: Bảo trì.",
+      "response_type": "report",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
+      "source_file_ids": [
+        "a329169db4984cab80ed5fea5880bb4f"
+      ],
+      "filters": [],
+      "elapsed_ms": 396.1,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_03",
+      "conversation_id": "2483b506-7ef4-4890-8aab-a69561a6ccc4",
+      "turn_index": 3,
+      "user_message": "Cho toi top 5 ten ton that pho bien nhat.",
+      "assistant_response": "Bảo trì có nhóm tổn thất cao nhất: Bảo trì.",
+      "response_type": "report",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
+      "source_file_ids": [
+        "a329169db4984cab80ed5fea5880bb4f"
+      ],
+      "filters": [],
+      "elapsed_ms": 407.4,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_03",
+      "conversation_id": "2483b506-7ef4-4890-8aab-a69561a6ccc4",
+      "turn_index": 4,
+      "user_message": "Ve bieu do phan bo ton that theo loai.",
+      "assistant_response": "Bảo trì có nhóm tổn thất cao nhất: Bảo trì.",
+      "response_type": "chart",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
+      "source_file_ids": [
+        "a329169db4984cab80ed5fea5880bb4f"
+      ],
+      "filters": [],
+      "elapsed_ms": 359.1,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_03",
+      "conversation_id": "2483b506-7ef4-4890-8aab-a69561a6ccc4",
+      "turn_index": 5,
+      "user_message": "Them ty le phan tram vao ket qua truoc.",
+      "assistant_response": "Máy 29 có số lần ghi nhận cao nhất: 5.268.",
+      "response_type": "table",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
+      "source_file_ids": [
+        "a329169db4984cab80ed5fea5880bb4f"
+      ],
+      "filters": [],
+      "elapsed_ms": 374.7,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_04",
+      "conversation_id": "d37b8587-16fd-4a37-8fe5-654419021921",
+      "turn_index": 1,
+      "user_message": "May nao co tong thoi gian downtime cao nhat?",
+      "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+      "response_type": "table",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 560.9,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_04",
+      "conversation_id": "d37b8587-16fd-4a37-8fe5-654419021921",
+      "turn_index": 2,
+      "user_message": "Cho toi top 5 may theo tong thoi gian downtime.",
+      "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+      "response_type": "table",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 467.4,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_04",
+      "conversation_id": "d37b8587-16fd-4a37-8fe5-654419021921",
+      "turn_index": 3,
+      "user_message": "Them so lan dung va thoi luong trung binh cua tung may.",
+      "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+      "response_type": "table",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 515.6,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_04",
+      "conversation_id": "d37b8587-16fd-4a37-8fe5-654419021921",
+      "turn_index": 4,
+      "user_message": "Ve bieu do cot cho ket qua nay.",
+      "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+      "response_type": "chart",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 402.2,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_04",
+      "conversation_id": "d37b8587-16fd-4a37-8fe5-654419021921",
+      "turn_index": 5,
+      "user_message": "Ket qua nay dang tinh trong khoang thoi gian nao?",
+      "assistant_response": "Tương đương 82 ngày 21 giờ 33 phút 25 giây.",
+      "response_type": "scalar",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 397.2,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_05",
+      "conversation_id": "9027960d-b0f1-4406-83fc-1ec8ff960edf",
+      "turn_index": 1,
+      "user_message": "Ve bieu do tong quan.",
+      "assistant_response": "Bạn muốn biểu đồ tổng thời lượng hay số lần dừng?",
+      "response_type": "clarification",
+      "execution_mode": "CLARIFICATION",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": null,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 208.6,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_05",
+      "conversation_id": "9027960d-b0f1-4406-83fc-1ec8ff960edf",
+      "turn_index": 2,
+      "user_message": "tong thoi gian theo may top 5",
+      "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+      "response_type": "chart",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": null,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 425.0,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_06",
+      "conversation_id": "0d7e48d0-422a-46ae-bd2e-98443b8e9352",
+      "turn_index": 1,
+      "user_message": "Cho toi top 5 may co tong downtime cao nhat trong thang gan nhat.",
+      "assistant_response": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút.",
+      "response_type": "chart",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [
+        {
+          "label": "Thời gian bắt đầu",
+          "operator": "date_between",
+          "value": [
+            "2026-02-01",
+            "2026-03-01"
+          ]
+        }
+      ],
+      "elapsed_ms": 508.6,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_06",
+      "conversation_id": "0d7e48d0-422a-46ae-bd2e-98443b8e9352",
+      "turn_index": 2,
+      "user_message": "File nay co nhung cot nao?",
+      "assistant_response": "Tìm thấy 16 cột có thể dùng để phân tích.",
+      "response_type": "schema",
+      "execution_mode": "SCHEMA_INSPECTION",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": null,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 241.7,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_06",
+      "conversation_id": "0d7e48d0-422a-46ae-bd2e-98443b8e9352",
+      "turn_index": 3,
+      "user_message": "Cot nao co nhieu gia tri trong nhat?",
+      "assistant_response": "Tìm thấy 16 cột có thể dùng để phân tích.",
+      "response_type": "schema",
+      "execution_mode": "SCHEMA_INSPECTION",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": null,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 274.2,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_06",
+      "conversation_id": "0d7e48d0-422a-46ae-bd2e-98443b8e9352",
+      "turn_index": 4,
+      "user_message": "Quay lai phan top may luc nay.",
+      "assistant_response": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút.",
+      "response_type": "chart",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": null,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [
+        {
+          "label": "Thời gian bắt đầu",
+          "operator": "date_between",
+          "value": [
+            "2026-02-01",
+            "2026-03-01"
+          ]
+        }
+      ],
+      "elapsed_ms": 344.5,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_06",
+      "conversation_id": "0d7e48d0-422a-46ae-bd2e-98443b8e9352",
+      "turn_index": 5,
+      "user_message": "Them so lan dung cua tung may.",
+      "assistant_response": "Máy 12 có số lần ghi nhận cao nhất: 1.654.",
+      "response_type": "table",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 389.7,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_07",
+      "conversation_id": "eed9a23f-18b5-4180-a630-a540fe0ca92c",
+      "turn_index": 1,
+      "user_message": "Top 5 may theo tong downtime.",
+      "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+      "response_type": "table",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 386.3,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_07",
+      "conversation_id": "eed9a23f-18b5-4180-a630-a540fe0ca92c",
+      "turn_index": 2,
+      "user_message": "Top 5 nhom ton that theo so lan ghi nhan.",
+      "assistant_response": "Sản xuất có số lần ghi nhận cao nhất: 26.892.",
+      "response_type": "table",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
+      "source_file_ids": [
+        "a329169db4984cab80ed5fea5880bb4f"
+      ],
+      "filters": [],
+      "elapsed_ms": 461.6,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_07",
+      "conversation_id": "eed9a23f-18b5-4180-a630-a540fe0ca92c",
+      "turn_index": 3,
+      "user_message": "Tong gia tri can la bao nhieu?",
+      "assistant_response": "4.985.500",
+      "response_type": "scalar",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+      "source_file_ids": [
+        "2ad2989784fc41ffb9fef3225034db54"
+      ],
+      "filters": [],
+      "elapsed_ms": 383.4,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_07",
+      "conversation_id": "eed9a23f-18b5-4180-a630-a540fe0ca92c",
+      "turn_index": 4,
+      "user_message": "Tiep tuc phan top may luc nay va them thoi luong trung binh.",
+      "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+      "response_type": "table",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": null,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 392.3,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_08",
+      "conversation_id": "991ff1a6-8431-4d31-9410-0e30c34e6548",
+      "turn_index": 1,
+      "user_message": "Top 5 may theo tong downtime.",
+      "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+      "response_type": "table",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 466.4,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_08",
+      "conversation_id": "991ff1a6-8431-4d31-9410-0e30c34e6548",
+      "turn_index": 2,
+      "user_message": "Ket qua tren noi len dieu gi?",
+      "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+      "response_type": "table",
+      "execution_mode": "REAL_LLM",
+      "llm_called": true,
+      "llm_model": "qwen3.5:9b",
+      "llm_latency_ms": 10364.0,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 12851.9,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_08",
+      "conversation_id": "991ff1a6-8431-4d31-9410-0e30c34e6548",
+      "turn_index": 3,
+      "user_message": "Ve bieu do cot top 5 may theo downtime.",
+      "assistant_response": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ.",
+      "response_type": "chart",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": 0.0,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 424.4,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "demo_id": "demo_08",
+      "conversation_id": "991ff1a6-8431-4d31-9410-0e30c34e6548",
+      "turn_index": 4,
+      "user_message": "xem 5 dong mau",
+      "assistant_response": "Hiển thị 5 bản ghi mẫu.",
+      "response_type": "sample_table",
+      "execution_mode": "SAMPLE_ROWS",
+      "llm_called": false,
+      "llm_model": null,
+      "llm_latency_ms": null,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "filters": [],
+      "elapsed_ms": 284.8,
+      "passed": true,
+      "issues": []
+    }
+  ]
+}

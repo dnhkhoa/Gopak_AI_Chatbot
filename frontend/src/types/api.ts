@@ -86,6 +86,7 @@ export interface ConversationMessage {
   content: string;
   created_at?: string | null;
   execution_mode?: string | null;
+  response?: ChatResponse | null;
 }
 
 export interface ConversationDetail extends ConversationPayload {

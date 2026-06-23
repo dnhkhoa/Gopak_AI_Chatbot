@@ -12,6 +12,7 @@ import { ScalarResult } from "./ScalarResult";
 import { SampleRowsTable } from "./SampleRowsTable";
 import { SchemaTable } from "./SchemaTable";
 import { SourceDetails } from "./SourceDetails";
+import { InternalDebugMetadata } from "./InternalDebugMetadata";
 import { Sparkles } from "lucide-react";
 import type { UiMessage } from "../types/api";
 
@@ -23,7 +24,7 @@ function AssistantAvatar() {
   );
 }
 
-export function ChatMessage({ message, debug }: { message: UiMessage; debug: boolean }) {
+export function ChatMessage({ message, debug, internalDebug = false }: { message: UiMessage; debug: boolean; internalDebug?: boolean }) {
   if (message.role === "user") {
     return <div className="message-row user"><div className="bubble">{message.content}</div></div>;
   }
@@ -59,6 +60,7 @@ export function ChatMessage({ message, debug }: { message: UiMessage; debug: boo
         {response.table && !["data_overview", "schema", "sample_table", "data_quality"].includes(response.response_type) ? <DataTable table={response.table} /> : null}
         <DownloadActions downloads={response.downloads} />
         <SourceDetails response={response} />
+        {internalDebug ? <InternalDebugMetadata response={response} /> : null}
         {debug ? <DebugPanel response={response} /> : null}
       </div>
     </div>

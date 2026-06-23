@@ -17,6 +17,7 @@ data/*.db-*
 data/uploaded_files.json
 data/uploads/
 reports/
+backups/
 artifacts/*.log
 artifacts/backend*.log
 artifacts/frontend*.log
