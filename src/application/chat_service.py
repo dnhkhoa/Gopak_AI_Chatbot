@@ -547,6 +547,16 @@ class ChatApplicationService:
                 html_path=html_path,
                 xlsx_path=xlsx_path,
             )
+            if (
+                result is not None
+                and not result.dataframe.empty
+                and _requests_commentary(_ascii_text(message))
+                and response.response_type in {"table", "chart", "scalar", "dashboard", "report"}
+            ):
+                commentary = self._generate_grounded_commentary(message, state, response)
+                if commentary:
+                    response.summary = f"{response.summary}\n\n{commentary}".strip() if response.summary else commentary
+                    response.metadata["commentary_attached"] = True
             assistant_content = response.primary_value or response.summary or response.title
             self._save_assistant_response(
                 state,
@@ -706,6 +716,35 @@ class ChatApplicationService:
                 return filename
         return None
 
+    def _generate_grounded_commentary(self, message: str, state, response) -> str | None:
+        """Generate 1-3 short grounded observations about an analytics result, when the user
+        also asked for commentary in the same multi-part request. Returns None on failure."""
+        table = response.table.model_dump() if response.table else None
+        context = {
+            "source_file_name": state.active_file_name,
+            "headline": response.summary or response.primary_value or response.title,
+            "result_summary": state.last_result_summary or {},
+            "table_preview": (table or {}).get("rows", [])[:10] if table else None,
+        }
+        prompt = (
+            "Bạn là trợ lý phân tích dữ liệu. Dựa CHỈ trên kết quả JSON bên dưới, nêu 1-3 nhận xét ngắn gọn, "
+            "có căn cứ bằng tiếng Việt có dấu về những điểm đáng chú ý (mục đứng đầu, chênh lệch, tỷ trọng). "
+            "Không bịa số mới ngoài dữ liệu, không nhắc đường dẫn nội bộ, không nói chung chung. "
+            "Mỗi nhận xét một câu, bắt đầu bằng '- '.\n\n"
+            f"Câu hỏi: {message}\nKết quả JSON: {json.dumps(context, ensure_ascii=False, default=str)}"
+        )
+        try:
+            llm = OllamaClient(self.settings).chat(
+                [
+                    {"role": "system", "content": "Bạn nêu nhận xét dữ liệu ngắn gọn, có căn cứ, bằng tiếng Việt có dấu."},
+                    {"role": "user", "content": prompt},
+                ]
+            )
+        except Exception:
+            return None
+        text = (llm.text or "").strip()
+        return f"Nhận xét:\n{text}" if text else None
+
     def _try_semantic_followup_response(
         self,
         conversation_id: str,
@@ -715,17 +754,13 @@ class ChatApplicationService:
         started: float,
     ) -> ChatResponse | None:
         q = _ascii_text(message)
-        semantic_terms = [
-            "insight",
-            "nhan xet",
-            "danh gia",
-            "noi len dieu gi",
-            "y nghia",
-            "dang chu y",
-            "quan trong nhat",
-            "phan tich giup",
-        ]
-        if not any(term in q for term in semantic_terms):
+        if not _requests_commentary(q):
+            return None
+        # A commentary word ("nhan xet", "giai thich"...) is only a follow-up-only request
+        # when the turn does NOT also contain a new analytical request. Otherwise commentary
+        # is a presentation modifier layered on top of the analytics result (handled after the
+        # query runs), so we must NOT hijack the intent here.
+        if _has_new_analytics_request(q) and not _references_prior_result(q):
             return None
         if not state.last_result_summary and not state.last_plan:
             return self._file_scope_response(
@@ -1562,3 +1597,44 @@ def _ascii_text(text: str) -> str:
 
     normalized = unicodedata.normalize("NFKD", text.lower().replace("đ", "d").replace("Đ", "d"))
     return "".join(ch for ch in normalized if not unicodedata.combining(ch))
+
+
+_COMMENTARY_TERMS = [
+    "nhan xet", "danh gia", "giai thich", "noi len dieu gi", "y nghia", "insight",
+    "binh luan", "diem dang chu y", "dang chu y", "phan tich giup", "quan trong nhat",
+]
+_PRIOR_RESULT_REFS = [
+    "vua roi", "tren day", "ket qua tren", "ket qua nay", "ket qua do", "ket qua vua roi",
+    "bang nay", "bang tren", "bang vua roi", "bang do", "bieu do nay", "o tren", "phia tren", "vua xong",
+]
+_ANALYTICS_RANKING_WORDS = ["top", "bottom", "cao nhat", "thap nhat", "nhieu nhat", "it nhat", "dung dau", "xep hang", "pho bien"]
+_ANALYTICS_DIM_NOUNS = ["may", "machine", "nhom", "ton that", "nguyen nhan", "cong", "loai", "thang", "ngay"]
+_ANALYTICS_METRIC_WORDS = ["downtime", "thoi gian", "thoi luong", "so lan", "so luot", "ghi nhan", "dem", "tong", "trung binh", "gia tri", "count"]
+
+
+def _requests_commentary(q: str) -> bool:
+    """True if the (ascii-normalized) message asks for narrative commentary/explanation."""
+    return any(term in q for term in _COMMENTARY_TERMS)
+
+
+def _references_prior_result(q: str) -> bool:
+    return any(term in q for term in _PRIOR_RESULT_REFS)
+
+
+def _has_new_analytics_request(q: str) -> bool:
+    """True if the (ascii-normalized) message carries a self-contained analytical request
+    (dimension + ranking/metric), independent of any trailing commentary/output modifier."""
+    import re
+
+    has_rank = any(word in q for word in _ANALYTICS_RANKING_WORDS)
+    has_dim = any(noun in q for noun in _ANALYTICS_DIM_NOUNS)
+    has_metric = any(word in q for word in _ANALYTICS_METRIC_WORDS)
+    if re.search(r"top\s*\d", q):
+        return True
+    if has_rank and has_dim:
+        return True
+    if "theo" in q and has_dim:
+        return True
+    if has_metric and has_dim:
+        return True
+    return False

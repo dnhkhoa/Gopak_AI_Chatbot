@@ -246,6 +246,18 @@ class DeterministicPlanner:
             return None
         if not duration:
             return None
+        import re
+
+        # Defer to the structured detectors when the question already specifies an explicit
+        # analytics structure (topN, grouping, time range, percentage, or a count metric).
+        # Freeform insight is only the fallback for genuinely vague commentary requests.
+        if (
+            re.search(r"top\s*\d", q)
+            or "theo" in q
+            or any(term in q for term in ["phan tram", "ty le", "ty trong", "so lan", "dem", "so luot", "ghi nhan"])
+            or any(term in q for term in ["thang", "ngay", "tuan", "gan nhat"])
+        ):
+            return None
         dimension = None
         if any(term in q for term in ["nhom", "bao tri", "san xuat"]):
             dimension = loss_group

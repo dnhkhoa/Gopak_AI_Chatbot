@@ -90,17 +90,77 @@ def _uat_topic_restoration(ids: dict[str, str]) -> dict[str, Any]:
 
 
 def _uat_file_switching(ids: dict[str, str]) -> dict[str, Any]:
-    conv = _new_conversation("UAT file switching")
-    _select_file(conv, ids["machine"])
-    first = _message(conv, "top 5 may theo downtime")
-    _select_file(conv, ids["loss"])
-    second = _message(conv, "schema file nay")
-    _select_file(conv, ids["entry"])
-    third = _message(conv, "noi dung cua data")
-    _select_file(conv, ids["machine"])
-    fourth = _message(conv, "tiep tuc bieu do luc nay")
-    passed = first["response_type"] == "table" and second["response_type"] == "schema" and third["response_type"] == "data_overview" and fourth["response_type"] in {"chart", "table"}
-    return _flow("file_switching", [first, second, third, fourth], passed)
+    # One conversation = one immutable source file. Selecting another file creates a NEW
+    # conversation; the old one is unchanged. Mismatched file requests are rejected (409).
+    steps: list[dict[str, Any]] = []
+
+    # Case 1 - selecting File B creates a new conversation; C1/File A is untouched.
+    c1 = _new_conversation("UAT iso A")
+    _select_file(c1, ids["machine"])
+    c1_first = _message(c1, "top 5 may theo downtime")
+    c2 = _new_conversation("UAT iso B")
+    _select_file(c2, ids["loss"])
+    c2_first = _message(c2, "top 5 nhom ton that theo so lan")
+    c1_meta = _conversation(c1)
+    c2_meta = _conversation(c2)
+    case1_ok = (
+        c1 != c2
+        and c1_first["response_type"] == "table"
+        and c2_first["response_type"] == "table"
+        and str(c1_meta.get("source_file_id")) == ids["machine"]
+        and str(c2_meta.get("source_file_id")) == ids["loss"]
+        and c1_first["active_file_id"] == ids["machine"]
+        and c2_first["active_file_id"] == ids["loss"]
+    )
+    steps.append({"name": "switch_creates_new_conversation", "passed": case1_ok, "c1": c1, "c2": c2, "c1_source": c1_meta.get("source_file_id"), "c2_source": c2_meta.get("source_file_id")})
+
+    # Case 2 - reopening C1 keeps File A as the source and still answers within File A.
+    c1_reopen = _message(c1, "tiep tuc bieu do top may luc nay")
+    case2_ok = c1_reopen["response_type"] in {"chart", "table"} and c1_reopen["active_file_id"] == ids["machine"]
+    steps.append({"name": "reopen_keeps_source", "passed": case2_ok, "active_file_id": c1_reopen["active_file_id"]})
+
+    # Case 3 - sending File B context into C1/File A is rejected with 409, no message persisted.
+    before = len(_messages(c1))
+    rejected, status = _send_mismatch(c1, ids["loss"])
+    after = len(_messages(c1))
+    case3_ok = rejected and status == 409 and after == before
+    steps.append({"name": "mismatch_rejected_409", "passed": case3_ok, "status": status, "messages_before": before, "messages_after": after})
+
+    # Case 4 - pending clarification is isolated per conversation and restored on reopen.
+    cp = _new_conversation("UAT pending A")
+    _select_file(cp, ids["machine"])
+    p1 = _message(cp, "ve bieu do tong quan")
+    cq = _new_conversation("UAT pending B")
+    _select_file(cq, ids["loss"])
+    q1 = _message(cq, "top 5 nhom ton that theo so lan")
+    p2 = _message(cp, "thoi gian")
+    p3 = _message(cp, "theo may")
+    case4_ok = (
+        p1["response_type"] == "clarification"
+        and q1["response_type"] != "clarification"
+        and p3["response_type"] in {"chart", "table"}
+    )
+    steps.append({"name": "pending_clarification_isolation", "passed": case4_ok, "p1": p1["response_type"], "q1": q1["response_type"], "p3": p3["response_type"]})
+
+    passed = all(step["passed"] for step in steps)
+    return _flow("file_isolation_one_conversation_one_file", steps, passed)
+
+
+def _conversation(conversation_id: str) -> dict[str, Any]:
+    return _request("GET", f"/api/conversations/{conversation_id}") or {}
+
+
+def _messages(conversation_id: str) -> list[dict[str, Any]]:
+    detail = _request("GET", f"/api/conversations/{conversation_id}") or {}
+    return detail.get("messages") or []
+
+
+def _send_mismatch(conversation_id: str, file_id: str) -> tuple[bool, int | None]:
+    try:
+        _request("POST", f"/api/conversations/{conversation_id}/messages", {"message": "top 5 theo so lan", "debug": True, "source_file_id": file_id})
+        return False, None
+    except HTTPError as exc:
+        return True, exc.code
 
 
 def _uat_restart(ids: dict[str, str], server: subprocess.Popen | None) -> dict[str, Any]:

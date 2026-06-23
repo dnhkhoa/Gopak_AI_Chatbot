@@ -46,8 +46,16 @@
       }
     },
     "actual_llm_calls": 0,
-    "p50_latency_ms": 99.6,
-    "p95_latency_ms": 152.1
+    "p50_latency_ms": 107.2,
+    "p95_latency_ms": 172.1,
+    "isolation": {
+      "cross_file_violations": 0,
+      "cross_conversation_overlap": 0,
+      "mismatch_total": 2,
+      "mismatch_rejected": 2,
+      "pending_clarification_leakage": 0
+    },
+    "mismatch_rejected_rate": 1.0
   },
   "results": [
     {
@@ -64,7 +72,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 184.2
+            "conversation_id": "6a7e5ca0-2d51-49ec-9781-a64e3bb201f9",
+            "file_ok": true,
+            "latency_ms": 187.0
           },
           "passed": true
         }
@@ -84,7 +94,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 148.8
+            "conversation_id": "1e54328b-c205-4727-b73d-f54a90d8f16f",
+            "file_ok": true,
+            "latency_ms": 165.1
           },
           "passed": true
         }
@@ -104,7 +116,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 122.0
+            "conversation_id": "8bb7e445-9139-4e13-a7c1-41bab88609bf",
+            "file_ok": true,
+            "latency_ms": 129.7
           },
           "passed": true
         }
@@ -124,7 +138,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 151.3
+            "conversation_id": "727e48b4-a2ed-4f85-9c8d-ac46ad15675e",
+            "file_ok": true,
+            "latency_ms": 213.2
           },
           "passed": true
         }
@@ -144,7 +160,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 129.3
+            "conversation_id": "62e8bfae-ff4e-4035-9d76-6b11e5ae2992",
+            "file_ok": true,
+            "latency_ms": 1478.4
           },
           "passed": true
         }
@@ -164,7 +182,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 142.0
+            "conversation_id": "28e4caba-b41a-43ab-b5f6-771892106e22",
+            "file_ok": true,
+            "latency_ms": 340.1
           },
           "passed": true
         }
@@ -184,7 +204,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 113.4
+            "conversation_id": "c881e409-caf9-43e7-8f1d-a9b3a579763a",
+            "file_ok": true,
+            "latency_ms": 354.3
           },
           "passed": true
         }
@@ -204,7 +226,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 150.9
+            "conversation_id": "63701b77-3a31-4064-b59a-e2acfb92bc9e",
+            "file_ok": true,
+            "latency_ms": 153.7
           },
           "passed": true
         }
@@ -224,7 +248,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 121.9
+            "conversation_id": "d684ad31-f010-4d69-ae11-999d1f139c9b",
+            "file_ok": true,
+            "latency_ms": 127.0
           },
           "passed": true
         }
@@ -244,7 +270,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 157.7
+            "conversation_id": "dbc149d0-07c9-4e63-b1e7-ca9fb55d8304",
+            "file_ok": true,
+            "latency_ms": 158.6
           },
           "passed": true
         }
@@ -264,7 +292,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 135.2
+            "conversation_id": "3529d436-6df3-462b-8c15-109766931979",
+            "file_ok": true,
+            "latency_ms": 133.4
           },
           "passed": true
         }
@@ -284,7 +314,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 145.9
+            "conversation_id": "a6a3fc71-f373-4615-b5be-1299ad1ddc30",
+            "file_ok": true,
+            "latency_ms": 164.7
           },
           "passed": true
         }
@@ -304,7 +336,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 128.7
+            "conversation_id": "9c844537-a0fc-4162-95ca-5490db9fabbc",
+            "file_ok": true,
+            "latency_ms": 124.7
           },
           "passed": true
         }
@@ -324,7 +358,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 138.7
+            "conversation_id": "93618abf-3dd3-430e-8e9e-5f16d2962953",
+            "file_ok": true,
+            "latency_ms": 153.0
           },
           "passed": true
         }
@@ -344,7 +380,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 110.2
+            "conversation_id": "cb486725-4296-4c9f-bcc4-c53876a0c950",
+            "file_ok": true,
+            "latency_ms": 125.3
           },
           "passed": true
         }
@@ -364,7 +402,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 146.8
+            "conversation_id": "9c45bac3-bd59-4f56-b2e4-8d0de375d689",
+            "file_ok": true,
+            "latency_ms": 157.8
           },
           "passed": true
         }
@@ -384,7 +424,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 109.2
+            "conversation_id": "b44b0fbd-895a-4d8d-9827-1a9bdcacf31e",
+            "file_ok": true,
+            "latency_ms": 775.2
           },
           "passed": true
         }
@@ -404,7 +446,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 140.7
+            "conversation_id": "55a0cbdd-fd2e-48b3-9f55-14580199f425",
+            "file_ok": true,
+            "latency_ms": 148.5
           },
           "passed": true
         }
@@ -424,7 +468,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 110.1
+            "conversation_id": "a05024ab-369c-43cc-96d8-39f862cdd391",
+            "file_ok": true,
+            "latency_ms": 152.3
           },
           "passed": true
         }
@@ -444,7 +490,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 142.5
+            "conversation_id": "e9832271-4efe-461f-8a08-6c7038133722",
+            "file_ok": true,
+            "latency_ms": 143.2
           },
           "passed": true
         }
@@ -464,7 +512,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 114.4
+            "conversation_id": "e0bd4d3d-93f9-4859-8e84-7d385f4a6c34",
+            "file_ok": true,
+            "latency_ms": 112.1
           },
           "passed": true
         }
@@ -484,7 +534,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 147.0
+            "conversation_id": "bac553bb-85a8-4d7a-b2fb-b342718772b6",
+            "file_ok": true,
+            "latency_ms": 154.5
           },
           "passed": true
         }
@@ -504,7 +556,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 125.0
+            "conversation_id": "33191b6c-6bd5-4501-8f47-c44c1f77ff40",
+            "file_ok": true,
+            "latency_ms": 112.6
           },
           "passed": true
         }
@@ -524,7 +578,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 135.4
+            "conversation_id": "fe45101b-b2a4-4efc-9fe8-45295c971be9",
+            "file_ok": true,
+            "latency_ms": 140.4
           },
           "passed": true
         }
@@ -544,7 +600,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 239.7
+            "conversation_id": "f13e6321-90fb-458e-acee-9ce254b31d85",
+            "file_ok": true,
+            "latency_ms": 145.0
           },
           "passed": true
         }
@@ -564,7 +622,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 135.1
+            "conversation_id": "537538a9-d3ce-4b6a-93c1-af18967902de",
+            "file_ok": true,
+            "latency_ms": 119.2
           },
           "passed": true
         }
@@ -584,7 +644,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 1057.3
+            "conversation_id": "24cd053d-305b-40d9-bca4-b918df5c085e",
+            "file_ok": true,
+            "latency_ms": 197.4
           },
           "passed": true
         }
@@ -604,7 +666,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 112.4
+            "conversation_id": "6bd15d60-17d6-48e2-ade4-49584a610fe0",
+            "file_ok": true,
+            "latency_ms": 119.8
           },
           "passed": true
         }
@@ -624,7 +688,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 119.7
+            "conversation_id": "7644d0d5-9f97-4454-9cdf-09910097b062",
+            "file_ok": true,
+            "latency_ms": 114.8
           },
           "passed": true
         }
@@ -644,7 +710,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 116.0
+            "conversation_id": "bdbe2802-298e-4ea6-8274-c42b073eccf5",
+            "file_ok": true,
+            "latency_ms": 129.9
           },
           "passed": true
         }
@@ -664,7 +732,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 173.6
+            "conversation_id": "cb7c86d7-12ec-43c9-ab92-63c69a4407de",
+            "file_ok": true,
+            "latency_ms": 126.3
           },
           "passed": true
         }
@@ -684,7 +754,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 111.4
+            "conversation_id": "e1ebbda4-4d0d-495b-870a-dc1e4c672efd",
+            "file_ok": true,
+            "latency_ms": 121.0
           },
           "passed": true
         }
@@ -704,7 +776,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 113.1
+            "conversation_id": "5123e3f0-6062-4bc1-a349-57e3ba93ace4",
+            "file_ok": true,
+            "latency_ms": 128.9
           },
           "passed": true
         }
@@ -724,7 +798,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 110.8
+            "conversation_id": "e8325acb-7d60-4066-aefe-c1bba996e9a1",
+            "file_ok": true,
+            "latency_ms": 138.8
           },
           "passed": true
         }
@@ -744,7 +820,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 186.4
+            "conversation_id": "14130baa-dde2-4274-93f7-a10d6bee7054",
+            "file_ok": true,
+            "latency_ms": 123.4
           },
           "passed": true
         }
@@ -764,7 +842,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 109.1
+            "conversation_id": "36ed7b60-98e1-4b38-a55c-b850a6267e15",
+            "file_ok": true,
+            "latency_ms": 119.8
           },
           "passed": true
         }
@@ -784,7 +864,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 116.2
+            "conversation_id": "128eaf47-935d-4f4e-8cac-abaaddb9427c",
+            "file_ok": true,
+            "latency_ms": 119.3
           },
           "passed": true
         }
@@ -804,7 +886,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 114.3
+            "conversation_id": "ad9ca3b0-8253-4895-8b98-361460948317",
+            "file_ok": true,
+            "latency_ms": 122.8
           },
           "passed": true
         }
@@ -824,7 +908,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 112.2
+            "conversation_id": "a4ce5d55-e8ac-4b47-bda7-8cc45c9e49ed",
+            "file_ok": true,
+            "latency_ms": 118.6
           },
           "passed": true
         }
@@ -844,7 +930,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 128.4
+            "conversation_id": "88bc7e14-3960-4a75-a4b1-90da48f1cc74",
+            "file_ok": true,
+            "latency_ms": 119.8
           },
           "passed": true
         }
@@ -864,7 +952,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 117.2
+            "conversation_id": "188ff558-7008-452a-b449-8ba8b823dc5f",
+            "file_ok": true,
+            "latency_ms": 110.0
           },
           "passed": true
         }
@@ -884,7 +974,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 126.9
+            "conversation_id": "df0398e3-821b-4be0-b317-fbd59aac546d",
+            "file_ok": true,
+            "latency_ms": 137.5
           },
           "passed": true
         }
@@ -904,7 +996,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 116.4
+            "conversation_id": "62e197a8-dd77-4c5d-a6b4-3a71742d4420",
+            "file_ok": true,
+            "latency_ms": 124.4
           },
           "passed": true
         }
@@ -924,7 +1018,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 112.9
+            "conversation_id": "db442b11-4537-46dd-b74b-d9cc251f4a33",
+            "file_ok": true,
+            "latency_ms": 117.3
           },
           "passed": true
         }
@@ -944,7 +1040,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 122.9
+            "conversation_id": "93c7a971-929d-4dd6-bd7b-211a021540ea",
+            "file_ok": true,
+            "latency_ms": 116.9
           },
           "passed": true
         }
@@ -964,7 +1062,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 108.0
+            "conversation_id": "9bfd39d9-b95a-4444-b9c1-2cc1f1e4a76d",
+            "file_ok": true,
+            "latency_ms": 115.1
           },
           "passed": true
         }
@@ -984,7 +1084,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 107.5
+            "conversation_id": "fdceb7f9-7f57-4b7a-a619-f4eabd60afa6",
+            "file_ok": true,
+            "latency_ms": 109.2
           },
           "passed": true
         }
@@ -1004,7 +1106,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 137.9
+            "conversation_id": "6796d721-1381-466b-bd87-361aed4d550c",
+            "file_ok": true,
+            "latency_ms": 137.6
           },
           "passed": true
         }
@@ -1024,7 +1128,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 116.9
+            "conversation_id": "5f1b5866-a8ff-4043-83c6-b609a2f5c21c",
+            "file_ok": true,
+            "latency_ms": 132.4
           },
           "passed": true
         }
@@ -1044,7 +1150,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 109.2
+            "conversation_id": "c6e1a91a-bfab-453d-b296-30274cfd76f3",
+            "file_ok": true,
+            "latency_ms": 130.0
           },
           "passed": true
         }
@@ -1064,7 +1172,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 213.3
+            "conversation_id": "72730ef1-1c6d-4820-9551-d4717a30999b",
+            "file_ok": true,
+            "latency_ms": 143.1
           },
           "passed": true
         }
@@ -1084,7 +1194,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 722.6
+            "conversation_id": "ffbefde6-a6b4-41b0-8950-5050cc9af1f4",
+            "file_ok": true,
+            "latency_ms": 115.8
           },
           "passed": true
         }
@@ -1104,7 +1216,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 118.6
+            "conversation_id": "048dc090-bf56-4061-a320-2ea7597d8df2",
+            "file_ok": true,
+            "latency_ms": 114.7
           },
           "passed": true
         }
@@ -1124,7 +1238,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 128.6
+            "conversation_id": "5b1e7cb1-202a-435d-9244-435b50a36121",
+            "file_ok": true,
+            "latency_ms": 160.7
           },
           "passed": true
         }
@@ -1144,7 +1260,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 110.2
+            "conversation_id": "73533864-3909-4cbc-85f2-cdd78dad647d",
+            "file_ok": true,
+            "latency_ms": 122.3
           },
           "passed": true
         }
@@ -1164,7 +1282,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 109.9
+            "conversation_id": "36553796-7f47-4689-889e-d896c546d2a7",
+            "file_ok": true,
+            "latency_ms": 126.6
           },
           "passed": true
         }
@@ -1184,7 +1304,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 137.0
+            "conversation_id": "9fb3c562-5a7e-4cd5-aa37-741797dd759e",
+            "file_ok": true,
+            "latency_ms": 148.9
           },
           "passed": true
         }
@@ -1204,7 +1326,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 120.3
+            "conversation_id": "c9cd4d5c-1481-4352-a5a0-ea374473aa62",
+            "file_ok": true,
+            "latency_ms": 139.4
           },
           "passed": true
         }
@@ -1224,7 +1348,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 105.7
+            "conversation_id": "73384508-41b4-49ed-b2a4-d7aa13055892",
+            "file_ok": true,
+            "latency_ms": 122.0
           },
           "passed": true
         }
@@ -1244,7 +1370,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 132.5
+            "conversation_id": "ae5485b6-c891-4c3c-87f7-35e6d93f53be",
+            "file_ok": true,
+            "latency_ms": 162.8
           },
           "passed": true
         }
@@ -1264,7 +1392,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 15.2
+            "conversation_id": "392719f6-f747-42ed-964f-09d2e4a27d06",
+            "file_ok": true,
+            "latency_ms": 16.4
           },
           "passed": true
         },
@@ -1277,7 +1407,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 15.3
+            "conversation_id": "392719f6-f747-42ed-964f-09d2e4a27d06",
+            "file_ok": true,
+            "latency_ms": 15.9
           },
           "passed": true
         },
@@ -1290,7 +1422,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 368.0
+            "conversation_id": "392719f6-f747-42ed-964f-09d2e4a27d06",
+            "file_ok": true,
+            "latency_ms": 406.8
           },
           "passed": true
         }
@@ -1310,7 +1444,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 18.3
+            "conversation_id": "a9adba44-1aca-4c1b-816f-2dfcd7965272",
+            "file_ok": true,
+            "latency_ms": 16.4
           },
           "passed": true
         },
@@ -1323,7 +1459,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 16.3
+            "conversation_id": "a9adba44-1aca-4c1b-816f-2dfcd7965272",
+            "file_ok": true,
+            "latency_ms": 15.9
           },
           "passed": true
         },
@@ -1336,7 +1474,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 110.7
+            "conversation_id": "a9adba44-1aca-4c1b-816f-2dfcd7965272",
+            "file_ok": true,
+            "latency_ms": 104.3
           },
           "passed": true
         }
@@ -1356,7 +1496,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 16.4
+            "conversation_id": "a28a5da5-e287-404f-a9f3-348961caa206",
+            "file_ok": true,
+            "latency_ms": 15.9
           },
           "passed": true
         },
@@ -1369,7 +1511,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 15.3
+            "conversation_id": "a28a5da5-e287-404f-a9f3-348961caa206",
+            "file_ok": true,
+            "latency_ms": 17.3
           },
           "passed": true
         },
@@ -1382,7 +1526,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 110.4
+            "conversation_id": "a28a5da5-e287-404f-a9f3-348961caa206",
+            "file_ok": true,
+            "latency_ms": 119.3
           },
           "passed": true
         }
@@ -1402,7 +1548,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.8
+            "conversation_id": "f62d08bc-7be9-4426-b57e-41149d92b8b1",
+            "file_ok": true,
+            "latency_ms": 15.6
           },
           "passed": true
         },
@@ -1415,7 +1563,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.5
+            "conversation_id": "f62d08bc-7be9-4426-b57e-41149d92b8b1",
+            "file_ok": true,
+            "latency_ms": 15.1
           },
           "passed": true
         },
@@ -1428,7 +1578,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 111.0
+            "conversation_id": "f62d08bc-7be9-4426-b57e-41149d92b8b1",
+            "file_ok": true,
+            "latency_ms": 105.5
           },
           "passed": true
         }
@@ -1448,7 +1600,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 15.3
+            "conversation_id": "4acfcd78-24d9-44e5-8520-e1620f06e838",
+            "file_ok": true,
+            "latency_ms": 15.7
           },
           "passed": true
         },
@@ -1461,7 +1615,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.9
+            "conversation_id": "4acfcd78-24d9-44e5-8520-e1620f06e838",
+            "file_ok": true,
+            "latency_ms": 17.0
           },
           "passed": true
         },
@@ -1474,7 +1630,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 109.2
+            "conversation_id": "4acfcd78-24d9-44e5-8520-e1620f06e838",
+            "file_ok": true,
+            "latency_ms": 107.6
           },
           "passed": true
         }
@@ -1494,7 +1652,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 16.6
+            "conversation_id": "bdda9b56-325f-4b98-a9a5-9272f3a1c97b",
+            "file_ok": true,
+            "latency_ms": 15.6
           },
           "passed": true
         },
@@ -1507,7 +1667,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 15.0
+            "conversation_id": "bdda9b56-325f-4b98-a9a5-9272f3a1c97b",
+            "file_ok": true,
+            "latency_ms": 15.2
           },
           "passed": true
         },
@@ -1520,7 +1682,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 103.6
+            "conversation_id": "bdda9b56-325f-4b98-a9a5-9272f3a1c97b",
+            "file_ok": true,
+            "latency_ms": 101.9
           },
           "passed": true
         }
@@ -1540,7 +1704,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.3
+            "conversation_id": "948cc549-e24c-4120-a739-3673c7714085",
+            "file_ok": true,
+            "latency_ms": 15.6
           },
           "passed": true
         },
@@ -1553,7 +1719,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 15.8
+            "conversation_id": "948cc549-e24c-4120-a739-3673c7714085",
+            "file_ok": true,
+            "latency_ms": 14.3
           },
           "passed": true
         },
@@ -1566,7 +1734,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 99.6
+            "conversation_id": "948cc549-e24c-4120-a739-3673c7714085",
+            "file_ok": true,
+            "latency_ms": 104.9
           },
           "passed": true
         }
@@ -1586,7 +1756,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.6
+            "conversation_id": "fb571002-7bca-4c00-95b5-60cf79038b6b",
+            "file_ok": true,
+            "latency_ms": 15.7
           },
           "passed": true
         },
@@ -1599,7 +1771,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.5
+            "conversation_id": "fb571002-7bca-4c00-95b5-60cf79038b6b",
+            "file_ok": true,
+            "latency_ms": 15.4
           },
           "passed": true
         },
@@ -1612,7 +1786,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 116.0
+            "conversation_id": "fb571002-7bca-4c00-95b5-60cf79038b6b",
+            "file_ok": true,
+            "latency_ms": 105.5
           },
           "passed": true
         }
@@ -1632,7 +1808,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 13.7
+            "conversation_id": "87b9e911-9b9f-4e80-a8ed-e464ee16d7bb",
+            "file_ok": true,
+            "latency_ms": 15.3
           },
           "passed": true
         },
@@ -1645,7 +1823,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.1
+            "conversation_id": "87b9e911-9b9f-4e80-a8ed-e464ee16d7bb",
+            "file_ok": true,
+            "latency_ms": 15.7
           },
           "passed": true
         },
@@ -1658,7 +1838,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 96.9
+            "conversation_id": "87b9e911-9b9f-4e80-a8ed-e464ee16d7bb",
+            "file_ok": true,
+            "latency_ms": 105.5
           },
           "passed": true
         }
@@ -1678,7 +1860,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.0
+            "conversation_id": "b8658e06-f825-4a2a-a5ce-3e497a71a039",
+            "file_ok": true,
+            "latency_ms": 15.0
           },
           "passed": true
         },
@@ -1691,7 +1875,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 18.3
+            "conversation_id": "b8658e06-f825-4a2a-a5ce-3e497a71a039",
+            "file_ok": true,
+            "latency_ms": 18.8
           },
           "passed": true
         },
@@ -1704,7 +1890,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 100.0
+            "conversation_id": "b8658e06-f825-4a2a-a5ce-3e497a71a039",
+            "file_ok": true,
+            "latency_ms": 107.2
           },
           "passed": true
         }
@@ -1724,7 +1912,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.3
+            "conversation_id": "3449b7fd-dbb1-4bda-a637-6ffa538b40e1",
+            "file_ok": true,
+            "latency_ms": 16.2
           },
           "passed": true
         },
@@ -1737,7 +1927,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 16.0
+            "conversation_id": "3449b7fd-dbb1-4bda-a637-6ffa538b40e1",
+            "file_ok": true,
+            "latency_ms": 15.8
           },
           "passed": true
         },
@@ -1750,7 +1942,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 99.2
+            "conversation_id": "3449b7fd-dbb1-4bda-a637-6ffa538b40e1",
+            "file_ok": true,
+            "latency_ms": 108.6
           },
           "passed": true
         }
@@ -1770,7 +1964,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 16.1
+            "conversation_id": "510d6f80-c916-474c-84f0-ba593b4ff371",
+            "file_ok": true,
+            "latency_ms": 16.3
           },
           "passed": true
         },
@@ -1783,7 +1979,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.6
+            "conversation_id": "510d6f80-c916-474c-84f0-ba593b4ff371",
+            "file_ok": true,
+            "latency_ms": 16.6
           },
           "passed": true
         },
@@ -1796,7 +1994,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 95.9
+            "conversation_id": "510d6f80-c916-474c-84f0-ba593b4ff371",
+            "file_ok": true,
+            "latency_ms": 105.2
           },
           "passed": true
         }
@@ -1816,7 +2016,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.4
+            "conversation_id": "be418666-6f87-4732-bd79-66d1466f6a7f",
+            "file_ok": true,
+            "latency_ms": 16.5
           },
           "passed": true
         },
@@ -1829,7 +2031,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.6
+            "conversation_id": "be418666-6f87-4732-bd79-66d1466f6a7f",
+            "file_ok": true,
+            "latency_ms": 15.4
           },
           "passed": true
         },
@@ -1842,7 +2046,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 117.0
+            "conversation_id": "be418666-6f87-4732-bd79-66d1466f6a7f",
+            "file_ok": true,
+            "latency_ms": 103.2
           },
           "passed": true
         }
@@ -1862,7 +2068,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 15.4
+            "conversation_id": "d829cf52-5352-42d6-a5ad-7fc4c9e0b7df",
+            "file_ok": true,
+            "latency_ms": 18.1
           },
           "passed": true
         },
@@ -1875,7 +2083,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.3
+            "conversation_id": "d829cf52-5352-42d6-a5ad-7fc4c9e0b7df",
+            "file_ok": true,
+            "latency_ms": 17.1
           },
           "passed": true
         },
@@ -1888,7 +2098,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 102.1
+            "conversation_id": "d829cf52-5352-42d6-a5ad-7fc4c9e0b7df",
+            "file_ok": true,
+            "latency_ms": 114.3
           },
           "passed": true
         }
@@ -1908,7 +2120,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.8
+            "conversation_id": "856b8c70-8f07-4e0b-8069-0325fab3c812",
+            "file_ok": true,
+            "latency_ms": 16.3
           },
           "passed": true
         },
@@ -1921,7 +2135,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.4
+            "conversation_id": "856b8c70-8f07-4e0b-8069-0325fab3c812",
+            "file_ok": true,
+            "latency_ms": 15.9
           },
           "passed": true
         },
@@ -1934,7 +2150,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 107.0
+            "conversation_id": "856b8c70-8f07-4e0b-8069-0325fab3c812",
+            "file_ok": true,
+            "latency_ms": 114.5
           },
           "passed": true
         }
@@ -1954,7 +2172,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.5
+            "conversation_id": "5a625ab9-660a-4916-8c0a-d4d4040811a9",
+            "file_ok": true,
+            "latency_ms": 16.8
           },
           "passed": true
         },
@@ -1967,7 +2187,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 13.3
+            "conversation_id": "5a625ab9-660a-4916-8c0a-d4d4040811a9",
+            "file_ok": true,
+            "latency_ms": 16.6
           },
           "passed": true
         },
@@ -1980,7 +2202,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 109.4
+            "conversation_id": "5a625ab9-660a-4916-8c0a-d4d4040811a9",
+            "file_ok": true,
+            "latency_ms": 108.8
           },
           "passed": true
         }
@@ -2000,7 +2224,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.2
+            "conversation_id": "78a7d115-ddac-4cc9-8e75-9be5cedeb5ea",
+            "file_ok": true,
+            "latency_ms": 15.7
           },
           "passed": true
         },
@@ -2013,7 +2239,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.6
+            "conversation_id": "78a7d115-ddac-4cc9-8e75-9be5cedeb5ea",
+            "file_ok": true,
+            "latency_ms": 15.0
           },
           "passed": true
         },
@@ -2026,7 +2254,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 99.6
+            "conversation_id": "78a7d115-ddac-4cc9-8e75-9be5cedeb5ea",
+            "file_ok": true,
+            "latency_ms": 101.5
           },
           "passed": true
         }
@@ -2046,7 +2276,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 15.0
+            "conversation_id": "a9ea2f0d-d5e3-4f98-99c4-0e6e7e941cda",
+            "file_ok": true,
+            "latency_ms": 16.2
           },
           "passed": true
         },
@@ -2059,7 +2291,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 16.7
+            "conversation_id": "a9ea2f0d-d5e3-4f98-99c4-0e6e7e941cda",
+            "file_ok": true,
+            "latency_ms": 15.5
           },
           "passed": true
         },
@@ -2072,7 +2306,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 146.9
+            "conversation_id": "a9ea2f0d-d5e3-4f98-99c4-0e6e7e941cda",
+            "file_ok": true,
+            "latency_ms": 103.9
           },
           "passed": true
         }
@@ -2092,7 +2328,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 19.0
+            "conversation_id": "12c11048-9489-4907-8836-2c0e39e359bf",
+            "file_ok": true,
+            "latency_ms": 17.3
           },
           "passed": true
         },
@@ -2105,7 +2343,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 16.6
+            "conversation_id": "12c11048-9489-4907-8836-2c0e39e359bf",
+            "file_ok": true,
+            "latency_ms": 17.5
           },
           "passed": true
         },
@@ -2118,7 +2358,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 97.4
+            "conversation_id": "12c11048-9489-4907-8836-2c0e39e359bf",
+            "file_ok": true,
+            "latency_ms": 117.4
           },
           "passed": true
         }
@@ -2138,7 +2380,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.9
+            "conversation_id": "3a717285-2faa-464c-92cb-bc4e537455ca",
+            "file_ok": true,
+            "latency_ms": 16.2
           },
           "passed": true
         },
@@ -2151,7 +2395,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.2
+            "conversation_id": "3a717285-2faa-464c-92cb-bc4e537455ca",
+            "file_ok": true,
+            "latency_ms": 19.5
           },
           "passed": true
         },
@@ -2164,7 +2410,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 99.4
+            "conversation_id": "3a717285-2faa-464c-92cb-bc4e537455ca",
+            "file_ok": true,
+            "latency_ms": 104.2
           },
           "passed": true
         }
@@ -2184,7 +2432,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.3
+            "conversation_id": "8d498236-ee4f-491f-b207-a7c451f23845",
+            "file_ok": true,
+            "latency_ms": 15.8
           },
           "passed": true
         },
@@ -2197,7 +2447,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.9
+            "conversation_id": "8d498236-ee4f-491f-b207-a7c451f23845",
+            "file_ok": true,
+            "latency_ms": 15.0
           },
           "passed": true
         },
@@ -2210,7 +2462,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 94.1
+            "conversation_id": "8d498236-ee4f-491f-b207-a7c451f23845",
+            "file_ok": true,
+            "latency_ms": 105.9
           },
           "passed": true
         }
@@ -2230,7 +2484,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.0
+            "conversation_id": "25531010-b2f6-4c29-917d-7c2698ba4c9a",
+            "file_ok": true,
+            "latency_ms": 16.0
           },
           "passed": true
         },
@@ -2243,7 +2499,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 15.1
+            "conversation_id": "25531010-b2f6-4c29-917d-7c2698ba4c9a",
+            "file_ok": true,
+            "latency_ms": 15.7
           },
           "passed": true
         },
@@ -2256,7 +2514,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 95.6
+            "conversation_id": "25531010-b2f6-4c29-917d-7c2698ba4c9a",
+            "file_ok": true,
+            "latency_ms": 106.1
           },
           "passed": true
         }
@@ -2276,7 +2536,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.9
+            "conversation_id": "0d1c99ac-79fd-4cd4-ab5a-2961cee4d810",
+            "file_ok": true,
+            "latency_ms": 16.5
           },
           "passed": true
         },
@@ -2289,7 +2551,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.0
+            "conversation_id": "0d1c99ac-79fd-4cd4-ab5a-2961cee4d810",
+            "file_ok": true,
+            "latency_ms": 15.9
           },
           "passed": true
         },
@@ -2302,7 +2566,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 97.2
+            "conversation_id": "0d1c99ac-79fd-4cd4-ab5a-2961cee4d810",
+            "file_ok": true,
+            "latency_ms": 105.5
           },
           "passed": true
         }
@@ -2322,7 +2588,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.0
+            "conversation_id": "b2f5caab-18cb-495d-8026-7e4c6773e995",
+            "file_ok": true,
+            "latency_ms": 15.5
           },
           "passed": true
         },
@@ -2335,7 +2603,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 13.3
+            "conversation_id": "b2f5caab-18cb-495d-8026-7e4c6773e995",
+            "file_ok": true,
+            "latency_ms": 15.0
           },
           "passed": true
         },
@@ -2348,7 +2618,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 97.7
+            "conversation_id": "b2f5caab-18cb-495d-8026-7e4c6773e995",
+            "file_ok": true,
+            "latency_ms": 116.8
           },
           "passed": true
         }
@@ -2368,7 +2640,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 14.9
+            "conversation_id": "cc91c22d-6bfd-4fe8-b700-70bcd60815c6",
+            "file_ok": true,
+            "latency_ms": 16.2
           },
           "passed": true
         },
@@ -2381,7 +2655,9 @@
             "pending": true,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 15.4
+            "conversation_id": "cc91c22d-6bfd-4fe8-b700-70bcd60815c6",
+            "file_ok": true,
+            "latency_ms": 15.5
           },
           "passed": true
         },
@@ -2394,7 +2670,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 112.3
+            "conversation_id": "cc91c22d-6bfd-4fe8-b700-70bcd60815c6",
+            "file_ok": true,
+            "latency_ms": 117.7
           },
           "passed": true
         }
@@ -2414,20 +2692,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 103.0
+            "conversation_id": "fede2a56-04b4-4caa-972e-099e35dc051b",
+            "file_ok": true,
+            "latency_ms": 116.6
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 31.8
+            "conversation_id": "fede2a56-04b4-4caa-972e-099e35dc051b",
+            "file_ok": true,
+            "latency_ms": 50.9
           },
           "passed": true
         },
@@ -2440,7 +2722,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 61.3
+            "conversation_id": "fede2a56-04b4-4caa-972e-099e35dc051b",
+            "file_ok": true,
+            "latency_ms": 65.0
           },
           "passed": true
         }
@@ -2460,20 +2744,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 105.9
+            "conversation_id": "9bfec220-6132-4e55-a427-28554403ca6e",
+            "file_ok": true,
+            "latency_ms": 119.2
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 30.0
+            "conversation_id": "9bfec220-6132-4e55-a427-28554403ca6e",
+            "file_ok": true,
+            "latency_ms": 46.8
           },
           "passed": true
         },
@@ -2486,7 +2774,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 61.9
+            "conversation_id": "9bfec220-6132-4e55-a427-28554403ca6e",
+            "file_ok": true,
+            "latency_ms": 66.1
           },
           "passed": true
         }
@@ -2506,20 +2796,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 110.0
+            "conversation_id": "e5c0cd2e-86ff-4183-865f-4694d700d515",
+            "file_ok": true,
+            "latency_ms": 135.8
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 28.7
+            "conversation_id": "e5c0cd2e-86ff-4183-865f-4694d700d515",
+            "file_ok": true,
+            "latency_ms": 54.5
           },
           "passed": true
         },
@@ -2532,7 +2826,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 63.9
+            "conversation_id": "e5c0cd2e-86ff-4183-865f-4694d700d515",
+            "file_ok": true,
+            "latency_ms": 122.6
           },
           "passed": true
         }
@@ -2552,20 +2848,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 109.5
+            "conversation_id": "28b5a5cb-70d5-4ddc-99da-3d1eb51355f2",
+            "file_ok": true,
+            "latency_ms": 116.1
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 30.1
+            "conversation_id": "28b5a5cb-70d5-4ddc-99da-3d1eb51355f2",
+            "file_ok": true,
+            "latency_ms": 50.2
           },
           "passed": true
         },
@@ -2578,7 +2878,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 62.4
+            "conversation_id": "28b5a5cb-70d5-4ddc-99da-3d1eb51355f2",
+            "file_ok": true,
+            "latency_ms": 70.3
           },
           "passed": true
         }
@@ -2598,20 +2900,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 110.9
+            "conversation_id": "4fcf41d4-5adc-4996-af6e-c45b1957f703",
+            "file_ok": true,
+            "latency_ms": 120.9
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 29.2
+            "conversation_id": "4fcf41d4-5adc-4996-af6e-c45b1957f703",
+            "file_ok": true,
+            "latency_ms": 51.8
           },
           "passed": true
         },
@@ -2624,7 +2930,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 62.3
+            "conversation_id": "4fcf41d4-5adc-4996-af6e-c45b1957f703",
+            "file_ok": true,
+            "latency_ms": 69.1
           },
           "passed": true
         }
@@ -2644,20 +2952,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 113.3
+            "conversation_id": "3a9289f1-4662-4aab-8ad9-41022dee8e33",
+            "file_ok": true,
+            "latency_ms": 114.5
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 29.3
+            "conversation_id": "3a9289f1-4662-4aab-8ad9-41022dee8e33",
+            "file_ok": true,
+            "latency_ms": 53.1
           },
           "passed": true
         },
@@ -2670,7 +2982,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 61.1
+            "conversation_id": "3a9289f1-4662-4aab-8ad9-41022dee8e33",
+            "file_ok": true,
+            "latency_ms": 72.0
           },
           "passed": true
         }
@@ -2690,20 +3004,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 116.6
+            "conversation_id": "69d8d503-5d3e-41fc-a58e-051f51350e39",
+            "file_ok": true,
+            "latency_ms": 132.1
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 29.9
+            "conversation_id": "69d8d503-5d3e-41fc-a58e-051f51350e39",
+            "file_ok": true,
+            "latency_ms": 49.0
           },
           "passed": true
         },
@@ -2716,7 +3034,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 64.7
+            "conversation_id": "69d8d503-5d3e-41fc-a58e-051f51350e39",
+            "file_ok": true,
+            "latency_ms": 71.6
           },
           "passed": true
         }
@@ -2736,20 +3056,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 111.3
+            "conversation_id": "30258ff3-9967-414f-8bbb-afcfcbc66131",
+            "file_ok": true,
+            "latency_ms": 121.2
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 28.9
+            "conversation_id": "30258ff3-9967-414f-8bbb-afcfcbc66131",
+            "file_ok": true,
+            "latency_ms": 49.1
           },
           "passed": true
         },
@@ -2762,7 +3086,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 61.8
+            "conversation_id": "30258ff3-9967-414f-8bbb-afcfcbc66131",
+            "file_ok": true,
+            "latency_ms": 66.8
           },
           "passed": true
         }
@@ -2782,20 +3108,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 122.9
+            "conversation_id": "0ae0b4df-28a8-4597-aa05-0d3ad2950b8b",
+            "file_ok": true,
+            "latency_ms": 117.1
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 27.5
+            "conversation_id": "0ae0b4df-28a8-4597-aa05-0d3ad2950b8b",
+            "file_ok": true,
+            "latency_ms": 49.3
           },
           "passed": true
         },
@@ -2808,7 +3138,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 61.9
+            "conversation_id": "0ae0b4df-28a8-4597-aa05-0d3ad2950b8b",
+            "file_ok": true,
+            "latency_ms": 82.0
           },
           "passed": true
         }
@@ -2828,20 +3160,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 107.8
+            "conversation_id": "b967fdab-1ccc-4c25-bc41-52b9b698ac52",
+            "file_ok": true,
+            "latency_ms": 164.3
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 28.9
+            "conversation_id": "b967fdab-1ccc-4c25-bc41-52b9b698ac52",
+            "file_ok": true,
+            "latency_ms": 50.7
           },
           "passed": true
         },
@@ -2854,7 +3190,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 63.4
+            "conversation_id": "b967fdab-1ccc-4c25-bc41-52b9b698ac52",
+            "file_ok": true,
+            "latency_ms": 93.8
           },
           "passed": true
         }
@@ -2874,20 +3212,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 116.5
+            "conversation_id": "9b8759e4-ca77-4fb9-bc4e-d0970c315ec4",
+            "file_ok": true,
+            "latency_ms": 166.5
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 30.5
+            "conversation_id": "9b8759e4-ca77-4fb9-bc4e-d0970c315ec4",
+            "file_ok": true,
+            "latency_ms": 54.1
           },
           "passed": true
         },
@@ -2900,7 +3242,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 63.5
+            "conversation_id": "9b8759e4-ca77-4fb9-bc4e-d0970c315ec4",
+            "file_ok": true,
+            "latency_ms": 79.6
           },
           "passed": true
         }
@@ -2920,20 +3264,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 111.1
+            "conversation_id": "c9cc4039-b3fe-486c-8b29-c56cd9f9ccb0",
+            "file_ok": true,
+            "latency_ms": 178.7
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 27.9
+            "conversation_id": "c9cc4039-b3fe-486c-8b29-c56cd9f9ccb0",
+            "file_ok": true,
+            "latency_ms": 55.9
           },
           "passed": true
         },
@@ -2946,7 +3294,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 60.4
+            "conversation_id": "c9cc4039-b3fe-486c-8b29-c56cd9f9ccb0",
+            "file_ok": true,
+            "latency_ms": 943.5
           },
           "passed": true
         }
@@ -2966,20 +3316,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 109.3
+            "conversation_id": "1df92982-61b8-45e8-b604-49bf735562ca",
+            "file_ok": true,
+            "latency_ms": 150.6
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 28.7
+            "conversation_id": "1df92982-61b8-45e8-b604-49bf735562ca",
+            "file_ok": true,
+            "latency_ms": 48.3
           },
           "passed": true
         },
@@ -2992,7 +3346,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 64.0
+            "conversation_id": "1df92982-61b8-45e8-b604-49bf735562ca",
+            "file_ok": true,
+            "latency_ms": 117.5
           },
           "passed": true
         }
@@ -3012,20 +3368,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 106.4
+            "conversation_id": "ec9de248-c4a9-45f2-9cd8-fc83f686ea05",
+            "file_ok": true,
+            "latency_ms": 226.0
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 28.2
+            "conversation_id": "ec9de248-c4a9-45f2-9cd8-fc83f686ea05",
+            "file_ok": true,
+            "latency_ms": 50.8
           },
           "passed": true
         },
@@ -3038,7 +3398,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 63.2
+            "conversation_id": "ec9de248-c4a9-45f2-9cd8-fc83f686ea05",
+            "file_ok": true,
+            "latency_ms": 114.8
           },
           "passed": true
         }
@@ -3058,20 +3420,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 118.9
+            "conversation_id": "4d4af83d-e330-4db7-99f7-c6b5bdc62f17",
+            "file_ok": true,
+            "latency_ms": 1561.6
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 34.0
+            "conversation_id": "4d4af83d-e330-4db7-99f7-c6b5bdc62f17",
+            "file_ok": true,
+            "latency_ms": 56.4
           },
           "passed": true
         },
@@ -3084,7 +3450,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 65.7
+            "conversation_id": "4d4af83d-e330-4db7-99f7-c6b5bdc62f17",
+            "file_ok": true,
+            "latency_ms": 69.0
           },
           "passed": true
         }
@@ -3104,20 +3472,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 239.4
+            "conversation_id": "82592fb0-a98c-48e4-8aa1-4d9eee765a48",
+            "file_ok": true,
+            "latency_ms": 114.4
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 31.7
+            "conversation_id": "82592fb0-a98c-48e4-8aa1-4d9eee765a48",
+            "file_ok": true,
+            "latency_ms": 51.6
           },
           "passed": true
         },
@@ -3130,7 +3502,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 69.0
+            "conversation_id": "82592fb0-a98c-48e4-8aa1-4d9eee765a48",
+            "file_ok": true,
+            "latency_ms": 65.9
           },
           "passed": true
         }
@@ -3150,20 +3524,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 124.1
+            "conversation_id": "28e4ffac-f855-480c-85ae-bd8072c49a19",
+            "file_ok": true,
+            "latency_ms": 118.2
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 29.8
+            "conversation_id": "28e4ffac-f855-480c-85ae-bd8072c49a19",
+            "file_ok": true,
+            "latency_ms": 53.0
           },
           "passed": true
         },
@@ -3176,7 +3554,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 64.0
+            "conversation_id": "28e4ffac-f855-480c-85ae-bd8072c49a19",
+            "file_ok": true,
+            "latency_ms": 73.2
           },
           "passed": true
         }
@@ -3196,20 +3576,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 106.0
+            "conversation_id": "46a28832-8462-49f6-9209-7888082ccd58",
+            "file_ok": true,
+            "latency_ms": 117.5
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 29.9
+            "conversation_id": "46a28832-8462-49f6-9209-7888082ccd58",
+            "file_ok": true,
+            "latency_ms": 49.8
           },
           "passed": true
         },
@@ -3222,7 +3606,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 65.6
+            "conversation_id": "46a28832-8462-49f6-9209-7888082ccd58",
+            "file_ok": true,
+            "latency_ms": 68.9
           },
           "passed": true
         }
@@ -3242,20 +3628,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 115.1
+            "conversation_id": "77b11cdf-5305-468c-bcff-a815a705c630",
+            "file_ok": true,
+            "latency_ms": 131.7
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 38.8
+            "conversation_id": "77b11cdf-5305-468c-bcff-a815a705c630",
+            "file_ok": true,
+            "latency_ms": 53.1
           },
           "passed": true
         },
@@ -3268,7 +3658,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 84.6
+            "conversation_id": "77b11cdf-5305-468c-bcff-a815a705c630",
+            "file_ok": true,
+            "latency_ms": 69.7
           },
           "passed": true
         }
@@ -3288,20 +3680,24 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 108.2
+            "conversation_id": "0255bc3f-3a2a-495d-84a5-2e900d266917",
+            "file_ok": true,
+            "latency_ms": 126.1
           },
           "passed": true
         },
         {
           "message": "cot nao bi null",
           "checks": {
-            "response_type": "schema",
-            "execution_mode": "SCHEMA_INSPECTION",
+            "response_type": "data_quality",
+            "execution_mode": "COLUMN_NULLS",
             "sql": false,
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 29.4
+            "conversation_id": "0255bc3f-3a2a-495d-84a5-2e900d266917",
+            "file_ok": true,
+            "latency_ms": 54.9
           },
           "passed": true
         },
@@ -3314,7 +3710,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 62.6
+            "conversation_id": "0255bc3f-3a2a-495d-84a5-2e900d266917",
+            "file_ok": true,
+            "latency_ms": 67.9
           },
           "passed": true
         }
@@ -3334,7 +3732,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 223.0
+            "conversation_id": "2e59c79f-dc77-4cf6-b468-4f6bf8074947",
+            "file_ok": true,
+            "latency_ms": 122.1
           },
           "passed": true
         },
@@ -3347,7 +3747,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 56.5
+            "conversation_id": "e08a4eb0-9c88-495f-94e9-baeaf3777634",
+            "file_ok": true,
+            "latency_ms": 53.4
           },
           "passed": true
         },
@@ -3360,7 +3762,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 25.3
+            "conversation_id": "2757ee9e-f492-492d-a445-3323506e93fe",
+            "file_ok": true,
+            "latency_ms": 24.9
           },
           "passed": true
         },
@@ -3373,7 +3777,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 108.7
+            "conversation_id": "2e59c79f-dc77-4cf6-b468-4f6bf8074947",
+            "file_ok": true,
+            "latency_ms": 109.5
           },
           "passed": true
         }
@@ -3393,7 +3799,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 113.1
+            "conversation_id": "6838f62c-dab8-4985-aaba-3f70270111d8",
+            "file_ok": true,
+            "latency_ms": 121.3
           },
           "passed": true
         },
@@ -3406,7 +3814,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 51.8
+            "conversation_id": "55698cc5-5442-4a49-8b71-e7edd8d46153",
+            "file_ok": true,
+            "latency_ms": 59.1
           },
           "passed": true
         },
@@ -3419,7 +3829,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 23.5
+            "conversation_id": "149d2d09-d3f1-413a-8c06-a34a80669e9e",
+            "file_ok": true,
+            "latency_ms": 26.4
           },
           "passed": true
         },
@@ -3432,7 +3844,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 106.2
+            "conversation_id": "6838f62c-dab8-4985-aaba-3f70270111d8",
+            "file_ok": true,
+            "latency_ms": 118.3
           },
           "passed": true
         }
@@ -3452,7 +3866,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 115.4
+            "conversation_id": "a1761eed-d3f3-4e5f-a766-e8b2bdb17a7b",
+            "file_ok": true,
+            "latency_ms": 135.3
           },
           "passed": true
         },
@@ -3465,7 +3881,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 51.4
+            "conversation_id": "c95e14b6-4bd9-41cc-b978-6724b04b1b29",
+            "file_ok": true,
+            "latency_ms": 57.8
           },
           "passed": true
         },
@@ -3478,7 +3896,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 24.2
+            "conversation_id": "d59740f6-f412-4e19-b1a6-2f6c4bf8fb8e",
+            "file_ok": true,
+            "latency_ms": 26.4
           },
           "passed": true
         },
@@ -3491,7 +3911,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 176.9
+            "conversation_id": "a1761eed-d3f3-4e5f-a766-e8b2bdb17a7b",
+            "file_ok": true,
+            "latency_ms": 119.5
           },
           "passed": true
         }
@@ -3511,7 +3933,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 108.3
+            "conversation_id": "d420f06b-4f01-483f-8774-0f35487e7f5a",
+            "file_ok": true,
+            "latency_ms": 265.8
           },
           "passed": true
         },
@@ -3524,7 +3948,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 54.4
+            "conversation_id": "1ee32486-4a65-4c13-ba72-f7724feb4da5",
+            "file_ok": true,
+            "latency_ms": 57.7
           },
           "passed": true
         },
@@ -3537,7 +3963,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 24.1
+            "conversation_id": "ef9f732a-202b-4715-8d05-d18dfdac4d27",
+            "file_ok": true,
+            "latency_ms": 30.0
           },
           "passed": true
         },
@@ -3550,7 +3978,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 104.0
+            "conversation_id": "d420f06b-4f01-483f-8774-0f35487e7f5a",
+            "file_ok": true,
+            "latency_ms": 136.6
           },
           "passed": true
         }
@@ -3570,7 +4000,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 106.5
+            "conversation_id": "cad17131-22cf-4ba6-a273-d74048a5fdb8",
+            "file_ok": true,
+            "latency_ms": 125.8
           },
           "passed": true
         },
@@ -3583,7 +4015,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 54.2
+            "conversation_id": "ce881489-dc1e-4518-bfe2-ae9f1bc14c26",
+            "file_ok": true,
+            "latency_ms": 57.7
           },
           "passed": true
         },
@@ -3596,7 +4030,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 24.2
+            "conversation_id": "99e934b2-79e0-4689-aca2-beab377a49fa",
+            "file_ok": true,
+            "latency_ms": 25.3
           },
           "passed": true
         },
@@ -3609,7 +4045,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 101.8
+            "conversation_id": "cad17131-22cf-4ba6-a273-d74048a5fdb8",
+            "file_ok": true,
+            "latency_ms": 111.6
           },
           "passed": true
         }
@@ -3629,7 +4067,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 109.5
+            "conversation_id": "1f83fdc8-64b7-46bc-b094-e1a15bcb2fea",
+            "file_ok": true,
+            "latency_ms": 122.8
           },
           "passed": true
         },
@@ -3642,7 +4082,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 56.3
+            "conversation_id": "8471db1b-3260-40bd-8cac-c2ca5f460863",
+            "file_ok": true,
+            "latency_ms": 57.2
           },
           "passed": true
         },
@@ -3655,7 +4097,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 23.2
+            "conversation_id": "beb3a8d4-fd8c-4d05-a9da-63bb7407dcac",
+            "file_ok": true,
+            "latency_ms": 28.0
           },
           "passed": true
         },
@@ -3668,7 +4112,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 97.5
+            "conversation_id": "1f83fdc8-64b7-46bc-b094-e1a15bcb2fea",
+            "file_ok": true,
+            "latency_ms": 123.2
           },
           "passed": true
         }
@@ -3688,7 +4134,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 108.5
+            "conversation_id": "f9676b40-f0f3-41fa-bf23-16402c408c08",
+            "file_ok": true,
+            "latency_ms": 116.0
           },
           "passed": true
         },
@@ -3701,7 +4149,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 52.7
+            "conversation_id": "d68020b9-5c12-411d-87d4-0983e51b4d7d",
+            "file_ok": true,
+            "latency_ms": 54.5
           },
           "passed": true
         },
@@ -3714,7 +4164,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 23.6
+            "conversation_id": "2f2d9227-7b70-43b1-af32-216b3226400d",
+            "file_ok": true,
+            "latency_ms": 26.5
           },
           "passed": true
         },
@@ -3727,7 +4179,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 107.6
+            "conversation_id": "f9676b40-f0f3-41fa-bf23-16402c408c08",
+            "file_ok": true,
+            "latency_ms": 112.8
           },
           "passed": true
         }
@@ -3747,7 +4201,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 106.0
+            "conversation_id": "a3430108-2c3c-4b8a-a45c-880d8b6a26fc",
+            "file_ok": true,
+            "latency_ms": 118.0
           },
           "passed": true
         },
@@ -3760,7 +4216,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 53.9
+            "conversation_id": "637b964e-4d4c-47a7-ae27-21818fbf3c5f",
+            "file_ok": true,
+            "latency_ms": 56.6
           },
           "passed": true
         },
@@ -3773,7 +4231,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 23.5
+            "conversation_id": "75189895-a751-4b94-ab39-9a278b3a7ca0",
+            "file_ok": true,
+            "latency_ms": 25.4
           },
           "passed": true
         },
@@ -3786,7 +4246,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 113.4
+            "conversation_id": "a3430108-2c3c-4b8a-a45c-880d8b6a26fc",
+            "file_ok": true,
+            "latency_ms": 119.2
           },
           "passed": true
         }
@@ -3806,7 +4268,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 106.9
+            "conversation_id": "a3f91797-a78d-4ed1-afc6-c383863fd41d",
+            "file_ok": true,
+            "latency_ms": 128.0
           },
           "passed": true
         },
@@ -3819,7 +4283,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 53.7
+            "conversation_id": "abce73d1-ea58-4ff4-9cf6-4bbaac7c4a15",
+            "file_ok": true,
+            "latency_ms": 54.3
           },
           "passed": true
         },
@@ -3832,7 +4298,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 25.3
+            "conversation_id": "1b9abcdb-93d4-4449-a7cb-adb6d0c41e03",
+            "file_ok": true,
+            "latency_ms": 25.6
           },
           "passed": true
         },
@@ -3845,7 +4313,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 149.5
+            "conversation_id": "a3f91797-a78d-4ed1-afc6-c383863fd41d",
+            "file_ok": true,
+            "latency_ms": 111.6
           },
           "passed": true
         }
@@ -3865,7 +4335,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 108.4
+            "conversation_id": "86ad36c2-d075-4b38-a10f-9ccf976abb0f",
+            "file_ok": true,
+            "latency_ms": 119.6
           },
           "passed": true
         },
@@ -3878,7 +4350,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 56.7
+            "conversation_id": "97f0d4a7-ec74-4d3f-9051-1e82b1aea1aa",
+            "file_ok": true,
+            "latency_ms": 54.7
           },
           "passed": true
         },
@@ -3891,7 +4365,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 23.5
+            "conversation_id": "c3b5f9d5-2e9a-4ac0-9361-c670e52c1a1f",
+            "file_ok": true,
+            "latency_ms": 25.8
           },
           "passed": true
         },
@@ -3904,7 +4380,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 106.0
+            "conversation_id": "86ad36c2-d075-4b38-a10f-9ccf976abb0f",
+            "file_ok": true,
+            "latency_ms": 124.9
           },
           "passed": true
         }
@@ -3924,7 +4402,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 105.2
+            "conversation_id": "e497562f-67f8-4cc2-9bcb-e48340497062",
+            "file_ok": true,
+            "latency_ms": 119.9
           },
           "passed": true
         },
@@ -3937,7 +4417,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 53.6
+            "conversation_id": "e43e2b38-2296-418f-8a8c-241912c42063",
+            "file_ok": true,
+            "latency_ms": 56.4
           },
           "passed": true
         },
@@ -3950,7 +4432,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 23.5
+            "conversation_id": "98f81813-978e-4867-b2c1-67f9544fc3c0",
+            "file_ok": true,
+            "latency_ms": 26.4
           },
           "passed": true
         },
@@ -3963,7 +4447,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 109.7
+            "conversation_id": "e497562f-67f8-4cc2-9bcb-e48340497062",
+            "file_ok": true,
+            "latency_ms": 110.6
           },
           "passed": true
         }
@@ -3983,7 +4469,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 106.7
+            "conversation_id": "3d9ad2f8-af06-4e4a-9c52-8c962e5d42c3",
+            "file_ok": true,
+            "latency_ms": 116.1
           },
           "passed": true
         },
@@ -3996,7 +4484,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 57.1
+            "conversation_id": "850d76d9-9337-4f28-a63d-2c68021e640d",
+            "file_ok": true,
+            "latency_ms": 56.3
           },
           "passed": true
         },
@@ -4009,7 +4499,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 43.0
+            "conversation_id": "be73f4a0-6779-4d3b-bab3-bfc5dba295af",
+            "file_ok": true,
+            "latency_ms": 27.2
           },
           "passed": true
         },
@@ -4022,7 +4514,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 102.4
+            "conversation_id": "3d9ad2f8-af06-4e4a-9c52-8c962e5d42c3",
+            "file_ok": true,
+            "latency_ms": 108.9
           },
           "passed": true
         }
@@ -4042,7 +4536,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 109.3
+            "conversation_id": "a60602bc-03f7-4bba-a0c7-62f527293707",
+            "file_ok": true,
+            "latency_ms": 120.3
           },
           "passed": true
         },
@@ -4055,7 +4551,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 54.6
+            "conversation_id": "fb297621-56de-49ad-85d8-459dd4d9505d",
+            "file_ok": true,
+            "latency_ms": 62.4
           },
           "passed": true
         },
@@ -4068,7 +4566,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 22.2
+            "conversation_id": "be058855-d6cf-486b-9cc2-469d316c51ec",
+            "file_ok": true,
+            "latency_ms": 25.5
           },
           "passed": true
         },
@@ -4081,7 +4581,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 99.1
+            "conversation_id": "a60602bc-03f7-4bba-a0c7-62f527293707",
+            "file_ok": true,
+            "latency_ms": 105.4
           },
           "passed": true
         }
@@ -4101,7 +4603,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 108.9
+            "conversation_id": "c9d600f8-d5af-47a2-9eb0-0e8525a1d062",
+            "file_ok": true,
+            "latency_ms": 118.8
           },
           "passed": true
         },
@@ -4114,7 +4618,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 52.4
+            "conversation_id": "8b74dcda-56e6-4922-8397-6d72b279be9d",
+            "file_ok": true,
+            "latency_ms": 57.0
           },
           "passed": true
         },
@@ -4127,7 +4633,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 23.6
+            "conversation_id": "7a56758c-5057-4d37-bc0c-b58e82649c4d",
+            "file_ok": true,
+            "latency_ms": 26.2
           },
           "passed": true
         },
@@ -4140,7 +4648,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 98.9
+            "conversation_id": "c9d600f8-d5af-47a2-9eb0-0e8525a1d062",
+            "file_ok": true,
+            "latency_ms": 105.0
           },
           "passed": true
         }
@@ -4160,7 +4670,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 106.9
+            "conversation_id": "f546ef15-3e52-444b-8a8d-132aa428a032",
+            "file_ok": true,
+            "latency_ms": 126.7
           },
           "passed": true
         },
@@ -4173,7 +4685,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 50.4
+            "conversation_id": "dd7b4f0d-c67c-4b7e-81b8-c323dd7f5a33",
+            "file_ok": true,
+            "latency_ms": 56.0
           },
           "passed": true
         },
@@ -4186,7 +4700,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
-            "latency_ms": 23.7
+            "conversation_id": "0877eebb-9d85-40b7-b561-70c6026c50fa",
+            "file_ok": true,
+            "latency_ms": 26.5
           },
           "passed": true
         },
@@ -4199,7 +4715,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 105.5
+            "conversation_id": "f546ef15-3e52-444b-8a8d-132aa428a032",
+            "file_ok": true,
+            "latency_ms": 109.3
           },
           "passed": true
         }
@@ -4219,7 +4737,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 152.1
+            "conversation_id": "91f33f69-540e-4426-bb0d-ffed54fd5851",
+            "file_ok": true,
+            "latency_ms": 156.9
           },
           "passed": true
         }
@@ -4239,7 +4759,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 134.1
+            "conversation_id": "eecefafe-27b6-4395-b74c-9cacfe2700f2",
+            "file_ok": true,
+            "latency_ms": 146.0
           },
           "passed": true
         }
@@ -4259,7 +4781,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 157.9
+            "conversation_id": "4756ebaa-7e46-40a5-9efb-b8ba449b735a",
+            "file_ok": true,
+            "latency_ms": 172.1
           },
           "passed": true
         }
@@ -4279,7 +4803,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 140.6
+            "conversation_id": "b349a7f3-5b5b-4596-9516-851e9a17d200",
+            "file_ok": true,
+            "latency_ms": 148.4
           },
           "passed": true
         }
@@ -4299,7 +4825,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 136.2
+            "conversation_id": "06baecae-6cb2-432f-a623-33187e92177b",
+            "file_ok": true,
+            "latency_ms": 180.8
           },
           "passed": true
         }
@@ -4319,7 +4847,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 135.0
+            "conversation_id": "067a9e65-eb5e-47f3-8148-654d3fda9021",
+            "file_ok": true,
+            "latency_ms": 152.4
           },
           "passed": true
         }
@@ -4339,7 +4869,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 144.7
+            "conversation_id": "b55040ec-d328-4d6d-aeea-211b9a827856",
+            "file_ok": true,
+            "latency_ms": 154.9
           },
           "passed": true
         }
@@ -4359,7 +4891,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 133.1
+            "conversation_id": "dd643803-696b-48fe-a0ea-24fb83d7daa3",
+            "file_ok": true,
+            "latency_ms": 159.2
           },
           "passed": true
         }
@@ -4379,7 +4913,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 147.4
+            "conversation_id": "7d59b286-1c0a-45ad-89b9-31108bee8ff9",
+            "file_ok": true,
+            "latency_ms": 152.7
           },
           "passed": true
         }
@@ -4399,7 +4935,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 133.5
+            "conversation_id": "7d79286e-1c2d-4c93-a926-f8e29bd640cd",
+            "file_ok": true,
+            "latency_ms": 143.1
           },
           "passed": true
         }
@@ -4419,7 +4957,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 142.6
+            "conversation_id": "d0f34cff-b66f-4ff0-bc5d-64672d492822",
+            "file_ok": true,
+            "latency_ms": 155.9
           },
           "passed": true
         }
@@ -4439,7 +4979,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 143.1
+            "conversation_id": "b12f06ab-8795-4774-a556-f8d1d702dbcf",
+            "file_ok": true,
+            "latency_ms": 144.6
           },
           "passed": true
         }
@@ -4459,7 +5001,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 140.9
+            "conversation_id": "9a0c1e4a-58a5-4eca-8d9d-6f7c7f078ce5",
+            "file_ok": true,
+            "latency_ms": 158.9
           },
           "passed": true
         }
@@ -4479,7 +5023,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 296.9
+            "conversation_id": "6fa60080-a0e4-40f5-9d93-38857295c812",
+            "file_ok": true,
+            "latency_ms": 144.1
           },
           "passed": true
         }
@@ -4499,7 +5045,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 144.4
+            "conversation_id": "6ddba678-8555-4d6e-8ae0-4327e8dcc98d",
+            "file_ok": true,
+            "latency_ms": 179.0
           },
           "passed": true
         }
@@ -4519,7 +5067,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 134.5
+            "conversation_id": "0765fcec-7343-4dd4-ae4b-bb9fcfecc400",
+            "file_ok": true,
+            "latency_ms": 140.5
           },
           "passed": true
         }
@@ -4539,7 +5089,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 142.6
+            "conversation_id": "85bc1035-b8c1-4b53-a541-84f4d24d8456",
+            "file_ok": true,
+            "latency_ms": 156.4
           },
           "passed": true
         }
@@ -4559,7 +5111,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 135.6
+            "conversation_id": "336418e0-b3d4-47ca-9a10-c9f51e3bf715",
+            "file_ok": true,
+            "latency_ms": 145.8
           },
           "passed": true
         }
@@ -4579,7 +5133,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 155.4
+            "conversation_id": "99abab24-fdab-4739-a7b2-a2b9304aee66",
+            "file_ok": true,
+            "latency_ms": 156.2
           },
           "passed": true
         }
@@ -4599,7 +5155,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
-            "latency_ms": 135.8
+            "conversation_id": "e9eeadd6-f05e-4e43-93f2-c74a39665c83",
+            "file_ok": true,
+            "latency_ms": 141.6
           },
           "passed": true
         }
@@ -4619,7 +5177,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 33.6
+            "conversation_id": "90af2f0b-60e6-4f78-80b7-653408262217",
+            "file_ok": true,
+            "latency_ms": 32.9
           },
           "passed": true
         }
@@ -4639,7 +5199,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 32.3
+            "conversation_id": "7332db5a-a60c-4fa9-b202-ca16dfd465a8",
+            "file_ok": true,
+            "latency_ms": 33.5
           },
           "passed": true
         }
@@ -4659,7 +5221,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 30.6
+            "conversation_id": "b3c83dfa-0051-4c3e-a766-eb13cf4a8968",
+            "file_ok": true,
+            "latency_ms": 31.2
           },
           "passed": true
         }
@@ -4679,6 +5243,8 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "conversation_id": "78e1f64c-b8f5-4d98-99c4-7f4181e92f39",
+            "file_ok": true,
             "latency_ms": 32.0
           },
           "passed": true
@@ -4699,7 +5265,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 28.7
+            "conversation_id": "16addf96-c88e-4bbe-a7aa-2d09d1189b3c",
+            "file_ok": true,
+            "latency_ms": 33.1
           },
           "passed": true
         }
@@ -4719,7 +5287,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 31.4
+            "conversation_id": "162945df-040f-4f71-b5d9-fa6823adc36e",
+            "file_ok": true,
+            "latency_ms": 49.1
           },
           "passed": true
         }
@@ -4739,7 +5309,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 30.1
+            "conversation_id": "cc3f9175-fc5e-48ee-9267-c3e556ba94ab",
+            "file_ok": true,
+            "latency_ms": 32.8
           },
           "passed": true
         }
@@ -4759,7 +5331,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 30.7
+            "conversation_id": "8bbeda63-fda9-4944-8514-20fe5a209b8a",
+            "file_ok": true,
+            "latency_ms": 30.5
           },
           "passed": true
         }
@@ -4779,7 +5353,9 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-            "latency_ms": 38.9
+            "conversation_id": "1e16e96f-d391-48c0-8c98-e49efd03ffe9",
+            "file_ok": true,
+            "latency_ms": 30.5
           },
           "passed": true
         }
@@ -4799,6 +5375,8 @@
             "pending": false,
             "llm_called": false,
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "conversation_id": "2068b1ba-da18-4f9a-ba35-15d9ec0fcbcc",
+            "file_ok": true,
             "latency_ms": 31.3
           },
           "passed": true

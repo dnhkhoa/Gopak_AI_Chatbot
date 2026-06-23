@@ -117,36 +117,87 @@ def run() -> dict[str, Any]:
     files = list_uploaded_files()
     settings = get_settings()
     results = []
+    isolation = {
+        "cross_file_violations": 0,
+        "cross_conversation_overlap": 0,
+        "mismatch_total": 0,
+        "mismatch_rejected": 0,
+        "pending_clarification_leakage": 0,
+    }
     with tempfile.TemporaryDirectory(prefix="gopak-challenge-", ignore_cleanup_errors=True) as tmp:
         memory = ConversationMemoryService(db_path=Path(tmp) / "memory.db", cache_root=settings.cache_dir, enabled=True, recent_turns_limit=settings.recent_turns_limit)
         app = ChatApplicationService(settings=settings, memory_service=memory)
         for case in cases:
-            conv = app.create_conversation(case["id"])
-            _select(app, conv.id, files, case["file_key"])
+            # One conversation = one immutable source file. Selecting another file within a case
+            # creates (or reopens) a SEPARATE conversation bound to that file.
+            convs: dict[str, str] = {}
+            conv_messages: dict[str, set[str]] = {}
+
+            def conv_for(file_key: str) -> tuple[str, str | None]:
+                if file_key not in convs:
+                    created = app.create_conversation(f"{case['id']}-{file_key}")
+                    record = _record(files, file_key)
+                    if record and record.get("id"):
+                        app.set_active_file(created.id, str(record["id"]))
+                    convs[file_key] = created.id
+                    conv_messages[created.id] = set()
+                return convs[file_key], (_record(files, file_key) or {}).get("id")
+
+            current_key = case["file_key"]
+            cid, expected_file_id = conv_for(current_key)
             case_passed = True
             turns = []
             for turn in case["turns"]:
                 if turn.get("select_file"):
-                    _select(app, conv.id, files, turn["select_file"])
+                    current_key = turn["select_file"]
+                    cid, expected_file_id = conv_for(current_key)
                 started = perf_counter()
-                response = app.process_message(conv.id, turn["message"], debug=True)
+                response = app.process_message(cid, turn["message"], debug=True)
                 latency = round((perf_counter() - started) * 1000, 1)
                 metadata = response.metadata or {}
                 debug = metadata.get("debug") if isinstance(metadata.get("debug"), dict) else {}
                 sql = bool(metadata.get("generated_sql") or (debug or {}).get("sql"))
+                active_file_id = metadata.get("active_file_id")
+                file_ok = not expected_file_id or active_file_id in {expected_file_id, None}
+                if not file_ok:
+                    isolation["cross_file_violations"] += 1
+                if turn["message"] in conv_messages.get(cid, set()):
+                    isolation["cross_conversation_overlap"] += 1
+                conv_messages.setdefault(cid, set()).add(turn["message"])
                 checks = {
                     "response_type": response.response_type,
                     "execution_mode": metadata.get("execution_mode") or metadata.get("mode"),
                     "sql": sql,
                     "pending": bool(metadata.get("pending_clarification_after")),
                     "llm_called": bool(metadata.get("llm_called")),
-                    "active_file_id": metadata.get("active_file_id"),
+                    "active_file_id": active_file_id,
+                    "conversation_id": cid,
+                    "file_ok": file_ok,
                     "latency_ms": latency,
                 }
-                ok = _matches(checks, turn.get("expect", {}))
+                ok = _matches(checks, turn.get("expect", {})) and file_ok
                 case_passed = case_passed and ok
                 turns.append({"message": turn["message"], "checks": checks, "passed": ok})
             results.append({"id": case["id"], "category": case["category"], "passed": case_passed, "turns": turns})
+
+        # Explicit product-rule assertion: a bound conversation rejects a mismatched file (HTTP 409 / ValueError)
+        # without running SQL, calling the LLM, or persisting anything.
+        machine_rec, loss_rec = _record(files, "machine"), _record(files, "loss")
+        if machine_rec and loss_rec:
+            guard_conv = app.create_conversation("CHAL-MISMATCH-GUARD")
+            app.set_active_file(guard_conv.id, str(machine_rec["id"]))
+            isolation["mismatch_total"] += 1
+            try:
+                app.set_active_file(guard_conv.id, str(loss_rec["id"]))
+            except ValueError as exc:
+                if str(exc) == "CONVERSATION_FILE_MISMATCH":
+                    isolation["mismatch_rejected"] += 1
+            isolation["mismatch_total"] += 1
+            try:
+                app.process_message(guard_conv.id, "top 5 nhom ton that theo so lan", debug=True, source_file_id=str(loss_rec["id"]))
+            except ValueError as exc:
+                if str(exc) == "CONVERSATION_FILE_MISMATCH":
+                    isolation["mismatch_rejected"] += 1
     latencies = [turn["checks"]["latency_ms"] for result in results for turn in result["turns"]]
     summary = {
         "total": len(results),
@@ -159,16 +210,17 @@ def run() -> dict[str, Any]:
         "actual_llm_calls": sum(1 for result in results for turn in result["turns"] if turn["checks"].get("llm_called")),
         "p50_latency_ms": round(statistics.median(latencies), 1) if latencies else 0,
         "p95_latency_ms": round(sorted(latencies)[int(len(latencies) * 0.95) - 1], 1) if latencies else 0,
+        "isolation": isolation,
+        "mismatch_rejected_rate": round(isolation["mismatch_rejected"] / max(1, isolation["mismatch_total"]), 4),
     }
     (ARTIFACTS / "customer_challenge_results.json").write_text(json.dumps({"summary": summary, "results": results}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=True, indent=2))
     return summary
 
 
-def _select(app: ChatApplicationService, conversation_id: str, files: list[dict[str, Any]], key: str) -> None:
+def _record(files: list[dict[str, Any]], key: str) -> dict[str, Any] | None:
     needles = {"machine": "Machine_Downtime", "loss": "Loss_Assignment", "entry": "EntryTransaction"}
-    record = next(item for item in files if needles[key] in str(item.get("filename", "")))
-    app.set_active_file(conversation_id, str(record["id"]))
+    return next((item for item in files if needles[key] in str(item.get("filename", ""))), None)
 
 
 def _matches(checks: dict[str, Any], expected: dict[str, Any]) -> bool:

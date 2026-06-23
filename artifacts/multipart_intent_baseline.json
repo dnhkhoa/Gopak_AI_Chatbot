@@ -1,0 +1,42 @@
+{
+  "captured": "2026-06-23 (before multipart-intent fix, commit 4d0d3cf)",
+  "note": "Baseline reproduction of the multi-part intent bug. Trailing/leading commentary keywords ('nhận xét') hijacked self-contained analytical requests into a generic clarification. See artifacts/multipart_intent_results.json for the post-fix state.",
+  "cases": [
+    {
+      "case": "case1_loss",
+      "input": "Cho tôi top 5 nhóm có số lần ghi nhận cao nhất, thêm tỷ lệ phần trăm và nhận xét những điểm đáng chú ý trong kết quả.",
+      "resolved_intent": "clarification",
+      "execution_mode": "CLARIFICATION",
+      "metric": null,
+      "dimension": null,
+      "limit": null,
+      "derived_metrics": [],
+      "requested_outputs": ["table", "commentary"],
+      "clarification_reason": "Bạn muốn mình nhận xét dựa trên kết quả nào? Hãy hỏi một bảng, biểu đồ hoặc thống kê cụ thể trước.",
+      "response_type": "clarification",
+      "bug": "Commentary keyword hijacked a complete analytical request."
+    },
+    {
+      "case": "case6_machine",
+      "input": "Nhận xét top 5 máy theo tổng downtime trong tháng gần nhất.",
+      "resolved_intent": "clarification",
+      "execution_mode": "CLARIFICATION",
+      "metric": null,
+      "dimension": null,
+      "limit": null,
+      "derived_metrics": [],
+      "requested_outputs": ["table", "commentary"],
+      "clarification_reason": "Bạn muốn mình nhận xét dựa trên kết quả nào? Hãy hỏi một bảng, biểu đồ hoặc thống kê cụ thể trước.",
+      "response_type": "clarification",
+      "bug": "Leading commentary keyword hijacked a complete analytical request; time filter dropped."
+    },
+    {
+      "case": "case5_followup_control",
+      "input": "Nhận xét bảng vừa rồi.",
+      "resolved_intent": "commentary_followup",
+      "execution_mode": "REAL_LLM",
+      "response_type": "text",
+      "bug": "None - genuine follow-up-only commentary worked correctly (control)."
+    }
+  ]
+}

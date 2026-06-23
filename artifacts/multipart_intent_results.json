@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "total": 3,
+    "complete": 3,
+    "missing_requirement_count": 0
+  },
+  "cases": [
+    {
+      "id": "AQ-multipart-1",
+      "message": "Cho tôi top 5 nhóm có số lần ghi nhận cao nhất, thêm tỷ lệ phần trăm và nhận xét những điểm đáng chú ý trong kết quả.",
+      "requested": [
+        "top_n",
+        "group_count",
+        "percentage",
+        "table",
+        "commentary"
+      ],
+      "fulfilled": [
+        "top_n",
+        "group_count",
+        "percentage",
+        "table",
+        "commentary"
+      ],
+      "missing": [],
+      "complete": true
+    },
+    {
+      "id": "AQ-multipart-2",
+      "message": "Cho tôi top 3 loại tổn thất, tỷ lệ trên tổng và giải thích ngắn gọn.",
+      "requested": [
+        "top_n",
+        "percentage",
+        "table",
+        "commentary"
+      ],
+      "fulfilled": [
+        "top_n",
+        "percentage",
+        "table",
+        "commentary"
+      ],
+      "missing": [],
+      "complete": true
+    },
+    {
+      "id": "AQ-multipart-3",
+      "message": "Nhận xét top 5 máy theo tổng downtime trong tháng gần nhất.",
+      "requested": [
+        "top_n",
+        "time_filter",
+        "commentary",
+        "table"
+      ],
+      "fulfilled": [
+        "top_n",
+        "time_filter",
+        "commentary",
+        "table"
+      ],
+      "missing": [],
+      "complete": true
+    }
+  ]
+}
