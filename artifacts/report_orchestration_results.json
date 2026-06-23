@@ -1,0 +1,173 @@
+{
+  "summary": {
+    "total": 2,
+    "failed": 0,
+    "status": "passed"
+  },
+  "results": [
+    {
+      "id": "overview_report",
+      "message": "Tạo báo cáo tổng quan về dữ liệu downtime.",
+      "response_type": "report",
+      "title": "Báo cáo phân tích downtime",
+      "summary": "Báo cáo đã tổng hợp 9151 dòng dữ liệu trong giai đoạn 2025-11-03 đến 2026-02-03.\nTổng downtime là 1.989,56 giờ.\nMáy đứng đầu theo downtime là Máy 11 với 413,57 giờ.\nNguyên nhân tổn thất lớn nhất là MÁY LỖI PHẦN CƠ với 563,32 giờ.\nReport includes overview, KPI, ranked tables, time trend, source and limitation sections.",
+      "downloads": [
+        {
+          "id": "report_2d6ec2ab-3c45-4eb3-ab62-26cc0ff5e32a.html",
+          "label": "Tải HTML",
+          "filename": "report_2d6ec2ab-3c45-4eb3-ab62-26cc0ff5e32a.html",
+          "mime_type": "text/html"
+        },
+        {
+          "id": "report_2d6ec2ab-3c45-4eb3-ab62-26cc0ff5e32a.xlsx",
+          "label": "Tải Excel",
+          "filename": "report_2d6ec2ab-3c45-4eb3-ab62-26cc0ff5e32a.xlsx",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        }
+      ],
+      "report_completeness": {
+        "missing": [],
+        "required": [
+          "dataset_overview",
+          "kpi_total_downtime",
+          "kpi_stop_count",
+          "top_machines",
+          "top_causes",
+          "time_trend",
+          "management_commentary",
+          "source_filters_limitations"
+        ]
+      },
+      "report_section_statuses": {
+        "dataset_overview": {
+          "status": "SUCCESS",
+          "record_count": 9151,
+          "date_range": {
+            "from": "2025-11-03",
+            "to": "2026-02-03"
+          }
+        },
+        "top_machines": {
+          "status": "SUCCESS",
+          "rows": 5
+        },
+        "top_causes": {
+          "status": "SUCCESS",
+          "rows": 5
+        },
+        "time_trend": {
+          "status": "SUCCESS",
+          "rows": 90
+        },
+        "kpi_total_downtime": {
+          "status": "SUCCESS",
+          "hours": 1989.56
+        },
+        "kpi_stop_count": {
+          "status": "SUCCESS",
+          "count": 9151
+        },
+        "management_commentary": {
+          "status": "SUCCESS"
+        },
+        "source_filters_limitations": {
+          "status": "SUCCESS",
+          "source": "Machine_Downtime_20260203_100753.xlsx / Report"
+        }
+      },
+      "checks": {
+        "is_report": true,
+        "multi_query": true,
+        "has_table": true,
+        "has_chart": true,
+        "downloads": true,
+        "complete": true,
+        "has_required_sections": true,
+        "chart_contract_current": true
+      },
+      "passed": true
+    },
+    {
+      "id": "downtime_report",
+      "message": "Tạo báo cáo phân tích downtime gồm KPI, top máy, top nguyên nhân và xu hướng theo ngày.",
+      "response_type": "report",
+      "title": "Báo cáo phân tích downtime",
+      "summary": "Báo cáo đã tổng hợp 9151 dòng dữ liệu trong giai đoạn 2025-11-03 đến 2026-02-03.\nTổng downtime là 1.989,56 giờ.\nMáy đứng đầu theo downtime là Máy 11 với 413,57 giờ.\nNguyên nhân tổn thất lớn nhất là MÁY LỖI PHẦN CƠ với 563,32 giờ.\nReport includes overview, KPI, ranked tables, time trend, source and limitation sections.",
+      "downloads": [
+        {
+          "id": "report_a19d6771-47e1-42f8-954e-d73af1c4267c.html",
+          "label": "Tải HTML",
+          "filename": "report_a19d6771-47e1-42f8-954e-d73af1c4267c.html",
+          "mime_type": "text/html"
+        },
+        {
+          "id": "report_a19d6771-47e1-42f8-954e-d73af1c4267c.xlsx",
+          "label": "Tải Excel",
+          "filename": "report_a19d6771-47e1-42f8-954e-d73af1c4267c.xlsx",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        }
+      ],
+      "report_completeness": {
+        "missing": [],
+        "required": [
+          "dataset_overview",
+          "kpi_total_downtime",
+          "kpi_stop_count",
+          "top_machines",
+          "top_causes",
+          "time_trend",
+          "management_commentary",
+          "source_filters_limitations"
+        ]
+      },
+      "report_section_statuses": {
+        "dataset_overview": {
+          "status": "SUCCESS",
+          "record_count": 9151,
+          "date_range": {
+            "from": "2025-11-03",
+            "to": "2026-02-03"
+          }
+        },
+        "top_machines": {
+          "status": "SUCCESS",
+          "rows": 5
+        },
+        "top_causes": {
+          "status": "SUCCESS",
+          "rows": 5
+        },
+        "time_trend": {
+          "status": "SUCCESS",
+          "rows": 90
+        },
+        "kpi_total_downtime": {
+          "status": "SUCCESS",
+          "hours": 1989.56
+        },
+        "kpi_stop_count": {
+          "status": "SUCCESS",
+          "count": 9151
+        },
+        "management_commentary": {
+          "status": "SUCCESS"
+        },
+        "source_filters_limitations": {
+          "status": "SUCCESS",
+          "source": "Machine_Downtime_20260203_100753.xlsx / Report"
+        }
+      },
+      "checks": {
+        "is_report": true,
+        "multi_query": true,
+        "has_table": true,
+        "has_chart": true,
+        "downloads": true,
+        "complete": true,
+        "has_required_sections": true,
+        "chart_contract_current": true
+      },
+      "passed": true
+    }
+  ]
+}

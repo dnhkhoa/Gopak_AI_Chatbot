@@ -22,6 +22,10 @@ export function ChartResult({ chart }: { chart: ChartPayload }) {
     return <div className="empty-inline">No chart data.</div>;
   }
   const yKey = chart.y_keys[0];
+  const formatTooltip = (value: unknown) => {
+    const suffix = chart.tooltip_unit ? ` ${chart.tooltip_unit}` : "";
+    return [`${value}${suffix}`, yKey];
+  };
   if (chart.type === "line") {
     return (
       <div className="chart-box">
@@ -30,7 +34,7 @@ export function ChartResult({ chart }: { chart: ChartPayload }) {
             <CartesianGrid stroke="#E5E7EF" />
             <XAxis dataKey={chart.x_key} tick={{ fontSize: 12 }} />
             <YAxis tick={{ fontSize: 12 }} />
-            <Tooltip />
+            <Tooltip formatter={formatTooltip} />
             <Line type="monotone" dataKey={yKey} stroke="#AEBCE8" strokeWidth={2} dot={false} />
           </LineChart>
         </ResponsiveContainer>
@@ -42,7 +46,7 @@ export function ChartResult({ chart }: { chart: ChartPayload }) {
       <div className="chart-box">
         <ResponsiveContainer width="100%" height={320}>
           <PieChart>
-            <Tooltip />
+            <Tooltip formatter={formatTooltip} />
             <Legend />
             <Pie data={chart.data} dataKey={yKey} nameKey={chart.x_key} innerRadius={72} outerRadius={118}>
               {chart.data.map((_, index) => (
@@ -61,7 +65,7 @@ export function ChartResult({ chart }: { chart: ChartPayload }) {
           <CartesianGrid stroke="#E5E7EF" />
           <XAxis dataKey={chart.type === "horizontal_bar" ? yKey : chart.x_key} type={chart.type === "horizontal_bar" ? "number" : "category"} tick={{ fontSize: 12 }} />
           <YAxis dataKey={chart.type === "horizontal_bar" ? chart.x_key : undefined} type={chart.type === "horizontal_bar" ? "category" : "number"} tick={{ fontSize: 12 }} width={120} />
-          <Tooltip />
+          <Tooltip formatter={formatTooltip} />
           <Bar dataKey={yKey} fill="#AEBCE8" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>

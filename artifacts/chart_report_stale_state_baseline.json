@@ -1,0 +1,3575 @@
+{
+  "phase": "baseline",
+  "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+  "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+  "conversation_turns": [
+    {
+      "turn_index": 1,
+      "message": "T?i mu?n xem top 5 m?y theo t?ng th?i gian downtime.",
+      "response_type": "table",
+      "title": "Phân tích theo máy",
+      "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+      "table": {
+        "columns": [
+          "Máy",
+          "Tổng thời gian downtime"
+        ],
+        "rows": [
+          {
+            "Máy": "Máy 11",
+            "Tổng thời gian downtime": "413,57 giờ"
+          },
+          {
+            "Máy": "Máy 12",
+            "Tổng thời gian downtime": "323,15 giờ"
+          },
+          {
+            "Máy": "Máy 29",
+            "Tổng thời gian downtime": "294,67 giờ"
+          },
+          {
+            "Máy": "Máy 8",
+            "Tổng thời gian downtime": "229,98 giờ"
+          },
+          {
+            "Máy": "Máy 9",
+            "Tổng thời gian downtime": "185,32 giờ"
+          }
+        ]
+      },
+      "chart": null,
+      "downloads": [],
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.97,
+        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 65.69950003176928,
+          "llm": 0.0,
+          "validation": 0.04640000406652689,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 190.8,
+          "query_latency_ms": 33.6,
+          "query_wall_ms": 33.7
+        },
+        "turn_type": "CHANGE_RANKING",
+        "query_complexity": "simple",
+        "persistence_degraded": false,
+        "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+        "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+        "file_scope_validated": true,
+        "debug": {
+          "query_plan": {
+            "intent": "query",
+            "tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "joins": [],
+            "filters": [],
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "having": [],
+            "ranking": null,
+            "derived_metrics": [],
+            "time_comparison": null,
+            "time_granularity": null,
+            "sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "limit": 5,
+            "output": "table",
+            "query_complexity": "simple",
+            "clarification_question": null
+          },
+          "sql": "SELECT \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" AS \"may\", sum(\"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\" GROUP BY \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
+          "state_after": {
+            "conversation_id": "2e26654c-9fcf-4249-b8e5-b58e032cb0dc",
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_contexts": {},
+            "current_topic": "423b4cb1-5fb8-4df0-a412-f8e7f19394f2",
+            "topic_frames": [
+              {
+                "topic_id": "423b4cb1-5fb8-4df0-a412-f8e7f19394f2",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              }
+            ],
+            "pending_clarification": null,
+            "current_message": null,
+            "resolved_request": null,
+            "last_execution_mode": null,
+            "active_table": "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337",
+            "active_metric": {
+              "name": "total_duration_seconds",
+              "alias": "total_duration_seconds",
+              "aggregation": "sum",
+              "column": "duration_seconds",
+              "percentage_of_total": false
+            },
+            "active_metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "active_dimensions": [
+              "may"
+            ],
+            "active_filters": [],
+            "active_time_range": null,
+            "active_having": [],
+            "active_ranking": null,
+            "active_sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "active_limit": 5,
+            "active_output": "table",
+            "last_entities": {
+              "top_machine": "Máy 11"
+            },
+            "last_result_summary": {
+              "row_count": 5,
+              "columns": [
+                "may",
+                "total_duration_seconds"
+              ],
+              "first_row": {
+                "may": "Máy 11",
+                "total_duration_seconds": 1488867.0
+              }
+            },
+            "last_result_cache_id": null,
+            "last_result_reference": null,
+            "last_plan": {
+              "intent": "query",
+              "tables": [
+                "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+              ],
+              "joins": [],
+              "filters": [],
+              "dimensions": [
+                "may"
+              ],
+              "metrics": [
+                {
+                  "name": "total_duration_seconds",
+                  "alias": "total_duration_seconds",
+                  "aggregation": "sum",
+                  "column": "duration_seconds",
+                  "percentage_of_total": false
+                }
+              ],
+              "having": [],
+              "ranking": null,
+              "derived_metrics": [],
+              "time_comparison": null,
+              "time_granularity": null,
+              "sort": [
+                {
+                  "column": "total_duration_seconds",
+                  "field": "total_duration_seconds",
+                  "direction": "desc"
+                }
+              ],
+              "limit": 5,
+              "output": "table",
+              "query_complexity": "simple",
+              "clarification_question": null
+            },
+            "recent_turn_ids": [
+              "56d2b61c-5197-45a7-8af1-18fd8b18fac6"
+            ],
+            "conversation_summary": null,
+            "active_tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "time_range": null,
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "last_output": "table"
+          },
+          "scoped_catalog_tables": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+          ]
+        }
+      },
+      "request_contract": null,
+      "relation_to_previous": null,
+      "inherited_fields": null,
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "duration_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 5,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "query_result_id": null,
+      "chart_result_id": null,
+      "report_section_statuses": null,
+      "coverage": null
+    },
+    {
+      "turn_index": 2,
+      "message": "K?t qu? tr?n n?i l?n ?i?u g??",
+      "response_type": "clarification",
+      "title": "Cần làm rõ",
+      "summary": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+      "table": null,
+      "chart": null,
+      "downloads": [],
+      "metadata": {
+        "execution_mode": "CLARIFICATION",
+        "router_confidence": 1.0,
+        "routing_reason": "pending_clarification",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "generated_sql": null,
+        "pending_clarification_after": {
+          "clarification_id": "469457ef-aaab-47cc-bbcc-452c51bf725b",
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "original_message": "K?t qu? tr?n n?i l?n ?i?u g??",
+          "original_intent": "metric_dimension",
+          "partial_request": {
+            "operation": "query"
+          },
+          "missing_slots": [
+            "metric",
+            "dimension"
+          ],
+          "resolved_slots": {},
+          "allowed_metrics": [
+            "downtime",
+            "count"
+          ],
+          "allowed_dimensions": [
+            "machine",
+            "loss_name",
+            "loss_group"
+          ],
+          "allowed_outputs": [
+            "table",
+            "bar"
+          ],
+          "allowed_values": {
+            "limit": [
+              "1..50"
+            ]
+          },
+          "last_question": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+          "attempts": 0
+        },
+        "clarification_resolution": "START",
+        "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+        "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+        "file_scope_validated": true,
+        "latency_ms": {
+          "total": 87.3
+        },
+        "debug": {
+          "state_after": {
+            "conversation_id": "2e26654c-9fcf-4249-b8e5-b58e032cb0dc",
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_contexts": {},
+            "current_topic": "423b4cb1-5fb8-4df0-a412-f8e7f19394f2",
+            "topic_frames": [
+              {
+                "topic_id": "423b4cb1-5fb8-4df0-a412-f8e7f19394f2",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              }
+            ],
+            "pending_clarification": {
+              "clarification_id": "469457ef-aaab-47cc-bbcc-452c51bf725b",
+              "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+              "original_message": "K?t qu? tr?n n?i l?n ?i?u g??",
+              "original_intent": "metric_dimension",
+              "partial_request": {
+                "operation": "query"
+              },
+              "missing_slots": [
+                "metric",
+                "dimension"
+              ],
+              "resolved_slots": {},
+              "allowed_metrics": [
+                "downtime",
+                "count"
+              ],
+              "allowed_dimensions": [
+                "machine",
+                "loss_name",
+                "loss_group"
+              ],
+              "allowed_outputs": [
+                "table",
+                "bar"
+              ],
+              "allowed_values": {
+                "limit": [
+                  "1..50"
+                ]
+              },
+              "last_question": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+              "attempts": 0
+            },
+            "current_message": null,
+            "resolved_request": null,
+            "last_execution_mode": null,
+            "active_table": "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337",
+            "active_metric": {
+              "name": "total_duration_seconds",
+              "alias": "total_duration_seconds",
+              "aggregation": "sum",
+              "column": "duration_seconds",
+              "percentage_of_total": false
+            },
+            "active_metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "active_dimensions": [
+              "may"
+            ],
+            "active_filters": [],
+            "active_time_range": null,
+            "active_having": [],
+            "active_ranking": null,
+            "active_sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "active_limit": 5,
+            "active_output": "table",
+            "last_entities": {
+              "top_machine": "Máy 11"
+            },
+            "last_result_summary": {
+              "row_count": 5,
+              "columns": [
+                "may",
+                "total_duration_seconds"
+              ],
+              "first_row": {
+                "may": "Máy 11",
+                "total_duration_seconds": 1488867.0
+              }
+            },
+            "last_result_cache_id": "c0e02498-2971-429e-a4d1-b12ff8a86999",
+            "last_result_reference": null,
+            "last_plan": {
+              "intent": "query",
+              "tables": [
+                "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+              ],
+              "joins": [],
+              "filters": [],
+              "dimensions": [
+                "may"
+              ],
+              "metrics": [
+                {
+                  "name": "total_duration_seconds",
+                  "alias": "total_duration_seconds",
+                  "aggregation": "sum",
+                  "column": "duration_seconds",
+                  "percentage_of_total": false
+                }
+              ],
+              "having": [],
+              "ranking": null,
+              "derived_metrics": [],
+              "time_comparison": null,
+              "time_granularity": null,
+              "sort": [
+                {
+                  "column": "total_duration_seconds",
+                  "field": "total_duration_seconds",
+                  "direction": "desc"
+                }
+              ],
+              "limit": 5,
+              "output": "table",
+              "query_complexity": "simple",
+              "clarification_question": null
+            },
+            "recent_turn_ids": [
+              "56d2b61c-5197-45a7-8af1-18fd8b18fac6",
+              "2e77bc9d-8d0c-45f3-9fbf-cfa9884621f6",
+              "d8389ed4-11b7-4fb4-b345-786c33f3668d"
+            ],
+            "conversation_summary": null,
+            "active_tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "time_range": null,
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "last_output": "table"
+          }
+        }
+      },
+      "request_contract": null,
+      "relation_to_previous": null,
+      "inherited_fields": null,
+      "plan": null,
+      "query_result_id": null,
+      "chart_result_id": null,
+      "report_section_statuses": null,
+      "coverage": null
+    },
+    {
+      "turn_index": 3,
+      "message": "V? bi?u ?? c?t top 5 m?y theo downtime.",
+      "response_type": "table",
+      "title": "Phân tích theo máy",
+      "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+      "table": {
+        "columns": [
+          "Máy",
+          "Tổng thời gian downtime"
+        ],
+        "rows": [
+          {
+            "Máy": "Máy 11",
+            "Tổng thời gian downtime": "413,57 giờ"
+          },
+          {
+            "Máy": "Máy 12",
+            "Tổng thời gian downtime": "323,15 giờ"
+          },
+          {
+            "Máy": "Máy 29",
+            "Tổng thời gian downtime": "294,67 giờ"
+          },
+          {
+            "Máy": "Máy 8",
+            "Tổng thời gian downtime": "229,98 giờ"
+          },
+          {
+            "Máy": "Máy 9",
+            "Tổng thời gian downtime": "185,32 giờ"
+          }
+        ]
+      },
+      "chart": null,
+      "downloads": [],
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.86,
+        "routing_reason": "State merger handled CHANGE_RANKING: Ranking change phrase.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 0.2901999978348613,
+          "llm": 0.0,
+          "validation": 0.041300023440271616,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 61.9,
+          "query_latency_ms": 32.9,
+          "query_wall_ms": 33.0
+        },
+        "turn_type": "CHANGE_RANKING",
+        "query_complexity": "simple",
+        "state_changes": {
+          "ranking": {
+            "limit": 5,
+            "sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ]
+          },
+          "output": "table"
+        },
+        "persistence_degraded": false,
+        "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+        "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+        "file_scope_validated": true,
+        "debug": {
+          "query_plan": {
+            "intent": "query",
+            "tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "joins": [],
+            "filters": [],
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "having": [],
+            "ranking": null,
+            "derived_metrics": [],
+            "time_comparison": null,
+            "time_granularity": null,
+            "sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "limit": 5,
+            "output": "table",
+            "query_complexity": "simple",
+            "clarification_question": null
+          },
+          "sql": "SELECT \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" AS \"may\", sum(\"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\" GROUP BY \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
+          "state_after": {
+            "conversation_id": "2e26654c-9fcf-4249-b8e5-b58e032cb0dc",
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_contexts": {},
+            "current_topic": "92e1b538-757d-42e0-bf4b-610be1f30f71",
+            "topic_frames": [
+              {
+                "topic_id": "423b4cb1-5fb8-4df0-a412-f8e7f19394f2",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              },
+              {
+                "topic_id": "92e1b538-757d-42e0-bf4b-610be1f30f71",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              }
+            ],
+            "pending_clarification": null,
+            "current_message": null,
+            "resolved_request": null,
+            "last_execution_mode": null,
+            "active_table": "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337",
+            "active_metric": {
+              "name": "total_duration_seconds",
+              "alias": "total_duration_seconds",
+              "aggregation": "sum",
+              "column": "duration_seconds",
+              "percentage_of_total": false
+            },
+            "active_metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "active_dimensions": [
+              "may"
+            ],
+            "active_filters": [],
+            "active_time_range": null,
+            "active_having": [],
+            "active_ranking": null,
+            "active_sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "active_limit": 5,
+            "active_output": "table",
+            "last_entities": {
+              "top_machine": "Máy 11"
+            },
+            "last_result_summary": {
+              "row_count": 5,
+              "columns": [
+                "may",
+                "total_duration_seconds"
+              ],
+              "first_row": {
+                "may": "Máy 11",
+                "total_duration_seconds": 1488867.0
+              }
+            },
+            "last_result_cache_id": "c0e02498-2971-429e-a4d1-b12ff8a86999",
+            "last_result_reference": null,
+            "last_plan": {
+              "intent": "query",
+              "tables": [
+                "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+              ],
+              "joins": [],
+              "filters": [],
+              "dimensions": [
+                "may"
+              ],
+              "metrics": [
+                {
+                  "name": "total_duration_seconds",
+                  "alias": "total_duration_seconds",
+                  "aggregation": "sum",
+                  "column": "duration_seconds",
+                  "percentage_of_total": false
+                }
+              ],
+              "having": [],
+              "ranking": null,
+              "derived_metrics": [],
+              "time_comparison": null,
+              "time_granularity": null,
+              "sort": [
+                {
+                  "column": "total_duration_seconds",
+                  "field": "total_duration_seconds",
+                  "direction": "desc"
+                }
+              ],
+              "limit": 5,
+              "output": "table",
+              "query_complexity": "simple",
+              "clarification_question": null
+            },
+            "recent_turn_ids": [
+              "56d2b61c-5197-45a7-8af1-18fd8b18fac6",
+              "2e77bc9d-8d0c-45f3-9fbf-cfa9884621f6",
+              "d8389ed4-11b7-4fb4-b345-786c33f3668d",
+              "543f4e06-bee9-4926-ab2c-e5919afc2185",
+              "489fa84c-4623-491a-83e5-88804566c838"
+            ],
+            "conversation_summary": null,
+            "active_tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "time_range": null,
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "last_output": "table"
+          },
+          "scoped_catalog_tables": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+          ]
+        }
+      },
+      "request_contract": null,
+      "relation_to_previous": null,
+      "inherited_fields": null,
+      "plan": {
+        "intent": "query",
+        "tables": [
+          "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "duration_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 5,
+        "output": "table",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "query_result_id": null,
+      "chart_result_id": null,
+      "report_section_statuses": null,
+      "coverage": null
+    },
+    {
+      "turn_index": 4,
+      "message": "V? bi?u ?? xu h??ng t?ng downtime theo ng?y trong to?n b? kho?ng th?i gian c? d? li?u, sau ?? nh?n x?t ba ?i?m ??ng ch? ?.",
+      "response_type": "clarification",
+      "title": "Cần làm rõ",
+      "summary": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+      "table": null,
+      "chart": null,
+      "downloads": [],
+      "metadata": {
+        "execution_mode": "CLARIFICATION",
+        "router_confidence": 1.0,
+        "routing_reason": "pending_clarification",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "generated_sql": null,
+        "pending_clarification_after": {
+          "clarification_id": "8973e53c-ae9a-495f-826d-c629108349c8",
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "original_message": "V? bi?u ?? xu h??ng t?ng downtime theo ng?y trong to?n b? kho?ng th?i gian c? d? li?u, sau ?? nh?n x?t ba ?i?m ??ng ch? ?.",
+          "original_intent": "metric_dimension",
+          "partial_request": {
+            "operation": "query"
+          },
+          "missing_slots": [
+            "metric",
+            "dimension"
+          ],
+          "resolved_slots": {},
+          "allowed_metrics": [
+            "downtime",
+            "count"
+          ],
+          "allowed_dimensions": [
+            "machine",
+            "loss_name",
+            "loss_group"
+          ],
+          "allowed_outputs": [
+            "table",
+            "bar"
+          ],
+          "allowed_values": {
+            "limit": [
+              "1..50"
+            ]
+          },
+          "last_question": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+          "attempts": 0
+        },
+        "clarification_resolution": "START",
+        "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+        "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+        "file_scope_validated": true,
+        "latency_ms": {
+          "total": 89.5
+        },
+        "debug": {
+          "state_after": {
+            "conversation_id": "2e26654c-9fcf-4249-b8e5-b58e032cb0dc",
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_contexts": {},
+            "current_topic": "92e1b538-757d-42e0-bf4b-610be1f30f71",
+            "topic_frames": [
+              {
+                "topic_id": "423b4cb1-5fb8-4df0-a412-f8e7f19394f2",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              },
+              {
+                "topic_id": "92e1b538-757d-42e0-bf4b-610be1f30f71",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              }
+            ],
+            "pending_clarification": {
+              "clarification_id": "8973e53c-ae9a-495f-826d-c629108349c8",
+              "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+              "original_message": "V? bi?u ?? xu h??ng t?ng downtime theo ng?y trong to?n b? kho?ng th?i gian c? d? li?u, sau ?? nh?n x?t ba ?i?m ??ng ch? ?.",
+              "original_intent": "metric_dimension",
+              "partial_request": {
+                "operation": "query"
+              },
+              "missing_slots": [
+                "metric",
+                "dimension"
+              ],
+              "resolved_slots": {},
+              "allowed_metrics": [
+                "downtime",
+                "count"
+              ],
+              "allowed_dimensions": [
+                "machine",
+                "loss_name",
+                "loss_group"
+              ],
+              "allowed_outputs": [
+                "table",
+                "bar"
+              ],
+              "allowed_values": {
+                "limit": [
+                  "1..50"
+                ]
+              },
+              "last_question": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+              "attempts": 0
+            },
+            "current_message": null,
+            "resolved_request": null,
+            "last_execution_mode": null,
+            "active_table": "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337",
+            "active_metric": {
+              "name": "total_duration_seconds",
+              "alias": "total_duration_seconds",
+              "aggregation": "sum",
+              "column": "duration_seconds",
+              "percentage_of_total": false
+            },
+            "active_metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "active_dimensions": [
+              "may"
+            ],
+            "active_filters": [],
+            "active_time_range": null,
+            "active_having": [],
+            "active_ranking": null,
+            "active_sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "active_limit": 5,
+            "active_output": "table",
+            "last_entities": {
+              "top_machine": "Máy 11"
+            },
+            "last_result_summary": {
+              "row_count": 5,
+              "columns": [
+                "may",
+                "total_duration_seconds"
+              ],
+              "first_row": {
+                "may": "Máy 11",
+                "total_duration_seconds": 1488867.0
+              }
+            },
+            "last_result_cache_id": "215e95ef-e29e-4d5f-b17b-74ec0209227a",
+            "last_result_reference": null,
+            "last_plan": {
+              "intent": "query",
+              "tables": [
+                "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+              ],
+              "joins": [],
+              "filters": [],
+              "dimensions": [
+                "may"
+              ],
+              "metrics": [
+                {
+                  "name": "total_duration_seconds",
+                  "alias": "total_duration_seconds",
+                  "aggregation": "sum",
+                  "column": "duration_seconds",
+                  "percentage_of_total": false
+                }
+              ],
+              "having": [],
+              "ranking": null,
+              "derived_metrics": [],
+              "time_comparison": null,
+              "time_granularity": null,
+              "sort": [
+                {
+                  "column": "total_duration_seconds",
+                  "field": "total_duration_seconds",
+                  "direction": "desc"
+                }
+              ],
+              "limit": 5,
+              "output": "table",
+              "query_complexity": "simple",
+              "clarification_question": null
+            },
+            "recent_turn_ids": [
+              "2e77bc9d-8d0c-45f3-9fbf-cfa9884621f6",
+              "d8389ed4-11b7-4fb4-b345-786c33f3668d",
+              "543f4e06-bee9-4926-ab2c-e5919afc2185",
+              "489fa84c-4623-491a-83e5-88804566c838",
+              "dfcae38a-2945-4314-8498-a14d2a2a3922",
+              "8cf90154-8156-4ce4-ad84-5ae7b4fbede4"
+            ],
+            "conversation_summary": null,
+            "active_tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "time_range": null,
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "last_output": "table"
+          }
+        }
+      },
+      "request_contract": null,
+      "relation_to_previous": null,
+      "inherited_fields": null,
+      "plan": null,
+      "query_result_id": null,
+      "chart_result_id": null,
+      "report_section_statuses": null,
+      "coverage": null
+    },
+    {
+      "turn_index": 5,
+      "message": "Cho t?i ph?n b? s? l?n ghi nh?n theo nh?m t?n th?t, th?m t? l? ph?n tr?m v? v? bi?u ?? ph? h?p.",
+      "response_type": "clarification",
+      "title": "Cần làm rõ",
+      "summary": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+      "table": null,
+      "chart": null,
+      "downloads": [],
+      "metadata": {
+        "execution_mode": "CLARIFICATION",
+        "router_confidence": 1.0,
+        "routing_reason": "pending_clarification",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "generated_sql": null,
+        "pending_clarification_after": {
+          "clarification_id": "8973e53c-ae9a-495f-826d-c629108349c8",
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "original_message": "V? bi?u ?? xu h??ng t?ng downtime theo ng?y trong to?n b? kho?ng th?i gian c? d? li?u, sau ?? nh?n x?t ba ?i?m ??ng ch? ?.",
+          "original_intent": "metric_dimension",
+          "partial_request": {
+            "operation": "query"
+          },
+          "missing_slots": [
+            "metric",
+            "dimension"
+          ],
+          "resolved_slots": {},
+          "allowed_metrics": [
+            "downtime",
+            "count"
+          ],
+          "allowed_dimensions": [
+            "machine",
+            "loss_name",
+            "loss_group"
+          ],
+          "allowed_outputs": [
+            "table",
+            "bar"
+          ],
+          "allowed_values": {
+            "limit": [
+              "1..50"
+            ]
+          },
+          "last_question": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+          "attempts": 1
+        },
+        "clarification_resolution": "PARTIAL",
+        "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+        "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+        "file_scope_validated": true,
+        "latency_ms": {
+          "total": 11.0
+        },
+        "debug": {
+          "state_after": {
+            "conversation_id": "2e26654c-9fcf-4249-b8e5-b58e032cb0dc",
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_contexts": {},
+            "current_topic": "92e1b538-757d-42e0-bf4b-610be1f30f71",
+            "topic_frames": [
+              {
+                "topic_id": "423b4cb1-5fb8-4df0-a412-f8e7f19394f2",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              },
+              {
+                "topic_id": "92e1b538-757d-42e0-bf4b-610be1f30f71",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              }
+            ],
+            "pending_clarification": {
+              "clarification_id": "8973e53c-ae9a-495f-826d-c629108349c8",
+              "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+              "original_message": "V? bi?u ?? xu h??ng t?ng downtime theo ng?y trong to?n b? kho?ng th?i gian c? d? li?u, sau ?? nh?n x?t ba ?i?m ??ng ch? ?.",
+              "original_intent": "metric_dimension",
+              "partial_request": {
+                "operation": "query"
+              },
+              "missing_slots": [
+                "metric",
+                "dimension"
+              ],
+              "resolved_slots": {},
+              "allowed_metrics": [
+                "downtime",
+                "count"
+              ],
+              "allowed_dimensions": [
+                "machine",
+                "loss_name",
+                "loss_group"
+              ],
+              "allowed_outputs": [
+                "table",
+                "bar"
+              ],
+              "allowed_values": {
+                "limit": [
+                  "1..50"
+                ]
+              },
+              "last_question": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+              "attempts": 1
+            },
+            "current_message": null,
+            "resolved_request": null,
+            "last_execution_mode": null,
+            "active_table": "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337",
+            "active_metric": {
+              "name": "total_duration_seconds",
+              "alias": "total_duration_seconds",
+              "aggregation": "sum",
+              "column": "duration_seconds",
+              "percentage_of_total": false
+            },
+            "active_metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "active_dimensions": [
+              "may"
+            ],
+            "active_filters": [],
+            "active_time_range": null,
+            "active_having": [],
+            "active_ranking": null,
+            "active_sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "active_limit": 5,
+            "active_output": "table",
+            "last_entities": {
+              "top_machine": "Máy 11"
+            },
+            "last_result_summary": {
+              "row_count": 5,
+              "columns": [
+                "may",
+                "total_duration_seconds"
+              ],
+              "first_row": {
+                "may": "Máy 11",
+                "total_duration_seconds": 1488867.0
+              }
+            },
+            "last_result_cache_id": "215e95ef-e29e-4d5f-b17b-74ec0209227a",
+            "last_result_reference": null,
+            "last_plan": {
+              "intent": "query",
+              "tables": [
+                "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+              ],
+              "joins": [],
+              "filters": [],
+              "dimensions": [
+                "may"
+              ],
+              "metrics": [
+                {
+                  "name": "total_duration_seconds",
+                  "alias": "total_duration_seconds",
+                  "aggregation": "sum",
+                  "column": "duration_seconds",
+                  "percentage_of_total": false
+                }
+              ],
+              "having": [],
+              "ranking": null,
+              "derived_metrics": [],
+              "time_comparison": null,
+              "time_granularity": null,
+              "sort": [
+                {
+                  "column": "total_duration_seconds",
+                  "field": "total_duration_seconds",
+                  "direction": "desc"
+                }
+              ],
+              "limit": 5,
+              "output": "table",
+              "query_complexity": "simple",
+              "clarification_question": null
+            },
+            "recent_turn_ids": [
+              "543f4e06-bee9-4926-ab2c-e5919afc2185",
+              "489fa84c-4623-491a-83e5-88804566c838",
+              "dfcae38a-2945-4314-8498-a14d2a2a3922",
+              "8cf90154-8156-4ce4-ad84-5ae7b4fbede4",
+              "91254f09-d77e-487f-b0c7-9797b7d7721f",
+              "7aa7082c-b5be-4101-9bc3-01a096623ee3"
+            ],
+            "conversation_summary": null,
+            "active_tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "time_range": null,
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "last_output": "table"
+          }
+        }
+      },
+      "request_contract": null,
+      "relation_to_previous": null,
+      "inherited_fields": null,
+      "plan": null,
+      "query_result_id": null,
+      "chart_result_id": null,
+      "report_section_statuses": null,
+      "coverage": null
+    },
+    {
+      "turn_index": 6,
+      "message": "Trong th?ng g?n nh?t, t?m top 5 m?y c? t?ng downtime cao nh?t, th?m s? l?n d?ng, th?i l??ng trung b?nh, t? tr?ng tr?n t?ng downtime v? v? bi?u ??.",
+      "response_type": "chart",
+      "title": "Biểu đồ phân tích",
+      "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+      "table": {
+        "columns": [
+          "Máy",
+          "Tổng thời gian downtime"
+        ],
+        "rows": [
+          {
+            "Máy": "Máy 11",
+            "Tổng thời gian downtime": "413,57 giờ"
+          },
+          {
+            "Máy": "Máy 12",
+            "Tổng thời gian downtime": "323,15 giờ"
+          },
+          {
+            "Máy": "Máy 29",
+            "Tổng thời gian downtime": "294,67 giờ"
+          },
+          {
+            "Máy": "Máy 8",
+            "Tổng thời gian downtime": "229,98 giờ"
+          },
+          {
+            "Máy": "Máy 9",
+            "Tổng thời gian downtime": "185,32 giờ"
+          }
+        ]
+      },
+      "chart": {
+        "type": "pie",
+        "title": "Kết quả phân tích",
+        "x_key": "Máy",
+        "y_keys": [
+          "Tổng thời gian downtime"
+        ],
+        "data": [
+          {
+            "Máy": "Máy 11",
+            "Tổng thời gian downtime": 1488867.0
+          },
+          {
+            "Máy": "Máy 12",
+            "Tổng thời gian downtime": 1163357.0
+          },
+          {
+            "Máy": "Máy 29",
+            "Tổng thời gian downtime": 1060811.0
+          },
+          {
+            "Máy": "Máy 8",
+            "Tổng thời gian downtime": 827918.0
+          },
+          {
+            "Máy": "Máy 9",
+            "Tổng thời gian downtime": 667150.0
+          }
+        ]
+      },
+      "downloads": [],
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.86,
+        "routing_reason": "State merger handled CHANGE_RANKING: Ranking change phrase.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 0.4349999944679439,
+          "llm": 0.0,
+          "validation": 0.029099988751113415,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 489.4,
+          "query_latency_ms": 34.0,
+          "query_wall_ms": 34.1
+        },
+        "turn_type": "CHANGE_RANKING",
+        "query_complexity": "simple",
+        "state_changes": {
+          "ranking": {
+            "limit": 5,
+            "sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ]
+          },
+          "output": "pie"
+        },
+        "persistence_degraded": false,
+        "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+        "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+        "file_scope_validated": true,
+        "debug": {
+          "query_plan": {
+            "intent": "chart",
+            "tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "joins": [],
+            "filters": [],
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "having": [],
+            "ranking": null,
+            "derived_metrics": [],
+            "time_comparison": null,
+            "time_granularity": null,
+            "sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "limit": 5,
+            "output": "pie",
+            "query_complexity": "simple",
+            "clarification_question": null
+          },
+          "sql": "SELECT \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" AS \"may\", sum(\"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\" GROUP BY \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
+          "state_after": {
+            "conversation_id": "2e26654c-9fcf-4249-b8e5-b58e032cb0dc",
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_contexts": {},
+            "current_topic": "1e461bd9-40a6-4585-b9bd-291bd5f1f9d1",
+            "topic_frames": [
+              {
+                "topic_id": "423b4cb1-5fb8-4df0-a412-f8e7f19394f2",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              },
+              {
+                "topic_id": "92e1b538-757d-42e0-bf4b-610be1f30f71",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              },
+              {
+                "topic_id": "1e461bd9-40a6-4585-b9bd-291bd5f1f9d1",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "chart / total_duration_seconds / may",
+                "intent": "chart",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "pie",
+                "last_query_plan": {
+                  "intent": "chart",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "pie",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              }
+            ],
+            "pending_clarification": null,
+            "current_message": null,
+            "resolved_request": null,
+            "last_execution_mode": null,
+            "active_table": "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337",
+            "active_metric": {
+              "name": "total_duration_seconds",
+              "alias": "total_duration_seconds",
+              "aggregation": "sum",
+              "column": "duration_seconds",
+              "percentage_of_total": false
+            },
+            "active_metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "active_dimensions": [
+              "may"
+            ],
+            "active_filters": [],
+            "active_time_range": null,
+            "active_having": [],
+            "active_ranking": null,
+            "active_sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "active_limit": 5,
+            "active_output": "pie",
+            "last_entities": {
+              "top_machine": "Máy 11"
+            },
+            "last_result_summary": {
+              "row_count": 5,
+              "columns": [
+                "may",
+                "total_duration_seconds"
+              ],
+              "first_row": {
+                "may": "Máy 11",
+                "total_duration_seconds": 1488867.0
+              }
+            },
+            "last_result_cache_id": "215e95ef-e29e-4d5f-b17b-74ec0209227a",
+            "last_result_reference": null,
+            "last_plan": {
+              "intent": "chart",
+              "tables": [
+                "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+              ],
+              "joins": [],
+              "filters": [],
+              "dimensions": [
+                "may"
+              ],
+              "metrics": [
+                {
+                  "name": "total_duration_seconds",
+                  "alias": "total_duration_seconds",
+                  "aggregation": "sum",
+                  "column": "duration_seconds",
+                  "percentage_of_total": false
+                }
+              ],
+              "having": [],
+              "ranking": null,
+              "derived_metrics": [],
+              "time_comparison": null,
+              "time_granularity": null,
+              "sort": [
+                {
+                  "column": "total_duration_seconds",
+                  "field": "total_duration_seconds",
+                  "direction": "desc"
+                }
+              ],
+              "limit": 5,
+              "output": "pie",
+              "query_complexity": "simple",
+              "clarification_question": null
+            },
+            "recent_turn_ids": [
+              "dfcae38a-2945-4314-8498-a14d2a2a3922",
+              "8cf90154-8156-4ce4-ad84-5ae7b4fbede4",
+              "91254f09-d77e-487f-b0c7-9797b7d7721f",
+              "7aa7082c-b5be-4101-9bc3-01a096623ee3",
+              "3719a5e3-9154-4b4b-a262-d7b4a929161d",
+              "5c8b720d-3a44-4cdd-954d-762a435b558b"
+            ],
+            "conversation_summary": null,
+            "active_tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "time_range": null,
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "last_output": "pie"
+          },
+          "scoped_catalog_tables": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+          ]
+        }
+      },
+      "request_contract": null,
+      "relation_to_previous": null,
+      "inherited_fields": null,
+      "plan": {
+        "intent": "chart",
+        "tables": [
+          "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "duration_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 5,
+        "output": "pie",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "query_result_id": null,
+      "chart_result_id": null,
+      "report_section_statuses": null,
+      "coverage": null
+    },
+    {
+      "turn_index": 7,
+      "message": "T?o b?o c?o t?ng quan cho file n?y g?m m? t? d? li?u, s? b?n ghi, kho?ng th?i gian, ba ?i?m ??ng ch? ?, b?ng top 5, m?t bi?u ??, ngu?n v? gi?i h?n.",
+      "response_type": "chart",
+      "title": "Biểu đồ phân tích",
+      "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+      "table": {
+        "columns": [
+          "Máy",
+          "Tổng thời gian downtime"
+        ],
+        "rows": [
+          {
+            "Máy": "Máy 11",
+            "Tổng thời gian downtime": "413,57 giờ"
+          },
+          {
+            "Máy": "Máy 12",
+            "Tổng thời gian downtime": "323,15 giờ"
+          },
+          {
+            "Máy": "Máy 29",
+            "Tổng thời gian downtime": "294,67 giờ"
+          },
+          {
+            "Máy": "Máy 8",
+            "Tổng thời gian downtime": "229,98 giờ"
+          },
+          {
+            "Máy": "Máy 9",
+            "Tổng thời gian downtime": "185,32 giờ"
+          }
+        ]
+      },
+      "chart": {
+        "type": "pie",
+        "title": "Kết quả phân tích",
+        "x_key": "Máy",
+        "y_keys": [
+          "Tổng thời gian downtime"
+        ],
+        "data": [
+          {
+            "Máy": "Máy 11",
+            "Tổng thời gian downtime": 1488867.0
+          },
+          {
+            "Máy": "Máy 12",
+            "Tổng thời gian downtime": 1163357.0
+          },
+          {
+            "Máy": "Máy 29",
+            "Tổng thời gian downtime": 1060811.0
+          },
+          {
+            "Máy": "Máy 8",
+            "Tổng thời gian downtime": 827918.0
+          },
+          {
+            "Máy": "Máy 9",
+            "Tổng thời gian downtime": 667150.0
+          }
+        ]
+      },
+      "downloads": [],
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.86,
+        "routing_reason": "State merger handled CHANGE_RANKING: Ranking change phrase.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 0.39090000791475177,
+          "llm": 0.0,
+          "validation": 0.02670002868399024,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 110.1,
+          "query_latency_ms": 41.6,
+          "query_wall_ms": 41.7
+        },
+        "turn_type": "CHANGE_RANKING",
+        "query_complexity": "simple",
+        "state_changes": {
+          "ranking": {
+            "limit": 5,
+            "sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ]
+          },
+          "output": "pie"
+        },
+        "persistence_degraded": false,
+        "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+        "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+        "file_scope_validated": true,
+        "debug": {
+          "query_plan": {
+            "intent": "chart",
+            "tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "joins": [],
+            "filters": [],
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "having": [],
+            "ranking": null,
+            "derived_metrics": [],
+            "time_comparison": null,
+            "time_granularity": null,
+            "sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "limit": 5,
+            "output": "pie",
+            "query_complexity": "simple",
+            "clarification_question": null
+          },
+          "sql": "SELECT \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" AS \"may\", sum(\"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\" GROUP BY \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
+          "state_after": {
+            "conversation_id": "2e26654c-9fcf-4249-b8e5-b58e032cb0dc",
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_contexts": {},
+            "current_topic": "26e97057-af6d-4f8e-a6bb-b783c7fc631d",
+            "topic_frames": [
+              {
+                "topic_id": "423b4cb1-5fb8-4df0-a412-f8e7f19394f2",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              },
+              {
+                "topic_id": "92e1b538-757d-42e0-bf4b-610be1f30f71",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              },
+              {
+                "topic_id": "1e461bd9-40a6-4585-b9bd-291bd5f1f9d1",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "chart / total_duration_seconds / may",
+                "intent": "chart",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "pie",
+                "last_query_plan": {
+                  "intent": "chart",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "pie",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              },
+              {
+                "topic_id": "26e97057-af6d-4f8e-a6bb-b783c7fc631d",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "chart / total_duration_seconds / may",
+                "intent": "chart",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "pie",
+                "last_query_plan": {
+                  "intent": "chart",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "pie",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              }
+            ],
+            "pending_clarification": null,
+            "current_message": null,
+            "resolved_request": null,
+            "last_execution_mode": null,
+            "active_table": "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337",
+            "active_metric": {
+              "name": "total_duration_seconds",
+              "alias": "total_duration_seconds",
+              "aggregation": "sum",
+              "column": "duration_seconds",
+              "percentage_of_total": false
+            },
+            "active_metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "active_dimensions": [
+              "may"
+            ],
+            "active_filters": [],
+            "active_time_range": null,
+            "active_having": [],
+            "active_ranking": null,
+            "active_sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "active_limit": 5,
+            "active_output": "pie",
+            "last_entities": {
+              "top_machine": "Máy 11"
+            },
+            "last_result_summary": {
+              "row_count": 5,
+              "columns": [
+                "may",
+                "total_duration_seconds"
+              ],
+              "first_row": {
+                "may": "Máy 11",
+                "total_duration_seconds": 1488867.0
+              }
+            },
+            "last_result_cache_id": "c8ac7cfe-0fc6-4996-bdc8-ee25a75bcc23",
+            "last_result_reference": null,
+            "last_plan": {
+              "intent": "chart",
+              "tables": [
+                "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+              ],
+              "joins": [],
+              "filters": [],
+              "dimensions": [
+                "may"
+              ],
+              "metrics": [
+                {
+                  "name": "total_duration_seconds",
+                  "alias": "total_duration_seconds",
+                  "aggregation": "sum",
+                  "column": "duration_seconds",
+                  "percentage_of_total": false
+                }
+              ],
+              "having": [],
+              "ranking": null,
+              "derived_metrics": [],
+              "time_comparison": null,
+              "time_granularity": null,
+              "sort": [
+                {
+                  "column": "total_duration_seconds",
+                  "field": "total_duration_seconds",
+                  "direction": "desc"
+                }
+              ],
+              "limit": 5,
+              "output": "pie",
+              "query_complexity": "simple",
+              "clarification_question": null
+            },
+            "recent_turn_ids": [
+              "91254f09-d77e-487f-b0c7-9797b7d7721f",
+              "7aa7082c-b5be-4101-9bc3-01a096623ee3",
+              "3719a5e3-9154-4b4b-a262-d7b4a929161d",
+              "5c8b720d-3a44-4cdd-954d-762a435b558b",
+              "848cb89e-bd03-4517-963f-c290ff4d8e29",
+              "ca943b48-d2d9-4e15-bb61-8a0630bfc10e"
+            ],
+            "conversation_summary": null,
+            "active_tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "time_range": null,
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "last_output": "pie"
+          },
+          "scoped_catalog_tables": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+          ]
+        }
+      },
+      "request_contract": null,
+      "relation_to_previous": null,
+      "inherited_fields": null,
+      "plan": {
+        "intent": "chart",
+        "tables": [
+          "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "duration_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 5,
+        "output": "pie",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "query_result_id": null,
+      "chart_result_id": null,
+      "report_section_statuses": null,
+      "coverage": null
+    },
+    {
+      "turn_index": 8,
+      "message": "T?o b?o c?o downtime g?m t?ng downtime, t?ng s? l?n d?ng, top 5 m?y, top 5 nguy?n nh?n, xu h??ng theo th?i gian v? nh?n x?t qu?n l?.",
+      "response_type": "chart",
+      "title": "Biểu đồ phân tích",
+      "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+      "table": {
+        "columns": [
+          "Máy",
+          "Tổng thời gian downtime"
+        ],
+        "rows": [
+          {
+            "Máy": "Máy 11",
+            "Tổng thời gian downtime": "413,57 giờ"
+          },
+          {
+            "Máy": "Máy 12",
+            "Tổng thời gian downtime": "323,15 giờ"
+          },
+          {
+            "Máy": "Máy 29",
+            "Tổng thời gian downtime": "294,67 giờ"
+          },
+          {
+            "Máy": "Máy 8",
+            "Tổng thời gian downtime": "229,98 giờ"
+          },
+          {
+            "Máy": "Máy 9",
+            "Tổng thời gian downtime": "185,32 giờ"
+          }
+        ]
+      },
+      "chart": {
+        "type": "pie",
+        "title": "Kết quả phân tích",
+        "x_key": "Máy",
+        "y_keys": [
+          "Tổng thời gian downtime"
+        ],
+        "data": [
+          {
+            "Máy": "Máy 11",
+            "Tổng thời gian downtime": 1488867.0
+          },
+          {
+            "Máy": "Máy 12",
+            "Tổng thời gian downtime": 1163357.0
+          },
+          {
+            "Máy": "Máy 29",
+            "Tổng thời gian downtime": 1060811.0
+          },
+          {
+            "Máy": "Máy 8",
+            "Tổng thời gian downtime": 827918.0
+          },
+          {
+            "Máy": "Máy 9",
+            "Tổng thời gian downtime": 667150.0
+          }
+        ]
+      },
+      "downloads": [],
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "router_confidence": 0.86,
+        "routing_reason": "State merger handled CHANGE_RANKING: Ranking change phrase.",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "fallback_used": false,
+        "fallback_reason": null,
+        "validation_passed": true,
+        "selected_tables": [
+          "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+        ],
+        "selected_columns": [],
+        "latency_ms": {
+          "routing": 0.37480000173673034,
+          "llm": 0.0,
+          "validation": 0.0274000340141356,
+          "query": 0.0,
+          "rendering": 0.0,
+          "total": 109.0,
+          "query_latency_ms": 38.2,
+          "query_wall_ms": 38.3
+        },
+        "turn_type": "CHANGE_RANKING",
+        "query_complexity": "simple",
+        "state_changes": {
+          "ranking": {
+            "limit": 5,
+            "sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ]
+          },
+          "output": "pie"
+        },
+        "persistence_degraded": false,
+        "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+        "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+        "file_scope_validated": true,
+        "debug": {
+          "query_plan": {
+            "intent": "chart",
+            "tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "joins": [],
+            "filters": [],
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "having": [],
+            "ranking": null,
+            "derived_metrics": [],
+            "time_comparison": null,
+            "time_granularity": null,
+            "sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "limit": 5,
+            "output": "pie",
+            "query_complexity": "simple",
+            "clarification_question": null
+          },
+          "sql": "SELECT \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" AS \"may\", sum(\"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"duration_seconds\") AS \"total_duration_seconds\" FROM read_parquet(?) AS \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\" GROUP BY \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
+          "state_after": {
+            "conversation_id": "2e26654c-9fcf-4249-b8e5-b58e032cb0dc",
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_contexts": {},
+            "current_topic": "3514855f-499d-416e-ab53-62315d6df1bc",
+            "topic_frames": [
+              {
+                "topic_id": "423b4cb1-5fb8-4df0-a412-f8e7f19394f2",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              },
+              {
+                "topic_id": "92e1b538-757d-42e0-bf4b-610be1f30f71",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "query / total_duration_seconds / may",
+                "intent": "query",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "table",
+                "last_query_plan": {
+                  "intent": "query",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "table",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              },
+              {
+                "topic_id": "1e461bd9-40a6-4585-b9bd-291bd5f1f9d1",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "chart / total_duration_seconds / may",
+                "intent": "chart",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "pie",
+                "last_query_plan": {
+                  "intent": "chart",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "pie",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              },
+              {
+                "topic_id": "26e97057-af6d-4f8e-a6bb-b783c7fc631d",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "chart / total_duration_seconds / may",
+                "intent": "chart",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "pie",
+                "last_query_plan": {
+                  "intent": "chart",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "pie",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              },
+              {
+                "topic_id": "3514855f-499d-416e-ab53-62315d6df1bc",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "label": "chart / total_duration_seconds / may",
+                "intent": "chart",
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "dimensions": [
+                  "may"
+                ],
+                "filters": [],
+                "time_range": null,
+                "ranking": null,
+                "output_type": "pie",
+                "last_query_plan": {
+                  "intent": "chart",
+                  "tables": [
+                    "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                  ],
+                  "joins": [],
+                  "filters": [],
+                  "dimensions": [
+                    "may"
+                  ],
+                  "metrics": [
+                    {
+                      "name": "total_duration_seconds",
+                      "alias": "total_duration_seconds",
+                      "aggregation": "sum",
+                      "column": "duration_seconds",
+                      "percentage_of_total": false
+                    }
+                  ],
+                  "having": [],
+                  "ranking": null,
+                  "derived_metrics": [],
+                  "time_comparison": null,
+                  "time_granularity": null,
+                  "sort": [
+                    {
+                      "column": "total_duration_seconds",
+                      "field": "total_duration_seconds",
+                      "direction": "desc"
+                    }
+                  ],
+                  "limit": 5,
+                  "output": "pie",
+                  "query_complexity": "simple",
+                  "clarification_question": null
+                },
+                "last_result_summary": {
+                  "row_count": 5,
+                  "columns": [
+                    "may",
+                    "total_duration_seconds"
+                  ],
+                  "first_row": {
+                    "may": "Máy 11",
+                    "total_duration_seconds": 1488867.0
+                  }
+                }
+              }
+            ],
+            "pending_clarification": null,
+            "current_message": null,
+            "resolved_request": null,
+            "last_execution_mode": null,
+            "active_table": "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337",
+            "active_metric": {
+              "name": "total_duration_seconds",
+              "alias": "total_duration_seconds",
+              "aggregation": "sum",
+              "column": "duration_seconds",
+              "percentage_of_total": false
+            },
+            "active_metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "active_dimensions": [
+              "may"
+            ],
+            "active_filters": [],
+            "active_time_range": null,
+            "active_having": [],
+            "active_ranking": null,
+            "active_sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "active_limit": 5,
+            "active_output": "pie",
+            "last_entities": {
+              "top_machine": "Máy 11"
+            },
+            "last_result_summary": {
+              "row_count": 5,
+              "columns": [
+                "may",
+                "total_duration_seconds"
+              ],
+              "first_row": {
+                "may": "Máy 11",
+                "total_duration_seconds": 1488867.0
+              }
+            },
+            "last_result_cache_id": "ec34c207-e529-485f-9e2f-59a7d2d3b427",
+            "last_result_reference": null,
+            "last_plan": {
+              "intent": "chart",
+              "tables": [
+                "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+              ],
+              "joins": [],
+              "filters": [],
+              "dimensions": [
+                "may"
+              ],
+              "metrics": [
+                {
+                  "name": "total_duration_seconds",
+                  "alias": "total_duration_seconds",
+                  "aggregation": "sum",
+                  "column": "duration_seconds",
+                  "percentage_of_total": false
+                }
+              ],
+              "having": [],
+              "ranking": null,
+              "derived_metrics": [],
+              "time_comparison": null,
+              "time_granularity": null,
+              "sort": [
+                {
+                  "column": "total_duration_seconds",
+                  "field": "total_duration_seconds",
+                  "direction": "desc"
+                }
+              ],
+              "limit": 5,
+              "output": "pie",
+              "query_complexity": "simple",
+              "clarification_question": null
+            },
+            "recent_turn_ids": [
+              "3719a5e3-9154-4b4b-a262-d7b4a929161d",
+              "5c8b720d-3a44-4cdd-954d-762a435b558b",
+              "848cb89e-bd03-4517-963f-c290ff4d8e29",
+              "ca943b48-d2d9-4e15-bb61-8a0630bfc10e",
+              "8f2a63de-27f0-4b97-b3fa-eb5bccd71958",
+              "50f892ad-dbe9-4da8-a63e-92d32a4c0733"
+            ],
+            "conversation_summary": null,
+            "active_tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "time_range": null,
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "last_output": "pie"
+          },
+          "scoped_catalog_tables": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+          ]
+        }
+      },
+      "request_contract": null,
+      "relation_to_previous": null,
+      "inherited_fields": null,
+      "plan": {
+        "intent": "chart",
+        "tables": [
+          "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+        ],
+        "joins": [],
+        "filters": [],
+        "dimensions": [
+          "may"
+        ],
+        "metrics": [
+          {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "duration_seconds",
+            "percentage_of_total": false
+          }
+        ],
+        "having": [],
+        "ranking": null,
+        "derived_metrics": [],
+        "time_comparison": null,
+        "time_granularity": null,
+        "sort": [
+          {
+            "column": "total_duration_seconds",
+            "field": "total_duration_seconds",
+            "direction": "desc"
+          }
+        ],
+        "limit": 5,
+        "output": "pie",
+        "query_complexity": "simple",
+        "clarification_question": null
+      },
+      "query_result_id": null,
+      "chart_result_id": null,
+      "report_section_statuses": null,
+      "coverage": null
+    }
+  ]
+}

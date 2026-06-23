@@ -27,6 +27,13 @@ export interface ChartPayload {
   x_key: string;
   y_keys: string[];
   data: Record<string, unknown>[];
+  x_axis_unit?: string | null;
+  y_axis_unit?: string | null;
+  tooltip_unit?: string | null;
+  source_result_id?: string | null;
+  source_turn_id?: string | null;
+  metric?: string | null;
+  dimension?: string | null;
 }
 
 export interface DashboardPayload {

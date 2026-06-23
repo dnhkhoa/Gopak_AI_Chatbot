@@ -36,11 +36,10 @@ def run_case(case: dict[str, Any], subset: str) -> dict[str, Any]:
             recent_turns_limit=settings.recent_turns_limit,
         )
         app = ChatApplicationService(settings=settings, memory_service=memory)
-        conv = app.create_conversation(case.get("id"))
         files = list_uploaded_files()
         file_id = resolve_file_id(files, case.get("file_key", "machine"))
-        if file_id:
-            app.set_active_file(conv.id, file_id)
+        conv = app.create_conversation(case.get("id"), source_file_id=file_id) if file_id else app.create_conversation(case.get("id"))
+        current_file_id = file_id
 
         turns = []
         latencies = []
@@ -59,7 +58,10 @@ def run_case(case: dict[str, Any], subset: str) -> dict[str, Any]:
                 app = ChatApplicationService(settings=settings, memory_service=memory)
             if turn.get("select_file"):
                 file_id = resolve_file_id(files, turn["select_file"])
-                if file_id:
+                if file_id and file_id != current_file_id:
+                    conv = app.create_conversation(f"{case.get('id')}-{index}", source_file_id=file_id)
+                    current_file_id = file_id
+                elif file_id:
                     app.set_active_file(conv.id, file_id)
             started = perf_counter()
             response = app.process_message(conv.id, turn["message"], debug=True)

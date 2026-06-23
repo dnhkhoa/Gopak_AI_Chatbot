@@ -44,11 +44,23 @@ def classify_turn(question: str, has_state: bool) -> TurnClassification:
         return TurnClassification(TurnType.ADD_FILTER, 0.86, "Filter refinement phrase.")
     ranking_words = ["top", "bottom", "dung dau", "cao nhat", "thap nhat", "nhieu nhat", "it nhat", "pho bien", "xep hang"]
     dim_nouns = ["may", "machine", "nguyen nhan", "ton that", "nhom", "cong", "loai", "thang", "ngay"]
+    output_words = ["ve", "bieu do", "chart", "excel", "bao cao", "dashboard", "xuat excel", "xuat file", "xuat bao cao", "xuat ket qua", "xuat ra"]
+    metric_words = ["downtime", "tong", "so lan", "dem", "ty le", "ty trong", "phan tram", "trung binh", "thoi gian", "thoi luong"]
+    self_contained_output = (
+        any(term in q for term in output_words)
+        and (
+            any(d in q for d in dim_nouns)
+            or any(m in q for m in metric_words)
+            or any(term in q for term in ["xu huong", "qua thoi gian", "theo thoi gian", "phan bo", "tong quan"])
+        )
+    )
+    if self_contained_output and not any(term in q for term in ["ket qua vua roi", "ket qua tren", "du lieu tren", "top vua roi"]):
+        return TurnClassification(TurnType.NEW_QUERY, 0.92, "Self-contained output/report/chart request.")
     # A self-contained ranking question that names its own dimension is a NEW query,
     # not a refinement of the previous result. Checked before output/ranking refinements.
     if any(w in q for w in ranking_words) and any(d in q for d in dim_nouns):
         return TurnClassification(TurnType.NEW_QUERY, 0.90, "Complete ranking query naming its own dimension.")
-    if any(term in q for term in ["ve", "bieu do", "chart", "excel", "bao cao", "dashboard", "xuat excel", "xuat file", "xuat bao cao", "xuat ket qua", "xuat ra"]):
+    if any(term in q for term in output_words):
         return TurnClassification(TurnType.CHANGE_OUTPUT, 0.88, "Output change phrase.")
     if any(term in q for term in ranking_words):
         return TurnClassification(TurnType.CHANGE_RANKING, 0.86, "Ranking change phrase.")

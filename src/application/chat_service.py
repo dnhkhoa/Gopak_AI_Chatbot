@@ -40,13 +40,20 @@ from src.application.grounding import (
     deterministic_table_commentary,
     json_payload,
 )
+from src.application.turn_contracts import (
+    ChartContract,
+    RequestContract,
+    build_request_contract,
+    coverage_for_plan,
+    new_lineage,
+)
 from src.files.lifecycle import FileLifecycleService
 from src.files.upload_store import find_uploaded_file, list_uploaded_files
 from src.ingestion.cache_manager import ParquetCache
 from src.llm.ollama_client import OllamaClient
 from src.llm.planner import QueryPlanner
 from src.query.executor import SafeQueryExecutor
-from src.query.schemas import QueryPlan
+from src.query.schemas import MetricSpec, QueryPlan
 from src.rendering.chart_renderer import build_chart
 from src.rendering.dashboard import kpi_cards
 from src.rendering.formatters import format_dataframe_for_display, format_duration, format_vn_number, humanize_column_name
@@ -427,46 +434,79 @@ class ChatApplicationService:
             self._save_assistant_response(state, response, execution_mode="SAFE_FAILURE")
             return response
 
-        open_ended_response = self._try_open_ended_analysis_response(conversation_id, message, catalog, state, debug, started)
+        request_contract = build_request_contract(message, state.active_file_id, bool(state.last_result_summary or state.last_result_cache_id))
+        lineage = new_lineage(conversation_id, state.active_file_id)
+        contract_metadata = {
+            "lineage": lineage,
+            "request_contract": request_contract.model_dump(),
+            "request_contract_id": lineage["request_contract_id"],
+            "query_plan_id": lineage["query_plan_id"],
+            "query_result_id": lineage["query_result_id"],
+            "answer_brief_id": lineage["answer_brief_id"],
+            "chart_spec_id": lineage["chart_spec_id"],
+            "report_artifact_id": lineage["report_artifact_id"],
+        }
+        planning_state = state
+        if request_contract.relation_to_previous_turn == "NEW_REQUEST":
+            planning_state = state.model_copy(deep=True)
+            planning_state.clear_analysis_context()
+            planning_state.active_file_id = state.active_file_id
+            planning_state.active_file_name = state.active_file_name
+
+        report_response = self._try_report_orchestration_response(
+            conversation_id, message, catalog, state, request_contract, lineage, debug, started
+        )
+        if report_response is not None:
+            report_response.metadata.update(contract_metadata)
+            self._save_assistant_response(state, report_response)
+            return report_response
+
+        open_ended_response = self._try_open_ended_analysis_response(conversation_id, message, catalog, planning_state, debug, started)
         if open_ended_response is not None:
+            open_ended_response.metadata.update(contract_metadata)
             self._save_assistant_response(state, open_ended_response)
             return open_ended_response
 
         clarification = ClarificationResolver(catalog).resolve_pending(
             conversation_id,
             message,
-            state,
+            planning_state,
             debug=debug,
             started=started,
         )
         if clarification.response is not None:
+            clarification.response.metadata.update(contract_metadata)
             self._save_assistant_response(state, clarification.response)
             return clarification.response
         if clarification.resolved_message:
             message = clarification.resolved_message
-        forced_plan = build_plan_from_resolved_message(catalog, state, message) if clarification.resolved_message else None
-        if forced_plan is None:
+        forced_plan = build_plan_from_resolved_message(catalog, planning_state, message) if clarification.resolved_message else None
+        if forced_plan is None and request_contract.relation_to_previous_turn != "NEW_REQUEST":
             forced_plan = restore_topic_plan(catalog, state, message)
         if forced_plan is None and state.pending_clarification is None and _starts_slot_clarification(message):
             started_clarification = ClarificationResolver(catalog).maybe_start(
                 conversation_id,
                 message,
-                state,
+                planning_state,
                 QueryPlan(intent="clarification", output="text", clarification_question="Cần làm rõ yêu cầu."),
                 debug=debug,
                 started=started,
             )
             if started_clarification is not None:
+                started_clarification.metadata.update(contract_metadata)
                 self._save_assistant_response(state, started_clarification)
                 return started_clarification
 
-        semantic_followup = self._try_semantic_followup_response(conversation_id, message, state, debug, started)
-        if semantic_followup is not None:
-            self._save_assistant_response(state, semantic_followup)
-            return semantic_followup
+        if request_contract.relation_to_previous_turn == "FOLLOW_UP_ON_PREVIOUS_RESULT":
+            semantic_followup = self._try_semantic_followup_response(conversation_id, message, state, debug, started)
+            if semantic_followup is not None:
+                semantic_followup.metadata.update(contract_metadata)
+                self._save_assistant_response(state, semantic_followup)
+                return semantic_followup
 
-        row_response = try_row_level_response(conversation_id, message, catalog, state, debug, started)
+        row_response = try_row_level_response(conversation_id, message, catalog, planning_state, debug, started)
         if row_response is not None:
+            row_response.metadata.update(contract_metadata)
             self._save_assistant_response(state, row_response, query_plan=None, result_summary=None)
             return row_response
 
@@ -474,6 +514,7 @@ class ChatApplicationService:
         metadata_response = self._try_metadata_response(conversation_id, message, customer_intent, catalog, debug, started)
         if metadata_response is not None:
             self._attach_file_scope_metadata(metadata_response, state, True)
+            metadata_response.metadata.update(contract_metadata)
             self._save_assistant_response(state, metadata_response, query_plan=None, result_summary=None)
             return metadata_response
 
@@ -496,11 +537,12 @@ class ChatApplicationService:
                 }
             else:
                 planner = QueryPlanner(catalog, self.settings)
-                planned = planner.plan(message, state)
+                planned = planner.plan(message, planning_state)
                 plan = planned.plan
                 metadata = dict(planned.metadata or {})
             metadata["persistence_degraded"] = self.memory_service.persistence_degraded
             self._attach_file_scope_to_metadata(metadata, state, True)
+            metadata.update(contract_metadata)
 
             if not self._plan_within_file_scope(plan, catalog):
                 metadata["execution_mode"] = "SAFE_FAILURE"
@@ -512,6 +554,17 @@ class ChatApplicationService:
                     output="text",
                     clarification_question="Unable to build a safe query within the selected Excel file.",
                 )
+            if plan.intent not in {"clarification", "refusal", "safe_failure"}:
+                coverage = coverage_for_plan(request_contract, plan)
+                metadata["request_coverage"] = coverage.model_dump()
+                if request_contract.intent in {"chart", "report"} and coverage.missing:
+                    metadata["execution_mode"] = "SAFE_FAILURE"
+                    metadata["coverage_gate_failed"] = True
+                    plan = QueryPlan(
+                        intent="safe_failure",
+                        output="text",
+                        clarification_question="Unable to build a chart/report that matches the requested dimensions, metrics, and output.",
+                    )
 
             if plan.intent in {"clarification", "refusal", "safe_failure"}:
                 started_clarification = ClarificationResolver(catalog).maybe_start(
@@ -734,6 +787,145 @@ class ChatApplicationService:
                 return filename
         return None
 
+    def _try_report_orchestration_response(
+        self,
+        conversation_id: str,
+        message: str,
+        catalog: dict,
+        state,
+        request_contract: RequestContract,
+        lineage: dict[str, str | None],
+        debug: bool,
+        started: float,
+    ) -> ChatResponse | None:
+        if request_contract.intent != "report":
+            return None
+        table = catalog.get("tables", [None])[0]
+        if not table:
+            return None
+        path = table.get("parquet_path")
+        if not path:
+            return None
+        df = pd.read_parquet(path)
+        machine = _role_column(table, "machine") or "may"
+        duration = _role_column(table, "duration_seconds") or "duration_seconds"
+        start_time = _role_column(table, "start_time")
+        loss_name = _role_column(table, "loss_name")
+        sections: dict[str, dict[str, Any]] = {}
+        report_kind = "downtime" if any(item in request_contract.report_sections for item in ["kpi_total_downtime", "top_machines"]) else "overview"
+
+        record_count = int(len(df))
+        total_seconds = float(df[duration].sum()) if duration in df.columns else 0.0
+        total_hours = round(total_seconds / 3600, 2)
+        date_range = None
+        if start_time and start_time in df.columns:
+            times = pd.to_datetime(df[start_time], errors="coerce").dropna()
+            if not times.empty:
+                date_range = {"from": str(times.min().date()), "to": str(times.max().date())}
+        sections["dataset_overview"] = {"status": "SUCCESS", "record_count": record_count, "date_range": date_range}
+
+        top_machines = pd.DataFrame()
+        if machine in df.columns and duration in df.columns:
+            top_machines = (
+                df.groupby(machine, dropna=False)
+                .agg(total_duration_seconds=(duration, "sum"), row_count=(duration, "size"), avg_duration_seconds=(duration, "mean"))
+                .reset_index()
+                .sort_values("total_duration_seconds", ascending=False)
+                .head(5)
+            )
+            sections["top_machines"] = {"status": "SUCCESS", "rows": int(len(top_machines))}
+        else:
+            sections["top_machines"] = {"status": "NOT_ENOUGH_DATA"}
+
+        top_causes = pd.DataFrame()
+        if loss_name and loss_name in df.columns and duration in df.columns:
+            top_causes = (
+                df.groupby(loss_name, dropna=False)
+                .agg(total_duration_seconds=(duration, "sum"), row_count=(duration, "size"))
+                .reset_index()
+                .sort_values("total_duration_seconds", ascending=False)
+                .head(5)
+            )
+            sections["top_causes"] = {"status": "SUCCESS", "rows": int(len(top_causes))}
+        else:
+            sections["top_causes"] = {"status": "NOT_ENOUGH_DATA"}
+
+        trend = pd.DataFrame()
+        if start_time and start_time in df.columns and duration in df.columns:
+            trend_source = df.copy()
+            trend_source[start_time] = pd.to_datetime(trend_source[start_time], errors="coerce")
+            trend_source = trend_source.dropna(subset=[start_time])
+            trend_source["report_date"] = trend_source[start_time].dt.date.astype(str)
+            trend = (
+                trend_source.groupby("report_date", dropna=False)
+                .agg(total_duration_seconds=(duration, "sum"))
+                .reset_index()
+                .sort_values("report_date")
+            )
+            sections["time_trend"] = {"status": "SUCCESS", "rows": int(len(trend))}
+        else:
+            sections["time_trend"] = {"status": "NOT_ENOUGH_DATA"}
+
+        sections["kpi_total_downtime"] = {"status": "SUCCESS", "hours": total_hours}
+        sections["kpi_stop_count"] = {"status": "SUCCESS", "count": record_count}
+        sections["management_commentary"] = {"status": "SUCCESS"}
+        sections["source_filters_limitations"] = {"status": "SUCCESS", "source": table.get("source")}
+
+        missing = [name for name in request_contract.report_sections if sections.get(name, {}).get("status") not in {"SUCCESS", "NOT_ENOUGH_DATA"}]
+        display_table = format_dataframe_for_display(top_machines if not top_machines.empty else top_causes, catalog)
+        chart_plan = QueryPlan(
+            intent="chart",
+            tables=[table["table_name"]],
+            dimensions=["report_date"],
+            metrics=[MetricSpec(aggregation="sum", column=duration, name="total_duration_seconds")],
+            output="line",
+            time_granularity="day",
+            limit=500,
+        )
+        chart_metadata = {"lineage": lineage}
+        chart = _chart_payload(trend, chart_plan, catalog, chart_metadata) if not trend.empty else None
+        summary = _report_summary(report_kind, record_count, total_hours, date_range, top_machines, top_causes)
+        html_path, xlsx_path = _export_orchestrated_report(
+            message=message,
+            report_kind=report_kind,
+            summary=summary,
+            sections=sections,
+            top_machines=top_machines,
+            top_causes=top_causes,
+            trend=trend,
+            reports_dir=self.settings.reports_dir,
+            artifact_id=str(lineage["report_artifact_id"]),
+            catalog=catalog,
+        )
+        metadata = {
+            "execution_mode": "DETERMINISTIC_REPORT",
+            "routing_reason": "multi_query_report_orchestration",
+            "llm_called": False,
+            "llm_call_count": 0,
+            "multi_query_execution": True,
+            "report_kind": report_kind,
+            "report_section_statuses": sections,
+            "report_completeness": {"missing": missing, "required": request_contract.report_sections},
+            "chart_contract": chart_metadata.get("chart_contract"),
+            "latency_ms": {"total": round((perf_counter() - started) * 1000, 1)},
+            "active_file_id": state.active_file_id,
+            "active_file_name": state.active_file_name,
+            "file_scope_validated": True,
+            "debug": {"report_sections": sections} if debug else None,
+        }
+        return ChatResponse(
+            message_id=str(uuid4()),
+            conversation_id=conversation_id,
+            response_type="report",
+            title="Báo cáo phân tích downtime" if report_kind == "downtime" else "Báo cáo tổng quan",
+            summary=summary,
+            table=_table_payload(display_table) if not display_table.empty else None,
+            chart=chart,
+            sources=_source_payloads(self._sources_for_plan(QueryPlan(tables=[table["table_name"]]), catalog)),
+            downloads=[_download_payload(path) for path in [html_path, xlsx_path] if path.exists()],
+            metadata=_json_safe(metadata),
+        )
+
     def _try_open_ended_analysis_response(
         self,
         conversation_id: str,
@@ -899,6 +1091,43 @@ class ChatApplicationService:
                 state,
                 file_scope_validated=True,
             )
+        if state.last_result_cache_id:
+            record, cached_df = self.memory_service.load_result_reference(state.last_result_cache_id)
+            if cached_df is not None and not cached_df.empty:
+                display = format_dataframe_for_display(cached_df, None)
+                table = _table_payload(display)
+                temporary = ChatResponse(
+                    message_id=str(uuid4()),
+                    conversation_id=conversation_id,
+                    response_type="table",
+                    title="Kết quả trước đó",
+                    summary="",
+                    table=table,
+                    metadata={},
+                )
+                commentary = deterministic_table_commentary(message, temporary)
+                if commentary:
+                    metadata = {
+                        "execution_mode": "DETERMINISTIC",
+                        "routing_reason": "semantic_followup_from_cached_result",
+                        "llm_called": False,
+                        "llm_call_count": 0,
+                        "previous_visible_result_id": state.last_result_cache_id,
+                        "previous_result_reference": record,
+                        "latency_ms": {"total": round((perf_counter() - started) * 1000, 1)},
+                        "active_file_id": state.active_file_id,
+                        "active_file_name": state.active_file_name,
+                        "file_scope_validated": True,
+                        "debug": {"cached_result_columns": list(cached_df.columns)} if debug else None,
+                    }
+                    return ChatResponse(
+                        message_id=str(uuid4()),
+                        conversation_id=conversation_id,
+                        response_type="text",
+                        title="Nhận xét kết quả",
+                        summary=commentary,
+                        metadata=_json_safe(metadata),
+                    )
         context = {
             "source_file_name": state.active_file_name,
             "last_plan": state.last_plan,
@@ -1430,7 +1659,7 @@ class ChatApplicationService:
     ) -> ChatResponse:
         response_type = _response_type(presented, plan)
         table = _table_payload(presented.result_dataframe) if presented.result_dataframe is not None else None
-        chart = _chart_payload(raw_dataframe, plan, catalog) if raw_dataframe is not None and plan.output in {"bar", "horizontal_bar", "line", "pie"} else None
+        chart = _chart_payload(raw_dataframe, plan, catalog, metadata) if raw_dataframe is not None and plan.output in {"bar", "horizontal_bar", "line", "pie"} else None
         dashboard = None
         if response_type == "dashboard" and raw_dataframe is not None:
             dashboard = DashboardPayload(cards=kpi_cards(raw_dataframe), table=table, chart=chart)
@@ -1488,7 +1717,7 @@ def _table_payload(df: pd.DataFrame) -> TablePayload:
     return TablePayload(columns=[str(column) for column in safe_df.columns], rows=rows)
 
 
-def _chart_payload(df: pd.DataFrame, plan: QueryPlan, catalog: dict) -> ChartPayload | None:
+def _chart_payload(df: pd.DataFrame, plan: QueryPlan, catalog: dict, metadata: dict[str, Any] | None = None) -> ChartPayload | None:
     if df.empty or len(df.columns) < 2 or plan.output not in {"bar", "horizontal_bar", "line", "pie"}:
         return None
     x = plan.dimensions[0] if plan.dimensions and plan.dimensions[0] in df.columns else df.columns[0]
@@ -1497,9 +1726,162 @@ def _chart_payload(df: pd.DataFrame, plan: QueryPlan, catalog: dict) -> ChartPay
     if y == x:
         y = next((column for column in df.columns if column != x), y)
     x_label = humanize_column_name(str(x), catalog)
-    y_label = humanize_column_name(str(y), catalog)
-    data = df[[x, y]].head(100).rename(columns={x: x_label, y: y_label}).to_dict(orient="records")
-    return ChartPayload(type=plan.output, title="Kết quả phân tích", x_key=x_label, y_keys=[y_label], data=_json_safe(data))
+    y_axis_unit = None
+    tooltip_unit = None
+    chart_df = df[[x, y]].head(100).copy()
+    if _is_duration_metric(str(y), plan):
+        unit, divisor = _duration_display_unit(chart_df[y])
+        y_axis_unit = unit
+        tooltip_unit = unit
+        y_label = f"{humanize_column_name(str(y), catalog)} ({unit})"
+        chart_df[y] = pd.to_numeric(chart_df[y], errors="coerce").fillna(0) / divisor
+        chart_df[y] = chart_df[y].round(2)
+    else:
+        y_label = humanize_column_name(str(y), catalog)
+    data = chart_df.rename(columns={x: x_label, y: y_label}).to_dict(orient="records")
+    lineage = (metadata or {}).get("lineage") if isinstance(metadata, dict) else None
+    source_result_id = str((lineage or {}).get("query_result_id") or (metadata or {}).get("query_result_id") or "")
+    source_turn_id = str((lineage or {}).get("turn_id") or "")
+    chart_contract = ChartContract(
+        chart_type=plan.output,
+        dimension=_normalized_contract_dimension(str(x)),
+        metric=_normalized_contract_metric(str(y)),
+        aggregation=plan.metrics[0].aggregation if plan.metrics else "count",
+        x_axis_unit=None,
+        y_axis_unit=y_axis_unit,
+        tooltip_unit=tooltip_unit,
+        source_result_id=source_result_id,
+        source_turn_id=source_turn_id,
+        expected_category_count=int(min(len(chart_df), 100)),
+        time_grain=plan.time_granularity,
+    )
+    if isinstance(metadata, dict):
+        metadata["chart_contract"] = chart_contract.model_dump()
+    return ChartPayload(
+        type=plan.output,
+        title="Kết quả phân tích",
+        x_key=x_label,
+        y_keys=[y_label],
+        data=_json_safe(data),
+        y_axis_unit=y_axis_unit,
+        tooltip_unit=tooltip_unit,
+        source_result_id=source_result_id or None,
+        source_turn_id=source_turn_id or None,
+        metric=chart_contract.metric,
+        dimension=chart_contract.dimension,
+    )
+
+
+def _is_duration_metric(column: str, plan: QueryPlan) -> bool:
+    if "duration_seconds" in column or column.endswith("_seconds"):
+        return True
+    return any((metric.column or "").endswith("_seconds") or "duration" in (metric.column or "") for metric in plan.metrics)
+
+
+def _duration_display_unit(values: pd.Series) -> tuple[str, float]:
+    numeric = pd.to_numeric(values, errors="coerce").fillna(0).abs()
+    max_value = float(numeric.max()) if not numeric.empty else 0.0
+    if max_value >= 7200:
+        return "giờ", 3600.0
+    if max_value >= 60:
+        return "phút", 60.0
+    return "giây", 1.0
+
+
+def _normalized_contract_dimension(column: str) -> str:
+    mapping = {
+        "may": "machine",
+        "machine_name": "machine",
+        "nhom_ton_that": "loss_group",
+        "loss_group": "loss_group",
+        "ten_ton_that": "loss_name",
+        "loss_name": "loss_name",
+        "thoi_gian_bat_dau": "date",
+        "start_time": "date",
+        "report_date": "date",
+    }
+    return mapping.get(column, column)
+
+
+def _normalized_contract_metric(column: str) -> str:
+    mapping = {
+        "total_duration_seconds": "total_downtime",
+        "avg_duration_seconds": "average_duration",
+        "row_count": "count",
+        "percentage": "percentage",
+    }
+    return mapping.get(column, column)
+
+
+def _role_column(table: dict, role: str) -> str | None:
+    for column in table.get("columns", []):
+        if column.get("semantic_role") == role:
+            return str(column.get("normalized_name") or "")
+    return None
+
+
+def _report_summary(
+    report_kind: str,
+    record_count: int,
+    total_hours: float,
+    date_range: dict[str, str] | None,
+    top_machines: pd.DataFrame,
+    top_causes: pd.DataFrame,
+) -> str:
+    range_text = f"{date_range['from']} đến {date_range['to']}" if date_range else "không xác định"
+    lines = [
+        f"Báo cáo đã tổng hợp {record_count} dòng dữ liệu trong giai đoạn {range_text}.",
+        f"Tổng downtime là {format_vn_number(total_hours, 2)} giờ.",
+    ]
+    if not top_machines.empty:
+        first = top_machines.iloc[0]
+        lines.append(f"Máy đứng đầu theo downtime là {first.iloc[0]} với {format_vn_number(float(first['total_duration_seconds']) / 3600, 2)} giờ.")
+    if report_kind == "downtime" and not top_causes.empty:
+        first = top_causes.iloc[0]
+        lines.append(f"Nguyên nhân tổn thất lớn nhất là {first.iloc[0]} với {format_vn_number(float(first['total_duration_seconds']) / 3600, 2)} giờ.")
+    lines.append("Report includes overview, KPI, ranked tables, time trend, source and limitation sections.")
+    return "\n".join(lines)
+
+
+def _export_orchestrated_report(
+    *,
+    message: str,
+    report_kind: str,
+    summary: str,
+    sections: dict[str, dict[str, Any]],
+    top_machines: pd.DataFrame,
+    top_causes: pd.DataFrame,
+    trend: pd.DataFrame,
+    reports_dir: Path,
+    artifact_id: str,
+    catalog: dict,
+) -> tuple[Path, Path]:
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    stem = f"report_{artifact_id}"
+    html_path = reports_dir / f"{stem}.html"
+    xlsx_path = reports_dir / f"{stem}.xlsx"
+    html_parts = [
+        "<html><head><meta charset=\"utf-8\"><title>Gopak report</title></head><body>",
+        f"<h1>{'Downtime report' if report_kind == 'downtime' else 'Overview report'}</h1>",
+        f"<p><strong>Question:</strong> {message}</p>",
+        "".join(f"<p>{line}</p>" for line in summary.splitlines()),
+        "<h2>Section status</h2>",
+        pd.DataFrame([{"section": key, **value} for key, value in sections.items()]).to_html(index=False),
+    ]
+    for title, frame in [("Top machines", top_machines), ("Top causes", top_causes), ("Time trend", trend)]:
+        html_parts.append(f"<h2>{title}</h2>")
+        html_parts.append(format_dataframe_for_display(frame, catalog).to_html(index=False) if not frame.empty else "<p>No data.</p>")
+    html_parts.append("</body></html>")
+    html_path.write_text("\n".join(html_parts), encoding="utf-8")
+    with pd.ExcelWriter(xlsx_path) as writer:
+        pd.DataFrame([{"section": key, **value} for key, value in sections.items()]).to_excel(writer, sheet_name="section_status", index=False)
+        if not top_machines.empty:
+            format_dataframe_for_display(top_machines, catalog).to_excel(writer, sheet_name="top_machines", index=False)
+        if not top_causes.empty:
+            format_dataframe_for_display(top_causes, catalog).to_excel(writer, sheet_name="top_causes", index=False)
+        if not trend.empty:
+            format_dataframe_for_display(trend, catalog).to_excel(writer, sheet_name="time_trend", index=False)
+    return html_path, xlsx_path
 
 
 def _source_payloads(sources: list[dict]) -> list[SourcePayload]:

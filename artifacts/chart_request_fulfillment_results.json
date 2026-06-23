@@ -1,0 +1,601 @@
+{
+  "summary": {
+    "total": 3,
+    "failed": 0,
+    "status": "passed"
+  },
+  "results": [
+    {
+      "id": "chart_top_machine_bar",
+      "message": "Vẽ biểu đồ cột top 5 máy theo tổng downtime.",
+      "expected_type": "bar",
+      "expected_dimension": "machine",
+      "expected_metric": "total_downtime",
+      "response_type": "chart",
+      "chart": {
+        "type": "bar",
+        "title": "Kết quả phân tích",
+        "x_key": "Máy",
+        "y_keys": [
+          "Tổng thời gian downtime (giờ)"
+        ],
+        "data": [
+          {
+            "Máy": "Máy 11",
+            "Tổng thời gian downtime (giờ)": 413.57
+          },
+          {
+            "Máy": "Máy 12",
+            "Tổng thời gian downtime (giờ)": 323.15
+          },
+          {
+            "Máy": "Máy 29",
+            "Tổng thời gian downtime (giờ)": 294.67
+          },
+          {
+            "Máy": "Máy 8",
+            "Tổng thời gian downtime (giờ)": 229.98
+          },
+          {
+            "Máy": "Máy 9",
+            "Tổng thời gian downtime (giờ)": 185.32
+          }
+        ],
+        "x_axis_unit": null,
+        "y_axis_unit": "giờ",
+        "tooltip_unit": "giờ",
+        "source_result_id": "be078bc7-cb93-4eb6-93e4-aec99cda91fd",
+        "source_turn_id": "e11618a8-794f-4778-84fb-57c78d29850e",
+        "metric": "total_downtime",
+        "dimension": "machine"
+      },
+      "chart_contract": {
+        "chart_type": "bar",
+        "dimension": "machine",
+        "metric": "total_downtime",
+        "aggregation": "sum",
+        "x_axis_unit": null,
+        "y_axis_unit": "giờ",
+        "tooltip_unit": "giờ",
+        "source_result_id": "be078bc7-cb93-4eb6-93e4-aec99cda91fd",
+        "source_turn_id": "e11618a8-794f-4778-84fb-57c78d29850e",
+        "expected_category_count": 5,
+        "time_grain": null
+      },
+      "coverage": {
+        "requested": [
+          "machine",
+          "total_downtime",
+          "sum",
+          "chart",
+          "bar_chart",
+          "top"
+        ],
+        "planned": [
+          "machine",
+          "total_downtime",
+          "sum",
+          "chart",
+          "bar_chart",
+          "top"
+        ],
+        "missing": [],
+        "unexpected": []
+      },
+      "checks": {
+        "is_chart": true,
+        "chart_type": true,
+        "dimension": true,
+        "metric": true,
+        "coverage_complete": true,
+        "current_turn_source": true,
+        "duration_unit_normalized": true,
+        "not_raw_seconds": true
+      },
+      "passed": true
+    },
+    {
+      "id": "chart_daily_trend_line",
+      "message": "Vẽ biểu đồ line xu hướng downtime theo ngày.",
+      "expected_type": "line",
+      "expected_dimension": "date",
+      "expected_metric": "total_downtime",
+      "response_type": "chart",
+      "chart": {
+        "type": "line",
+        "title": "Kết quả phân tích",
+        "x_key": "Thời gian bắt đầu",
+        "y_keys": [
+          "Tổng thời gian downtime (giờ)"
+        ],
+        "data": [
+          {
+            "Thời gian bắt đầu": "2025-11-03T00:00:00",
+            "Tổng thời gian downtime (giờ)": 12.72
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-04T00:00:00",
+            "Tổng thời gian downtime (giờ)": 15.77
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-05T00:00:00",
+            "Tổng thời gian downtime (giờ)": 18.48
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-06T00:00:00",
+            "Tổng thời gian downtime (giờ)": 14.25
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-07T00:00:00",
+            "Tổng thời gian downtime (giờ)": 7.62
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-08T00:00:00",
+            "Tổng thời gian downtime (giờ)": 4.33
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-09T00:00:00",
+            "Tổng thời gian downtime (giờ)": 2.41
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-10T00:00:00",
+            "Tổng thời gian downtime (giờ)": 21.97
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-11T00:00:00",
+            "Tổng thời gian downtime (giờ)": 21.24
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-12T00:00:00",
+            "Tổng thời gian downtime (giờ)": 26.21
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-13T00:00:00",
+            "Tổng thời gian downtime (giờ)": 34.35
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-14T00:00:00",
+            "Tổng thời gian downtime (giờ)": 37.9
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-15T00:00:00",
+            "Tổng thời gian downtime (giờ)": 39.14
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-16T00:00:00",
+            "Tổng thời gian downtime (giờ)": 15.49
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-17T00:00:00",
+            "Tổng thời gian downtime (giờ)": 37.31
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-18T00:00:00",
+            "Tổng thời gian downtime (giờ)": 21.68
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-19T00:00:00",
+            "Tổng thời gian downtime (giờ)": 30.08
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-20T00:00:00",
+            "Tổng thời gian downtime (giờ)": 41.14
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-21T00:00:00",
+            "Tổng thời gian downtime (giờ)": 50.98
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-22T00:00:00",
+            "Tổng thời gian downtime (giờ)": 50.14
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-23T00:00:00",
+            "Tổng thời gian downtime (giờ)": 10.55
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-24T00:00:00",
+            "Tổng thời gian downtime (giờ)": 34.34
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-25T00:00:00",
+            "Tổng thời gian downtime (giờ)": 36.54
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-26T00:00:00",
+            "Tổng thời gian downtime (giờ)": 34.37
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-27T00:00:00",
+            "Tổng thời gian downtime (giờ)": 37.05
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-28T00:00:00",
+            "Tổng thời gian downtime (giờ)": 41.23
+          },
+          {
+            "Thời gian bắt đầu": "2025-11-29T00:00:00",
+            "Tổng thời gian downtime (giờ)": 11.73
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-01T00:00:00",
+            "Tổng thời gian downtime (giờ)": 26.13
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-02T00:00:00",
+            "Tổng thời gian downtime (giờ)": 36.74
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-03T00:00:00",
+            "Tổng thời gian downtime (giờ)": 28.01
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-04T00:00:00",
+            "Tổng thời gian downtime (giờ)": 47.26
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-05T00:00:00",
+            "Tổng thời gian downtime (giờ)": 31.83
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-06T00:00:00",
+            "Tổng thời gian downtime (giờ)": 29.74
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-07T00:00:00",
+            "Tổng thời gian downtime (giờ)": 5.82
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-08T00:00:00",
+            "Tổng thời gian downtime (giờ)": 32.22
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-09T00:00:00",
+            "Tổng thời gian downtime (giờ)": 38.05
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-10T00:00:00",
+            "Tổng thời gian downtime (giờ)": 36.89
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-11T00:00:00",
+            "Tổng thời gian downtime (giờ)": 32.3
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-12T00:00:00",
+            "Tổng thời gian downtime (giờ)": 35.17
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-13T00:00:00",
+            "Tổng thời gian downtime (giờ)": 40.58
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-14T00:00:00",
+            "Tổng thời gian downtime (giờ)": 11.08
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-15T00:00:00",
+            "Tổng thời gian downtime (giờ)": 29.48
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-16T00:00:00",
+            "Tổng thời gian downtime (giờ)": 38.28
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-17T00:00:00",
+            "Tổng thời gian downtime (giờ)": 29.95
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-18T00:00:00",
+            "Tổng thời gian downtime (giờ)": 41.9
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-19T00:00:00",
+            "Tổng thời gian downtime (giờ)": 25.6
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-20T00:00:00",
+            "Tổng thời gian downtime (giờ)": 28.99
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-21T00:00:00",
+            "Tổng thời gian downtime (giờ)": 7.7
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-22T00:00:00",
+            "Tổng thời gian downtime (giờ)": 19.49
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-23T00:00:00",
+            "Tổng thời gian downtime (giờ)": 32.23
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-24T00:00:00",
+            "Tổng thời gian downtime (giờ)": 47.95
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-25T00:00:00",
+            "Tổng thời gian downtime (giờ)": 36.2
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-26T00:00:00",
+            "Tổng thời gian downtime (giờ)": 27.67
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-27T00:00:00",
+            "Tổng thời gian downtime (giờ)": 4.3
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-29T00:00:00",
+            "Tổng thời gian downtime (giờ)": 19.79
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-30T00:00:00",
+            "Tổng thời gian downtime (giờ)": 12.44
+          },
+          {
+            "Thời gian bắt đầu": "2025-12-31T00:00:00",
+            "Tổng thời gian downtime (giờ)": 16.78
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-02T00:00:00",
+            "Tổng thời gian downtime (giờ)": 5.74
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-03T00:00:00",
+            "Tổng thời gian downtime (giờ)": 16.81
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-04T00:00:00",
+            "Tổng thời gian downtime (giờ)": 2.54
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-05T00:00:00",
+            "Tổng thời gian downtime (giờ)": 29.29
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-06T00:00:00",
+            "Tổng thời gian downtime (giờ)": 36.97
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-07T00:00:00",
+            "Tổng thời gian downtime (giờ)": 26.2
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-08T00:00:00",
+            "Tổng thời gian downtime (giờ)": 16.69
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-09T00:00:00",
+            "Tổng thời gian downtime (giờ)": 10.37
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-10T00:00:00",
+            "Tổng thời gian downtime (giờ)": 23.73
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-11T00:00:00",
+            "Tổng thời gian downtime (giờ)": 5.3
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-12T00:00:00",
+            "Tổng thời gian downtime (giờ)": 10.12
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-13T00:00:00",
+            "Tổng thời gian downtime (giờ)": 10.75
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-14T00:00:00",
+            "Tổng thời gian downtime (giờ)": 11.89
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-15T00:00:00",
+            "Tổng thời gian downtime (giờ)": 11.4
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-16T00:00:00",
+            "Tổng thời gian downtime (giờ)": 8.57
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-17T00:00:00",
+            "Tổng thời gian downtime (giờ)": 9.52
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-18T00:00:00",
+            "Tổng thời gian downtime (giờ)": 2.89
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-19T00:00:00",
+            "Tổng thời gian downtime (giờ)": 1.71
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-20T00:00:00",
+            "Tổng thời gian downtime (giờ)": 4.47
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-21T00:00:00",
+            "Tổng thời gian downtime (giờ)": 15.64
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-22T00:00:00",
+            "Tổng thời gian downtime (giờ)": 21.33
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-23T00:00:00",
+            "Tổng thời gian downtime (giờ)": 23.98
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-24T00:00:00",
+            "Tổng thời gian downtime (giờ)": 12.63
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-25T00:00:00",
+            "Tổng thời gian downtime (giờ)": 1.07
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-26T00:00:00",
+            "Tổng thời gian downtime (giờ)": 11.23
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-27T00:00:00",
+            "Tổng thời gian downtime (giờ)": 21.75
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-28T00:00:00",
+            "Tổng thời gian downtime (giờ)": 32.23
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-29T00:00:00",
+            "Tổng thời gian downtime (giờ)": 3.2
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-30T00:00:00",
+            "Tổng thời gian downtime (giờ)": 5.57
+          },
+          {
+            "Thời gian bắt đầu": "2026-01-31T00:00:00",
+            "Tổng thời gian downtime (giờ)": 16.01
+          },
+          {
+            "Thời gian bắt đầu": "2026-02-01T00:00:00",
+            "Tổng thời gian downtime (giờ)": 2.41
+          },
+          {
+            "Thời gian bắt đầu": "2026-02-02T00:00:00",
+            "Tổng thời gian downtime (giờ)": 15.57
+          },
+          {
+            "Thời gian bắt đầu": "2026-02-03T00:00:00",
+            "Tổng thời gian downtime (giờ)": 2.35
+          }
+        ],
+        "x_axis_unit": null,
+        "y_axis_unit": "giờ",
+        "tooltip_unit": "giờ",
+        "source_result_id": "7bd05a36-f326-46ce-b88f-4bb84e9da171",
+        "source_turn_id": "3a716bac-ae82-457a-9ca9-be862b5e726c",
+        "metric": "total_downtime",
+        "dimension": "date"
+      },
+      "chart_contract": {
+        "chart_type": "line",
+        "dimension": "date",
+        "metric": "total_downtime",
+        "aggregation": "sum",
+        "x_axis_unit": null,
+        "y_axis_unit": "giờ",
+        "tooltip_unit": "giờ",
+        "source_result_id": "7bd05a36-f326-46ce-b88f-4bb84e9da171",
+        "source_turn_id": "3a716bac-ae82-457a-9ca9-be862b5e726c",
+        "expected_category_count": 90,
+        "time_grain": "day"
+      },
+      "coverage": {
+        "requested": [
+          "date",
+          "total_downtime",
+          "sum",
+          "chart",
+          "day_time_series",
+          "line_chart"
+        ],
+        "planned": [
+          "date",
+          "total_downtime",
+          "sum",
+          "chart",
+          "line_chart",
+          "day_time_series",
+          "top"
+        ],
+        "missing": [],
+        "unexpected": []
+      },
+      "checks": {
+        "is_chart": true,
+        "chart_type": true,
+        "dimension": true,
+        "metric": true,
+        "coverage_complete": true,
+        "current_turn_source": true,
+        "duration_unit_normalized": true,
+        "not_raw_seconds": true
+      },
+      "passed": true
+    },
+    {
+      "id": "chart_loss_group_distribution",
+      "message": "Vẽ biểu đồ phân bố số lần dừng theo nhóm tổn thất.",
+      "expected_type": "pie",
+      "expected_dimension": "loss_group",
+      "expected_metric": "count",
+      "response_type": "chart",
+      "chart": {
+        "type": "pie",
+        "title": "Kết quả phân tích",
+        "x_key": "Nhóm tổn thất",
+        "y_keys": [
+          "Số lần ghi nhận"
+        ],
+        "data": [
+          {
+            "Nhóm tổn thất": "Bảo trì",
+            "Số lần ghi nhận": 9151
+          }
+        ],
+        "x_axis_unit": null,
+        "y_axis_unit": null,
+        "tooltip_unit": null,
+        "source_result_id": "f21f7589-88a5-4528-9120-9ef9fb96f682",
+        "source_turn_id": "e815d166-d6b6-4f8d-9468-1dd508b3d961",
+        "metric": "count",
+        "dimension": "loss_group"
+      },
+      "chart_contract": {
+        "chart_type": "pie",
+        "dimension": "loss_group",
+        "metric": "count",
+        "aggregation": "count",
+        "x_axis_unit": null,
+        "y_axis_unit": null,
+        "tooltip_unit": null,
+        "source_result_id": "f21f7589-88a5-4528-9120-9ef9fb96f682",
+        "source_turn_id": "e815d166-d6b6-4f8d-9468-1dd508b3d961",
+        "expected_category_count": 1,
+        "time_grain": null
+      },
+      "coverage": {
+        "requested": [
+          "loss_group",
+          "count",
+          "count",
+          "chart",
+          "pie_chart"
+        ],
+        "planned": [
+          "loss_group",
+          "count",
+          "count",
+          "percentage",
+          "chart",
+          "pie_chart",
+          "top"
+        ],
+        "missing": [],
+        "unexpected": []
+      },
+      "checks": {
+        "is_chart": true,
+        "chart_type": true,
+        "dimension": true,
+        "metric": true,
+        "coverage_complete": true,
+        "current_turn_source": true,
+        "duration_unit_normalized": true,
+        "not_raw_seconds": true
+      },
+      "passed": true
+    }
+  ]
+}

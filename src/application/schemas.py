@@ -50,6 +50,13 @@ class ChartPayload(BaseModel):
     x_key: str = ""
     y_keys: list[str] = Field(default_factory=list)
     data: list[dict[str, Any]] = Field(default_factory=list)
+    x_axis_unit: str | None = None
+    y_axis_unit: str | None = None
+    tooltip_unit: str | None = None
+    source_result_id: str | None = None
+    source_turn_id: str | None = None
+    metric: str | None = None
+    dimension: str | None = None
 
 
 class DashboardPayload(BaseModel):

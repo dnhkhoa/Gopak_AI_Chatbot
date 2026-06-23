@@ -49,6 +49,12 @@ class DeterministicPlanner:
         generic_entry = self._entrytransaction_plan(q, table)
         if generic_entry is not None:
             return generic_entry
+        trend_chart = self._trend_chart_plan(q, table, duration, start_time)
+        if trend_chart is not None:
+            return trend_chart
+        distribution_chart = self._distribution_chart_plan(q, table, duration, machine, loss_name, loss_group)
+        if distribution_chart is not None:
+            return distribution_chart
         freeform_insight = self._freeform_insight_plan(q, table, duration, machine, loss_name, loss_group)
         if freeform_insight is not None:
             return freeform_insight
@@ -77,7 +83,10 @@ class DeterministicPlanner:
                 else machine if any(term in q for term in ["may", "m?y"])
                 else None
             )
-            metric_payloads = [{"aggregation": "count", "column": None, "name": "row_count", "percentage_of_total": True}]
+            if duration and any(term in q for term in ["downtime", "thoi gian", "thoi luong"]):
+                metric_payloads = [{"aggregation": "sum", "column": duration, "name": "total_duration_seconds", "percentage_of_total": True}]
+            else:
+                metric_payloads = [{"aggregation": "count", "column": None, "name": "row_count", "percentage_of_total": True}]
             dims = [dim] if dim else list(dimensions.value or [])
             confidence = 0.93 if dims else 0.60
         elif any(term in q for term in ["cao hon muc trung binh", "cao h?n m?c trung b?nh"]) and duration:
@@ -176,6 +185,63 @@ class DeterministicPlanner:
         confidence = self._score_confidence(confidence, operation, output, dimensions, topn, time, filters, plan, q)
         evidence = operation.evidence + output.evidence + metric.evidence + dimensions.evidence + topn.evidence + time.evidence + filters.evidence
         return DeterministicParse(plan, confidence, "Deterministic detectors produced a validated analytical plan candidate.", evidence=evidence)
+
+    def _trend_chart_plan(self, q: str, table: dict, duration: str | None, start_time: str | None) -> DeterministicParse | None:
+        chart_requested = any(term in q for term in ["bieu do", "chart", "ve ", "ve line", "line"])
+        trend_requested = any(term in q for term in ["xu huong", "qua thoi gian", "theo thoi gian", "theo ngay", "daily"])
+        if not (chart_requested and trend_requested and duration and start_time):
+            return None
+        granularity = "month" if any(term in q for term in ["theo thang", "monthly"]) else "week" if "theo tuan" in q else "day"
+        plan = QueryPlan(
+            intent="chart",
+            tables=[table["table_name"]],
+            dimensions=[start_time],
+            metrics=[MetricSpec(aggregation="sum", column=duration, name="total_duration_seconds")],
+            time_granularity=granularity,
+            sort=[SortSpec(column=start_time, direction="asc")],
+            limit=500,
+            output="line",
+            query_complexity="simple",
+        )
+        return DeterministicParse(plan, 0.96, "Time-series chart request mapped to current-turn date trend.", evidence=["trend_chart"])
+
+    def _distribution_chart_plan(
+        self,
+        q: str,
+        table: dict,
+        duration: str | None,
+        machine: str | None,
+        loss_name: str | None,
+        loss_group: str | None,
+    ) -> DeterministicParse | None:
+        chart_requested = any(term in q for term in ["bieu do", "chart", "ve ", "pie", "tron", "cot"])
+        distribution_requested = any(term in q for term in ["phan bo", "ty le", "ty trong", "co cau", "phan tram"])
+        if not (chart_requested and distribution_requested):
+            return None
+        dim = (
+            loss_group if any(term in q for term in ["nhom", "group"]) else
+            loss_name if any(term in q for term in ["nguyen nhan", "ton that", "loi", "su co"]) else
+            machine if any(term in q for term in ["may", "machine"]) else
+            None
+        )
+        if not dim:
+            return None
+        if duration and any(term in q for term in ["downtime", "thoi gian", "thoi luong"]):
+            metric = MetricSpec(aggregation="sum", column=duration, name="total_duration_seconds", percentage_of_total=True)
+        else:
+            metric = MetricSpec(aggregation="count", column=None, name="row_count", percentage_of_total=True)
+        output = "pie" if any(term in q for term in ["pie", "tron", "ty le", "ty trong", "co cau", "phan tram", "phan bo"]) else "bar"
+        plan = QueryPlan(
+            intent="chart",
+            tables=[table["table_name"]],
+            dimensions=[dim],
+            metrics=[metric],
+            sort=[SortSpec(column=metric.name or "row_count", direction="desc")],
+            limit=20,
+            output=output,
+            query_complexity="complex",
+        )
+        return DeterministicParse(plan, 0.95, "Distribution chart request mapped to current-turn grouped share.", evidence=["distribution_chart"])
 
     def _asks_multiple_metrics(self, q: str) -> bool:
         metric_terms = 0
