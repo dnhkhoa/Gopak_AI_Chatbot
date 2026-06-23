@@ -22,6 +22,7 @@ COLUMN_LABELS = {
     "loai_ton_that": "Loại tổn thất",
     "record_count": "Số lần ghi nhận",
     "row_count": "Số lần ghi nhận",
+    "percentage": "Tỷ lệ",
     "cong": "Cổng",
     "loai_truy_cap": "Loại truy cập",
     "thoi_gian_thuc_thi": "Thời gian thực thi",
@@ -101,6 +102,8 @@ def is_duration_column(column: str) -> bool:
 def format_cell(value: Any, column: str) -> Any:
     if is_duration_column(column):
         return format_duration(value)["primary"]
+    if column.lower() in {"percentage", "percent", "pct"} or "ty_le" in column.lower():
+        return f"{format_vn_number(value, 2)}%"
     if isinstance(value, (int, float)) and not isinstance(value, bool):
         return format_vn_number(value, 2)
     return value
@@ -115,4 +118,3 @@ def format_dataframe_for_display(df: pd.DataFrame, catalog: dict | None = None) 
 
 def short_source_name(source: str) -> str:
     return source.replace(".xlsx /", ".xlsx · Sheet")
-

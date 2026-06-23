@@ -1,0 +1,147 @@
+{
+  "phase": "baseline",
+  "results": [
+    {
+      "id": "open_ended_machine",
+      "file": "machine",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "message": "D?a tr?n to?n b? d? li?u, h?y gi?i th?ch ba ?i?m ??ng ch? ? nh?t, so s?nh ch?ng v? n?u gi?i h?n c?a k?t lu?n.",
+      "response": {
+        "message_id": "pending-clarification",
+        "conversation_id": "bcec4d0b-3f54-4837-8fc7-d59782fa8d48",
+        "response_type": "clarification",
+        "title": "Cần làm rõ",
+        "summary": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+        "primary_value": null,
+        "secondary_value": null,
+        "table": null,
+        "chart": null,
+        "dashboard": null,
+        "sources": [],
+        "filters": [],
+        "downloads": [],
+        "metadata": {
+          "execution_mode": "CLARIFICATION",
+          "router_confidence": 1.0,
+          "routing_reason": "pending_clarification",
+          "llm_called": false,
+          "llm_call_count": 0,
+          "generated_sql": null,
+          "pending_clarification_after": {
+            "clarification_id": "6a3875d7-889c-476c-bbbd-b6565e97d784",
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "original_message": "D?a tr?n to?n b? d? li?u, h?y gi?i th?ch ba ?i?m ??ng ch? ? nh?t, so s?nh ch?ng v? n?u gi?i h?n c?a k?t lu?n.",
+            "original_intent": "metric_dimension",
+            "partial_request": {
+              "operation": "query"
+            },
+            "missing_slots": [
+              "metric",
+              "dimension"
+            ],
+            "resolved_slots": {},
+            "allowed_metrics": [
+              "downtime",
+              "count"
+            ],
+            "allowed_dimensions": [
+              "machine",
+              "loss_name",
+              "loss_group"
+            ],
+            "allowed_outputs": [
+              "table",
+              "bar"
+            ],
+            "allowed_values": {
+              "limit": [
+                "1..50"
+              ]
+            },
+            "last_question": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+            "attempts": 0
+          },
+          "clarification_resolution": "START",
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "file_scope_validated": true,
+          "latency_ms": {
+            "total": 152.9
+          },
+          "debug": {
+            "state_after": {
+              "conversation_id": "bcec4d0b-3f54-4837-8fc7-d59782fa8d48",
+              "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+              "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+              "file_contexts": {},
+              "current_topic": null,
+              "topic_frames": [],
+              "pending_clarification": {
+                "clarification_id": "6a3875d7-889c-476c-bbbd-b6565e97d784",
+                "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+                "original_message": "D?a tr?n to?n b? d? li?u, h?y gi?i th?ch ba ?i?m ??ng ch? ? nh?t, so s?nh ch?ng v? n?u gi?i h?n c?a k?t lu?n.",
+                "original_intent": "metric_dimension",
+                "partial_request": {
+                  "operation": "query"
+                },
+                "missing_slots": [
+                  "metric",
+                  "dimension"
+                ],
+                "resolved_slots": {},
+                "allowed_metrics": [
+                  "downtime",
+                  "count"
+                ],
+                "allowed_dimensions": [
+                  "machine",
+                  "loss_name",
+                  "loss_group"
+                ],
+                "allowed_outputs": [
+                  "table",
+                  "bar"
+                ],
+                "allowed_values": {
+                  "limit": [
+                    "1..50"
+                  ]
+                },
+                "last_question": "Bạn muốn tổng số bản ghi hay tổng thời lượng?",
+                "attempts": 0
+              },
+              "current_message": null,
+              "resolved_request": null,
+              "last_execution_mode": null,
+              "active_table": null,
+              "active_metric": null,
+              "active_metrics": [],
+              "active_dimensions": [],
+              "active_filters": [],
+              "active_time_range": null,
+              "active_having": [],
+              "active_ranking": null,
+              "active_sort": [],
+              "active_limit": null,
+              "active_output": "text",
+              "last_entities": {},
+              "last_result_summary": null,
+              "last_result_cache_id": null,
+              "last_result_reference": null,
+              "last_plan": null,
+              "recent_turn_ids": [
+                "a6e5da3a-f3ab-49a3-95fa-51ac5e9e2de7"
+              ],
+              "conversation_summary": null,
+              "active_tables": [],
+              "time_range": null,
+              "dimensions": [],
+              "metrics": [],
+              "last_output": null
+            }
+          }
+        }
+      }
+    }
+  ]
+}

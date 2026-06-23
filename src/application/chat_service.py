@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import json
 from pathlib import Path
@@ -31,6 +31,15 @@ from src.config import Settings, get_settings
 from src.conversation.memory_service import ConversationMemoryService
 from src.application.customer_intents import CustomerIntentResult, detect_customer_intent
 from src.application.row_level import try_row_level_response
+from src.application.grounding import (
+    GroundedComposerValidator,
+    build_fact_registry_from_table,
+    build_open_ended_answer_brief,
+    brief_to_prompt_payload,
+    deterministic_open_ended_answer,
+    deterministic_table_commentary,
+    json_payload,
+)
 from src.files.lifecycle import FileLifecycleService
 from src.files.upload_store import find_uploaded_file, list_uploaded_files
 from src.ingestion.cache_manager import ParquetCache
@@ -418,6 +427,11 @@ class ChatApplicationService:
             self._save_assistant_response(state, response, execution_mode="SAFE_FAILURE")
             return response
 
+        open_ended_response = self._try_open_ended_analysis_response(conversation_id, message, catalog, state, debug, started)
+        if open_ended_response is not None:
+            self._save_assistant_response(state, open_ended_response)
+            return open_ended_response
+
         clarification = ClarificationResolver(catalog).resolve_pending(
             conversation_id,
             message,
@@ -720,23 +734,119 @@ class ChatApplicationService:
                 return filename
         return None
 
+    def _try_open_ended_analysis_response(
+        self,
+        conversation_id: str,
+        message: str,
+        catalog: dict,
+        state,
+        debug: bool,
+        started: float,
+    ) -> ChatResponse | None:
+        q = _ascii_text(message)
+        if not _is_open_ended_dataset_analysis(q):
+            return None
+        brief = build_open_ended_answer_brief(catalog, state.active_file_name or "")
+        if brief is None:
+            return None
+        fallback_text = deterministic_open_ended_answer(brief)
+        facts = list(brief.allowed_numeric_facts)
+        if facts:
+            fact_type = type(facts[0])
+            facts.extend(fact_type(f"section_{idx}", float(idx), str(idx)) for idx in range(1, 4))
+        validator = GroundedComposerValidator(facts)
+        text = fallback_text
+        llm_called = False
+        llm_latency = None
+        validation_errors: list[str] = []
+        try:
+            llm_called = True
+            llm = OllamaClient(self.settings).chat(
+                [
+                    {
+                        "role": "system",
+                        "content": (
+                            "Bạn là trợ lý phân tích dữ liệu. Trả lời bằng tiếng Việt có dấu, "
+                            "chỉ dùng các số trong payload, không nhắc tên file, không nhắc JSON/context/fallback."
+                        ),
+                    },
+                    {
+                        "role": "user",
+                        "content": (
+                            "Từ payload đã được tính sẵn, hãy nêu đúng ba điểm đáng chú ý, so sánh ngắn và giới hạn kết luận. "
+                            "Không tạo số mới, không đổi đơn vị, không suy đoán nguyên nhân ngoài dữ liệu.\n"
+                            f"Câu hỏi: {message}\nPayload: {json_payload(brief_to_prompt_payload(brief))}"
+                        ),
+                    },
+                ]
+            )
+            candidate = (llm.text or "").strip()
+            llm_latency = round(llm.latency_ms, 1)
+            validation = validator.validate(candidate)
+            if candidate and validation.passed:
+                text = candidate
+            else:
+                validation_errors = validation.errors
+        except Exception as exc:
+            validation_errors = [str(exc)]
+        final_validation = validator.validate(text)
+        payload = brief_to_prompt_payload(brief)
+        metadata = {
+            "execution_mode": "REAL_LLM" if llm_called and text != fallback_text else "DETERMINISTIC",
+            "routing_reason": "open_ended_grounded_answer_brief",
+            "llm_called": llm_called,
+            "llm_call_count": 1 if llm_called else 0,
+            "llm_model": self.settings.ollama_model if llm_called else None,
+            "llm_latency_ms": llm_latency,
+            "grounded_composer_called": True,
+            "composer_validation_passed": final_validation.passed,
+            "composer_validation_errors": final_validation.errors,
+            "composer_rejected_errors": validation_errors,
+            "composer_fallback_used": text == fallback_text and bool(validation_errors),
+            "answer_brief": payload,
+            "latency_ms": {"total": round((perf_counter() - started) * 1000, 1), "llm": llm_latency},
+            "active_file_id": state.active_file_id,
+            "active_file_name": state.active_file_name,
+            "file_scope_validated": True,
+            "debug": {"answer_brief": payload} if debug else None,
+        }
+        table = TablePayload(columns=list(brief.table_rows[0].keys()), rows=list(brief.table_rows)) if brief.table_rows else None
+        source_table = catalog["tables"][0]
+        return ChatResponse(
+            message_id=str(uuid4()),
+            conversation_id=conversation_id,
+            response_type="table" if table else "text",
+            title="Phân tích tổng quan",
+            summary=text,
+            table=table,
+            sources=_source_payloads(self._sources_for_plan(QueryPlan(tables=[source_table["table_name"]]), catalog)),
+            metadata=_json_safe(metadata),
+        )
+
     def _generate_grounded_commentary(self, message: str, state, response) -> str | None:
         """Generate 1-3 short grounded observations about an analytics result, when the user
         also asked for commentary in the same multi-part request. Returns None on failure."""
         table = response.table.model_dump() if response.table else None
+        facts = build_fact_registry_from_table(response.table, requested_top_n=_extract_top_n(_ascii_text(message)))
+        fallback = deterministic_table_commentary(message, response)
+        if not fallback:
+            return None
+        validator = GroundedComposerValidator(facts)
         context = {
             "source_file_name": state.active_file_name,
             "headline": response.summary or response.primary_value or response.title,
             "result_summary": state.last_result_summary or {},
             "table_preview": (table or {}).get("rows", [])[:10] if table else None,
+            "allowed_numeric_facts": [fact.__dict__ for fact in facts],
         }
         prompt = (
-            "Bạn là trợ lý phân tích dữ liệu. Dựa CHỈ trên kết quả JSON bên dưới, nêu 1-3 nhận xét ngắn gọn, "
-            "có căn cứ bằng tiếng Việt có dấu về những điểm đáng chú ý (mục đứng đầu, chênh lệch, tỷ trọng). "
-            "Không bịa số mới ngoài dữ liệu, không nhắc đường dẫn nội bộ, không nói chung chung. "
-            "Mỗi nhận xét một câu, bắt đầu bằng '- '.\n\n"
-            f"Câu hỏi: {message}\nKết quả JSON: {json.dumps(context, ensure_ascii=False, default=str)}"
+            "Bạn là trợ lý phân tích dữ liệu. Dựa CHỈ trên payload bên dưới, nêu 1-3 nhận xét ngắn gọn "
+            "bằng tiếng Việt có dấu. Chỉ dùng số xuất hiện trong allowed_numeric_facts hoặc table_preview; "
+            "không tự đổi đơn vị, không ước lượng tỷ lệ, không dùng các cụm như gần một nửa/gấp đôi/tương đương, "
+            "không nhắc JSON/context/planner/fallback/LLM. Mỗi nhận xét một câu, bắt đầu bằng '- '.\n\n"
+            f"Câu hỏi: {message}\nPayload: {json.dumps(context, ensure_ascii=False, default=str)}"
         )
+        validation_errors: list[str] = []
         try:
             llm = OllamaClient(self.settings).chat(
                 [
@@ -744,10 +854,21 @@ class ChatApplicationService:
                     {"role": "user", "content": prompt},
                 ]
             )
-        except Exception:
-            return None
-        text = (llm.text or "").strip()
-        return f"Nhận xét:\n{text}" if text else None
+            text = (llm.text or "").strip()
+            validation = validator.validate(text)
+            if text and validation.passed:
+                response.metadata["composer_validation_passed"] = True
+                response.metadata["composer_validation_errors"] = []
+                return f"Nhận xét:\n{text}" if not text.startswith("Nhận xét:") else text
+            validation_errors = validation.errors
+        except Exception as exc:
+            validation_errors = [str(exc)]
+        fallback_validation = validator.validate(fallback)
+        response.metadata["composer_validation_passed"] = fallback_validation.passed
+        response.metadata["composer_validation_errors"] = fallback_validation.errors
+        response.metadata["composer_rejected_errors"] = validation_errors
+        response.metadata["composer_fallback_used"] = True
+        return fallback
 
     def _try_semantic_followup_response(
         self,
@@ -1719,6 +1840,20 @@ def _requires_dataset_level_semantic(q: str) -> bool:
     )
 
 
+def _is_open_ended_dataset_analysis(q: str) -> bool:
+    has_scope = any(term in q for term in ["toan bo du lieu", "dua tren toan bo", "file nay", "du lieu nay"])
+    has_open_ended = any(term in q for term in ["diem dang chu y", "giai thich", "so sanh", "gioi han", "ket luan", "insight", "phan tich"])
+    explicit_table_request = bool(_extract_top_n(q)) or any(term in q for term in ["theo may", "theo nhom", "theo nguyen nhan", "bang", "bieu do"])
+    return has_scope and has_open_ended and not explicit_table_request
+
+
+def _extract_top_n(q: str) -> int | None:
+    import re
+
+    match = re.search(r"top\s*(\d{1,2})", q)
+    return int(match.group(1)) if match else None
+
+
 def _has_new_analytics_request(q: str) -> bool:
     """True if the (ascii-normalized) message carries a self-contained analytical request
     (dimension + ranking/metric), independent of any trailing commentary/output modifier."""
@@ -1736,3 +1871,4 @@ def _has_new_analytics_request(q: str) -> bool:
     if has_metric and has_dim:
         return True
     return False
+

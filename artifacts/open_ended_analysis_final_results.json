@@ -1,0 +1,486 @@
+{
+  "summary": {
+    "phase": "final",
+    "total": 1,
+    "passed": 1,
+    "accuracy": 1.0
+  },
+  "results": [
+    {
+      "id": "open_ended_exact_machine",
+      "message": "Dựa trên toàn bộ dữ liệu, hãy giải thích ba điểm đáng chú ý nhất, so sánh chúng và nêu giới hạn của kết luận.",
+      "response_type": "table",
+      "summary": "Ba điểm đáng chú ý nhất:\n- Tổng downtime trong file là 1.989,56 giờ trên 9.151 bản ghi.\n- Máy 11 đứng đầu theo tổng downtime với 413,57 giờ, gồm 1.469 lần ghi nhận và trung bình 16 phút 54 giây mỗi lần.\n- Bảo trì đứng đầu theo tổng downtime với 1.989,56 giờ, gồm 9.151 lần ghi nhận và trung bình 13 phút 3 giây mỗi lần.\nSo sánh:\n- Điểm khác biệt chính là mỗi góc nhìn đo một lát cắt khác nhau của file đang chọn: quy mô tổng thể, nhóm đứng đầu và mức lặp lại/trung bình.\nGiới hạn:\n- Kết luận chỉ phản ánh file Excel đang chọn, không tự suy ra nguyên nhân vận hành ngoài dữ liệu.\n- Các so sánh dựa trên dữ liệu đã import và các cột có sẵn trong file.",
+      "table": {
+        "columns": [
+          "Góc nhìn",
+          "Đứng đầu",
+          "Tổng downtime",
+          "Số lần ghi nhận",
+          "Trung bình mỗi lần"
+        ],
+        "rows": [
+          {
+            "Góc nhìn": "Máy",
+            "Đứng đầu": "Máy 11",
+            "Tổng downtime": "413,57 giờ",
+            "Số lần ghi nhận": "1.469",
+            "Trung bình mỗi lần": "16 phút 54 giây"
+          },
+          {
+            "Góc nhìn": "Nhóm tổn thất",
+            "Đứng đầu": "Bảo trì",
+            "Tổng downtime": "1.989,56 giờ",
+            "Số lần ghi nhận": "9.151",
+            "Trung bình mỗi lần": "13 phút 3 giây"
+          },
+          {
+            "Góc nhìn": "Nguyên nhân tổn thất",
+            "Đứng đầu": "MÁY LỖI PHẦN CƠ",
+            "Tổng downtime": "563,32 giờ",
+            "Số lần ghi nhận": "3.688",
+            "Trung bình mỗi lần": "9 phút 10 giây"
+          }
+        ]
+      },
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "routing_reason": "open_ended_grounded_answer_brief",
+        "llm_called": true,
+        "llm_call_count": 1,
+        "llm_model": "qwen3.5:9b",
+        "llm_latency_ms": 8629.9,
+        "grounded_composer_called": true,
+        "composer_validation_passed": true,
+        "composer_validation_errors": [],
+        "composer_rejected_errors": [
+          "unsupported_claim:toan bo"
+        ],
+        "composer_fallback_used": true,
+        "answer_brief": {
+          "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "row_count": 9151,
+          "selected_insights": [
+            {
+              "title": "Quy mô downtime",
+              "statement": "Tổng downtime trong file là 1.989,56 giờ trên 9.151 bản ghi.",
+              "facts": [
+                {
+                  "key": "total_duration_hours",
+                  "value": 1989.5569444444445,
+                  "display": "1.989,56 giờ",
+                  "aliases": []
+                },
+                {
+                  "key": "row_count",
+                  "value": 9151.0,
+                  "display": "9.151",
+                  "aliases": []
+                }
+              ]
+            },
+            {
+              "title": "Điểm nổi bật theo máy",
+              "statement": "Máy 11 đứng đầu theo tổng downtime với 413,57 giờ, gồm 1.469 lần ghi nhận và trung bình 16 phút 54 giây mỗi lần.",
+              "facts": [
+                {
+                  "key": "machine_top_total",
+                  "value": 413.57416666666666,
+                  "display": "413,57 giờ",
+                  "aliases": []
+                },
+                {
+                  "key": "machine_top_count",
+                  "value": 1469.0,
+                  "display": "1.469",
+                  "aliases": []
+                },
+                {
+                  "key": "machine_top_avg",
+                  "value": 0.28153449058316316,
+                  "display": "16 phút 54 giây",
+                  "aliases": []
+                }
+              ]
+            },
+            {
+              "title": "Điểm nổi bật theo nhóm tổn thất",
+              "statement": "Bảo trì đứng đầu theo tổng downtime với 1.989,56 giờ, gồm 9.151 lần ghi nhận và trung bình 13 phút 3 giây mỗi lần.",
+              "facts": [
+                {
+                  "key": "loss_group_top_total",
+                  "value": 1989.5569444444445,
+                  "display": "1.989,56 giờ",
+                  "aliases": []
+                },
+                {
+                  "key": "loss_group_top_count",
+                  "value": 9151.0,
+                  "display": "9.151",
+                  "aliases": []
+                },
+                {
+                  "key": "loss_group_top_avg",
+                  "value": 0.21741415631564248,
+                  "display": "13 phút 3 giây",
+                  "aliases": []
+                }
+              ]
+            },
+            {
+              "title": "Điểm nổi bật theo nguyên nhân tổn thất",
+              "statement": "MÁY LỖI PHẦN CƠ đứng đầu theo tổng downtime với 563,32 giờ, gồm 3.688 lần ghi nhận và trung bình 9 phút 10 giây mỗi lần.",
+              "facts": [
+                {
+                  "key": "loss_name_top_total",
+                  "value": 563.3194444444445,
+                  "display": "563,32 giờ",
+                  "aliases": []
+                },
+                {
+                  "key": "loss_name_top_count",
+                  "value": 3688.0,
+                  "display": "3.688",
+                  "aliases": []
+                },
+                {
+                  "key": "loss_name_top_avg",
+                  "value": 0.15274388406845024,
+                  "display": "9 phút 10 giây",
+                  "aliases": []
+                }
+              ]
+            }
+          ],
+          "comparison_facts": [
+            "Tổng downtime trong file là 1.989,56 giờ trên 9.151 bản ghi.",
+            "Máy 11 đứng đầu theo tổng downtime với 413,57 giờ, gồm 1.469 lần ghi nhận và trung bình 16 phút 54 giây mỗi lần.",
+            "Bảo trì đứng đầu theo tổng downtime với 1.989,56 giờ, gồm 9.151 lần ghi nhận và trung bình 13 phút 3 giây mỗi lần."
+          ],
+          "limitations": [
+            "Kết luận chỉ phản ánh file Excel đang chọn, không tự suy ra nguyên nhân vận hành ngoài dữ liệu.",
+            "Các so sánh dựa trên dữ liệu đã import và các cột có sẵn trong file."
+          ],
+          "table_rows": [
+            {
+              "Góc nhìn": "Máy",
+              "Đứng đầu": "Máy 11",
+              "Tổng downtime": "413,57 giờ",
+              "Số lần ghi nhận": "1.469",
+              "Trung bình mỗi lần": "16 phút 54 giây"
+            },
+            {
+              "Góc nhìn": "Nhóm tổn thất",
+              "Đứng đầu": "Bảo trì",
+              "Tổng downtime": "1.989,56 giờ",
+              "Số lần ghi nhận": "9.151",
+              "Trung bình mỗi lần": "13 phút 3 giây"
+            },
+            {
+              "Góc nhìn": "Nguyên nhân tổn thất",
+              "Đứng đầu": "MÁY LỖI PHẦN CƠ",
+              "Tổng downtime": "563,32 giờ",
+              "Số lần ghi nhận": "3.688",
+              "Trung bình mỗi lần": "9 phút 10 giây"
+            }
+          ],
+          "allowed_numbers": [
+            {
+              "key": "row_count",
+              "value": 9151.0,
+              "display": "9.151",
+              "aliases": []
+            },
+            {
+              "key": "total_duration_hours",
+              "value": 1989.5569444444445,
+              "display": "1.989,56 giờ",
+              "aliases": []
+            },
+            {
+              "key": "machine_top_label_number",
+              "value": 11.0,
+              "display": "11",
+              "aliases": []
+            },
+            {
+              "key": "machine_top_total",
+              "value": 413.57416666666666,
+              "display": "413,57 giờ",
+              "aliases": []
+            },
+            {
+              "key": "machine_top_count",
+              "value": 1469.0,
+              "display": "1.469",
+              "aliases": []
+            },
+            {
+              "key": "machine_top_avg",
+              "value": 0.28153449058316316,
+              "display": "16 phút 54 giây",
+              "aliases": []
+            },
+            {
+              "key": "loss_group_top_total",
+              "value": 1989.5569444444445,
+              "display": "1.989,56 giờ",
+              "aliases": []
+            },
+            {
+              "key": "loss_group_top_count",
+              "value": 9151.0,
+              "display": "9.151",
+              "aliases": []
+            },
+            {
+              "key": "loss_group_top_avg",
+              "value": 0.21741415631564248,
+              "display": "13 phút 3 giây",
+              "aliases": []
+            },
+            {
+              "key": "loss_name_top_total",
+              "value": 563.3194444444445,
+              "display": "563,32 giờ",
+              "aliases": []
+            },
+            {
+              "key": "loss_name_top_count",
+              "value": 3688.0,
+              "display": "3.688",
+              "aliases": []
+            },
+            {
+              "key": "loss_name_top_avg",
+              "value": 0.15274388406845024,
+              "display": "9 phút 10 giây",
+              "aliases": []
+            }
+          ]
+        },
+        "latency_ms": {
+          "total": 8744.5,
+          "llm": 8629.9
+        },
+        "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+        "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+        "file_scope_validated": true,
+        "debug": {
+          "answer_brief": {
+            "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "row_count": 9151,
+            "selected_insights": [
+              {
+                "title": "Quy mô downtime",
+                "statement": "Tổng downtime trong file là 1.989,56 giờ trên 9.151 bản ghi.",
+                "facts": [
+                  {
+                    "key": "total_duration_hours",
+                    "value": 1989.5569444444445,
+                    "display": "1.989,56 giờ",
+                    "aliases": []
+                  },
+                  {
+                    "key": "row_count",
+                    "value": 9151.0,
+                    "display": "9.151",
+                    "aliases": []
+                  }
+                ]
+              },
+              {
+                "title": "Điểm nổi bật theo máy",
+                "statement": "Máy 11 đứng đầu theo tổng downtime với 413,57 giờ, gồm 1.469 lần ghi nhận và trung bình 16 phút 54 giây mỗi lần.",
+                "facts": [
+                  {
+                    "key": "machine_top_total",
+                    "value": 413.57416666666666,
+                    "display": "413,57 giờ",
+                    "aliases": []
+                  },
+                  {
+                    "key": "machine_top_count",
+                    "value": 1469.0,
+                    "display": "1.469",
+                    "aliases": []
+                  },
+                  {
+                    "key": "machine_top_avg",
+                    "value": 0.28153449058316316,
+                    "display": "16 phút 54 giây",
+                    "aliases": []
+                  }
+                ]
+              },
+              {
+                "title": "Điểm nổi bật theo nhóm tổn thất",
+                "statement": "Bảo trì đứng đầu theo tổng downtime với 1.989,56 giờ, gồm 9.151 lần ghi nhận và trung bình 13 phút 3 giây mỗi lần.",
+                "facts": [
+                  {
+                    "key": "loss_group_top_total",
+                    "value": 1989.5569444444445,
+                    "display": "1.989,56 giờ",
+                    "aliases": []
+                  },
+                  {
+                    "key": "loss_group_top_count",
+                    "value": 9151.0,
+                    "display": "9.151",
+                    "aliases": []
+                  },
+                  {
+                    "key": "loss_group_top_avg",
+                    "value": 0.21741415631564248,
+                    "display": "13 phút 3 giây",
+                    "aliases": []
+                  }
+                ]
+              },
+              {
+                "title": "Điểm nổi bật theo nguyên nhân tổn thất",
+                "statement": "MÁY LỖI PHẦN CƠ đứng đầu theo tổng downtime với 563,32 giờ, gồm 3.688 lần ghi nhận và trung bình 9 phút 10 giây mỗi lần.",
+                "facts": [
+                  {
+                    "key": "loss_name_top_total",
+                    "value": 563.3194444444445,
+                    "display": "563,32 giờ",
+                    "aliases": []
+                  },
+                  {
+                    "key": "loss_name_top_count",
+                    "value": 3688.0,
+                    "display": "3.688",
+                    "aliases": []
+                  },
+                  {
+                    "key": "loss_name_top_avg",
+                    "value": 0.15274388406845024,
+                    "display": "9 phút 10 giây",
+                    "aliases": []
+                  }
+                ]
+              }
+            ],
+            "comparison_facts": [
+              "Tổng downtime trong file là 1.989,56 giờ trên 9.151 bản ghi.",
+              "Máy 11 đứng đầu theo tổng downtime với 413,57 giờ, gồm 1.469 lần ghi nhận và trung bình 16 phút 54 giây mỗi lần.",
+              "Bảo trì đứng đầu theo tổng downtime với 1.989,56 giờ, gồm 9.151 lần ghi nhận và trung bình 13 phút 3 giây mỗi lần."
+            ],
+            "limitations": [
+              "Kết luận chỉ phản ánh file Excel đang chọn, không tự suy ra nguyên nhân vận hành ngoài dữ liệu.",
+              "Các so sánh dựa trên dữ liệu đã import và các cột có sẵn trong file."
+            ],
+            "table_rows": [
+              {
+                "Góc nhìn": "Máy",
+                "Đứng đầu": "Máy 11",
+                "Tổng downtime": "413,57 giờ",
+                "Số lần ghi nhận": "1.469",
+                "Trung bình mỗi lần": "16 phút 54 giây"
+              },
+              {
+                "Góc nhìn": "Nhóm tổn thất",
+                "Đứng đầu": "Bảo trì",
+                "Tổng downtime": "1.989,56 giờ",
+                "Số lần ghi nhận": "9.151",
+                "Trung bình mỗi lần": "13 phút 3 giây"
+              },
+              {
+                "Góc nhìn": "Nguyên nhân tổn thất",
+                "Đứng đầu": "MÁY LỖI PHẦN CƠ",
+                "Tổng downtime": "563,32 giờ",
+                "Số lần ghi nhận": "3.688",
+                "Trung bình mỗi lần": "9 phút 10 giây"
+              }
+            ],
+            "allowed_numbers": [
+              {
+                "key": "row_count",
+                "value": 9151.0,
+                "display": "9.151",
+                "aliases": []
+              },
+              {
+                "key": "total_duration_hours",
+                "value": 1989.5569444444445,
+                "display": "1.989,56 giờ",
+                "aliases": []
+              },
+              {
+                "key": "machine_top_label_number",
+                "value": 11.0,
+                "display": "11",
+                "aliases": []
+              },
+              {
+                "key": "machine_top_total",
+                "value": 413.57416666666666,
+                "display": "413,57 giờ",
+                "aliases": []
+              },
+              {
+                "key": "machine_top_count",
+                "value": 1469.0,
+                "display": "1.469",
+                "aliases": []
+              },
+              {
+                "key": "machine_top_avg",
+                "value": 0.28153449058316316,
+                "display": "16 phút 54 giây",
+                "aliases": []
+              },
+              {
+                "key": "loss_group_top_total",
+                "value": 1989.5569444444445,
+                "display": "1.989,56 giờ",
+                "aliases": []
+              },
+              {
+                "key": "loss_group_top_count",
+                "value": 9151.0,
+                "display": "9.151",
+                "aliases": []
+              },
+              {
+                "key": "loss_group_top_avg",
+                "value": 0.21741415631564248,
+                "display": "13 phút 3 giây",
+                "aliases": []
+              },
+              {
+                "key": "loss_name_top_total",
+                "value": 563.3194444444445,
+                "display": "563,32 giờ",
+                "aliases": []
+              },
+              {
+                "key": "loss_name_top_count",
+                "value": 3688.0,
+                "display": "3.688",
+                "aliases": []
+              },
+              {
+                "key": "loss_name_top_avg",
+                "value": 0.15274388406845024,
+                "display": "9 phút 10 giây",
+                "aliases": []
+              }
+            ]
+          }
+        }
+      },
+      "checks": {
+        "not_clarification": true,
+        "has_answer_brief": true,
+        "has_three_points": true,
+        "has_comparison": true,
+        "has_limitations": true,
+        "no_internal_terms": true,
+        "composer_validated": true
+      },
+      "passed": true
+    }
+  ]
+}

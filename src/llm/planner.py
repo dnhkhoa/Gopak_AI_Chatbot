@@ -271,6 +271,23 @@ class QueryPlanner:
                     key = (flt.column, flt.operator, str(flt.value))
                     if key not in existing:
                         plan.filters.append(flt)
+            deterministic_metric_names = {metric.name for metric in deterministic_plan.metrics if metric.name}
+            asks_multiple_metrics = any(term in q for term in ["tong downtime", "tong thoi gian", "tong thoi luong"]) and any(term in q for term in ["so lan", "lan dung", "ghi nhan"])
+            asks_average = any(term in q for term in ["trung binh", "average", "avg"])
+            asks_percentage = any(term in q for term in ["phan tram", "ty le", "ty trong"])
+            if deterministic_plan.metrics and (asks_percentage or asks_multiple_metrics or asks_average):
+                if asks_percentage and not asks_average and len(deterministic_plan.metrics) == 1:
+                    plan.metrics = list(deterministic_plan.metrics)
+                    plan.query_complexity = deterministic_plan.query_complexity
+                else:
+                    existing_names = {metric.name for metric in plan.metrics if metric.name}
+                    for metric in deterministic_plan.metrics:
+                        if metric.name not in existing_names:
+                            plan.metrics.append(metric)
+                    if asks_multiple_metrics and deterministic_metric_names:
+                        ordered = {metric.name: metric for metric in [*deterministic_plan.metrics, *plan.metrics] if metric.name}
+                        plan.metrics = [ordered[name] for name in [metric.name for metric in deterministic_plan.metrics if metric.name] if name in ordered]
+                        plan.query_complexity = "complex"
         if any(term in q for term in ["phan tram", "ty le", "ty trong"]):
             if not plan.dimensions and deterministic_plan is not None:
                 plan.dimensions = list(deterministic_plan.dimensions)
