@@ -1,0 +1,9 @@
+{
+  "sample_file_available": false,
+  "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+  "total": 81,
+  "passed": 81,
+  "accuracy": 1.0,
+  "p50_latency_ms": 212.0,
+  "p95_latency_ms": 305.3
+}

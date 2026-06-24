@@ -1,0 +1,9 @@
+{
+  "phase": "final",
+  "total": 7,
+  "passed": 7,
+  "response_cases": 2,
+  "synthetic_cases": 5,
+  "failure_count": 0,
+  "accuracy": 1.0
+}

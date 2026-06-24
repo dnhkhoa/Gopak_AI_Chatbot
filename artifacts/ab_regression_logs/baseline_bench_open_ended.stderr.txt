@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "D:\Gopak-baseline-919adb0\evaluation\run_open_ended_analysis_benchmark.py", line 92, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "D:\Gopak-baseline-919adb0\evaluation\run_open_ended_analysis_benchmark.py", line 87, in main
+    payload = run(args.phase)
+  File "D:\Gopak-baseline-919adb0\evaluation\run_open_ended_analysis_benchmark.py", line 43, in run
+    record = _record(files, case["file"])
+  File "D:\Gopak-baseline-919adb0\evaluation\run_open_ended_analysis_benchmark.py", line 24, in _record
+    return next(item for item in files if needle in str(item.get("filename", "")) and item.get("status") == "ready")
+StopIteration

@@ -1,0 +1,7 @@
+{
+  "total_runs": 60,
+  "parseable": 60,
+  "valid_plans": 60,
+  "json_validity_rate": 1.0,
+  "valid_plan_rate": 1.0
+}

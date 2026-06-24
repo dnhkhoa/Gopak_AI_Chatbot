@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "D:\Gopak-current-1c71f28\evaluation\run_numeric_grounding_benchmark.py", line 156, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "D:\Gopak-current-1c71f28\evaluation\run_numeric_grounding_benchmark.py", line 151, in main
+    payload = run(args.phase)
+  File "D:\Gopak-current-1c71f28\evaluation\run_numeric_grounding_benchmark.py", line 98, in run
+    record = _record(files, case["file"])
+  File "D:\Gopak-current-1c71f28\evaluation\run_numeric_grounding_benchmark.py", line 24, in _record
+    return next(item for item in files if needle in str(item.get("filename", "")) and item.get("status") == "ready")
+StopIteration

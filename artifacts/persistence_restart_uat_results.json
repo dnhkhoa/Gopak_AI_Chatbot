@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "refresh_exact_match": true,
+    "restart_exact_match": true,
+    "backend_health_after_restart": {
+      "status": "ok",
+      "ollama_available": true,
+      "model": "qwen3.5:9b",
+      "database_available": true,
+      "memory_available": true
+    },
+    "downloads_exist": true,
+    "status": "passed"
+  },
+  "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+  "message_count_before": 16,
+  "message_count_after_refresh": 16,
+  "message_count_after_restart": 16,
+  "downloads": [
+    {
+      "filename": "report_fd90bde9-0ad7-4050-9131-7c3b9416b7f4.html",
+      "exists": true,
+      "size": 13131,
+      "download_endpoint": "/api/artifacts/report_fd90bde9-0ad7-4050-9131-7c3b9416b7f4.html/download"
+    },
+    {
+      "filename": "report_fd90bde9-0ad7-4050-9131-7c3b9416b7f4.xlsx",
+      "exists": true,
+      "size": 8990,
+      "download_endpoint": "/api/artifacts/report_fd90bde9-0ad7-4050-9131-7c3b9416b7f4.xlsx/download"
+    },
+    {
+      "filename": "report_f115a3e5-a479-46dc-9a15-24debed3bd72.html",
+      "exists": true,
+      "size": 13128,
+      "download_endpoint": "/api/artifacts/report_f115a3e5-a479-46dc-9a15-24debed3bd72.html/download"
+    },
+    {
+      "filename": "report_f115a3e5-a479-46dc-9a15-24debed3bd72.xlsx",
+      "exists": true,
+      "size": 8990,
+      "download_endpoint": "/api/artifacts/report_f115a3e5-a479-46dc-9a15-24debed3bd72.xlsx/download"
+    }
+  ]
+}

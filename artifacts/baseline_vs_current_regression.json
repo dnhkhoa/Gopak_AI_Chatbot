@@ -1,0 +1,398 @@
+{
+  "generated_at_utc": "2026-06-24T03:21:33.516456+00:00",
+  "baseline_commit": "919adb0",
+  "current_commit_before_fixes": "1c71f28",
+  "release_fix_branch": "feature/demo-conversation-seeding",
+  "pytest_compile_ab": {
+    "total": 26,
+    "passed": 24,
+    "failed": 0,
+    "timeout": 2
+  },
+  "complex_analytics_full_file_timeout": "Both baseline and current full-file invocations timed out; all individual sharded tests passed on both commits.",
+  "complex_analytics_sharded_ab": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0,
+    "timeout": 0
+  },
+  "baseline_common_benchmarks_ready": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "timeout": 0
+  },
+  "current_common_benchmarks_before_fixes": {
+    "total": 16,
+    "passed": 8,
+    "failed": 8,
+    "timeout": 0
+  },
+  "regressions_found_before_fixes": [
+    {
+      "suite": "file_scoped",
+      "baseline": {
+        "total": 320,
+        "passed": 320,
+        "accuracy": 1.0,
+        "dev": {
+          "total": 140,
+          "passed": 140,
+          "accuracy": 1.0
+        },
+        "holdout": {
+          "total": 180,
+          "passed": 180,
+          "accuracy": 1.0
+        },
+        "by_category": {
+          "clarification": {
+            "total": 20,
+            "passed": 20,
+            "accuracy": 1.0
+          },
+          "context_sequence": {
+            "total": 90,
+            "passed": 90,
+            "accuracy": 1.0
+          },
+          "cross_file_sequence": {
+            "total": 40,
+            "passed": 40,
+            "accuracy": 1.0
+          },
+          "deterministic": {
+            "total": 45,
+            "passed": 45,
+            "accuracy": 1.0
+          },
+          "file_scope": {
+            "total": 30,
+            "passed": 30,
+            "accuracy": 1.0
+          },
+          "multipart": {
+            "total": 35,
+            "passed": 35,
+            "accuracy": 1.0
+          },
+          "real_llm_candidate": {
+            "total": 30,
+            "passed": 30,
+            "accuracy": 1.0
+          },
+          "refusal": {
+            "total": 20,
+            "passed": 20,
+            "accuracy": 1.0
+          },
+          "safe_failure": {
+            "total": 10,
+            "passed": 10,
+            "accuracy": 1.0
+          }
+        },
+        "p50_latency_ms": 116.0
+      },
+      "current_before_fix": {
+        "total": 320,
+        "passed": 267,
+        "accuracy": 0.8344,
+        "dev": {
+          "total": 140,
+          "passed": 132,
+          "accuracy": 0.9429
+        },
+        "holdout": {
+          "total": 180,
+          "passed": 135,
+          "accuracy": 0.75
+        },
+        "by_category": {
+          "clarification": {
+            "total": 20,
+            "passed": 20,
+            "accuracy": 1.0
+          },
+          "context_sequence": {
+            "total": 90,
+            "passed": 45,
+            "accuracy": 0.5
+          },
+          "cross_file_sequence": {
+            "total": 40,
+            "passed": 40,
+            "accuracy": 1.0
+          },
+          "deterministic": {
+            "total": 45,
+            "passed": 45,
+            "accuracy": 1.0
+          },
+          "file_scope": {
+            "total": 30,
+            "passed": 30,
+            "accuracy": 1.0
+          },
+          "multipart": {
+            "total": 35,
+            "passed": 35,
+            "accuracy": 1.0
+          },
+          "real_llm_candidate": {
+            "total": 30,
+            "passed": 22,
+            "accuracy": 0.7333
+          },
+          "refusal": {
+            "total": 20,
+            "passed": 20,
+            "accuracy": 1.0
+          },
+          "safe_failure": {
+            "total": 10,
+            "passed": 10,
+            "accuracy": 1.0
+          }
+        },
+        "p50_latency_ms": 103.6
+      },
+      "classification": "Regression in short-turn context refinement and EntryTransaction insight routing."
+    },
+    {
+      "suite": "llm_invocation",
+      "baseline": {
+        "total_cases": 12,
+        "passed_cases": 12,
+        "failed_cases": [],
+        "by_category": {
+          "exact_deterministic": {
+            "total": 4,
+            "passed": 4,
+            "llm_calls": 0
+          },
+          "open_ended_analysis": {
+            "total": 2,
+            "passed": 2,
+            "llm_calls": 2
+          },
+          "multipart_analytics": {
+            "total": 2,
+            "passed": 2,
+            "llm_calls": 2
+          },
+          "topic_restore": {
+            "total": 1,
+            "passed": 1,
+            "llm_calls": 1
+          },
+          "pending_state_exact_slot": {
+            "total": 1,
+            "passed": 1,
+            "llm_calls": 0
+          },
+          "pending_state_new_request": {
+            "total": 1,
+            "passed": 1,
+            "llm_calls": 1
+          },
+          "model_unavailable": {
+            "total": 1,
+            "passed": 1,
+            "llm_calls": 1
+          }
+        },
+        "semantic_real_llm_call_rate": 1.0,
+        "deterministic_unnecessary_llm_calls": 0,
+        "silent_fallback_count": 0,
+        "fallback_count": 2,
+        "fallback_reason_coverage": 1.0,
+        "structured_output_validity": 1.0,
+        "llm_p50_latency_ms": 6487.1,
+        "llm_p95_latency_ms": 9007.2
+      },
+      "current_before_fix": {
+        "total_cases": 12,
+        "passed_cases": 10,
+        "failed_cases": [
+          "B03",
+          "C02"
+        ],
+        "by_category": {
+          "exact_deterministic": {
+            "total": 4,
+            "passed": 4,
+            "llm_calls": 0
+          },
+          "open_ended_analysis": {
+            "total": 2,
+            "passed": 1,
+            "llm_calls": 1
+          },
+          "multipart_analytics": {
+            "total": 2,
+            "passed": 2,
+            "llm_calls": 2
+          },
+          "topic_restore": {
+            "total": 1,
+            "passed": 1,
+            "llm_calls": 1
+          },
+          "pending_state_exact_slot": {
+            "total": 1,
+            "passed": 1,
+            "llm_calls": 0
+          },
+          "pending_state_new_request": {
+            "total": 1,
+            "passed": 0,
+            "llm_calls": 1
+          },
+          "model_unavailable": {
+            "total": 1,
+            "passed": 1,
+            "llm_calls": 1
+          }
+        },
+        "semantic_real_llm_call_rate": 0.8333,
+        "deterministic_unnecessary_llm_calls": 0,
+        "silent_fallback_count": 0,
+        "fallback_count": 2,
+        "fallback_reason_coverage": 1.0,
+        "structured_output_validity": 1.0,
+        "llm_p50_latency_ms": 7293.6,
+        "llm_p95_latency_ms": 9049.5
+      },
+      "classification": "Regression in open-ended semantic routing and negated chart coverage."
+    }
+  ],
+  "post_fix_current_results": {
+    "pytest": {
+      "total": 78,
+      "passed": 78,
+      "warnings": 19
+    },
+    "frontend_vitest": {
+      "files_passed": 5,
+      "tests_passed": 18
+    },
+    "frontend_build": {
+      "status": "passed",
+      "warning": "Vite chunk >500 kB warning only"
+    },
+    "file_scoped": {
+      "total": 320,
+      "passed": 320,
+      "accuracy": 1.0,
+      "dev": {
+        "total": 140,
+        "passed": 140,
+        "accuracy": 1.0
+      },
+      "holdout": {
+        "total": 180,
+        "passed": 180,
+        "accuracy": 1.0
+      },
+      "violations": []
+    },
+    "llm_invocation": {
+      "total_cases": 12,
+      "passed_cases": 12,
+      "failed_cases": [],
+      "by_category": {
+        "exact_deterministic": {
+          "total": 4,
+          "passed": 4,
+          "llm_calls": 0
+        },
+        "open_ended_analysis": {
+          "total": 2,
+          "passed": 2,
+          "llm_calls": 2
+        },
+        "multipart_analytics": {
+          "total": 2,
+          "passed": 2,
+          "llm_calls": 2
+        },
+        "topic_restore": {
+          "total": 1,
+          "passed": 1,
+          "llm_calls": 1
+        },
+        "pending_state_exact_slot": {
+          "total": 1,
+          "passed": 1,
+          "llm_calls": 0
+        },
+        "pending_state_new_request": {
+          "total": 1,
+          "passed": 1,
+          "llm_calls": 1
+        },
+        "model_unavailable": {
+          "total": 1,
+          "passed": 1,
+          "llm_calls": 1
+        }
+      },
+      "semantic_real_llm_call_rate": 1.0,
+      "deterministic_unnecessary_llm_calls": 0,
+      "silent_fallback_count": 0,
+      "fallback_count": 2,
+      "fallback_reason_coverage": 1.0,
+      "structured_output_validity": 1.0,
+      "llm_p50_latency_ms": 7185.4,
+      "llm_p95_latency_ms": 9836.2
+    },
+    "chart_request_fulfillment": {
+      "total": 3,
+      "failed": 0,
+      "status": "passed"
+    },
+    "report_orchestration": {
+      "total": 2,
+      "failed": 0,
+      "status": "passed"
+    },
+    "conversation_state_contamination": {
+      "total": 8,
+      "failed": 0,
+      "status": "passed"
+    },
+    "manual_browser_uat_8_turns": {
+      "total": 8,
+      "failed": 0,
+      "status": "passed"
+    },
+    "persistence_restart_uat": {
+      "refresh_exact_match": true,
+      "restart_exact_match": true,
+      "backend_health_after_restart": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true
+      },
+      "downloads_exist": true,
+      "status": "passed"
+    },
+    "export_validation": {
+      "html_passed": true,
+      "xlsx_passed": true,
+      "status": "passed"
+    },
+    "clean_environment_smoke": {
+      "status": "passed",
+      "failed_steps": []
+    }
+  },
+  "open_limitations": [
+    "Codex browser screenshot capture timed out in this desktop environment; DOM/API/build checks passed and manual UAT was executed through the running app/API.",
+    "Frontend production build emits a Vite chunk-size warning; it is not a functional failure.",
+    "FastAPI test run reports deprecation warnings for on_event/TestClient plumbing; tests pass."
+  ]
+}

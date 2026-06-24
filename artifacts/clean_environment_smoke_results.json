@@ -1,0 +1,108 @@
+{
+  "generated_at_utc": "2026-06-24T03:44:47.661436+00:00",
+  "clone_root": "D:\\Gopak-Clean-Smoke-f5c96c6",
+  "commit": "f5c96c6",
+  "steps": [
+    {
+      "step": "backend_health_initial",
+      "passed": true,
+      "health": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": false,
+        "memory_available": true
+      }
+    },
+    {
+      "step": "upload_three_excel_files",
+      "passed": true
+    },
+    {
+      "step": "conversation_persistence_after_restart",
+      "passed": true,
+      "before_count": 8,
+      "after_count": 8,
+      "health_after_restart": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true
+      }
+    },
+    {
+      "step": "context_refinement_sequence",
+      "passed": true,
+      "types": [
+        "table",
+        "table",
+        "chart"
+      ]
+    },
+    {
+      "step": "entrytransaction_about_phrase",
+      "passed": true,
+      "type": "table"
+    },
+    {
+      "step": "report_downloads",
+      "passed": true,
+      "downloads": [
+        {
+          "id": "report_a126b6a4-b1dd-4349-a082-e7b524f8e316.html",
+          "status_code": 200,
+          "size_bytes": 13017
+        },
+        {
+          "id": "report_a126b6a4-b1dd-4349-a082-e7b524f8e316.xlsx",
+          "status_code": 200,
+          "size_bytes": 8878
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "id": "report_a126b6a4-b1dd-4349-a082-e7b524f8e316.html",
+      "status_code": 200,
+      "size_bytes": 13017
+    },
+    {
+      "id": "report_a126b6a4-b1dd-4349-a082-e7b524f8e316.xlsx",
+      "status_code": 200,
+      "size_bytes": 8878
+    }
+  ],
+  "questions": [
+    "Top 5 máy theo tổng downtime",
+    "Chỉ lấy tháng gần nhất",
+    "Vẽ biểu đồ cột",
+    "Tạo báo cáo downtime tổng quan có bảng và biểu đồ",
+    "Cho tôi một insight ngắn về luồng xe ra vào cổng"
+  ],
+  "uploaded_files": {
+    "EntryTransaction": {
+      "id": "82dcd121fb394762a3c7370cce947e4d",
+      "filename": "EntryTransaction_20260203_164943.xlsx",
+      "status": "ready",
+      "row_count": 1294
+    },
+    "Loss_Assignment": {
+      "id": "9afaa1a5e7264023abba8e01feab0704",
+      "filename": "Loss_Assignment_20260203_100840.xlsx",
+      "status": "ready",
+      "row_count": 36309
+    },
+    "Machine_Downtime": {
+      "id": "ae9b2de43fa248efbe193f0f0807855f",
+      "filename": "Machine_Downtime_20260203_100753.xlsx",
+      "status": "ready",
+      "row_count": 9151
+    }
+  },
+  "summary": {
+    "status": "passed",
+    "failed_steps": []
+  }
+}

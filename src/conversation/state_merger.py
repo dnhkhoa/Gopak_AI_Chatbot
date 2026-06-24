@@ -156,7 +156,7 @@ class StateMerger:
         elif "pie" in q or "tron" in q:
             plan.intent = "chart"
             plan.output = "pie"
-        elif "ve" in q or "bieu do" in q or "chart" in q:
+        elif any(term in q for term in ["bieu do", "chart", "ve cot", "ve line", "ve chart", "ve bieu do"]):
             plan.intent = "chart"
             plan.output = "bar"
 

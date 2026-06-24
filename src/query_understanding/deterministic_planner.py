@@ -83,7 +83,13 @@ class DeterministicPlanner:
                 else machine if any(term in q for term in ["may", "m?y"])
                 else None
             )
-            if duration and any(term in q for term in ["downtime", "thoi gian", "thoi luong"]):
+            if duration and self._asks_multiple_metrics(q):
+                metric_payloads = [
+                    {"aggregation": "sum", "column": duration, "name": "total_duration_seconds", "percentage_of_total": True},
+                    {"aggregation": "count", "column": None, "name": "row_count"},
+                    {"aggregation": "avg", "column": duration, "name": "avg_duration_seconds"},
+                ]
+            elif duration and any(term in q for term in ["downtime", "thoi gian", "thoi luong"]):
                 metric_payloads = [{"aggregation": "sum", "column": duration, "name": "total_duration_seconds", "percentage_of_total": True}]
             else:
                 metric_payloads = [{"aggregation": "count", "column": None, "name": "row_count", "percentage_of_total": True}]
@@ -187,7 +193,7 @@ class DeterministicPlanner:
         return DeterministicParse(plan, confidence, "Deterministic detectors produced a validated analytical plan candidate.", evidence=evidence)
 
     def _trend_chart_plan(self, q: str, table: dict, duration: str | None, start_time: str | None) -> DeterministicParse | None:
-        chart_requested = any(term in q for term in ["bieu do", "chart", "ve ", "ve line", "line"])
+        chart_requested = any(term in q for term in ["bieu do", "chart", "ve cot", "ve line", "ve chart", "ve bieu do", "line"])
         trend_requested = any(term in q for term in ["xu huong", "qua thoi gian", "theo thoi gian", "theo ngay", "daily"])
         if not (chart_requested and trend_requested and duration and start_time):
             return None
@@ -214,8 +220,10 @@ class DeterministicPlanner:
         loss_name: str | None,
         loss_group: str | None,
     ) -> DeterministicParse | None:
-        chart_requested = any(term in q for term in ["bieu do", "chart", "ve ", "pie", "tron", "cot"])
+        chart_requested = any(term in q for term in ["bieu do", "chart", "ve cot", "ve line", "ve chart", "ve bieu do", "pie", "tron", "cot"])
         distribution_requested = any(term in q for term in ["phan bo", "ty le", "ty trong", "co cau", "phan tram"])
+        if "top" in q or any(term in q for term in ["cao nhat", "nhieu nhat", "pho bien nhat"]):
+            return None
         if not (chart_requested and distribution_requested):
             return None
         dim = (
@@ -269,7 +277,7 @@ class DeterministicPlanner:
             )
             return DeterministicParse(plan, 0.92, "EntryTransaction freeform insight mapped to scoped gate/access volume.", evidence=["entry_insight"])
         if "cong" in cols and any(term in q for term in ["theo cong", "theo tung cong", "tung cong", "moi cong", "theo cac cong", "phan bo theo cong"]):
-            output = "bar" if any(term in q for term in ["bieu do", "chart", "ve ", "ve bieu do", "ve cot"]) else "table"
+            output = "bar" if any(term in q for term in ["bieu do", "chart", "ve cot", "ve line", "ve chart", "ve bieu do"]) else "table"
             intent = "chart" if output == "bar" else "query"
             plan = QueryPlan(
                 intent=intent,

@@ -12,9 +12,9 @@
     "total_turns": 37,
     "passed_turns": 37,
     "failed_turns": 0,
-    "actual_llm_calls": 1,
-    "deterministic_turns": 24,
-    "real_llm_turns": 1,
+    "actual_llm_calls": 2,
+    "deterministic_turns": 23,
+    "real_llm_turns": 2,
     "clarification_turns": 3,
     "cross_file_violations": 0,
     "repeated_clarification_loops": 0,
@@ -35,14 +35,14 @@
       "SCHEMA_INSPECTION": 2,
       "DATA_QUALITY": 1,
       "SAMPLE_ROWS": 1,
-      "DETERMINISTIC": 24,
+      "DETERMINISTIC": 23,
       "CLARIFICATION": 3,
       "COLUMN_NULLS": 1,
-      "REAL_LLM": 1,
+      "REAL_LLM": 2,
       "PROVENANCE": 1
     },
-    "average_llm_latency_ms": 5203.0,
-    "p50_llm_latency_ms": 5203.0,
-    "p95_llm_latency_ms": 5203.0
+    "average_llm_latency_ms": 6382.9,
+    "p50_llm_latency_ms": 6382.9,
+    "p95_llm_latency_ms": 7434.1
   }
 }

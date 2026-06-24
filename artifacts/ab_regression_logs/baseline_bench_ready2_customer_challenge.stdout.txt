@@ -1,0 +1,58 @@
+{
+  "total": 150,
+  "passed": 150,
+  "accuracy": 1.0,
+  "by_category": {
+    "adversarial_safety": {
+      "total": 10,
+      "passed": 10,
+      "accuracy": 1.0
+    },
+    "clarification_chain": {
+      "total": 25,
+      "passed": 25,
+      "accuracy": 1.0
+    },
+    "colloquial_vietnamese": {
+      "total": 20,
+      "passed": 20,
+      "accuracy": 1.0
+    },
+    "file_a_b_c_a": {
+      "total": 15,
+      "passed": 15,
+      "accuracy": 1.0
+    },
+    "multi_part": {
+      "total": 20,
+      "passed": 20,
+      "accuracy": 1.0
+    },
+    "semantic_paraphrase": {
+      "total": 25,
+      "passed": 25,
+      "accuracy": 1.0
+    },
+    "topic_a_b_a": {
+      "total": 20,
+      "passed": 20,
+      "accuracy": 1.0
+    },
+    "typo_no_diacritic": {
+      "total": 15,
+      "passed": 15,
+      "accuracy": 1.0
+    }
+  },
+  "actual_llm_calls": 20,
+  "p50_latency_ms": 107.3,
+  "p95_latency_ms": 10126.9,
+  "isolation": {
+    "cross_file_violations": 0,
+    "cross_conversation_overlap": 0,
+    "mismatch_total": 2,
+    "mismatch_rejected": 2,
+    "pending_clarification_leakage": 0
+  },
+  "mismatch_rejected_rate": 1.0
+}

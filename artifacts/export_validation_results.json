@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "html_passed": true,
+    "xlsx_passed": true,
+    "status": "passed"
+  },
+  "response_type": "report",
+  "title": "Báo cáo phân tích downtime",
+  "downloads": [
+    {
+      "id": "report_3c94be28-93f0-480e-9906-79464ded59e3.html",
+      "label": "Tải HTML",
+      "filename": "report_3c94be28-93f0-480e-9906-79464ded59e3.html",
+      "mime_type": "text/html"
+    },
+    {
+      "id": "report_3c94be28-93f0-480e-9906-79464ded59e3.xlsx",
+      "label": "Tải Excel",
+      "filename": "report_3c94be28-93f0-480e-9906-79464ded59e3.xlsx",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    }
+  ],
+  "html_path": "D:\\Gopak Chatbot\\reports\\report_3c94be28-93f0-480e-9906-79464ded59e3.html",
+  "xlsx_path": "D:\\Gopak Chatbot\\reports\\report_3c94be28-93f0-480e-9906-79464ded59e3.xlsx",
+  "html_checks": {
+    "exists": true,
+    "has_title": true,
+    "has_sections": true,
+    "has_table": true,
+    "has_chart_snapshot": true,
+    "has_source": true,
+    "has_filters": true,
+    "has_generated_timestamp": true,
+    "no_local_path": true,
+    "no_internal_trace": true
+  },
+  "xlsx_checks": {
+    "exists": true,
+    "opens": true,
+    "has_reasonable_sheets": true,
+    "headers_clear": true,
+    "has_numeric_hours": true,
+    "no_internal_metadata": true
+  },
+  "sheets": [
+    "section_status",
+    "top_machines",
+    "top_causes",
+    "time_trend"
+  ]
+}

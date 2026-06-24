@@ -1,0 +1,55 @@
+{
+  "total": 13,
+  "passed": 1,
+  "accuracy": 0.0769,
+  "by_category": {
+    "scalar": {
+      "total": 1,
+      "passed": 0
+    },
+    "overview": {
+      "total": 1,
+      "passed": 0
+    },
+    "ranking": {
+      "total": 1,
+      "passed": 0
+    },
+    "multi_metric": {
+      "total": 1,
+      "passed": 0
+    },
+    "multi_part": {
+      "total": 3,
+      "passed": 0
+    },
+    "chart_request": {
+      "total": 1,
+      "passed": 0
+    },
+    "commentary_followup": {
+      "total": 1,
+      "passed": 0
+    },
+    "commentary_plus_query": {
+      "total": 1,
+      "passed": 0
+    },
+    "ambiguous_dimension": {
+      "total": 1,
+      "passed": 0
+    },
+    "ambiguous_metric": {
+      "total": 1,
+      "passed": 1
+    },
+    "topic_restore": {
+      "total": 1,
+      "passed": 0
+    }
+  },
+  "multipart_total": 3,
+  "multipart_complete": 0,
+  "missing_requirement_count": 12,
+  "generic_clarification_count": 0
+}

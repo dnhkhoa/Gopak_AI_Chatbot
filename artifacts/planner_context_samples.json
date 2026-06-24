@@ -1,3108 +1,5 @@
 [
   {
-    "question": "Cho tôi top 3 loại tổn thất, tỷ lệ trên tổng và giải thích ngắn gọn.",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 0.907
-    }
-  },
-  {
-    "question": "Nhận xét top 5 máy theo tổng downtime trong tháng gần nhất.",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.024
-    }
-  },
-  {
-    "question": "Nhận xét top 5 nguyên nhân theo số lần ghi nhận.",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 0.778
-    }
-  },
-  {
-    "question": "Top 5 máy theo tổng downtime, thêm số lần dừng và thời lượng trung bình.",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 0.976
-    }
-  },
-  {
-    "question": "Cho tôi top 5 nhóm có số lần ghi nhận cao nhất, thêm tỷ lệ phần trăm và nhận xét những điểm đáng chú ý trong kết quả.",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 939,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 0.699
-    }
-  },
-  {
-    "question": "Cho tôi top 3 loại tổn thất, tỷ lệ trên tổng và giải thích ngắn gọn.",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 0.907
-    }
-  },
-  {
-    "question": "Nhận xét top 5 máy theo tổng downtime trong tháng gần nhất.",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.024
-    }
-  },
-  {
-    "question": "Nhận xét top 5 nguyên nhân theo số lần ghi nhận.",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 0.778
-    }
-  },
-  {
-    "question": "Cho tôi top 5 nhóm có số lần ghi nhận cao nhất, thêm tỷ lệ phần trăm và nhận xét.",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 939,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 0.756
-    }
-  },
-  {
-    "question": "Top 5 máy theo tổng downtime, thêm số lần dừng, thời lượng trung bình và nhận xét.",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 931,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 0.94
-    }
-  },
-  {
-    "question": "Bỏ biểu đồ đi, phân tích ba nguyên nhân phổ biến nhất và giải thích kết quả.",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_difference_seconds",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 710,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.578
-    }
-  },
-  {
-    "question": "Top 5 máy theo tổng downtime, thêm nhận xét.",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.063
-    }
-  },
-  {
-    "question": "Tiếp tục phần top máy lúc nãy và thêm thời lượng trung bình.",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 2.864
-    }
-  },
-  {
-    "question": "Hãy tìm top 5 máy có tổng downtime cao nhất, hiển thị thêm số lần dừng và thời lượng trung bình.",
-    "selected_tables": [
-      "machine_downtime_20260203_100753_report_3c3f6d",
-      "loss_assignment_20260203_100840_report_2a7588"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 2121,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3",
-      "col_2ad2989784fc41ffb9fef3225034db54_report_1256ce",
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25",
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -7.519,
-      "loss_assignment_20260203_100840_report_2a7588": 12.906,
-      "machine_downtime_20260203_100753_report_3c3f6d": 16.981,
-      "col_2ad2989784fc41ffb9fef3225034db54_report_1256ce": 0.44,
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 0.877,
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 0.932
-    }
-  },
-  {
-    "question": "Hãy tìm top 5 máy có tổng downtime cao nhất, hiển thị thêm số lần dừng và thời lượng trung bình.",
-    "selected_tables": [
-      "loss_assignment_20260203_100840_report_2a7588",
-      "machine_downtime_20260203_100753_report_3c3f6d"
-    ],
-    "selected_columns": {
-      "machine_downtime_20260203_100753_report_3c3f6d": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ],
-      "loss_assignment_20260203_100840_report_2a7588": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 2121,
-    "omitted_tables": [
-      "entrytransaction_20260203_164943_report_0ec1e3",
-      "col_2ad2989784fc41ffb9fef3225034db54_report_1256ce",
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25",
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "schema_linking_score": {
-      "entrytransaction_20260203_164943_report_0ec1e3": -7.519,
-      "loss_assignment_20260203_100840_report_2a7588": 12.906,
-      "machine_downtime_20260203_100753_report_3c3f6d": 16.981,
-      "col_2ad2989784fc41ffb9fef3225034db54_report_1256ce": 0.44,
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 0.877,
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 0.932
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #1",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #2",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.054
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #5",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #6",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.054
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #9",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.619
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #10",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #13",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #14",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #17",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #18",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #21",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #22",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #25",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #26",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #29",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #30",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #5",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.929
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #10",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 939,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 6.862
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #15",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.862
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #20",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 939,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 6.864
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #25",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.862
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #30",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 939,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 6.862
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #35",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.862
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #1",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #2",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.054
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #5",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #6",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.054
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #9",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.619
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #10",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #13",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #14",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #17",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #18",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #21",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #22",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #25",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #26",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #29",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #30",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #5",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.929
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #10",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 939,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 6.862
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #15",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.862
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #20",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 939,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 6.864
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #25",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.862
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #30",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 939,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 6.862
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #35",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.862
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 644,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
-    }
-  },
-  {
-    "question": "Quay lai cau dau tien",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #1",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #2",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.054
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #5",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #6",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.054
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #9",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.619
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #10",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #13",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #14",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #17",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #18",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #21",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #22",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #25",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #26",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
-    }
-  },
-  {
-    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #29",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 634,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.576
-    }
-  },
-  {
-    "question": "So sanh may co downtime cao voi may con lai #30",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #5",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.929
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #10",
-    "selected_tables": [
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
-    ],
-    "selected_columns": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 939,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 6.862
-    }
-  },
-  {
-    "question": "So sanh theo thang va ve line chart #15",
-    "selected_tables": [
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
-    ],
-    "selected_columns": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
-        "no",
-        "may",
-        "thoi_gian_bat_dau",
-        "thoi_gian_ket_thuc",
-        "thoi_luong",
-        "ten_ton_that",
-        "nhom_ton_that",
-        "loai_ton_that",
-        "note",
-        "duration_reported_text",
-        "duration_reported_seconds",
-        "duration_calculated_seconds",
-        "duration_difference_seconds",
-        "duration_anomaly",
-        "duration_seconds",
-        "thoi_luong_seconds"
-      ]
-    },
-    "prompt_token_estimate": 932,
-    "omitted_tables": [],
-    "schema_linking_score": {
-      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.862
-    }
-  },
-  {
     "question": "So sanh theo thang va ve line chart #20",
     "selected_tables": [
       "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
@@ -5680,6 +2577,3171 @@
     "omitted_tables": [],
     "schema_linking_score": {
       "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 2.864
+    }
+  },
+  {
+    "question": "Hãy tìm top 5 máy có tổng downtime cao nhất, hiển thị thêm số lần dừng và thời lượng trung bình.",
+    "selected_tables": [
+      "loss_assignment_20260203_100840_report_2a7588",
+      "machine_downtime_20260203_100753_report_3c3f6d"
+    ],
+    "selected_columns": {
+      "machine_downtime_20260203_100753_report_3c3f6d": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ],
+      "loss_assignment_20260203_100840_report_2a7588": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 2121,
+    "omitted_tables": [
+      "entrytransaction_20260203_164943_report_0ec1e3",
+      "col_2ad2989784fc41ffb9fef3225034db54_report_1256ce",
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25",
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "schema_linking_score": {
+      "entrytransaction_20260203_164943_report_0ec1e3": -7.519,
+      "loss_assignment_20260203_100840_report_2a7588": 12.906,
+      "machine_downtime_20260203_100753_report_3c3f6d": 16.981,
+      "col_2ad2989784fc41ffb9fef3225034db54_report_1256ce": 0.44,
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 0.877,
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 0.932
+    }
+  },
+  {
+    "question": "Cho tôi top 5 nhóm có số lần ghi nhận cao nhất, thêm tỷ lệ phần trăm và nhận xét.",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 939,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 0.756
+    }
+  },
+  {
+    "question": "Top 5 máy theo tổng downtime, thêm số lần dừng, thời lượng trung bình và nhận xét.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 931,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 0.94
+    }
+  },
+  {
+    "question": "Quay lại kết quả lúc nãy, thêm số lần ghi nhận, tỷ trọng và giải thích sự khác biệt.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.478
+    }
+  },
+  {
+    "question": "Bỏ biểu đồ đi, phân tích ba nguyên nhân phổ biến nhất và giải thích kết quả.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_difference_seconds",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 710,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.578
+    }
+  },
+  {
+    "question": "Top 5 máy theo tổng downtime, thêm nhận xét.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.063
+    }
+  },
+  {
+    "question": "Trong tháng gần nhất, top 5 máy theo tổng downtime, số lần dừng, trung bình và tỷ trọng trên tổng downtime.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.044
+    }
+  },
+  {
+    "question": "Hãy tìm top 5 máy có tổng downtime cao nhất, hiển thị thêm số lần dừng và thời lượng trung bình.",
+    "selected_tables": [
+      "machine_downtime_20260203_100753_report_3c3f6d",
+      "loss_assignment_20260203_100840_report_2a7588"
+    ],
+    "selected_columns": {
+      "machine_downtime_20260203_100753_report_3c3f6d": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ],
+      "loss_assignment_20260203_100840_report_2a7588": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 2121,
+    "omitted_tables": [
+      "entrytransaction_20260203_164943_report_0ec1e3",
+      "col_2ad2989784fc41ffb9fef3225034db54_report_1256ce",
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25",
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "schema_linking_score": {
+      "entrytransaction_20260203_164943_report_0ec1e3": -7.519,
+      "loss_assignment_20260203_100840_report_2a7588": 12.906,
+      "machine_downtime_20260203_100753_report_3c3f6d": 16.981,
+      "col_2ad2989784fc41ffb9fef3225034db54_report_1256ce": 0.44,
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 0.877,
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 0.932
+    }
+  },
+  {
+    "question": "Trong tháng gần nhất, top 5 máy theo tổng downtime, số lần dừng, trung bình và tỷ trọng trên tổng downtime.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.044
+    }
+  },
+  {
+    "question": "Vẽ biểu đồ xu hướng tổng downtime theo ngày trong toàn bộ khoảng thời gian có dữ liệu, sau đó nhận xét ba điểm đáng chú ý.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.033
+    }
+  },
+  {
+    "question": "Cho tôi phân bố số lần ghi nhận theo nhóm tổn thất, thêm tỷ lệ phần trăm và vẽ biểu đồ phù hợp.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.245
+    }
+  },
+  {
+    "question": "Trong tháng gần nhất, tìm top 5 máy có tổng downtime cao nhất, thêm số lần dừng, thời lượng trung bình, tỷ trọng trên tổng downtime và vẽ biểu đồ.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.097
+    }
+  },
+  {
+    "question": "Cho tôi phân bố số lần ghi nhận theo nhóm tổn thất, thêm tỷ lệ phần trăm và vẽ biểu đồ phù hợp.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.245
+    }
+  },
+  {
+    "question": "Trong tháng gần nhất, tìm top 5 máy có tổng downtime cao nhất, thêm số lần dừng, thời lượng trung bình, tỷ trọng trên tổng downtime và vẽ biểu đồ.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.097
+    }
+  },
+  {
+    "question": "Trong tháng gần nhất, top 5 máy theo tổng downtime, số lần dừng, trung bình và tỷ trọng trên tổng downtime.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.044
+    }
+  },
+  {
+    "question": "Vẽ biểu đồ xu hướng tổng downtime theo ngày trong toàn bộ khoảng thời gian có dữ liệu, sau đó nhận xét ba điểm đáng chú ý.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.033
+    }
+  },
+  {
+    "question": "Cho tôi phân bố số lần ghi nhận theo nhóm tổn thất, thêm tỷ lệ phần trăm và vẽ biểu đồ phù hợp.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.245
+    }
+  },
+  {
+    "question": "Trong tháng gần nhất, tìm top 5 máy có tổng downtime cao nhất, thêm số lần dừng, thời lượng trung bình, tỷ trọng trên tổng downtime và vẽ biểu đồ.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.097
+    }
+  },
+  {
+    "question": "Vẽ biểu đồ xu hướng tổng downtime theo ngày trong toàn bộ khoảng thời gian có dữ liệu, sau đó nhận xét ba điểm đáng chú ý.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.033
+    }
+  },
+  {
+    "question": "Cho tôi phân bố số lần ghi nhận theo nhóm tổn thất, thêm tỷ lệ phần trăm và vẽ biểu đồ phù hợp.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.245
+    }
+  },
+  {
+    "question": "Trong tháng gần nhất, tìm top 5 máy có tổng downtime cao nhất, thêm số lần dừng, thời lượng trung bình, tỷ trọng trên tổng downtime và vẽ biểu đồ.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.097
+    }
+  },
+  {
+    "question": "Trong tháng gần nhất, top 5 máy theo tổng downtime, số lần dừng, trung bình và tỷ trọng trên tổng downtime.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.044
+    }
+  },
+  {
+    "question": "Vẽ biểu đồ xu hướng tổng downtime theo ngày trong toàn bộ khoảng thời gian có dữ liệu, sau đó nhận xét ba điểm đáng chú ý.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.033
+    }
+  },
+  {
+    "question": "Cho tôi phân bố số lần ghi nhận theo nhóm tổn thất, thêm tỷ lệ phần trăm và vẽ biểu đồ phù hợp.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.245
+    }
+  },
+  {
+    "question": "Trong tháng gần nhất, tìm top 5 máy có tổng downtime cao nhất, thêm số lần dừng, thời lượng trung bình, tỷ trọng trên tổng downtime và vẽ biểu đồ.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.097
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #1",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
+    }
+  },
+  {
+    "question": "Cho tôi top 5 nhóm có số lần ghi nhận cao nhất, thêm tỷ lệ phần trăm và nhận xét.",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 939,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 0.756
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #2",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.054
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #3",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 1.309
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #5",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
+    }
+  },
+  {
+    "question": "Top 5 máy theo tổng downtime, thêm số lần dừng, thời lượng trung bình và nhận xét.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 931,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 0.94
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #6",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.054
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #7",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 3.309
+    }
+  },
+  {
+    "question": "Quay lại kết quả lúc nãy, thêm số lần ghi nhận, tỷ trọng và giải thích sự khác biệt.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.478
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #9",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.619
+    }
+  },
+  {
+    "question": "Bỏ biểu đồ đi, phân tích ba nguyên nhân phổ biến nhất và giải thích kết quả.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_difference_seconds",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 710,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.578
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #10",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
+    }
+  },
+  {
+    "question": "Top 5 máy theo tổng downtime, thêm nhận xét.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.063
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #11",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 3.243
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #13",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #14",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #15",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.243
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #17",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #18",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #19",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 3.243
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #21",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #22",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #23",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 3.244
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #25",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #26",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #27",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.244
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #29",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.576
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #30",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #5",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.929
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #10",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 939,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 6.862
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #15",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.862
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #20",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 939,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 6.864
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #25",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.862
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #30",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 939,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 6.862
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #35",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.862
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.082
+    }
+  },
+  {
+    "question": "Quay lai cau dau tien",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.129
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #1",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #2",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.054
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #3",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 1.309
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #5",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.619
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #6",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 5.054
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #7",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 3.309
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #9",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.619
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #10",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #11",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 3.243
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #13",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #14",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #15",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.243
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #17",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #18",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #19",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 3.243
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #21",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #22",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #23",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 3.244
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #25",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.576
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #26",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.982
+    }
+  },
+  {
+    "question": "Tao nhan xet cho 3 nhom ton that quan trong nhat #27",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 644,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 5.244
+    }
+  },
+  {
+    "question": "Hay phan tich bat thuong va neu bang tom tat ngan gon #29",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.576
+    }
+  },
+  {
+    "question": "So sanh may co downtime cao voi may con lai #30",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 4.982
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #5",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 6.929
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #10",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 939,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 6.862
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #15",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.862
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #20",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 939,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 6.864
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #25",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.862
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #30",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 939,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 6.862
+    }
+  },
+  {
+    "question": "So sanh theo thang va ve line chart #35",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 8.862
+    }
+  },
+  {
+    "question": "Trong tháng gần nhất, top 5 máy theo tổng downtime, số lần dừng, trung bình và tỷ trọng trên tổng downtime.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 932,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.044
+    }
+  },
+  {
+    "question": "Cho tôi top 5 nhóm có số lần ghi nhận cao nhất, thêm tỷ lệ phần trăm và nhận xét.",
+    "selected_tables": [
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25"
+    ],
+    "selected_columns": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 939,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "a329169db4984cab80ed5fea5880bb4f_report_bf2c25": 0.756
+    }
+  },
+  {
+    "question": "Top 5 máy theo tổng downtime, thêm số lần dừng, thời lượng trung bình và nhận xét.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 931,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 0.94
+    }
+  },
+  {
+    "question": "Bỏ biểu đồ đi, phân tích ba nguyên nhân phổ biến nhất và giải thích kết quả.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_difference_seconds",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 710,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": -1.578
+    }
+  },
+  {
+    "question": "Top 5 máy theo tổng downtime, thêm nhận xét.",
+    "selected_tables": [
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+    ],
+    "selected_columns": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ]
+    },
+    "prompt_token_estimate": 634,
+    "omitted_tables": [],
+    "schema_linking_score": {
+      "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337": 1.063
     }
   },
   {

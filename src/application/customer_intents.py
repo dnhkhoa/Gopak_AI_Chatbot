@@ -176,7 +176,7 @@ def detect_customer_intent(question: str) -> CustomerIntentResult:
     if table_hint and any(term in q for term in ["chua gi", "noi dung gi", "dung de lam gi", "co noi dung gi"]):
         return CustomerIntentResult("TABLE_OVERVIEW", 0.95, "Question asks for one table overview.", table_hint, limit)
 
-    if any(term in q for term in ["ve", "bieu do", "chart", "plot"]):
+    if any(term in q for term in ["bieu do", "chart", "plot", "ve cot", "ve line", "ve chart", "ve bieu do"]) and not _negates_chart(q):
         return CustomerIntentResult("CHART_REQUEST", 0.80, "Chart request.", table_hint, limit)
     if any(term in q for term in ["dashboard", "tong quan"]):
         return CustomerIntentResult("DASHBOARD_REQUEST", 0.80, "Dashboard request.", table_hint, limit)
@@ -198,6 +198,10 @@ def _table_hint(q: str) -> str | None:
     if any(term in q for term in ["entry transaction", "entry", "transaction", "ra vao", "cong", "bien so"]):
         return "entrytransaction"
     return None
+
+
+def _negates_chart(q: str) -> bool:
+    return any(term in q for term in ["bo bieu do", "bo chart", "khong ve bieu do", "khong ve chart", "khong can bieu do", "khong can chart"])
 
 
 def _limit_hint(q: str) -> int | None:

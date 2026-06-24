@@ -1,0 +1,19 @@
+{
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 85 Stepping 4, GenuineIntel",
+  "modules": {
+    "duckdb": "1.5.4",
+    "pydantic": "2.12.4",
+    "pandas": "2.3.3",
+    "pytest": "8.4.2"
+  },
+  "node": "v24.15.0",
+  "npm": "11.12.1",
+  "ollama_version": "ollama version is 0.30.7",
+  "ollama_model_env": null,
+  "git_head": "1c71f282957324b2c672cd65d70c9b16e5d35f62",
+  "git_branch": "feature/demo-conversation-seeding",
+  "relevant_env": {}
+}

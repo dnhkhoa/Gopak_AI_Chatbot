@@ -1,0 +1,270 @@
+{
+  "summary": {
+    "total": 26,
+    "passed": 24,
+    "failed": 0,
+    "timeout": 2
+  },
+  "results": [
+    {
+      "label": "baseline",
+      "name": "compileall",
+      "cmd": "python -m compileall -q src scripts evaluation",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 1278.1,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_compileall.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_compileall.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "pytest_test_complex_analytics",
+      "cmd": "python -m pytest -q tests/test_complex_analytics.py",
+      "status": "timeout",
+      "returncode": null,
+      "duration_ms": 640355.5,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_complex_analytics.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_complex_analytics.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "pytest_test_conversation_state_merger",
+      "cmd": "python -m pytest -q tests/test_conversation_state_merger.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 9924.5,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_conversation_state_merger.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_conversation_state_merger.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "pytest_test_customer_query_understanding",
+      "cmd": "python -m pytest -q tests/test_customer_query_understanding.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 4697.8,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_customer_query_understanding.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_customer_query_understanding.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "pytest_test_exports",
+      "cmd": "python -m pytest -q tests/test_exports.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 10846.5,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_exports.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_exports.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "pytest_test_grounding",
+      "cmd": "python -m pytest -q tests/test_grounding.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 3941.4,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_grounding.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_grounding.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "pytest_test_hybrid_pipeline",
+      "cmd": "python -m pytest -q tests/test_hybrid_pipeline.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 9855.7,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_hybrid_pipeline.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_hybrid_pipeline.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "pytest_test_ingestion",
+      "cmd": "python -m pytest -q tests/test_ingestion.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 8992.6,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_ingestion.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_ingestion.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "pytest_test_memory_persistence",
+      "cmd": "python -m pytest -q tests/test_memory_persistence.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 2319.4,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_memory_persistence.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_memory_persistence.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "pytest_test_multipart_intent",
+      "cmd": "python -m pytest -q tests/test_multipart_intent.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 4110.6,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_multipart_intent.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_multipart_intent.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "pytest_test_presentation",
+      "cmd": "python -m pytest -q tests/test_presentation.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 2111.1,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_presentation.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_presentation.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "pytest_test_query",
+      "cmd": "python -m pytest -q tests/test_query.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 10418.7,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_query.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_query.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "pytest_test_web_api",
+      "cmd": "python -m pytest -q tests/test_web_api.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 19052.1,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_web_api.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_pytest_test_web_api.stderr.txt"
+    },
+    {
+      "label": "current",
+      "name": "compileall",
+      "cmd": "python -m compileall -q src scripts evaluation",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 744.6,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_compileall.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_compileall.stderr.txt"
+    },
+    {
+      "label": "current",
+      "name": "pytest_test_complex_analytics",
+      "cmd": "python -m pytest -q tests/test_complex_analytics.py",
+      "status": "timeout",
+      "returncode": null,
+      "duration_ms": 637623.1,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_complex_analytics.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_complex_analytics.stderr.txt"
+    },
+    {
+      "label": "current",
+      "name": "pytest_test_conversation_state_merger",
+      "cmd": "python -m pytest -q tests/test_conversation_state_merger.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 9838.3,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_conversation_state_merger.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_conversation_state_merger.stderr.txt"
+    },
+    {
+      "label": "current",
+      "name": "pytest_test_customer_query_understanding",
+      "cmd": "python -m pytest -q tests/test_customer_query_understanding.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 4664.3,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_customer_query_understanding.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_customer_query_understanding.stderr.txt"
+    },
+    {
+      "label": "current",
+      "name": "pytest_test_exports",
+      "cmd": "python -m pytest -q tests/test_exports.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 10796.6,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_exports.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_exports.stderr.txt"
+    },
+    {
+      "label": "current",
+      "name": "pytest_test_grounding",
+      "cmd": "python -m pytest -q tests/test_grounding.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 4074.7,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_grounding.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_grounding.stderr.txt"
+    },
+    {
+      "label": "current",
+      "name": "pytest_test_hybrid_pipeline",
+      "cmd": "python -m pytest -q tests/test_hybrid_pipeline.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 9773.1,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_hybrid_pipeline.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_hybrid_pipeline.stderr.txt"
+    },
+    {
+      "label": "current",
+      "name": "pytest_test_ingestion",
+      "cmd": "python -m pytest -q tests/test_ingestion.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 9020.8,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_ingestion.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_ingestion.stderr.txt"
+    },
+    {
+      "label": "current",
+      "name": "pytest_test_memory_persistence",
+      "cmd": "python -m pytest -q tests/test_memory_persistence.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 2331.8,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_memory_persistence.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_memory_persistence.stderr.txt"
+    },
+    {
+      "label": "current",
+      "name": "pytest_test_multipart_intent",
+      "cmd": "python -m pytest -q tests/test_multipart_intent.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 4207.8,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_multipart_intent.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_multipart_intent.stderr.txt"
+    },
+    {
+      "label": "current",
+      "name": "pytest_test_presentation",
+      "cmd": "python -m pytest -q tests/test_presentation.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 2063.5,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_presentation.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_presentation.stderr.txt"
+    },
+    {
+      "label": "current",
+      "name": "pytest_test_query",
+      "cmd": "python -m pytest -q tests/test_query.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 10477.9,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_query.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_query.stderr.txt"
+    },
+    {
+      "label": "current",
+      "name": "pytest_test_web_api",
+      "cmd": "python -m pytest -q tests/test_web_api.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 19129.4,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_web_api.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\current_pytest_test_web_api.stderr.txt"
+    }
+  ]
+}

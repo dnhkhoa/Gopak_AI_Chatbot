@@ -51,15 +51,15 @@
           ]
         },
         "lineage": {
-          "conversation_id": "8a250b87-63d6-4eda-b00a-f212d85da54b",
-          "turn_id": "ac5f55d0-74ea-402e-ba56-cf44c2b2a8d0",
+          "conversation_id": "c04ef9c7-21f0-4ef4-80c3-3ce3ec480ba4",
+          "turn_id": "b7a7369a-7d72-4bc1-a231-854952e248d1",
           "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-          "request_contract_id": "db63e310-e02a-467d-8130-67b1c2eabaa9",
-          "query_plan_id": "df40275c-20dd-41fd-847a-2f9f819aab67",
-          "query_result_id": "8d9fa8b3-baec-4cf1-8021-80cfa41f2e29",
-          "answer_brief_id": "af349d6a-66ca-4fc9-92c9-bca3c41a1517",
-          "chart_spec_id": "d0dd2254-d46c-491b-a9b4-da5a638cec10",
-          "report_artifact_id": "c48f551a-4cda-43d7-ac8d-f83729e73436"
+          "request_contract_id": "96193ccd-dc54-4154-8a96-811de1e3fa30",
+          "query_plan_id": "2940b0bb-4c97-4565-a14a-f90a8050d3a4",
+          "query_result_id": "aef7cd1a-82ba-48b2-ae36-9257873df40a",
+          "answer_brief_id": "f2c38ff1-6b4e-4fdb-a3b5-eaf03419c55b",
+          "chart_spec_id": "105e11fb-a5f9-4f86-ada2-e6a708df56eb",
+          "report_artifact_id": "befcbe34-366a-472f-82df-f65500e294fe"
         },
         "chart_contract": {},
         "report_completeness": null,
@@ -111,19 +111,19 @@
           "explicitly_reset_fields": []
         },
         "lineage": {
-          "conversation_id": "8a250b87-63d6-4eda-b00a-f212d85da54b",
-          "turn_id": "897c1abd-9a24-4982-a373-8eb73879f69a",
+          "conversation_id": "c04ef9c7-21f0-4ef4-80c3-3ce3ec480ba4",
+          "turn_id": "c5160858-f4a0-47a1-b709-dcf45c64737e",
           "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-          "request_contract_id": "528c9df3-d6ce-4b30-b69d-cd84583d5b51",
-          "query_plan_id": "0c93f85d-e85d-42bf-8a98-62a8794cd423",
-          "query_result_id": "c105078d-c16f-4999-a303-715715dd65b0",
-          "answer_brief_id": "03802f2d-385a-43d1-aa10-d83c3d3c108c",
-          "chart_spec_id": "c04e74b1-e6e9-4113-8bc3-6abf34925fd6",
-          "report_artifact_id": "e7c0231d-c3ca-4bdf-8dbe-26a475f78a08"
+          "request_contract_id": "4e370a70-42ed-424b-bd4d-dbf1114f6a87",
+          "query_plan_id": "46616728-693f-4f03-8867-f7ab8e9036cd",
+          "query_result_id": "ae027ed3-70da-4e95-8d10-e9d48a2f6150",
+          "answer_brief_id": "b0d2965a-4d2f-45d0-8fda-1bd32f328738",
+          "chart_spec_id": "523994ec-e26b-43e4-9699-6c79744bf609",
+          "report_artifact_id": "f38779c6-ece8-4fb3-b83b-f1359e2199ff"
         },
         "chart_contract": {},
         "report_completeness": null,
-        "previous_visible_result_id": "128714de-4519-457c-a8a3-073d1d9acc46"
+        "previous_visible_result_id": "69ec443a-a019-4927-857c-a73e94e32e3d"
       },
       "checks": {
         "response_type": true,
@@ -179,8 +179,8 @@
         "x_axis_unit": null,
         "y_axis_unit": "giờ",
         "tooltip_unit": "giờ",
-        "source_result_id": "8589d231-21fd-4b9e-bb6d-11fb63813d84",
-        "source_turn_id": "80c76b9d-c049-437c-872a-a62a0131c752",
+        "source_result_id": "f7edd4d9-8a79-497a-b11c-abc9fb90bb1c",
+        "source_turn_id": "daebd2da-d03e-4c18-8f47-aead473e173e",
         "metric": "total_downtime",
         "dimension": "machine"
       },
@@ -221,15 +221,15 @@
           ]
         },
         "lineage": {
-          "conversation_id": "8a250b87-63d6-4eda-b00a-f212d85da54b",
-          "turn_id": "80c76b9d-c049-437c-872a-a62a0131c752",
+          "conversation_id": "c04ef9c7-21f0-4ef4-80c3-3ce3ec480ba4",
+          "turn_id": "daebd2da-d03e-4c18-8f47-aead473e173e",
           "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-          "request_contract_id": "56f6fe41-8743-4c0d-af79-e1c2cead9485",
-          "query_plan_id": "b19c919a-5e72-400f-8716-282f96bfa643",
-          "query_result_id": "8589d231-21fd-4b9e-bb6d-11fb63813d84",
-          "answer_brief_id": "70fa99ba-3b13-416c-9689-82b366002cbd",
-          "chart_spec_id": "b8288a07-9bb7-4e08-811d-7372b03125de",
-          "report_artifact_id": "9eff113c-a1e4-4f32-8cb8-2a6c034561ea"
+          "request_contract_id": "943addbe-5554-4e0d-aac4-1012cbf4f4c3",
+          "query_plan_id": "5ca04f32-0aa5-42e0-9d5b-ea04050fcd71",
+          "query_result_id": "f7edd4d9-8a79-497a-b11c-abc9fb90bb1c",
+          "answer_brief_id": "278d9e7d-9666-41da-8d51-7f4f54f5905e",
+          "chart_spec_id": "324020be-7d7a-4489-876d-63072ff8dd8e",
+          "report_artifact_id": "b06a405f-9690-411a-844f-e42af4dfcb67"
         },
         "chart_contract": {
           "chart_type": "bar",
@@ -239,8 +239,8 @@
           "x_axis_unit": null,
           "y_axis_unit": "giờ",
           "tooltip_unit": "giờ",
-          "source_result_id": "8589d231-21fd-4b9e-bb6d-11fb63813d84",
-          "source_turn_id": "80c76b9d-c049-437c-872a-a62a0131c752",
+          "source_result_id": "f7edd4d9-8a79-497a-b11c-abc9fb90bb1c",
+          "source_turn_id": "daebd2da-d03e-4c18-8f47-aead473e173e",
           "expected_category_count": 5,
           "time_grain": null
         },
@@ -643,8 +643,8 @@
         "x_axis_unit": null,
         "y_axis_unit": "giờ",
         "tooltip_unit": "giờ",
-        "source_result_id": "a8084c54-d741-4f97-a771-51e1bf7c0bc5",
-        "source_turn_id": "93419d69-bbcf-4f25-801c-44c07b9aa835",
+        "source_result_id": "4cd21beb-08d8-4b4f-8c8f-e19da3be6458",
+        "source_turn_id": "0e970658-5e37-478d-8af3-92ab58c90330",
         "metric": "total_downtime",
         "dimension": "date"
       },
@@ -685,15 +685,15 @@
           ]
         },
         "lineage": {
-          "conversation_id": "8a250b87-63d6-4eda-b00a-f212d85da54b",
-          "turn_id": "93419d69-bbcf-4f25-801c-44c07b9aa835",
+          "conversation_id": "c04ef9c7-21f0-4ef4-80c3-3ce3ec480ba4",
+          "turn_id": "0e970658-5e37-478d-8af3-92ab58c90330",
           "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-          "request_contract_id": "10428387-bb38-495b-bfbc-3e659e6e3ce4",
-          "query_plan_id": "270afe4e-7102-498c-9a39-09bd484052a5",
-          "query_result_id": "a8084c54-d741-4f97-a771-51e1bf7c0bc5",
-          "answer_brief_id": "03dc764e-fbfc-4002-a73c-85ac1e10395f",
-          "chart_spec_id": "0b8237fb-2387-4cef-8219-e31ecfa796cf",
-          "report_artifact_id": "8d9d85a5-f998-44e4-9244-5d171409d3fe"
+          "request_contract_id": "95cd0599-a32c-46bc-bacd-bdb76ca8f06c",
+          "query_plan_id": "beb33f85-acd7-4829-b1fc-b7810538c47a",
+          "query_result_id": "4cd21beb-08d8-4b4f-8c8f-e19da3be6458",
+          "answer_brief_id": "8be82ded-59a5-4bd5-a400-b6b3fcadb3b7",
+          "chart_spec_id": "99fbae18-82a1-4f96-9680-66fc35655392",
+          "report_artifact_id": "8dddf6ee-33aa-4900-855a-3addfa6ae795"
         },
         "chart_contract": {
           "chart_type": "line",
@@ -703,8 +703,8 @@
           "x_axis_unit": null,
           "y_axis_unit": "giờ",
           "tooltip_unit": "giờ",
-          "source_result_id": "a8084c54-d741-4f97-a771-51e1bf7c0bc5",
-          "source_turn_id": "93419d69-bbcf-4f25-801c-44c07b9aa835",
+          "source_result_id": "4cd21beb-08d8-4b4f-8c8f-e19da3be6458",
+          "source_turn_id": "0e970658-5e37-478d-8af3-92ab58c90330",
           "expected_category_count": 90,
           "time_grain": "day"
         },
@@ -751,8 +751,8 @@
         "x_axis_unit": null,
         "y_axis_unit": null,
         "tooltip_unit": null,
-        "source_result_id": "53cd73ae-9e15-4c54-a807-5a3927d8017a",
-        "source_turn_id": "fc91e473-4e82-4e3a-9fcf-9bce7d9dd846",
+        "source_result_id": "a739bd64-144f-4be6-8788-35c6f801e2b5",
+        "source_turn_id": "853441ed-79c5-41a8-806e-0602482431c4",
         "metric": "count",
         "dimension": "loss_group"
       },
@@ -793,15 +793,15 @@
           ]
         },
         "lineage": {
-          "conversation_id": "8a250b87-63d6-4eda-b00a-f212d85da54b",
-          "turn_id": "fc91e473-4e82-4e3a-9fcf-9bce7d9dd846",
+          "conversation_id": "c04ef9c7-21f0-4ef4-80c3-3ce3ec480ba4",
+          "turn_id": "853441ed-79c5-41a8-806e-0602482431c4",
           "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-          "request_contract_id": "c6643eb5-14ee-47fc-a13e-f6f670b7f6b5",
-          "query_plan_id": "d99267b6-0187-4ed2-8a00-6d0dbbe7c038",
-          "query_result_id": "53cd73ae-9e15-4c54-a807-5a3927d8017a",
-          "answer_brief_id": "c7b740c6-6581-4980-b6d7-933bdf1046aa",
-          "chart_spec_id": "356c6f79-4024-4e7d-94bd-230c521ae0c1",
-          "report_artifact_id": "ca7df731-ff76-46fb-acfd-e49a74d98685"
+          "request_contract_id": "2b176926-759e-4e33-8f93-0699afbc2f45",
+          "query_plan_id": "baf02cc0-96f1-472f-b175-93d1e10f6db7",
+          "query_result_id": "a739bd64-144f-4be6-8788-35c6f801e2b5",
+          "answer_brief_id": "bdd39ea3-2226-4be9-89de-16624c360f3f",
+          "chart_spec_id": "cc347bc8-75e4-47d4-8c7c-b8c120ca2e5f",
+          "report_artifact_id": "cd2d3f2a-46cd-47ec-b06d-d71bce91a1e0"
         },
         "chart_contract": {
           "chart_type": "pie",
@@ -811,8 +811,8 @@
           "x_axis_unit": null,
           "y_axis_unit": null,
           "tooltip_unit": null,
-          "source_result_id": "53cd73ae-9e15-4c54-a807-5a3927d8017a",
-          "source_turn_id": "fc91e473-4e82-4e3a-9fcf-9bce7d9dd846",
+          "source_result_id": "a739bd64-144f-4be6-8788-35c6f801e2b5",
+          "source_turn_id": "853441ed-79c5-41a8-806e-0602482431c4",
           "expected_category_count": 1,
           "time_grain": null
         },
@@ -841,7 +841,7 @@
       },
       "response_type": "table",
       "title": "Phân tích theo máy",
-      "summary": "Máy 29 có tổng thời gian downtime cao nhất: 10 giờ 47 phút. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx với các bộ lọc đang hiển thị bên dưới.",
+      "summary": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx với các bộ lọc đang hiển thị bên dưới.",
       "chart": null,
       "metadata": {
         "request_contract": {
@@ -884,15 +884,15 @@
           ]
         },
         "lineage": {
-          "conversation_id": "8a250b87-63d6-4eda-b00a-f212d85da54b",
-          "turn_id": "3cd3bce5-76ed-4d84-9a24-871fc7df3318",
+          "conversation_id": "c04ef9c7-21f0-4ef4-80c3-3ce3ec480ba4",
+          "turn_id": "8487374e-0a4d-4006-9b1f-e333c9bdc6c1",
           "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-          "request_contract_id": "4ee95637-ee94-4a33-bba8-e68890fbccb0",
-          "query_plan_id": "f25f9af9-7e9c-4c3e-b79a-5a9e16af63d5",
-          "query_result_id": "e7416f58-8f0e-46db-b707-b30d45e6c3f5",
-          "answer_brief_id": "e0dda90e-1698-41b1-b1c3-e2cce7181b76",
-          "chart_spec_id": "761295ca-3c85-47b4-a4d5-e4d8e163e6a3",
-          "report_artifact_id": "836c0dc6-f1bf-4c51-bd03-909c143f4df0"
+          "request_contract_id": "5a311789-e46a-4fef-8f91-082db9e33e4c",
+          "query_plan_id": "dec18e28-9a1c-4e0b-b3be-9a98a18b691c",
+          "query_result_id": "2d1b2ec9-9810-4ff5-86f3-961dde32a0aa",
+          "answer_brief_id": "866400fe-f231-4bfd-838d-1d2d8ab6d06e",
+          "chart_spec_id": "37c733f4-eb17-40b7-a8c4-405f7a9bb740",
+          "report_artifact_id": "b120f451-0c76-4b5a-b39f-b1a9a6528a6b"
         },
         "chart_contract": {},
         "report_completeness": null,
@@ -1289,8 +1289,8 @@
         "x_axis_unit": null,
         "y_axis_unit": "giờ",
         "tooltip_unit": "giờ",
-        "source_result_id": "b0ac4171-0d0b-46ce-bc3d-6553d0591e0b",
-        "source_turn_id": "218f1c31-1a20-457e-be30-b1eb64435608",
+        "source_result_id": "e451ebcf-0399-4d4d-86e9-89d5051e578c",
+        "source_turn_id": "aea51164-1bf6-4bcb-897b-14ba24b30dfd",
         "metric": "total_downtime",
         "dimension": "date"
       },
@@ -1338,15 +1338,15 @@
           ]
         },
         "lineage": {
-          "conversation_id": "8a250b87-63d6-4eda-b00a-f212d85da54b",
-          "turn_id": "218f1c31-1a20-457e-be30-b1eb64435608",
+          "conversation_id": "c04ef9c7-21f0-4ef4-80c3-3ce3ec480ba4",
+          "turn_id": "aea51164-1bf6-4bcb-897b-14ba24b30dfd",
           "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-          "request_contract_id": "8a8d8951-6286-4a0e-b33a-3bab3cd4f8e6",
-          "query_plan_id": "ee1cdf43-66ba-4e46-af91-3c8e49722b8a",
-          "query_result_id": "b0ac4171-0d0b-46ce-bc3d-6553d0591e0b",
-          "answer_brief_id": "c832847f-3012-4d7d-abe8-55dec817a815",
-          "chart_spec_id": "41297639-68e3-40b0-8f70-147be0363169",
-          "report_artifact_id": "0474a4bd-9676-44af-8546-a3a2ad77ad5a"
+          "request_contract_id": "b9774d5e-a967-4938-ba85-a8675f6cd277",
+          "query_plan_id": "aec43fde-af2c-4308-af63-823ecb51e1bf",
+          "query_result_id": "e451ebcf-0399-4d4d-86e9-89d5051e578c",
+          "answer_brief_id": "13ea3bd2-26be-4b49-86c7-8846b0acdc86",
+          "chart_spec_id": "95cd9312-2ed2-4b3f-92aa-e19f39b5d1e1",
+          "report_artifact_id": "38e39e0f-3e19-44af-941f-d47dcc912bf4"
         },
         "chart_contract": {
           "chart_type": "line",
@@ -1356,8 +1356,8 @@
           "x_axis_unit": null,
           "y_axis_unit": "giờ",
           "tooltip_unit": "giờ",
-          "source_result_id": "b0ac4171-0d0b-46ce-bc3d-6553d0591e0b",
-          "source_turn_id": "218f1c31-1a20-457e-be30-b1eb64435608",
+          "source_result_id": "e451ebcf-0399-4d4d-86e9-89d5051e578c",
+          "source_turn_id": "aea51164-1bf6-4bcb-897b-14ba24b30dfd",
           "expected_category_count": 90,
           "time_grain": "day"
         },
@@ -1772,8 +1772,8 @@
         "x_axis_unit": null,
         "y_axis_unit": "giờ",
         "tooltip_unit": "giờ",
-        "source_result_id": "dd68a065-6de4-4b96-b44e-077fd54ac765",
-        "source_turn_id": "15b0debc-a305-4999-bdca-cee3288bedcb",
+        "source_result_id": "c5fd120e-0eec-41f7-a2d5-5f77aed5f61c",
+        "source_turn_id": "11315dc8-4ebb-4977-ab6a-a6110605d90c",
         "metric": "total_downtime",
         "dimension": "date"
       },
@@ -1825,15 +1825,15 @@
           ]
         },
         "lineage": {
-          "conversation_id": "8a250b87-63d6-4eda-b00a-f212d85da54b",
-          "turn_id": "15b0debc-a305-4999-bdca-cee3288bedcb",
+          "conversation_id": "c04ef9c7-21f0-4ef4-80c3-3ce3ec480ba4",
+          "turn_id": "11315dc8-4ebb-4977-ab6a-a6110605d90c",
           "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-          "request_contract_id": "c269edae-8001-4a93-88c4-2497c2ae5c99",
-          "query_plan_id": "e72b71b5-21f9-4206-8dd5-7f85db859c36",
-          "query_result_id": "dd68a065-6de4-4b96-b44e-077fd54ac765",
-          "answer_brief_id": "968d17c3-9302-4498-b482-a0b6da1ddfd8",
-          "chart_spec_id": "494c0f4c-3bc9-4ff2-bfa3-6840ba0e3a0d",
-          "report_artifact_id": "8d45df7d-cc84-4f5b-aaeb-4ac008317aaa"
+          "request_contract_id": "ff345e0f-4640-4583-b425-de302199e921",
+          "query_plan_id": "2ee7bf97-5f9f-48fb-b93f-c63eaee74f6b",
+          "query_result_id": "c5fd120e-0eec-41f7-a2d5-5f77aed5f61c",
+          "answer_brief_id": "22e4f275-2777-4e80-9a8a-d5d5663f794e",
+          "chart_spec_id": "b928f1e0-8fff-4b1f-9f51-25f3ed55087a",
+          "report_artifact_id": "16264afe-c633-406b-bd81-75a9b43eb766"
         },
         "chart_contract": {
           "chart_type": "line",
@@ -1843,8 +1843,8 @@
           "x_axis_unit": null,
           "y_axis_unit": "giờ",
           "tooltip_unit": "giờ",
-          "source_result_id": "dd68a065-6de4-4b96-b44e-077fd54ac765",
-          "source_turn_id": "15b0debc-a305-4999-bdca-cee3288bedcb",
+          "source_result_id": "c5fd120e-0eec-41f7-a2d5-5f77aed5f61c",
+          "source_turn_id": "11315dc8-4ebb-4977-ab6a-a6110605d90c",
           "expected_category_count": 90,
           "time_grain": "day"
         },

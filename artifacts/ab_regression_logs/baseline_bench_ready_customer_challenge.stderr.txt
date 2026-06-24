@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "D:\Gopak-baseline-919adb0\evaluation\run_customer_challenge_benchmark.py", line 243, in <module>
+    run()
+    ~~~^^
+  File "D:\Gopak-baseline-919adb0\evaluation\run_customer_challenge_benchmark.py", line 147, in run
+    cid, expected_file_id = conv_for(current_key)
+                            ~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Gopak-baseline-919adb0\evaluation\run_customer_challenge_benchmark.py", line 141, in conv_for
+    app.set_active_file(created.id, str(record["id"]))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Gopak-baseline-919adb0\src\application\chat_service.py", line 247, in set_active_file
+    record = self._validate_ready_file(file_id)
+  File "D:\Gopak-baseline-919adb0\src\application\chat_service.py", line 680, in _validate_ready_file
+    raise ValueError(str(readiness.get("message") or "File is not queryable"))
+ValueError: Catalog has no table for this uploaded file

@@ -1,0 +1,80 @@
+{
+  "summary": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "timeout": 0
+  },
+  "results": [
+    {
+      "label": "baseline",
+      "name": "row_level",
+      "cmd": "python evaluation/run_row_level_benchmark.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 21701.1,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_row_level.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_row_level.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "customer_challenge",
+      "cmd": "python evaluation/run_customer_challenge_benchmark.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 298649.9,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_customer_challenge.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_customer_challenge.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "answer_quality",
+      "cmd": "python evaluation/run_answer_quality_benchmark.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 100903.2,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_answer_quality.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_answer_quality.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "llm_invocation",
+      "cmd": "python evaluation/run_llm_invocation_benchmark.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 93688.5,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_llm_invocation.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_llm_invocation.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "open_ended",
+      "cmd": "python evaluation/run_open_ended_analysis_benchmark.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 11747.2,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_open_ended.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_open_ended.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "numeric_grounding",
+      "cmd": "python evaluation/run_numeric_grounding_benchmark.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 46252.6,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_numeric_grounding.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_numeric_grounding.stderr.txt"
+    },
+    {
+      "label": "baseline",
+      "name": "file_scoped",
+      "cmd": "python evaluation/run_file_scoped_benchmark.py",
+      "status": "passed",
+      "returncode": 0,
+      "duration_ms": 458923.0,
+      "stdout_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_file_scoped.stdout.txt",
+      "stderr_file": "D:\\Gopak Chatbot\\artifacts\\ab_regression_logs\\baseline_bench_ready2_file_scoped.stderr.txt"
+    }
+  ]
+}

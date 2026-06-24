@@ -54,6 +54,7 @@ from src.llm.ollama_client import OllamaClient
 from src.llm.planner import QueryPlanner
 from src.query.executor import SafeQueryExecutor
 from src.query.schemas import MetricSpec, QueryPlan
+from src.query_understanding.deterministic_planner import DeterministicPlanner
 from src.rendering.chart_renderer import build_chart
 from src.rendering.dashboard import kpi_cards
 from src.rendering.formatters import format_dataframe_for_display, format_duration, format_vn_number, humanize_column_name
@@ -555,6 +556,16 @@ class ChatApplicationService:
                     clarification_question="Unable to build a safe query within the selected Excel file.",
                 )
             if plan.intent not in {"clarification", "refusal", "safe_failure"}:
+                if request_contract.intent == "chart":
+                    current_coverage = coverage_for_plan(request_contract, plan)
+                    if current_coverage.missing:
+                        deterministic_repair = DeterministicPlanner(catalog, self.settings).parse(message, planning_state)
+                        if deterministic_repair.plan is not None:
+                            repair_coverage = coverage_for_plan(request_contract, deterministic_repair.plan)
+                            if not repair_coverage.missing:
+                                plan = deterministic_repair.plan
+                                metadata["deterministic_repair_applied"] = True
+                                metadata["deterministic_repair_reason"] = deterministic_repair.reason
                 coverage = coverage_for_plan(request_contract, plan)
                 metadata["request_coverage"] = coverage.model_dump()
                 if request_contract.intent in {"chart", "report"} and coverage.missing:
@@ -1856,17 +1867,26 @@ def _export_orchestrated_report(
     artifact_id: str,
     catalog: dict,
 ) -> tuple[Path, Path]:
+    from datetime import datetime, timezone
+
     reports_dir.mkdir(parents=True, exist_ok=True)
     stem = f"report_{artifact_id}"
     html_path = reports_dir / f"{stem}.html"
     xlsx_path = reports_dir / f"{stem}.xlsx"
+    generated_at = datetime.now(timezone.utc).isoformat()
+    chart_svg = _trend_svg_snapshot(trend)
     html_parts = [
         "<html><head><meta charset=\"utf-8\"><title>Gopak report</title></head><body>",
         f"<h1>{'Downtime report' if report_kind == 'downtime' else 'Overview report'}</h1>",
+        f"<p><strong>Generated:</strong> {generated_at}</p>",
         f"<p><strong>Question:</strong> {message}</p>",
         "".join(f"<p>{line}</p>" for line in summary.splitlines()),
+        "<h2>Source and filters</h2>",
+        "<p>Source: selected uploaded workbook. Filters: none unless stated in the question.</p>",
         "<h2>Section status</h2>",
         pd.DataFrame([{"section": key, **value} for key, value in sections.items()]).to_html(index=False),
+        "<h2>Chart</h2>",
+        chart_svg or "<p>No chart data available.</p>",
     ]
     for title, frame in [("Top machines", top_machines), ("Top causes", top_causes), ("Time trend", trend)]:
         html_parts.append(f"<h2>{title}</h2>")
@@ -1876,12 +1896,48 @@ def _export_orchestrated_report(
     with pd.ExcelWriter(xlsx_path) as writer:
         pd.DataFrame([{"section": key, **value} for key, value in sections.items()]).to_excel(writer, sheet_name="section_status", index=False)
         if not top_machines.empty:
-            format_dataframe_for_display(top_machines, catalog).to_excel(writer, sheet_name="top_machines", index=False)
+            _report_numeric_frame(top_machines).to_excel(writer, sheet_name="top_machines", index=False)
         if not top_causes.empty:
-            format_dataframe_for_display(top_causes, catalog).to_excel(writer, sheet_name="top_causes", index=False)
+            _report_numeric_frame(top_causes).to_excel(writer, sheet_name="top_causes", index=False)
         if not trend.empty:
-            format_dataframe_for_display(trend, catalog).to_excel(writer, sheet_name="time_trend", index=False)
+            _report_numeric_frame(trend).to_excel(writer, sheet_name="time_trend", index=False)
     return html_path, xlsx_path
+
+
+def _report_numeric_frame(df: pd.DataFrame) -> pd.DataFrame:
+    frame = df.copy()
+    for column in list(frame.columns):
+        if str(column).endswith("_duration_seconds"):
+            frame[str(column).replace("_duration_seconds", "_downtime_hours")] = pd.to_numeric(frame[column], errors="coerce") / 3600
+            frame = frame.drop(columns=[column])
+        elif str(column).endswith("_seconds"):
+            frame[str(column).replace("_seconds", "_hours")] = pd.to_numeric(frame[column], errors="coerce") / 3600
+            frame = frame.drop(columns=[column])
+    return frame
+
+
+def _trend_svg_snapshot(trend: pd.DataFrame) -> str:
+    if trend.empty or "total_duration_seconds" not in trend.columns:
+        return ""
+    values = (pd.to_numeric(trend["total_duration_seconds"], errors="coerce").fillna(0) / 3600).head(60).tolist()
+    if not values:
+        return ""
+    width, height, pad = 720, 220, 24
+    max_value = max(values) or 1
+    step = (width - pad * 2) / max(1, len(values) - 1)
+    points = []
+    for idx, value in enumerate(values):
+        x = pad + idx * step
+        y = height - pad - (float(value) / max_value) * (height - pad * 2)
+        points.append(f"{x:.1f},{y:.1f}")
+    return (
+        f'<svg role="img" aria-label="Daily downtime trend chart" width="{width}" height="{height}" '
+        'viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg">'
+        '<rect width="720" height="220" fill="#ffffff"/>'
+        '<text x="24" y="20" font-size="14">Daily downtime trend (hours)</text>'
+        f'<polyline fill="none" stroke="#7c8fd6" stroke-width="2" points="{" ".join(points)}"/>'
+        "</svg>"
+    )
 
 
 def _source_payloads(sources: list[dict]) -> list[SourcePayload]:
@@ -2165,7 +2221,7 @@ def _starts_slot_clarification(message: str) -> bool:
     q = re.sub(r"\s*#\d+\s*$", "", q).strip()
     if q in {"top", "top may", "top nguyen nhan"}:
         return True
-    chart_requested = any(term in q for term in ["bieu do", "chart", "ve "])
+    chart_requested = any(term in q for term in ["bieu do", "chart", "ve cot", "ve line", "ve chart", "ve bieu do"])
     overview_requested = any(term in q for term in ["tong quan", "overview"])
     has_grouping = any(term in q for term in ["theo", "may", "nguyen nhan", "nhom", "cong"])
     has_metric = any(term in q for term in ["downtime", "thoi gian", "thoi luong", "so lan", "dem", "count"])
@@ -2223,8 +2279,8 @@ def _requires_dataset_level_semantic(q: str) -> bool:
 
 
 def _is_open_ended_dataset_analysis(q: str) -> bool:
-    has_scope = any(term in q for term in ["toan bo du lieu", "dua tren toan bo", "file nay", "du lieu nay"])
-    has_open_ended = any(term in q for term in ["diem dang chu y", "giai thich", "so sanh", "gioi han", "ket luan", "insight", "phan tich"])
+    has_scope = any(term in q for term in ["toan bo du lieu", "dua tren toan bo", "file nay", "du lieu nay", "data nay"])
+    has_open_ended = any(term in q for term in ["diem dang chu y", "dang quan tam", "bat thuong", "giai thich", "so sanh", "gioi han", "ket luan", "insight", "phan tich"])
     explicit_table_request = bool(_extract_top_n(q)) or any(term in q for term in ["theo may", "theo nhom", "theo nguyen nhan", "bang", "bieu do"])
     return has_scope and has_open_ended and not explicit_table_request
 

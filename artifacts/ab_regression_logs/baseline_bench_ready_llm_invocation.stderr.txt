@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\Gopak-baseline-919adb0\evaluation\run_llm_invocation_benchmark.py", line 291, in <module>
+    main()
+    ~~~~^^
+  File "D:\Gopak-baseline-919adb0\evaluation\run_llm_invocation_benchmark.py", line 167, in main
+    conv = app.create_conversation(case["id"], source_file_id=str(record["id"]))
+  File "D:\Gopak-baseline-919adb0\src\application\chat_service.py", line 190, in create_conversation
+    file_record = self._validate_ready_file(source_file_id) if source_file_id else None
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "D:\Gopak-baseline-919adb0\src\application\chat_service.py", line 680, in _validate_ready_file
+    raise ValueError(str(readiness.get("message") or "File is not queryable"))
+ValueError: Catalog has no table for this uploaded file

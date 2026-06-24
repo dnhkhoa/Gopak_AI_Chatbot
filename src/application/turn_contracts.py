@@ -103,8 +103,12 @@ def build_request_contract(question: str, source_file_id: str | None, has_previo
     ranking = "top" if re.search(r"\btop\s*\d+", q) else None
     limit = _top_n(q)
     relation = _relation(q, has_previous_result, dimensions, metrics, outputs, time_grain, ranking, report_sections)
-    inherited = ["table_result"] if relation == "FOLLOW_UP_ON_PREVIOUS_RESULT" else []
-    reset = [] if inherited else ["dimension", "metric", "filter", "time_range", "chart_type", "top_n"]
+    inherited = []
+    if relation == "FOLLOW_UP_ON_PREVIOUS_RESULT":
+        inherited = ["table_result"]
+    elif relation == "REFINEMENT":
+        inherited = ["last_plan", "table_result"]
+    reset = [] if relation != "NEW_REQUEST" else ["dimension", "metric", "filter", "time_range", "chart_type", "top_n"]
     commentary = ["three_insights"] if any(term in q for term in ["ba diem", "3 diem", "nhan xet", "noi len", "giai thich"]) else []
     return RequestContract(
         relation_to_previous_turn=relation,
@@ -144,12 +148,37 @@ def _relation(
     report_sections: list[str],
 ) -> str:
     prior_ref = any(term in q for term in ["ket qua tren", "ket qua vua roi", "bang vua roi", "bang tren", "du lieu tren", "ket qua do"])
+    restore_ref = any(term in q for term in ["quay lai", "luc nay", "truoc do", "ban dau", "cau dau tien"])
     complete_new_signal = bool(dimensions or metrics or outputs or time_grain or ranking or report_sections)
+    if has_previous_result and restore_ref:
+        return "REFINEMENT"
     if prior_ref and has_previous_result and not complete_new_signal:
         return "FOLLOW_UP_ON_PREVIOUS_RESULT"
     if prior_ref and has_previous_result and any(term in q for term in ["them", "bo sung", "voi cung bo loc"]):
         return "REFINEMENT"
+    if has_previous_result and _is_context_refinement(q, dimensions, metrics, outputs, time_grain, ranking, report_sections):
+        return "REFINEMENT"
     return "NEW_REQUEST"
+
+
+def _is_context_refinement(
+    q: str,
+    dimensions: list[str],
+    metrics: list[str],
+    outputs: list[str],
+    time_grain: str | None,
+    ranking: str | None,
+    report_sections: list[str],
+) -> bool:
+    if report_sections:
+        return False
+    word_count = len(q.split())
+    has_dimension_or_metric = bool(dimensions or metrics)
+    time_only = any(term in q for term in ["chi lay thang", "thang gan nhat", "hai thang gan nhat", "ngay gan nhat", "thang dau tien"])
+    output_only = bool(outputs) and not has_dimension_or_metric and not time_grain
+    ranking_only = bool(ranking) and not has_dimension_or_metric
+    filter_only = any(term in q for term in ["chi lay", "chi giu", "loc", "tren 1 gio", "tren mot gio", "tren 30 phut"]) and not has_dimension_or_metric
+    return word_count <= 8 and (time_only or output_only or ranking_only or filter_only)
 
 
 def _contract_requirements(contract: RequestContract) -> list[str]:
@@ -190,15 +219,32 @@ def _plan_capabilities(plan: QueryPlan) -> list[str]:
 
 
 def _is_chart(q: str) -> bool:
-    return any(term in q for term in ["bieu do", "chart", "plot", "ve cot", "ve line", "ve bieu do", "ve "])
+    if _negates_chart(q):
+        return False
+    return any(term in q for term in ["bieu do", "chart", "plot", "bar", "ve cot", "ve line", "ve chart", "ve bieu do"])
 
 
 def _is_report(q: str) -> bool:
     return any(term in q for term in ["bao cao", "report", "xuat bao cao"])
 
 
+def _negates_chart(q: str) -> bool:
+    return any(
+        term in q
+        for term in [
+            "bo bieu do",
+            "bo chart",
+            "khong bieu do",
+            "khong ve bieu do",
+            "khong ve chart",
+            "khong can bieu do",
+            "khong can chart",
+        ]
+    )
+
+
 def _requests_commentary(q: str) -> bool:
-    return any(term in q for term in ["nhan xet", "noi len", "giai thich", "diem dang chu y", "quan ly"])
+    return any(term in q for term in ["nhan xet", "noi len", "giai thich", "diem dang chu y", "quan ly", "insight", "phan tich"])
 
 
 def _dimensions(q: str) -> list[str]:
@@ -239,6 +285,8 @@ def _aggregations(q: str) -> list[str]:
 def _requested_chart_type(q: str) -> str | None:
     if any(term in q for term in ["xu huong", "theo ngay", "theo thang", "qua thoi gian", "line"]):
         return "line"
+    if "top" in q or any(term in q for term in ["cao nhat", "nhieu nhat", "pho bien nhat"]):
+        return "bar"
     if any(term in q for term in ["phan bo", "ty le", "co cau", "pie", "tron"]):
         return "pie"
     if any(term in q for term in ["top", "cot", "bar"]):

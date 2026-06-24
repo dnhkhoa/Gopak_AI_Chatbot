@@ -145,7 +145,7 @@ def build_plan_from_resolved_message(catalog: dict, state: ConversationState, me
         else {"aggregation": "sum", "column": duration, "name": "total_duration_seconds"}
     )
     dimension = machine if "may" in q else loss_name if "nguyen nhan" in q or "loi" in q else loss_group if "nhom" in q else None
-    output = "bar" if "bieu do" in q or "ve" in q else "table"
+    output = "bar" if any(term in q for term in ["bieu do", "chart", "ve cot", "ve line", "ve chart", "ve bieu do"]) else "table"
     intent = "chart" if output == "bar" else "query"
     limit = _extract_int(q) or (5 if "top" in q else 20)
     if not metric["column"] and metric["aggregation"] != "count":
@@ -199,7 +199,7 @@ def _apply_topic_delta(plan: QueryPlan, catalog: dict, q: str) -> None:
         plan.metrics = [MetricSpec(aggregation="sum", column=duration, name="total_duration_seconds")]
         if plan.dimensions:
             plan.sort = [SortSpec(column="total_duration_seconds", direction="desc")]
-    if any(term in q for term in ["bieu do", "chart", "ve "]):
+    if any(term in q for term in ["bieu do", "chart", "ve cot", "ve line", "ve chart", "ve bieu do"]):
         plan.intent = "chart"
         plan.output = "bar"
 
@@ -210,7 +210,7 @@ def _pending_kind(q: str, clarification: str) -> str | None:
     text = q + " " + normalize_text(clarification)
     if q in {"top", "top may", "top nguyen nhan"} or "top bao nhieu" in text:
         return "top"
-    if "bieu do" in q or "ve" in q or "tong quan" in q:
+    if any(term in q for term in ["bieu do", "chart", "ve cot", "ve line", "ve chart", "ve bieu do", "tong quan"]):
         return "chart_overview"
     if "ban muon hoi ve tong" in text or "metric" in text:
         return "metric_dimension"
@@ -223,7 +223,7 @@ def _looks_complete(q: str) -> bool:
     has_limit = _extract_int(q) is not None or any(term in q for term in ["top", "bottom"])
     if any(term in q for term in ["top", "bottom", "dung dau", "cao nhat", "nhieu nhat"]):
         return has_metric and has_dimension and has_limit
-    if any(term in q for term in ["bieu do", "chart", "ve "]):
+    if any(term in q for term in ["bieu do", "chart", "ve cot", "ve line", "ve chart", "ve bieu do"]):
         return has_metric and has_dimension
     return False
 

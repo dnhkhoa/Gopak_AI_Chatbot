@@ -1,0 +1,4177 @@
+{
+  "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+  "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+  "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+  "turns": [
+    {
+      "turn": 1,
+      "message": "Tôi muốn xem top 5 máy theo tổng thời gian downtime.",
+      "response": {
+        "message_id": "ee09ab49-6167-480c-bc9b-6b6821e805a4",
+        "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+        "response_type": "table",
+        "title": "Phân tích theo máy",
+        "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+        "primary_value": null,
+        "secondary_value": null,
+        "table": {
+          "columns": [
+            "Máy",
+            "Tổng thời gian downtime"
+          ],
+          "rows": [
+            {
+              "Máy": "Máy 11",
+              "Tổng thời gian downtime": "413,57 giờ"
+            },
+            {
+              "Máy": "Máy 12",
+              "Tổng thời gian downtime": "323,15 giờ"
+            },
+            {
+              "Máy": "Máy 29",
+              "Tổng thời gian downtime": "294,67 giờ"
+            },
+            {
+              "Máy": "Máy 8",
+              "Tổng thời gian downtime": "229,98 giờ"
+            },
+            {
+              "Máy": "Máy 9",
+              "Tổng thời gian downtime": "185,32 giờ"
+            }
+          ]
+        },
+        "chart": null,
+        "dashboard": null,
+        "sources": [
+          {
+            "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+            "rows": 9151
+          }
+        ],
+        "filters": [],
+        "downloads": [],
+        "metadata": {
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "file_scope_validated": true
+        }
+      },
+      "checks": {
+        "response_type": true,
+        "no_stack_trace": true,
+        "public_metadata_safe": true
+      },
+      "passed": true
+    },
+    {
+      "turn": 2,
+      "message": "Kết quả trên nói lên điều gì?",
+      "response": {
+        "message_id": "b9f7121c-2756-42db-93fe-02c27a0b9102",
+        "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+        "response_type": "text",
+        "title": "Nhận xét kết quả",
+        "summary": "Nhận xét:\n- Máy 11 đứng đầu trong bảng với 413,57 giờ ở chỉ tiêu tổng thời gian downtime.\n- Máy 12 đứng thứ hai với 323,15 giờ, nên nhóm đầu bảng có chênh lệch rõ khi so với hàng kế tiếp.",
+        "primary_value": null,
+        "secondary_value": null,
+        "table": null,
+        "chart": null,
+        "dashboard": null,
+        "sources": [],
+        "filters": [],
+        "downloads": [],
+        "metadata": {
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "file_scope_validated": true
+        }
+      },
+      "checks": {
+        "response_type": true,
+        "no_stack_trace": true,
+        "public_metadata_safe": true,
+        "grounded_previous_visible_result": true,
+        "no_unrequested_month": true
+      },
+      "passed": true
+    },
+    {
+      "turn": 3,
+      "message": "Vẽ biểu đồ cột top 5 máy theo downtime.",
+      "response": {
+        "message_id": "6104227a-de7b-4253-8cd0-2f1abc8668d9",
+        "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+        "response_type": "chart",
+        "title": "Biểu đồ phân tích",
+        "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+        "primary_value": null,
+        "secondary_value": null,
+        "table": {
+          "columns": [
+            "Máy",
+            "Tổng thời gian downtime"
+          ],
+          "rows": [
+            {
+              "Máy": "Máy 11",
+              "Tổng thời gian downtime": "413,57 giờ"
+            },
+            {
+              "Máy": "Máy 12",
+              "Tổng thời gian downtime": "323,15 giờ"
+            },
+            {
+              "Máy": "Máy 29",
+              "Tổng thời gian downtime": "294,67 giờ"
+            },
+            {
+              "Máy": "Máy 8",
+              "Tổng thời gian downtime": "229,98 giờ"
+            },
+            {
+              "Máy": "Máy 9",
+              "Tổng thời gian downtime": "185,32 giờ"
+            }
+          ]
+        },
+        "chart": {
+          "type": "bar",
+          "title": "Kết quả phân tích",
+          "x_key": "Máy",
+          "y_keys": [
+            "Tổng thời gian downtime (giờ)"
+          ],
+          "data": [
+            {
+              "Máy": "Máy 11",
+              "Tổng thời gian downtime (giờ)": 413.57
+            },
+            {
+              "Máy": "Máy 12",
+              "Tổng thời gian downtime (giờ)": 323.15
+            },
+            {
+              "Máy": "Máy 29",
+              "Tổng thời gian downtime (giờ)": 294.67
+            },
+            {
+              "Máy": "Máy 8",
+              "Tổng thời gian downtime (giờ)": 229.98
+            },
+            {
+              "Máy": "Máy 9",
+              "Tổng thời gian downtime (giờ)": 185.32
+            }
+          ],
+          "x_axis_unit": null,
+          "y_axis_unit": "giờ",
+          "tooltip_unit": "giờ",
+          "source_result_id": "5d2e8837-c3c9-42f1-ad64-3773aaed268e",
+          "source_turn_id": "4f515ae3-f6f3-4e67-85a9-ebd8f95d4749",
+          "metric": "total_downtime",
+          "dimension": "machine"
+        },
+        "dashboard": null,
+        "sources": [
+          {
+            "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+            "rows": 9151
+          }
+        ],
+        "filters": [],
+        "downloads": [],
+        "metadata": {
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "file_scope_validated": true
+        }
+      },
+      "checks": {
+        "response_type": true,
+        "no_stack_trace": true,
+        "public_metadata_safe": true,
+        "chart_type": true,
+        "dimension": true,
+        "unit": true
+      },
+      "passed": true
+    },
+    {
+      "turn": 4,
+      "message": "Vẽ biểu đồ xu hướng tổng downtime theo ngày trong toàn bộ khoảng thời gian có dữ liệu, sau đó nhận xét ba điểm đáng chú ý.",
+      "response": {
+        "message_id": "87bbab1a-bde6-4d20-9c05-d1678a034779",
+        "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+        "response_type": "chart",
+        "title": "Biểu đồ phân tích",
+        "summary": "2025-11-03 00:00:00 có tổng thời gian downtime cao nhất: 12 giờ 43 phút. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.\n\nNhận xét:\nD",
+        "primary_value": null,
+        "secondary_value": null,
+        "table": {
+          "columns": [
+            "Thời gian bắt đầu",
+            "Tổng thời gian downtime"
+          ],
+          "rows": [
+            {
+              "Thời gian bắt đầu": "2025-11-03T00:00:00",
+              "Tổng thời gian downtime": "12 giờ 43 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-04T00:00:00",
+              "Tổng thời gian downtime": "15 giờ 46 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-05T00:00:00",
+              "Tổng thời gian downtime": "18 giờ 28 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-06T00:00:00",
+              "Tổng thời gian downtime": "14 giờ 14 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-07T00:00:00",
+              "Tổng thời gian downtime": "7 giờ 37 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-08T00:00:00",
+              "Tổng thời gian downtime": "4 giờ 19 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-09T00:00:00",
+              "Tổng thời gian downtime": "2 giờ 24 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-10T00:00:00",
+              "Tổng thời gian downtime": "21 giờ 58 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-11T00:00:00",
+              "Tổng thời gian downtime": "21 giờ 14 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-12T00:00:00",
+              "Tổng thời gian downtime": "26,21 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-13T00:00:00",
+              "Tổng thời gian downtime": "34,35 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-14T00:00:00",
+              "Tổng thời gian downtime": "37,90 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-15T00:00:00",
+              "Tổng thời gian downtime": "39,14 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-16T00:00:00",
+              "Tổng thời gian downtime": "15 giờ 29 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-17T00:00:00",
+              "Tổng thời gian downtime": "37,31 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-18T00:00:00",
+              "Tổng thời gian downtime": "21 giờ 40 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-19T00:00:00",
+              "Tổng thời gian downtime": "30,08 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-20T00:00:00",
+              "Tổng thời gian downtime": "41,14 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-21T00:00:00",
+              "Tổng thời gian downtime": "50,98 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-22T00:00:00",
+              "Tổng thời gian downtime": "50,14 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-23T00:00:00",
+              "Tổng thời gian downtime": "10 giờ 32 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-24T00:00:00",
+              "Tổng thời gian downtime": "34,34 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-25T00:00:00",
+              "Tổng thời gian downtime": "36,54 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-26T00:00:00",
+              "Tổng thời gian downtime": "34,37 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-27T00:00:00",
+              "Tổng thời gian downtime": "37,05 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-28T00:00:00",
+              "Tổng thời gian downtime": "41,23 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-29T00:00:00",
+              "Tổng thời gian downtime": "11 giờ 43 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-01T00:00:00",
+              "Tổng thời gian downtime": "26,13 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-02T00:00:00",
+              "Tổng thời gian downtime": "36,74 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-03T00:00:00",
+              "Tổng thời gian downtime": "28,01 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-04T00:00:00",
+              "Tổng thời gian downtime": "47,26 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-05T00:00:00",
+              "Tổng thời gian downtime": "31,83 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-06T00:00:00",
+              "Tổng thời gian downtime": "29,74 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-07T00:00:00",
+              "Tổng thời gian downtime": "5 giờ 49 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-08T00:00:00",
+              "Tổng thời gian downtime": "32,22 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-09T00:00:00",
+              "Tổng thời gian downtime": "38,05 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-10T00:00:00",
+              "Tổng thời gian downtime": "36,89 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-11T00:00:00",
+              "Tổng thời gian downtime": "32,30 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-12T00:00:00",
+              "Tổng thời gian downtime": "35,17 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-13T00:00:00",
+              "Tổng thời gian downtime": "40,58 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-14T00:00:00",
+              "Tổng thời gian downtime": "11 giờ 4 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-15T00:00:00",
+              "Tổng thời gian downtime": "29,48 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-16T00:00:00",
+              "Tổng thời gian downtime": "38,27 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-17T00:00:00",
+              "Tổng thời gian downtime": "29,95 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-18T00:00:00",
+              "Tổng thời gian downtime": "41,90 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-19T00:00:00",
+              "Tổng thời gian downtime": "25,60 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-20T00:00:00",
+              "Tổng thời gian downtime": "28,99 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-21T00:00:00",
+              "Tổng thời gian downtime": "7 giờ 42 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-22T00:00:00",
+              "Tổng thời gian downtime": "19 giờ 29 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-23T00:00:00",
+              "Tổng thời gian downtime": "32,23 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-24T00:00:00",
+              "Tổng thời gian downtime": "47,95 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-25T00:00:00",
+              "Tổng thời gian downtime": "36,20 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-26T00:00:00",
+              "Tổng thời gian downtime": "27,67 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-27T00:00:00",
+              "Tổng thời gian downtime": "4 giờ 18 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-29T00:00:00",
+              "Tổng thời gian downtime": "19 giờ 47 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-30T00:00:00",
+              "Tổng thời gian downtime": "12 giờ 26 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-31T00:00:00",
+              "Tổng thời gian downtime": "16 giờ 46 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-02T00:00:00",
+              "Tổng thời gian downtime": "5 giờ 44 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-03T00:00:00",
+              "Tổng thời gian downtime": "16 giờ 48 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-04T00:00:00",
+              "Tổng thời gian downtime": "2 giờ 32 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-05T00:00:00",
+              "Tổng thời gian downtime": "29,29 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-06T00:00:00",
+              "Tổng thời gian downtime": "36,97 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-07T00:00:00",
+              "Tổng thời gian downtime": "26,20 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-08T00:00:00",
+              "Tổng thời gian downtime": "16 giờ 41 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-09T00:00:00",
+              "Tổng thời gian downtime": "10 giờ 22 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-10T00:00:00",
+              "Tổng thời gian downtime": "23 giờ 44 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-11T00:00:00",
+              "Tổng thời gian downtime": "5 giờ 17 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-12T00:00:00",
+              "Tổng thời gian downtime": "10 giờ 7 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-13T00:00:00",
+              "Tổng thời gian downtime": "10 giờ 45 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-14T00:00:00",
+              "Tổng thời gian downtime": "11 giờ 53 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-15T00:00:00",
+              "Tổng thời gian downtime": "11 giờ 23 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-16T00:00:00",
+              "Tổng thời gian downtime": "8 giờ 34 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-17T00:00:00",
+              "Tổng thời gian downtime": "9 giờ 31 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-18T00:00:00",
+              "Tổng thời gian downtime": "2 giờ 53 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-19T00:00:00",
+              "Tổng thời gian downtime": "1 giờ 42 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-20T00:00:00",
+              "Tổng thời gian downtime": "4 giờ 28 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-21T00:00:00",
+              "Tổng thời gian downtime": "15 giờ 38 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-22T00:00:00",
+              "Tổng thời gian downtime": "21 giờ 20 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-23T00:00:00",
+              "Tổng thời gian downtime": "23 giờ 58 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-24T00:00:00",
+              "Tổng thời gian downtime": "12 giờ 37 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-25T00:00:00",
+              "Tổng thời gian downtime": "1 giờ 3 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-26T00:00:00",
+              "Tổng thời gian downtime": "11 giờ 13 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-27T00:00:00",
+              "Tổng thời gian downtime": "21 giờ 44 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-28T00:00:00",
+              "Tổng thời gian downtime": "32,23 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-29T00:00:00",
+              "Tổng thời gian downtime": "3 giờ 11 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-30T00:00:00",
+              "Tổng thời gian downtime": "5 giờ 34 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-31T00:00:00",
+              "Tổng thời gian downtime": "16 giờ"
+            },
+            {
+              "Thời gian bắt đầu": "2026-02-01T00:00:00",
+              "Tổng thời gian downtime": "2 giờ 24 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-02-02T00:00:00",
+              "Tổng thời gian downtime": "15 giờ 33 phút"
+            },
+            {
+              "Thời gian bắt đầu": "2026-02-03T00:00:00",
+              "Tổng thời gian downtime": "2 giờ 21 phút"
+            }
+          ]
+        },
+        "chart": {
+          "type": "line",
+          "title": "Kết quả phân tích",
+          "x_key": "Thời gian bắt đầu",
+          "y_keys": [
+            "Tổng thời gian downtime (giờ)"
+          ],
+          "data": [
+            {
+              "Thời gian bắt đầu": "2025-11-03T00:00:00",
+              "Tổng thời gian downtime (giờ)": 12.72
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-04T00:00:00",
+              "Tổng thời gian downtime (giờ)": 15.77
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-05T00:00:00",
+              "Tổng thời gian downtime (giờ)": 18.48
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-06T00:00:00",
+              "Tổng thời gian downtime (giờ)": 14.25
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-07T00:00:00",
+              "Tổng thời gian downtime (giờ)": 7.62
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-08T00:00:00",
+              "Tổng thời gian downtime (giờ)": 4.33
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-09T00:00:00",
+              "Tổng thời gian downtime (giờ)": 2.41
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-10T00:00:00",
+              "Tổng thời gian downtime (giờ)": 21.97
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-11T00:00:00",
+              "Tổng thời gian downtime (giờ)": 21.24
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-12T00:00:00",
+              "Tổng thời gian downtime (giờ)": 26.21
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-13T00:00:00",
+              "Tổng thời gian downtime (giờ)": 34.35
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-14T00:00:00",
+              "Tổng thời gian downtime (giờ)": 37.9
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-15T00:00:00",
+              "Tổng thời gian downtime (giờ)": 39.14
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-16T00:00:00",
+              "Tổng thời gian downtime (giờ)": 15.49
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-17T00:00:00",
+              "Tổng thời gian downtime (giờ)": 37.31
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-18T00:00:00",
+              "Tổng thời gian downtime (giờ)": 21.68
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-19T00:00:00",
+              "Tổng thời gian downtime (giờ)": 30.08
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-20T00:00:00",
+              "Tổng thời gian downtime (giờ)": 41.14
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-21T00:00:00",
+              "Tổng thời gian downtime (giờ)": 50.98
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-22T00:00:00",
+              "Tổng thời gian downtime (giờ)": 50.14
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-23T00:00:00",
+              "Tổng thời gian downtime (giờ)": 10.55
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-24T00:00:00",
+              "Tổng thời gian downtime (giờ)": 34.34
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-25T00:00:00",
+              "Tổng thời gian downtime (giờ)": 36.54
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-26T00:00:00",
+              "Tổng thời gian downtime (giờ)": 34.37
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-27T00:00:00",
+              "Tổng thời gian downtime (giờ)": 37.05
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-28T00:00:00",
+              "Tổng thời gian downtime (giờ)": 41.23
+            },
+            {
+              "Thời gian bắt đầu": "2025-11-29T00:00:00",
+              "Tổng thời gian downtime (giờ)": 11.73
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-01T00:00:00",
+              "Tổng thời gian downtime (giờ)": 26.13
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-02T00:00:00",
+              "Tổng thời gian downtime (giờ)": 36.74
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-03T00:00:00",
+              "Tổng thời gian downtime (giờ)": 28.01
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-04T00:00:00",
+              "Tổng thời gian downtime (giờ)": 47.26
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-05T00:00:00",
+              "Tổng thời gian downtime (giờ)": 31.83
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-06T00:00:00",
+              "Tổng thời gian downtime (giờ)": 29.74
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-07T00:00:00",
+              "Tổng thời gian downtime (giờ)": 5.82
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-08T00:00:00",
+              "Tổng thời gian downtime (giờ)": 32.22
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-09T00:00:00",
+              "Tổng thời gian downtime (giờ)": 38.05
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-10T00:00:00",
+              "Tổng thời gian downtime (giờ)": 36.89
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-11T00:00:00",
+              "Tổng thời gian downtime (giờ)": 32.3
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-12T00:00:00",
+              "Tổng thời gian downtime (giờ)": 35.17
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-13T00:00:00",
+              "Tổng thời gian downtime (giờ)": 40.58
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-14T00:00:00",
+              "Tổng thời gian downtime (giờ)": 11.08
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-15T00:00:00",
+              "Tổng thời gian downtime (giờ)": 29.48
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-16T00:00:00",
+              "Tổng thời gian downtime (giờ)": 38.28
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-17T00:00:00",
+              "Tổng thời gian downtime (giờ)": 29.95
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-18T00:00:00",
+              "Tổng thời gian downtime (giờ)": 41.9
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-19T00:00:00",
+              "Tổng thời gian downtime (giờ)": 25.6
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-20T00:00:00",
+              "Tổng thời gian downtime (giờ)": 28.99
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-21T00:00:00",
+              "Tổng thời gian downtime (giờ)": 7.7
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-22T00:00:00",
+              "Tổng thời gian downtime (giờ)": 19.49
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-23T00:00:00",
+              "Tổng thời gian downtime (giờ)": 32.23
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-24T00:00:00",
+              "Tổng thời gian downtime (giờ)": 47.95
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-25T00:00:00",
+              "Tổng thời gian downtime (giờ)": 36.2
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-26T00:00:00",
+              "Tổng thời gian downtime (giờ)": 27.67
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-27T00:00:00",
+              "Tổng thời gian downtime (giờ)": 4.3
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-29T00:00:00",
+              "Tổng thời gian downtime (giờ)": 19.79
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-30T00:00:00",
+              "Tổng thời gian downtime (giờ)": 12.44
+            },
+            {
+              "Thời gian bắt đầu": "2025-12-31T00:00:00",
+              "Tổng thời gian downtime (giờ)": 16.78
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-02T00:00:00",
+              "Tổng thời gian downtime (giờ)": 5.74
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-03T00:00:00",
+              "Tổng thời gian downtime (giờ)": 16.81
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-04T00:00:00",
+              "Tổng thời gian downtime (giờ)": 2.54
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-05T00:00:00",
+              "Tổng thời gian downtime (giờ)": 29.29
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-06T00:00:00",
+              "Tổng thời gian downtime (giờ)": 36.97
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-07T00:00:00",
+              "Tổng thời gian downtime (giờ)": 26.2
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-08T00:00:00",
+              "Tổng thời gian downtime (giờ)": 16.69
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-09T00:00:00",
+              "Tổng thời gian downtime (giờ)": 10.37
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-10T00:00:00",
+              "Tổng thời gian downtime (giờ)": 23.73
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-11T00:00:00",
+              "Tổng thời gian downtime (giờ)": 5.3
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-12T00:00:00",
+              "Tổng thời gian downtime (giờ)": 10.12
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-13T00:00:00",
+              "Tổng thời gian downtime (giờ)": 10.75
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-14T00:00:00",
+              "Tổng thời gian downtime (giờ)": 11.89
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-15T00:00:00",
+              "Tổng thời gian downtime (giờ)": 11.4
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-16T00:00:00",
+              "Tổng thời gian downtime (giờ)": 8.57
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-17T00:00:00",
+              "Tổng thời gian downtime (giờ)": 9.52
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-18T00:00:00",
+              "Tổng thời gian downtime (giờ)": 2.89
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-19T00:00:00",
+              "Tổng thời gian downtime (giờ)": 1.71
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-20T00:00:00",
+              "Tổng thời gian downtime (giờ)": 4.47
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-21T00:00:00",
+              "Tổng thời gian downtime (giờ)": 15.64
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-22T00:00:00",
+              "Tổng thời gian downtime (giờ)": 21.33
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-23T00:00:00",
+              "Tổng thời gian downtime (giờ)": 23.98
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-24T00:00:00",
+              "Tổng thời gian downtime (giờ)": 12.63
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-25T00:00:00",
+              "Tổng thời gian downtime (giờ)": 1.07
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-26T00:00:00",
+              "Tổng thời gian downtime (giờ)": 11.23
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-27T00:00:00",
+              "Tổng thời gian downtime (giờ)": 21.75
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-28T00:00:00",
+              "Tổng thời gian downtime (giờ)": 32.23
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-29T00:00:00",
+              "Tổng thời gian downtime (giờ)": 3.2
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-30T00:00:00",
+              "Tổng thời gian downtime (giờ)": 5.57
+            },
+            {
+              "Thời gian bắt đầu": "2026-01-31T00:00:00",
+              "Tổng thời gian downtime (giờ)": 16.01
+            },
+            {
+              "Thời gian bắt đầu": "2026-02-01T00:00:00",
+              "Tổng thời gian downtime (giờ)": 2.41
+            },
+            {
+              "Thời gian bắt đầu": "2026-02-02T00:00:00",
+              "Tổng thời gian downtime (giờ)": 15.57
+            },
+            {
+              "Thời gian bắt đầu": "2026-02-03T00:00:00",
+              "Tổng thời gian downtime (giờ)": 2.35
+            }
+          ],
+          "x_axis_unit": null,
+          "y_axis_unit": "giờ",
+          "tooltip_unit": "giờ",
+          "source_result_id": "36b12ff0-73e9-48ad-9bc9-9b4dd6fbf02d",
+          "source_turn_id": "8927ca72-fbd3-4e90-9b12-9d706adad641",
+          "metric": "total_downtime",
+          "dimension": "date"
+        },
+        "dashboard": null,
+        "sources": [
+          {
+            "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+            "rows": 9151
+          }
+        ],
+        "filters": [],
+        "downloads": [],
+        "metadata": {
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "file_scope_validated": true
+        }
+      },
+      "checks": {
+        "response_type": true,
+        "no_stack_trace": true,
+        "public_metadata_safe": true,
+        "chart_type": true,
+        "dimension": true,
+        "unit": true
+      },
+      "passed": true
+    },
+    {
+      "turn": 5,
+      "message": "Cho tôi phân bố số lần ghi nhận theo nhóm tổn thất, thêm tỷ lệ phần trăm và vẽ biểu đồ phù hợp.",
+      "response": {
+        "message_id": "3cdfd9c8-19a1-4d4f-9ea5-e23c945c5379",
+        "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+        "response_type": "chart",
+        "title": "Biểu đồ phân tích",
+        "summary": "Bảo trì có số lần ghi nhận cao nhất: 9.151. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+        "primary_value": null,
+        "secondary_value": null,
+        "table": {
+          "columns": [
+            "Nhóm tổn thất",
+            "Số lần ghi nhận",
+            "Tỷ lệ"
+          ],
+          "rows": [
+            {
+              "Nhóm tổn thất": "Bảo trì",
+              "Số lần ghi nhận": "9.151",
+              "Tỷ lệ": "100%"
+            }
+          ]
+        },
+        "chart": {
+          "type": "pie",
+          "title": "Kết quả phân tích",
+          "x_key": "Nhóm tổn thất",
+          "y_keys": [
+            "Số lần ghi nhận"
+          ],
+          "data": [
+            {
+              "Nhóm tổn thất": "Bảo trì",
+              "Số lần ghi nhận": 9151
+            }
+          ],
+          "x_axis_unit": null,
+          "y_axis_unit": null,
+          "tooltip_unit": null,
+          "source_result_id": "9ca49d8d-dd99-46d7-bd90-b16bde6dbeb3",
+          "source_turn_id": "f6514b31-3118-4281-9902-396915c9155b",
+          "metric": "count",
+          "dimension": "loss_group"
+        },
+        "dashboard": null,
+        "sources": [
+          {
+            "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+            "rows": 9151
+          }
+        ],
+        "filters": [],
+        "downloads": [],
+        "metadata": {
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "file_scope_validated": true
+        }
+      },
+      "checks": {
+        "response_type": true,
+        "no_stack_trace": true,
+        "public_metadata_safe": true,
+        "chart_type": true,
+        "dimension": true
+      },
+      "passed": true
+    },
+    {
+      "turn": 6,
+      "message": "Trong tháng gần nhất, tìm top 5 máy có tổng downtime cao nhất, thêm số lần dừng, thời lượng trung bình, tỷ trọng trên tổng downtime và vẽ biểu đồ.",
+      "response": {
+        "message_id": "a89eac97-96de-45b1-ac69-7d5c8df8d04f",
+        "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+        "response_type": "chart",
+        "title": "Biểu đồ phân tích",
+        "summary": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx với các bộ lọc đang hiển thị bên dưới.",
+        "primary_value": null,
+        "secondary_value": null,
+        "table": {
+          "columns": [
+            "Máy",
+            "Tổng thời gian downtime",
+            "Số lần ghi nhận",
+            "Thời gian downtime trung bình",
+            "Tỷ lệ"
+          ],
+          "rows": [
+            {
+              "Máy": "Máy 29",
+              "Tổng thời gian downtime": "7 giờ 42 phút",
+              "Số lần ghi nhận": "48",
+              "Thời gian downtime trung bình": "9 phút 38 giây",
+              "Tỷ lệ": "37,93%"
+            },
+            {
+              "Máy": "Máy 30",
+              "Tổng thời gian downtime": "7 giờ 22 phút",
+              "Số lần ghi nhận": "5",
+              "Thời gian downtime trung bình": "1 giờ 28 phút",
+              "Tỷ lệ": "36,24%"
+            },
+            {
+              "Máy": "Máy 11",
+              "Tổng thời gian downtime": "5 giờ 6 phút",
+              "Số lần ghi nhận": "19",
+              "Thời gian downtime trung bình": "16 phút 7 giây",
+              "Tỷ lệ": "25,1%"
+            },
+            {
+              "Máy": "Máy 3A",
+              "Tổng thời gian downtime": "9 phút",
+              "Số lần ghi nhận": "4",
+              "Thời gian downtime trung bình": "2 phút 15 giây",
+              "Tỷ lệ": "0,74%"
+            }
+          ]
+        },
+        "chart": {
+          "type": "bar",
+          "title": "Kết quả phân tích",
+          "x_key": "Máy",
+          "y_keys": [
+            "Tổng thời gian downtime (giờ)"
+          ],
+          "data": [
+            {
+              "Máy": "Máy 29",
+              "Tổng thời gian downtime (giờ)": 7.71
+            },
+            {
+              "Máy": "Máy 30",
+              "Tổng thời gian downtime (giờ)": 7.37
+            },
+            {
+              "Máy": "Máy 11",
+              "Tổng thời gian downtime (giờ)": 5.1
+            },
+            {
+              "Máy": "Máy 3A",
+              "Tổng thời gian downtime (giờ)": 0.15
+            }
+          ],
+          "x_axis_unit": null,
+          "y_axis_unit": "giờ",
+          "tooltip_unit": "giờ",
+          "source_result_id": "6809202a-3ad2-4e5c-a930-3c0566af976a",
+          "source_turn_id": "d18bb293-9a44-4ad0-af36-3253e6896d0e",
+          "metric": "total_downtime",
+          "dimension": "machine"
+        },
+        "dashboard": null,
+        "sources": [
+          {
+            "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+            "rows": 9151
+          }
+        ],
+        "filters": [
+          {
+            "label": "Thời gian bắt đầu",
+            "operator": "date_between",
+            "value": [
+              "2026-02-01",
+              "2026-03-01"
+            ]
+          }
+        ],
+        "downloads": [],
+        "metadata": {
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "file_scope_validated": true
+        }
+      },
+      "checks": {
+        "response_type": true,
+        "no_stack_trace": true,
+        "public_metadata_safe": true,
+        "chart_type": true,
+        "dimension": true
+      },
+      "passed": true
+    },
+    {
+      "turn": 7,
+      "message": "Tạo báo cáo tổng quan cho toàn bộ file này gồm mô tả dữ liệu, số bản ghi, khoảng thời gian, ba điểm đáng chú ý, bảng top 5 đối tượng chính, một biểu đồ phù hợp, nguồn dữ liệu và giới hạn của kết luận.",
+      "response": {
+        "message_id": "0dce2f2f-2589-4dcf-a25c-a47175243cfe",
+        "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+        "response_type": "report",
+        "title": "Báo cáo tổng quan",
+        "summary": "Báo cáo đã tổng hợp 9151 dòng dữ liệu trong giai đoạn 2025-11-03 đến 2026-02-03.\nTổng downtime là 1.989,56 giờ.\nMáy đứng đầu theo downtime là Máy 11 với 413,57 giờ.\nReport includes overview, KPI, ranked tables, time trend, source and limitation sections.",
+        "primary_value": null,
+        "secondary_value": null,
+        "table": {
+          "columns": [
+            "Máy",
+            "Tổng thời gian downtime",
+            "Số lần ghi nhận",
+            "Thời gian downtime trung bình"
+          ],
+          "rows": [
+            {
+              "Máy": "Máy 11",
+              "Tổng thời gian downtime": "413,57 giờ",
+              "Số lần ghi nhận": "1.469",
+              "Thời gian downtime trung bình": "16 phút 54 giây"
+            },
+            {
+              "Máy": "Máy 12",
+              "Tổng thời gian downtime": "323,15 giờ",
+              "Số lần ghi nhận": "1.654",
+              "Thời gian downtime trung bình": "11 phút 43 giây"
+            },
+            {
+              "Máy": "Máy 29",
+              "Tổng thời gian downtime": "294,67 giờ",
+              "Số lần ghi nhận": "1.603",
+              "Thời gian downtime trung bình": "11 phút 2 giây"
+            },
+            {
+              "Máy": "Máy 8",
+              "Tổng thời gian downtime": "229,98 giờ",
+              "Số lần ghi nhận": "653",
+              "Thời gian downtime trung bình": "21 phút 8 giây"
+            },
+            {
+              "Máy": "Máy 9",
+              "Tổng thời gian downtime": "185,32 giờ",
+              "Số lần ghi nhận": "821",
+              "Thời gian downtime trung bình": "13 phút 33 giây"
+            }
+          ]
+        },
+        "chart": {
+          "type": "line",
+          "title": "Kết quả phân tích",
+          "x_key": "Report date",
+          "y_keys": [
+            "Tổng thời gian downtime (giờ)"
+          ],
+          "data": [
+            {
+              "Report date": "2025-11-03",
+              "Tổng thời gian downtime (giờ)": 12.72
+            },
+            {
+              "Report date": "2025-11-04",
+              "Tổng thời gian downtime (giờ)": 15.77
+            },
+            {
+              "Report date": "2025-11-05",
+              "Tổng thời gian downtime (giờ)": 18.48
+            },
+            {
+              "Report date": "2025-11-06",
+              "Tổng thời gian downtime (giờ)": 14.25
+            },
+            {
+              "Report date": "2025-11-07",
+              "Tổng thời gian downtime (giờ)": 7.62
+            },
+            {
+              "Report date": "2025-11-08",
+              "Tổng thời gian downtime (giờ)": 4.33
+            },
+            {
+              "Report date": "2025-11-09",
+              "Tổng thời gian downtime (giờ)": 2.41
+            },
+            {
+              "Report date": "2025-11-10",
+              "Tổng thời gian downtime (giờ)": 21.97
+            },
+            {
+              "Report date": "2025-11-11",
+              "Tổng thời gian downtime (giờ)": 21.24
+            },
+            {
+              "Report date": "2025-11-12",
+              "Tổng thời gian downtime (giờ)": 26.21
+            },
+            {
+              "Report date": "2025-11-13",
+              "Tổng thời gian downtime (giờ)": 34.35
+            },
+            {
+              "Report date": "2025-11-14",
+              "Tổng thời gian downtime (giờ)": 37.9
+            },
+            {
+              "Report date": "2025-11-15",
+              "Tổng thời gian downtime (giờ)": 39.14
+            },
+            {
+              "Report date": "2025-11-16",
+              "Tổng thời gian downtime (giờ)": 15.49
+            },
+            {
+              "Report date": "2025-11-17",
+              "Tổng thời gian downtime (giờ)": 37.31
+            },
+            {
+              "Report date": "2025-11-18",
+              "Tổng thời gian downtime (giờ)": 21.68
+            },
+            {
+              "Report date": "2025-11-19",
+              "Tổng thời gian downtime (giờ)": 30.08
+            },
+            {
+              "Report date": "2025-11-20",
+              "Tổng thời gian downtime (giờ)": 41.14
+            },
+            {
+              "Report date": "2025-11-21",
+              "Tổng thời gian downtime (giờ)": 50.98
+            },
+            {
+              "Report date": "2025-11-22",
+              "Tổng thời gian downtime (giờ)": 50.14
+            },
+            {
+              "Report date": "2025-11-23",
+              "Tổng thời gian downtime (giờ)": 10.55
+            },
+            {
+              "Report date": "2025-11-24",
+              "Tổng thời gian downtime (giờ)": 34.34
+            },
+            {
+              "Report date": "2025-11-25",
+              "Tổng thời gian downtime (giờ)": 36.54
+            },
+            {
+              "Report date": "2025-11-26",
+              "Tổng thời gian downtime (giờ)": 34.37
+            },
+            {
+              "Report date": "2025-11-27",
+              "Tổng thời gian downtime (giờ)": 37.05
+            },
+            {
+              "Report date": "2025-11-28",
+              "Tổng thời gian downtime (giờ)": 41.23
+            },
+            {
+              "Report date": "2025-11-29",
+              "Tổng thời gian downtime (giờ)": 11.73
+            },
+            {
+              "Report date": "2025-12-01",
+              "Tổng thời gian downtime (giờ)": 26.13
+            },
+            {
+              "Report date": "2025-12-02",
+              "Tổng thời gian downtime (giờ)": 36.74
+            },
+            {
+              "Report date": "2025-12-03",
+              "Tổng thời gian downtime (giờ)": 28.01
+            },
+            {
+              "Report date": "2025-12-04",
+              "Tổng thời gian downtime (giờ)": 47.26
+            },
+            {
+              "Report date": "2025-12-05",
+              "Tổng thời gian downtime (giờ)": 31.83
+            },
+            {
+              "Report date": "2025-12-06",
+              "Tổng thời gian downtime (giờ)": 29.74
+            },
+            {
+              "Report date": "2025-12-07",
+              "Tổng thời gian downtime (giờ)": 5.82
+            },
+            {
+              "Report date": "2025-12-08",
+              "Tổng thời gian downtime (giờ)": 32.22
+            },
+            {
+              "Report date": "2025-12-09",
+              "Tổng thời gian downtime (giờ)": 38.05
+            },
+            {
+              "Report date": "2025-12-10",
+              "Tổng thời gian downtime (giờ)": 36.89
+            },
+            {
+              "Report date": "2025-12-11",
+              "Tổng thời gian downtime (giờ)": 32.3
+            },
+            {
+              "Report date": "2025-12-12",
+              "Tổng thời gian downtime (giờ)": 35.17
+            },
+            {
+              "Report date": "2025-12-13",
+              "Tổng thời gian downtime (giờ)": 40.58
+            },
+            {
+              "Report date": "2025-12-14",
+              "Tổng thời gian downtime (giờ)": 11.08
+            },
+            {
+              "Report date": "2025-12-15",
+              "Tổng thời gian downtime (giờ)": 29.48
+            },
+            {
+              "Report date": "2025-12-16",
+              "Tổng thời gian downtime (giờ)": 38.28
+            },
+            {
+              "Report date": "2025-12-17",
+              "Tổng thời gian downtime (giờ)": 29.95
+            },
+            {
+              "Report date": "2025-12-18",
+              "Tổng thời gian downtime (giờ)": 41.9
+            },
+            {
+              "Report date": "2025-12-19",
+              "Tổng thời gian downtime (giờ)": 25.6
+            },
+            {
+              "Report date": "2025-12-20",
+              "Tổng thời gian downtime (giờ)": 28.99
+            },
+            {
+              "Report date": "2025-12-21",
+              "Tổng thời gian downtime (giờ)": 7.7
+            },
+            {
+              "Report date": "2025-12-22",
+              "Tổng thời gian downtime (giờ)": 19.49
+            },
+            {
+              "Report date": "2025-12-23",
+              "Tổng thời gian downtime (giờ)": 32.23
+            },
+            {
+              "Report date": "2025-12-24",
+              "Tổng thời gian downtime (giờ)": 47.95
+            },
+            {
+              "Report date": "2025-12-25",
+              "Tổng thời gian downtime (giờ)": 36.2
+            },
+            {
+              "Report date": "2025-12-26",
+              "Tổng thời gian downtime (giờ)": 27.67
+            },
+            {
+              "Report date": "2025-12-27",
+              "Tổng thời gian downtime (giờ)": 4.3
+            },
+            {
+              "Report date": "2025-12-29",
+              "Tổng thời gian downtime (giờ)": 19.79
+            },
+            {
+              "Report date": "2025-12-30",
+              "Tổng thời gian downtime (giờ)": 12.44
+            },
+            {
+              "Report date": "2025-12-31",
+              "Tổng thời gian downtime (giờ)": 16.78
+            },
+            {
+              "Report date": "2026-01-02",
+              "Tổng thời gian downtime (giờ)": 5.74
+            },
+            {
+              "Report date": "2026-01-03",
+              "Tổng thời gian downtime (giờ)": 16.81
+            },
+            {
+              "Report date": "2026-01-04",
+              "Tổng thời gian downtime (giờ)": 2.54
+            },
+            {
+              "Report date": "2026-01-05",
+              "Tổng thời gian downtime (giờ)": 29.29
+            },
+            {
+              "Report date": "2026-01-06",
+              "Tổng thời gian downtime (giờ)": 36.97
+            },
+            {
+              "Report date": "2026-01-07",
+              "Tổng thời gian downtime (giờ)": 26.2
+            },
+            {
+              "Report date": "2026-01-08",
+              "Tổng thời gian downtime (giờ)": 16.69
+            },
+            {
+              "Report date": "2026-01-09",
+              "Tổng thời gian downtime (giờ)": 10.37
+            },
+            {
+              "Report date": "2026-01-10",
+              "Tổng thời gian downtime (giờ)": 23.73
+            },
+            {
+              "Report date": "2026-01-11",
+              "Tổng thời gian downtime (giờ)": 5.3
+            },
+            {
+              "Report date": "2026-01-12",
+              "Tổng thời gian downtime (giờ)": 10.12
+            },
+            {
+              "Report date": "2026-01-13",
+              "Tổng thời gian downtime (giờ)": 10.75
+            },
+            {
+              "Report date": "2026-01-14",
+              "Tổng thời gian downtime (giờ)": 11.89
+            },
+            {
+              "Report date": "2026-01-15",
+              "Tổng thời gian downtime (giờ)": 11.4
+            },
+            {
+              "Report date": "2026-01-16",
+              "Tổng thời gian downtime (giờ)": 8.57
+            },
+            {
+              "Report date": "2026-01-17",
+              "Tổng thời gian downtime (giờ)": 9.52
+            },
+            {
+              "Report date": "2026-01-18",
+              "Tổng thời gian downtime (giờ)": 2.89
+            },
+            {
+              "Report date": "2026-01-19",
+              "Tổng thời gian downtime (giờ)": 1.71
+            },
+            {
+              "Report date": "2026-01-20",
+              "Tổng thời gian downtime (giờ)": 4.47
+            },
+            {
+              "Report date": "2026-01-21",
+              "Tổng thời gian downtime (giờ)": 15.64
+            },
+            {
+              "Report date": "2026-01-22",
+              "Tổng thời gian downtime (giờ)": 21.33
+            },
+            {
+              "Report date": "2026-01-23",
+              "Tổng thời gian downtime (giờ)": 23.98
+            },
+            {
+              "Report date": "2026-01-24",
+              "Tổng thời gian downtime (giờ)": 12.63
+            },
+            {
+              "Report date": "2026-01-25",
+              "Tổng thời gian downtime (giờ)": 1.07
+            },
+            {
+              "Report date": "2026-01-26",
+              "Tổng thời gian downtime (giờ)": 11.23
+            },
+            {
+              "Report date": "2026-01-27",
+              "Tổng thời gian downtime (giờ)": 21.75
+            },
+            {
+              "Report date": "2026-01-28",
+              "Tổng thời gian downtime (giờ)": 32.23
+            },
+            {
+              "Report date": "2026-01-29",
+              "Tổng thời gian downtime (giờ)": 3.2
+            },
+            {
+              "Report date": "2026-01-30",
+              "Tổng thời gian downtime (giờ)": 5.57
+            },
+            {
+              "Report date": "2026-01-31",
+              "Tổng thời gian downtime (giờ)": 16.01
+            },
+            {
+              "Report date": "2026-02-01",
+              "Tổng thời gian downtime (giờ)": 2.41
+            },
+            {
+              "Report date": "2026-02-02",
+              "Tổng thời gian downtime (giờ)": 15.57
+            },
+            {
+              "Report date": "2026-02-03",
+              "Tổng thời gian downtime (giờ)": 2.35
+            }
+          ],
+          "x_axis_unit": null,
+          "y_axis_unit": "giờ",
+          "tooltip_unit": "giờ",
+          "source_result_id": "654feda7-d4e8-4e23-8a2f-53cc145858b3",
+          "source_turn_id": "72877740-c0e4-48a6-8852-8b8e53d6c290",
+          "metric": "total_downtime",
+          "dimension": "date"
+        },
+        "dashboard": null,
+        "sources": [
+          {
+            "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+            "rows": 9151
+          }
+        ],
+        "filters": [],
+        "downloads": [
+          {
+            "id": "report_fd90bde9-0ad7-4050-9131-7c3b9416b7f4.html",
+            "label": "Tải HTML",
+            "filename": "report_fd90bde9-0ad7-4050-9131-7c3b9416b7f4.html",
+            "mime_type": "text/html"
+          },
+          {
+            "id": "report_fd90bde9-0ad7-4050-9131-7c3b9416b7f4.xlsx",
+            "label": "Tải Excel",
+            "filename": "report_fd90bde9-0ad7-4050-9131-7c3b9416b7f4.xlsx",
+            "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          }
+        ],
+        "metadata": {
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "file_scope_validated": true
+        }
+      },
+      "checks": {
+        "response_type": true,
+        "no_stack_trace": true,
+        "public_metadata_safe": true,
+        "downloads": true,
+        "has_report_table": true,
+        "has_report_chart": true
+      },
+      "passed": true
+    },
+    {
+      "turn": 8,
+      "message": "Tạo báo cáo phân tích downtime gồm tổng downtime, tổng số lần dừng, top 5 máy, top 5 nguyên nhân, xu hướng theo thời gian và nhận xét quản lý.",
+      "response": {
+        "message_id": "f107e9a3-3a4a-4524-932d-a948130110bf",
+        "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+        "response_type": "report",
+        "title": "Báo cáo phân tích downtime",
+        "summary": "Báo cáo đã tổng hợp 9151 dòng dữ liệu trong giai đoạn 2025-11-03 đến 2026-02-03.\nTổng downtime là 1.989,56 giờ.\nMáy đứng đầu theo downtime là Máy 11 với 413,57 giờ.\nNguyên nhân tổn thất lớn nhất là MÁY LỖI PHẦN CƠ với 563,32 giờ.\nReport includes overview, KPI, ranked tables, time trend, source and limitation sections.",
+        "primary_value": null,
+        "secondary_value": null,
+        "table": {
+          "columns": [
+            "Máy",
+            "Tổng thời gian downtime",
+            "Số lần ghi nhận",
+            "Thời gian downtime trung bình"
+          ],
+          "rows": [
+            {
+              "Máy": "Máy 11",
+              "Tổng thời gian downtime": "413,57 giờ",
+              "Số lần ghi nhận": "1.469",
+              "Thời gian downtime trung bình": "16 phút 54 giây"
+            },
+            {
+              "Máy": "Máy 12",
+              "Tổng thời gian downtime": "323,15 giờ",
+              "Số lần ghi nhận": "1.654",
+              "Thời gian downtime trung bình": "11 phút 43 giây"
+            },
+            {
+              "Máy": "Máy 29",
+              "Tổng thời gian downtime": "294,67 giờ",
+              "Số lần ghi nhận": "1.603",
+              "Thời gian downtime trung bình": "11 phút 2 giây"
+            },
+            {
+              "Máy": "Máy 8",
+              "Tổng thời gian downtime": "229,98 giờ",
+              "Số lần ghi nhận": "653",
+              "Thời gian downtime trung bình": "21 phút 8 giây"
+            },
+            {
+              "Máy": "Máy 9",
+              "Tổng thời gian downtime": "185,32 giờ",
+              "Số lần ghi nhận": "821",
+              "Thời gian downtime trung bình": "13 phút 33 giây"
+            }
+          ]
+        },
+        "chart": {
+          "type": "line",
+          "title": "Kết quả phân tích",
+          "x_key": "Report date",
+          "y_keys": [
+            "Tổng thời gian downtime (giờ)"
+          ],
+          "data": [
+            {
+              "Report date": "2025-11-03",
+              "Tổng thời gian downtime (giờ)": 12.72
+            },
+            {
+              "Report date": "2025-11-04",
+              "Tổng thời gian downtime (giờ)": 15.77
+            },
+            {
+              "Report date": "2025-11-05",
+              "Tổng thời gian downtime (giờ)": 18.48
+            },
+            {
+              "Report date": "2025-11-06",
+              "Tổng thời gian downtime (giờ)": 14.25
+            },
+            {
+              "Report date": "2025-11-07",
+              "Tổng thời gian downtime (giờ)": 7.62
+            },
+            {
+              "Report date": "2025-11-08",
+              "Tổng thời gian downtime (giờ)": 4.33
+            },
+            {
+              "Report date": "2025-11-09",
+              "Tổng thời gian downtime (giờ)": 2.41
+            },
+            {
+              "Report date": "2025-11-10",
+              "Tổng thời gian downtime (giờ)": 21.97
+            },
+            {
+              "Report date": "2025-11-11",
+              "Tổng thời gian downtime (giờ)": 21.24
+            },
+            {
+              "Report date": "2025-11-12",
+              "Tổng thời gian downtime (giờ)": 26.21
+            },
+            {
+              "Report date": "2025-11-13",
+              "Tổng thời gian downtime (giờ)": 34.35
+            },
+            {
+              "Report date": "2025-11-14",
+              "Tổng thời gian downtime (giờ)": 37.9
+            },
+            {
+              "Report date": "2025-11-15",
+              "Tổng thời gian downtime (giờ)": 39.14
+            },
+            {
+              "Report date": "2025-11-16",
+              "Tổng thời gian downtime (giờ)": 15.49
+            },
+            {
+              "Report date": "2025-11-17",
+              "Tổng thời gian downtime (giờ)": 37.31
+            },
+            {
+              "Report date": "2025-11-18",
+              "Tổng thời gian downtime (giờ)": 21.68
+            },
+            {
+              "Report date": "2025-11-19",
+              "Tổng thời gian downtime (giờ)": 30.08
+            },
+            {
+              "Report date": "2025-11-20",
+              "Tổng thời gian downtime (giờ)": 41.14
+            },
+            {
+              "Report date": "2025-11-21",
+              "Tổng thời gian downtime (giờ)": 50.98
+            },
+            {
+              "Report date": "2025-11-22",
+              "Tổng thời gian downtime (giờ)": 50.14
+            },
+            {
+              "Report date": "2025-11-23",
+              "Tổng thời gian downtime (giờ)": 10.55
+            },
+            {
+              "Report date": "2025-11-24",
+              "Tổng thời gian downtime (giờ)": 34.34
+            },
+            {
+              "Report date": "2025-11-25",
+              "Tổng thời gian downtime (giờ)": 36.54
+            },
+            {
+              "Report date": "2025-11-26",
+              "Tổng thời gian downtime (giờ)": 34.37
+            },
+            {
+              "Report date": "2025-11-27",
+              "Tổng thời gian downtime (giờ)": 37.05
+            },
+            {
+              "Report date": "2025-11-28",
+              "Tổng thời gian downtime (giờ)": 41.23
+            },
+            {
+              "Report date": "2025-11-29",
+              "Tổng thời gian downtime (giờ)": 11.73
+            },
+            {
+              "Report date": "2025-12-01",
+              "Tổng thời gian downtime (giờ)": 26.13
+            },
+            {
+              "Report date": "2025-12-02",
+              "Tổng thời gian downtime (giờ)": 36.74
+            },
+            {
+              "Report date": "2025-12-03",
+              "Tổng thời gian downtime (giờ)": 28.01
+            },
+            {
+              "Report date": "2025-12-04",
+              "Tổng thời gian downtime (giờ)": 47.26
+            },
+            {
+              "Report date": "2025-12-05",
+              "Tổng thời gian downtime (giờ)": 31.83
+            },
+            {
+              "Report date": "2025-12-06",
+              "Tổng thời gian downtime (giờ)": 29.74
+            },
+            {
+              "Report date": "2025-12-07",
+              "Tổng thời gian downtime (giờ)": 5.82
+            },
+            {
+              "Report date": "2025-12-08",
+              "Tổng thời gian downtime (giờ)": 32.22
+            },
+            {
+              "Report date": "2025-12-09",
+              "Tổng thời gian downtime (giờ)": 38.05
+            },
+            {
+              "Report date": "2025-12-10",
+              "Tổng thời gian downtime (giờ)": 36.89
+            },
+            {
+              "Report date": "2025-12-11",
+              "Tổng thời gian downtime (giờ)": 32.3
+            },
+            {
+              "Report date": "2025-12-12",
+              "Tổng thời gian downtime (giờ)": 35.17
+            },
+            {
+              "Report date": "2025-12-13",
+              "Tổng thời gian downtime (giờ)": 40.58
+            },
+            {
+              "Report date": "2025-12-14",
+              "Tổng thời gian downtime (giờ)": 11.08
+            },
+            {
+              "Report date": "2025-12-15",
+              "Tổng thời gian downtime (giờ)": 29.48
+            },
+            {
+              "Report date": "2025-12-16",
+              "Tổng thời gian downtime (giờ)": 38.28
+            },
+            {
+              "Report date": "2025-12-17",
+              "Tổng thời gian downtime (giờ)": 29.95
+            },
+            {
+              "Report date": "2025-12-18",
+              "Tổng thời gian downtime (giờ)": 41.9
+            },
+            {
+              "Report date": "2025-12-19",
+              "Tổng thời gian downtime (giờ)": 25.6
+            },
+            {
+              "Report date": "2025-12-20",
+              "Tổng thời gian downtime (giờ)": 28.99
+            },
+            {
+              "Report date": "2025-12-21",
+              "Tổng thời gian downtime (giờ)": 7.7
+            },
+            {
+              "Report date": "2025-12-22",
+              "Tổng thời gian downtime (giờ)": 19.49
+            },
+            {
+              "Report date": "2025-12-23",
+              "Tổng thời gian downtime (giờ)": 32.23
+            },
+            {
+              "Report date": "2025-12-24",
+              "Tổng thời gian downtime (giờ)": 47.95
+            },
+            {
+              "Report date": "2025-12-25",
+              "Tổng thời gian downtime (giờ)": 36.2
+            },
+            {
+              "Report date": "2025-12-26",
+              "Tổng thời gian downtime (giờ)": 27.67
+            },
+            {
+              "Report date": "2025-12-27",
+              "Tổng thời gian downtime (giờ)": 4.3
+            },
+            {
+              "Report date": "2025-12-29",
+              "Tổng thời gian downtime (giờ)": 19.79
+            },
+            {
+              "Report date": "2025-12-30",
+              "Tổng thời gian downtime (giờ)": 12.44
+            },
+            {
+              "Report date": "2025-12-31",
+              "Tổng thời gian downtime (giờ)": 16.78
+            },
+            {
+              "Report date": "2026-01-02",
+              "Tổng thời gian downtime (giờ)": 5.74
+            },
+            {
+              "Report date": "2026-01-03",
+              "Tổng thời gian downtime (giờ)": 16.81
+            },
+            {
+              "Report date": "2026-01-04",
+              "Tổng thời gian downtime (giờ)": 2.54
+            },
+            {
+              "Report date": "2026-01-05",
+              "Tổng thời gian downtime (giờ)": 29.29
+            },
+            {
+              "Report date": "2026-01-06",
+              "Tổng thời gian downtime (giờ)": 36.97
+            },
+            {
+              "Report date": "2026-01-07",
+              "Tổng thời gian downtime (giờ)": 26.2
+            },
+            {
+              "Report date": "2026-01-08",
+              "Tổng thời gian downtime (giờ)": 16.69
+            },
+            {
+              "Report date": "2026-01-09",
+              "Tổng thời gian downtime (giờ)": 10.37
+            },
+            {
+              "Report date": "2026-01-10",
+              "Tổng thời gian downtime (giờ)": 23.73
+            },
+            {
+              "Report date": "2026-01-11",
+              "Tổng thời gian downtime (giờ)": 5.3
+            },
+            {
+              "Report date": "2026-01-12",
+              "Tổng thời gian downtime (giờ)": 10.12
+            },
+            {
+              "Report date": "2026-01-13",
+              "Tổng thời gian downtime (giờ)": 10.75
+            },
+            {
+              "Report date": "2026-01-14",
+              "Tổng thời gian downtime (giờ)": 11.89
+            },
+            {
+              "Report date": "2026-01-15",
+              "Tổng thời gian downtime (giờ)": 11.4
+            },
+            {
+              "Report date": "2026-01-16",
+              "Tổng thời gian downtime (giờ)": 8.57
+            },
+            {
+              "Report date": "2026-01-17",
+              "Tổng thời gian downtime (giờ)": 9.52
+            },
+            {
+              "Report date": "2026-01-18",
+              "Tổng thời gian downtime (giờ)": 2.89
+            },
+            {
+              "Report date": "2026-01-19",
+              "Tổng thời gian downtime (giờ)": 1.71
+            },
+            {
+              "Report date": "2026-01-20",
+              "Tổng thời gian downtime (giờ)": 4.47
+            },
+            {
+              "Report date": "2026-01-21",
+              "Tổng thời gian downtime (giờ)": 15.64
+            },
+            {
+              "Report date": "2026-01-22",
+              "Tổng thời gian downtime (giờ)": 21.33
+            },
+            {
+              "Report date": "2026-01-23",
+              "Tổng thời gian downtime (giờ)": 23.98
+            },
+            {
+              "Report date": "2026-01-24",
+              "Tổng thời gian downtime (giờ)": 12.63
+            },
+            {
+              "Report date": "2026-01-25",
+              "Tổng thời gian downtime (giờ)": 1.07
+            },
+            {
+              "Report date": "2026-01-26",
+              "Tổng thời gian downtime (giờ)": 11.23
+            },
+            {
+              "Report date": "2026-01-27",
+              "Tổng thời gian downtime (giờ)": 21.75
+            },
+            {
+              "Report date": "2026-01-28",
+              "Tổng thời gian downtime (giờ)": 32.23
+            },
+            {
+              "Report date": "2026-01-29",
+              "Tổng thời gian downtime (giờ)": 3.2
+            },
+            {
+              "Report date": "2026-01-30",
+              "Tổng thời gian downtime (giờ)": 5.57
+            },
+            {
+              "Report date": "2026-01-31",
+              "Tổng thời gian downtime (giờ)": 16.01
+            },
+            {
+              "Report date": "2026-02-01",
+              "Tổng thời gian downtime (giờ)": 2.41
+            },
+            {
+              "Report date": "2026-02-02",
+              "Tổng thời gian downtime (giờ)": 15.57
+            },
+            {
+              "Report date": "2026-02-03",
+              "Tổng thời gian downtime (giờ)": 2.35
+            }
+          ],
+          "x_axis_unit": null,
+          "y_axis_unit": "giờ",
+          "tooltip_unit": "giờ",
+          "source_result_id": "886950d0-a917-4c67-946d-8d3728265286",
+          "source_turn_id": "ad913c42-696b-4df7-8b6a-0de75fdfdb15",
+          "metric": "total_downtime",
+          "dimension": "date"
+        },
+        "dashboard": null,
+        "sources": [
+          {
+            "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+            "rows": 9151
+          }
+        ],
+        "filters": [],
+        "downloads": [
+          {
+            "id": "report_f115a3e5-a479-46dc-9a15-24debed3bd72.html",
+            "label": "Tải HTML",
+            "filename": "report_f115a3e5-a479-46dc-9a15-24debed3bd72.html",
+            "mime_type": "text/html"
+          },
+          {
+            "id": "report_f115a3e5-a479-46dc-9a15-24debed3bd72.xlsx",
+            "label": "Tải Excel",
+            "filename": "report_f115a3e5-a479-46dc-9a15-24debed3bd72.xlsx",
+            "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          }
+        ],
+        "metadata": {
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "file_scope_validated": true
+        }
+      },
+      "checks": {
+        "response_type": true,
+        "no_stack_trace": true,
+        "public_metadata_safe": true,
+        "downloads": true,
+        "has_report_table": true,
+        "has_report_chart": true
+      },
+      "passed": true
+    }
+  ],
+  "conversation_before_refresh": {
+    "id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+    "title": "Release manual UAT 8 turns",
+    "created_at": "2026-06-24T02:43:24.476736+00:00",
+    "updated_at": "2026-06-24T02:44:02.592499+00:00",
+    "status": "active",
+    "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+    "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+    "source_available": true,
+    "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+    "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+    "messages": [
+      {
+        "id": "13edb4f5-1bc8-48d3-9c37-0e87c028f369",
+        "role": "user",
+        "content": "Tôi muốn xem top 5 máy theo tổng thời gian downtime.",
+        "created_at": "2026-06-24T02:43:24.645426+00:00"
+      },
+      {
+        "id": "14f1ca57-1827-4cd4-917a-3ed343f549ed",
+        "role": "assistant",
+        "content": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+        "created_at": "2026-06-24T02:43:24.908125+00:00",
+        "response": {
+          "message_id": "ee09ab49-6167-480c-bc9b-6b6821e805a4",
+          "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+          "response_type": "table",
+          "title": "Phân tích theo máy",
+          "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+          "table": {
+            "columns": [
+              "Máy",
+              "Tổng thời gian downtime"
+            ],
+            "rows": [
+              {
+                "Máy": "Máy 11",
+                "Tổng thời gian downtime": "413,57 giờ"
+              },
+              {
+                "Máy": "Máy 12",
+                "Tổng thời gian downtime": "323,15 giờ"
+              },
+              {
+                "Máy": "Máy 29",
+                "Tổng thời gian downtime": "294,67 giờ"
+              },
+              {
+                "Máy": "Máy 8",
+                "Tổng thời gian downtime": "229,98 giờ"
+              },
+              {
+                "Máy": "Máy 9",
+                "Tổng thời gian downtime": "185,32 giờ"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+              "rows": 9151
+            }
+          ],
+          "filters": [],
+          "downloads": [],
+          "metadata": {
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_scope_validated": true
+          }
+        }
+      },
+      {
+        "id": "a030e711-3a91-4bef-bc3b-ac0bffb037ef",
+        "role": "user",
+        "content": "Kết quả trên nói lên điều gì?",
+        "created_at": "2026-06-24T02:43:25.114900+00:00"
+      },
+      {
+        "id": "0e3cfe69-bd20-45ab-a116-9eccf33ef3c6",
+        "role": "assistant",
+        "content": "Nhận xét:\n- Máy 11 đứng đầu trong bảng với 413,57 giờ ở chỉ tiêu tổng thời gian downtime.\n- Máy 12 đứng thứ hai với 323,15 giờ, nên nhóm đầu bảng có chênh lệch rõ khi so với hàng kế tiếp.",
+        "created_at": "2026-06-24T02:43:25.224871+00:00",
+        "response": {
+          "message_id": "b9f7121c-2756-42db-93fe-02c27a0b9102",
+          "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+          "response_type": "text",
+          "title": "Nhận xét kết quả",
+          "summary": "Nhận xét:\n- Máy 11 đứng đầu trong bảng với 413,57 giờ ở chỉ tiêu tổng thời gian downtime.\n- Máy 12 đứng thứ hai với 323,15 giờ, nên nhóm đầu bảng có chênh lệch rõ khi so với hàng kế tiếp.",
+          "sources": [],
+          "filters": [],
+          "downloads": [],
+          "metadata": {
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_scope_validated": true
+          }
+        }
+      },
+      {
+        "id": "9ad301e5-6d7b-4edd-984a-9fd1a5686380",
+        "role": "user",
+        "content": "Vẽ biểu đồ cột top 5 máy theo downtime.",
+        "created_at": "2026-06-24T02:43:25.333314+00:00"
+      },
+      {
+        "id": "9d75a797-7f88-4914-9988-dc76cd35efb3",
+        "role": "assistant",
+        "content": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+        "created_at": "2026-06-24T02:43:25.845467+00:00",
+        "response": {
+          "message_id": "6104227a-de7b-4253-8cd0-2f1abc8668d9",
+          "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+          "response_type": "chart",
+          "title": "Biểu đồ phân tích",
+          "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+          "table": {
+            "columns": [
+              "Máy",
+              "Tổng thời gian downtime"
+            ],
+            "rows": [
+              {
+                "Máy": "Máy 11",
+                "Tổng thời gian downtime": "413,57 giờ"
+              },
+              {
+                "Máy": "Máy 12",
+                "Tổng thời gian downtime": "323,15 giờ"
+              },
+              {
+                "Máy": "Máy 29",
+                "Tổng thời gian downtime": "294,67 giờ"
+              },
+              {
+                "Máy": "Máy 8",
+                "Tổng thời gian downtime": "229,98 giờ"
+              },
+              {
+                "Máy": "Máy 9",
+                "Tổng thời gian downtime": "185,32 giờ"
+              }
+            ]
+          },
+          "chart": {
+            "type": "bar",
+            "title": "Kết quả phân tích",
+            "x_key": "Máy",
+            "y_keys": [
+              "Tổng thời gian downtime (giờ)"
+            ],
+            "data": [
+              {
+                "Máy": "Máy 11",
+                "Tổng thời gian downtime (giờ)": 413.57
+              },
+              {
+                "Máy": "Máy 12",
+                "Tổng thời gian downtime (giờ)": 323.15
+              },
+              {
+                "Máy": "Máy 29",
+                "Tổng thời gian downtime (giờ)": 294.67
+              },
+              {
+                "Máy": "Máy 8",
+                "Tổng thời gian downtime (giờ)": 229.98
+              },
+              {
+                "Máy": "Máy 9",
+                "Tổng thời gian downtime (giờ)": 185.32
+              }
+            ],
+            "y_axis_unit": "giờ",
+            "tooltip_unit": "giờ",
+            "source_result_id": "5d2e8837-c3c9-42f1-ad64-3773aaed268e",
+            "source_turn_id": "4f515ae3-f6f3-4e67-85a9-ebd8f95d4749",
+            "metric": "total_downtime",
+            "dimension": "machine"
+          },
+          "sources": [
+            {
+              "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+              "rows": 9151
+            }
+          ],
+          "filters": [],
+          "downloads": [],
+          "metadata": {
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_scope_validated": true
+          }
+        }
+      },
+      {
+        "id": "78e76806-7e63-4035-a012-4fd53c19f15d",
+        "role": "user",
+        "content": "Vẽ biểu đồ xu hướng tổng downtime theo ngày trong toàn bộ khoảng thời gian có dữ liệu, sau đó nhận xét ba điểm đáng chú ý.",
+        "created_at": "2026-06-24T02:43:26.046809+00:00"
+      },
+      {
+        "id": "d0c59677-89c3-45cd-8af6-c37c62edb0fe",
+        "role": "assistant",
+        "content": "2025-11-03 00:00:00 có tổng thời gian downtime cao nhất: 12 giờ 43 phút. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.\n\nNhận xét:\nD",
+        "created_at": "2026-06-24T02:43:39.029171+00:00",
+        "response": {
+          "message_id": "87bbab1a-bde6-4d20-9c05-d1678a034779",
+          "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+          "response_type": "chart",
+          "title": "Biểu đồ phân tích",
+          "summary": "2025-11-03 00:00:00 có tổng thời gian downtime cao nhất: 12 giờ 43 phút. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.\n\nNhận xét:\nD",
+          "table": {
+            "columns": [
+              "Thời gian bắt đầu",
+              "Tổng thời gian downtime"
+            ],
+            "rows": [
+              {
+                "Thời gian bắt đầu": "2025-11-03T00:00:00",
+                "Tổng thời gian downtime": "12 giờ 43 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-04T00:00:00",
+                "Tổng thời gian downtime": "15 giờ 46 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-05T00:00:00",
+                "Tổng thời gian downtime": "18 giờ 28 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-06T00:00:00",
+                "Tổng thời gian downtime": "14 giờ 14 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-07T00:00:00",
+                "Tổng thời gian downtime": "7 giờ 37 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-08T00:00:00",
+                "Tổng thời gian downtime": "4 giờ 19 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-09T00:00:00",
+                "Tổng thời gian downtime": "2 giờ 24 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-10T00:00:00",
+                "Tổng thời gian downtime": "21 giờ 58 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-11T00:00:00",
+                "Tổng thời gian downtime": "21 giờ 14 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-12T00:00:00",
+                "Tổng thời gian downtime": "26,21 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-13T00:00:00",
+                "Tổng thời gian downtime": "34,35 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-14T00:00:00",
+                "Tổng thời gian downtime": "37,90 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-15T00:00:00",
+                "Tổng thời gian downtime": "39,14 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-16T00:00:00",
+                "Tổng thời gian downtime": "15 giờ 29 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-17T00:00:00",
+                "Tổng thời gian downtime": "37,31 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-18T00:00:00",
+                "Tổng thời gian downtime": "21 giờ 40 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-19T00:00:00",
+                "Tổng thời gian downtime": "30,08 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-20T00:00:00",
+                "Tổng thời gian downtime": "41,14 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-21T00:00:00",
+                "Tổng thời gian downtime": "50,98 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-22T00:00:00",
+                "Tổng thời gian downtime": "50,14 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-23T00:00:00",
+                "Tổng thời gian downtime": "10 giờ 32 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-24T00:00:00",
+                "Tổng thời gian downtime": "34,34 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-25T00:00:00",
+                "Tổng thời gian downtime": "36,54 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-26T00:00:00",
+                "Tổng thời gian downtime": "34,37 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-27T00:00:00",
+                "Tổng thời gian downtime": "37,05 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-28T00:00:00",
+                "Tổng thời gian downtime": "41,23 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-29T00:00:00",
+                "Tổng thời gian downtime": "11 giờ 43 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-01T00:00:00",
+                "Tổng thời gian downtime": "26,13 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-02T00:00:00",
+                "Tổng thời gian downtime": "36,74 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-03T00:00:00",
+                "Tổng thời gian downtime": "28,01 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-04T00:00:00",
+                "Tổng thời gian downtime": "47,26 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-05T00:00:00",
+                "Tổng thời gian downtime": "31,83 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-06T00:00:00",
+                "Tổng thời gian downtime": "29,74 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-07T00:00:00",
+                "Tổng thời gian downtime": "5 giờ 49 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-08T00:00:00",
+                "Tổng thời gian downtime": "32,22 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-09T00:00:00",
+                "Tổng thời gian downtime": "38,05 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-10T00:00:00",
+                "Tổng thời gian downtime": "36,89 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-11T00:00:00",
+                "Tổng thời gian downtime": "32,30 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-12T00:00:00",
+                "Tổng thời gian downtime": "35,17 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-13T00:00:00",
+                "Tổng thời gian downtime": "40,58 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-14T00:00:00",
+                "Tổng thời gian downtime": "11 giờ 4 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-15T00:00:00",
+                "Tổng thời gian downtime": "29,48 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-16T00:00:00",
+                "Tổng thời gian downtime": "38,27 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-17T00:00:00",
+                "Tổng thời gian downtime": "29,95 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-18T00:00:00",
+                "Tổng thời gian downtime": "41,90 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-19T00:00:00",
+                "Tổng thời gian downtime": "25,60 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-20T00:00:00",
+                "Tổng thời gian downtime": "28,99 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-21T00:00:00",
+                "Tổng thời gian downtime": "7 giờ 42 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-22T00:00:00",
+                "Tổng thời gian downtime": "19 giờ 29 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-23T00:00:00",
+                "Tổng thời gian downtime": "32,23 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-24T00:00:00",
+                "Tổng thời gian downtime": "47,95 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-25T00:00:00",
+                "Tổng thời gian downtime": "36,20 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-26T00:00:00",
+                "Tổng thời gian downtime": "27,67 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-27T00:00:00",
+                "Tổng thời gian downtime": "4 giờ 18 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-29T00:00:00",
+                "Tổng thời gian downtime": "19 giờ 47 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-30T00:00:00",
+                "Tổng thời gian downtime": "12 giờ 26 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-31T00:00:00",
+                "Tổng thời gian downtime": "16 giờ 46 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-02T00:00:00",
+                "Tổng thời gian downtime": "5 giờ 44 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-03T00:00:00",
+                "Tổng thời gian downtime": "16 giờ 48 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-04T00:00:00",
+                "Tổng thời gian downtime": "2 giờ 32 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-05T00:00:00",
+                "Tổng thời gian downtime": "29,29 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-06T00:00:00",
+                "Tổng thời gian downtime": "36,97 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-07T00:00:00",
+                "Tổng thời gian downtime": "26,20 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-08T00:00:00",
+                "Tổng thời gian downtime": "16 giờ 41 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-09T00:00:00",
+                "Tổng thời gian downtime": "10 giờ 22 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-10T00:00:00",
+                "Tổng thời gian downtime": "23 giờ 44 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-11T00:00:00",
+                "Tổng thời gian downtime": "5 giờ 17 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-12T00:00:00",
+                "Tổng thời gian downtime": "10 giờ 7 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-13T00:00:00",
+                "Tổng thời gian downtime": "10 giờ 45 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-14T00:00:00",
+                "Tổng thời gian downtime": "11 giờ 53 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-15T00:00:00",
+                "Tổng thời gian downtime": "11 giờ 23 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-16T00:00:00",
+                "Tổng thời gian downtime": "8 giờ 34 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-17T00:00:00",
+                "Tổng thời gian downtime": "9 giờ 31 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-18T00:00:00",
+                "Tổng thời gian downtime": "2 giờ 53 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-19T00:00:00",
+                "Tổng thời gian downtime": "1 giờ 42 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-20T00:00:00",
+                "Tổng thời gian downtime": "4 giờ 28 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-21T00:00:00",
+                "Tổng thời gian downtime": "15 giờ 38 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-22T00:00:00",
+                "Tổng thời gian downtime": "21 giờ 20 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-23T00:00:00",
+                "Tổng thời gian downtime": "23 giờ 58 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-24T00:00:00",
+                "Tổng thời gian downtime": "12 giờ 37 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-25T00:00:00",
+                "Tổng thời gian downtime": "1 giờ 3 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-26T00:00:00",
+                "Tổng thời gian downtime": "11 giờ 13 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-27T00:00:00",
+                "Tổng thời gian downtime": "21 giờ 44 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-28T00:00:00",
+                "Tổng thời gian downtime": "32,23 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-29T00:00:00",
+                "Tổng thời gian downtime": "3 giờ 11 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-30T00:00:00",
+                "Tổng thời gian downtime": "5 giờ 34 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-31T00:00:00",
+                "Tổng thời gian downtime": "16 giờ"
+              },
+              {
+                "Thời gian bắt đầu": "2026-02-01T00:00:00",
+                "Tổng thời gian downtime": "2 giờ 24 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-02-02T00:00:00",
+                "Tổng thời gian downtime": "15 giờ 33 phút"
+              },
+              {
+                "Thời gian bắt đầu": "2026-02-03T00:00:00",
+                "Tổng thời gian downtime": "2 giờ 21 phút"
+              }
+            ]
+          },
+          "chart": {
+            "type": "line",
+            "title": "Kết quả phân tích",
+            "x_key": "Thời gian bắt đầu",
+            "y_keys": [
+              "Tổng thời gian downtime (giờ)"
+            ],
+            "data": [
+              {
+                "Thời gian bắt đầu": "2025-11-03T00:00:00",
+                "Tổng thời gian downtime (giờ)": 12.72
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-04T00:00:00",
+                "Tổng thời gian downtime (giờ)": 15.77
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-05T00:00:00",
+                "Tổng thời gian downtime (giờ)": 18.48
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-06T00:00:00",
+                "Tổng thời gian downtime (giờ)": 14.25
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-07T00:00:00",
+                "Tổng thời gian downtime (giờ)": 7.62
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-08T00:00:00",
+                "Tổng thời gian downtime (giờ)": 4.33
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-09T00:00:00",
+                "Tổng thời gian downtime (giờ)": 2.41
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-10T00:00:00",
+                "Tổng thời gian downtime (giờ)": 21.97
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-11T00:00:00",
+                "Tổng thời gian downtime (giờ)": 21.24
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-12T00:00:00",
+                "Tổng thời gian downtime (giờ)": 26.21
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-13T00:00:00",
+                "Tổng thời gian downtime (giờ)": 34.35
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-14T00:00:00",
+                "Tổng thời gian downtime (giờ)": 37.9
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-15T00:00:00",
+                "Tổng thời gian downtime (giờ)": 39.14
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-16T00:00:00",
+                "Tổng thời gian downtime (giờ)": 15.49
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-17T00:00:00",
+                "Tổng thời gian downtime (giờ)": 37.31
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-18T00:00:00",
+                "Tổng thời gian downtime (giờ)": 21.68
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-19T00:00:00",
+                "Tổng thời gian downtime (giờ)": 30.08
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-20T00:00:00",
+                "Tổng thời gian downtime (giờ)": 41.14
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-21T00:00:00",
+                "Tổng thời gian downtime (giờ)": 50.98
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-22T00:00:00",
+                "Tổng thời gian downtime (giờ)": 50.14
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-23T00:00:00",
+                "Tổng thời gian downtime (giờ)": 10.55
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-24T00:00:00",
+                "Tổng thời gian downtime (giờ)": 34.34
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-25T00:00:00",
+                "Tổng thời gian downtime (giờ)": 36.54
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-26T00:00:00",
+                "Tổng thời gian downtime (giờ)": 34.37
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-27T00:00:00",
+                "Tổng thời gian downtime (giờ)": 37.05
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-28T00:00:00",
+                "Tổng thời gian downtime (giờ)": 41.23
+              },
+              {
+                "Thời gian bắt đầu": "2025-11-29T00:00:00",
+                "Tổng thời gian downtime (giờ)": 11.73
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-01T00:00:00",
+                "Tổng thời gian downtime (giờ)": 26.13
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-02T00:00:00",
+                "Tổng thời gian downtime (giờ)": 36.74
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-03T00:00:00",
+                "Tổng thời gian downtime (giờ)": 28.01
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-04T00:00:00",
+                "Tổng thời gian downtime (giờ)": 47.26
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-05T00:00:00",
+                "Tổng thời gian downtime (giờ)": 31.83
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-06T00:00:00",
+                "Tổng thời gian downtime (giờ)": 29.74
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-07T00:00:00",
+                "Tổng thời gian downtime (giờ)": 5.82
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-08T00:00:00",
+                "Tổng thời gian downtime (giờ)": 32.22
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-09T00:00:00",
+                "Tổng thời gian downtime (giờ)": 38.05
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-10T00:00:00",
+                "Tổng thời gian downtime (giờ)": 36.89
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-11T00:00:00",
+                "Tổng thời gian downtime (giờ)": 32.3
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-12T00:00:00",
+                "Tổng thời gian downtime (giờ)": 35.17
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-13T00:00:00",
+                "Tổng thời gian downtime (giờ)": 40.58
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-14T00:00:00",
+                "Tổng thời gian downtime (giờ)": 11.08
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-15T00:00:00",
+                "Tổng thời gian downtime (giờ)": 29.48
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-16T00:00:00",
+                "Tổng thời gian downtime (giờ)": 38.28
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-17T00:00:00",
+                "Tổng thời gian downtime (giờ)": 29.95
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-18T00:00:00",
+                "Tổng thời gian downtime (giờ)": 41.9
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-19T00:00:00",
+                "Tổng thời gian downtime (giờ)": 25.6
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-20T00:00:00",
+                "Tổng thời gian downtime (giờ)": 28.99
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-21T00:00:00",
+                "Tổng thời gian downtime (giờ)": 7.7
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-22T00:00:00",
+                "Tổng thời gian downtime (giờ)": 19.49
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-23T00:00:00",
+                "Tổng thời gian downtime (giờ)": 32.23
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-24T00:00:00",
+                "Tổng thời gian downtime (giờ)": 47.95
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-25T00:00:00",
+                "Tổng thời gian downtime (giờ)": 36.2
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-26T00:00:00",
+                "Tổng thời gian downtime (giờ)": 27.67
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-27T00:00:00",
+                "Tổng thời gian downtime (giờ)": 4.3
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-29T00:00:00",
+                "Tổng thời gian downtime (giờ)": 19.79
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-30T00:00:00",
+                "Tổng thời gian downtime (giờ)": 12.44
+              },
+              {
+                "Thời gian bắt đầu": "2025-12-31T00:00:00",
+                "Tổng thời gian downtime (giờ)": 16.78
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-02T00:00:00",
+                "Tổng thời gian downtime (giờ)": 5.74
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-03T00:00:00",
+                "Tổng thời gian downtime (giờ)": 16.81
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-04T00:00:00",
+                "Tổng thời gian downtime (giờ)": 2.54
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-05T00:00:00",
+                "Tổng thời gian downtime (giờ)": 29.29
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-06T00:00:00",
+                "Tổng thời gian downtime (giờ)": 36.97
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-07T00:00:00",
+                "Tổng thời gian downtime (giờ)": 26.2
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-08T00:00:00",
+                "Tổng thời gian downtime (giờ)": 16.69
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-09T00:00:00",
+                "Tổng thời gian downtime (giờ)": 10.37
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-10T00:00:00",
+                "Tổng thời gian downtime (giờ)": 23.73
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-11T00:00:00",
+                "Tổng thời gian downtime (giờ)": 5.3
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-12T00:00:00",
+                "Tổng thời gian downtime (giờ)": 10.12
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-13T00:00:00",
+                "Tổng thời gian downtime (giờ)": 10.75
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-14T00:00:00",
+                "Tổng thời gian downtime (giờ)": 11.89
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-15T00:00:00",
+                "Tổng thời gian downtime (giờ)": 11.4
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-16T00:00:00",
+                "Tổng thời gian downtime (giờ)": 8.57
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-17T00:00:00",
+                "Tổng thời gian downtime (giờ)": 9.52
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-18T00:00:00",
+                "Tổng thời gian downtime (giờ)": 2.89
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-19T00:00:00",
+                "Tổng thời gian downtime (giờ)": 1.71
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-20T00:00:00",
+                "Tổng thời gian downtime (giờ)": 4.47
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-21T00:00:00",
+                "Tổng thời gian downtime (giờ)": 15.64
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-22T00:00:00",
+                "Tổng thời gian downtime (giờ)": 21.33
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-23T00:00:00",
+                "Tổng thời gian downtime (giờ)": 23.98
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-24T00:00:00",
+                "Tổng thời gian downtime (giờ)": 12.63
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-25T00:00:00",
+                "Tổng thời gian downtime (giờ)": 1.07
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-26T00:00:00",
+                "Tổng thời gian downtime (giờ)": 11.23
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-27T00:00:00",
+                "Tổng thời gian downtime (giờ)": 21.75
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-28T00:00:00",
+                "Tổng thời gian downtime (giờ)": 32.23
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-29T00:00:00",
+                "Tổng thời gian downtime (giờ)": 3.2
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-30T00:00:00",
+                "Tổng thời gian downtime (giờ)": 5.57
+              },
+              {
+                "Thời gian bắt đầu": "2026-01-31T00:00:00",
+                "Tổng thời gian downtime (giờ)": 16.01
+              },
+              {
+                "Thời gian bắt đầu": "2026-02-01T00:00:00",
+                "Tổng thời gian downtime (giờ)": 2.41
+              },
+              {
+                "Thời gian bắt đầu": "2026-02-02T00:00:00",
+                "Tổng thời gian downtime (giờ)": 15.57
+              },
+              {
+                "Thời gian bắt đầu": "2026-02-03T00:00:00",
+                "Tổng thời gian downtime (giờ)": 2.35
+              }
+            ],
+            "y_axis_unit": "giờ",
+            "tooltip_unit": "giờ",
+            "source_result_id": "36b12ff0-73e9-48ad-9bc9-9b4dd6fbf02d",
+            "source_turn_id": "8927ca72-fbd3-4e90-9b12-9d706adad641",
+            "metric": "total_downtime",
+            "dimension": "date"
+          },
+          "sources": [
+            {
+              "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+              "rows": 9151
+            }
+          ],
+          "filters": [],
+          "downloads": [],
+          "metadata": {
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_scope_validated": true
+          }
+        }
+      },
+      {
+        "id": "7e195bf3-fd9c-45f1-9d9d-9b58aa1338c8",
+        "role": "user",
+        "content": "Cho tôi phân bố số lần ghi nhận theo nhóm tổn thất, thêm tỷ lệ phần trăm và vẽ biểu đồ phù hợp.",
+        "created_at": "2026-06-24T02:43:39.261030+00:00"
+      },
+      {
+        "id": "8d3a679b-349f-40c9-b7b9-c9d77a6b9960",
+        "role": "assistant",
+        "content": "Bảo trì có số lần ghi nhận cao nhất: 9.151. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+        "created_at": "2026-06-24T02:43:49.682629+00:00",
+        "response": {
+          "message_id": "3cdfd9c8-19a1-4d4f-9ea5-e23c945c5379",
+          "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+          "response_type": "chart",
+          "title": "Biểu đồ phân tích",
+          "summary": "Bảo trì có số lần ghi nhận cao nhất: 9.151. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.",
+          "table": {
+            "columns": [
+              "Nhóm tổn thất",
+              "Số lần ghi nhận",
+              "Tỷ lệ"
+            ],
+            "rows": [
+              {
+                "Nhóm tổn thất": "Bảo trì",
+                "Số lần ghi nhận": "9.151",
+                "Tỷ lệ": "100%"
+              }
+            ]
+          },
+          "chart": {
+            "type": "pie",
+            "title": "Kết quả phân tích",
+            "x_key": "Nhóm tổn thất",
+            "y_keys": [
+              "Số lần ghi nhận"
+            ],
+            "data": [
+              {
+                "Nhóm tổn thất": "Bảo trì",
+                "Số lần ghi nhận": 9151
+              }
+            ],
+            "source_result_id": "9ca49d8d-dd99-46d7-bd90-b16bde6dbeb3",
+            "source_turn_id": "f6514b31-3118-4281-9902-396915c9155b",
+            "metric": "count",
+            "dimension": "loss_group"
+          },
+          "sources": [
+            {
+              "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+              "rows": 9151
+            }
+          ],
+          "filters": [],
+          "downloads": [],
+          "metadata": {
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_scope_validated": true
+          }
+        }
+      },
+      {
+        "id": "2a6786e1-105e-4362-be84-ef9f30cfd098",
+        "role": "user",
+        "content": "Trong tháng gần nhất, tìm top 5 máy có tổng downtime cao nhất, thêm số lần dừng, thời lượng trung bình, tỷ trọng trên tổng downtime và vẽ biểu đồ.",
+        "created_at": "2026-06-24T02:43:49.879008+00:00"
+      },
+      {
+        "id": "f402b2ce-d4fc-498d-92f8-140167d416b4",
+        "role": "assistant",
+        "content": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx với các bộ lọc đang hiển thị bên dưới.",
+        "created_at": "2026-06-24T02:44:01.615975+00:00",
+        "response": {
+          "message_id": "a89eac97-96de-45b1-ac69-7d5c8df8d04f",
+          "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+          "response_type": "chart",
+          "title": "Biểu đồ phân tích",
+          "summary": "Máy 29 có tổng thời gian downtime cao nhất: 7 giờ 42 phút. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx với các bộ lọc đang hiển thị bên dưới.",
+          "table": {
+            "columns": [
+              "Máy",
+              "Tổng thời gian downtime",
+              "Số lần ghi nhận",
+              "Thời gian downtime trung bình",
+              "Tỷ lệ"
+            ],
+            "rows": [
+              {
+                "Máy": "Máy 29",
+                "Tổng thời gian downtime": "7 giờ 42 phút",
+                "Số lần ghi nhận": "48",
+                "Thời gian downtime trung bình": "9 phút 38 giây",
+                "Tỷ lệ": "37,93%"
+              },
+              {
+                "Máy": "Máy 30",
+                "Tổng thời gian downtime": "7 giờ 22 phút",
+                "Số lần ghi nhận": "5",
+                "Thời gian downtime trung bình": "1 giờ 28 phút",
+                "Tỷ lệ": "36,24%"
+              },
+              {
+                "Máy": "Máy 11",
+                "Tổng thời gian downtime": "5 giờ 6 phút",
+                "Số lần ghi nhận": "19",
+                "Thời gian downtime trung bình": "16 phút 7 giây",
+                "Tỷ lệ": "25,1%"
+              },
+              {
+                "Máy": "Máy 3A",
+                "Tổng thời gian downtime": "9 phút",
+                "Số lần ghi nhận": "4",
+                "Thời gian downtime trung bình": "2 phút 15 giây",
+                "Tỷ lệ": "0,74%"
+              }
+            ]
+          },
+          "chart": {
+            "type": "bar",
+            "title": "Kết quả phân tích",
+            "x_key": "Máy",
+            "y_keys": [
+              "Tổng thời gian downtime (giờ)"
+            ],
+            "data": [
+              {
+                "Máy": "Máy 29",
+                "Tổng thời gian downtime (giờ)": 7.71
+              },
+              {
+                "Máy": "Máy 30",
+                "Tổng thời gian downtime (giờ)": 7.37
+              },
+              {
+                "Máy": "Máy 11",
+                "Tổng thời gian downtime (giờ)": 5.1
+              },
+              {
+                "Máy": "Máy 3A",
+                "Tổng thời gian downtime (giờ)": 0.15
+              }
+            ],
+            "y_axis_unit": "giờ",
+            "tooltip_unit": "giờ",
+            "source_result_id": "6809202a-3ad2-4e5c-a930-3c0566af976a",
+            "source_turn_id": "d18bb293-9a44-4ad0-af36-3253e6896d0e",
+            "metric": "total_downtime",
+            "dimension": "machine"
+          },
+          "sources": [
+            {
+              "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+              "rows": 9151
+            }
+          ],
+          "filters": [
+            {
+              "label": "Thời gian bắt đầu",
+              "operator": "date_between",
+              "value": [
+                "2026-02-01",
+                "2026-03-01"
+              ]
+            }
+          ],
+          "downloads": [],
+          "metadata": {
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_scope_validated": true
+          }
+        }
+      },
+      {
+        "id": "1335f99a-a21a-4ce8-a26b-c892abca68ba",
+        "role": "user",
+        "content": "Tạo báo cáo tổng quan cho toàn bộ file này gồm mô tả dữ liệu, số bản ghi, khoảng thời gian, ba điểm đáng chú ý, bảng top 5 đối tượng chính, một biểu đồ phù hợp, nguồn dữ liệu và giới hạn của kết luận.",
+        "created_at": "2026-06-24T02:44:01.974765+00:00"
+      },
+      {
+        "id": "5e1d6a28-eb66-4d20-9a3a-b76e3f5ba994",
+        "role": "assistant",
+        "content": "Báo cáo đã tổng hợp 9151 dòng dữ liệu trong giai đoạn 2025-11-03 đến 2026-02-03.\nTổng downtime là 1.989,56 giờ.\nMáy đứng đầu theo downtime là Máy 11 với 413,57 giờ.\nReport includes overview, KPI, ranked tables, time trend, source and limitation sections.",
+        "created_at": "2026-06-24T02:44:02.221654+00:00",
+        "response": {
+          "message_id": "0dce2f2f-2589-4dcf-a25c-a47175243cfe",
+          "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+          "response_type": "report",
+          "title": "Báo cáo tổng quan",
+          "summary": "Báo cáo đã tổng hợp 9151 dòng dữ liệu trong giai đoạn 2025-11-03 đến 2026-02-03.\nTổng downtime là 1.989,56 giờ.\nMáy đứng đầu theo downtime là Máy 11 với 413,57 giờ.\nReport includes overview, KPI, ranked tables, time trend, source and limitation sections.",
+          "table": {
+            "columns": [
+              "Máy",
+              "Tổng thời gian downtime",
+              "Số lần ghi nhận",
+              "Thời gian downtime trung bình"
+            ],
+            "rows": [
+              {
+                "Máy": "Máy 11",
+                "Tổng thời gian downtime": "413,57 giờ",
+                "Số lần ghi nhận": "1.469",
+                "Thời gian downtime trung bình": "16 phút 54 giây"
+              },
+              {
+                "Máy": "Máy 12",
+                "Tổng thời gian downtime": "323,15 giờ",
+                "Số lần ghi nhận": "1.654",
+                "Thời gian downtime trung bình": "11 phút 43 giây"
+              },
+              {
+                "Máy": "Máy 29",
+                "Tổng thời gian downtime": "294,67 giờ",
+                "Số lần ghi nhận": "1.603",
+                "Thời gian downtime trung bình": "11 phút 2 giây"
+              },
+              {
+                "Máy": "Máy 8",
+                "Tổng thời gian downtime": "229,98 giờ",
+                "Số lần ghi nhận": "653",
+                "Thời gian downtime trung bình": "21 phút 8 giây"
+              },
+              {
+                "Máy": "Máy 9",
+                "Tổng thời gian downtime": "185,32 giờ",
+                "Số lần ghi nhận": "821",
+                "Thời gian downtime trung bình": "13 phút 33 giây"
+              }
+            ]
+          },
+          "chart": {
+            "type": "line",
+            "title": "Kết quả phân tích",
+            "x_key": "Report date",
+            "y_keys": [
+              "Tổng thời gian downtime (giờ)"
+            ],
+            "data": [
+              {
+                "Report date": "2025-11-03",
+                "Tổng thời gian downtime (giờ)": 12.72
+              },
+              {
+                "Report date": "2025-11-04",
+                "Tổng thời gian downtime (giờ)": 15.77
+              },
+              {
+                "Report date": "2025-11-05",
+                "Tổng thời gian downtime (giờ)": 18.48
+              },
+              {
+                "Report date": "2025-11-06",
+                "Tổng thời gian downtime (giờ)": 14.25
+              },
+              {
+                "Report date": "2025-11-07",
+                "Tổng thời gian downtime (giờ)": 7.62
+              },
+              {
+                "Report date": "2025-11-08",
+                "Tổng thời gian downtime (giờ)": 4.33
+              },
+              {
+                "Report date": "2025-11-09",
+                "Tổng thời gian downtime (giờ)": 2.41
+              },
+              {
+                "Report date": "2025-11-10",
+                "Tổng thời gian downtime (giờ)": 21.97
+              },
+              {
+                "Report date": "2025-11-11",
+                "Tổng thời gian downtime (giờ)": 21.24
+              },
+              {
+                "Report date": "2025-11-12",
+                "Tổng thời gian downtime (giờ)": 26.21
+              },
+              {
+                "Report date": "2025-11-13",
+                "Tổng thời gian downtime (giờ)": 34.35
+              },
+              {
+                "Report date": "2025-11-14",
+                "Tổng thời gian downtime (giờ)": 37.9
+              },
+              {
+                "Report date": "2025-11-15",
+                "Tổng thời gian downtime (giờ)": 39.14
+              },
+              {
+                "Report date": "2025-11-16",
+                "Tổng thời gian downtime (giờ)": 15.49
+              },
+              {
+                "Report date": "2025-11-17",
+                "Tổng thời gian downtime (giờ)": 37.31
+              },
+              {
+                "Report date": "2025-11-18",
+                "Tổng thời gian downtime (giờ)": 21.68
+              },
+              {
+                "Report date": "2025-11-19",
+                "Tổng thời gian downtime (giờ)": 30.08
+              },
+              {
+                "Report date": "2025-11-20",
+                "Tổng thời gian downtime (giờ)": 41.14
+              },
+              {
+                "Report date": "2025-11-21",
+                "Tổng thời gian downtime (giờ)": 50.98
+              },
+              {
+                "Report date": "2025-11-22",
+                "Tổng thời gian downtime (giờ)": 50.14
+              },
+              {
+                "Report date": "2025-11-23",
+                "Tổng thời gian downtime (giờ)": 10.55
+              },
+              {
+                "Report date": "2025-11-24",
+                "Tổng thời gian downtime (giờ)": 34.34
+              },
+              {
+                "Report date": "2025-11-25",
+                "Tổng thời gian downtime (giờ)": 36.54
+              },
+              {
+                "Report date": "2025-11-26",
+                "Tổng thời gian downtime (giờ)": 34.37
+              },
+              {
+                "Report date": "2025-11-27",
+                "Tổng thời gian downtime (giờ)": 37.05
+              },
+              {
+                "Report date": "2025-11-28",
+                "Tổng thời gian downtime (giờ)": 41.23
+              },
+              {
+                "Report date": "2025-11-29",
+                "Tổng thời gian downtime (giờ)": 11.73
+              },
+              {
+                "Report date": "2025-12-01",
+                "Tổng thời gian downtime (giờ)": 26.13
+              },
+              {
+                "Report date": "2025-12-02",
+                "Tổng thời gian downtime (giờ)": 36.74
+              },
+              {
+                "Report date": "2025-12-03",
+                "Tổng thời gian downtime (giờ)": 28.01
+              },
+              {
+                "Report date": "2025-12-04",
+                "Tổng thời gian downtime (giờ)": 47.26
+              },
+              {
+                "Report date": "2025-12-05",
+                "Tổng thời gian downtime (giờ)": 31.83
+              },
+              {
+                "Report date": "2025-12-06",
+                "Tổng thời gian downtime (giờ)": 29.74
+              },
+              {
+                "Report date": "2025-12-07",
+                "Tổng thời gian downtime (giờ)": 5.82
+              },
+              {
+                "Report date": "2025-12-08",
+                "Tổng thời gian downtime (giờ)": 32.22
+              },
+              {
+                "Report date": "2025-12-09",
+                "Tổng thời gian downtime (giờ)": 38.05
+              },
+              {
+                "Report date": "2025-12-10",
+                "Tổng thời gian downtime (giờ)": 36.89
+              },
+              {
+                "Report date": "2025-12-11",
+                "Tổng thời gian downtime (giờ)": 32.3
+              },
+              {
+                "Report date": "2025-12-12",
+                "Tổng thời gian downtime (giờ)": 35.17
+              },
+              {
+                "Report date": "2025-12-13",
+                "Tổng thời gian downtime (giờ)": 40.58
+              },
+              {
+                "Report date": "2025-12-14",
+                "Tổng thời gian downtime (giờ)": 11.08
+              },
+              {
+                "Report date": "2025-12-15",
+                "Tổng thời gian downtime (giờ)": 29.48
+              },
+              {
+                "Report date": "2025-12-16",
+                "Tổng thời gian downtime (giờ)": 38.28
+              },
+              {
+                "Report date": "2025-12-17",
+                "Tổng thời gian downtime (giờ)": 29.95
+              },
+              {
+                "Report date": "2025-12-18",
+                "Tổng thời gian downtime (giờ)": 41.9
+              },
+              {
+                "Report date": "2025-12-19",
+                "Tổng thời gian downtime (giờ)": 25.6
+              },
+              {
+                "Report date": "2025-12-20",
+                "Tổng thời gian downtime (giờ)": 28.99
+              },
+              {
+                "Report date": "2025-12-21",
+                "Tổng thời gian downtime (giờ)": 7.7
+              },
+              {
+                "Report date": "2025-12-22",
+                "Tổng thời gian downtime (giờ)": 19.49
+              },
+              {
+                "Report date": "2025-12-23",
+                "Tổng thời gian downtime (giờ)": 32.23
+              },
+              {
+                "Report date": "2025-12-24",
+                "Tổng thời gian downtime (giờ)": 47.95
+              },
+              {
+                "Report date": "2025-12-25",
+                "Tổng thời gian downtime (giờ)": 36.2
+              },
+              {
+                "Report date": "2025-12-26",
+                "Tổng thời gian downtime (giờ)": 27.67
+              },
+              {
+                "Report date": "2025-12-27",
+                "Tổng thời gian downtime (giờ)": 4.3
+              },
+              {
+                "Report date": "2025-12-29",
+                "Tổng thời gian downtime (giờ)": 19.79
+              },
+              {
+                "Report date": "2025-12-30",
+                "Tổng thời gian downtime (giờ)": 12.44
+              },
+              {
+                "Report date": "2025-12-31",
+                "Tổng thời gian downtime (giờ)": 16.78
+              },
+              {
+                "Report date": "2026-01-02",
+                "Tổng thời gian downtime (giờ)": 5.74
+              },
+              {
+                "Report date": "2026-01-03",
+                "Tổng thời gian downtime (giờ)": 16.81
+              },
+              {
+                "Report date": "2026-01-04",
+                "Tổng thời gian downtime (giờ)": 2.54
+              },
+              {
+                "Report date": "2026-01-05",
+                "Tổng thời gian downtime (giờ)": 29.29
+              },
+              {
+                "Report date": "2026-01-06",
+                "Tổng thời gian downtime (giờ)": 36.97
+              },
+              {
+                "Report date": "2026-01-07",
+                "Tổng thời gian downtime (giờ)": 26.2
+              },
+              {
+                "Report date": "2026-01-08",
+                "Tổng thời gian downtime (giờ)": 16.69
+              },
+              {
+                "Report date": "2026-01-09",
+                "Tổng thời gian downtime (giờ)": 10.37
+              },
+              {
+                "Report date": "2026-01-10",
+                "Tổng thời gian downtime (giờ)": 23.73
+              },
+              {
+                "Report date": "2026-01-11",
+                "Tổng thời gian downtime (giờ)": 5.3
+              },
+              {
+                "Report date": "2026-01-12",
+                "Tổng thời gian downtime (giờ)": 10.12
+              },
+              {
+                "Report date": "2026-01-13",
+                "Tổng thời gian downtime (giờ)": 10.75
+              },
+              {
+                "Report date": "2026-01-14",
+                "Tổng thời gian downtime (giờ)": 11.89
+              },
+              {
+                "Report date": "2026-01-15",
+                "Tổng thời gian downtime (giờ)": 11.4
+              },
+              {
+                "Report date": "2026-01-16",
+                "Tổng thời gian downtime (giờ)": 8.57
+              },
+              {
+                "Report date": "2026-01-17",
+                "Tổng thời gian downtime (giờ)": 9.52
+              },
+              {
+                "Report date": "2026-01-18",
+                "Tổng thời gian downtime (giờ)": 2.89
+              },
+              {
+                "Report date": "2026-01-19",
+                "Tổng thời gian downtime (giờ)": 1.71
+              },
+              {
+                "Report date": "2026-01-20",
+                "Tổng thời gian downtime (giờ)": 4.47
+              },
+              {
+                "Report date": "2026-01-21",
+                "Tổng thời gian downtime (giờ)": 15.64
+              },
+              {
+                "Report date": "2026-01-22",
+                "Tổng thời gian downtime (giờ)": 21.33
+              },
+              {
+                "Report date": "2026-01-23",
+                "Tổng thời gian downtime (giờ)": 23.98
+              },
+              {
+                "Report date": "2026-01-24",
+                "Tổng thời gian downtime (giờ)": 12.63
+              },
+              {
+                "Report date": "2026-01-25",
+                "Tổng thời gian downtime (giờ)": 1.07
+              },
+              {
+                "Report date": "2026-01-26",
+                "Tổng thời gian downtime (giờ)": 11.23
+              },
+              {
+                "Report date": "2026-01-27",
+                "Tổng thời gian downtime (giờ)": 21.75
+              },
+              {
+                "Report date": "2026-01-28",
+                "Tổng thời gian downtime (giờ)": 32.23
+              },
+              {
+                "Report date": "2026-01-29",
+                "Tổng thời gian downtime (giờ)": 3.2
+              },
+              {
+                "Report date": "2026-01-30",
+                "Tổng thời gian downtime (giờ)": 5.57
+              },
+              {
+                "Report date": "2026-01-31",
+                "Tổng thời gian downtime (giờ)": 16.01
+              },
+              {
+                "Report date": "2026-02-01",
+                "Tổng thời gian downtime (giờ)": 2.41
+              },
+              {
+                "Report date": "2026-02-02",
+                "Tổng thời gian downtime (giờ)": 15.57
+              },
+              {
+                "Report date": "2026-02-03",
+                "Tổng thời gian downtime (giờ)": 2.35
+              }
+            ],
+            "y_axis_unit": "giờ",
+            "tooltip_unit": "giờ",
+            "source_result_id": "654feda7-d4e8-4e23-8a2f-53cc145858b3",
+            "source_turn_id": "72877740-c0e4-48a6-8852-8b8e53d6c290",
+            "metric": "total_downtime",
+            "dimension": "date"
+          },
+          "sources": [
+            {
+              "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+              "rows": 9151
+            }
+          ],
+          "filters": [],
+          "downloads": [
+            {
+              "id": "report_fd90bde9-0ad7-4050-9131-7c3b9416b7f4.html",
+              "label": "Tải HTML",
+              "filename": "report_fd90bde9-0ad7-4050-9131-7c3b9416b7f4.html",
+              "mime_type": "text/html"
+            },
+            {
+              "id": "report_fd90bde9-0ad7-4050-9131-7c3b9416b7f4.xlsx",
+              "label": "Tải Excel",
+              "filename": "report_fd90bde9-0ad7-4050-9131-7c3b9416b7f4.xlsx",
+              "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            }
+          ],
+          "metadata": {
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_scope_validated": true
+          }
+        }
+      },
+      {
+        "id": "7b07718e-257c-423d-b8bd-2470a0293755",
+        "role": "user",
+        "content": "Tạo báo cáo phân tích downtime gồm tổng downtime, tổng số lần dừng, top 5 máy, top 5 nguyên nhân, xu hướng theo thời gian và nhận xét quản lý.",
+        "created_at": "2026-06-24T02:44:02.366915+00:00"
+      },
+      {
+        "id": "1fc4ee7f-dcfa-453c-a2e6-f92f6500c95d",
+        "role": "assistant",
+        "content": "Báo cáo đã tổng hợp 9151 dòng dữ liệu trong giai đoạn 2025-11-03 đến 2026-02-03.\nTổng downtime là 1.989,56 giờ.\nMáy đứng đầu theo downtime là Máy 11 với 413,57 giờ.\nNguyên nhân tổn thất lớn nhất là MÁY LỖI PHẦN CƠ với 563,32 giờ.\nReport includes overview, KPI, ranked tables, time trend, source and limitation sections.",
+        "created_at": "2026-06-24T02:44:02.590721+00:00",
+        "response": {
+          "message_id": "f107e9a3-3a4a-4524-932d-a948130110bf",
+          "conversation_id": "39ba0dce-caa7-4fcf-9bdf-9186c11b9bfe",
+          "response_type": "report",
+          "title": "Báo cáo phân tích downtime",
+          "summary": "Báo cáo đã tổng hợp 9151 dòng dữ liệu trong giai đoạn 2025-11-03 đến 2026-02-03.\nTổng downtime là 1.989,56 giờ.\nMáy đứng đầu theo downtime là Máy 11 với 413,57 giờ.\nNguyên nhân tổn thất lớn nhất là MÁY LỖI PHẦN CƠ với 563,32 giờ.\nReport includes overview, KPI, ranked tables, time trend, source and limitation sections.",
+          "table": {
+            "columns": [
+              "Máy",
+              "Tổng thời gian downtime",
+              "Số lần ghi nhận",
+              "Thời gian downtime trung bình"
+            ],
+            "rows": [
+              {
+                "Máy": "Máy 11",
+                "Tổng thời gian downtime": "413,57 giờ",
+                "Số lần ghi nhận": "1.469",
+                "Thời gian downtime trung bình": "16 phút 54 giây"
+              },
+              {
+                "Máy": "Máy 12",
+                "Tổng thời gian downtime": "323,15 giờ",
+                "Số lần ghi nhận": "1.654",
+                "Thời gian downtime trung bình": "11 phút 43 giây"
+              },
+              {
+                "Máy": "Máy 29",
+                "Tổng thời gian downtime": "294,67 giờ",
+                "Số lần ghi nhận": "1.603",
+                "Thời gian downtime trung bình": "11 phút 2 giây"
+              },
+              {
+                "Máy": "Máy 8",
+                "Tổng thời gian downtime": "229,98 giờ",
+                "Số lần ghi nhận": "653",
+                "Thời gian downtime trung bình": "21 phút 8 giây"
+              },
+              {
+                "Máy": "Máy 9",
+                "Tổng thời gian downtime": "185,32 giờ",
+                "Số lần ghi nhận": "821",
+                "Thời gian downtime trung bình": "13 phút 33 giây"
+              }
+            ]
+          },
+          "chart": {
+            "type": "line",
+            "title": "Kết quả phân tích",
+            "x_key": "Report date",
+            "y_keys": [
+              "Tổng thời gian downtime (giờ)"
+            ],
+            "data": [
+              {
+                "Report date": "2025-11-03",
+                "Tổng thời gian downtime (giờ)": 12.72
+              },
+              {
+                "Report date": "2025-11-04",
+                "Tổng thời gian downtime (giờ)": 15.77
+              },
+              {
+                "Report date": "2025-11-05",
+                "Tổng thời gian downtime (giờ)": 18.48
+              },
+              {
+                "Report date": "2025-11-06",
+                "Tổng thời gian downtime (giờ)": 14.25
+              },
+              {
+                "Report date": "2025-11-07",
+                "Tổng thời gian downtime (giờ)": 7.62
+              },
+              {
+                "Report date": "2025-11-08",
+                "Tổng thời gian downtime (giờ)": 4.33
+              },
+              {
+                "Report date": "2025-11-09",
+                "Tổng thời gian downtime (giờ)": 2.41
+              },
+              {
+                "Report date": "2025-11-10",
+                "Tổng thời gian downtime (giờ)": 21.97
+              },
+              {
+                "Report date": "2025-11-11",
+                "Tổng thời gian downtime (giờ)": 21.24
+              },
+              {
+                "Report date": "2025-11-12",
+                "Tổng thời gian downtime (giờ)": 26.21
+              },
+              {
+                "Report date": "2025-11-13",
+                "Tổng thời gian downtime (giờ)": 34.35
+              },
+              {
+                "Report date": "2025-11-14",
+                "Tổng thời gian downtime (giờ)": 37.9
+              },
+              {
+                "Report date": "2025-11-15",
+                "Tổng thời gian downtime (giờ)": 39.14
+              },
+              {
+                "Report date": "2025-11-16",
+                "Tổng thời gian downtime (giờ)": 15.49
+              },
+              {
+                "Report date": "2025-11-17",
+                "Tổng thời gian downtime (giờ)": 37.31
+              },
+              {
+                "Report date": "2025-11-18",
+                "Tổng thời gian downtime (giờ)": 21.68
+              },
+              {
+                "Report date": "2025-11-19",
+                "Tổng thời gian downtime (giờ)": 30.08
+              },
+              {
+                "Report date": "2025-11-20",
+                "Tổng thời gian downtime (giờ)": 41.14
+              },
+              {
+                "Report date": "2025-11-21",
+                "Tổng thời gian downtime (giờ)": 50.98
+              },
+              {
+                "Report date": "2025-11-22",
+                "Tổng thời gian downtime (giờ)": 50.14
+              },
+              {
+                "Report date": "2025-11-23",
+                "Tổng thời gian downtime (giờ)": 10.55
+              },
+              {
+                "Report date": "2025-11-24",
+                "Tổng thời gian downtime (giờ)": 34.34
+              },
+              {
+                "Report date": "2025-11-25",
+                "Tổng thời gian downtime (giờ)": 36.54
+              },
+              {
+                "Report date": "2025-11-26",
+                "Tổng thời gian downtime (giờ)": 34.37
+              },
+              {
+                "Report date": "2025-11-27",
+                "Tổng thời gian downtime (giờ)": 37.05
+              },
+              {
+                "Report date": "2025-11-28",
+                "Tổng thời gian downtime (giờ)": 41.23
+              },
+              {
+                "Report date": "2025-11-29",
+                "Tổng thời gian downtime (giờ)": 11.73
+              },
+              {
+                "Report date": "2025-12-01",
+                "Tổng thời gian downtime (giờ)": 26.13
+              },
+              {
+                "Report date": "2025-12-02",
+                "Tổng thời gian downtime (giờ)": 36.74
+              },
+              {
+                "Report date": "2025-12-03",
+                "Tổng thời gian downtime (giờ)": 28.01
+              },
+              {
+                "Report date": "2025-12-04",
+                "Tổng thời gian downtime (giờ)": 47.26
+              },
+              {
+                "Report date": "2025-12-05",
+                "Tổng thời gian downtime (giờ)": 31.83
+              },
+              {
+                "Report date": "2025-12-06",
+                "Tổng thời gian downtime (giờ)": 29.74
+              },
+              {
+                "Report date": "2025-12-07",
+                "Tổng thời gian downtime (giờ)": 5.82
+              },
+              {
+                "Report date": "2025-12-08",
+                "Tổng thời gian downtime (giờ)": 32.22
+              },
+              {
+                "Report date": "2025-12-09",
+                "Tổng thời gian downtime (giờ)": 38.05
+              },
+              {
+                "Report date": "2025-12-10",
+                "Tổng thời gian downtime (giờ)": 36.89
+              },
+              {
+                "Report date": "2025-12-11",
+                "Tổng thời gian downtime (giờ)": 32.3
+              },
+              {
+                "Report date": "2025-12-12",
+                "Tổng thời gian downtime (giờ)": 35.17
+              },
+              {
+                "Report date": "2025-12-13",
+                "Tổng thời gian downtime (giờ)": 40.58
+              },
+              {
+                "Report date": "2025-12-14",
+                "Tổng thời gian downtime (giờ)": 11.08
+              },
+              {
+                "Report date": "2025-12-15",
+                "Tổng thời gian downtime (giờ)": 29.48
+              },
+              {
+                "Report date": "2025-12-16",
+                "Tổng thời gian downtime (giờ)": 38.28
+              },
+              {
+                "Report date": "2025-12-17",
+                "Tổng thời gian downtime (giờ)": 29.95
+              },
+              {
+                "Report date": "2025-12-18",
+                "Tổng thời gian downtime (giờ)": 41.9
+              },
+              {
+                "Report date": "2025-12-19",
+                "Tổng thời gian downtime (giờ)": 25.6
+              },
+              {
+                "Report date": "2025-12-20",
+                "Tổng thời gian downtime (giờ)": 28.99
+              },
+              {
+                "Report date": "2025-12-21",
+                "Tổng thời gian downtime (giờ)": 7.7
+              },
+              {
+                "Report date": "2025-12-22",
+                "Tổng thời gian downtime (giờ)": 19.49
+              },
+              {
+                "Report date": "2025-12-23",
+                "Tổng thời gian downtime (giờ)": 32.23
+              },
+              {
+                "Report date": "2025-12-24",
+                "Tổng thời gian downtime (giờ)": 47.95
+              },
+              {
+                "Report date": "2025-12-25",
+                "Tổng thời gian downtime (giờ)": 36.2
+              },
+              {
+                "Report date": "2025-12-26",
+                "Tổng thời gian downtime (giờ)": 27.67
+              },
+              {
+                "Report date": "2025-12-27",
+                "Tổng thời gian downtime (giờ)": 4.3
+              },
+              {
+                "Report date": "2025-12-29",
+                "Tổng thời gian downtime (giờ)": 19.79
+              },
+              {
+                "Report date": "2025-12-30",
+                "Tổng thời gian downtime (giờ)": 12.44
+              },
+              {
+                "Report date": "2025-12-31",
+                "Tổng thời gian downtime (giờ)": 16.78
+              },
+              {
+                "Report date": "2026-01-02",
+                "Tổng thời gian downtime (giờ)": 5.74
+              },
+              {
+                "Report date": "2026-01-03",
+                "Tổng thời gian downtime (giờ)": 16.81
+              },
+              {
+                "Report date": "2026-01-04",
+                "Tổng thời gian downtime (giờ)": 2.54
+              },
+              {
+                "Report date": "2026-01-05",
+                "Tổng thời gian downtime (giờ)": 29.29
+              },
+              {
+                "Report date": "2026-01-06",
+                "Tổng thời gian downtime (giờ)": 36.97
+              },
+              {
+                "Report date": "2026-01-07",
+                "Tổng thời gian downtime (giờ)": 26.2
+              },
+              {
+                "Report date": "2026-01-08",
+                "Tổng thời gian downtime (giờ)": 16.69
+              },
+              {
+                "Report date": "2026-01-09",
+                "Tổng thời gian downtime (giờ)": 10.37
+              },
+              {
+                "Report date": "2026-01-10",
+                "Tổng thời gian downtime (giờ)": 23.73
+              },
+              {
+                "Report date": "2026-01-11",
+                "Tổng thời gian downtime (giờ)": 5.3
+              },
+              {
+                "Report date": "2026-01-12",
+                "Tổng thời gian downtime (giờ)": 10.12
+              },
+              {
+                "Report date": "2026-01-13",
+                "Tổng thời gian downtime (giờ)": 10.75
+              },
+              {
+                "Report date": "2026-01-14",
+                "Tổng thời gian downtime (giờ)": 11.89
+              },
+              {
+                "Report date": "2026-01-15",
+                "Tổng thời gian downtime (giờ)": 11.4
+              },
+              {
+                "Report date": "2026-01-16",
+                "Tổng thời gian downtime (giờ)": 8.57
+              },
+              {
+                "Report date": "2026-01-17",
+                "Tổng thời gian downtime (giờ)": 9.52
+              },
+              {
+                "Report date": "2026-01-18",
+                "Tổng thời gian downtime (giờ)": 2.89
+              },
+              {
+                "Report date": "2026-01-19",
+                "Tổng thời gian downtime (giờ)": 1.71
+              },
+              {
+                "Report date": "2026-01-20",
+                "Tổng thời gian downtime (giờ)": 4.47
+              },
+              {
+                "Report date": "2026-01-21",
+                "Tổng thời gian downtime (giờ)": 15.64
+              },
+              {
+                "Report date": "2026-01-22",
+                "Tổng thời gian downtime (giờ)": 21.33
+              },
+              {
+                "Report date": "2026-01-23",
+                "Tổng thời gian downtime (giờ)": 23.98
+              },
+              {
+                "Report date": "2026-01-24",
+                "Tổng thời gian downtime (giờ)": 12.63
+              },
+              {
+                "Report date": "2026-01-25",
+                "Tổng thời gian downtime (giờ)": 1.07
+              },
+              {
+                "Report date": "2026-01-26",
+                "Tổng thời gian downtime (giờ)": 11.23
+              },
+              {
+                "Report date": "2026-01-27",
+                "Tổng thời gian downtime (giờ)": 21.75
+              },
+              {
+                "Report date": "2026-01-28",
+                "Tổng thời gian downtime (giờ)": 32.23
+              },
+              {
+                "Report date": "2026-01-29",
+                "Tổng thời gian downtime (giờ)": 3.2
+              },
+              {
+                "Report date": "2026-01-30",
+                "Tổng thời gian downtime (giờ)": 5.57
+              },
+              {
+                "Report date": "2026-01-31",
+                "Tổng thời gian downtime (giờ)": 16.01
+              },
+              {
+                "Report date": "2026-02-01",
+                "Tổng thời gian downtime (giờ)": 2.41
+              },
+              {
+                "Report date": "2026-02-02",
+                "Tổng thời gian downtime (giờ)": 15.57
+              },
+              {
+                "Report date": "2026-02-03",
+                "Tổng thời gian downtime (giờ)": 2.35
+              }
+            ],
+            "y_axis_unit": "giờ",
+            "tooltip_unit": "giờ",
+            "source_result_id": "886950d0-a917-4c67-946d-8d3728265286",
+            "source_turn_id": "ad913c42-696b-4df7-8b6a-0de75fdfdb15",
+            "metric": "total_downtime",
+            "dimension": "date"
+          },
+          "sources": [
+            {
+              "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+              "rows": 9151
+            }
+          ],
+          "filters": [],
+          "downloads": [
+            {
+              "id": "report_f115a3e5-a479-46dc-9a15-24debed3bd72.html",
+              "label": "Tải HTML",
+              "filename": "report_f115a3e5-a479-46dc-9a15-24debed3bd72.html",
+              "mime_type": "text/html"
+            },
+            {
+              "id": "report_f115a3e5-a479-46dc-9a15-24debed3bd72.xlsx",
+              "label": "Tải Excel",
+              "filename": "report_f115a3e5-a479-46dc-9a15-24debed3bd72.xlsx",
+              "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            }
+          ],
+          "metadata": {
+            "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+            "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "file_scope_validated": true
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "total": 8,
+    "failed": 0,
+    "status": "passed"
+  }
+}

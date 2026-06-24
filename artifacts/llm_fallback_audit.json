@@ -43,13 +43,50 @@
     "semantic_real_llm_call_rate": 1.0,
     "deterministic_unnecessary_llm_calls": 0,
     "silent_fallback_count": 0,
-    "fallback_count": 1,
+    "fallback_count": 2,
     "fallback_reason_coverage": 1.0,
     "structured_output_validity": 1.0,
-    "llm_p50_latency_ms": 7525.0,
-    "llm_p95_latency_ms": 9075.1
+    "llm_p50_latency_ms": 7185.4,
+    "llm_p95_latency_ms": 9836.2
   },
   "fallbacks": [
+    {
+      "id": "B02",
+      "category": "multipart_analytics",
+      "message": "Cho tôi top 5 nhóm có số lần ghi nhận cao nhất, thêm tỷ lệ phần trăm và nhận xét.",
+      "expected_llm_call": true,
+      "actual_llm_call": true,
+      "expected_route": "semantic",
+      "actual_route": "REAL_LLM",
+      "fallback_used": true,
+      "fallback_reason": "semantic_llm_failed_after_retry",
+      "structured_output_valid": true,
+      "final_response_valid": true,
+      "response_type": "chart",
+      "passed": true,
+      "trace": {
+        "request_id": "766d88b7-e6b9-4dd7-bfbf-7ef3f91d55e4",
+        "conversation_id": "71f3c30f-0cb5-4da1-a8c9-2dc5ff2b3024",
+        "message_id": "766d88b7-e6b9-4dd7-bfbf-7ef3f91d55e4",
+        "matched_rule": "Semantic or multipart request requires REAL_LLM structured resolution.",
+        "deterministic_confidence": 1.0,
+        "semantic_candidate": true,
+        "semantic_resolver_called": true,
+        "llm_request_started": true,
+        "llm_request_completed": true,
+        "llm_model": "qwen3.5:9b",
+        "llm_latency_ms": 7143.0,
+        "structured_output_valid": true,
+        "schema_validation_errors": [
+          "Unknown sort field: total_count",
+          "Unknown sort field: total_count"
+        ],
+        "retry_count": 1,
+        "fallback_used": true,
+        "fallback_reason": "semantic_llm_failed_after_retry",
+        "final_route": "REAL_LLM"
+      }
+    },
     {
       "id": "D01",
       "category": "model_unavailable",
@@ -65,9 +102,9 @@
       "response_type": "table",
       "passed": true,
       "trace": {
-        "request_id": "cd8c8f92-51ea-432d-85d1-2b00954885fb",
-        "conversation_id": "3eaa353f-c7fe-4b5d-9c73-7ce84966472b",
-        "message_id": "cd8c8f92-51ea-432d-85d1-2b00954885fb",
+        "request_id": "b1660e25-c656-44a1-b524-55663a24207a",
+        "conversation_id": "ea606bc3-adfd-45bb-9d85-7c8ae13ad479",
+        "message_id": "b1660e25-c656-44a1-b524-55663a24207a",
         "matched_rule": "Semantic or multipart request requires REAL_LLM structured resolution.",
         "deterministic_confidence": 0.97,
         "semantic_candidate": true,

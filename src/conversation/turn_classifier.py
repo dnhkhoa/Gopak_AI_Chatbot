@@ -44,7 +44,7 @@ def classify_turn(question: str, has_state: bool) -> TurnClassification:
         return TurnClassification(TurnType.ADD_FILTER, 0.86, "Filter refinement phrase.")
     ranking_words = ["top", "bottom", "dung dau", "cao nhat", "thap nhat", "nhieu nhat", "it nhat", "pho bien", "xep hang"]
     dim_nouns = ["may", "machine", "nguyen nhan", "ton that", "nhom", "cong", "loai", "thang", "ngay"]
-    output_words = ["ve", "bieu do", "chart", "excel", "bao cao", "dashboard", "xuat excel", "xuat file", "xuat bao cao", "xuat ket qua", "xuat ra"]
+    output_words = ["bieu do", "chart", "ve cot", "ve line", "ve chart", "ve bieu do", "excel", "bao cao", "dashboard", "xuat excel", "xuat file", "xuat bao cao", "xuat ket qua", "xuat ra"]
     metric_words = ["downtime", "tong", "so lan", "dem", "ty le", "ty trong", "phan tram", "trung binh", "thoi gian", "thoi luong"]
     self_contained_output = (
         any(term in q for term in output_words)
