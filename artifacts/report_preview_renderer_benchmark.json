@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "report_dispatched_as_chart": 0,
+    "report_missing_rendered_sections": 0,
+    "history_response_type_mutation": 0,
+    "history_report_payload_missing": 0,
+    "report_has_chart_for_compatibility": 1,
+    "status": "passed"
+  },
+  "coverage": {
+    "requested_sections": 8,
+    "backend_sections": 8,
+    "rendered_sections": 8,
+    "missing_sections": []
+  },
+  "response_type": "report",
+  "history_response_type": "report",
+  "section_types": [
+    "dataset_overview",
+    "kpi_total_downtime",
+    "kpi_stop_count",
+    "top_machines",
+    "top_causes",
+    "time_trend",
+    "management_commentary",
+    "source_filters_limitations"
+  ],
+  "history_section_types": [
+    "dataset_overview",
+    "kpi_total_downtime",
+    "kpi_stop_count",
+    "top_machines",
+    "top_causes",
+    "time_trend",
+    "management_commentary",
+    "source_filters_limitations"
+  ]
+}

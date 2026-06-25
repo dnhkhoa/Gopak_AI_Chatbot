@@ -1,5 +1,6 @@
 export type ResponseType =
   | "text"
+  | "analysis"
   | "scalar"
   | "table"
   | "chart"
@@ -42,7 +43,18 @@ export interface DashboardPayload {
   chart?: ChartPayload | null;
 }
 
+export interface KpiCard {
+  label: string;
+  value: string;
+  hint?: string | null;
+}
+
 export interface SourcePayload {
+  name: string;
+  rows?: number | null;
+}
+
+export interface SourceInfo {
   name: string;
   rows?: number | null;
 }
@@ -60,6 +72,41 @@ export interface DownloadPayload {
   mime_type: string;
 }
 
+export interface AnalysisInsight {
+  text: string;
+  evidence: string[];
+}
+
+export interface AnalysisPayload {
+  headline: string;
+  summary: string;
+  insights: AnalysisInsight[];
+  table?: TablePayload | null;
+}
+
+export interface PublicReportSection {
+  section_type: string;
+  title: string;
+  summary?: string | null;
+  kpis: KpiCard[];
+  table?: TablePayload | null;
+  chart?: ChartPayload | null;
+  commentary: string[];
+}
+
+export interface ReportPayload {
+  report_id: string;
+  title: string;
+  executive_summary: string[];
+  kpis: KpiCard[];
+  sections: PublicReportSection[];
+  source: SourceInfo;
+  filters: Record<string, unknown>[];
+  limitations: string[];
+  html_download_url?: string | null;
+  xlsx_download_url?: string | null;
+}
+
 export interface ChatResponse {
   message_id: string;
   conversation_id: string;
@@ -71,6 +118,8 @@ export interface ChatResponse {
   table?: TablePayload | null;
   chart?: ChartPayload | null;
   dashboard?: DashboardPayload | null;
+  analysis?: AnalysisPayload | null;
+  report?: ReportPayload | null;
   sources: SourcePayload[];
   filters: FilterPayload[];
   downloads: DownloadPayload[];
@@ -119,10 +168,26 @@ export interface UiMessage {
   response?: ChatResponse;
 }
 
+export type ComponentHealth = "HEALTHY" | "DEGRADED" | "UNAVAILABLE" | "NOT_REQUIRED";
+
+export interface ServiceHealth {
+  core_api: ComponentHealth;
+  database: ComponentHealth;
+  file_catalog: ComponentHealth;
+  analytics_engine: ComponentHealth;
+  language_model: ComponentHealth;
+  report_export: ComponentHealth;
+}
+
 export interface HealthStatus {
   status: "ok" | "degraded";
   ollama_available: boolean;
   model: string;
   database_available: boolean;
   memory_available: boolean;
+  components?: ServiceHealth;
+  infrastructure_degraded?: boolean;
+  language_model_available?: boolean;
+  banner_message?: string | null;
+  language_model_note?: string | null;
 }

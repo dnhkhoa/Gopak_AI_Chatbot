@@ -7,6 +7,7 @@ from pydantic import BaseModel, Field, field_validator
 
 ResponseType = Literal[
     "text",
+    "analysis",
     "scalar",
     "table",
     "chart",
@@ -65,7 +66,18 @@ class DashboardPayload(BaseModel):
     chart: ChartPayload | None = None
 
 
+class KpiCard(BaseModel):
+    label: str
+    value: str
+    hint: str | None = None
+
+
 class SourcePayload(BaseModel):
+    name: str
+    rows: int | None = None
+
+
+class SourceInfo(BaseModel):
     name: str
     rows: int | None = None
 
@@ -90,6 +102,41 @@ class ArtifactPayload(BaseModel):
     size_bytes: int
 
 
+class AnalysisInsight(BaseModel):
+    text: str
+    evidence: list[str] = Field(default_factory=list)
+
+
+class AnalysisPayload(BaseModel):
+    headline: str = ""
+    summary: str = ""
+    insights: list[AnalysisInsight] = Field(default_factory=list)
+    table: TablePayload | None = None
+
+
+class PublicReportSection(BaseModel):
+    section_type: str
+    title: str
+    summary: str | None = None
+    kpis: list[KpiCard] = Field(default_factory=list)
+    table: TablePayload | None = None
+    chart: ChartPayload | None = None
+    commentary: list[str] = Field(default_factory=list)
+
+
+class ReportPayload(BaseModel):
+    report_id: str
+    title: str
+    executive_summary: list[str] = Field(default_factory=list)
+    kpis: list[KpiCard] = Field(default_factory=list)
+    sections: list[PublicReportSection] = Field(default_factory=list)
+    source: SourceInfo
+    filters: list[dict[str, Any]] = Field(default_factory=list)
+    limitations: list[str] = Field(default_factory=list)
+    html_download_url: str | None = None
+    xlsx_download_url: str | None = None
+
+
 class ChatResponse(BaseModel):
     message_id: str
     conversation_id: str
@@ -101,6 +148,8 @@ class ChatResponse(BaseModel):
     table: TablePayload | None = None
     chart: ChartPayload | None = None
     dashboard: DashboardPayload | None = None
+    analysis: AnalysisPayload | None = None
+    report: ReportPayload | None = None
     sources: list[SourcePayload] = Field(default_factory=list)
     filters: list[FilterPayload] = Field(default_factory=list)
     downloads: list[DownloadPayload] = Field(default_factory=list)
@@ -142,12 +191,35 @@ class ActiveFilePayload(BaseModel):
     status: str
 
 
+ComponentHealth = Literal["HEALTHY", "DEGRADED", "UNAVAILABLE", "NOT_REQUIRED"]
+
+
+class ServiceHealth(BaseModel):
+    """Per-component health. A fault in one component must not make the whole
+    system look down (P0-C)."""
+
+    core_api: ComponentHealth = "HEALTHY"
+    database: ComponentHealth = "HEALTHY"
+    file_catalog: ComponentHealth = "HEALTHY"
+    analytics_engine: ComponentHealth = "HEALTHY"
+    language_model: ComponentHealth = "HEALTHY"
+    report_export: ComponentHealth = "HEALTHY"
+
+
 class HealthStatus(BaseModel):
     status: Literal["ok", "degraded"]
     ollama_available: bool
     model: str
     database_available: bool
     memory_available: bool
+    # Layered health (P0-C). Legacy fields above kept for backwards compatibility.
+    components: ServiceHealth = Field(default_factory=ServiceHealth)
+    # Only true infrastructure faults drive the customer banner; a model outage
+    # or a business-level rejection must NOT flip this.
+    infrastructure_degraded: bool = False
+    language_model_available: bool = True
+    banner_message: str | None = None
+    language_model_note: str | None = None
 
 
 class DataStatus(BaseModel):

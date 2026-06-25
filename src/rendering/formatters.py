@@ -5,31 +5,12 @@ from typing import Any
 
 import pandas as pd
 
+from src.rendering.labels import LABEL_REGISTRY, display_label
 
-COLUMN_LABELS = {
-    "total_duration_seconds": "Tổng thời gian downtime",
-    "avg_duration_seconds": "Thời gian downtime trung bình",
-    "duration_seconds": "Thời lượng",
-    "thoi_luong_seconds": "Thời lượng",
-    "thoi_luong": "Thời lượng",
-    "machine_name": "Máy",
-    "may": "Máy",
-    "loss_name": "Nguyên nhân tổn thất",
-    "ten_ton_that": "Nguyên nhân tổn thất",
-    "loss_group": "Nhóm tổn thất",
-    "nhom_ton_that": "Nhóm tổn thất",
-    "loss_type": "Loại tổn thất",
-    "loai_ton_that": "Loại tổn thất",
-    "record_count": "Số lần ghi nhận",
-    "row_count": "Số lần ghi nhận",
-    "percentage": "Tỷ lệ",
-    "cong": "Cổng",
-    "loai_truy_cap": "Loại truy cập",
-    "thoi_gian_thuc_thi": "Thời gian thực thi",
-    "thoi_gian_bat_dau": "Thời gian bắt đầu",
-    "thoi_gian_ket_thuc": "Thời gian kết thúc",
-    "gia_tri_can": "Giá trị cân",
-}
+
+# Backwards-compatible alias. The single source of truth is
+# ``src.rendering.labels.LABEL_REGISTRY``; do not add new entries here.
+COLUMN_LABELS = LABEL_REGISTRY
 
 
 def format_vn_number(value: Any, decimals: int = 2, strip_zero: bool = True) -> str:
@@ -83,15 +64,7 @@ def format_duration(seconds: Any) -> dict[str, str | None]:
 
 
 def humanize_column_name(column: str, catalog: dict | None = None) -> str:
-    if column in COLUMN_LABELS:
-        return COLUMN_LABELS[column]
-    if catalog:
-        for table in catalog.get("tables", []):
-            for item in table.get("columns", []):
-                if item.get("normalized_name") == column and item.get("original_name"):
-                    return str(item["original_name"])
-    cleaned = column.replace("_", " ").strip()
-    return cleaned[:1].upper() + cleaned[1:] if cleaned else column
+    return display_label(column, catalog)
 
 
 def is_duration_column(column: str) -> bool:

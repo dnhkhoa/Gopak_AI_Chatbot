@@ -1,0 +1,1533 @@
+{
+  "prompt": "Hãy phân tích tổng quan file này, gồm số bản ghi, khoảng thời gian, số máy được ghi nhận và ba phát hiện quan trọng nhất đối với người quản lý vận hành. Mỗi phát hiện phải có số liệu chứng minh.",
+  "first_layer_where_D_appears": null,
+  "root_cause": "The exact overview prompt no longer produces a single-character narrative. The active trace is deterministic, does not call the model, and remains valid through persistence, history, and frontend props. The narrative quality gate now prevents any injected single-character narrative from being persisted or rendered.",
+  "layers": {
+    "raw_model_output": null,
+    "parsed_structured_output": {
+      "analysis": {
+        "headline": "Phân tích tổng quan",
+        "summary": "File có 9.151 bản ghi và 30 cột.\nKhoảng thời gian ghi nhận là 2025-11-03 đến 2026-02-03.\nDữ liệu ghi nhận 9 máy.\nBa phát hiện quan trọng nhất cho quản lý vận hành:\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+        "insights": [
+          {
+            "text": "Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.",
+            "evidence": [
+              "413,57 giờ",
+              "1.469",
+              "16 phút 54 giây"
+            ]
+          },
+          {
+            "text": "MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.",
+            "evidence": [
+              "563,32 giờ",
+              "3.688",
+              "9 phút 10 giây"
+            ]
+          },
+          {
+            "text": "Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+            "evidence": [
+              "50,98 giờ",
+              "186"
+            ]
+          }
+        ],
+        "table": {
+          "columns": [
+            "Phát hiện",
+            "Đối tượng",
+            "Chỉ số",
+            "Giá trị"
+          ],
+          "rows": [
+            {
+              "Phát hiện": "Máy đứng đầu về tổng downtime",
+              "Đối tượng": "Máy 11",
+              "Chỉ số": "Tổng downtime theo máy",
+              "Giá trị": "413,57 giờ"
+            },
+            {
+              "Phát hiện": "Nguyên nhân/nhóm tổn thất nổi bật",
+              "Đối tượng": "MÁY LỖI PHẦN CƠ",
+              "Chỉ số": "Tổng downtime theo nguyên nhân",
+              "Giá trị": "563,32 giờ"
+            },
+            {
+              "Phát hiện": "Ngày có downtime cao nhất",
+              "Đối tượng": "2025-11-21",
+              "Chỉ số": "Tổng downtime theo ngày",
+              "Giá trị": "50,98 giờ"
+            }
+          ]
+        }
+      },
+      "table": {
+        "columns": [
+          "Phát hiện",
+          "Đối tượng",
+          "Chỉ số",
+          "Giá trị"
+        ],
+        "rows": [
+          {
+            "Phát hiện": "Máy đứng đầu về tổng downtime",
+            "Đối tượng": "Máy 11",
+            "Chỉ số": "Tổng downtime theo máy",
+            "Giá trị": "413,57 giờ"
+          },
+          {
+            "Phát hiện": "Nguyên nhân/nhóm tổn thất nổi bật",
+            "Đối tượng": "MÁY LỖI PHẦN CƠ",
+            "Chỉ số": "Tổng downtime theo nguyên nhân",
+            "Giá trị": "563,32 giờ"
+          },
+          {
+            "Phát hiện": "Ngày có downtime cao nhất",
+            "Đối tượng": "2025-11-21",
+            "Chỉ số": "Tổng downtime theo ngày",
+            "Giá trị": "50,98 giờ"
+          }
+        ]
+      },
+      "metadata_overview_metrics": {
+        "record_count": 9151,
+        "machine_count": 9,
+        "date_range": {
+          "column": "thoi_gian_bat_dau",
+          "start": "2025-11-03",
+          "end": "2026-02-03"
+        }
+      }
+    },
+    "public_chat_response_before_persistence": {
+      "message_id": "14b9d90b-06c1-46bb-bb66-9831bc5761bc",
+      "conversation_id": "74808a4c-f8c4-4046-a11e-2670424a85b4",
+      "response_type": "analysis",
+      "title": "Phân tích tổng quan",
+      "summary": "File có 9.151 bản ghi và 30 cột.\nKhoảng thời gian ghi nhận là 2025-11-03 đến 2026-02-03.\nDữ liệu ghi nhận 9 máy.\nBa phát hiện quan trọng nhất cho quản lý vận hành:\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+      "primary_value": null,
+      "secondary_value": null,
+      "table": {
+        "columns": [
+          "Phát hiện",
+          "Đối tượng",
+          "Chỉ số",
+          "Giá trị"
+        ],
+        "rows": [
+          {
+            "Phát hiện": "Máy đứng đầu về tổng downtime",
+            "Đối tượng": "Máy 11",
+            "Chỉ số": "Tổng downtime theo máy",
+            "Giá trị": "413,57 giờ"
+          },
+          {
+            "Phát hiện": "Nguyên nhân/nhóm tổn thất nổi bật",
+            "Đối tượng": "MÁY LỖI PHẦN CƠ",
+            "Chỉ số": "Tổng downtime theo nguyên nhân",
+            "Giá trị": "563,32 giờ"
+          },
+          {
+            "Phát hiện": "Ngày có downtime cao nhất",
+            "Đối tượng": "2025-11-21",
+            "Chỉ số": "Tổng downtime theo ngày",
+            "Giá trị": "50,98 giờ"
+          }
+        ]
+      },
+      "chart": null,
+      "dashboard": null,
+      "analysis": {
+        "headline": "Phân tích tổng quan",
+        "summary": "File có 9.151 bản ghi và 30 cột.\nKhoảng thời gian ghi nhận là 2025-11-03 đến 2026-02-03.\nDữ liệu ghi nhận 9 máy.\nBa phát hiện quan trọng nhất cho quản lý vận hành:\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+        "insights": [
+          {
+            "text": "Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.",
+            "evidence": [
+              "413,57 giờ",
+              "1.469",
+              "16 phút 54 giây"
+            ]
+          },
+          {
+            "text": "MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.",
+            "evidence": [
+              "563,32 giờ",
+              "3.688",
+              "9 phút 10 giây"
+            ]
+          },
+          {
+            "text": "Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+            "evidence": [
+              "50,98 giờ",
+              "186"
+            ]
+          }
+        ],
+        "table": {
+          "columns": [
+            "Phát hiện",
+            "Đối tượng",
+            "Chỉ số",
+            "Giá trị"
+          ],
+          "rows": [
+            {
+              "Phát hiện": "Máy đứng đầu về tổng downtime",
+              "Đối tượng": "Máy 11",
+              "Chỉ số": "Tổng downtime theo máy",
+              "Giá trị": "413,57 giờ"
+            },
+            {
+              "Phát hiện": "Nguyên nhân/nhóm tổn thất nổi bật",
+              "Đối tượng": "MÁY LỖI PHẦN CƠ",
+              "Chỉ số": "Tổng downtime theo nguyên nhân",
+              "Giá trị": "563,32 giờ"
+            },
+            {
+              "Phát hiện": "Ngày có downtime cao nhất",
+              "Đối tượng": "2025-11-21",
+              "Chỉ số": "Tổng downtime theo ngày",
+              "Giá trị": "50,98 giờ"
+            }
+          ]
+        }
+      },
+      "report": null,
+      "sources": [
+        {
+          "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+          "rows": 9151
+        }
+      ],
+      "filters": [],
+      "downloads": [],
+      "metadata": {
+        "execution_mode": "DETERMINISTIC",
+        "routing_reason": "overview_detailed_quality_prompt",
+        "llm_called": false,
+        "llm_call_count": 0,
+        "overview_metrics": {
+          "record_count": 9151,
+          "machine_count": 9,
+          "date_range": {
+            "column": "thoi_gian_bat_dau",
+            "start": "2025-11-03",
+            "end": "2026-02-03"
+          }
+        },
+        "latency_ms": {
+          "total": 511.0
+        },
+        "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+        "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+        "file_scope_validated": true,
+        "debug": {
+          "answer_brief": {
+            "dataset_description": "File chứa dữ liệu dừng máy/downtime từ 2025-11-03 đến 2026-02-03, gồm 9.151 bản ghi và 30 cột.",
+            "record_count": 9151,
+            "column_count": 30,
+            "date_range": {
+              "column": "thoi_gian_bat_dau",
+              "start": "2025-11-03",
+              "end": "2026-02-03"
+            },
+            "business_dimensions": [
+              "may",
+              "ten_ton_that"
+            ],
+            "business_measures": [
+              "thoi_luong",
+              "duration_reported_text",
+              "duration_reported_seconds",
+              "duration_calculated_seconds",
+              "duration_difference_seconds",
+              "duration_seconds",
+              "thoi_luong_seconds"
+            ],
+            "selected_insights": [
+              {
+                "insight_id": "2276fcd4-eccb-4e6b-aefe-4a23e8c2cf7a",
+                "insight_type": "top_machine_downtime",
+                "domain": "machine_downtime",
+                "title": "Máy đứng đầu về tổng downtime",
+                "business_question": "Máy nào tạo tổng downtime lớn nhất?",
+                "primary_entity": "Máy 11",
+                "primary_metric": "machine_total_downtime",
+                "primary_value": 1488867.0,
+                "unit": "seconds",
+                "comparison_entities": [],
+                "comparison_facts": [],
+                "evidence_rows": [
+                  {
+                    "dimension": "may",
+                    "entity": "Máy 11",
+                    "metric": "total_downtime",
+                    "value": 1488867.0
+                  }
+                ],
+                "query_result_id": "1e1cb9ff-26a3-42e4-8a37-1b36e2d5a070",
+                "relevance_score": 0.96,
+                "magnitude_score": 0.8,
+                "actionability_score": 0.85,
+                "evidence_score": 1.0,
+                "novelty_score": 0.75,
+                "redundancy_penalty": 0.0,
+                "triviality_penalty": 0.0,
+                "final_score": 0.891,
+                "allowed_claims": [
+                  "Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần."
+                ],
+                "limitations": [],
+                "statement": "Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.",
+                "facts": [
+                  {
+                    "key": "duration",
+                    "value": 413.57416666666666,
+                    "display": "413,57 giờ"
+                  },
+                  {
+                    "key": "count",
+                    "value": 1469.0,
+                    "display": "1.469"
+                  },
+                  {
+                    "key": "avg",
+                    "value": 0.28153449058316316,
+                    "display": "16 phút 54 giây"
+                  }
+                ]
+              },
+              {
+                "insight_id": "b807af5d-c2cb-4cb1-b243-a7eb85ef4f9e",
+                "insight_type": "top_cause_downtime",
+                "domain": "machine_downtime",
+                "title": "Nguyên nhân/nhóm tổn thất nổi bật",
+                "business_question": "Nguyên nhân hoặc nhóm nào đóng góp downtime nhiều nhất?",
+                "primary_entity": "MÁY LỖI PHẦN CƠ",
+                "primary_metric": "cause_total_downtime",
+                "primary_value": 2027950.0,
+                "unit": "seconds",
+                "comparison_entities": [],
+                "comparison_facts": [],
+                "evidence_rows": [
+                  {
+                    "dimension": "ten_ton_that",
+                    "entity": "MÁY LỖI PHẦN CƠ",
+                    "metric": "total_downtime",
+                    "value": 2027950.0
+                  }
+                ],
+                "query_result_id": "d921578f-2a73-459b-a704-72aa84be9a00",
+                "relevance_score": 0.96,
+                "magnitude_score": 0.8,
+                "actionability_score": 0.85,
+                "evidence_score": 1.0,
+                "novelty_score": 0.75,
+                "redundancy_penalty": 0.0,
+                "triviality_penalty": 0.0,
+                "final_score": 0.891,
+                "allowed_claims": [
+                  "MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng."
+                ],
+                "limitations": [],
+                "statement": "MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.",
+                "facts": [
+                  {
+                    "key": "duration",
+                    "value": 563.3194444444445,
+                    "display": "563,32 giờ"
+                  },
+                  {
+                    "key": "count",
+                    "value": 3688.0,
+                    "display": "3.688"
+                  },
+                  {
+                    "key": "avg",
+                    "value": 0.15274388406845024,
+                    "display": "9 phút 10 giây"
+                  }
+                ]
+              },
+              {
+                "insight_id": "a6941bb7-830f-48b0-8440-b3f4fd83856a",
+                "insight_type": "trend",
+                "domain": "machine_downtime",
+                "title": "Ngày có downtime cao nhất",
+                "business_question": "Downtime đạt đỉnh vào thời điểm nào?",
+                "primary_entity": "2025-11-21",
+                "primary_metric": "daily_total_downtime",
+                "primary_value": 183543.0,
+                "unit": "seconds",
+                "comparison_entities": [],
+                "comparison_facts": [],
+                "evidence_rows": [
+                  {
+                    "dimension": "thoi_gian_bat_dau",
+                    "entity": "2025-11-21",
+                    "metric": "total_downtime",
+                    "value": 183543.0
+                  }
+                ],
+                "query_result_id": "c4c7c00d-1656-41ac-9ece-9bda99304b42",
+                "relevance_score": 0.95,
+                "magnitude_score": 0.78,
+                "actionability_score": 0.82,
+                "evidence_score": 1.0,
+                "novelty_score": 0.75,
+                "redundancy_penalty": 0.0,
+                "triviality_penalty": 0.0,
+                "final_score": 0.8775,
+                "allowed_claims": [
+                  "Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng."
+                ],
+                "limitations": [],
+                "statement": "Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+                "facts": [
+                  {
+                    "key": "peak_duration",
+                    "value": 50.98416666666667,
+                    "display": "50,98 giờ"
+                  },
+                  {
+                    "key": "peak_count",
+                    "value": 186.0,
+                    "display": "186"
+                  }
+                ]
+              }
+            ],
+            "comparison_facts": [
+              {
+                "type": "metric_contrast",
+                "fact": "Máy đứng đầu về tổng downtime và Nguyên nhân/nhóm tổn thất nổi bật dùng hai góc nhìn khác nhau: Tổng downtime theo máy so với Tổng downtime theo nguyên nhân."
+              }
+            ],
+            "recommended_chart": {
+              "type": "bar",
+              "dimension": "primary_entity",
+              "metric": "machine_total_downtime",
+              "reason": "Máy đứng đầu về tổng downtime"
+            },
+            "supporting_table": {
+              "columns": [
+                "Phát hiện",
+                "Đối tượng",
+                "Chỉ số",
+                "Giá trị"
+              ],
+              "rows": [
+                {
+                  "Phát hiện": "Máy đứng đầu về tổng downtime",
+                  "Đối tượng": "Máy 11",
+                  "Chỉ số": "Tổng downtime theo máy",
+                  "Giá trị": "413,57 giờ"
+                },
+                {
+                  "Phát hiện": "Nguyên nhân/nhóm tổn thất nổi bật",
+                  "Đối tượng": "MÁY LỖI PHẦN CƠ",
+                  "Chỉ số": "Tổng downtime theo nguyên nhân",
+                  "Giá trị": "563,32 giờ"
+                },
+                {
+                  "Phát hiện": "Ngày có downtime cao nhất",
+                  "Đối tượng": "2025-11-21",
+                  "Chỉ số": "Tổng downtime theo ngày",
+                  "Giá trị": "50,98 giờ"
+                }
+              ]
+            },
+            "data_quality_notes": [
+              "Không phát hiện tỷ lệ thiếu dữ liệu vượt 10% trên các cột nghiệp vụ chính."
+            ],
+            "limitations": [
+              "Kết quả mô tả dữ liệu đã import, không chứng minh quan hệ nhân quả hoặc nguyên nhân kỹ thuật bên ngoài file.",
+              "Các phát hiện được tính từ các cột có sẵn và phụ thuộc chất lượng dữ liệu nguồn."
+            ],
+            "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+            "filters": [],
+            "capability_profile": {
+              "domain_candidates": [
+                {
+                  "domain": "machine_downtime",
+                  "score": 1.1666666666666667,
+                  "evidence": [
+                    "downtime_duration",
+                    "event_end",
+                    "event_start",
+                    "loss_group",
+                    "loss_reason",
+                    "machine"
+                  ]
+                },
+                {
+                  "domain": "loss_assignment",
+                  "score": 0.5,
+                  "evidence": [
+                    "loss_group",
+                    "loss_reason"
+                  ]
+                },
+                {
+                  "domain": "entry_transaction",
+                  "score": 0.0,
+                  "evidence": []
+                }
+              ],
+              "selected_domain": "machine_downtime",
+              "confidence": 1.167,
+              "dimensions": [
+                "may",
+                "ten_ton_that"
+              ],
+              "measures": [],
+              "datetime_columns": [
+                "thoi_gian_bat_dau",
+                "thoi_gian_ket_thuc"
+              ],
+              "duration_columns": [
+                "thoi_luong",
+                "duration_reported_text",
+                "duration_reported_seconds",
+                "duration_calculated_seconds",
+                "duration_difference_seconds",
+                "duration_seconds",
+                "thoi_luong_seconds"
+              ],
+              "supported_analyses": [
+                "record_count",
+                "data_quality",
+                "ranked_contribution",
+                "distribution",
+                "trend"
+              ],
+              "unsupported_analyses": []
+            },
+            "column_profiles": [
+              {
+                "column_name": "no",
+                "display_name": "No.",
+                "data_type": "int64",
+                "semantic_role": "ROW_INDEX",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": true,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 1.0,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.0001,
+                "unit": null,
+                "confidence": 0.95,
+                "evidence": [
+                  "row_index_pattern"
+                ]
+              },
+              {
+                "column_name": "may",
+                "display_name": "Máy",
+                "data_type": "object",
+                "semantic_role": "CATEGORICAL_DIMENSION",
+                "business_role": "machine",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": true,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.001,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.1807,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "categorical_values"
+                ]
+              },
+              {
+                "column_name": "thoi_gian_bat_dau",
+                "display_name": "Thời gian bắt đầu",
+                "data_type": "datetime64[ns]",
+                "semantic_role": "DATETIME",
+                "business_role": "event_start",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": true,
+                "is_duration": false,
+                "unique_ratio": 1.0,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.0001,
+                "unit": null,
+                "confidence": 0.95,
+                "evidence": [
+                  "datetime_role_or_values"
+                ]
+              },
+              {
+                "column_name": "thoi_gian_ket_thuc",
+                "display_name": "Thời gian kết thúc",
+                "data_type": "datetime64[ns]",
+                "semantic_role": "DATETIME",
+                "business_role": "event_end",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": true,
+                "is_duration": false,
+                "unique_ratio": 1.0,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.0001,
+                "unit": null,
+                "confidence": 0.95,
+                "evidence": [
+                  "datetime_role_or_values"
+                ]
+              },
+              {
+                "column_name": "thoi_luong",
+                "display_name": "Thời lượng",
+                "data_type": "object",
+                "semantic_role": "DURATION",
+                "business_role": "downtime_duration",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": true,
+                "unique_ratio": 0.2625,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.008,
+                "unit": null,
+                "confidence": 0.95,
+                "evidence": [
+                  "duration_role_or_name"
+                ]
+              },
+              {
+                "column_name": "ten_ton_that",
+                "display_name": "Tên tổn thất",
+                "data_type": "object",
+                "semantic_role": "CATEGORICAL_DIMENSION",
+                "business_role": "loss_reason",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": true,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0014,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.403,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "categorical_values"
+                ]
+              },
+              {
+                "column_name": "nhom_ton_that",
+                "display_name": "Nhóm tổn thất",
+                "data_type": "object",
+                "semantic_role": "CATEGORICAL_DIMENSION",
+                "business_role": "loss_group",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": true,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0001,
+                "null_ratio": 0.0,
+                "constant_ratio": 1.0,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "categorical_values"
+                ]
+              },
+              {
+                "column_name": "loai_ton_that",
+                "display_name": "Loại tổn thất",
+                "data_type": "object",
+                "semantic_role": "CATEGORICAL_DIMENSION",
+                "business_role": "loss_group",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": true,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0001,
+                "null_ratio": 0.0,
+                "constant_ratio": 1.0,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "categorical_values"
+                ]
+              },
+              {
+                "column_name": "note",
+                "display_name": "Note",
+                "data_type": "object",
+                "semantic_role": "ROW_INDEX",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": true,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0,
+                "null_ratio": 1.0,
+                "constant_ratio": 0.0,
+                "unit": null,
+                "confidence": 0.95,
+                "evidence": [
+                  "row_index_pattern"
+                ]
+              },
+              {
+                "column_name": "_source_file_id",
+                "display_name": "_source_file_id",
+                "data_type": "object",
+                "semantic_role": "TECHNICAL_METADATA",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0001,
+                "null_ratio": 0.0,
+                "constant_ratio": 1.0,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "technical_name_or_role"
+                ]
+              },
+              {
+                "column_name": "_source_file_name",
+                "display_name": "_source_file_name",
+                "data_type": "object",
+                "semantic_role": "TECHNICAL_METADATA",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0001,
+                "null_ratio": 0.0,
+                "constant_ratio": 1.0,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "technical_name_or_role"
+                ]
+              },
+              {
+                "column_name": "_source_file",
+                "display_name": "_source_file",
+                "data_type": "object",
+                "semantic_role": "TECHNICAL_METADATA",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0001,
+                "null_ratio": 0.0,
+                "constant_ratio": 1.0,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "technical_name_or_role"
+                ]
+              },
+              {
+                "column_name": "_source_sheet",
+                "display_name": "_source_sheet",
+                "data_type": "object",
+                "semantic_role": "TECHNICAL_METADATA",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0001,
+                "null_ratio": 0.0,
+                "constant_ratio": 1.0,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "technical_name_or_role"
+                ]
+              },
+              {
+                "column_name": "_source_excel_row",
+                "display_name": "_source_excel_row",
+                "data_type": "int64",
+                "semantic_role": "TECHNICAL_METADATA",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 1.0,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.0001,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "technical_name_or_role"
+                ]
+              },
+              {
+                "column_name": "_source_header_row",
+                "display_name": "_source_header_row",
+                "data_type": "int64",
+                "semantic_role": "TECHNICAL_METADATA",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0001,
+                "null_ratio": 0.0,
+                "constant_ratio": 1.0,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "technical_name_or_role"
+                ]
+              },
+              {
+                "column_name": "_data_row_index",
+                "display_name": "_data_row_index",
+                "data_type": "int64",
+                "semantic_role": "ROW_INDEX",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": true,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 1.0,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.0001,
+                "unit": null,
+                "confidence": 0.95,
+                "evidence": [
+                  "row_index_pattern"
+                ]
+              },
+              {
+                "column_name": "_record_no",
+                "display_name": "_record_no",
+                "data_type": "int64",
+                "semantic_role": "ROW_INDEX",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": true,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 1.0,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.0001,
+                "unit": null,
+                "confidence": 0.95,
+                "evidence": [
+                  "row_index_pattern"
+                ]
+              },
+              {
+                "column_name": "_source_row",
+                "display_name": "_source_row",
+                "data_type": "int64",
+                "semantic_role": "ROW_INDEX",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": true,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 1.0,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.0001,
+                "unit": null,
+                "confidence": 0.95,
+                "evidence": [
+                  "row_index_pattern"
+                ]
+              },
+              {
+                "column_name": "_import_id",
+                "display_name": "_import_id",
+                "data_type": "object",
+                "semantic_role": "IDENTIFIER",
+                "business_role": null,
+                "is_identifier": true,
+                "is_row_index": false,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0001,
+                "null_ratio": 0.0,
+                "constant_ratio": 1.0,
+                "unit": null,
+                "confidence": 0.95,
+                "evidence": [
+                  "identifier_pattern"
+                ]
+              },
+              {
+                "column_name": "duration_reported_text",
+                "display_name": "duration_reported_text",
+                "data_type": "object",
+                "semantic_role": "DURATION",
+                "business_role": "downtime_duration",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": true,
+                "unique_ratio": 0.2625,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.008,
+                "unit": null,
+                "confidence": 0.95,
+                "evidence": [
+                  "duration_role_or_name"
+                ]
+              },
+              {
+                "column_name": "duration_reported_seconds",
+                "display_name": "duration_reported_seconds",
+                "data_type": "float64",
+                "semantic_role": "DURATION",
+                "business_role": "downtime_duration",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": true,
+                "unique_ratio": 0.2625,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.008,
+                "unit": "seconds",
+                "confidence": 0.95,
+                "evidence": [
+                  "duration_role_or_name"
+                ]
+              },
+              {
+                "column_name": "duration_calculated_seconds",
+                "display_name": "duration_calculated_seconds",
+                "data_type": "float64",
+                "semantic_role": "DURATION",
+                "business_role": "downtime_duration",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": true,
+                "unique_ratio": 0.9924,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.0002,
+                "unit": "seconds",
+                "confidence": 0.95,
+                "evidence": [
+                  "duration_role_or_name"
+                ]
+              },
+              {
+                "column_name": "duration_difference_seconds",
+                "display_name": "duration_difference_seconds",
+                "data_type": "float64",
+                "semantic_role": "DURATION",
+                "business_role": "downtime_duration",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": true,
+                "unique_ratio": 0.3882,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.0014,
+                "unit": "seconds",
+                "confidence": 0.95,
+                "evidence": [
+                  "duration_role_or_name"
+                ]
+              },
+              {
+                "column_name": "duration_anomaly",
+                "display_name": "duration_anomaly",
+                "data_type": "bool",
+                "semantic_role": "DURATION",
+                "business_role": "downtime_duration",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": true,
+                "unique_ratio": 0.0001,
+                "null_ratio": 0.0,
+                "constant_ratio": 1.0,
+                "unit": null,
+                "confidence": 0.95,
+                "evidence": [
+                  "duration_role_or_name"
+                ]
+              },
+              {
+                "column_name": "duration_seconds",
+                "display_name": "duration_seconds",
+                "data_type": "float64",
+                "semantic_role": "DURATION",
+                "business_role": "downtime_duration",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": true,
+                "unique_ratio": 0.2625,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.008,
+                "unit": "seconds",
+                "confidence": 0.95,
+                "evidence": [
+                  "duration_role_or_name"
+                ]
+              },
+              {
+                "column_name": "thoi_luong_seconds",
+                "display_name": "thoi_luong_seconds",
+                "data_type": "float64",
+                "semantic_role": "DURATION",
+                "business_role": "downtime_duration",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": false,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": true,
+                "unique_ratio": 0.2625,
+                "null_ratio": 0.0,
+                "constant_ratio": 0.008,
+                "unit": "seconds",
+                "confidence": 0.95,
+                "evidence": [
+                  "duration_role_or_name"
+                ]
+              },
+              {
+                "column_name": "_duplicate_group_size",
+                "display_name": "_duplicate_group_size",
+                "data_type": "int64",
+                "semantic_role": "TECHNICAL_METADATA",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0001,
+                "null_ratio": 0.0,
+                "constant_ratio": 1.0,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "technical_name_or_role"
+                ]
+              },
+              {
+                "column_name": "_is_exact_duplicate",
+                "display_name": "_is_exact_duplicate",
+                "data_type": "bool",
+                "semantic_role": "TECHNICAL_METADATA",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0001,
+                "null_ratio": 0.0,
+                "constant_ratio": 1.0,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "technical_name_or_role"
+                ]
+              },
+              {
+                "column_name": "_duplicate_group_id",
+                "display_name": "_duplicate_group_id",
+                "data_type": "object",
+                "semantic_role": "TECHNICAL_METADATA",
+                "business_role": null,
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0,
+                "null_ratio": 1.0,
+                "constant_ratio": 0.0,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "technical_name_or_role"
+                ]
+              },
+              {
+                "column_name": "_overlaps_same_machine",
+                "display_name": "_overlaps_same_machine",
+                "data_type": "bool",
+                "semantic_role": "TECHNICAL_METADATA",
+                "business_role": "machine",
+                "is_identifier": false,
+                "is_row_index": false,
+                "is_technical_metadata": true,
+                "is_measure": false,
+                "is_dimension": false,
+                "is_datetime": false,
+                "is_duration": false,
+                "unique_ratio": 0.0001,
+                "null_ratio": 0.0,
+                "constant_ratio": 1.0,
+                "unit": null,
+                "confidence": 0.82,
+                "evidence": [
+                  "technical_name_or_role"
+                ]
+              }
+            ],
+            "quality_warnings": []
+          }
+        },
+        "lineage": {
+          "conversation_id": "74808a4c-f8c4-4046-a11e-2670424a85b4",
+          "turn_id": "aed91d8d-50e9-4249-8650-f58df11ba5a1",
+          "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "request_contract_id": "da8ac7f0-cdca-4efc-ab9f-61e57c8c6b68",
+          "query_plan_id": "7cbea3f6-e495-46a2-a778-1a9dfa40a19b",
+          "query_result_id": "df9ee978-6cb5-4036-b2c4-b42aa7d17d7d",
+          "answer_brief_id": "b4e32338-e5ca-4485-9dac-735ea595e469",
+          "chart_spec_id": "6f16daaf-d487-40f3-b156-cb911304256b",
+          "report_artifact_id": "569b7c66-d406-4a4a-86e4-e6114b044ec4"
+        },
+        "request_contract": {
+          "relation_to_previous_turn": "NEW_REQUEST",
+          "intent": "commentary",
+          "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "dimensions": [
+            "machine"
+          ],
+          "metrics": [
+            "total_downtime",
+            "count"
+          ],
+          "aggregations": [
+            "sum",
+            "count"
+          ],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "derived_metrics": [],
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "report_sections": [],
+          "commentary_requirements": [],
+          "inherited_fields": [],
+          "explicitly_reset_fields": [
+            "dimension",
+            "metric",
+            "filter",
+            "time_range",
+            "chart_type",
+            "top_n"
+          ]
+        },
+        "request_contract_id": "da8ac7f0-cdca-4efc-ab9f-61e57c8c6b68",
+        "query_plan_id": "7cbea3f6-e495-46a2-a778-1a9dfa40a19b",
+        "query_result_id": "df9ee978-6cb5-4036-b2c4-b42aa7d17d7d",
+        "answer_brief_id": "b4e32338-e5ca-4485-9dac-735ea595e469",
+        "chart_spec_id": "6f16daaf-d487-40f3-b156-cb911304256b",
+        "report_artifact_id": "569b7c66-d406-4a4a-86e4-e6114b044ec4",
+        "public_response_validation": {
+          "internal_keys": [],
+          "unaccented_vietnamese": [],
+          "clean": true
+        },
+        "localization_validation": {
+          "internal_keys": [],
+          "unaccented_vietnamese": [],
+          "passed": true
+        },
+        "metadata_leakage_validation": {
+          "internal_keys": [],
+          "passed": true
+        },
+        "narrative_quality_validation": {
+          "invalid": [],
+          "clean": true
+        },
+        "public_response_validation_after_repair": {
+          "internal_keys": [],
+          "unaccented_vietnamese": [],
+          "clean": true
+        },
+        "narrative_quality_validation_after_repair": {
+          "invalid": [],
+          "clean": true
+        }
+      }
+    },
+    "persisted_message_snapshot": [
+      {
+        "id": "2f35e9ec-2dbd-4726-abf5-a0950a5c24f4",
+        "conversation_id": "74808a4c-f8c4-4046-a11e-2670424a85b4",
+        "turn_index": 1,
+        "role": "user",
+        "content": "Hãy phân tích tổng quan file này, gồm số bản ghi, khoảng thời gian, số máy được ghi nhận và ba phát hiện quan trọng nhất đối với người quản lý vận hành. Mỗi phát hiện phải có số liệu chứng minh.",
+        "execution_mode": null,
+        "query_plan_json": null,
+        "result_summary_json": null,
+        "response_json": null,
+        "created_at": "2026-06-25T06:56:42.497071+00:00"
+      },
+      {
+        "id": "2637e3e8-8483-4c80-8758-d24e1b6283d9",
+        "conversation_id": "74808a4c-f8c4-4046-a11e-2670424a85b4",
+        "turn_index": 2,
+        "role": "assistant",
+        "content": "File có 9.151 bản ghi và 30 cột.\nKhoảng thời gian ghi nhận là 2025-11-03 đến 2026-02-03.\nDữ liệu ghi nhận 9 máy.\nBa phát hiện quan trọng nhất cho quản lý vận hành:\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+        "execution_mode": "DETERMINISTIC",
+        "query_plan_json": null,
+        "result_summary_json": null,
+        "response_json": "{\"message_id\": \"14b9d90b-06c1-46bb-bb66-9831bc5761bc\", \"conversation_id\": \"74808a4c-f8c4-4046-a11e-2670424a85b4\", \"response_type\": \"analysis\", \"title\": \"Phân tích tổng quan\", \"summary\": \"File có 9.151 bản ghi và 30 cột.\\nKhoảng thời gian ghi nhận là 2025-11-03 đến 2026-02-03.\\nDữ liệu ghi nhận 9 máy.\\nBa phát hiện quan trọng nhất cho quản lý vận hành:\\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.\", \"primary_value\": null, \"secondary_value\": null, \"table\": {\"columns\": [\"Phát hiện\", \"Đối tượng\", \"Chỉ số\", \"Giá trị\"], \"rows\": [{\"Phát hiện\": \"Máy đứng đầu về tổng downtime\", \"Đối tượng\": \"Máy 11\", \"Chỉ số\": \"Tổng downtime theo máy\", \"Giá trị\": \"413,57 giờ\"}, {\"Phát hiện\": \"Nguyên nhân/nhóm tổn thất nổi bật\", \"Đối tượng\": \"MÁY LỖI PHẦN CƠ\", \"Chỉ số\": \"Tổng downtime theo nguyên nhân\", \"Giá trị\": \"563,32 giờ\"}, {\"Phát hiện\": \"Ngày có downtime cao nhất\", \"Đối tượng\": \"2025-11-21\", \"Chỉ số\": \"Tổng downtime theo ngày\", \"Giá trị\": \"50,98 giờ\"}]}, \"chart\": null, \"dashboard\": null, \"analysis\": {\"headline\": \"Phân tích tổng quan\", \"summary\": \"File có 9.151 bản ghi và 30 cột.\\nKhoảng thời gian ghi nhận là 2025-11-03 đến 2026-02-03.\\nDữ liệu ghi nhận 9 máy.\\nBa phát hiện quan trọng nhất cho quản lý vận hành:\\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.\", \"insights\": [{\"text\": \"Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\", \"evidence\": [\"413,57 giờ\", \"1.469\", \"16 phút 54 giây\"]}, {\"text\": \"MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\", \"evidence\": [\"563,32 giờ\", \"3.688\", \"9 phút 10 giây\"]}, {\"text\": \"Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.\", \"evidence\": [\"50,98 giờ\", \"186\"]}], \"table\": {\"columns\": [\"Phát hiện\", \"Đối tượng\", \"Chỉ số\", \"Giá trị\"], \"rows\": [{\"Phát hiện\": \"Máy đứng đầu về tổng downtime\", \"Đối tượng\": \"Máy 11\", \"Chỉ số\": \"Tổng downtime theo máy\", \"Giá trị\": \"413,57 giờ\"}, {\"Phát hiện\": \"Nguyên nhân/nhóm tổn thất nổi bật\", \"Đối tượng\": \"MÁY LỖI PHẦN CƠ\", \"Chỉ số\": \"Tổng downtime theo nguyên nhân\", \"Giá trị\": \"563,32 giờ\"}, {\"Phát hiện\": \"Ngày có downtime cao nhất\", \"Đối tượng\": \"2025-11-21\", \"Chỉ số\": \"Tổng downtime theo ngày\", \"Giá trị\": \"50,98 giờ\"}]}}, \"report\": null, \"sources\": [{\"name\": \"Machine_Downtime_20260203_100753.xlsx · Report\", \"rows\": 9151}], \"filters\": [], \"downloads\": [], \"metadata\": {\"execution_mode\": \"DETERMINISTIC\", \"routing_reason\": \"overview_detailed_quality_prompt\", \"llm_called\": false, \"llm_call_count\": 0, \"overview_metrics\": {\"record_count\": 9151, \"machine_count\": 9, \"date_range\": {\"column\": \"thoi_gian_bat_dau\", \"start\": \"2025-11-03\", \"end\": \"2026-02-03\"}}, \"latency_ms\": {\"total\": 511.0}, \"active_file_id\": \"e385c6e2a4ff41a8baf63f323dfc0b59\", \"active_file_name\": \"Machine_Downtime_20260203_100753.xlsx\", \"file_scope_validated\": true, \"debug\": {\"answer_brief\": {\"dataset_description\": \"File chứa dữ liệu dừng máy/downtime từ 2025-11-03 đến 2026-02-03, gồm 9.151 bản ghi và 30 cột.\", \"record_count\": 9151, \"column_count\": 30, \"date_range\": {\"column\": \"thoi_gian_bat_dau\", \"start\": \"2025-11-03\", \"end\": \"2026-02-03\"}, \"business_dimensions\": [\"may\", \"ten_ton_that\"], \"business_measures\": [\"thoi_luong\", \"duration_reported_text\", \"duration_reported_seconds\", \"duration_calculated_seconds\", \"duration_difference_seconds\", \"duration_seconds\", \"thoi_luong_seconds\"], \"selected_insights\": [{\"insight_id\": \"2276fcd4-eccb-4e6b-aefe-4a23e8c2cf7a\", \"insight_type\": \"top_machine_downtime\", \"domain\": \"machine_downtime\", \"title\": \"Máy đứng đầu về tổng downtime\", \"business_question\": \"Máy nào tạo tổng downtime lớn nhất?\", \"primary_entity\": \"Máy 11\", \"primary_metric\": \"machine_total_downtime\", \"primary_value\": 1488867.0, \"unit\": \"seconds\", \"comparison_entities\": [], \"comparison_facts\": [], \"evidence_rows\": [{\"dimension\": \"may\", \"entity\": \"Máy 11\", \"metric\": \"total_downtime\", \"value\": 1488867.0}], \"query_result_id\": \"1e1cb9ff-26a3-42e4-8a37-1b36e2d5a070\", \"relevance_score\": 0.96, \"magnitude_score\": 0.8, \"actionability_score\": 0.85, \"evidence_score\": 1.0, \"novelty_score\": 0.75, \"redundancy_penalty\": 0.0, \"triviality_penalty\": 0.0, \"final_score\": 0.891, \"allowed_claims\": [\"Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\"], \"limitations\": [], \"statement\": \"Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\", \"facts\": [{\"key\": \"duration\", \"value\": 413.57416666666666, \"display\": \"413,57 giờ\"}, {\"key\": \"count\", \"value\": 1469.0, \"display\": \"1.469\"}, {\"key\": \"avg\", \"value\": 0.28153449058316316, \"display\": \"16 phút 54 giây\"}]}, {\"insight_id\": \"b807af5d-c2cb-4cb1-b243-a7eb85ef4f9e\", \"insight_type\": \"top_cause_downtime\", \"domain\": \"machine_downtime\", \"title\": \"Nguyên nhân/nhóm tổn thất nổi bật\", \"business_question\": \"Nguyên nhân hoặc nhóm nào đóng góp downtime nhiều nhất?\", \"primary_entity\": \"MÁY LỖI PHẦN CƠ\", \"primary_metric\": \"cause_total_downtime\", \"primary_value\": 2027950.0, \"unit\": \"seconds\", \"comparison_entities\": [], \"comparison_facts\": [], \"evidence_rows\": [{\"dimension\": \"ten_ton_that\", \"entity\": \"MÁY LỖI PHẦN CƠ\", \"metric\": \"total_downtime\", \"value\": 2027950.0}], \"query_result_id\": \"d921578f-2a73-459b-a704-72aa84be9a00\", \"relevance_score\": 0.96, \"magnitude_score\": 0.8, \"actionability_score\": 0.85, \"evidence_score\": 1.0, \"novelty_score\": 0.75, \"redundancy_penalty\": 0.0, \"triviality_penalty\": 0.0, \"final_score\": 0.891, \"allowed_claims\": [\"MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\"], \"limitations\": [], \"statement\": \"MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\", \"facts\": [{\"key\": \"duration\", \"value\": 563.3194444444445, \"display\": \"563,32 giờ\"}, {\"key\": \"count\", \"value\": 3688.0, \"display\": \"3.688\"}, {\"key\": \"avg\", \"value\": 0.15274388406845024, \"display\": \"9 phút 10 giây\"}]}, {\"insight_id\": \"a6941bb7-830f-48b0-8440-b3f4fd83856a\", \"insight_type\": \"trend\", \"domain\": \"machine_downtime\", \"title\": \"Ngày có downtime cao nhất\", \"business_question\": \"Downtime đạt đỉnh vào thời điểm nào?\", \"primary_entity\": \"2025-11-21\", \"primary_metric\": \"daily_total_downtime\", \"primary_value\": 183543.0, \"unit\": \"seconds\", \"comparison_entities\": [], \"comparison_facts\": [], \"evidence_rows\": [{\"dimension\": \"thoi_gian_bat_dau\", \"entity\": \"2025-11-21\", \"metric\": \"total_downtime\", \"value\": 183543.0}], \"query_result_id\": \"c4c7c00d-1656-41ac-9ece-9bda99304b42\", \"relevance_score\": 0.95, \"magnitude_score\": 0.78, \"actionability_score\": 0.82, \"evidence_score\": 1.0, \"novelty_score\": 0.75, \"redundancy_penalty\": 0.0, \"triviality_penalty\": 0.0, \"final_score\": 0.8775, \"allowed_claims\": [\"Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.\"], \"limitations\": [], \"statement\": \"Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.\", \"facts\": [{\"key\": \"peak_duration\", \"value\": 50.98416666666667, \"display\": \"50,98 giờ\"}, {\"key\": \"peak_count\", \"value\": 186.0, \"display\": \"186\"}]}], \"comparison_facts\": [{\"type\": \"metric_contrast\", \"fact\": \"Máy đứng đầu về tổng downtime và Nguyên nhân/nhóm tổn thất nổi bật dùng hai góc nhìn khác nhau: Tổng downtime theo máy so với Tổng downtime theo nguyên nhân.\"}], \"recommended_chart\": {\"type\": \"bar\", \"dimension\": \"primary_entity\", \"metric\": \"machine_total_downtime\", \"reason\": \"Máy đứng đầu về tổng downtime\"}, \"supporting_table\": {\"columns\": [\"Phát hiện\", \"Đối tượng\", \"Chỉ số\", \"Giá trị\"], \"rows\": [{\"Phát hiện\": \"Máy đứng đầu về tổng downtime\", \"Đối tượng\": \"Máy 11\", \"Chỉ số\": \"Tổng downtime theo máy\", \"Giá trị\": \"413,57 giờ\"}, {\"Phát hiện\": \"Nguyên nhân/nhóm tổn thất nổi bật\", \"Đối tượng\": \"MÁY LỖI PHẦN CƠ\", \"Chỉ số\": \"Tổng downtime theo nguyên nhân\", \"Giá trị\": \"563,32 giờ\"}, {\"Phát hiện\": \"Ngày có downtime cao nhất\", \"Đối tượng\": \"2025-11-21\", \"Chỉ số\": \"Tổng downtime theo ngày\", \"Giá trị\": \"50,98 giờ\"}]}, \"data_quality_notes\": [\"Không phát hiện tỷ lệ thiếu dữ liệu vượt 10% trên các cột nghiệp vụ chính.\"], \"limitations\": [\"Kết quả mô tả dữ liệu đã import, không chứng minh quan hệ nhân quả hoặc nguyên nhân kỹ thuật bên ngoài file.\", \"Các phát hiện được tính từ các cột có sẵn và phụ thuộc chất lượng dữ liệu nguồn.\"], \"source_file_name\": \"Machine_Downtime_20260203_100753.xlsx\", \"filters\": [], \"capability_profile\": {\"domain_candidates\": [{\"domain\": \"machine_downtime\", \"score\": 1.1666666666666667, \"evidence\": [\"downtime_duration\", \"event_end\", \"event_start\", \"loss_group\", \"loss_reason\", \"machine\"]}, {\"domain\": \"loss_assignment\", \"score\": 0.5, \"evidence\": [\"loss_group\", \"loss_reason\"]}, {\"domain\": \"entry_transaction\", \"score\": 0.0, \"evidence\": []}], \"selected_domain\": \"machine_downtime\", \"confidence\": 1.167, \"dimensions\": [\"may\", \"ten_ton_that\"], \"measures\": [], \"datetime_columns\": [\"thoi_gian_bat_dau\", \"thoi_gian_ket_thuc\"], \"duration_columns\": [\"thoi_luong\", \"duration_reported_text\", \"duration_reported_seconds\", \"duration_calculated_seconds\", \"duration_difference_seconds\", \"duration_seconds\", \"thoi_luong_seconds\"], \"supported_analyses\": [\"record_count\", \"data_quality\", \"ranked_contribution\", \"distribution\", \"trend\"], \"unsupported_analyses\": []}, \"column_profiles\": [{\"column_name\": \"no\", \"display_name\": \"No.\", \"data_type\": \"int64\", \"semantic_role\": \"ROW_INDEX\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": true, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 1.0, \"null_ratio\": 0.0, \"constant_ratio\": 0.0001, \"unit\": null, \"confidence\": 0.95, \"evidence\": [\"row_index_pattern\"]}, {\"column_name\": \"may\", \"display_name\": \"Máy\", \"data_type\": \"object\", \"semantic_role\": \"CATEGORICAL_DIMENSION\", \"business_role\": \"machine\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": true, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.001, \"null_ratio\": 0.0, \"constant_ratio\": 0.1807, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"categorical_values\"]}, {\"column_name\": \"thoi_gian_bat_dau\", \"display_name\": \"Thời gian bắt đầu\", \"data_type\": \"datetime64[ns]\", \"semantic_role\": \"DATETIME\", \"business_role\": \"event_start\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": true, \"is_duration\": false, \"unique_ratio\": 1.0, \"null_ratio\": 0.0, \"constant_ratio\": 0.0001, \"unit\": null, \"confidence\": 0.95, \"evidence\": [\"datetime_role_or_values\"]}, {\"column_name\": \"thoi_gian_ket_thuc\", \"display_name\": \"Thời gian kết thúc\", \"data_type\": \"datetime64[ns]\", \"semantic_role\": \"DATETIME\", \"business_role\": \"event_end\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": true, \"is_duration\": false, \"unique_ratio\": 1.0, \"null_ratio\": 0.0, \"constant_ratio\": 0.0001, \"unit\": null, \"confidence\": 0.95, \"evidence\": [\"datetime_role_or_values\"]}, {\"column_name\": \"thoi_luong\", \"display_name\": \"Thời lượng\", \"data_type\": \"object\", \"semantic_role\": \"DURATION\", \"business_role\": \"downtime_duration\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": true, \"unique_ratio\": 0.2625, \"null_ratio\": 0.0, \"constant_ratio\": 0.008, \"unit\": null, \"confidence\": 0.95, \"evidence\": [\"duration_role_or_name\"]}, {\"column_name\": \"ten_ton_that\", \"display_name\": \"Tên tổn thất\", \"data_type\": \"object\", \"semantic_role\": \"CATEGORICAL_DIMENSION\", \"business_role\": \"loss_reason\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": true, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0014, \"null_ratio\": 0.0, \"constant_ratio\": 0.403, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"categorical_values\"]}, {\"column_name\": \"nhom_ton_that\", \"display_name\": \"Nhóm tổn thất\", \"data_type\": \"object\", \"semantic_role\": \"CATEGORICAL_DIMENSION\", \"business_role\": \"loss_group\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": true, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0001, \"null_ratio\": 0.0, \"constant_ratio\": 1.0, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"categorical_values\"]}, {\"column_name\": \"loai_ton_that\", \"display_name\": \"Loại tổn thất\", \"data_type\": \"object\", \"semantic_role\": \"CATEGORICAL_DIMENSION\", \"business_role\": \"loss_group\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": true, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0001, \"null_ratio\": 0.0, \"constant_ratio\": 1.0, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"categorical_values\"]}, {\"column_name\": \"note\", \"display_name\": \"Note\", \"data_type\": \"object\", \"semantic_role\": \"ROW_INDEX\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": true, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0, \"null_ratio\": 1.0, \"constant_ratio\": 0.0, \"unit\": null, \"confidence\": 0.95, \"evidence\": [\"row_index_pattern\"]}, {\"column_name\": \"_source_file_id\", \"display_name\": \"_source_file_id\", \"data_type\": \"object\", \"semantic_role\": \"TECHNICAL_METADATA\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0001, \"null_ratio\": 0.0, \"constant_ratio\": 1.0, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"technical_name_or_role\"]}, {\"column_name\": \"_source_file_name\", \"display_name\": \"_source_file_name\", \"data_type\": \"object\", \"semantic_role\": \"TECHNICAL_METADATA\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0001, \"null_ratio\": 0.0, \"constant_ratio\": 1.0, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"technical_name_or_role\"]}, {\"column_name\": \"_source_file\", \"display_name\": \"_source_file\", \"data_type\": \"object\", \"semantic_role\": \"TECHNICAL_METADATA\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0001, \"null_ratio\": 0.0, \"constant_ratio\": 1.0, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"technical_name_or_role\"]}, {\"column_name\": \"_source_sheet\", \"display_name\": \"_source_sheet\", \"data_type\": \"object\", \"semantic_role\": \"TECHNICAL_METADATA\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0001, \"null_ratio\": 0.0, \"constant_ratio\": 1.0, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"technical_name_or_role\"]}, {\"column_name\": \"_source_excel_row\", \"display_name\": \"_source_excel_row\", \"data_type\": \"int64\", \"semantic_role\": \"TECHNICAL_METADATA\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 1.0, \"null_ratio\": 0.0, \"constant_ratio\": 0.0001, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"technical_name_or_role\"]}, {\"column_name\": \"_source_header_row\", \"display_name\": \"_source_header_row\", \"data_type\": \"int64\", \"semantic_role\": \"TECHNICAL_METADATA\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0001, \"null_ratio\": 0.0, \"constant_ratio\": 1.0, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"technical_name_or_role\"]}, {\"column_name\": \"_data_row_index\", \"display_name\": \"_data_row_index\", \"data_type\": \"int64\", \"semantic_role\": \"ROW_INDEX\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": true, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 1.0, \"null_ratio\": 0.0, \"constant_ratio\": 0.0001, \"unit\": null, \"confidence\": 0.95, \"evidence\": [\"row_index_pattern\"]}, {\"column_name\": \"_record_no\", \"display_name\": \"_record_no\", \"data_type\": \"int64\", \"semantic_role\": \"ROW_INDEX\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": true, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 1.0, \"null_ratio\": 0.0, \"constant_ratio\": 0.0001, \"unit\": null, \"confidence\": 0.95, \"evidence\": [\"row_index_pattern\"]}, {\"column_name\": \"_source_row\", \"display_name\": \"_source_row\", \"data_type\": \"int64\", \"semantic_role\": \"ROW_INDEX\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": true, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 1.0, \"null_ratio\": 0.0, \"constant_ratio\": 0.0001, \"unit\": null, \"confidence\": 0.95, \"evidence\": [\"row_index_pattern\"]}, {\"column_name\": \"_import_id\", \"display_name\": \"_import_id\", \"data_type\": \"object\", \"semantic_role\": \"IDENTIFIER\", \"business_role\": null, \"is_identifier\": true, \"is_row_index\": false, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0001, \"null_ratio\": 0.0, \"constant_ratio\": 1.0, \"unit\": null, \"confidence\": 0.95, \"evidence\": [\"identifier_pattern\"]}, {\"column_name\": \"duration_reported_text\", \"display_name\": \"duration_reported_text\", \"data_type\": \"object\", \"semantic_role\": \"DURATION\", \"business_role\": \"downtime_duration\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": true, \"unique_ratio\": 0.2625, \"null_ratio\": 0.0, \"constant_ratio\": 0.008, \"unit\": null, \"confidence\": 0.95, \"evidence\": [\"duration_role_or_name\"]}, {\"column_name\": \"duration_reported_seconds\", \"display_name\": \"duration_reported_seconds\", \"data_type\": \"float64\", \"semantic_role\": \"DURATION\", \"business_role\": \"downtime_duration\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": true, \"unique_ratio\": 0.2625, \"null_ratio\": 0.0, \"constant_ratio\": 0.008, \"unit\": \"seconds\", \"confidence\": 0.95, \"evidence\": [\"duration_role_or_name\"]}, {\"column_name\": \"duration_calculated_seconds\", \"display_name\": \"duration_calculated_seconds\", \"data_type\": \"float64\", \"semantic_role\": \"DURATION\", \"business_role\": \"downtime_duration\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": true, \"unique_ratio\": 0.9924, \"null_ratio\": 0.0, \"constant_ratio\": 0.0002, \"unit\": \"seconds\", \"confidence\": 0.95, \"evidence\": [\"duration_role_or_name\"]}, {\"column_name\": \"duration_difference_seconds\", \"display_name\": \"duration_difference_seconds\", \"data_type\": \"float64\", \"semantic_role\": \"DURATION\", \"business_role\": \"downtime_duration\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": true, \"unique_ratio\": 0.3882, \"null_ratio\": 0.0, \"constant_ratio\": 0.0014, \"unit\": \"seconds\", \"confidence\": 0.95, \"evidence\": [\"duration_role_or_name\"]}, {\"column_name\": \"duration_anomaly\", \"display_name\": \"duration_anomaly\", \"data_type\": \"bool\", \"semantic_role\": \"DURATION\", \"business_role\": \"downtime_duration\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": true, \"unique_ratio\": 0.0001, \"null_ratio\": 0.0, \"constant_ratio\": 1.0, \"unit\": null, \"confidence\": 0.95, \"evidence\": [\"duration_role_or_name\"]}, {\"column_name\": \"duration_seconds\", \"display_name\": \"duration_seconds\", \"data_type\": \"float64\", \"semantic_role\": \"DURATION\", \"business_role\": \"downtime_duration\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": true, \"unique_ratio\": 0.2625, \"null_ratio\": 0.0, \"constant_ratio\": 0.008, \"unit\": \"seconds\", \"confidence\": 0.95, \"evidence\": [\"duration_role_or_name\"]}, {\"column_name\": \"thoi_luong_seconds\", \"display_name\": \"thoi_luong_seconds\", \"data_type\": \"float64\", \"semantic_role\": \"DURATION\", \"business_role\": \"downtime_duration\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": false, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": true, \"unique_ratio\": 0.2625, \"null_ratio\": 0.0, \"constant_ratio\": 0.008, \"unit\": \"seconds\", \"confidence\": 0.95, \"evidence\": [\"duration_role_or_name\"]}, {\"column_name\": \"_duplicate_group_size\", \"display_name\": \"_duplicate_group_size\", \"data_type\": \"int64\", \"semantic_role\": \"TECHNICAL_METADATA\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0001, \"null_ratio\": 0.0, \"constant_ratio\": 1.0, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"technical_name_or_role\"]}, {\"column_name\": \"_is_exact_duplicate\", \"display_name\": \"_is_exact_duplicate\", \"data_type\": \"bool\", \"semantic_role\": \"TECHNICAL_METADATA\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0001, \"null_ratio\": 0.0, \"constant_ratio\": 1.0, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"technical_name_or_role\"]}, {\"column_name\": \"_duplicate_group_id\", \"display_name\": \"_duplicate_group_id\", \"data_type\": \"object\", \"semantic_role\": \"TECHNICAL_METADATA\", \"business_role\": null, \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0, \"null_ratio\": 1.0, \"constant_ratio\": 0.0, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"technical_name_or_role\"]}, {\"column_name\": \"_overlaps_same_machine\", \"display_name\": \"_overlaps_same_machine\", \"data_type\": \"bool\", \"semantic_role\": \"TECHNICAL_METADATA\", \"business_role\": \"machine\", \"is_identifier\": false, \"is_row_index\": false, \"is_technical_metadata\": true, \"is_measure\": false, \"is_dimension\": false, \"is_datetime\": false, \"is_duration\": false, \"unique_ratio\": 0.0001, \"null_ratio\": 0.0, \"constant_ratio\": 1.0, \"unit\": null, \"confidence\": 0.82, \"evidence\": [\"technical_name_or_role\"]}], \"quality_warnings\": []}}, \"lineage\": {\"conversation_id\": \"74808a4c-f8c4-4046-a11e-2670424a85b4\", \"turn_id\": \"aed91d8d-50e9-4249-8650-f58df11ba5a1\", \"source_file_id\": \"e385c6e2a4ff41a8baf63f323dfc0b59\", \"request_contract_id\": \"da8ac7f0-cdca-4efc-ab9f-61e57c8c6b68\", \"query_plan_id\": \"7cbea3f6-e495-46a2-a778-1a9dfa40a19b\", \"query_result_id\": \"df9ee978-6cb5-4036-b2c4-b42aa7d17d7d\", \"answer_brief_id\": \"b4e32338-e5ca-4485-9dac-735ea595e469\", \"chart_spec_id\": \"6f16daaf-d487-40f3-b156-cb911304256b\", \"report_artifact_id\": \"569b7c66-d406-4a4a-86e4-e6114b044ec4\"}, \"request_contract\": {\"relation_to_previous_turn\": \"NEW_REQUEST\", \"intent\": \"commentary\", \"source_file_id\": \"e385c6e2a4ff41a8baf63f323dfc0b59\", \"dimensions\": [\"machine\"], \"metrics\": [\"total_downtime\", \"count\"], \"aggregations\": [\"sum\", \"count\"], \"filters\": [], \"time_range\": null, \"time_grain\": null, \"ranking\": null, \"limit\": null, \"derived_metrics\": [], \"requested_outputs\": [], \"requested_chart_type\": null, \"report_sections\": [], \"commentary_requirements\": [], \"inherited_fields\": [], \"explicitly_reset_fields\": [\"dimension\", \"metric\", \"filter\", \"time_range\", \"chart_type\", \"top_n\"]}, \"request_contract_id\": \"da8ac7f0-cdca-4efc-ab9f-61e57c8c6b68\", \"query_plan_id\": \"7cbea3f6-e495-46a2-a778-1a9dfa40a19b\", \"query_result_id\": \"df9ee978-6cb5-4036-b2c4-b42aa7d17d7d\", \"answer_brief_id\": \"b4e32338-e5ca-4485-9dac-735ea595e469\", \"chart_spec_id\": \"6f16daaf-d487-40f3-b156-cb911304256b\", \"report_artifact_id\": \"569b7c66-d406-4a4a-86e4-e6114b044ec4\", \"public_response_validation\": {\"internal_keys\": [], \"unaccented_vietnamese\": [], \"clean\": true}, \"localization_validation\": {\"internal_keys\": [], \"unaccented_vietnamese\": [], \"passed\": true}, \"metadata_leakage_validation\": {\"internal_keys\": [], \"passed\": true}, \"narrative_quality_validation\": {\"invalid\": [], \"clean\": true}, \"public_response_validation_after_repair\": {\"internal_keys\": [], \"unaccented_vietnamese\": [], \"clean\": true}, \"narrative_quality_validation_after_repair\": {\"invalid\": [], \"clean\": true}}}",
+        "created_at": "2026-06-25T06:56:43.010690+00:00"
+      }
+    ],
+    "history_api_response": {
+      "id": "74808a4c-f8c4-4046-a11e-2670424a85b4",
+      "title": "single-character-root-cause",
+      "created_at": "2026-06-25T06:56:42.482757+00:00",
+      "updated_at": "2026-06-25T06:56:43.012513+00:00",
+      "status": "active",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "source_file_sha256": null,
+      "source_catalog_version": null,
+      "source_available": true,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "messages": [
+        {
+          "id": "2f35e9ec-2dbd-4726-abf5-a0950a5c24f4",
+          "role": "user",
+          "content": "Hãy phân tích tổng quan file này, gồm số bản ghi, khoảng thời gian, số máy được ghi nhận và ba phát hiện quan trọng nhất đối với người quản lý vận hành. Mỗi phát hiện phải có số liệu chứng minh.",
+          "created_at": "2026-06-25T06:56:42.497071+00:00",
+          "execution_mode": null,
+          "response": null
+        },
+        {
+          "id": "2637e3e8-8483-4c80-8758-d24e1b6283d9",
+          "role": "assistant",
+          "content": "File có 9.151 bản ghi và 30 cột.\nKhoảng thời gian ghi nhận là 2025-11-03 đến 2026-02-03.\nDữ liệu ghi nhận 9 máy.\nBa phát hiện quan trọng nhất cho quản lý vận hành:\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+          "created_at": "2026-06-25T06:56:43.010690+00:00",
+          "execution_mode": null,
+          "response": {
+            "message_id": "14b9d90b-06c1-46bb-bb66-9831bc5761bc",
+            "conversation_id": "74808a4c-f8c4-4046-a11e-2670424a85b4",
+            "response_type": "analysis",
+            "title": "Phân tích tổng quan",
+            "summary": "File có 9.151 bản ghi và 30 cột.\nKhoảng thời gian ghi nhận là 2025-11-03 đến 2026-02-03.\nDữ liệu ghi nhận 9 máy.\nBa phát hiện quan trọng nhất cho quản lý vận hành:\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+            "primary_value": null,
+            "secondary_value": null,
+            "table": {
+              "columns": [
+                "Phát hiện",
+                "Đối tượng",
+                "Chỉ số",
+                "Giá trị"
+              ],
+              "rows": [
+                {
+                  "Phát hiện": "Máy đứng đầu về tổng downtime",
+                  "Đối tượng": "Máy 11",
+                  "Chỉ số": "Tổng downtime theo máy",
+                  "Giá trị": "413,57 giờ"
+                },
+                {
+                  "Phát hiện": "Nguyên nhân/nhóm tổn thất nổi bật",
+                  "Đối tượng": "MÁY LỖI PHẦN CƠ",
+                  "Chỉ số": "Tổng downtime theo nguyên nhân",
+                  "Giá trị": "563,32 giờ"
+                },
+                {
+                  "Phát hiện": "Ngày có downtime cao nhất",
+                  "Đối tượng": "2025-11-21",
+                  "Chỉ số": "Tổng downtime theo ngày",
+                  "Giá trị": "50,98 giờ"
+                }
+              ]
+            },
+            "chart": null,
+            "dashboard": null,
+            "analysis": {
+              "headline": "Phân tích tổng quan",
+              "summary": "File có 9.151 bản ghi và 30 cột.\nKhoảng thời gian ghi nhận là 2025-11-03 đến 2026-02-03.\nDữ liệu ghi nhận 9 máy.\nBa phát hiện quan trọng nhất cho quản lý vận hành:\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+              "insights": [
+                {
+                  "text": "Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.",
+                  "evidence": [
+                    "413,57 giờ",
+                    "1.469",
+                    "16 phút 54 giây"
+                  ]
+                },
+                {
+                  "text": "MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.",
+                  "evidence": [
+                    "563,32 giờ",
+                    "3.688",
+                    "9 phút 10 giây"
+                  ]
+                },
+                {
+                  "text": "Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+                  "evidence": [
+                    "50,98 giờ",
+                    "186"
+                  ]
+                }
+              ],
+              "table": {
+                "columns": [
+                  "Phát hiện",
+                  "Đối tượng",
+                  "Chỉ số",
+                  "Giá trị"
+                ],
+                "rows": [
+                  {
+                    "Phát hiện": "Máy đứng đầu về tổng downtime",
+                    "Đối tượng": "Máy 11",
+                    "Chỉ số": "Tổng downtime theo máy",
+                    "Giá trị": "413,57 giờ"
+                  },
+                  {
+                    "Phát hiện": "Nguyên nhân/nhóm tổn thất nổi bật",
+                    "Đối tượng": "MÁY LỖI PHẦN CƠ",
+                    "Chỉ số": "Tổng downtime theo nguyên nhân",
+                    "Giá trị": "563,32 giờ"
+                  },
+                  {
+                    "Phát hiện": "Ngày có downtime cao nhất",
+                    "Đối tượng": "2025-11-21",
+                    "Chỉ số": "Tổng downtime theo ngày",
+                    "Giá trị": "50,98 giờ"
+                  }
+                ]
+              }
+            },
+            "report": null,
+            "sources": [
+              {
+                "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+                "rows": 9151
+              }
+            ],
+            "filters": [],
+            "downloads": [],
+            "metadata": {
+              "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+              "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+              "file_scope_validated": true
+            }
+          }
+        }
+      ]
+    },
+    "frontend_props_received": {
+      "message_id": "14b9d90b-06c1-46bb-bb66-9831bc5761bc",
+      "conversation_id": "74808a4c-f8c4-4046-a11e-2670424a85b4",
+      "response_type": "analysis",
+      "title": "Phân tích tổng quan",
+      "summary": "File có 9.151 bản ghi và 30 cột.\nKhoảng thời gian ghi nhận là 2025-11-03 đến 2026-02-03.\nDữ liệu ghi nhận 9 máy.\nBa phát hiện quan trọng nhất cho quản lý vận hành:\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+      "primary_value": null,
+      "secondary_value": null,
+      "table": {
+        "columns": [
+          "Phát hiện",
+          "Đối tượng",
+          "Chỉ số",
+          "Giá trị"
+        ],
+        "rows": [
+          {
+            "Phát hiện": "Máy đứng đầu về tổng downtime",
+            "Đối tượng": "Máy 11",
+            "Chỉ số": "Tổng downtime theo máy",
+            "Giá trị": "413,57 giờ"
+          },
+          {
+            "Phát hiện": "Nguyên nhân/nhóm tổn thất nổi bật",
+            "Đối tượng": "MÁY LỖI PHẦN CƠ",
+            "Chỉ số": "Tổng downtime theo nguyên nhân",
+            "Giá trị": "563,32 giờ"
+          },
+          {
+            "Phát hiện": "Ngày có downtime cao nhất",
+            "Đối tượng": "2025-11-21",
+            "Chỉ số": "Tổng downtime theo ngày",
+            "Giá trị": "50,98 giờ"
+          }
+        ]
+      },
+      "chart": null,
+      "dashboard": null,
+      "analysis": {
+        "headline": "Phân tích tổng quan",
+        "summary": "File có 9.151 bản ghi và 30 cột.\nKhoảng thời gian ghi nhận là 2025-11-03 đến 2026-02-03.\nDữ liệu ghi nhận 9 máy.\nBa phát hiện quan trọng nhất cho quản lý vận hành:\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+        "insights": [
+          {
+            "text": "Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.",
+            "evidence": [
+              "413,57 giờ",
+              "1.469",
+              "16 phút 54 giây"
+            ]
+          },
+          {
+            "text": "MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.",
+            "evidence": [
+              "563,32 giờ",
+              "3.688",
+              "9 phút 10 giây"
+            ]
+          },
+          {
+            "text": "Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.",
+            "evidence": [
+              "50,98 giờ",
+              "186"
+            ]
+          }
+        ],
+        "table": {
+          "columns": [
+            "Phát hiện",
+            "Đối tượng",
+            "Chỉ số",
+            "Giá trị"
+          ],
+          "rows": [
+            {
+              "Phát hiện": "Máy đứng đầu về tổng downtime",
+              "Đối tượng": "Máy 11",
+              "Chỉ số": "Tổng downtime theo máy",
+              "Giá trị": "413,57 giờ"
+            },
+            {
+              "Phát hiện": "Nguyên nhân/nhóm tổn thất nổi bật",
+              "Đối tượng": "MÁY LỖI PHẦN CƠ",
+              "Chỉ số": "Tổng downtime theo nguyên nhân",
+              "Giá trị": "563,32 giờ"
+            },
+            {
+              "Phát hiện": "Ngày có downtime cao nhất",
+              "Đối tượng": "2025-11-21",
+              "Chỉ số": "Tổng downtime theo ngày",
+              "Giá trị": "50,98 giờ"
+            }
+          ]
+        }
+      },
+      "report": null,
+      "sources": [
+        {
+          "name": "Machine_Downtime_20260203_100753.xlsx · Report",
+          "rows": 9151
+        }
+      ],
+      "filters": [],
+      "downloads": [],
+      "metadata": {
+        "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+        "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+        "file_scope_validated": true
+      }
+    }
+  }
+}

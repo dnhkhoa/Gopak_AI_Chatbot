@@ -512,6 +512,77 @@ th {
 .kpi-label { font-size: .82rem; color: var(--muted); }
 .kpi-value { font-weight: 720; font-size: 1.25rem; margin-top: 4px; }
 
+.analysis-response { display: grid; gap: 12px; }
+.insight-list { display: grid; gap: 8px; }
+.insight-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  padding: 12px 14px;
+}
+.insight-card p { margin: 0 0 4px; }
+.insight-card span { color: var(--muted); font-size: .82rem; }
+
+.report-preview {
+  display: grid;
+  gap: 12px;
+}
+.report-preview-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.report-preview-header h2 { margin-bottom: 0; }
+.report-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: .82rem;
+  font-weight: 650;
+}
+.report-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.download-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 7px 10px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 650;
+  font-size: .84rem;
+}
+.report-section {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  padding: 13px 14px;
+}
+.report-section header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.report-section h3 { font-size: .95rem; margin: 0; }
+.report-section header span,
+.report-commentary,
+.kpi-card small { color: var(--muted); font-size: .82rem; }
+.report-section ul { margin: 0; padding-left: 18px; }
+.report-sections { display: grid; gap: 10px; }
+.mini-kpis { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+.mini-kpis span {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  background: #FAFBFE;
+  font-size: .82rem;
+}
+
 .soft-notice {
   background: #F4F7FE;
   border: 1px solid var(--user-border);

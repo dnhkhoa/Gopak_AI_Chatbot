@@ -68,6 +68,61 @@ test("renders chart response", () => {
   expect(screen.getByText("Biểu đồ")).toBeInTheDocument();
 });
 
+test("does not render invalid single-character analysis narrative", () => {
+  render(
+    <ChatMessage
+      debug={false}
+      message={assistant({
+        ...baseResponse,
+        response_type: "analysis",
+        title: "Phân tích",
+        summary: "D",
+        primary_value: null,
+        analysis: { headline: "Phân tích dữ liệu", summary: "D", insights: [], table: null },
+        downloads: []
+      })}
+    />
+  );
+  expect(screen.queryByText("D")).not.toBeInTheDocument();
+});
+
+test("dispatches report payload to ReportPreview even when chart exists", () => {
+  const reportResponse: ChatResponse = {
+    ...baseResponse,
+    response_type: "report",
+    title: "Báo cáo phân tích downtime",
+    summary: "Báo cáo đã tổng hợp dữ liệu downtime.",
+    primary_value: null,
+    chart: { type: "line", title: "Xu hướng", x_key: "Ngày", y_keys: ["Tổng downtime"], data: [{ Ngày: "2026-01-01", "Tổng downtime": 10 }] },
+    report: {
+      report_id: "r1",
+      title: "Báo cáo phân tích downtime",
+      executive_summary: ["Báo cáo đã tổng hợp dữ liệu downtime theo các section chính."],
+      kpis: [{ label: "Tổng downtime", value: "10 giờ", hint: "Tính từ file đang chọn." }],
+      source: { name: "Machine_Downtime.xlsx", rows: 9151 },
+      filters: [],
+      limitations: ["Kết quả là mô tả dữ liệu đã import."],
+      html_download_url: null,
+      xlsx_download_url: null,
+      sections: [
+        { section_type: "dataset_overview", title: "Tổng quan dữ liệu", summary: "File có dữ liệu downtime đã import.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "kpi_total_downtime", title: "KPI tổng downtime", summary: "Tổng downtime là 10 giờ.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "kpi_stop_count", title: "KPI số lần dừng", summary: "Dữ liệu có nhiều lần dừng.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "top_machines", title: "Top máy", summary: "Máy 11 đứng đầu theo downtime.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "top_causes", title: "Top nguyên nhân", summary: "Nguyên nhân chính có downtime cao.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "time_trend", title: "Biểu đồ xu hướng", summary: "Xu hướng downtime theo ngày.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "management_commentary", title: "Nhận xét quản lý", summary: "Nên xem đồng thời downtime và số lần dừng.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "source_filters_limitations", title: "Nguồn và giới hạn", summary: "Báo cáo dùng file đang chọn.", kpis: [], table: null, chart: null, commentary: [] }
+      ]
+    },
+    downloads: []
+  };
+  render(<ChatMessage debug={false} message={assistant(reportResponse)} />);
+  expect(screen.getByTestId("report-preview")).toBeInTheDocument();
+  expect(document.querySelectorAll("[data-section-type]").length).toBe(8);
+  expect(document.querySelector(".chart-box")).not.toBeInTheDocument();
+});
+
 test("renders clarification, refusal and error states", () => {
   const { rerender } = render(
     <ChatMessage debug={false} message={assistant({ ...baseResponse, response_type: "clarification", summary: "Bạn muốn phân tích theo gì?" })} />

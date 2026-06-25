@@ -11,6 +11,7 @@ from pydantic import BaseModel, Field
 
 from src.ingestion.normalizer import strip_accents
 from src.rendering.formatters import format_duration, format_vn_number, humanize_column_name
+from src.rendering.labels import display_label
 
 
 class ColumnSemanticProfile(BaseModel):
@@ -617,13 +618,13 @@ def _generic_candidates(table: dict, df: pd.DataFrame, profiles: list[ColumnSema
                 _candidate(
                     insight_type="coverage",
                     domain="generic_tabular",
-                    title="Pham vi thoi gian",
-                    business_question="Du lieu bao phu khoang thoi gian nao?",
+                    title="Phạm vi thời gian",
+                    business_question="Dữ liệu bao phủ khoảng thời gian nào?",
                     primary_entity=None,
                     primary_metric="date_range",
                     primary_value=str(dr),
                     unit=None,
-                    statement=f"Du lieu co pham vi thoi gian tu {dr['start']} den {dr['end']}.",
+                    statement=f"Dữ liệu có phạm vi thời gian từ {dr['start']} đến {dr['end']}.",
                     facts=[],
                     evidence_rows=[{"dimension": date, "metric": "date_range", "value": str(dr)}],
                     relevance=0.62,
@@ -847,12 +848,12 @@ def _data_quality_notes(df: pd.DataFrame, profiles: list[ColumnSemanticProfile])
     missing = [p for p in business if p.null_ratio >= 0.10]
     if missing:
         top = max(missing, key=lambda p: p.null_ratio)
-        notes.append(f"Cot {top.display_name} thieu {_fmt_pct(top.null_ratio * 100)} gia tri.")
+        notes.append(f"Cột {top.display_name} thiếu {_fmt_pct(top.null_ratio * 100)} giá trị.")
     duplicate_count = int(df.duplicated().sum()) if len(df) else 0
     if duplicate_count:
-        notes.append(f"Co {_fmt_int(duplicate_count)} dong trung lap hoan toan.")
+        notes.append(f"Có {_fmt_int(duplicate_count)} dòng trùng lặp hoàn toàn.")
     if not notes:
-        notes.append("Khong phat hien missing rate lon hon 10% tren cac cot nghiep vu chinh.")
+        notes.append("Không phát hiện tỷ lệ thiếu dữ liệu vượt 10% trên các cột nghiệp vụ chính.")
     return notes
 
 
@@ -868,17 +869,18 @@ def _dataset_description(domain: str, rows: int, cols: int, date_range: dict[str
 
 
 def _supporting_table(insights: list[InsightCandidate]) -> dict[str, Any] | None:
+    columns = ["Phát hiện", "Đối tượng", "Chỉ số", "Giá trị"]
     rows = []
     for item in insights:
         rows.append(
             {
-                "Phat hien": item.title,
-                "Doi tuong": item.primary_entity or "Toan bo file",
-                "Chi so": item.primary_metric,
-                "Gia tri": item.facts[0]["display"] if item.facts else str(item.primary_value),
+                "Phát hiện": item.title,
+                "Đối tượng": item.primary_entity or "Toàn bộ file",
+                "Chỉ số": display_label(item.primary_metric),
+                "Giá trị": item.facts[0]["display"] if item.facts else str(item.primary_value),
             }
         )
-    return {"columns": ["Phat hien", "Doi tuong", "Chi so", "Gia tri"], "rows": rows} if rows else None
+    return {"columns": columns, "rows": rows} if rows else None
 
 
 def _comparison_facts(insights: list[InsightCandidate]) -> list[dict[str, Any]]:
@@ -887,7 +889,7 @@ def _comparison_facts(insights: list[InsightCandidate]) -> list[dict[str, Any]]:
     return [
         {
             "type": "metric_contrast",
-            "fact": f"{insights[0].title} va {insights[1].title} dung hai goc nhin khac nhau: {insights[0].primary_metric} so voi {insights[1].primary_metric}.",
+            "fact": f"{insights[0].title} và {insights[1].title} dùng hai góc nhìn khác nhau: {display_label(insights[0].primary_metric)} so với {display_label(insights[1].primary_metric)}.",
         }
     ]
 
