@@ -97,7 +97,14 @@ export interface PublicReportSection {
 
 export interface ReportPayload {
   report_id: string;
+  root_report_id?: string;
+  parent_report_id?: string | null;
+  revision_number?: number;
   title: string;
+  report_type?: string;
+  audience?: string;
+  detail_level?: string;
+  target_page_range?: string;
   subtitle?: string | null;
   source_file_name: string;
   date_range?: Record<string, unknown> | null;

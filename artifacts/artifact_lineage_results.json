@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checks": {
+    "lineage_present_report": true,
+    "lineage_present_chart": true,
+    "consistency_passed_report": true,
+    "consistency_passed_chart": true,
+    "report_parent_root": true,
+    "state_has_report_artifacts": true,
+    "last_visible_is_chart_after_chart_turn": true,
+    "active_report_context_retained": true
+  },
+  "artifact_count": 3,
+  "artifact_types": [
+    "REPORT",
+    "REPORT",
+    "CHART"
+  ],
+  "report_revisions": [
+    1,
+    2
+  ]
+}

@@ -16,6 +16,7 @@ def normalize_text(text: str) -> str:
     )
     normalized = unicodedata.normalize("NFKD", lowered)
     stripped = "".join(ch for ch in normalized if not unicodedata.combining(ch))
+    stripped = stripped.replace("dowtime", "downtime").replace("downtme", "downtime")
     return re.sub(r"\s+", " ", stripped).strip()
 
 

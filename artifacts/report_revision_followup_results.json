@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": {
+    "all_report": true,
+    "no_metric_clarification": true,
+    "revision_numbers": true,
+    "detail_levels": true,
+    "export_uses_current_report": true,
+    "pdf_only": true,
+    "artifact_routes": true
+  },
+  "response_types": [
+    "report",
+    "report",
+    "report",
+    "report"
+  ],
+  "execution_modes": [
+    "DETERMINISTIC_REPORT",
+    "ARTIFACT_REVISION",
+    "ARTIFACT_REVISION",
+    "ARTIFACT_EXPORT"
+  ],
+  "last_visible_artifact_type": "REPORT",
+  "active_report_revision": 3
+}

@@ -1,0 +1,144 @@
+{
+  "status": "passed",
+  "results": {
+    "quality": {
+      "status": "passed",
+      "checks": {
+        "response_type_report": true,
+        "report_payload_present": true,
+        "pdf_ready": true,
+        "pdf_artifact_exists": true,
+        "single_pdf_download": true,
+        "no_customer_html_xlsx": true,
+        "page_count_positive": true,
+        "no_blank_pages": true,
+        "has_vietnamese": true,
+        "no_metadata_leakage_in_pdf": true,
+        "rendered_png_exists": true,
+        "pdf_title_detected": true
+      },
+      "pdf_artifact": "D:\\Gopak Chatbot\\reports\\report_fe17ca17-0906-4e47-b7b1-a795530c3d54.pdf",
+      "verification": {
+        "page_count": 4,
+        "blank_pages": 0,
+        "has_vietnamese": true,
+        "metadata_leakage": [],
+        "contains_pdf_title": true
+      },
+      "preview_images": [
+        "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_fe17ca17-0906-4e47-b7b1-a795530c3d54_page_1.png",
+        "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_fe17ca17-0906-4e47-b7b1-a795530c3d54_page_2.png",
+        "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_fe17ca17-0906-4e47-b7b1-a795530c3d54_page_3.png",
+        "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_fe17ca17-0906-4e47-b7b1-a795530c3d54_page_4.png"
+      ]
+    },
+    "public_contract": {
+      "status": "passed",
+      "checks": {
+        "public_response_type_report": true,
+        "exactly_8_sections": true,
+        "single_pdf_download": true,
+        "no_html_xlsx_downloads": true,
+        "no_legacy_download_urls": true,
+        "public_payload_no_forbidden_tokens": true,
+        "public_metadata_safe": true,
+        "model_failure_still_generates_report": true,
+        "model_failure_not_silent": true,
+        "model_failure_public_no_forbidden_tokens": true
+      },
+      "section_types": [
+        "tong_quan_du_lieu",
+        "tong_downtime",
+        "so_lan_dung",
+        "top_may",
+        "top_nguyen_nhan",
+        "xu_huong",
+        "nhan_xet_quan_ly",
+        "nguon_va_gioi_han"
+      ],
+      "downloads": [
+        {
+          "id": "report_56c08d20-2dc0-4b8c-b30f-affa1fbdc0df.pdf",
+          "label": "Tải báo cáo PDF",
+          "filename": "report_56c08d20-2dc0-4b8c-b30f-affa1fbdc0df.pdf",
+          "mime_type": "application/pdf"
+        }
+      ],
+      "model_failure": {
+        "response_type": "report",
+        "pdf_status": "ready",
+        "public_forbidden_hits": [],
+        "trace": {
+          "management_composer_required": true,
+          "llm_request_started": true,
+          "llm_request_completed": false,
+          "composer_output_valid": true,
+          "silent_fallback": false,
+          "input_payload_keys": [
+            "validated_kpis",
+            "top_machines",
+            "top_causes",
+            "trend_extrema",
+            "limitations"
+          ],
+          "commentary_source": "deterministic_limited",
+          "composer_error_type": "RuntimeError"
+        }
+      },
+      "public_forbidden_hits": []
+    },
+    "preview_parity": {
+      "status": "passed",
+      "checks": {
+        "pdf_exists": true,
+        "title_matches": true,
+        "all_section_titles_match": true,
+        "all_kpis_match": true,
+        "top_machine_matches": true,
+        "top_cause_matches": true,
+        "source_matches": true,
+        "limitations_match": true,
+        "no_forbidden_tokens_in_pdf": true
+      },
+      "pdf_artifact": "D:\\Gopak Chatbot\\reports\\report_94b71626-44db-42c7-8786-32af27d3dd9b.pdf",
+      "kpi_values": [
+        "1.989,56 giờ",
+        "9.151 lần",
+        "9 máy",
+        "0,22 giờ/lần"
+      ],
+      "top_machine": "Máy 11",
+      "top_cause": "MÁY LỖI PHẦN CƠ",
+      "section_titles": [
+        "Tổng quan dữ liệu",
+        "KPI tổng downtime",
+        "KPI số lần dừng",
+        "Top 5 máy",
+        "Top 5 nguyên nhân",
+        "Biểu đồ xu hướng",
+        "Nhận xét quản lý",
+        "Nguồn và giới hạn"
+      ],
+      "pdf_forbidden_hits": []
+    },
+    "persistence": {
+      "status": "passed",
+      "checks": {
+        "created_report_once": true,
+        "history_response_still_report": true,
+        "history_report_payload_present": true,
+        "same_report_id": true,
+        "same_pdf_download": true,
+        "pdf_resolves_after_reload": true,
+        "source_file_retained": true,
+        "sections_retained": true,
+        "public_history_metadata_safe": true
+      },
+      "conversation_id": "7997597b-188f-4624-8175-dd32c46e8545",
+      "report_id": "394a2df8-77d0-419e-b0e9-79d3a611c3be",
+      "pdf_artifact": "D:\\Gopak Chatbot\\reports\\report_394a2df8-77d0-419e-b0e9-79d3a611c3be.pdf",
+      "persisted_pdf_artifact": "D:\\Gopak Chatbot\\reports\\report_394a2df8-77d0-419e-b0e9-79d3a611c3be.pdf",
+      "history_message_count": 2
+    }
+  }
+}

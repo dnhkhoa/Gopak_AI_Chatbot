@@ -183,6 +183,10 @@ def restore_topic_plan(catalog: dict, state: ConversationState, message: str) ->
             continue
         if "nguyen nhan" in q and "nguyen nhan" not in label and "loss" not in label:
             continue
+        if any(term in q for term in ["trend", "xu huong", "theo ngay"]) and not (
+            plan.time_granularity or any(str(dim) in {"thoi_gian_bat_dau", "start_time", "report_date"} for dim in plan.dimensions)
+        ):
+            continue
         _apply_topic_delta(plan, catalog, q)
         return plan
     return None

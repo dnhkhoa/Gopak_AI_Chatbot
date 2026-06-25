@@ -42,9 +42,11 @@ def classify_turn(question: str, has_state: bool) -> TurnClassification:
         return TurnClassification(TurnType.REMOVE_FILTER, 0.90, "Remove filter phrase.")
     if any(term in q for term in ["chi giu", "chi lay", "loc", "tren 1 gio", "tren mot gio", "tren 30 phut"]):
         return TurnClassification(TurnType.ADD_FILTER, 0.86, "Filter refinement phrase.")
+    if has_state and any(term in q for term in ["doi sang", "chuyen sang"]) and any(term in q for term in ["nguyen nhan", "nhom", "may", "theo ngay", "xu huong", "trend"]):
+        return TurnClassification(TurnType.CHANGE_DIMENSION, 0.88, "Explicit dimension switch on active artifact.")
     ranking_words = ["top", "bottom", "dung dau", "cao nhat", "thap nhat", "nhieu nhat", "it nhat", "pho bien", "xep hang"]
     dim_nouns = ["may", "machine", "nguyen nhan", "ton that", "nhom", "cong", "loai", "thang", "ngay"]
-    output_words = ["bieu do", "chart", "ve cot", "ve line", "ve chart", "ve bieu do", "excel", "bao cao", "dashboard", "xuat excel", "xuat file", "xuat bao cao", "xuat ket qua", "xuat ra"]
+    output_words = ["bieu do", "chart", "ve cot", "ve line", "ve chart", "ve bieu do", "phan bo", "excel", "bao cao", "dashboard", "xuat excel", "xuat file", "xuat bao cao", "xuat ket qua", "xuat ra"]
     metric_words = ["downtime", "tong", "so lan", "dem", "ty le", "ty trong", "phan tram", "trung binh", "thoi gian", "thoi luong"]
     self_contained_output = (
         any(term in q for term in output_words)

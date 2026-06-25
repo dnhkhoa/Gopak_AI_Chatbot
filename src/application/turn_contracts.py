@@ -26,6 +26,9 @@ class RequestContract(BaseModel):
     derived_metrics: list[str] = Field(default_factory=list)
     requested_outputs: list[str] = Field(default_factory=list)
     requested_chart_type: str | None = None
+    requested_insight_count: int | None = None
+    report_type: str | None = None
+    report_detail_level: str | None = None
     report_sections: list[str] = Field(default_factory=list)
     commentary_requirements: list[str] = Field(default_factory=list)
     inherited_fields: list[str] = Field(default_factory=list)
@@ -110,6 +113,7 @@ def build_request_contract(question: str, source_file_id: str | None, has_previo
         inherited = ["last_plan", "table_result"]
     reset = [] if relation != "NEW_REQUEST" else ["dimension", "metric", "filter", "time_range", "chart_type", "top_n"]
     commentary = ["three_insights"] if any(term in q for term in ["ba diem", "3 diem", "nhan xet", "noi len", "giai thich"]) else []
+    requested_insight_count = _requested_insight_count(q)
     return RequestContract(
         relation_to_previous_turn=relation,
         intent=intent,
@@ -123,6 +127,9 @@ def build_request_contract(question: str, source_file_id: str | None, has_previo
         derived_metrics=derived,
         requested_outputs=outputs,
         requested_chart_type=chart_type,
+        requested_insight_count=requested_insight_count,
+        report_type="downtime" if intent == "report" and ("downtime" in q or "dowtime" in q) else "overview" if intent == "report" else None,
+        report_detail_level=_report_detail_level(q) if intent == "report" else None,
         report_sections=report_sections,
         commentary_requirements=commentary,
         inherited_fields=inherited,
@@ -133,6 +140,8 @@ def build_request_contract(question: str, source_file_id: str | None, has_previo
 def coverage_for_plan(contract: RequestContract, plan: QueryPlan) -> CoverageResult:
     requested = _contract_requirements(contract)
     planned = _plan_capabilities(plan)
+    if contract.requested_insight_count and plan.intent not in {"clarification", "refusal", "safe_failure"}:
+        planned.append(f"{contract.requested_insight_count}_insights")
     missing = [item for item in requested if item not in planned]
     return CoverageResult(requested=requested, planned=planned, missing=missing, unexpected=[])
 
@@ -193,6 +202,8 @@ def _contract_requirements(contract: RequestContract) -> list[str]:
         result.append(f"{contract.time_grain}_time_series")
     if contract.requested_chart_type:
         result.append(f"{contract.requested_chart_type}_chart")
+    if contract.requested_insight_count:
+        result.append(f"{contract.requested_insight_count}_insights")
     if contract.ranking:
         result.append(contract.ranking)
     return result
@@ -262,7 +273,7 @@ def _dimensions(q: str) -> list[str]:
 
 def _metrics(q: str) -> list[str]:
     metrics = []
-    if "downtime" in q or "thoi gian" in q or "thoi luong" in q:
+    if "downtime" in q or "dowtime" in q or "thoi gian" in q or "thoi luong" in q:
         metrics.append("total_downtime")
     if any(term in q for term in ["so lan", "ghi nhan", "lan dung", "dem"]):
         metrics.append("count")
@@ -273,7 +284,7 @@ def _metrics(q: str) -> list[str]:
 
 def _aggregations(q: str) -> list[str]:
     aggs = []
-    if "tong" in q or "downtime" in q:
+    if "tong" in q or "downtime" in q or "dowtime" in q:
         aggs.append("sum")
     if any(term in q for term in ["so lan", "ghi nhan", "dem"]):
         aggs.append("count")
@@ -295,7 +306,7 @@ def _requested_chart_type(q: str) -> str | None:
 
 
 def _report_sections(q: str) -> list[str]:
-    if "downtime" in q:
+    if "downtime" in q or "dowtime" in q:
         return ["dataset_overview", "kpi_total_downtime", "kpi_stop_count", "top_machines", "top_causes", "time_trend", "management_commentary", "source_filters_limitations"]
     sections = ["dataset_overview", "record_count", "date_range", "three_insights", "top_5_table", "chart", "source", "limitations"]
     return sections
@@ -316,3 +327,22 @@ def _time_grain(q: str) -> str | None:
 def _top_n(q: str) -> int | None:
     match = re.search(r"\btop\s*(\d{1,2})", q)
     return int(match.group(1)) if match else None
+
+
+def _requested_insight_count(q: str) -> int | None:
+    match = re.search(r"\b(\d{1,2})\s*(?:diem|insight|nhan xet)", q)
+    if match:
+        return max(1, min(int(match.group(1)), 10))
+    if "hai diem" in q or "2 nhan xet" in q:
+        return 2
+    if "ba diem" in q or "3 nhan xet" in q:
+        return 3
+    return None
+
+
+def _report_detail_level(q: str) -> str | None:
+    if any(term in q for term in ["rut gon", "ngan gon", "compact"]):
+        return "COMPACT"
+    if any(term in q for term in ["chi tiet", "day du", "sau hon"]):
+        return "DETAILED"
+    return "STANDARD"

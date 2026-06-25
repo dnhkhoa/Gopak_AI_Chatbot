@@ -99,6 +99,13 @@ class StateMerger:
             if dimension:
                 plan.dimensions = [dimension]
                 changes["dimensions"] = [dimension]
+                if plan.metrics:
+                    plan.sort = [SortSpec(column=plan.metrics[0].name or "row_count", direction="desc")]
+                    changes["sort"] = [sort.model_dump() for sort in plan.sort]
+                if dimension != start_time and plan.output == "line":
+                    plan.intent = "chart"
+                    plan.output = "bar"
+                    changes["output"] = plan.output
 
         elif classification.turn_type in {TurnType.REFERENCE_ENTITY, TurnType.REFERENCE_RESULT}:
             reference = resolve_reference(question, state)
@@ -181,10 +188,10 @@ class StateMerger:
     ) -> str | None:
         if "may" in q:
             return machine
-        if "nguyen nhan" in q:
+        if "nguyen nhan" in q or "phan bo" in q:
             return loss_name
         if "nhom" in q:
             return loss_group
-        if "ngay" in q or "thang" in q:
+        if "ngay" in q or "thang" in q or "trend" in q or "xu huong" in q:
             return start_time
         return None

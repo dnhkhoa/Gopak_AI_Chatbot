@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "checks": {
+    "clarification_started": true,
+    "new_request_bypasses_old_clarification": true,
+    "pending_cleared": true,
+    "detail_is_revision": true,
+    "export_is_artifact_export": true,
+    "last_visible_report": true,
+    "state_version_incremented": true
+  },
+  "response_types": [
+    "clarification",
+    "report",
+    "report",
+    "report"
+  ],
+  "execution_modes": [
+    "CLARIFICATION",
+    "DETERMINISTIC_REPORT",
+    "ARTIFACT_REVISION",
+    "ARTIFACT_EXPORT"
+  ],
+  "turn_resolutions": [
+    {
+      "relationship": "NEW_REQUEST",
+      "referenced_artifact_id": null,
+      "referenced_artifact_type": null,
+      "inherited_fields": [],
+      "reset_fields": [
+        "pending_clarification",
+        "last_plan",
+        "last_result"
+      ],
+      "confidence": 0.88,
+      "resolution_source": "pending_clarification_bypassed_by_new_request",
+      "attributes": {}
+    },
+    {
+      "relationship": "ARTIFACT_REVISION",
+      "referenced_artifact_id": "464de03a-66ee-46b5-a557-04a8832d8fb7",
+      "referenced_artifact_type": "REPORT",
+      "inherited_fields": [
+        "active_report_context",
+        "source_file",
+        "validated_report_payload"
+      ],
+      "reset_fields": [
+        "pending_clarification"
+      ],
+      "confidence": 0.92,
+      "resolution_source": "deterministic_state_machine",
+      "attributes": {
+        "detail_level": "DETAILED",
+        "action": "revise_report"
+      }
+    },
+    {
+      "relationship": "ARTIFACT_EXPORT",
+      "referenced_artifact_id": "8e0ce79e-50c7-45ec-a36b-1074c3fd5ea5",
+      "referenced_artifact_type": "REPORT",
+      "inherited_fields": [
+        "active_report_context",
+        "source_file"
+      ],
+      "reset_fields": [],
+      "confidence": 0.96,
+      "resolution_source": "deterministic_state_machine",
+      "attributes": {
+        "action": "export_pdf"
+      }
+    }
+  ],
+  "state_version": 5
+}

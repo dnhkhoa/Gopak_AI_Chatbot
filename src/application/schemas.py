@@ -127,7 +127,14 @@ class PublicReportSection(BaseModel):
 
 class ReportPayload(BaseModel):
     report_id: str
+    root_report_id: str = ""
+    parent_report_id: str | None = None
+    revision_number: int = 1
     title: str
+    report_type: str = "downtime"
+    audience: str = "management"
+    detail_level: str = "STANDARD"
+    target_page_range: str = "2-4"
     subtitle: str | None = None
     source_file_name: str = ""
     date_range: dict[str, Any] | None = None

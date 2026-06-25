@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "sequence": "A",
+      "passed": true,
+      "types": [
+        "table",
+        "text",
+        "chart",
+        "table",
+        "text"
+      ]
+    },
+    {
+      "sequence": "B",
+      "passed": true,
+      "types": [
+        "chart",
+        "text",
+        "chart",
+        "chart"
+      ]
+    },
+    {
+      "sequence": "F",
+      "passed": true,
+      "types": [
+        "refusal",
+        "table"
+      ],
+      "error_code": "UNSUPPORTED_BY_ACTIVE_FILE"
+    },
+    {
+      "sequence": "G",
+      "passed": true,
+      "types": [
+        "chart"
+      ],
+      "chart_type": "line"
+    }
+  ],
+  "failed": []
+}

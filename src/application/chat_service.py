@@ -34,9 +34,11 @@ from src.application.schemas import (
     TablePayload,
 )
 from src.catalog.profiler import build_catalog, load_catalog
+from src.conversation.artifacts import ArtifactType
 from src.conversation.clarification import ClarificationResolver, build_plan_from_resolved_message, restore_topic_plan
-from src.config import Settings, get_settings
 from src.conversation.memory_service import ConversationMemoryService
+from src.conversation.turn_resolution import TurnRelationship, TurnResolution, resolve_turn_relationship
+from src.config import Settings, get_settings
 from src.application.customer_intents import CustomerIntentResult, detect_customer_intent
 from src.application.row_level import try_row_level_response
 from src.application.grounding import (
@@ -55,6 +57,7 @@ from src.application.capability import (
     build_request_requirements,
     unsupported_message,
 )
+from src.application.artifact_consistency import ArtifactConsistencyValidator
 from src.application.errors import (
     CustomerErrorMessagePolicy,
     ErrorCode,
@@ -489,7 +492,35 @@ class ChatApplicationService:
             self._save_assistant_response(state, response, execution_mode="SAFE_FAILURE")
             return response
 
+        turn_resolution = resolve_turn_relationship(message, state)
+        if state.pending_clarification is not None and turn_resolution.relationship != TurnRelationship.CLARIFICATION_ANSWER:
+            state.pending_clarification = None
+            state.resolved_request = None
+
+        lineage = new_lineage(conversation_id, state.active_file_id)
+        artifact_response = self._try_report_artifact_action(
+            conversation_id=conversation_id,
+            message=message,
+            state=state,
+            turn_resolution=turn_resolution,
+            lineage=lineage,
+            debug=debug,
+            started=started,
+        )
+        if artifact_response is not None:
+            artifact_response.metadata["turn_resolution"] = turn_resolution.model_dump(mode="json")
+            self._save_assistant_response(state, artifact_response, query_plan=None, result_summary=None)
+            return artifact_response
+
         request_contract = build_request_contract(message, state.active_file_id, bool(state.last_result_summary or state.last_result_cache_id))
+        if turn_resolution.relationship == TurnRelationship.FOLLOW_UP_QUESTION and request_contract.relation_to_previous_turn == "NEW_REQUEST":
+            request_contract.relation_to_previous_turn = (
+                "FOLLOW_UP_ON_PREVIOUS_RESULT"
+                if _requests_commentary(_ascii_text(message))
+                else "REFINEMENT"
+            )
+            request_contract.inherited_fields = list(dict.fromkeys(request_contract.inherited_fields + turn_resolution.inherited_fields))
+            request_contract.explicitly_reset_fields = []
 
         # Single capability gate, BEFORE planner / SQL / LLM (P0-B). Only blocks
         # NEW_REQUEST turns with domain-specific requirements the active file
@@ -505,10 +536,10 @@ class ChatApplicationService:
                 )
                 return response
 
-        lineage = new_lineage(conversation_id, state.active_file_id)
         contract_metadata = {
             "lineage": lineage,
             "request_contract": request_contract.model_dump(),
+            "turn_resolution": turn_resolution.model_dump(mode="json"),
             "request_contract_id": lineage["request_contract_id"],
             "query_plan_id": lineage["query_plan_id"],
             "query_result_id": lineage["query_result_id"],
@@ -1085,6 +1116,133 @@ class ChatApplicationService:
             report=report_payload,
             sources=_source_payloads(self._sources_for_plan(QueryPlan(tables=[table["table_name"]]), catalog)),
             downloads=downloads,
+            metadata=_json_safe(metadata),
+        )
+
+    def _try_report_artifact_action(
+        self,
+        *,
+        conversation_id: str,
+        message: str,
+        state: ConversationState,
+        turn_resolution: TurnResolution,
+        lineage: dict[str, str | None],
+        debug: bool,
+        started: float,
+    ) -> ChatResponse | None:
+        if turn_resolution.relationship not in {TurnRelationship.ARTIFACT_EXPORT, TurnRelationship.ARTIFACT_REVISION}:
+            return None
+        context = state.active_report_context
+        if context is None or not context.payload_snapshot:
+            return None
+        try:
+            base_report = ReportPayload.model_validate(context.payload_snapshot)
+        except Exception:
+            return None
+
+        if turn_resolution.relationship == TurnRelationship.ARTIFACT_EXPORT:
+            report_payload = base_report.model_copy(deep=True)
+            pdf_path = self.resolve_artifact(context.pdf_artifact_id or "") if context.pdf_artifact_id else None
+            if pdf_path is None or not pdf_path.exists():
+                pdf_result = export_public_report_pdf(report_payload, self.settings.reports_dir)
+                pdf_path = pdf_result.pdf_path
+                verification = pdf_result.verification
+                preview_images = [str(path) for path in pdf_result.preview_images]
+            else:
+                verification = {"reused_existing_pdf": True}
+                preview_images = []
+            pdf_download = _download_payload(pdf_path)
+            report_payload.pdf_status = "ready"
+            report_payload.pdf_download_url = f"/api/artifacts/{pdf_download.id}/download"
+            metadata = {
+                "execution_mode": "ARTIFACT_EXPORT",
+                "routing_reason": "report_artifact_export",
+                "llm_called": False,
+                "llm_call_count": 0,
+                "multi_query_execution": False,
+                "pdf_report": {
+                    "status": "ready",
+                    "artifact_id": pdf_download.id,
+                    "render_verification": verification,
+                    "preview_images": preview_images,
+                },
+                "active_file_id": state.active_file_id,
+                "active_file_name": state.active_file_name,
+                "file_scope_validated": True,
+                "latency_ms": {"total": round((perf_counter() - started) * 1000, 1)},
+                "debug": {"referenced_report_id": base_report.report_id} if debug else None,
+            }
+            return ChatResponse(
+                message_id=str(uuid4()),
+                conversation_id=conversation_id,
+                response_type="report",
+                title=report_payload.title,
+                summary="Báo cáo PDF đã sẵn sàng để tải xuống.",
+                report=report_payload,
+                sources=[SourcePayload(name=report_payload.source_file_name or report_payload.source.name, rows=report_payload.source.rows)],
+                downloads=[pdf_download],
+                metadata=_json_safe(metadata),
+            )
+
+        detail_level = str(turn_resolution.attributes.get("detail_level") or "STANDARD")
+        report_payload = base_report.model_copy(deep=True)
+        report_payload.report_id = str(lineage["report_artifact_id"])
+        report_payload.root_report_id = base_report.root_report_id or base_report.report_id
+        report_payload.parent_report_id = base_report.report_id
+        report_payload.revision_number = int(base_report.revision_number or context.revision_number or 1) + 1
+        report_payload.detail_level = detail_level
+        report_payload.target_page_range = _report_target_page_range(detail_level)
+        report_payload.subtitle = _report_revision_subtitle(base_report.subtitle, detail_level)
+        report_payload.generated_at = generated_at_vn()
+        report_payload.pdf_status = "generating"
+        report_payload.pdf_download_url = None
+        report_payload.executive_summary = _revise_report_summary(report_payload.executive_summary, detail_level)
+        report_payload.sections = _revise_report_sections(report_payload.sections, detail_level, message)
+        report_payload.completeness = {
+            **(report_payload.completeness or {}),
+            "revision_number": report_payload.revision_number,
+            "detail_level": detail_level,
+            "parent_report_id": report_payload.parent_report_id,
+            "missing_sections": [],
+        }
+        pdf_result = export_public_report_pdf(report_payload, self.settings.reports_dir)
+        pdf_download = _download_payload(pdf_result.pdf_path)
+        report_payload.pdf_status = "ready" if pdf_result.pdf_path.exists() else "failed"
+        report_payload.pdf_download_url = f"/api/artifacts/{pdf_download.id}/download" if pdf_result.pdf_path.exists() else None
+        metadata = {
+            "execution_mode": "ARTIFACT_REVISION",
+            "routing_reason": "report_artifact_revision",
+            "llm_called": False,
+            "llm_call_count": 0,
+            "multi_query_execution": False,
+            "report_revision": {
+                "parent_report_id": report_payload.parent_report_id,
+                "root_report_id": report_payload.root_report_id,
+                "revision_number": report_payload.revision_number,
+                "detail_level": detail_level,
+            },
+            "pdf_report": {
+                "status": report_payload.pdf_status,
+                "artifact_id": pdf_download.id if pdf_result.pdf_path.exists() else None,
+                "page_count": pdf_result.page_count,
+                "render_verification": pdf_result.verification,
+                "preview_images": [str(path) for path in pdf_result.preview_images],
+            },
+            "active_file_id": state.active_file_id,
+            "active_file_name": state.active_file_name,
+            "file_scope_validated": True,
+            "latency_ms": {"total": round((perf_counter() - started) * 1000, 1)},
+            "debug": {"referenced_report_id": base_report.report_id} if debug else None,
+        }
+        return ChatResponse(
+            message_id=str(uuid4()),
+            conversation_id=conversation_id,
+            response_type="report",
+            title=report_payload.title,
+            summary=f"Đã tạo phiên bản v{report_payload.revision_number} của báo cáo với mức chi tiết {detail_level}.",
+            report=report_payload,
+            sources=[SourcePayload(name=report_payload.source_file_name or report_payload.source.name, rows=report_payload.source.rows)],
+            downloads=[pdf_download] if pdf_result.pdf_path.exists() else [],
             metadata=_json_safe(metadata),
         )
 
@@ -1831,6 +1989,7 @@ class ChatApplicationService:
 
     def _prepare_response(self, response: ChatResponse, plan: QueryPlan | None = None) -> ChatResponse:
         PublicResponseSanitizer().sanitize(response)
+        response.metadata["artifact_consistency_validation"] = ArtifactConsistencyValidator().validate(response)
         if self.settings.show_internal_debug_metadata:
             response.metadata["internal_debug_metadata"] = _internal_debug_metadata(response, plan, self.settings.ollama_model)
         else:
@@ -1850,6 +2009,7 @@ class ChatApplicationService:
         result_dataframe: pd.DataFrame | None = None,
     ) -> None:
         self._prepare_response(response, plan)
+        self._register_visible_artifact(state, response)
         self.memory_service.save_turn(
             state,
             role="assistant",
@@ -1859,6 +2019,61 @@ class ChatApplicationService:
             result_summary=result_summary,
             response_payload=response.model_dump(mode="json"),
             result_dataframe=result_dataframe,
+        )
+
+    def _register_visible_artifact(self, state: ConversationState, response: ChatResponse) -> None:
+        lineage = response.metadata.get("lineage") if isinstance(response.metadata, dict) else {}
+        if not isinstance(lineage, dict):
+            lineage = {}
+        turn_id = str(lineage.get("turn_id") or response.message_id)
+        request_contract_id = str(lineage.get("request_contract_id") or response.metadata.get("request_contract_id") or "")
+        query_plan_id = str(lineage.get("query_plan_id") or response.metadata.get("query_plan_id") or "")
+        query_result_id = str(lineage.get("query_result_id") or response.metadata.get("query_result_id") or "")
+        response_payload = response.model_dump(mode="json")
+        if response.response_type == "report" and response.report is not None:
+            pdf_id = None
+            if response.downloads:
+                pdf_id = next((item.id for item in response.downloads if item.mime_type == "application/pdf"), None)
+            state.register_artifact(
+                artifact_type=ArtifactType.REPORT,
+                artifact_id=response.report.report_id,
+                turn_id=turn_id,
+                request_contract_id=request_contract_id or None,
+                query_plan_ids=[query_plan_id] if query_plan_id else [],
+                query_result_ids=[query_result_id] if query_result_id else [],
+                parent_artifact_id=response.report.parent_report_id,
+                root_artifact_id=response.report.root_report_id or response.report.report_id,
+                revision_number=response.report.revision_number,
+                payload_snapshot=response.report.model_dump(mode="json"),
+                pdf_artifact_id=pdf_id,
+            )
+            return
+        artifact_type_map = {
+            "analysis": ArtifactType.ANALYSIS,
+            "table": ArtifactType.TABLE,
+            "chart": ArtifactType.CHART,
+            "dashboard": ArtifactType.ANALYSIS,
+            "scalar": ArtifactType.ANALYSIS,
+            "clarification": ArtifactType.CLARIFICATION,
+            "error": ArtifactType.ERROR,
+            "refusal": ArtifactType.ERROR,
+        }
+        artifact_type = artifact_type_map.get(response.response_type)
+        if artifact_type is None:
+            return
+        artifact_id = (
+            str(lineage.get("chart_spec_id"))
+            if response.response_type == "chart" and lineage.get("chart_spec_id")
+            else query_result_id or response.message_id
+        )
+        state.register_artifact(
+            artifact_type=artifact_type,
+            artifact_id=artifact_id,
+            turn_id=turn_id,
+            request_contract_id=request_contract_id or None,
+            query_plan_ids=[query_plan_id] if query_plan_id else [],
+            query_result_ids=[query_result_id] if query_result_id else [],
+            payload_snapshot=response_payload,
         )
 
     def _plan_within_file_scope(self, plan: QueryPlan, catalog: dict) -> bool:
@@ -2602,7 +2817,14 @@ def _build_report_payload(
     ]
     return ReportPayload(
         report_id=report_id,
+        root_report_id=report_id,
+        parent_report_id=None,
+        revision_number=1,
         title=title,
+        report_type="downtime",
+        audience="management",
+        detail_level="STANDARD",
+        target_page_range="2-4",
         subtitle=subtitle,
         source_file_name=source_file_name or source_name,
         date_range=date_range,
@@ -2732,6 +2954,57 @@ def _clean_commentary_lines(text: str | None) -> list[str]:
         lines = [part.strip() + "." for part in lines[0].split(". ") if part.strip()]
     forbidden = ["json", "fallback", "model", "llm", "query_plan", "execution_mode"]
     return [line for line in lines if not any(term in line.lower() for term in forbidden)]
+
+
+def _report_target_page_range(detail_level: str) -> str:
+    return {
+        "COMPACT": "1-2",
+        "STANDARD": "2-4",
+        "DETAILED": "5-6",
+        "DEEP_DIVE": "7-10",
+    }.get(str(detail_level or "STANDARD").upper(), "2-4")
+
+
+def _report_revision_subtitle(subtitle: str | None, detail_level: str) -> str:
+    base = subtitle or "Báo cáo mô tả dữ liệu downtime, xếp hạng máy/nguyên nhân và xu hướng theo thời gian."
+    if detail_level == "COMPACT":
+        suffix = "Phiên bản rút gọn tập trung vào KPI, điểm nổi bật và giới hạn chính."
+    elif detail_level == "DETAILED":
+        suffix = "Phiên bản chi tiết bổ sung diễn giải quản lý và đối chiếu các phần chính."
+    else:
+        suffix = "Phiên bản cập nhật từ báo cáo trước đó."
+    return f"{base} {suffix}"
+
+
+def _revise_report_summary(lines: list[str], detail_level: str) -> list[str]:
+    clean = [line for line in lines if is_valid_customer_narrative(line)]
+    if detail_level == "COMPACT":
+        return clean[:3]
+    if detail_level == "DETAILED":
+        extra = "Phiên bản chi tiết giữ nguyên số liệu gốc và mở rộng phần diễn giải theo hướng quản lý."
+        return (clean + [extra])[:5]
+    return clean[:4]
+
+
+def _revise_report_sections(sections: list[PublicReportSection], detail_level: str, message: str) -> list[PublicReportSection]:
+    revised = [section.model_copy(deep=True) for section in sections]
+    if detail_level == "COMPACT":
+        for section in revised:
+            section.commentary = section.commentary[:2]
+            if section.table and len(section.table.rows) > 5:
+                section.table.rows = section.table.rows[:5]
+        return revised
+    if detail_level == "DETAILED":
+        note = "Diễn giải mở rộng: phần này vẫn dùng cùng số liệu đã kiểm chứng trong báo cáo gốc, không suy diễn nguyên nhân ngoài dữ liệu."
+        for section in revised:
+            if section.section_type in {"top_may", "top_nguyen_nhan", "xu_huong", "nhan_xet_quan_ly"} and note not in section.commentary:
+                section.commentary = list(section.commentary) + [note]
+    q = _ascii_text(message)
+    if "nguyen nhan" in q:
+        for section in revised:
+            if section.section_type == "top_nguyen_nhan":
+                section.summary = (section.summary or "") + " Phần này được giữ nổi bật vì người dùng yêu cầu bổ sung trọng tâm nguyên nhân."
+    return revised
 
 
 def _report_numeric_frame(df: pd.DataFrame) -> pd.DataFrame:

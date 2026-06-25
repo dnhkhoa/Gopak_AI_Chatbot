@@ -1,8 +1,15 @@
 from __future__ import annotations
 
+from datetime import datetime, timezone
 from uuid import uuid4
 
 from pydantic import BaseModel, Field
+
+from src.conversation.artifacts import ActiveReportContext, ArtifactType, ConversationArtifact
+
+
+def _utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
 
 
 class PendingClarification(BaseModel):
@@ -52,6 +59,12 @@ class ConversationState(BaseModel):
     current_topic: str | None = None
     topic_frames: list[dict] = Field(default_factory=list)
     pending_clarification: PendingClarification | None = None
+    last_visible_artifact_id: str | None = None
+    last_visible_artifact_type: str | None = None
+    active_report_context: ActiveReportContext | None = None
+    artifacts: list[ConversationArtifact] = Field(default_factory=list)
+    state_version: int = 1
+    updated_at: str = Field(default_factory=_utc_now_iso)
     current_message: str | None = None
     resolved_request: dict | None = None
     last_execution_mode: str | None = None
@@ -161,6 +174,9 @@ class ConversationState(BaseModel):
             "current_topic": self.current_topic,
             "topic_frames": self.topic_frames,
             "pending_clarification": self.pending_clarification.model_dump() if self.pending_clarification else None,
+            "last_visible_artifact_id": self.last_visible_artifact_id,
+            "last_visible_artifact_type": self.last_visible_artifact_type,
+            "active_report_context": self.active_report_context.model_dump() if self.active_report_context else None,
         }
 
     def restore_file_context(self, file_id: str) -> None:
@@ -172,6 +188,8 @@ class ConversationState(BaseModel):
             if hasattr(self, key):
                 if key == "pending_clarification" and isinstance(value, dict):
                     value = PendingClarification.model_validate(value)
+                if key == "active_report_context" and isinstance(value, dict):
+                    value = ActiveReportContext.model_validate(value)
                 setattr(self, key, value)
 
     def clear_analysis_context(self) -> None:
@@ -181,16 +199,25 @@ class ConversationState(BaseModel):
         keep_file_id = self.active_file_id
         keep_file_name = self.active_file_name
         keep_contexts = dict(self.file_contexts)
-        self.__dict__.update(
-            ConversationState(
-                conversation_id=keep_id,
-                recent_turn_ids=keep_recent,
-                conversation_summary=keep_summary,
-                active_file_id=keep_file_id,
-                active_file_name=keep_file_name,
-                file_contexts=keep_contexts,
-            ).model_dump()
+        keep_artifacts = list(self.artifacts)
+        keep_last_artifact_id = self.last_visible_artifact_id
+        keep_last_artifact_type = self.last_visible_artifact_type
+        keep_report_context = self.active_report_context
+        keep_version = self.state_version
+        fresh = ConversationState(
+            conversation_id=keep_id,
+            recent_turn_ids=keep_recent,
+            conversation_summary=keep_summary,
+            active_file_id=keep_file_id,
+            active_file_name=keep_file_name,
+            file_contexts=keep_contexts,
+            artifacts=keep_artifacts,
+            last_visible_artifact_id=keep_last_artifact_id,
+            last_visible_artifact_type=keep_last_artifact_type,
+            active_report_context=keep_report_context,
+            state_version=keep_version,
         )
+        self.__dict__.update(fresh.__dict__)
 
     def to_prompt_dict(self) -> dict:
         return self.model_dump()
@@ -201,15 +228,16 @@ class ConversationState(BaseModel):
         active_file_id = self.active_file_id
         active_file_name = self.active_file_name
         file_contexts = dict(self.file_contexts)
-        self.__dict__.update(
-            ConversationState(
-                conversation_id=conversation_id,
-                recent_turn_ids=recent_turn_ids,
-                active_file_id=active_file_id,
-                active_file_name=active_file_name,
-                file_contexts=file_contexts,
-            ).model_dump()
+        artifacts = list(self.artifacts)
+        fresh = ConversationState(
+            conversation_id=conversation_id,
+            recent_turn_ids=recent_turn_ids,
+            active_file_id=active_file_id,
+            active_file_name=active_file_name,
+            file_contexts=file_contexts,
+            artifacts=artifacts,
         )
+        self.__dict__.update(fresh.__dict__)
 
     def remember_topic(self, plan, label: str | None = None) -> None:
         if not self.active_file_id or not getattr(plan, "tables", None):
@@ -229,6 +257,50 @@ class ConversationState(BaseModel):
         )
         self.current_topic = frame.topic_id
         self.topic_frames = [item for item in self.topic_frames if item.get("topic_id") != frame.topic_id][-9:] + [frame.model_dump()]
+
+    def register_artifact(
+        self,
+        *,
+        artifact_type: ArtifactType,
+        artifact_id: str,
+        turn_id: str,
+        request_contract_id: str | None = None,
+        query_plan_ids: list[str] | None = None,
+        query_result_ids: list[str] | None = None,
+        parent_artifact_id: str | None = None,
+        root_artifact_id: str | None = None,
+        revision_number: int = 1,
+        payload_snapshot: dict | None = None,
+        pdf_artifact_id: str | None = None,
+    ) -> None:
+        artifact = ConversationArtifact(
+            artifact_id=artifact_id,
+            artifact_type=artifact_type,
+            conversation_id=self.conversation_id,
+            turn_id=turn_id,
+            source_file_id=self.active_file_id,
+            parent_artifact_id=parent_artifact_id,
+            root_artifact_id=root_artifact_id or artifact_id,
+            revision_number=revision_number,
+            request_contract_id=request_contract_id,
+            query_plan_ids=query_plan_ids or [],
+            query_result_ids=query_result_ids or [],
+            payload_snapshot=payload_snapshot or {},
+        )
+        self.artifacts = [item for item in self.artifacts if item.artifact_id != artifact.artifact_id][-19:] + [artifact]
+        self.last_visible_artifact_id = artifact.artifact_id
+        self.last_visible_artifact_type = artifact.artifact_type.value
+        if artifact.artifact_type == ArtifactType.REPORT:
+            self.active_report_context = ActiveReportContext(
+                report_id=artifact.artifact_id,
+                root_report_id=artifact.root_artifact_id or artifact.artifact_id,
+                revision_number=artifact.revision_number,
+                pdf_artifact_id=pdf_artifact_id,
+                payload_snapshot=artifact.payload_snapshot,
+                source_file_id=self.active_file_id,
+            )
+        self.state_version += 1
+        self.updated_at = _utc_now_iso()
 
 
 def _topic_label(plan) -> str:
