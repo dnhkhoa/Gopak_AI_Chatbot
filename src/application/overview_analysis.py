@@ -151,8 +151,8 @@ def build_domain_aware_overview(catalog: dict, source_file_name: str = "") -> Ov
         supporting_table=supporting_table,
         data_quality_notes=_data_quality_notes(df, column_profiles),
         limitations=[
-            "Ket qua mo ta du lieu da import, khong chung minh quan he nhan qua hoac nguyen nhan ky thuat ben ngoai file.",
-            "Cac phat hien duoc tinh tu cac cot co san va phu thuoc chat luong du lieu nguon.",
+            "Kết quả mô tả dữ liệu đã import, không chứng minh quan hệ nhân quả hoặc nguyên nhân kỹ thuật bên ngoài file.",
+            "Các phát hiện được tính từ các cột có sẵn và phụ thuộc chất lượng dữ liệu nguồn.",
         ],
         source_file_name=source_file_name or _source_file_name(table),
         filters=[],
@@ -388,16 +388,16 @@ def _machine_downtime_candidates(table: dict, df: pd.DataFrame, profiles: list[C
     work = df.copy()
     work["_metric"] = pd.to_numeric(work[duration], errors="coerce").fillna(0)
     candidates = [
-        _total_metric_candidate("total_downtime", "machine_downtime", "Tong downtime", "Tong thoi gian dung may trong file", work["_metric"].sum(), "seconds", len(work), "Tong downtime trong file la {value} tren {count} ban ghi.", "downtime_duration"),
+        _total_metric_candidate("total_downtime", "machine_downtime", "Tổng downtime", "Tổng thời gian dừng máy trong file", work["_metric"].sum(), "seconds", len(work), "Tổng downtime trong file là {value} trên {count} bản ghi.", "downtime_duration"),
     ]
     if machine and machine in work.columns:
         by_total = _group_duration(work, machine, "_metric")
-        candidates.append(_ranked_duration_candidate(by_total, machine, "top_machine_downtime", "May dung dau ve tong downtime", "May nao tao tong downtime lon nhat?", "machine_downtime", "May {entity} co tong downtime cao nhat: {duration}, gom {count} lan ghi nhan va trung binh {avg} moi lan.", metric_name="machine_total_downtime"))
+        candidates.append(_ranked_duration_candidate(by_total, machine, "top_machine_downtime", "Máy đứng đầu về tổng downtime", "Máy nào tạo tổng downtime lớn nhất?", "machine_downtime", "{entity} có tổng downtime cao nhất: {duration}, gồm {count} lần dừng và trung bình {avg} mỗi lần.", metric_name="machine_total_downtime"))
         by_count = _group_count(work, machine, "_metric")
-        candidates.append(_ranked_count_candidate(by_count, machine, "top_machine_events", "May dung dau ve so lan dung", "May nao dung nhieu lan nhat?", "machine_downtime", "May {entity} co so lan dung cao nhat: {count} lan; tong downtime cua nhom nay la {duration}."))
+        candidates.append(_ranked_count_candidate(by_count, machine, "top_machine_events", "Máy đứng đầu về số lần dừng", "Máy nào dừng nhiều lần nhất?", "machine_downtime", "{entity} có số lần dừng cao nhất: {count} lần; tổng downtime của nhóm này là {duration}."))
     if cause and cause in work.columns:
         by_cause = _group_duration(work, cause, "_metric")
-        candidates.append(_ranked_duration_candidate(by_cause, cause, "top_cause_downtime", "Nguyen nhan/nhom ton that noi bat", "Nguyen nhan hoac nhom nao dong gop downtime nhieu nhat?", "machine_downtime", "{entity} la nhom/nguyen nhan co tong downtime cao nhat: {duration}, voi {count} lan ghi nhan.", metric_name="cause_total_downtime"))
+        candidates.append(_ranked_duration_candidate(by_cause, cause, "top_cause_downtime", "Nguyên nhân/nhóm tổn thất nổi bật", "Nguyên nhân hoặc nhóm nào đóng góp downtime nhiều nhất?", "machine_downtime", "{entity} là nhóm/nguyên nhân có tổng downtime cao nhất: {duration}, với {count} lần dừng.", metric_name="cause_total_downtime"))
     if start and start in work.columns:
         trend = _time_trend(work, start, "_metric")
         if not trend.empty:
@@ -408,13 +408,13 @@ def _machine_downtime_candidates(table: dict, df: pd.DataFrame, profiles: list[C
                 _candidate(
                     insight_type="trend",
                     domain="machine_downtime",
-                    title="Ngay co downtime cao nhat",
-                    business_question="Downtime dat dinh vao thoi diem nao?",
+                    title="Ngày có downtime cao nhất",
+                    business_question="Downtime đạt đỉnh vào thời điểm nào?",
                     primary_entity=str(top["period"]),
                     primary_metric="daily_total_downtime",
                     primary_value=float(top["total"]),
                     unit="seconds",
-                    statement=f"Downtime dat dinh vao {top['period']} voi {value} tu {count} lan ghi nhan.",
+                    statement=f"Downtime đạt đỉnh vào {top['period']} với {value} từ {count} lần dừng.",
                     facts=[("peak_duration", float(top["total"]) / 3600, value), ("peak_count", float(top["count"]), count)],
                     evidence_rows=[{"dimension": start, "entity": str(top["period"]), "metric": "total_downtime", "value": float(top["total"])}],
                     relevance=0.95,
@@ -441,13 +441,13 @@ def _loss_assignment_candidates(table: dict, df: pd.DataFrame, profiles: list[Co
                 _candidate(
                     insight_type="distribution",
                     domain="loss_assignment",
-                    title="Nhom ton that xuat hien nhieu nhat",
-                    business_question="Nhom/loai ton that nao chiem ty trong lon nhat?",
+                    title="Nhóm tổn thất xuất hiện nhiều nhất",
+                    business_question="Nhóm/loại tổn thất nào chiếm tỷ trọng lớn nhất?",
                     primary_entity=str(top[dim]),
                     primary_metric="row_count",
                     primary_value=count,
                     unit="records",
-                    statement=f"{top[dim]} xuat hien nhieu nhat voi {_fmt_int(count)} ban ghi, chiem {_fmt_pct(pct)} tong so ban ghi.",
+                    statement=f"{top[dim]} xuất hiện nhiều nhất với {_fmt_int(count)} bản ghi, chiếm {_fmt_pct(pct)} tổng số bản ghi.",
                     facts=[("top_count", float(count), _fmt_int(count)), ("top_pct", pct, _fmt_pct(pct))],
                     evidence_rows=[{"dimension": dim, "entity": str(top[dim]), "metric": "row_count", "value": count}],
                     relevance=0.92,
@@ -461,13 +461,13 @@ def _loss_assignment_candidates(table: dict, df: pd.DataFrame, profiles: list[Co
                 _candidate(
                     insight_type="concentration",
                     domain="loss_assignment",
-                    title="Muc tap trung cua cac nhom dau",
-                    business_question="Ton that co tap trung vao it nhom khong?",
+                    title="Mức tập trung của các nhóm đầu",
+                    business_question="Tổn thất có tập trung vào ít nhóm không?",
                     primary_entity="top_3",
                     primary_metric="row_count_share",
                     primary_value=top3_pct,
                     unit="percent",
-                    statement=f"Ba nhom/loai dung dau chiem {_fmt_pct(top3_pct)} voi {_fmt_int(top3)} ban ghi, cho thay muc tap trung cua phan loai ton that.",
+                    statement=f"Ba nhóm/loại đứng đầu chiếm {_fmt_pct(top3_pct)} với {_fmt_int(top3)} bản ghi, cho thấy mức tập trung của phân loại tổn thất.",
                     facts=[("top3_count", float(top3), _fmt_int(top3)), ("top3_pct", top3_pct, _fmt_pct(top3_pct))],
                     evidence_rows=[{"dimension": dim, "entity": "top_3", "metric": "row_count_share", "value": top3_pct}],
                     relevance=0.85,
@@ -478,7 +478,7 @@ def _loss_assignment_candidates(table: dict, df: pd.DataFrame, profiles: list[Co
     if duration and dim and duration in df.columns:
         work = df.copy()
         work["_metric"] = pd.to_numeric(work[duration], errors="coerce").fillna(0)
-        candidates.append(_ranked_duration_candidate(_group_duration(work, dim, "_metric"), dim, "loss_duration", "Nhom ton that dong gop thoi luong lon nhat", "Nhom nao dong gop tong thoi luong lon nhat?", "loss_assignment", "{entity} co tong thoi luong cao nhat: {duration}, gom {count} ban ghi."))
+        candidates.append(_ranked_duration_candidate(_group_duration(work, dim, "_metric"), dim, "loss_duration", "Nhóm tổn thất đóng góp thời lượng lớn nhất", "Nhóm nào đóng góp tổng thời lượng lớn nhất?", "loss_assignment", "{entity} có tổng thời lượng cao nhất: {duration}, gồm {count} bản ghi."))
     return [item for item in candidates if item is not None]
 
 
@@ -495,13 +495,13 @@ def _entry_transaction_candidates(table: dict, df: pd.DataFrame, profiles: list[
             _candidate(
                 insight_type="metric_summary",
                 domain="entry_transaction",
-                title="Tong gia tri giao dich",
-                business_question="Tong gia tri giao dich trong file la bao nhieu?",
+                title="Tổng giá trị giao dịch",
+                business_question="Tổng giá trị giao dịch trong file là bao nhiêu?",
                 primary_entity=None,
                 primary_metric=value,
                 primary_value=total,
                 unit=None,
-                statement=f"Tong gia tri giao dich dat {_fmt_number(total)} tren {_fmt_int(len(df))} ban ghi; gia tri trung binh la {_fmt_number(avg)}.",
+                statement=f"Tổng giá trị giao dịch đạt {_fmt_number(total)} trên {_fmt_int(len(df))} bản ghi; giá trị trung bình là {_fmt_number(avg)}.",
                 facts=[("total_value", total, _fmt_number(total)), ("avg_value", avg, _fmt_number(avg)), ("row_count", float(len(df)), _fmt_int(len(df)))],
                 evidence_rows=[{"column": value, "metric": "sum", "value": total}],
                 relevance=0.92,
@@ -519,13 +519,13 @@ def _entry_transaction_candidates(table: dict, df: pd.DataFrame, profiles: list[
                 _candidate(
                     insight_type="distribution",
                     domain="entry_transaction",
-                    title="Nhom/cua cong giao dich noi bat",
-                    business_question="Doi tuong hoac nhom nao xuat hien nhieu nhat?",
+                    title="Nhóm/cửa cổng giao dịch nổi bật",
+                    business_question="Đối tượng hoặc nhóm nào xuất hiện nhiều nhất?",
                     primary_entity=str(top[category]),
                     primary_metric="transaction_count",
                     primary_value=count,
                     unit="records",
-                    statement=f"{top[category]} co so giao dich/ghi nhan cao nhat voi {_fmt_int(count)} ban ghi, chiem {_fmt_pct(pct)}.",
+                    statement=f"{top[category]} có số giao dịch/ghi nhận cao nhất với {_fmt_int(count)} bản ghi, chiếm {_fmt_pct(pct)}.",
                     facts=[("top_count", float(count), _fmt_int(count)), ("top_pct", pct, _fmt_pct(pct))],
                     evidence_rows=[{"dimension": category, "entity": str(top[category]), "metric": "transaction_count", "value": count}],
                     relevance=0.86,
@@ -542,13 +542,13 @@ def _entry_transaction_candidates(table: dict, df: pd.DataFrame, profiles: list[
                 _candidate(
                     insight_type="trend",
                     domain="entry_transaction",
-                    title="Ngay co giao dich cao nhat",
-                    business_question="Thoi diem nao co luong giao dich cao nhat?",
+                    title="Ngày có giao dịch cao nhất",
+                    business_question="Thời điểm nào có lượng giao dịch cao nhất?",
                     primary_entity=str(top["period"]),
                     primary_metric="transaction_count",
                     primary_value=count,
                     unit="records",
-                    statement=f"Luong giao dich/ghi nhan dat dinh vao {top['period']} voi {_fmt_int(count)} ban ghi.",
+                    statement=f"Lượng giao dịch/ghi nhận đạt đỉnh vào {top['period']} với {_fmt_int(count)} bản ghi.",
                     facts=[("peak_count", float(count), _fmt_int(count))],
                     evidence_rows=[{"dimension": date, "entity": str(top["period"]), "metric": "transaction_count", "value": count}],
                     relevance=0.95,
@@ -574,13 +574,13 @@ def _generic_candidates(table: dict, df: pd.DataFrame, profiles: list[ColumnSema
                 _candidate(
                     insight_type="distribution",
                     domain="generic_tabular",
-                    title="Phan bo theo cot nghiep vu",
-                    business_question="Gia tri nao xuat hien nhieu nhat trong cot phan loai?",
+                    title="Phân bố theo cột nghiệp vụ",
+                    business_question="Giá trị nào xuất hiện nhiều nhất trong cột phân loại?",
                     primary_entity=str(top[dim]),
                     primary_metric="row_count",
                     primary_value=count,
                     unit="records",
-                    statement=f"{humanize_column_name(dim, {'tables':[table]})}: {top[dim]} xuat hien nhieu nhat voi {_fmt_int(count)} ban ghi, chiem {_fmt_pct(pct)}.",
+                    statement=f"{humanize_column_name(dim, {'tables':[table]})}: {top[dim]} xuất hiện nhiều nhất với {_fmt_int(count)} bản ghi, chiếm {_fmt_pct(pct)}.",
                     facts=[("top_count", float(count), _fmt_int(count)), ("top_pct", pct, _fmt_pct(pct))],
                     evidence_rows=[{"dimension": dim, "entity": str(top[dim]), "metric": "row_count", "value": count}],
                     relevance=0.70,
@@ -596,13 +596,13 @@ def _generic_candidates(table: dict, df: pd.DataFrame, profiles: list[ColumnSema
             _candidate(
                 insight_type="metric_summary",
                 domain="generic_tabular",
-                title="Tong hop chi so so",
-                business_question="Cot so nao co the dung lam metric tong quan?",
+                title="Tổng hợp chỉ số số",
+                business_question="Cột số nào có thể dùng làm metric tổng quan?",
                 primary_entity=None,
                 primary_metric=measure,
                 primary_value=total,
                 unit=None,
-                statement=f"{humanize_column_name(measure, {'tables':[table]})} co tong {_fmt_number(total)} va trung binh {_fmt_number(avg)}.",
+                statement=f"{humanize_column_name(measure, {'tables':[table]})} có tổng {_fmt_number(total)} và trung bình {_fmt_number(avg)}.",
                 facts=[("measure_total", total, _fmt_number(total)), ("measure_avg", avg, _fmt_number(avg))],
                 evidence_rows=[{"column": measure, "metric": "sum", "value": total}],
                 relevance=0.66,
@@ -645,13 +645,13 @@ def _significant_quality_candidates(df: pd.DataFrame, profiles: list[ColumnSeman
             _candidate(
                 insight_type="data_quality",
                 domain=domain,
-                title="Thieu du lieu dang chu y",
-                business_question="Cot nghiep vu nao bi thieu du lieu dang ke?",
+                title="Thiếu dữ liệu đáng chú ý",
+                business_question="Cột nghiệp vụ nào bị thiếu dữ liệu đáng kể?",
                 primary_entity=top.display_name,
                 primary_metric="missing_rate",
                 primary_value=pct,
                 unit="percent",
-                statement=f"Cot {top.display_name} bi thieu {_fmt_pct(pct)} gia tri, co the anh huong cac phan tich lien quan den cot nay.",
+                statement=f"Cột {top.display_name} bị thiếu {_fmt_pct(pct)} giá trị, có thể ảnh hưởng các phân tích liên quan đến cột này.",
                 facts=[("missing_pct", pct, _fmt_pct(pct))],
                 evidence_rows=[{"column": top.column_name, "metric": "missing_rate", "value": pct}],
                 relevance=0.62,

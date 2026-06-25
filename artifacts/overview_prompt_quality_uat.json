@@ -1,0 +1,290 @@
+{
+  "summary": {
+    "total": 12,
+    "passed": 12,
+    "accuracy": 1.0,
+    "failed_ids": [],
+    "status": "passed"
+  },
+  "results": [
+    {
+      "id": "A1_machine_manager_3",
+      "file_key": "Machine_Downtime",
+      "message": "Phân tích dữ liệu này và cho tôi ba phát hiện quan trọng nhất đối với người quản lý vận hành. Mỗi phát hiện phải có số liệu chứng minh và không sử dụng các cột số thứ tự hoặc mã định danh làm insight.",
+      "response_type": "text",
+      "summary": "Ba thông tin nên đưa vào cuộc họp ngắn:\n- Phát hiện: Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần. Ý nghĩa: ưu tiên kiểm tra nhóm máy đóng góp downtime lớn nhất.\n- Phát hiện: MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng. Ý nghĩa: ưu tiên nhóm nguyên nhân/loss có tác động lớn.\n- Phát hiện: Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng. Ý nghĩa: nhận diện thời điểm cần điều tra sâu hơn.\nCác thông tin này được chọn vì có số liệu trực tiếp, có ý nghĩa quản lý và không dùng cột số thứ tự, mã định danh hoặc metadata kỹ thuật.",
+      "routing_reason": "overview_quality_prompt_variant",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "latency_ms": 541.9,
+      "checks": {
+        "not_error": true,
+        "not_clarification": true,
+        "no_internal_terms": true,
+        "has_three_points": true,
+        "mentions_machine": true,
+        "mentions_downtime": true,
+        "mentions_count": true,
+        "mentions_average": true,
+        "mentions_cause_or_time": true,
+        "has_real_numbers": true,
+        "no_technical_columns": true
+      },
+      "passed": true
+    },
+    {
+      "id": "A2_machine_metric_comparison",
+      "file_key": "Machine_Downtime",
+      "message": "Hãy phân biệt máy có tổng downtime cao nhất, máy có số lần dừng nhiều nhất và máy có thời lượng dừng trung bình cao nhất. Giải thích vì sao ba chỉ tiêu này không nên được hiểu giống nhau.",
+      "response_type": "table",
+      "summary": "Ba chỉ tiêu cần được đọc riêng:\n- Tổng downtime cao nhất: Máy 11 đạt 413,57 giờ từ 1.469 lần dừng, trung bình 16 phút 54 giây/lần.\n- Số lần dừng nhiều nhất: Máy 12 có 1.654 lần dừng, tổng downtime 323,15 giờ.\n- Thời lượng dừng trung bình cao nhất: Máy 8 đạt 21 phút 8 giây/lần trên 653 lần dừng.\nVì vậy tổng downtime, tần suất dừng và mức kéo dài trung bình không nên hiểu giống nhau: tổng downtime là kết quả của cả số lần dừng và thời lượng mỗi lần.\nGiới hạn: kết quả mô tả dữ liệu ghi nhận; không đủ để kết luận máy hỏng, vận hành kém hoặc nguyên nhân kỹ thuật nếu không có thêm log bảo trì, ca vận hành và điều kiện sản xuất.",
+      "routing_reason": "overview_quality_prompt_variant",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "latency_ms": 416.2,
+      "checks": {
+        "not_error": true,
+        "not_clarification": true,
+        "no_internal_terms": true,
+        "has_total_downtime": true,
+        "has_event_count": true,
+        "has_avg_duration": true,
+        "explains_metric_difference": true,
+        "does_not_claim_quality_cause": true,
+        "has_real_numbers": true
+      },
+      "passed": true
+    },
+    {
+      "id": "A3_machine_time_trend",
+      "file_key": "Machine_Downtime",
+      "message": "Phân tích xu hướng downtime theo thời gian, xác định giai đoạn cao nhất và thấp nhất, sau đó so sánh mức chênh lệch. Chỉ nêu nguyên nhân nếu dữ liệu thực sự có bằng chứng.",
+      "response_type": "table",
+      "summary": "Xu hướng downtime theo ngày:\n- Giai đoạn cao nhất: 2025-11-21 với 50,98 giờ từ 186 lần dừng.\n- Giai đoạn thấp nhất: 2026-01-25 với 1 giờ 3 phút từ 11 lần dừng.\n- Chênh lệch giữa hai giai đoạn là 49,92 giờ.\nKhông kết luận nguyên nhân vận hành từ riêng chuỗi thời gian này. Muốn điều tra nguyên nhân cần thêm lịch bảo trì, ca/kíp, sản lượng, thay đổi quy trình và mã lỗi chi tiết theo thời điểm.",
+      "routing_reason": "overview_quality_prompt_variant",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "latency_ms": 468.6,
+      "checks": {
+        "not_error": true,
+        "not_clarification": true,
+        "no_internal_terms": true,
+        "uses_time": true,
+        "has_high": true,
+        "has_low": true,
+        "has_difference": true,
+        "has_real_numbers": true,
+        "no_causal_invention": true
+      },
+      "passed": true
+    },
+    {
+      "id": "B4_column_role_audit",
+      "file_key": "Machine_Downtime",
+      "message": "Trong file này, những cột nào mang ý nghĩa nghiệp vụ và những cột nào chỉ là số thứ tự, mã định danh hoặc metadata kỹ thuật? Sau đó chỉ phân tích các cột nghiệp vụ.",
+      "response_type": "table",
+      "summary": "Phân loại cột trước khi phân tích:\n- Cột nghiệp vụ: Máy, Thời gian bắt đầu, Thời gian kết thúc, Thời lượng, Tên tổn thất, duration_reported_text, duration_reported_seconds, duration_calculated_seconds, duration_difference_seconds, duration_seconds, thoi_luong_seconds\n- Cột số thứ tự/định danh/metadata kỹ thuật: No., Note, _source_file_id, _source_file_name, _source_file, _source_sheet, _source_excel_row, _source_header_row, _data_row_index, _record_no, _source_row, _import_id...\n- Cột nghiệp vụ nhưng ít đa dạng/không nên dùng làm insight chính: Nhóm tổn thất, Loại tổn thất, duration_anomaly\nPhần phân tích cột nghiệp vụ bên dưới chỉ dùng các cột như máy, thời gian, duration, nhóm/nguyên nhân hoặc metric vận hành liên quan:\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.\nKhông dùng mode của mã định danh, số thứ tự hoặc cột kỹ thuật làm insight chính.",
+      "routing_reason": "overview_quality_prompt_variant",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "latency_ms": 617.9,
+      "checks": {
+        "not_error": true,
+        "not_clarification": true,
+        "no_internal_terms": true,
+        "lists_business_columns": true,
+        "lists_technical_columns": true,
+        "classifies_no_column": true,
+        "rejects_id_mode": true,
+        "analyzes_business_after_audit": true
+      },
+      "passed": true
+    },
+    {
+      "id": "B5_useful_non_trivial",
+      "file_key": "Machine_Downtime",
+      "message": "Cho tôi ba insight thực sự hữu ích từ dữ liệu này. Không xem việc một cột đầy đủ 100%, một mã chỉ xuất hiện một lần hoặc một cột có toàn giá trị duy nhất là insight đáng chú ý.",
+      "response_type": "text",
+      "summary": "Ba thông tin nên đưa vào cuộc họp ngắn:\n- Phát hiện: Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần. Ý nghĩa: ưu tiên kiểm tra nhóm máy đóng góp downtime lớn nhất.\n- Phát hiện: MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng. Ý nghĩa: ưu tiên nhóm nguyên nhân/loss có tác động lớn.\n- Phát hiện: Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng. Ý nghĩa: nhận diện thời điểm cần điều tra sâu hơn.\nCác thông tin này được chọn vì có số liệu trực tiếp, có ý nghĩa quản lý và không dùng cột số thứ tự, mã định danh hoặc metadata kỹ thuật.",
+      "routing_reason": "overview_quality_prompt_variant",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "latency_ms": 358.4,
+      "checks": {
+        "not_error": true,
+        "not_clarification": true,
+        "no_internal_terms": true,
+        "has_three_points": true,
+        "has_real_numbers": true,
+        "no_trivial_completeness": true,
+        "no_technical_columns": true
+      },
+      "passed": true
+    },
+    {
+      "id": "C6_loss_structure",
+      "file_key": "Loss_Assignment",
+      "message": "Phân tích cơ cấu tổn thất trong file này. Cho tôi các nhóm hoặc loại tổn thất chính, mức độ tập trung của chúng và những hạn chế khi diễn giải kết quả.",
+      "response_type": "table",
+      "summary": "Tổng quan dữ liệu\nFile chứa dữ liệu phân loại tổn thất từ 2025-11-03 đến 2026-02-03, gồm 36.309 bản ghi và 30 cột.\n\nCác phát hiện đáng chú ý\n- Sản xuất có tổng thời lượng cao nhất: 2.072,27 giờ, gồm 26.892 bản ghi.\n- Sản xuất xuất hiện nhiều nhất với 26.892 bản ghi, chiếm 74,1% tổng số bản ghi.\n- Ba nhóm/loại đứng đầu chiếm 100% với 36.309 bản ghi, cho thấy mức tập trung của phân loại tổn thất.\n\nSo sánh\nNhóm tổn thất đóng góp thời lượng lớn nhất và Nhóm tổn thất xuất hiện nhiều nhất dùng hai chỉ số khác nhau; nên xem riêng mức độ đóng góp và tần suất/phân bố.\n\nGiới hạn\n- Kết quả mô tả dữ liệu đã import, không chứng minh quan hệ nhân quả hoặc nguyên nhân kỹ thuật bên ngoài file.\n- Các phát hiện được tính từ các cột có sẵn và phụ thuộc chất lượng dữ liệu nguồn.",
+      "routing_reason": "open_ended_grounded_answer_brief",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": true,
+      "latency_ms": 5966.9,
+      "checks": {
+        "not_error": true,
+        "not_clarification": true,
+        "no_internal_terms": true,
+        "mentions_loss": true,
+        "mentions_group_or_type": true,
+        "mentions_count_or_share": true,
+        "mentions_concentration": true,
+        "mentions_limitations": true,
+        "no_technical_columns": true
+      },
+      "passed": true
+    },
+    {
+      "id": "C7_entry_transaction",
+      "file_key": "EntryTransaction",
+      "message": "Phân tích tình hình giao dịch trong file này, gồm quy mô dữ liệu, khoảng thời gian, tổng giá trị, giá trị trung bình, nhóm giao dịch nổi bật và xu hướng theo thời gian.",
+      "response_type": "table",
+      "summary": "Tổng quan dữ liệu\nFile chứa dữ liệu giao dịch/ra vào từ 2026-02-03 đến 2026-02-03, gồm 1.294 bản ghi và 28 cột.\n\nCác phát hiện đáng chú ý\n- Lượng giao dịch/ghi nhận đạt đỉnh vào 2026-02-03 với 1.294 bản ghi.\n- Tổng giá trị giao dịch đạt 4.985.500 trên 1.294 bản ghi; giá trị trung bình là 3.852,78.\n- Cổng 1 có số giao dịch/ghi nhận cao nhất với 1.048 bản ghi, chiếm 81%.\n\nSo sánh\nNgày có giao dịch cao nhất và Tổng giá trị giao dịch dùng hai chỉ số khác nhau; nên xem riêng mức độ đóng góp và tần suất/phân bố.\n\nGiới hạn\n- Kết quả mô tả dữ liệu đã import, không chứng minh quan hệ nhân quả hoặc nguyên nhân kỹ thuật bên ngoài file.\n- Các phát hiện được tính từ các cột có sẵn và phụ thuộc chất lượng dữ liệu nguồn.",
+      "routing_reason": "open_ended_grounded_answer_brief",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": true,
+      "latency_ms": 4280.1,
+      "checks": {
+        "not_error": true,
+        "not_clarification": true,
+        "no_internal_terms": true,
+        "mentions_transactions": true,
+        "mentions_scale": true,
+        "mentions_time_range": true,
+        "mentions_total_value": true,
+        "mentions_average_value": true,
+        "mentions_trend": true
+      },
+      "passed": true
+    },
+    {
+      "id": "D8_manager_brief",
+      "file_key": "Machine_Downtime",
+      "message": "Nếu chỉ được trình bày ba thông tin từ file này cho quản lý trong một cuộc họp ngắn, bạn sẽ chọn ba thông tin nào? Nêu lý do chọn và số liệu hỗ trợ.",
+      "response_type": "text",
+      "summary": "Ba thông tin nên đưa vào cuộc họp ngắn:\n- Phát hiện: Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần. Ý nghĩa: ưu tiên kiểm tra nhóm máy đóng góp downtime lớn nhất.\n- Phát hiện: MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng. Ý nghĩa: ưu tiên nhóm nguyên nhân/loss có tác động lớn.\n- Phát hiện: Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng. Ý nghĩa: nhận diện thời điểm cần điều tra sâu hơn.\nCác thông tin này được chọn vì có số liệu trực tiếp, có ý nghĩa quản lý và không dùng cột số thứ tự, mã định danh hoặc metadata kỹ thuật.",
+      "routing_reason": "overview_quality_prompt_variant",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "latency_ms": 312.6,
+      "checks": {
+        "not_error": true,
+        "not_clarification": true,
+        "no_internal_terms": true,
+        "has_three_points": true,
+        "has_findings": true,
+        "has_meaning": true,
+        "has_real_numbers": true,
+        "no_technical_columns": true
+      },
+      "passed": true
+    },
+    {
+      "id": "D9_four_viewpoints",
+      "file_key": "Machine_Downtime",
+      "message": "Hãy đưa ra bốn góc nhìn khác nhau về dữ liệu: quy mô, xếp hạng, phân bố và xu hướng. Không lặp lại cùng một metric dưới nhiều cách diễn đạt.",
+      "response_type": "text",
+      "summary": "Bốn góc nhìn khác nhau:\n- Quy mô: 9.151 bản ghi, 30 cột, phạm vi 2025-11-03 đến 2026-02-03.\n- Xếp hạng: Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\n- Phân bố: MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\n- Xu hướng: Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.\nCác góc nhìn trên dùng metric/dimension khác nhau, tránh lặp lại cùng một phát hiện dưới nhiều cách diễn đạt.",
+      "routing_reason": "overview_quality_prompt_variant",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "latency_ms": 332.8,
+      "checks": {
+        "not_error": true,
+        "not_clarification": true,
+        "no_internal_terms": true,
+        "has_scale": true,
+        "has_ranking": true,
+        "has_distribution": true,
+        "has_trend": true,
+        "has_real_numbers": true
+      },
+      "passed": true
+    },
+    {
+      "id": "E10_followup_evidence",
+      "file_key": "Machine_Downtime",
+      "message": "Trong ba insight trên, insight nào có bằng chứng mạnh nhất và insight nào cần thận trọng nhất? Giải thích dựa đúng trên kết quả vừa rồi.",
+      "response_type": "text",
+      "summary": "Dựa trên ba insight vừa nêu:\n- Bằng chứng mạnh nhất: Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần. Insight này có metric cụ thể và số liệu trực tiếp từ dữ liệu.\n- Cần thận trọng nhất: MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng. Insight này vẫn là mô tả dữ liệu; không nên suy ra nguyên nhân hoặc hành động khắc phục nếu chưa có dữ liệu bổ sung.\nTôi không đổi sang bảng hay metric khác và không thêm số liệu ngoài các insight đã tính.",
+      "routing_reason": "overview_followup_evidence",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "latency_ms": 295.7,
+      "checks": {
+        "not_error": true,
+        "not_clarification": true,
+        "no_internal_terms": true,
+        "mentions_strongest_evidence": true,
+        "mentions_most_cautious": true,
+        "no_new_query_table": true,
+        "uses_previous_insights_route": true
+      },
+      "passed": true,
+      "setup_summary": "Ba thông tin nên đưa vào cuộc họp ngắn:\n- Phát hiện: Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần. Ý nghĩa: ưu tiên kiểm tra nhóm máy đóng góp downtime lớn nhất.\n- Phát hiện: MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng. Ý nghĩa: ưu tiên nhóm nguyên nhân/loss có tác động lớn.\n- Phát hiện: Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng. Ý nghĩa: nhận diện thời điểm cần điều tra sâu hơn.\nCác thông tin này được chọn vì có số liệu trực tiếp, có ý nghĩa quản lý và không dùng cột số thứ tự, mã định danh hoặc metadata kỹ thuật.",
+      "setup_response_type": "text",
+      "setup_checks": {
+        "has_three_points": true,
+        "mentions_machine": true,
+        "mentions_downtime": true,
+        "mentions_count": true,
+        "mentions_average": true,
+        "mentions_cause_or_time": true,
+        "has_real_numbers": true,
+        "no_technical_columns": true
+      }
+    },
+    {
+      "id": "E11_causality_boundary",
+      "file_key": "Machine_Downtime",
+      "message": "Từ dữ liệu này, có thể kết luận nguyên nhân khiến một máy có downtime cao hay không? Hãy phân biệt điều dữ liệu chứng minh được và điều chưa thể kết luận.",
+      "response_type": "text",
+      "summary": "Không nên kết luận nguyên nhân khiến một máy có downtime cao chỉ từ bảng tổng hợp này.\nDữ liệu chứng minh được:\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.\nĐiều chưa thể kết luận: máy hỏng, vận hành kém, bảo trì sai, lỗi con người hoặc quan hệ nhân quả giữa nhóm lỗi và máy nếu không có bằng chứng bổ sung.\nDữ liệu cần thêm để điều tra nguyên nhân: log bảo trì, mã lỗi chi tiết theo thời điểm, ca/kíp vận hành, sản lượng, thay đổi setup, vật tư, lịch dừng kế hoạch và ghi chú xử lý sự cố.",
+      "routing_reason": "overview_quality_prompt_variant",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": false,
+      "latency_ms": 383.2,
+      "checks": {
+        "not_error": true,
+        "not_clarification": true,
+        "no_internal_terms": true,
+        "rejects_causal_conclusion": true,
+        "distinguishes_proven_data": true,
+        "distinguishes_unknowns": true,
+        "asks_for_more_data": true,
+        "no_causal_invention": true
+      },
+      "passed": true
+    },
+    {
+      "id": "E12_short_overview",
+      "file_key": "Machine_Downtime",
+      "message": "Data này có gì đáng chú ý?",
+      "response_type": "table",
+      "summary": "Tổng quan dữ liệu\nFile chứa dữ liệu dừng máy/downtime từ 2025-11-03 đến 2026-02-03, gồm 9.151 bản ghi và 30 cột.\n\nCác phát hiện đáng chú ý\n- Máy 11 có tổng downtime cao nhất: 413,57 giờ, gồm 1.469 lần dừng và trung bình 16 phút 54 giây mỗi lần.\n- MÁY LỖI PHẦN CƠ là nhóm/nguyên nhân có tổng downtime cao nhất: 563,32 giờ, với 3.688 lần dừng.\n- Downtime đạt đỉnh vào 2025-11-21 với 50,98 giờ từ 186 lần dừng.\n\nSo sánh\nMáy đứng đầu về tổng downtime và Nguyên nhân/nhóm tổn thất nổi bật dùng hai chỉ số khác nhau; nên xem riêng mức độ đóng góp và tần suất/phân bố.\n\nGiới hạn\n- Kết quả mô tả dữ liệu đã import, không chứng minh quan hệ nhân quả hoặc nguyên nhân kỹ thuật bên ngoài file.\n- Các phát hiện được tính từ các cột có sẵn và phụ thuộc chất lượng dữ liệu nguồn.",
+      "routing_reason": "open_ended_grounded_answer_brief",
+      "execution_mode": "DETERMINISTIC",
+      "llm_called": true,
+      "latency_ms": 4695.9,
+      "checks": {
+        "not_error": true,
+        "not_clarification": true,
+        "no_internal_terms": true,
+        "has_three_points": true,
+        "has_business_content": true,
+        "no_technical_columns": true
+      },
+      "passed": true
+    }
+  ]
+}

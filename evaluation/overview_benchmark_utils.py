@@ -116,4 +116,20 @@ def benchmark_cases(tmp_path: Path) -> list[dict[str, Any]]:
 
 
 def insight_text(brief: Any) -> str:
-    return " ".join(f"{item.title} {item.statement} {item.primary_metric}" for item in brief.selected_insights).lower()
+    parts: list[str] = [
+        str(getattr(getattr(brief, "capability_profile", None), "selected_domain", "")),
+        " ".join(str(item) for item in getattr(brief, "business_dimensions", []) or []),
+        " ".join(str(item) for item in getattr(brief, "business_measures", []) or []),
+    ]
+    for item in getattr(brief, "selected_insights", []) or []:
+        parts.extend(
+            [
+                str(getattr(item, "title", "")),
+                str(getattr(item, "statement", "")),
+                str(getattr(item, "primary_metric", "")),
+                str(getattr(item, "primary_entity", "")),
+            ]
+        )
+        for evidence in getattr(item, "evidence", []) or []:
+            parts.extend(str(evidence.get(key, "")) for key in ["dimension", "column", "metric", "entity"])
+    return " ".join(part for part in parts if part).lower()

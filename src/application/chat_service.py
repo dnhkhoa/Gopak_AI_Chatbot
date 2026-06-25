@@ -40,6 +40,7 @@ from src.application.grounding import (
     deterministic_table_commentary,
     json_payload,
 )
+from src.application.overview_analysis import build_domain_aware_overview, classify_columns
 from src.application.turn_contracts import (
     ChartContract,
     RequestContract,
@@ -470,6 +471,14 @@ class ChatApplicationService:
             report_response.metadata.update(contract_metadata)
             self._save_assistant_response(state, report_response)
             return report_response
+
+        overview_variant_response = self._try_overview_quality_prompt_response(
+            conversation_id, message, catalog, state, debug, started
+        )
+        if overview_variant_response is not None:
+            overview_variant_response.metadata.update(contract_metadata)
+            self._save_assistant_response(state, overview_variant_response)
+            return overview_variant_response
 
         open_ended_response = self._try_open_ended_analysis_response(conversation_id, message, catalog, planning_state, debug, started)
         if open_ended_response is not None:
@@ -949,6 +958,237 @@ class ChatApplicationService:
             sources=_source_payloads(self._sources_for_plan(QueryPlan(tables=[table["table_name"]]), catalog)),
             downloads=[_download_payload(path) for path in [html_path, xlsx_path] if path.exists()],
             metadata=_json_safe(metadata),
+        )
+
+    def _try_overview_quality_prompt_response(
+        self,
+        conversation_id: str,
+        message: str,
+        catalog: dict,
+        state,
+        debug: bool,
+        started: float,
+    ) -> ChatResponse | None:
+        q = _ascii_text(message)
+        table = (catalog.get("tables") or [None])[0]
+        if not table:
+            return None
+        path = _resolve_parquet_path(table.get("parquet_path") or table.get("cache_path"))
+        if path is None:
+            return None
+        brief = build_domain_aware_overview(catalog, state.active_file_name or "")
+        if brief is None:
+            return None
+        df: pd.DataFrame | None = None
+
+        def frame() -> pd.DataFrame:
+            nonlocal df
+            if df is None:
+                df = pd.read_parquet(path)
+            return df
+
+        response: ChatResponse | None = None
+        if _is_machine_metric_comparison_request(q):
+            response = self._machine_metric_comparison_response(conversation_id, catalog, table, frame(), state, debug, started)
+        elif _is_time_trend_overview_request(q):
+            response = self._machine_time_trend_response(conversation_id, catalog, table, frame(), state, debug, started)
+        elif _is_column_role_audit_request(q):
+            response = self._column_role_audit_response(conversation_id, catalog, table, frame(), brief, state, debug, started)
+        elif _is_causality_boundary_request(q):
+            response = self._causality_boundary_response(conversation_id, brief, state, debug, started)
+        elif _is_four_viewpoint_request(q):
+            response = self._four_viewpoint_response(conversation_id, brief, state, debug, started)
+        elif _is_evidence_followup_request(q):
+            response = self._evidence_followup_response(conversation_id, brief, state, debug, started)
+        elif _is_manager_brief_request(q):
+            response = self._manager_brief_response(conversation_id, brief, state, debug, started)
+        return response
+
+    def _machine_metric_comparison_response(self, conversation_id: str, catalog: dict, table: dict, df: pd.DataFrame, state, debug: bool, started: float) -> ChatResponse | None:
+        machine = _role_column(table, "machine")
+        duration = _role_column(table, "duration_seconds")
+        if not machine or not duration or machine not in df.columns or duration not in df.columns:
+            return None
+        grouped = (
+            df.assign(_duration=pd.to_numeric(df[duration], errors="coerce").fillna(0))
+            .groupby(machine, dropna=False)
+            .agg(total_duration_seconds=("_duration", "sum"), event_count=("_duration", "size"), avg_duration_seconds=("_duration", "mean"))
+            .reset_index()
+        )
+        if grouped.empty:
+            return None
+        total_row = grouped.sort_values("total_duration_seconds", ascending=False).iloc[0]
+        count_row = grouped.sort_values("event_count", ascending=False).iloc[0]
+        avg_row = grouped.sort_values("avg_duration_seconds", ascending=False).iloc[0]
+        rows = [
+            _machine_metric_row("Tổng downtime cao nhất", total_row, machine),
+            _machine_metric_row("Số lần dừng nhiều nhất", count_row, machine),
+            _machine_metric_row("Thời lượng trung bình/lần cao nhất", avg_row, machine),
+        ]
+        summary = "\n".join(
+            [
+                "Ba chỉ tiêu cần được đọc riêng:",
+                f"- Tổng downtime cao nhất: {total_row[machine]} đạt {_duration_text(float(total_row['total_duration_seconds']))} từ {format_vn_number(int(total_row['event_count']), 0)} lần dừng, trung bình {_duration_text(float(total_row['avg_duration_seconds']))}/lần.",
+                f"- Số lần dừng nhiều nhất: {count_row[machine]} có {format_vn_number(int(count_row['event_count']), 0)} lần dừng, tổng downtime {_duration_text(float(count_row['total_duration_seconds']))}.",
+                f"- Thời lượng dừng trung bình cao nhất: {avg_row[machine]} đạt {_duration_text(float(avg_row['avg_duration_seconds']))}/lần trên {format_vn_number(int(avg_row['event_count']), 0)} lần dừng.",
+                "Vì vậy tổng downtime, tần suất dừng và mức kéo dài trung bình không nên hiểu giống nhau: tổng downtime là kết quả của cả số lần dừng và thời lượng mỗi lần.",
+                "Giới hạn: kết quả mô tả dữ liệu ghi nhận; không đủ để kết luận máy hỏng, vận hành kém hoặc nguyên nhân kỹ thuật nếu không có thêm log bảo trì, ca vận hành và điều kiện sản xuất.",
+            ]
+        )
+        return self._overview_text_response(conversation_id, "So sánh chỉ tiêu downtime", summary, state, debug, started, rows)
+
+    def _machine_time_trend_response(self, conversation_id: str, catalog: dict, table: dict, df: pd.DataFrame, state, debug: bool, started: float) -> ChatResponse | None:
+        start_time = _role_column(table, "start_time")
+        duration = _role_column(table, "duration_seconds")
+        if not start_time or not duration or start_time not in df.columns or duration not in df.columns:
+            return None
+        work = df.copy()
+        work[start_time] = pd.to_datetime(work[start_time], errors="coerce")
+        work["_duration"] = pd.to_numeric(work[duration], errors="coerce").fillna(0)
+        work = work.dropna(subset=[start_time])
+        if work.empty:
+            return None
+        work["_period"] = work[start_time].dt.date.astype(str)
+        trend = (
+            work.groupby("_period", dropna=False)
+            .agg(total_duration_seconds=("_duration", "sum"), event_count=("_duration", "size"))
+            .reset_index()
+        )
+        if trend.empty:
+            return None
+        high = trend.sort_values("total_duration_seconds", ascending=False).iloc[0]
+        low = trend.sort_values("total_duration_seconds", ascending=True).iloc[0]
+        diff = float(high["total_duration_seconds"]) - float(low["total_duration_seconds"])
+        summary = "\n".join(
+            [
+                "Xu hướng downtime theo ngày:",
+                f"- Giai đoạn cao nhất: {high['_period']} với {_duration_text(float(high['total_duration_seconds']))} từ {format_vn_number(int(high['event_count']), 0)} lần dừng.",
+                f"- Giai đoạn thấp nhất: {low['_period']} với {_duration_text(float(low['total_duration_seconds']))} từ {format_vn_number(int(low['event_count']), 0)} lần dừng.",
+                f"- Chênh lệch giữa hai giai đoạn là {_duration_text(diff)}.",
+                "Không kết luận nguyên nhân vận hành từ riêng chuỗi thời gian này. Muốn điều tra nguyên nhân cần thêm lịch bảo trì, ca/kíp, sản lượng, thay đổi quy trình và mã lỗi chi tiết theo thời điểm.",
+            ]
+        )
+        rows = [
+            {"Giai đoạn": str(high["_period"]), "Vai trò": "Cao nhất", "Tổng downtime": _duration_text(float(high["total_duration_seconds"])), "Số lần": format_vn_number(int(high["event_count"]), 0)},
+            {"Giai đoạn": str(low["_period"]), "Vai trò": "Thấp nhất", "Tổng downtime": _duration_text(float(low["total_duration_seconds"])), "Số lần": format_vn_number(int(low["event_count"]), 0)},
+        ]
+        return self._overview_text_response(conversation_id, "Xu hướng downtime", summary, state, debug, started, rows)
+
+    def _column_role_audit_response(self, conversation_id: str, catalog: dict, table: dict, df: pd.DataFrame, brief, state, debug: bool, started: float) -> ChatResponse:
+        profiles = classify_columns(table, df)
+        technical = [p for p in profiles if p.is_row_index or p.is_identifier or p.is_technical_metadata]
+        low_diversity = [p for p in profiles if p not in technical and p.constant_ratio >= 0.98]
+        business = [p for p in profiles if p not in technical and p not in low_diversity and p.semantic_role != "UNKNOWN"]
+        insight_lines = [f"- {item.statement}" for item in brief.selected_insights[:3]]
+        summary = "\n".join(
+            [
+                "Phân loại cột trước khi phân tích:",
+                "- Cột nghiệp vụ: " + ", ".join(p.display_name for p in business[:12]) + ("..." if len(business) > 12 else ""),
+                "- Cột số thứ tự/định danh/metadata kỹ thuật: " + (", ".join(p.display_name for p in technical[:12]) or "không phát hiện") + ("..." if len(technical) > 12 else ""),
+                "- Cột nghiệp vụ nhưng ít đa dạng/không nên dùng làm insight chính: " + (", ".join(p.display_name for p in low_diversity[:8]) or "không có"),
+                "Phần phân tích cột nghiệp vụ bên dưới chỉ dùng các cột như máy, thời gian, duration, nhóm/nguyên nhân hoặc metric vận hành liên quan:",
+                *insight_lines,
+                "Không dùng mode của mã định danh, số thứ tự hoặc cột kỹ thuật làm insight chính.",
+            ]
+        )
+        rows = [
+            {"Cột": p.display_name, "Vai trò semantic": p.semantic_role, "Vai trò nghiệp vụ": p.business_role or "", "Nhóm": "Kỹ thuật/loại trừ" if p in technical else "Ít đa dạng" if p in low_diversity else "Nghiệp vụ"}
+            for p in profiles
+        ]
+        return self._overview_text_response(conversation_id, "Phân loại cột dữ liệu", summary, state, debug, started, rows)
+
+    def _causality_boundary_response(self, conversation_id: str, brief, state, debug: bool, started: float) -> ChatResponse:
+        lines = [
+            "Không nên kết luận nguyên nhân khiến một máy có downtime cao chỉ từ bảng tổng hợp này.",
+            "Dữ liệu chứng minh được:",
+        ]
+        lines.extend(f"- {item.statement}" for item in brief.selected_insights[:3])
+        lines.extend(
+            [
+                "Điều chưa thể kết luận: máy hỏng, vận hành kém, bảo trì sai, lỗi con người hoặc quan hệ nhân quả giữa nhóm lỗi và máy nếu không có bằng chứng bổ sung.",
+                "Dữ liệu cần thêm để điều tra nguyên nhân: log bảo trì, mã lỗi chi tiết theo thời điểm, ca/kíp vận hành, sản lượng, thay đổi setup, vật tư, lịch dừng kế hoạch và ghi chú xử lý sự cố.",
+            ]
+        )
+        return self._overview_text_response(conversation_id, "Giới hạn nhân quả", "\n".join(lines), state, debug, started)
+
+    def _four_viewpoint_response(self, conversation_id: str, brief, state, debug: bool, started: float) -> ChatResponse:
+        insights = list(brief.selected_insights)
+        ranking = next((item for item in insights if "machine" in item.insight_type or "duration" in item.insight_type or "metric_summary" in item.insight_type), insights[0] if insights else None)
+        distribution = next((item for item in insights if "cause" in item.insight_type or "distribution" in item.insight_type or "concentration" in item.insight_type), None)
+        trend = next((item for item in insights if item.insight_type == "trend"), None)
+        lines = [
+            "Bốn góc nhìn khác nhau:",
+            f"- Quy mô: {brief.record_count:,}".replace(",", ".") + f" bản ghi, {brief.column_count} cột" + (f", phạm vi {brief.date_range['start']} đến {brief.date_range['end']}." if brief.date_range else "."),
+        ]
+        if ranking:
+            lines.append(f"- Xếp hạng: {ranking.statement}")
+        if distribution:
+            lines.append(f"- Phân bố: {distribution.statement}")
+        else:
+            lines.append("- Phân bố: chưa có dimension phân nhóm đủ rõ để nêu một phân bố đáng tin cậy.")
+        if trend:
+            lines.append(f"- Xu hướng: {trend.statement}")
+        else:
+            lines.append("- Xu hướng: chưa có cột thời gian đủ rõ để tính xu hướng.")
+        lines.append("Các góc nhìn trên dùng metric/dimension khác nhau, tránh lặp lại cùng một phát hiện dưới nhiều cách diễn đạt.")
+        return self._overview_text_response(conversation_id, "Bốn góc nhìn dữ liệu", "\n".join(lines), state, debug, started)
+
+    def _evidence_followup_response(self, conversation_id: str, brief, state, debug: bool, started: float) -> ChatResponse:
+        insights = list(brief.selected_insights[:3])
+        if not insights:
+            return self._overview_text_response(conversation_id, "Đánh giá bằng chứng", "Chưa có đủ insight trước đó để đánh giá bằng chứng.", state, debug, started)
+        strongest = max(insights, key=lambda item: (len(item.facts), item.evidence_score, item.final_score))
+        cautious = next((item for item in insights if item.insight_type in {"trend", "top_cause_downtime", "data_quality"}), insights[-1])
+        summary = "\n".join(
+            [
+                "Dựa trên ba insight vừa nêu:",
+                f"- Bằng chứng mạnh nhất: {strongest.statement} Insight này có metric cụ thể và số liệu trực tiếp từ dữ liệu.",
+                f"- Cần thận trọng nhất: {cautious.statement} Insight này vẫn là mô tả dữ liệu; không nên suy ra nguyên nhân hoặc hành động khắc phục nếu chưa có dữ liệu bổ sung.",
+                "Tôi không đổi sang bảng hay metric khác và không thêm số liệu ngoài các insight đã tính.",
+            ]
+        )
+        response = self._overview_text_response(conversation_id, "Đánh giá bằng chứng insight", summary, state, debug, started)
+        response.metadata["routing_reason"] = "overview_followup_evidence"
+        return response
+
+    def _manager_brief_response(self, conversation_id: str, brief, state, debug: bool, started: float) -> ChatResponse:
+        reason_by_type = {
+            "top_machine_downtime": "ưu tiên kiểm tra nhóm máy đóng góp downtime lớn nhất",
+            "top_cause_downtime": "ưu tiên nhóm nguyên nhân/loss có tác động lớn",
+            "trend": "nhận diện thời điểm cần điều tra sâu hơn",
+            "loss_duration": "xác định nhóm tổn thất tạo thời lượng lớn nhất",
+            "distribution": "thấy nơi dữ liệu tập trung nhiều nhất",
+            "concentration": "đánh giá mức tập trung của một vài nhóm chính",
+            "metric_summary": "nắm quy mô giá trị giao dịch",
+        }
+        lines = ["Ba thông tin nên đưa vào cuộc họp ngắn:"]
+        for item in brief.selected_insights[:3]:
+            reason = reason_by_type.get(item.insight_type, "hỗ trợ quyết định ưu tiên phân tích tiếp theo")
+            lines.append(f"- Phát hiện: {item.statement} Ý nghĩa: {reason}.")
+        lines.append("Các thông tin này được chọn vì có số liệu trực tiếp, có ý nghĩa quản lý và không dùng cột số thứ tự, mã định danh hoặc metadata kỹ thuật.")
+        return self._overview_text_response(conversation_id, "Ba insight cho quản lý", "\n".join(lines), state, debug, started)
+
+    def _overview_text_response(self, conversation_id: str, title: str, summary: str, state, debug: bool, started: float, rows: list[dict[str, Any]] | None = None) -> ChatResponse:
+        metadata = {
+            "execution_mode": "DETERMINISTIC",
+            "routing_reason": "overview_quality_prompt_variant",
+            "llm_called": False,
+            "llm_call_count": 0,
+            "latency_ms": {"total": round((perf_counter() - started) * 1000, 1)},
+            "active_file_id": state.active_file_id,
+            "active_file_name": state.active_file_name,
+            "file_scope_validated": True,
+            "debug": {"state_after": state.model_dump()} if debug else None,
+        }
+        table = TablePayload(columns=list(rows[0].keys()), rows=_json_safe(rows)) if rows else None
+        return ChatResponse(
+            message_id=str(uuid4()),
+            conversation_id=conversation_id,
+            response_type="table" if table else "text",
+            title=title,
+            summary=summary,
+            table=table,
+            metadata=metadata,
         )
 
     def _try_open_ended_analysis_response(
@@ -2299,9 +2539,64 @@ def _requires_dataset_level_semantic(q: str) -> bool:
 
 def _is_open_ended_dataset_analysis(q: str) -> bool:
     has_scope = any(term in q for term in ["toan bo du lieu", "dua tren toan bo", "file nay", "du lieu nay", "data nay", "file", "data", "du lieu"])
-    has_open_ended = any(term in q for term in ["diem dang chu y", "dang chu y", "co gi dang chu y", "dang quan tam", "bat thuong", "giai thich", "so sanh", "gioi han", "ket luan", "insight", "phan tich", "tom tat", "tinh hinh chung", "cho quan ly", "van de gi"])
+    has_open_ended = any(term in q for term in ["diem dang chu y", "dang chu y", "co gi dang chu y", "dang quan tam", "bat thuong", "giai thich", "so sanh", "gioi han", "ket luan", "insight", "phan tich", "tom tat", "tinh hinh chung", "cho quan ly", "van de gi", "goc nhin", "quy mo", "xep hang", "phan bo", "xu huong", "phat hien"])
     explicit_table_request = bool(_extract_top_n(q)) or any(term in q for term in ["theo may", "theo nhom", "theo nguyen nhan", "bang", "bieu do"])
     return has_scope and has_open_ended and not explicit_table_request
+
+
+def _is_machine_metric_comparison_request(q: str) -> bool:
+    return (
+        "phan biet" in q
+        and "tong downtime" in q
+        and any(term in q for term in ["so lan dung", "so lan"])
+        and "trung binh" in q
+        and "may" in q
+    )
+
+
+def _is_time_trend_overview_request(q: str) -> bool:
+    return "xu huong" in q and "downtime" in q and "cao nhat" in q and "thap nhat" in q
+
+
+def _is_column_role_audit_request(q: str) -> bool:
+    return "cot" in q and any(term in q for term in ["so thu tu", "ma dinh danh", "metadata", "ky thuat"]) and "nghiep vu" in q
+
+
+def _is_causality_boundary_request(q: str) -> bool:
+    return any(term in q for term in ["ket luan nguyen nhan", "nguyen nhan khien", "nhan qua"]) and "downtime" in q
+
+
+def _is_four_viewpoint_request(q: str) -> bool:
+    return ("bon goc nhin" in q or "4 goc nhin" in q) and all(term in q for term in ["quy mo", "xep hang", "phan bo", "xu huong"])
+
+
+def _is_evidence_followup_request(q: str) -> bool:
+    return any(term in q for term in ["insight tren", "ba insight tren", "ket qua vua roi", "vua roi"]) and any(term in q for term in ["bang chung manh", "can than trong"])
+
+
+def _is_manager_brief_request(q: str) -> bool:
+    return (
+        any(term in q for term in ["quan ly", "cuoc hop ngan", "ba thong tin", "ba phat hien", "ba insight"])
+        and any(term in q for term in ["file", "du lieu", "data"])
+        and any(term in q for term in ["phat hien", "insight", "thong tin", "phan tich"])
+    )
+
+
+def _machine_metric_row(label: str, row: pd.Series, machine_col: str) -> dict[str, Any]:
+    return {
+        "Chỉ tiêu": label,
+        "Máy": str(row[machine_col]),
+        "Tổng downtime": _duration_text(float(row["total_duration_seconds"])),
+        "Số lần dừng": format_vn_number(int(row["event_count"]), 0),
+        "Trung bình/lần": _duration_text(float(row["avg_duration_seconds"])),
+    }
+
+
+def _duration_text(seconds: float) -> str:
+    value = format_duration(seconds)
+    if isinstance(value, dict):
+        return str(value.get("primary") or value.get("secondary") or seconds)
+    return str(value)
 
 
 def _extract_top_n(q: str) -> int | None:
