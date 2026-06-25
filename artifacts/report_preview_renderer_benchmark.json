@@ -4,7 +4,8 @@
     "report_missing_rendered_sections": 0,
     "history_response_type_mutation": 0,
     "history_report_payload_missing": 0,
-    "report_has_chart_for_compatibility": 1,
+    "report_has_pdf_download": 1,
+    "report_has_no_html_xlsx_download": 1,
     "status": "passed"
   },
   "coverage": {
@@ -16,23 +17,23 @@
   "response_type": "report",
   "history_response_type": "report",
   "section_types": [
-    "dataset_overview",
-    "kpi_total_downtime",
-    "kpi_stop_count",
-    "top_machines",
-    "top_causes",
-    "time_trend",
-    "management_commentary",
-    "source_filters_limitations"
+    "tong_quan_du_lieu",
+    "tong_downtime",
+    "so_lan_dung",
+    "top_may",
+    "top_nguyen_nhan",
+    "xu_huong",
+    "nhan_xet_quan_ly",
+    "nguon_va_gioi_han"
   ],
   "history_section_types": [
-    "dataset_overview",
-    "kpi_total_downtime",
-    "kpi_stop_count",
-    "top_machines",
-    "top_causes",
-    "time_trend",
-    "management_commentary",
-    "source_filters_limitations"
+    "tong_quan_du_lieu",
+    "tong_downtime",
+    "so_lan_dung",
+    "top_may",
+    "top_nguyen_nhan",
+    "xu_huong",
+    "nhan_xet_quan_ly",
+    "nguon_va_gioi_han"
   ]
 }

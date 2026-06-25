@@ -86,7 +86,7 @@ test("does not render invalid single-character analysis narrative", () => {
   expect(screen.queryByText("D")).not.toBeInTheDocument();
 });
 
-test("dispatches report payload to ReportPreview even when chart exists", () => {
+test("dispatches report payload to PDF-only ReportPreview even when chart exists", () => {
   const reportResponse: ChatResponse = {
     ...baseResponse,
     response_type: "report",
@@ -97,29 +97,37 @@ test("dispatches report payload to ReportPreview even when chart exists", () => 
     report: {
       report_id: "r1",
       title: "Báo cáo phân tích downtime",
+      subtitle: "Báo cáo mô tả dữ liệu downtime.",
+      source_file_name: "Machine_Downtime.xlsx",
+      date_range: { from: "2026-01-01", to: "2026-01-31" },
+      generated_at: "09:00, ngày 25/06/2026",
       executive_summary: ["Báo cáo đã tổng hợp dữ liệu downtime theo các section chính."],
-      kpis: [{ label: "Tổng downtime", value: "10 giờ", hint: "Tính từ file đang chọn." }],
+      kpis: [{ label: "Tổng downtime", value: "10", unit: "giờ", hint: "Tính từ file đang chọn." }],
       source: { name: "Machine_Downtime.xlsx", rows: 9151 },
       filters: [],
       limitations: ["Kết quả là mô tả dữ liệu đã import."],
-      html_download_url: null,
-      xlsx_download_url: null,
+      pdf_status: "ready",
+      pdf_download_url: "/api/artifacts/report_r1.pdf/download",
+      completeness: { requested_sections: 8, backend_sections: 8, rendered_sections: 8, missing_sections: [] },
       sections: [
-        { section_type: "dataset_overview", title: "Tổng quan dữ liệu", summary: "File có dữ liệu downtime đã import.", kpis: [], table: null, chart: null, commentary: [] },
-        { section_type: "kpi_total_downtime", title: "KPI tổng downtime", summary: "Tổng downtime là 10 giờ.", kpis: [], table: null, chart: null, commentary: [] },
-        { section_type: "kpi_stop_count", title: "KPI số lần dừng", summary: "Dữ liệu có nhiều lần dừng.", kpis: [], table: null, chart: null, commentary: [] },
-        { section_type: "top_machines", title: "Top máy", summary: "Máy 11 đứng đầu theo downtime.", kpis: [], table: null, chart: null, commentary: [] },
-        { section_type: "top_causes", title: "Top nguyên nhân", summary: "Nguyên nhân chính có downtime cao.", kpis: [], table: null, chart: null, commentary: [] },
-        { section_type: "time_trend", title: "Biểu đồ xu hướng", summary: "Xu hướng downtime theo ngày.", kpis: [], table: null, chart: null, commentary: [] },
-        { section_type: "management_commentary", title: "Nhận xét quản lý", summary: "Nên xem đồng thời downtime và số lần dừng.", kpis: [], table: null, chart: null, commentary: [] },
-        { section_type: "source_filters_limitations", title: "Nguồn và giới hạn", summary: "Báo cáo dùng file đang chọn.", kpis: [], table: null, chart: null, commentary: [] }
+        { section_type: "tong_quan_du_lieu", title: "Tổng quan dữ liệu", summary: "File có dữ liệu downtime đã import.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "tong_downtime", title: "KPI tổng downtime", summary: "Tổng downtime là 10 giờ.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "so_lan_dung", title: "KPI số lần dừng", summary: "Dữ liệu có nhiều lần dừng.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "top_may", title: "Top máy", summary: "Máy 11 đứng đầu theo downtime.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "top_nguyen_nhan", title: "Top nguyên nhân", summary: "Nguyên nhân chính có downtime cao.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "xu_huong", title: "Biểu đồ xu hướng", summary: "Xu hướng downtime theo ngày.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "nhan_xet_quan_ly", title: "Nhận xét quản lý", summary: "Nên xem đồng thời downtime và số lần dừng.", kpis: [], table: null, chart: null, commentary: [] },
+        { section_type: "nguon_va_gioi_han", title: "Nguồn và giới hạn", summary: "Báo cáo dùng file đang chọn.", kpis: [], table: null, chart: null, commentary: [] }
       ]
     },
-    downloads: []
+    downloads: [{ id: "report_r1.pdf", label: "Tải báo cáo PDF", filename: "report_r1.pdf", mime_type: "application/pdf" }]
   };
   render(<ChatMessage debug={false} message={assistant(reportResponse)} />);
   expect(screen.getByTestId("report-preview")).toBeInTheDocument();
   expect(document.querySelectorAll("[data-section-type]").length).toBe(8);
+  expect(screen.getByText("Tải báo cáo PDF")).toBeInTheDocument();
+  expect(screen.queryByText("Tải HTML")).not.toBeInTheDocument();
+  expect(screen.queryByText("Tải Excel")).not.toBeInTheDocument();
   expect(document.querySelector(".chart-box")).not.toBeInTheDocument();
 });
 

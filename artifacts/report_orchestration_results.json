@@ -10,19 +10,13 @@
       "message": "Tạo báo cáo tổng quan về dữ liệu downtime.",
       "response_type": "report",
       "title": "Báo cáo phân tích downtime",
-      "summary": "Báo cáo đã tổng hợp 9151 dòng dữ liệu trong giai đoạn 2025-11-03 đến 2026-02-03.\nTổng downtime là 1.989,56 giờ.\nMáy đứng đầu theo downtime là Máy 11 với 413,57 giờ.\nNguyên nhân tổn thất lớn nhất là MÁY LỖI PHẦN CƠ với 563,32 giờ.\nReport includes overview, KPI, ranked tables, time trend, source and limitation sections.",
+      "summary": "Báo cáo đã tổng hợp 9151 dòng dữ liệu trong giai đoạn 2025-11-03 đến 2026-02-03.\nTổng downtime là 1.989,56 giờ.\nMáy đứng đầu theo downtime là Máy 11 với 413,57 giờ.\nNguyên nhân tổn thất lớn nhất là MÁY LỖI PHẦN CƠ với 563,32 giờ.\nBáo cáo gồm tổng quan, KPI, bảng xếp hạng, xu hướng thời gian, nguồn dữ liệu và giới hạn diễn giải.",
       "downloads": [
         {
-          "id": "report_15197d11-2f8e-4880-8d36-bf977634e996.html",
-          "label": "Tải HTML",
-          "filename": "report_15197d11-2f8e-4880-8d36-bf977634e996.html",
-          "mime_type": "text/html"
-        },
-        {
-          "id": "report_15197d11-2f8e-4880-8d36-bf977634e996.xlsx",
-          "label": "Tải Excel",
-          "filename": "report_15197d11-2f8e-4880-8d36-bf977634e996.xlsx",
-          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          "id": "report_c260515d-2910-4412-9ee7-d23838808768.pdf",
+          "label": "Tải báo cáo PDF",
+          "filename": "report_c260515d-2910-4412-9ee7-d23838808768.pdf",
+          "mime_type": "application/pdf"
         }
       ],
       "report_completeness": {
@@ -75,12 +69,32 @@
           "source": "Machine_Downtime_20260203_100753.xlsx / Report"
         }
       },
+      "pdf_report": {
+        "status": "ready",
+        "artifact_id": "report_c260515d-2910-4412-9ee7-d23838808768.pdf",
+        "page_count": 4,
+        "render_verification": {
+          "page_count": 4,
+          "blank_pages": 0,
+          "has_vietnamese": true,
+          "metadata_leakage": [],
+          "contains_pdf_title": true
+        },
+        "preview_images": [
+          "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_c260515d-2910-4412-9ee7-d23838808768_page_1.png",
+          "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_c260515d-2910-4412-9ee7-d23838808768_page_2.png",
+          "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_c260515d-2910-4412-9ee7-d23838808768_page_3.png",
+          "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_c260515d-2910-4412-9ee7-d23838808768_page_4.png"
+        ]
+      },
       "checks": {
         "is_report": true,
         "multi_query": true,
         "has_table": true,
         "has_chart": true,
-        "downloads": true,
+        "single_pdf_download": true,
+        "no_html_xlsx_downloads": true,
+        "pdf_ready": true,
         "complete": true,
         "has_required_sections": true,
         "chart_contract_current": true
@@ -92,19 +106,13 @@
       "message": "Tạo báo cáo phân tích downtime gồm KPI, top máy, top nguyên nhân và xu hướng theo ngày.",
       "response_type": "report",
       "title": "Báo cáo phân tích downtime",
-      "summary": "Báo cáo đã tổng hợp 9151 dòng dữ liệu trong giai đoạn 2025-11-03 đến 2026-02-03.\nTổng downtime là 1.989,56 giờ.\nMáy đứng đầu theo downtime là Máy 11 với 413,57 giờ.\nNguyên nhân tổn thất lớn nhất là MÁY LỖI PHẦN CƠ với 563,32 giờ.\nReport includes overview, KPI, ranked tables, time trend, source and limitation sections.",
+      "summary": "Báo cáo đã tổng hợp 9151 dòng dữ liệu trong giai đoạn 2025-11-03 đến 2026-02-03.\nTổng downtime là 1.989,56 giờ.\nMáy đứng đầu theo downtime là Máy 11 với 413,57 giờ.\nNguyên nhân tổn thất lớn nhất là MÁY LỖI PHẦN CƠ với 563,32 giờ.\nBáo cáo gồm tổng quan, KPI, bảng xếp hạng, xu hướng thời gian, nguồn dữ liệu và giới hạn diễn giải.",
       "downloads": [
         {
-          "id": "report_eb28b2a8-1726-4499-9b8c-9bc28e295006.html",
-          "label": "Tải HTML",
-          "filename": "report_eb28b2a8-1726-4499-9b8c-9bc28e295006.html",
-          "mime_type": "text/html"
-        },
-        {
-          "id": "report_eb28b2a8-1726-4499-9b8c-9bc28e295006.xlsx",
-          "label": "Tải Excel",
-          "filename": "report_eb28b2a8-1726-4499-9b8c-9bc28e295006.xlsx",
-          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          "id": "report_dab6acf6-d3a4-49e2-a431-e4d0e943c44d.pdf",
+          "label": "Tải báo cáo PDF",
+          "filename": "report_dab6acf6-d3a4-49e2-a431-e4d0e943c44d.pdf",
+          "mime_type": "application/pdf"
         }
       ],
       "report_completeness": {
@@ -157,12 +165,32 @@
           "source": "Machine_Downtime_20260203_100753.xlsx / Report"
         }
       },
+      "pdf_report": {
+        "status": "ready",
+        "artifact_id": "report_dab6acf6-d3a4-49e2-a431-e4d0e943c44d.pdf",
+        "page_count": 4,
+        "render_verification": {
+          "page_count": 4,
+          "blank_pages": 0,
+          "has_vietnamese": true,
+          "metadata_leakage": [],
+          "contains_pdf_title": true
+        },
+        "preview_images": [
+          "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_dab6acf6-d3a4-49e2-a431-e4d0e943c44d_page_1.png",
+          "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_dab6acf6-d3a4-49e2-a431-e4d0e943c44d_page_2.png",
+          "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_dab6acf6-d3a4-49e2-a431-e4d0e943c44d_page_3.png",
+          "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_dab6acf6-d3a4-49e2-a431-e4d0e943c44d_page_4.png"
+        ]
+      },
       "checks": {
         "is_report": true,
         "multi_query": true,
         "has_table": true,
         "has_chart": true,
-        "downloads": true,
+        "single_pdf_download": true,
+        "no_html_xlsx_downloads": true,
+        "pdf_ready": true,
         "complete": true,
         "has_required_sections": true,
         "chart_contract_current": true

@@ -5,8 +5,8 @@ import { DataTable } from "./DataTable";
 import { isRenderableNarrative } from "./narrative";
 
 export function ReportPreview({ report, downloads }: { report: ReportPayload; downloads: DownloadPayload[] }) {
-  const htmlDownload = downloads.find((item) => item.mime_type === "text/html");
-  const xlsxDownload = downloads.find((item) => item.filename.toLowerCase().endsWith(".xlsx"));
+  const pdfDownload = downloads.find((item) => item.mime_type === "application/pdf" || item.filename.toLowerCase().endsWith(".pdf"));
+  const sourceName = report.source_file_name || report.source.name;
 
   return (
     <section className="report-preview" data-testid="report-preview">
@@ -14,10 +14,15 @@ export function ReportPreview({ report, downloads }: { report: ReportPayload; do
         <div>
           <span className="report-eyebrow"><FileText size={14} /> Báo cáo</span>
           <h2>{report.title}</h2>
+          {report.subtitle ? <p>{report.subtitle}</p> : null}
+          <small>{[sourceName, report.generated_at].filter(Boolean).join(" · ")}</small>
         </div>
         <div className="report-actions">
-          {htmlDownload ? <DownloadLink download={htmlDownload} label="Tải HTML" /> : null}
-          {xlsxDownload ? <DownloadLink download={xlsxDownload} label="Tải Excel" /> : null}
+          {pdfDownload ? (
+            <DownloadLink download={pdfDownload} label="Tải báo cáo PDF" />
+          ) : (
+            <span className="report-status">{report.pdf_status === "failed" ? "PDF chưa sẵn sàng" : "Đang tạo PDF"}</span>
+          )}
         </div>
       </header>
 
@@ -35,7 +40,7 @@ export function ReportPreview({ report, downloads }: { report: ReportPayload; do
           {report.kpis.map((kpi) => (
             <div className="kpi-card" key={kpi.label}>
               <span>{kpi.label}</span>
-              <strong>{kpi.value}</strong>
+              <strong>{[kpi.value, kpi.unit].filter(Boolean).join(" ")}</strong>
               {isRenderableNarrative(kpi.hint) ? <small>{kpi.hint}</small> : null}
             </div>
           ))}
@@ -47,12 +52,12 @@ export function ReportPreview({ report, downloads }: { report: ReportPayload; do
           <article className="report-section" data-section-type={section.section_type} key={section.section_type}>
             <header>
               <h3>{section.title}</h3>
-              <span>{section.table ? "Có bảng" : section.chart ? "Có biểu đồ" : section.kpis.length ? "Có KPI" : "Có nhận xét"}</span>
+              <span>{section.table ? "Bảng" : section.chart ? "Biểu đồ" : section.kpis.length ? "KPI" : "Nhận xét"}</span>
             </header>
             {isRenderableNarrative(section.summary) ? <p>{section.summary}</p> : null}
             {section.kpis.length ? (
               <div className="mini-kpis">
-                {section.kpis.map((kpi) => <span key={kpi.label}>{kpi.label}: <strong>{kpi.value}</strong></span>)}
+                {section.kpis.map((kpi) => <span key={kpi.label}>{kpi.label}: <strong>{[kpi.value, kpi.unit].filter(Boolean).join(" ")}</strong></span>)}
               </div>
             ) : null}
             {section.chart ? <ChartResult chart={section.chart} /> : null}
@@ -64,7 +69,7 @@ export function ReportPreview({ report, downloads }: { report: ReportPayload; do
 
       <footer className="report-section">
         <h3>Nguồn và giới hạn</h3>
-        <p>{report.source.name}{report.source.rows ? ` · ${report.source.rows.toLocaleString("vi-VN")} dòng` : ""}</p>
+        <p>{sourceName}{report.source.rows ? ` · ${report.source.rows.toLocaleString("vi-VN")} dòng` : ""}</p>
         {report.limitations.filter(isRenderableNarrative).map((item, index) => <p className="report-commentary" key={index}>{item}</p>)}
       </footer>
     </section>

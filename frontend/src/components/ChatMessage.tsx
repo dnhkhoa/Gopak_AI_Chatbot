@@ -40,13 +40,14 @@ export function ChatMessage({ message, debug, internalDebug = false }: { message
       </div>
     );
   }
+  const isReport = response.response_type === "report";
   return (
     <div className="message-row assistant">
       <AssistantAvatar />
       <div className="assistant-content">
         <ResponseBody response={response} />
-        <DownloadActions downloads={response.downloads} />
-        <SourceDetails response={response} />
+        {isReport ? null : <DownloadActions downloads={response.downloads} />}
+        {isReport ? null : <SourceDetails response={response} />}
         {internalDebug ? <InternalDebugMetadata response={response} /> : null}
         {debug ? <DebugPanel response={response} /> : null}
       </div>

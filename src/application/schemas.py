@@ -54,8 +54,8 @@ class ChartPayload(BaseModel):
     x_axis_unit: str | None = None
     y_axis_unit: str | None = None
     tooltip_unit: str | None = None
-    source_result_id: str | None = None
-    source_turn_id: str | None = None
+    source_result_id: str | None = Field(default=None, exclude=True)
+    source_turn_id: str | None = Field(default=None, exclude=True)
     metric: str | None = None
     dimension: str | None = None
 
@@ -69,6 +69,7 @@ class DashboardPayload(BaseModel):
 class KpiCard(BaseModel):
     label: str
     value: str
+    unit: str | None = None
     hint: str | None = None
 
 
@@ -127,14 +128,19 @@ class PublicReportSection(BaseModel):
 class ReportPayload(BaseModel):
     report_id: str
     title: str
+    subtitle: str | None = None
+    source_file_name: str = ""
+    date_range: dict[str, Any] | None = None
+    generated_at: str = ""
     executive_summary: list[str] = Field(default_factory=list)
     kpis: list[KpiCard] = Field(default_factory=list)
     sections: list[PublicReportSection] = Field(default_factory=list)
     source: SourceInfo
     filters: list[dict[str, Any]] = Field(default_factory=list)
     limitations: list[str] = Field(default_factory=list)
-    html_download_url: str | None = None
-    xlsx_download_url: str | None = None
+    pdf_status: str = "pending"
+    pdf_download_url: str | None = None
+    completeness: dict[str, Any] = Field(default_factory=dict)
 
 
 class ChatResponse(BaseModel):

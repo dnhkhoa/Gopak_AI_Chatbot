@@ -17,14 +17,14 @@ from src.files.upload_store import list_uploaded_files
 
 ARTIFACTS = ROOT / "artifacts"
 EXPECTED_SECTIONS = [
-    "dataset_overview",
-    "kpi_total_downtime",
-    "kpi_stop_count",
-    "top_machines",
-    "top_causes",
-    "time_trend",
-    "management_commentary",
-    "source_filters_limitations",
+    "tong_quan_du_lieu",
+    "tong_downtime",
+    "so_lan_dung",
+    "top_may",
+    "top_nguyen_nhan",
+    "xu_huong",
+    "nhan_xet_quan_ly",
+    "nguon_va_gioi_han",
 ]
 
 
@@ -62,7 +62,8 @@ def run() -> dict[str, Any]:
         "report_missing_rendered_sections": int(bool(coverage["missing_sections"]) or coverage["rendered_sections"] != len(EXPECTED_SECTIONS)),
         "history_response_type_mutation": int(not history_response or history_response.response_type != "report"),
         "history_report_payload_missing": int(not history_report or len(history_report.sections) != len(EXPECTED_SECTIONS)),
-        "report_has_chart_for_compatibility": int(response.chart is not None),
+        "report_has_pdf_download": int(len(response.downloads) == 1 and response.downloads[0].mime_type == "application/pdf"),
+        "report_has_no_html_xlsx_download": int(not any(item.filename.lower().endswith((".html", ".xlsx")) for item in response.downloads)),
         "status": "passed",
     }
     summary["status"] = "passed" if all(
@@ -72,7 +73,7 @@ def run() -> dict[str, Any]:
             "history_response_type_mutation",
             "history_report_payload_missing",
         ]
-    ) and summary["report_has_chart_for_compatibility"] == 1 else "failed"
+    ) and summary["report_has_pdf_download"] == 1 and summary["report_has_no_html_xlsx_download"] == 1 else "failed"
     payload = {
         "summary": summary,
         "coverage": coverage,

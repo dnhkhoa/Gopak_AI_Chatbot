@@ -534,6 +534,15 @@ th {
   gap: 12px;
 }
 .report-preview-header h2 { margin-bottom: 0; }
+.report-preview-header p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+.report-preview-header small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+}
 .report-eyebrow {
   display: inline-flex;
   align-items: center;
@@ -554,6 +563,15 @@ th {
   color: var(--text);
   font-weight: 650;
   font-size: .84rem;
+}
+.report-status {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 7px 10px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: .84rem;
+  font-weight: 650;
 }
 .report-section {
   border: 1px solid var(--border);

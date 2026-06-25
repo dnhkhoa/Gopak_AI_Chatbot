@@ -47,13 +47,16 @@ def run() -> dict[str, Any]:
             response = app.process_message(conversation.id, case["message"], debug=True, source_file_id=str(record["id"]))
             completeness = response.metadata.get("report_completeness") if isinstance(response.metadata, dict) else {}
             statuses = response.metadata.get("report_section_statuses") if isinstance(response.metadata, dict) else {}
+            pdf_meta = response.metadata.get("pdf_report") if isinstance(response.metadata, dict) else {}
             download_suffixes = {Path(item.filename).suffix.lower() for item in response.downloads}
             checks = {
                 "is_report": response.response_type == "report",
                 "multi_query": response.metadata.get("multi_query_execution") is True,
                 "has_table": response.table is not None and bool(response.table.rows),
                 "has_chart": response.chart is not None and response.chart.type == "line",
-                "downloads": {".html", ".xlsx"}.issubset(download_suffixes),
+                "single_pdf_download": download_suffixes == {".pdf"},
+                "no_html_xlsx_downloads": not ({".html", ".xlsx"} & download_suffixes),
+                "pdf_ready": bool(response.report and response.report.pdf_status == "ready" and pdf_meta.get("status") == "ready"),
                 "complete": not completeness.get("missing"),
                 "has_required_sections": all(section in statuses for section in completeness.get("required", [])),
                 "chart_contract_current": bool((response.metadata.get("chart_contract") or {}).get("source_result_id")),
@@ -67,6 +70,7 @@ def run() -> dict[str, Any]:
                     "downloads": [item.model_dump(mode="json") for item in response.downloads],
                     "report_completeness": completeness,
                     "report_section_statuses": statuses,
+                    "pdf_report": pdf_meta,
                     "checks": checks,
                     "passed": all(checks.values()),
                 }
@@ -78,7 +82,7 @@ def run() -> dict[str, Any]:
     }
     ARTIFACTS.mkdir(exist_ok=True)
     (ARTIFACTS / "report_orchestration_results.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(json.dumps(payload["summary"], ensure_ascii=False, indent=2))
+    print(json.dumps(payload["summary"], ensure_ascii=True, indent=2))
     return payload
 
 

@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checks": {
+    "created_report_once": true,
+    "history_response_still_report": true,
+    "history_report_payload_present": true,
+    "same_report_id": true,
+    "same_pdf_download": true,
+    "pdf_resolves_after_reload": true,
+    "source_file_retained": true,
+    "sections_retained": true,
+    "public_history_metadata_safe": true
+  },
+  "conversation_id": "f44ce735-0813-4831-902c-b76d5f00c283",
+  "report_id": "ff69aa1e-be0f-4f02-bec3-296b0d199a4f",
+  "pdf_artifact": "D:\\Gopak Chatbot\\reports\\report_ff69aa1e-be0f-4f02-bec3-296b0d199a4f.pdf",
+  "persisted_pdf_artifact": "D:\\Gopak Chatbot\\reports\\report_ff69aa1e-be0f-4f02-bec3-296b0d199a4f.pdf",
+  "history_message_count": 2
+}

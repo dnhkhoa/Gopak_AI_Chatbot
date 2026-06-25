@@ -46,6 +46,7 @@ export interface DashboardPayload {
 export interface KpiCard {
   label: string;
   value: string;
+  unit?: string | null;
   hint?: string | null;
 }
 
@@ -97,14 +98,19 @@ export interface PublicReportSection {
 export interface ReportPayload {
   report_id: string;
   title: string;
+  subtitle?: string | null;
+  source_file_name: string;
+  date_range?: Record<string, unknown> | null;
+  generated_at: string;
   executive_summary: string[];
   kpis: KpiCard[];
   sections: PublicReportSection[];
   source: SourceInfo;
   filters: Record<string, unknown>[];
   limitations: string[];
-  html_download_url?: string | null;
-  xlsx_download_url?: string | null;
+  pdf_status: string;
+  pdf_download_url?: string | null;
+  completeness: Record<string, unknown>;
 }
 
 export interface ChatResponse {

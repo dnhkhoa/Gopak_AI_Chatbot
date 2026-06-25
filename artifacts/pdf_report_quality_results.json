@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checks": {
+    "response_type_report": true,
+    "report_payload_present": true,
+    "pdf_ready": true,
+    "pdf_artifact_exists": true,
+    "single_pdf_download": true,
+    "no_customer_html_xlsx": true,
+    "page_count_positive": true,
+    "no_blank_pages": true,
+    "has_vietnamese": true,
+    "no_metadata_leakage_in_pdf": true,
+    "rendered_png_exists": true,
+    "pdf_title_detected": true
+  },
+  "pdf_artifact": "D:\\Gopak Chatbot\\reports\\report_2ffa6da0-19e4-4d01-b613-164220eaaa3e.pdf",
+  "verification": {
+    "page_count": 4,
+    "blank_pages": 0,
+    "has_vietnamese": true,
+    "metadata_leakage": [],
+    "contains_pdf_title": true
+  },
+  "preview_images": [
+    "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_2ffa6da0-19e4-4d01-b613-164220eaaa3e_page_1.png",
+    "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_2ffa6da0-19e4-4d01-b613-164220eaaa3e_page_2.png",
+    "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_2ffa6da0-19e4-4d01-b613-164220eaaa3e_page_3.png",
+    "D:\\Gopak Chatbot\\artifacts\\pdf_render_verification\\report_2ffa6da0-19e4-4d01-b613-164220eaaa3e_page_4.png"
+  ]
+}

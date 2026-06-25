@@ -80,6 +80,7 @@ from src.query_understanding.deterministic_planner import DeterministicPlanner
 from src.rendering.chart_renderer import build_chart
 from src.rendering.dashboard import kpi_cards
 from src.rendering.formatters import format_dataframe_for_display, format_duration, format_vn_number, humanize_column_name
+from src.rendering.pdf_report import export_public_report_pdf, generated_at_vn
 from src.rendering.presentation import PresentedResponse, build_presented_response
 from src.rendering.report_exporter import export_excel_result, export_html_report
 
@@ -940,6 +941,7 @@ class ChatApplicationService:
         report_kind = "downtime" if any(item in request_contract.report_sections for item in ["kpi_total_downtime", "top_machines"]) else "overview"
 
         record_count = int(len(df))
+        machine_count = int(df[machine].dropna().nunique()) if machine in df.columns else 0
         total_seconds = float(df[duration].sum()) if duration in df.columns else 0.0
         total_hours = round(total_seconds / 3600, 2)
         date_range = None
@@ -1008,46 +1010,63 @@ class ChatApplicationService:
             limit=500,
         )
         chart_metadata = {"lineage": lineage}
-        chart = _chart_payload(trend, chart_plan, catalog, chart_metadata) if not trend.empty else None
+        trend_chart = _chart_payload(trend, chart_plan, catalog, chart_metadata) if not trend.empty else None
+        top_machine_chart = _report_bar_chart(top_machines, machine, "Top 5 máy theo downtime", "Máy") if not top_machines.empty else None
+        top_cause_chart = _report_bar_chart(top_causes, loss_name or "", "Top 5 nguyên nhân theo downtime", "Nguyên nhân") if not top_causes.empty and loss_name else None
+        for chart in [trend_chart, top_machine_chart, top_cause_chart]:
+            _strip_public_chart_metadata(chart)
         summary = _report_summary(report_kind, record_count, total_hours, date_range, top_machines, top_causes)
-        html_path, xlsx_path = _export_orchestrated_report(
-            message=message,
-            report_kind=report_kind,
-            summary=summary,
-            sections=sections,
+        commentary, commentary_trace = self._compose_report_management_commentary(
             top_machines=top_machines,
             top_causes=top_causes,
             trend=trend,
-            reports_dir=self.settings.reports_dir,
-            artifact_id=str(lineage["report_artifact_id"]),
-            catalog=catalog,
+            total_hours=total_hours,
+            record_count=record_count,
+            date_range=date_range,
         )
-        downloads = [_download_payload(path) for path in [html_path, xlsx_path] if path.exists()]
         report_payload = _build_report_payload(
             report_id=str(lineage["report_artifact_id"]),
             title="Báo cáo phân tích downtime" if report_kind == "downtime" else "Báo cáo tổng quan",
+            subtitle="Báo cáo mô tả dữ liệu downtime, xếp hạng máy/nguyên nhân và xu hướng theo thời gian.",
             summary=summary,
             sections=sections,
             record_count=record_count,
+            machine_count=machine_count,
             total_hours=total_hours,
             date_range=date_range,
             top_machines=top_machines,
             top_causes=top_causes,
-            chart=chart,
+            trend_chart=trend_chart,
+            top_machine_chart=top_machine_chart,
+            top_cause_chart=top_cause_chart,
+            management_commentary=commentary,
             source_name=_safe_source_name(str(table.get("source") or "")),
+            source_file_name=_clean_source_filename(str(table.get("source_file") or table.get("source") or state.active_file_name or "")),
             source_rows=int(table.get("row_count") or record_count),
-            downloads=downloads,
             catalog=catalog,
         )
+        pdf_result = export_public_report_pdf(report_payload, self.settings.reports_dir)
+        pdf_download = _download_payload(pdf_result.pdf_path)
+        report_payload.pdf_status = "ready" if pdf_result.pdf_path.exists() else "failed"
+        report_payload.pdf_download_url = f"/api/artifacts/{pdf_download.id}/download" if pdf_result.pdf_path.exists() else None
+        downloads = [pdf_download] if pdf_result.pdf_path.exists() else []
         metadata = {
             "execution_mode": "DETERMINISTIC_REPORT",
             "routing_reason": "multi_query_report_orchestration",
-            "llm_called": False,
-            "llm_call_count": 0,
+            "llm_called": bool(commentary_trace.get("llm_request_started")),
+            "llm_call_count": 1 if commentary_trace.get("llm_request_started") else 0,
             "multi_query_execution": True,
             "report_kind": report_kind,
             "report_section_statuses": sections,
             "report_completeness": {"missing": missing, "required": request_contract.report_sections},
+            "pdf_report": {
+                "status": report_payload.pdf_status,
+                "artifact_id": pdf_download.id if downloads else None,
+                "page_count": pdf_result.page_count,
+                "render_verification": pdf_result.verification,
+                "preview_images": [str(path) for path in pdf_result.preview_images],
+            },
+            "management_commentary_trace": commentary_trace,
             "chart_contract": chart_metadata.get("chart_contract"),
             "latency_ms": {"total": round((perf_counter() - started) * 1000, 1)},
             "active_file_id": state.active_file_id,
@@ -1062,12 +1081,80 @@ class ChatApplicationService:
             title="Báo cáo phân tích downtime" if report_kind == "downtime" else "Báo cáo tổng quan",
             summary=summary,
             table=_table_payload(display_table) if not display_table.empty else None,
-            chart=chart,
+            chart=trend_chart,
             report=report_payload,
             sources=_source_payloads(self._sources_for_plan(QueryPlan(tables=[table["table_name"]]), catalog)),
             downloads=downloads,
             metadata=_json_safe(metadata),
         )
+
+    def _compose_report_management_commentary(
+        self,
+        *,
+        top_machines: pd.DataFrame,
+        top_causes: pd.DataFrame,
+        trend: pd.DataFrame,
+        total_hours: float,
+        record_count: int,
+        date_range: dict[str, str] | None,
+    ) -> tuple[list[str], dict[str, Any]]:
+        fallback = _deterministic_management_commentary(top_machines, top_causes, trend, total_hours, record_count)
+        payload = {
+            "validated_kpis": {
+                "total_downtime_hours": round(total_hours, 2),
+                "stop_count": record_count,
+                "date_range": date_range,
+            },
+            "top_machines": _report_numeric_frame(top_machines).head(5).to_dict(orient="records"),
+            "top_causes": _report_numeric_frame(top_causes).head(5).to_dict(orient="records"),
+            "trend_extrema": _trend_extrema(trend),
+            "limitations": [
+                "Báo cáo mô tả dữ liệu ghi nhận và chưa chứng minh quan hệ nhân quả.",
+                "Cần thêm log bảo trì, ca vận hành và ghi chú xử lý sự cố để điều tra nguyên nhân kỹ thuật.",
+            ],
+        }
+        trace: dict[str, Any] = {
+            "management_composer_required": True,
+            "llm_request_started": True,
+            "llm_request_completed": False,
+            "composer_output_valid": False,
+            "silent_fallback": False,
+            "input_payload_keys": list(payload.keys()),
+            "commentary_source": "deterministic_limited",
+        }
+        try:
+            llm = OllamaClient(self.settings).chat(
+                [
+                    {
+                        "role": "system",
+                        "content": (
+                            "Bạn là trợ lý viết nhận xét quản lý cho báo cáo downtime. "
+                            "Chỉ dùng payload đã kiểm chứng, trả lời tiếng Việt có dấu, 2-4 gạch đầu dòng. "
+                            "Phân biệt điều dữ liệu chứng minh được và điều chưa thể kết luận."
+                        ),
+                    },
+                    {
+                        "role": "user",
+                        "content": (
+                            "Viết nhận xét quản lý grounded từ payload. Không nhắc JSON, model, fallback, "
+                            "không suy diễn nguyên nhân kỹ thuật hoặc trách nhiệm vận hành.\n"
+                            f"Payload: {json.dumps(payload, ensure_ascii=False, default=str)}"
+                        ),
+                    },
+                ]
+            )
+            trace["llm_request_completed"] = True
+            trace["llm_latency_ms"] = round(llm.latency_ms, 1)
+            lines = _clean_commentary_lines(llm.text)
+            if len(lines) >= 2 and all(is_valid_customer_narrative(line) for line in lines):
+                trace["composer_output_valid"] = True
+                trace["commentary_source"] = "grounded_llm"
+                return lines[:4], trace
+            trace["composer_rejected_reason"] = "invalid_or_too_short_commentary"
+        except Exception as exc:
+            trace["composer_error_type"] = type(exc).__name__
+        trace["composer_output_valid"] = all(is_valid_customer_narrative(line) for line in fallback)
+        return fallback, trace
 
     def _try_overview_quality_prompt_response(
         self,
@@ -1793,7 +1880,7 @@ class ChatApplicationService:
         reports_dir = self.settings.reports_dir.resolve()
         if path.parent != reports_dir or not path.exists() or not path.is_file():
             return None
-        if path.suffix.lower() not in {".html", ".xlsx"}:
+        if path.suffix.lower() not in {".html", ".xlsx", ".pdf"}:
             return None
         return path
 
@@ -2412,21 +2499,24 @@ def _build_report_payload(
     *,
     report_id: str,
     title: str,
+    subtitle: str | None,
     summary: str,
     sections: dict[str, dict[str, Any]],
     record_count: int,
+    machine_count: int,
     total_hours: float,
     date_range: dict[str, str] | None,
     top_machines: pd.DataFrame,
     top_causes: pd.DataFrame,
-    chart: ChartPayload | None,
+    trend_chart: ChartPayload | None,
+    top_machine_chart: ChartPayload | None,
+    top_cause_chart: ChartPayload | None,
+    management_commentary: list[str],
     source_name: str,
+    source_file_name: str,
     source_rows: int,
-    downloads: list[DownloadPayload],
     catalog: dict,
 ) -> ReportPayload:
-    html = next((item for item in downloads if item.mime_type == "text/html"), None)
-    xlsx = next((item for item in downloads if item.filename.lower().endswith(".xlsx")), None)
     top_machine_text = "Chưa có đủ dữ liệu máy để xếp hạng."
     if not top_machines.empty:
         first = top_machines.iloc[0]
@@ -2441,69 +2531,71 @@ def _build_report_payload(
             f"Nguyên nhân nổi bật nhất theo downtime là {first.iloc[0]} với "
             f"{format_vn_number(float(first['total_duration_seconds']) / 3600, 2)} giờ."
         )
-    range_text = f"{date_range['from']} đến {date_range['to']}" if date_range else "không xác định"
     kpis = [
-        KpiCard(label="Tổng downtime", value=f"{format_vn_number(total_hours, 2)} giờ", hint="Tính từ toàn bộ bản ghi của file đang chọn."),
-        KpiCard(label="Số lần dừng", value=format_vn_number(record_count, 0), hint="Số bản ghi downtime trong file."),
-        KpiCard(label="Khoảng thời gian", value=range_text, hint="Tính từ cột thời gian bắt đầu nếu có."),
+        KpiCard(label="Tổng thời gian downtime", value=format_vn_number(total_hours, 2), unit="giờ", hint="Tính từ toàn bộ bản ghi của file đang chọn."),
+        KpiCard(label="Tổng số lần dừng", value=format_vn_number(record_count, 0), unit="lần", hint="Số bản ghi downtime trong file."),
+        KpiCard(label="Số máy được ghi nhận", value=format_vn_number(machine_count, 0), unit="máy", hint="Số máy xuất hiện trong dữ liệu downtime."),
+        KpiCard(label="Thời gian dừng trung bình", value=format_vn_number(total_hours / max(record_count, 1), 2), unit="giờ/lần", hint="Tổng downtime chia cho số lần dừng."),
     ]
     top_machine_table = _table_payload(format_dataframe_for_display(top_machines, catalog)) if not top_machines.empty else None
     top_cause_table = _table_payload(format_dataframe_for_display(top_causes, catalog)) if not top_causes.empty else None
     section_payloads = [
         PublicReportSection(
-            section_type="dataset_overview",
+            section_type="tong_quan_du_lieu",
             title="Tổng quan dữ liệu",
-            summary=f"File có {format_vn_number(record_count, 0)} bản ghi trong giai đoạn {range_text}.",
+            summary=f"File có {format_vn_number(record_count, 0)} bản ghi trong giai đoạn {_date_range_display(date_range)}.",
             kpis=[kpis[1], kpis[2]],
             commentary=["Phần này xác nhận phạm vi dữ liệu trước khi đọc các KPI và xếp hạng."],
         ),
         PublicReportSection(
-            section_type="kpi_total_downtime",
+            section_type="tong_downtime",
             title="KPI tổng downtime",
             summary=f"Tổng downtime là {format_vn_number(total_hours, 2)} giờ.",
             kpis=[kpis[0]],
             commentary=["KPI này đo tổng tác động thời gian dừng trong file đang chọn."],
         ),
         PublicReportSection(
-            section_type="kpi_stop_count",
+            section_type="so_lan_dung",
             title="KPI số lần dừng",
             summary=f"Dữ liệu ghi nhận {format_vn_number(record_count, 0)} lần dừng.",
             kpis=[kpis[1]],
             commentary=["KPI này đo tần suất ghi nhận, không đồng nghĩa với tổng downtime."],
         ),
         PublicReportSection(
-            section_type="top_machines",
-            title="Top máy",
+            section_type="top_may",
+            title="Top 5 máy",
             summary=top_machine_text,
             table=top_machine_table,
+            chart=top_machine_chart,
             commentary=["Dùng section này để ưu tiên nhóm máy đóng góp downtime lớn nhất."],
         ),
         PublicReportSection(
-            section_type="top_causes",
-            title="Top nguyên nhân",
+            section_type="top_nguyen_nhan",
+            title="Top 5 nguyên nhân",
             summary=top_cause_text,
             table=top_cause_table,
+            chart=top_cause_chart,
             commentary=["Dùng section này để xem nhóm nguyên nhân/tổn thất có tác động lớn."],
         ),
         PublicReportSection(
-            section_type="time_trend",
+            section_type="xu_huong",
             title="Biểu đồ xu hướng",
             summary="Biểu đồ thể hiện tổng downtime theo ngày để nhìn giai đoạn tăng hoặc giảm.",
-            chart=chart,
-            commentary=["Chat chỉ hiển thị biểu đồ tóm tắt; chi tiết theo ngày nằm trong file tải xuống."],
+            chart=trend_chart,
+            commentary=["Chat chỉ hiển thị biểu đồ tóm tắt; chi tiết theo ngày nằm trong phụ lục PDF."],
         ),
         PublicReportSection(
-            section_type="management_commentary",
+            section_type="nhan_xet_quan_ly",
             title="Nhận xét quản lý",
-            summary="Ưu tiên đọc cùng lúc tổng downtime, số lần dừng và nhóm nguyên nhân để tránh kết luận một chiều.",
-            commentary=[top_machine_text, top_cause_text, "Không kết luận nguyên nhân kỹ thuật nếu chưa có log bảo trì, ca vận hành hoặc ghi chú xử lý sự cố."],
+            summary="Các nhận xét dưới đây chỉ dựa trên KPI, xếp hạng và xu hướng đã tính từ dữ liệu.",
+            commentary=management_commentary,
         ),
         PublicReportSection(
-            section_type="source_filters_limitations",
+            section_type="nguon_va_gioi_han",
             title="Nguồn và giới hạn",
             summary="Báo cáo dùng file đang chọn và không áp dụng bộ lọc bổ sung nếu câu hỏi không nêu rõ.",
             commentary=[
-                f"Nguồn dữ liệu: {source_name}.",
+                f"Nguồn dữ liệu: {source_file_name or source_name}.",
                 "Kết quả là mô tả dữ liệu đã import, không chứng minh quan hệ nhân quả.",
             ],
         ),
@@ -2511,6 +2603,10 @@ def _build_report_payload(
     return ReportPayload(
         report_id=report_id,
         title=title,
+        subtitle=subtitle,
+        source_file_name=source_file_name or source_name,
+        date_range=date_range,
+        generated_at=generated_at_vn(),
         executive_summary=[line for line in summary.splitlines() if line.strip()][:4],
         kpis=kpis,
         sections=section_payloads,
@@ -2518,11 +2614,124 @@ def _build_report_payload(
         filters=[],
         limitations=[
             "Kết quả là mô tả dữ liệu đã import, không chứng minh quan hệ nhân quả.",
-            "Chi tiết dài nằm trong HTML/XLSX để tránh làm chat quá tải.",
+            "Chi tiết dài nằm trong phụ lục PDF để tránh làm phần nội dung chính quá tải.",
         ],
-        html_download_url=f"/api/artifacts/{html.id}/download" if html else None,
-        xlsx_download_url=f"/api/artifacts/{xlsx.id}/download" if xlsx else None,
+        pdf_status="generating",
+        pdf_download_url=None,
+        completeness={
+            "requested_sections": 8,
+            "backend_sections": len(section_payloads),
+            "rendered_sections": len(section_payloads),
+            "missing_sections": [name for name, value in sections.items() if value.get("status") not in {"SUCCESS", "NOT_ENOUGH_DATA"}],
+        },
     )
+
+
+def _report_bar_chart(df: pd.DataFrame, dimension: str, title: str, dimension_label: str) -> ChartPayload | None:
+    if df.empty or dimension not in df.columns or "total_duration_seconds" not in df.columns:
+        return None
+    data = []
+    for _, row in df.head(5).iterrows():
+        data.append(
+            {
+                dimension_label: str(row[dimension]),
+                "Downtime (giờ)": round(float(row["total_duration_seconds"]) / 3600, 2),
+            }
+        )
+    return ChartPayload(
+        type="horizontal_bar",
+        title=title,
+        x_key=dimension_label,
+        y_keys=["Downtime (giờ)"],
+        data=data,
+        y_axis_unit="giờ",
+        tooltip_unit="giờ",
+        metric="total_downtime_hours",
+        dimension=dimension,
+    )
+
+
+def _strip_public_chart_metadata(chart: ChartPayload | None) -> None:
+    if chart is None:
+        return
+    chart.source_result_id = None
+    chart.source_turn_id = None
+    chart.metric = None
+    chart.dimension = None
+
+
+def _date_range_display(date_range: dict[str, str] | None) -> str:
+    if not date_range:
+        return "không xác định"
+    start = date_range.get("from") or date_range.get("start")
+    end = date_range.get("to") or date_range.get("end")
+    return f"{_date_display(start)} - {_date_display(end)}" if start and end else "không xác định"
+
+
+def _date_display(value: Any) -> str:
+    try:
+        return pd.to_datetime(value).strftime("%d/%m/%Y")
+    except Exception:
+        return str(value or "")
+
+
+def _trend_extrema(trend: pd.DataFrame) -> dict[str, Any]:
+    if trend.empty or "total_duration_seconds" not in trend.columns:
+        return {}
+    work = trend.copy()
+    work["_hours"] = pd.to_numeric(work["total_duration_seconds"], errors="coerce").fillna(0) / 3600
+    high = work.sort_values("_hours", ascending=False).iloc[0]
+    low = work.sort_values("_hours", ascending=True).iloc[0]
+    return {
+        "highest_day": str(high.get("report_date", "")),
+        "highest_hours": round(float(high["_hours"]), 2),
+        "lowest_day": str(low.get("report_date", "")),
+        "lowest_hours": round(float(low["_hours"]), 2),
+        "average_daily_hours": round(float(work["_hours"].mean()), 2),
+    }
+
+
+def _deterministic_management_commentary(
+    top_machines: pd.DataFrame,
+    top_causes: pd.DataFrame,
+    trend: pd.DataFrame,
+    total_hours: float,
+    record_count: int,
+) -> list[str]:
+    lines = [
+        f"Dữ liệu chứng minh tổng downtime đạt {format_vn_number(total_hours, 2)} giờ trên {format_vn_number(record_count, 0)} lần dừng.",
+    ]
+    if not top_machines.empty:
+        first = top_machines.iloc[0]
+        lines.append(
+            f"Máy cần ưu tiên quan sát là {first.iloc[0]} vì đóng góp {format_vn_number(float(first['total_duration_seconds']) / 3600, 2)} giờ downtime."
+        )
+    if not top_causes.empty:
+        first = top_causes.iloc[0]
+        lines.append(
+            f"Nhóm nguyên nhân nổi bật là {first.iloc[0]} với {format_vn_number(float(first['total_duration_seconds']) / 3600, 2)} giờ downtime."
+        )
+    extrema = _trend_extrema(trend)
+    if extrema:
+        lines.append(
+            f"Xu hướng theo ngày cho thấy đỉnh downtime vào {_date_display(extrema['highest_day'])} và thấp nhất vào {_date_display(extrema['lowest_day'])}."
+        )
+    lines.append("Chưa thể kết luận nguyên nhân kỹ thuật hoặc trách nhiệm vận hành nếu chưa có log bảo trì, ca vận hành và ghi chú xử lý sự cố.")
+    return lines[:4]
+
+
+def _clean_commentary_lines(text: str | None) -> list[str]:
+    if not text:
+        return []
+    lines = []
+    for raw in str(text).splitlines():
+        line = raw.strip().lstrip("-•0123456789. ").strip()
+        if line:
+            lines.append(line)
+    if len(lines) == 1 and ". " in lines[0]:
+        lines = [part.strip() + "." for part in lines[0].split(". ") if part.strip()]
+    forbidden = ["json", "fallback", "model", "llm", "query_plan", "execution_mode"]
+    return [line for line in lines if not any(term in line.lower() for term in forbidden)]
 
 
 def _report_numeric_frame(df: pd.DataFrame) -> pd.DataFrame:
@@ -2576,7 +2785,10 @@ def _filter_payloads(plan: QueryPlan, catalog: dict) -> list[FilterPayload]:
 
 
 def _download_payload(path: Path) -> DownloadPayload:
-    label = "Tải HTML" if path.suffix.lower() == ".html" else "Tải Excel"
+    if path.suffix.lower() == ".pdf":
+        label = "Tải báo cáo PDF"
+    else:
+        label = "Tải HTML" if path.suffix.lower() == ".html" else "Tải Excel"
     return DownloadPayload(id=path.name, label=label, filename=path.name, mime_type=_mime_type(path))
 
 
@@ -2626,6 +2838,8 @@ def _clean_source_filename(source: str) -> str:
 
 
 def _mime_type(path: Path) -> str:
+    if path.suffix.lower() == ".pdf":
+        return "application/pdf"
     if path.suffix.lower() == ".html":
         return "text/html"
     if path.suffix.lower() == ".xlsx":

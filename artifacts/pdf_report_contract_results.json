@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "checks": {
+    "public_response_type_report": true,
+    "exactly_8_sections": true,
+    "single_pdf_download": true,
+    "no_html_xlsx_downloads": true,
+    "no_legacy_download_urls": true,
+    "public_payload_no_forbidden_tokens": true,
+    "public_metadata_safe": true,
+    "model_failure_still_generates_report": true,
+    "model_failure_not_silent": true,
+    "model_failure_public_no_forbidden_tokens": true
+  },
+  "section_types": [
+    "tong_quan_du_lieu",
+    "tong_downtime",
+    "so_lan_dung",
+    "top_may",
+    "top_nguyen_nhan",
+    "xu_huong",
+    "nhan_xet_quan_ly",
+    "nguon_va_gioi_han"
+  ],
+  "downloads": [
+    {
+      "id": "report_eae53a57-9e7c-47ab-b121-731adb5b2370.pdf",
+      "label": "Tải báo cáo PDF",
+      "filename": "report_eae53a57-9e7c-47ab-b121-731adb5b2370.pdf",
+      "mime_type": "application/pdf"
+    }
+  ],
+  "model_failure": {
+    "response_type": "report",
+    "pdf_status": "ready",
+    "public_forbidden_hits": [],
+    "trace": {
+      "management_composer_required": true,
+      "llm_request_started": true,
+      "llm_request_completed": false,
+      "composer_output_valid": true,
+      "silent_fallback": false,
+      "input_payload_keys": [
+        "validated_kpis",
+        "top_machines",
+        "top_causes",
+        "trend_extrema",
+        "limitations"
+      ],
+      "commentary_source": "deterministic_limited",
+      "composer_error_type": "RuntimeError"
+    }
+  },
+  "public_forbidden_hits": []
+}
