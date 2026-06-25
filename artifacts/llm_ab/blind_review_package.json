@@ -1,0 +1,85 @@
+{
+  "status": "PENDING_BLIND_HUMAN_REVIEW",
+  "rubric_1_to_5": [
+    "Đúng trọng tâm",
+    "Dễ hiểu",
+    "Mạch lạc",
+    "Có giá trị quản lý",
+    "Không lặp",
+    "Không chung chung",
+    "Giữ đúng giới hạn dữ liệu",
+    "Chất lượng tiếng Việt"
+  ],
+  "samples": [
+    {
+      "case_id": "blind_001",
+      "task": "table_commentary",
+      "outputs": [
+        {
+          "label": "Output A",
+          "text": "Kết quả cho thấy các nhóm đứng đầu cần được ưu tiên theo dõi. Máy 11 đứng đầu theo tổng downtime. Máy 12 đứng thứ hai theo tổng downtime."
+        },
+        {
+          "label": "Output B",
+          "text": "| Thiết bị | Tổng thời gian dừng (giờ) | Số lượng ghi chép | Ghi chú phân tích |\n| :--- | :---: | :---: | :--- |\n| **Máy 11** | 413,57 giờ | 1.469 | Máy này đứng đầu theo tổng downtime. |\n| **Máy 12** | 323,15 giờ | - | Máy này đứng thứ hai theo tổng downtime. |\n| **Tổng cộng** | 1.989,56 giờ | 9.151 | Tổng hợp thời gian dừng của toàn bộ hệ thống được ghi nhận trong dữ liệu hiện có. |"
+        }
+      ]
+    },
+    {
+      "case_id": "blind_002",
+      "task": "chart_commentary",
+      "outputs": [
+        {
+          "label": "Output A",
+          "text": "Biểu đồ giúp nhìn nhanh xu hướng hoặc nhóm nổi bật dựa trên cùng số liệu đã tính. Biểu đồ thể hiện tổng downtime theo ngày."
+        },
+        {
+          "label": "Output B",
+          "text": "Dưới đây là nhận xét về biểu đồ thể hiện tổng downtime theo ngày:\n\nBiểu đồ cho thấy tổng thời gian ngừng hoạt động (downtime) đạt **1.989,56 giờ**. Trong đó, máy 11 ghi nhận mức downtime cao nhất với **413,57 giờ** và số lượng bản ghi liên quan là **1.469**, trong khi máy 12 có tổng thời gian ngừng hoạt động là **323,15 giờ**. Toàn bộ dữ liệu được phân tích dựa trên tập hợp gồm **9.151** bản ghi đã xác minh."
+        }
+      ]
+    },
+    {
+      "case_id": "blind_003",
+      "task": "executive_summary",
+      "outputs": [
+        {
+          "label": "Output A",
+          "text": "Kết quả cho thấy các nhóm đứng đầu cần được ưu tiên theo dõi. File có 9.151 bản ghi. Tổng downtime là 1.989,56 giờ."
+        },
+        {
+          "label": "Output B",
+          "text": "**Tóm tắt điều hành:**\n\nDữ liệu hiện có bao gồm tổng cộng 9.151 bản ghi. Tổng thời gian ngừng hoạt động (downtime) được xác nhận là 1.989,56 giờ. Trong đó:\n*   Máy số 11 đã vận hành trong khoảng 413,57 giờ với 1.469 lần xuất hiện dữ liệu.\n*   Máy số 12 ghi nhận thời gian ngừng hoạt động là 323,15 giờ."
+        }
+      ]
+    },
+    {
+      "case_id": "blind_004",
+      "task": "limitations_explanation",
+      "outputs": [
+        {
+          "label": "Output A",
+          "text": "Kết quả cho thấy các nhóm đứng đầu cần được ưu tiên theo dõi. Không suy diễn ngoài dữ liệu. Giới hạn: file đang chọn; không suy."
+        },
+        {
+          "label": "Output B",
+          "text": "Dựa trên dữ liệu đã xác minh cho file đang chọn, dưới đây là các thông tin cụ thể:\n\nTổng số giờ hoạt động của tất cả máy móc được ghi nhận trong tập dữ liệu này là **1.989,56 giờ**. Trong đó, Máy 11 có tổng thời gian chạy đạt **413,57 giờ**, còn Máy 12 chiếm **323,15 giờ**. Tập hợp các bản ghi liên quan đến hoạt động của máy móc bao gồm tổng cộng **9.151** dòng dữ liệu riêng biệt."
+        }
+      ]
+    },
+    {
+      "case_id": "blind_005",
+      "task": "report_compact",
+      "outputs": [
+        {
+          "label": "Output A",
+          "text": "Bản báo cáo giữ đúng các KPI đã kiểm chứng và chỉ diễn giải trong phạm vi dữ liệu. Giữ KPI chính và giới hạn chính."
+        },
+        {
+          "label": "Output B",
+          "text": "Báo cáo tổng hợp hiệu suất máy:\n\nTổng cộng 9.151 bản ghi đã được xử lý với thời gian hoạt động chung là 1.989,56 giờ. Trong đó, Máy 11 chạy trong 413,57 giờ (tương đương 1.469 lần) và Máy 12 chạy trong 323,15 giờ. Các chỉ số hiệu suất chính được giữ nguyên theo giới hạn quy định."
+        }
+      ]
+    }
+  ]
+}

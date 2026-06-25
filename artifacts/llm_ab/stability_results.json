@@ -1,0 +1,437 @@
+{
+  "status": "completed",
+  "repetitions": 3,
+  "results": {
+    "legacy_single_model": {
+      "status": "completed",
+      "cases": [
+        {
+          "id": "agg_total_downtime",
+          "observed": [
+            {
+              "intent": "AGGREGATION",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "AGGREGATION",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "AGGREGATION",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "ranking_top_machine",
+          "observed": [
+            {
+              "intent": "RANKING",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "RANKING",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "RANKING",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "trend_day",
+          "observed": [
+            {
+              "intent": "TIME_TREND",
+              "relationship": "NEW_REQUEST",
+              "outputs": [
+                "chart"
+              ]
+            },
+            {
+              "intent": "TIME_TREND",
+              "relationship": "NEW_REQUEST",
+              "outputs": [
+                "chart"
+              ]
+            },
+            {
+              "intent": "TIME_TREND",
+              "relationship": "NEW_REQUEST",
+              "outputs": [
+                "chart"
+              ]
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "comparison_machine",
+          "observed": [
+            {
+              "intent": "COMPARISON",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "COMPARISON",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "COMPARISON",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "distribution_cause",
+          "observed": [
+            {
+              "intent": "DISTRIBUTION",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "DISTRIBUTION",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "DISTRIBUTION",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "report_create",
+          "observed": [
+            {
+              "intent": "REPORT_CREATE",
+              "relationship": "NEW_REQUEST",
+              "outputs": [
+                "report"
+              ]
+            },
+            {
+              "intent": "REPORT_CREATE",
+              "relationship": "NEW_REQUEST",
+              "outputs": [
+                "report"
+              ]
+            },
+            {
+              "intent": "REPORT_CREATE",
+              "relationship": "NEW_REQUEST",
+              "outputs": [
+                "report"
+              ]
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "report_revision",
+          "observed": [
+            {
+              "intent": "REPORT_REVISION",
+              "relationship": "ARTIFACT_REVISION",
+              "outputs": []
+            },
+            {
+              "intent": "REPORT_REVISION",
+              "relationship": "ARTIFACT_REVISION",
+              "outputs": []
+            },
+            {
+              "intent": "REPORT_REVISION",
+              "relationship": "ARTIFACT_REVISION",
+              "outputs": []
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "report_export",
+          "observed": [
+            {
+              "intent": "REPORT_EXPORT",
+              "relationship": "ARTIFACT_EXPORT",
+              "outputs": [
+                "report"
+              ]
+            },
+            {
+              "intent": "REPORT_EXPORT",
+              "relationship": "ARTIFACT_EXPORT",
+              "outputs": [
+                "report"
+              ]
+            },
+            {
+              "intent": "REPORT_EXPORT",
+              "relationship": "ARTIFACT_EXPORT",
+              "outputs": [
+                "report"
+              ]
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        }
+      ],
+      "metrics": {
+        "intent_consistency": 1.0,
+        "turn_relationship_consistency": 1.0,
+        "response_type_consistency": 1.0
+      }
+    },
+    "split_roles_same_model": {
+      "status": "completed",
+      "cases": [
+        {
+          "id": "agg_total_downtime",
+          "observed": [
+            {
+              "intent": "AGGREGATION",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "AGGREGATION",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "AGGREGATION",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "ranking_top_machine",
+          "observed": [
+            {
+              "intent": "RANKING",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "RANKING",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "RANKING",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "trend_day",
+          "observed": [
+            {
+              "intent": "TIME_TREND",
+              "relationship": "NEW_REQUEST",
+              "outputs": [
+                "chart"
+              ]
+            },
+            {
+              "intent": "TIME_TREND",
+              "relationship": "NEW_REQUEST",
+              "outputs": [
+                "chart"
+              ]
+            },
+            {
+              "intent": "TIME_TREND",
+              "relationship": "NEW_REQUEST",
+              "outputs": [
+                "chart"
+              ]
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "comparison_machine",
+          "observed": [
+            {
+              "intent": "COMPARISON",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "COMPARISON",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "COMPARISON",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "distribution_cause",
+          "observed": [
+            {
+              "intent": "DISTRIBUTION",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "DISTRIBUTION",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            },
+            {
+              "intent": "DISTRIBUTION",
+              "relationship": "NEW_REQUEST",
+              "outputs": []
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "report_create",
+          "observed": [
+            {
+              "intent": "REPORT_CREATE",
+              "relationship": "NEW_REQUEST",
+              "outputs": [
+                "report"
+              ]
+            },
+            {
+              "intent": "REPORT_CREATE",
+              "relationship": "NEW_REQUEST",
+              "outputs": [
+                "report"
+              ]
+            },
+            {
+              "intent": "REPORT_CREATE",
+              "relationship": "NEW_REQUEST",
+              "outputs": [
+                "report"
+              ]
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "report_revision",
+          "observed": [
+            {
+              "intent": "REPORT_REVISION",
+              "relationship": "ARTIFACT_REVISION",
+              "outputs": []
+            },
+            {
+              "intent": "REPORT_REVISION",
+              "relationship": "ARTIFACT_REVISION",
+              "outputs": []
+            },
+            {
+              "intent": "REPORT_REVISION",
+              "relationship": "ARTIFACT_REVISION",
+              "outputs": []
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        },
+        {
+          "id": "report_export",
+          "observed": [
+            {
+              "intent": "REPORT_EXPORT",
+              "relationship": "ARTIFACT_EXPORT",
+              "outputs": [
+                "report"
+              ]
+            },
+            {
+              "intent": "REPORT_EXPORT",
+              "relationship": "ARTIFACT_EXPORT",
+              "outputs": [
+                "report"
+              ]
+            },
+            {
+              "intent": "REPORT_EXPORT",
+              "relationship": "ARTIFACT_EXPORT",
+              "outputs": [
+                "report"
+              ]
+            }
+          ],
+          "intent_consistent": true,
+          "relationship_consistent": true,
+          "response_type_consistent": true
+        }
+      ],
+      "metrics": {
+        "intent_consistency": 1.0,
+        "turn_relationship_consistency": 1.0,
+        "response_type_consistency": 1.0
+      }
+    },
+    "dual_model": {
+      "status": "MODEL_NOT_AVAILABLE",
+      "cases": [],
+      "metrics": {
+        "intent_consistency": null
+      }
+    }
+  }
+}

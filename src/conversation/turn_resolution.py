@@ -1,23 +1,12 @@
 from __future__ import annotations
 
-from enum import StrEnum
 from typing import Any
 
 from pydantic import BaseModel, Field
 
 from src.conversation.state import ConversationState
+from src.llm.semantic_contracts import TurnRelationship
 from src.query_understanding.text import normalize_text
-
-
-class TurnRelationship(StrEnum):
-    NEW_REQUEST = "NEW_REQUEST"
-    FOLLOW_UP_QUESTION = "FOLLOW_UP_QUESTION"
-    ARTIFACT_REVISION = "ARTIFACT_REVISION"
-    ARTIFACT_EXPORT = "ARTIFACT_EXPORT"
-    CLARIFICATION_ANSWER = "CLARIFICATION_ANSWER"
-    CORRECTION = "CORRECTION"
-    CANCEL = "CANCEL"
-    AMBIGUOUS = "AMBIGUOUS"
 
 
 class TurnResolution(BaseModel):

@@ -1,0 +1,47 @@
+{
+  "semantic": {
+    "status": "MODEL_NOT_AVAILABLE",
+    "candidate_fast_model": null,
+    "cases": [],
+    "metrics": {
+      "intent_accuracy": null,
+      "turn_relationship_accuracy": null,
+      "sample_count": 0
+    }
+  },
+  "composer": {
+    "status": "MODEL_NOT_AVAILABLE",
+    "cases": [],
+    "metrics": {
+      "numeric_grounding_pass_rate": null,
+      "invalid_narrative_rate": null,
+      "sample_count": 0
+    }
+  },
+  "context_replay": {
+    "status": "MODEL_NOT_AVAILABLE",
+    "sequences": [],
+    "metrics": {
+      "pass_rate": null
+    }
+  },
+  "performance": {
+    "status": "MODEL_NOT_AVAILABLE",
+    "latency_ms": {},
+    "resource": {
+      "peak_ram_mb": null,
+      "peak_vram_mb": null,
+      "cpu_utilization": null,
+      "disk_model_size": null,
+      "simultaneous_model_residency": null,
+      "note": "Resource probes are placeholders unless OS/GPU counters are enabled for the benchmark run."
+    }
+  },
+  "stability": {
+    "status": "MODEL_NOT_AVAILABLE",
+    "cases": [],
+    "metrics": {
+      "intent_consistency": null
+    }
+  }
+}

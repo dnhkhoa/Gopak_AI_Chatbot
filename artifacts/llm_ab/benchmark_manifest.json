@@ -1,0 +1,466 @@
+{
+  "manifest_hash": "5c55c12372493af4935907e88217f6b7a0693490c8cb8f0b4ee54cccc4e5b782",
+  "same_test_manifest": true,
+  "same_state_snapshots": true,
+  "same_deterministic_analytics_results": true,
+  "same_hardware": true,
+  "same_validators": true,
+  "all_failed_cases_retained": true,
+  "holdout_not_tuned_on": true,
+  "model_parameters": {
+    "temperature": 0,
+    "seed": 42,
+    "stream": false,
+    "think": false,
+    "structured_output": true,
+    "embedding_model_enabled": false
+  },
+  "sample_counts": {
+    "semantic": 17,
+    "composer": 5
+  },
+  "cases": {
+    "semantic": [
+      {
+        "case_id": "agg_total_downtime",
+        "split": "development",
+        "message": "Tổng downtime là bao nhiêu?",
+        "expected_intent": "aggregation",
+        "expected_relationship": "NEW_REQUEST",
+        "expected_dimensions": [],
+        "expected_metrics": [
+          "total_downtime"
+        ],
+        "expected_outputs": [],
+        "expected_chart_type": null,
+        "expected_report_action": null,
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "clean",
+        "tags": []
+      },
+      {
+        "case_id": "ranking_top_machine",
+        "split": "development",
+        "message": "Top 5 máy downtime cao nhất",
+        "expected_intent": "ranking",
+        "expected_relationship": "NEW_REQUEST",
+        "expected_dimensions": [
+          "machine"
+        ],
+        "expected_metrics": [
+          "total_downtime"
+        ],
+        "expected_outputs": [],
+        "expected_chart_type": null,
+        "expected_report_action": null,
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "clean",
+        "tags": []
+      },
+      {
+        "case_id": "trend_day",
+        "split": "development",
+        "message": "Vẽ biểu đồ xu hướng downtime theo ngày",
+        "expected_intent": "chart",
+        "expected_relationship": "NEW_REQUEST",
+        "expected_dimensions": [
+          "date"
+        ],
+        "expected_metrics": [
+          "total_downtime"
+        ],
+        "expected_outputs": [
+          "chart"
+        ],
+        "expected_chart_type": "line",
+        "expected_report_action": null,
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "clean",
+        "tags": []
+      },
+      {
+        "case_id": "comparison_machine",
+        "split": "development",
+        "message": "So sánh Máy 11 và Máy 12 theo downtime",
+        "expected_intent": "comparison",
+        "expected_relationship": "NEW_REQUEST",
+        "expected_dimensions": [
+          "machine"
+        ],
+        "expected_metrics": [
+          "total_downtime"
+        ],
+        "expected_outputs": [],
+        "expected_chart_type": null,
+        "expected_report_action": null,
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "clean",
+        "tags": []
+      },
+      {
+        "case_id": "distribution_cause",
+        "split": "development",
+        "message": "Phân bố nguyên nhân dừng máy",
+        "expected_intent": "distribution",
+        "expected_relationship": "NEW_REQUEST",
+        "expected_dimensions": [
+          "cause"
+        ],
+        "expected_metrics": [],
+        "expected_outputs": [
+          "chart"
+        ],
+        "expected_chart_type": null,
+        "expected_report_action": null,
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "clean",
+        "tags": []
+      },
+      {
+        "case_id": "report_create",
+        "split": "development",
+        "message": "Tạo báo cáo tổng quan",
+        "expected_intent": "report",
+        "expected_relationship": "NEW_REQUEST",
+        "expected_dimensions": [],
+        "expected_metrics": [],
+        "expected_outputs": [
+          "report"
+        ],
+        "expected_chart_type": null,
+        "expected_report_action": "create",
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "clean",
+        "tags": []
+      },
+      {
+        "case_id": "report_revision",
+        "split": "development",
+        "message": "Chi tiết hơn",
+        "expected_intent": "report",
+        "expected_relationship": "ARTIFACT_REVISION",
+        "expected_dimensions": [],
+        "expected_metrics": [],
+        "expected_outputs": [
+          "report"
+        ],
+        "expected_chart_type": null,
+        "expected_report_action": "revise",
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "active_report",
+        "tags": []
+      },
+      {
+        "case_id": "report_export",
+        "split": "development",
+        "message": "Xuất PDF báo cáo này",
+        "expected_intent": "report",
+        "expected_relationship": "ARTIFACT_EXPORT",
+        "expected_dimensions": [],
+        "expected_metrics": [],
+        "expected_outputs": [
+          "report"
+        ],
+        "expected_chart_type": null,
+        "expected_report_action": "export",
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "active_report",
+        "tags": []
+      },
+      {
+        "case_id": "artifact_question",
+        "split": "holdout",
+        "message": "Nhận xét biểu đồ này",
+        "expected_intent": "artifact_question",
+        "expected_relationship": "FOLLOW_UP_QUESTION",
+        "expected_dimensions": [],
+        "expected_metrics": [],
+        "expected_outputs": [],
+        "expected_chart_type": null,
+        "expected_report_action": null,
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "last_chart",
+        "tags": [
+          "context"
+        ]
+      },
+      {
+        "case_id": "clarification_answer",
+        "split": "holdout",
+        "message": "Máy 11",
+        "expected_intent": "clarification_answer",
+        "expected_relationship": "CLARIFICATION_ANSWER",
+        "expected_dimensions": [
+          "machine"
+        ],
+        "expected_metrics": [],
+        "expected_outputs": [],
+        "expected_chart_type": null,
+        "expected_report_action": null,
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "pending_machine",
+        "tags": []
+      },
+      {
+        "case_id": "correction",
+        "split": "holdout",
+        "message": "Không, đổi sang Máy 12",
+        "expected_intent": "correction",
+        "expected_relationship": "CORRECTION",
+        "expected_dimensions": [
+          "machine"
+        ],
+        "expected_metrics": [],
+        "expected_outputs": [],
+        "expected_chart_type": null,
+        "expected_report_action": null,
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "last_table",
+        "tags": []
+      },
+      {
+        "case_id": "cancel",
+        "split": "holdout",
+        "message": "Bỏ qua câu trước",
+        "expected_intent": "cancel",
+        "expected_relationship": "CANCEL",
+        "expected_dimensions": [],
+        "expected_metrics": [],
+        "expected_outputs": [],
+        "expected_chart_type": null,
+        "expected_report_action": null,
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "pending_machine",
+        "tags": []
+      },
+      {
+        "case_id": "wrong_file",
+        "split": "holdout",
+        "message": "Máy nào có tổng downtime cao nhất?",
+        "expected_intent": "wrong_file_request",
+        "expected_relationship": "NEW_REQUEST",
+        "expected_dimensions": [
+          "machine"
+        ],
+        "expected_metrics": [
+          "total_downtime"
+        ],
+        "expected_outputs": [],
+        "expected_chart_type": null,
+        "expected_report_action": null,
+        "clarification_required": false,
+        "source_file": "EntryTransaction",
+        "state_kind": "clean",
+        "tags": [
+          "wrong_file"
+        ]
+      },
+      {
+        "case_id": "typo_no_accent_chart",
+        "split": "holdout",
+        "message": "ve bieu do xu huong downtime theo ngay",
+        "expected_intent": "chart",
+        "expected_relationship": "NEW_REQUEST",
+        "expected_dimensions": [
+          "date"
+        ],
+        "expected_metrics": [
+          "total_downtime"
+        ],
+        "expected_outputs": [
+          "chart"
+        ],
+        "expected_chart_type": "line",
+        "expected_report_action": null,
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "clean",
+        "tags": [
+          "typo"
+        ]
+      },
+      {
+        "case_id": "typo_dowtime",
+        "split": "holdout",
+        "message": "vẽ biêu đồ xu hương dowtime",
+        "expected_intent": "chart",
+        "expected_relationship": "NEW_REQUEST",
+        "expected_dimensions": [
+          "date"
+        ],
+        "expected_metrics": [
+          "total_downtime"
+        ],
+        "expected_outputs": [
+          "chart"
+        ],
+        "expected_chart_type": "line",
+        "expected_report_action": null,
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "clean",
+        "tags": [
+          "typo"
+        ]
+      },
+      {
+        "case_id": "typo_report_revision",
+        "split": "holdout",
+        "message": "cho tui report chi tiet hon",
+        "expected_intent": "report",
+        "expected_relationship": "ARTIFACT_REVISION",
+        "expected_dimensions": [],
+        "expected_metrics": [],
+        "expected_outputs": [
+          "report"
+        ],
+        "expected_chart_type": null,
+        "expected_report_action": "revise",
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "active_report",
+        "tags": [
+          "typo"
+        ]
+      },
+      {
+        "case_id": "cause_rank",
+        "split": "manual_blind_review",
+        "message": "coi thử nguyên nhân nào nhiều nhất",
+        "expected_intent": "ranking",
+        "expected_relationship": "NEW_REQUEST",
+        "expected_dimensions": [
+          "cause"
+        ],
+        "expected_metrics": [
+          "count"
+        ],
+        "expected_outputs": [],
+        "expected_chart_type": null,
+        "expected_report_action": null,
+        "clarification_required": false,
+        "source_file": "Machine_Downtime",
+        "state_kind": "clean",
+        "tags": [
+          "typo"
+        ]
+      }
+    ],
+    "composer": [
+      {
+        "case_id": "table_commentary_top_machines",
+        "split": "development",
+        "task": "table_commentary",
+        "payload": {
+          "table_rows": [
+            {
+              "Máy": "Máy 11",
+              "Tổng downtime": "413,57 giờ",
+              "Số lần": "1.469"
+            },
+            {
+              "Máy": "Máy 12",
+              "Tổng downtime": "323,15 giờ",
+              "Số lần": "1.654"
+            }
+          ],
+          "allowed_claims": [
+            "Máy 11 đứng đầu theo tổng downtime.",
+            "Máy 12 đứng thứ hai theo tổng downtime."
+          ]
+        },
+        "required_terms": [
+          "Máy 11",
+          "413,57"
+        ],
+        "limitations": []
+      },
+      {
+        "case_id": "chart_commentary_trend",
+        "split": "development",
+        "task": "chart_commentary",
+        "payload": {
+          "chart": {
+            "type": "line",
+            "metric": "Tổng downtime",
+            "dimension": "Ngày"
+          },
+          "allowed_claims": [
+            "Biểu đồ thể hiện tổng downtime theo ngày."
+          ]
+        },
+        "required_terms": [
+          "downtime"
+        ],
+        "limitations": []
+      },
+      {
+        "case_id": "executive_summary",
+        "split": "holdout",
+        "task": "executive_summary",
+        "payload": {
+          "kpis": {
+            "Số bản ghi": "9.151",
+            "Tổng downtime": "1.989,56 giờ"
+          },
+          "allowed_claims": [
+            "File có 9.151 bản ghi.",
+            "Tổng downtime là 1.989,56 giờ."
+          ]
+        },
+        "required_terms": [
+          "9.151",
+          "1.989,56"
+        ],
+        "limitations": []
+      },
+      {
+        "case_id": "limitations",
+        "split": "holdout",
+        "task": "limitations_explanation",
+        "payload": {
+          "limitations": [
+            "Chỉ phản ánh file đang chọn.",
+            "Không suy ra nguyên nhân vận hành ngoài dữ liệu."
+          ],
+          "allowed_claims": [
+            "Không suy diễn ngoài dữ liệu."
+          ]
+        },
+        "required_terms": [],
+        "limitations": [
+          "file đang chọn",
+          "không suy"
+        ]
+      },
+      {
+        "case_id": "report_compact",
+        "split": "manual_blind_review",
+        "task": "report_compact",
+        "payload": {
+          "profile": "compact",
+          "target_page_range": "1-2",
+          "allowed_claims": [
+            "Giữ KPI chính và giới hạn chính."
+          ]
+        },
+        "required_terms": [
+          "KPI"
+        ],
+        "limitations": []
+      }
+    ]
+  }
+}

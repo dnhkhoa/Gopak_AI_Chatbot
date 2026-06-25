@@ -1,0 +1,200 @@
+{
+  "status": "completed",
+  "results": {
+    "legacy_single_model": {
+      "status": "completed",
+      "sequences": [
+        {
+          "id": "sequence_1",
+          "messages": [
+            "Top 5 máy downtime cao nhất",
+            "Nhận xét kết quả",
+            "Vẽ biểu đồ",
+            "Cho tôi xu hướng theo ngày",
+            "Nhận xét biểu đồ này"
+          ],
+          "expected": [
+            "NEW_REQUEST",
+            "FOLLOW_UP_QUESTION",
+            "FOLLOW_UP_QUESTION",
+            "NEW_REQUEST",
+            "FOLLOW_UP_QUESTION"
+          ],
+          "actual": [
+            "NEW_REQUEST",
+            "FOLLOW_UP_QUESTION",
+            "NEW_REQUEST",
+            "NEW_REQUEST",
+            "FOLLOW_UP_QUESTION"
+          ],
+          "pending_not_hijacked": true,
+          "passed": false
+        },
+        {
+          "id": "sequence_2",
+          "messages": [
+            "Tạo báo cáo tổng quan",
+            "Chi tiết hơn",
+            "Rút gọn còn 1-2 trang",
+            "Xuất PDF"
+          ],
+          "expected": [
+            "NEW_REQUEST",
+            "ARTIFACT_REVISION",
+            "ARTIFACT_REVISION",
+            "ARTIFACT_EXPORT"
+          ],
+          "actual": [
+            "NEW_REQUEST",
+            "ARTIFACT_REVISION",
+            "ARTIFACT_REVISION",
+            "ARTIFACT_EXPORT"
+          ],
+          "pending_not_hijacked": true,
+          "passed": true
+        },
+        {
+          "id": "sequence_3",
+          "messages": [
+            "Máy 11",
+            "Top 5 máy theo tổng downtime"
+          ],
+          "expected": [
+            "CLARIFICATION_ANSWER",
+            "NEW_REQUEST"
+          ],
+          "actual": [
+            "CLARIFICATION_ANSWER",
+            "NEW_REQUEST"
+          ],
+          "pending_not_hijacked": true,
+          "passed": true
+        },
+        {
+          "id": "sequence_5",
+          "messages": [
+            "vẽ biêu đồ xu hương dowtime",
+            "nhan xet bieu do nay",
+            "cho tui report chi tiet hon"
+          ],
+          "expected": [
+            "NEW_REQUEST",
+            "FOLLOW_UP_QUESTION",
+            "ARTIFACT_REVISION"
+          ],
+          "actual": [
+            "NEW_REQUEST",
+            "FOLLOW_UP_QUESTION",
+            "ARTIFACT_REVISION"
+          ],
+          "pending_not_hijacked": true,
+          "passed": true
+        }
+      ],
+      "metrics": {
+        "pass_rate": 0.75
+      }
+    },
+    "split_roles_same_model": {
+      "status": "completed",
+      "sequences": [
+        {
+          "id": "sequence_1",
+          "messages": [
+            "Top 5 máy downtime cao nhất",
+            "Nhận xét kết quả",
+            "Vẽ biểu đồ",
+            "Cho tôi xu hướng theo ngày",
+            "Nhận xét biểu đồ này"
+          ],
+          "expected": [
+            "NEW_REQUEST",
+            "FOLLOW_UP_QUESTION",
+            "FOLLOW_UP_QUESTION",
+            "NEW_REQUEST",
+            "FOLLOW_UP_QUESTION"
+          ],
+          "actual": [
+            "NEW_REQUEST",
+            "FOLLOW_UP_QUESTION",
+            "NEW_REQUEST",
+            "NEW_REQUEST",
+            "FOLLOW_UP_QUESTION"
+          ],
+          "pending_not_hijacked": true,
+          "passed": false
+        },
+        {
+          "id": "sequence_2",
+          "messages": [
+            "Tạo báo cáo tổng quan",
+            "Chi tiết hơn",
+            "Rút gọn còn 1-2 trang",
+            "Xuất PDF"
+          ],
+          "expected": [
+            "NEW_REQUEST",
+            "ARTIFACT_REVISION",
+            "ARTIFACT_REVISION",
+            "ARTIFACT_EXPORT"
+          ],
+          "actual": [
+            "NEW_REQUEST",
+            "ARTIFACT_REVISION",
+            "ARTIFACT_REVISION",
+            "ARTIFACT_EXPORT"
+          ],
+          "pending_not_hijacked": true,
+          "passed": true
+        },
+        {
+          "id": "sequence_3",
+          "messages": [
+            "Máy 11",
+            "Top 5 máy theo tổng downtime"
+          ],
+          "expected": [
+            "CLARIFICATION_ANSWER",
+            "NEW_REQUEST"
+          ],
+          "actual": [
+            "CLARIFICATION_ANSWER",
+            "NEW_REQUEST"
+          ],
+          "pending_not_hijacked": true,
+          "passed": true
+        },
+        {
+          "id": "sequence_5",
+          "messages": [
+            "vẽ biêu đồ xu hương dowtime",
+            "nhan xet bieu do nay",
+            "cho tui report chi tiet hon"
+          ],
+          "expected": [
+            "NEW_REQUEST",
+            "FOLLOW_UP_QUESTION",
+            "ARTIFACT_REVISION"
+          ],
+          "actual": [
+            "NEW_REQUEST",
+            "FOLLOW_UP_QUESTION",
+            "ARTIFACT_REVISION"
+          ],
+          "pending_not_hijacked": true,
+          "passed": true
+        }
+      ],
+      "metrics": {
+        "pass_rate": 0.75
+      }
+    },
+    "dual_model": {
+      "status": "MODEL_NOT_AVAILABLE",
+      "sequences": [],
+      "metrics": {
+        "pass_rate": null
+      }
+    }
+  }
+}

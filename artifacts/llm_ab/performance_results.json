@@ -1,0 +1,68 @@
+{
+  "status": "completed",
+  "repetitions": 3,
+  "results": {
+    "legacy_single_model": {
+      "status": "completed",
+      "latency_ms": {
+        "median": 0.15,
+        "p50": 0.14,
+        "p95": 0.18,
+        "p99": 0.24,
+        "min": 0.0,
+        "max": 0.24,
+        "stdev": 0.08
+      },
+      "model_call_count": 0,
+      "retry_count": 0,
+      "timeout_count": 0,
+      "json_repair_count": 0,
+      "validator_rejection_count": 0,
+      "resource": {
+        "peak_ram_mb": null,
+        "peak_vram_mb": null,
+        "cpu_utilization": null,
+        "disk_model_size": null,
+        "simultaneous_model_residency": null,
+        "note": "Resource probes are placeholders unless OS/GPU counters are enabled for the benchmark run."
+      }
+    },
+    "split_roles_same_model": {
+      "status": "completed",
+      "latency_ms": {
+        "median": 0.23,
+        "p50": 0.22,
+        "p95": 0.3,
+        "p99": 0.3,
+        "min": 0.0,
+        "max": 0.3,
+        "stdev": 0.12
+      },
+      "model_call_count": 0,
+      "retry_count": 0,
+      "timeout_count": 0,
+      "json_repair_count": 0,
+      "validator_rejection_count": 0,
+      "resource": {
+        "peak_ram_mb": null,
+        "peak_vram_mb": null,
+        "cpu_utilization": null,
+        "disk_model_size": null,
+        "simultaneous_model_residency": null,
+        "note": "Resource probes are placeholders unless OS/GPU counters are enabled for the benchmark run."
+      }
+    },
+    "dual_model": {
+      "status": "MODEL_NOT_AVAILABLE",
+      "latency_ms": {},
+      "resource": {
+        "peak_ram_mb": null,
+        "peak_vram_mb": null,
+        "cpu_utilization": null,
+        "disk_model_size": null,
+        "simultaneous_model_residency": null,
+        "note": "Resource probes are placeholders unless OS/GPU counters are enabled for the benchmark run."
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "split_roles_same_model": {
+    "A_pass_candidate_fail": 5,
+    "A_fail_candidate_pass": 0,
+    "both_pass": 0,
+    "both_fail": 12,
+    "candidate_status": "completed"
+  },
+  "dual_model": {
+    "A_pass_candidate_fail": 0,
+    "A_fail_candidate_pass": 0,
+    "both_pass": 0,
+    "both_fail": 0,
+    "candidate_status": "MODEL_NOT_AVAILABLE"
+  }
+}

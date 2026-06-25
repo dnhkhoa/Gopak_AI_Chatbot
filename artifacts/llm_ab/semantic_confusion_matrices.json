@@ -1,0 +1,102 @@
+{
+  "legacy_single_model": {
+    "NEW_REQUEST": {
+      "NEW_REQUEST": 10,
+      "CLARIFICATION_ANSWER": 0,
+      "ARTIFACT_REVISION": 0,
+      "ARTIFACT_EXPORT": 0,
+      "FOLLOW_UP_QUESTION": 0,
+      "OTHER": 0
+    },
+    "CLARIFICATION_ANSWER": {
+      "NEW_REQUEST": 0,
+      "CLARIFICATION_ANSWER": 1,
+      "ARTIFACT_REVISION": 0,
+      "ARTIFACT_EXPORT": 0,
+      "FOLLOW_UP_QUESTION": 0,
+      "OTHER": 0
+    },
+    "ARTIFACT_REVISION": {
+      "NEW_REQUEST": 0,
+      "CLARIFICATION_ANSWER": 0,
+      "ARTIFACT_REVISION": 2,
+      "ARTIFACT_EXPORT": 0,
+      "FOLLOW_UP_QUESTION": 0,
+      "OTHER": 0
+    },
+    "ARTIFACT_EXPORT": {
+      "NEW_REQUEST": 0,
+      "CLARIFICATION_ANSWER": 0,
+      "ARTIFACT_REVISION": 0,
+      "ARTIFACT_EXPORT": 1,
+      "FOLLOW_UP_QUESTION": 0,
+      "OTHER": 0
+    },
+    "FOLLOW_UP_QUESTION": {
+      "NEW_REQUEST": 0,
+      "CLARIFICATION_ANSWER": 0,
+      "ARTIFACT_REVISION": 0,
+      "ARTIFACT_EXPORT": 0,
+      "FOLLOW_UP_QUESTION": 1,
+      "OTHER": 0
+    },
+    "OTHER": {
+      "NEW_REQUEST": 0,
+      "CLARIFICATION_ANSWER": 0,
+      "ARTIFACT_REVISION": 0,
+      "ARTIFACT_EXPORT": 0,
+      "FOLLOW_UP_QUESTION": 1,
+      "OTHER": 1
+    }
+  },
+  "split_roles_same_model": {
+    "NEW_REQUEST": {
+      "NEW_REQUEST": 6,
+      "CLARIFICATION_ANSWER": 0,
+      "ARTIFACT_REVISION": 0,
+      "ARTIFACT_EXPORT": 0,
+      "FOLLOW_UP_QUESTION": 0,
+      "OTHER": 4
+    },
+    "CLARIFICATION_ANSWER": {
+      "NEW_REQUEST": 0,
+      "CLARIFICATION_ANSWER": 0,
+      "ARTIFACT_REVISION": 0,
+      "ARTIFACT_EXPORT": 0,
+      "FOLLOW_UP_QUESTION": 0,
+      "OTHER": 1
+    },
+    "ARTIFACT_REVISION": {
+      "NEW_REQUEST": 0,
+      "CLARIFICATION_ANSWER": 0,
+      "ARTIFACT_REVISION": 1,
+      "ARTIFACT_EXPORT": 0,
+      "FOLLOW_UP_QUESTION": 0,
+      "OTHER": 1
+    },
+    "ARTIFACT_EXPORT": {
+      "NEW_REQUEST": 0,
+      "CLARIFICATION_ANSWER": 0,
+      "ARTIFACT_REVISION": 0,
+      "ARTIFACT_EXPORT": 1,
+      "FOLLOW_UP_QUESTION": 0,
+      "OTHER": 0
+    },
+    "FOLLOW_UP_QUESTION": {
+      "NEW_REQUEST": 0,
+      "CLARIFICATION_ANSWER": 0,
+      "ARTIFACT_REVISION": 0,
+      "ARTIFACT_EXPORT": 0,
+      "FOLLOW_UP_QUESTION": 0,
+      "OTHER": 1
+    },
+    "OTHER": {
+      "NEW_REQUEST": 0,
+      "CLARIFICATION_ANSWER": 0,
+      "ARTIFACT_REVISION": 0,
+      "ARTIFACT_EXPORT": 0,
+      "FOLLOW_UP_QUESTION": 1,
+      "OTHER": 1
+    }
+  }
+}

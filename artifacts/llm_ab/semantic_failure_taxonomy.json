@@ -1,0 +1,1457 @@
+{
+  "legacy_single_model": {
+    "counts": {
+      "SEMANTIC_WRONG": 12,
+      "TURN_RELATIONSHIP_WRONG": 1,
+      "CAPABILITY_VALIDATION_FAILED": 1
+    },
+    "cases": [
+      {
+        "id": "trend_day",
+        "input": "Vẽ biểu đồ xu hướng downtime theo ngày",
+        "expected_contract": {
+          "case_id": "trend_day",
+          "split": "development",
+          "message": "Vẽ biểu đồ xu hướng downtime theo ngày",
+          "expected_intent": "chart",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [
+            "date"
+          ],
+          "expected_metrics": [
+            "total_downtime"
+          ],
+          "expected_outputs": [
+            "chart"
+          ],
+          "expected_chart_type": "line",
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "clean",
+          "tags": [],
+          "expected_intent_enum": "CHART_CREATE",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "TIME_TREND",
+          "turn_relationship": "NEW_REQUEST",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [
+            "date"
+          ],
+          "metrics": [
+            "total_downtime"
+          ],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [
+            "chart"
+          ],
+          "requested_chart_type": "line",
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.75
+        },
+        "failure_classification": [
+          "SEMANTIC_WRONG"
+        ],
+        "latency_ms": 0.2,
+        "retry_count": 0
+      },
+      {
+        "id": "distribution_cause",
+        "input": "Phân bố nguyên nhân dừng máy",
+        "expected_contract": {
+          "case_id": "distribution_cause",
+          "split": "development",
+          "message": "Phân bố nguyên nhân dừng máy",
+          "expected_intent": "distribution",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [
+            "cause"
+          ],
+          "expected_metrics": [],
+          "expected_outputs": [
+            "chart"
+          ],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "clean",
+          "tags": [],
+          "expected_intent_enum": "DISTRIBUTION",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "DISTRIBUTION",
+          "turn_relationship": "NEW_REQUEST",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [
+            "cause",
+            "loss_name",
+            "machine"
+          ],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.75
+        },
+        "failure_classification": [
+          "SEMANTIC_WRONG"
+        ],
+        "latency_ms": 0.16,
+        "retry_count": 0
+      },
+      {
+        "id": "report_revision",
+        "input": "Chi tiết hơn",
+        "expected_contract": {
+          "case_id": "report_revision",
+          "split": "development",
+          "message": "Chi tiết hơn",
+          "expected_intent": "report",
+          "expected_relationship": "ARTIFACT_REVISION",
+          "expected_dimensions": [],
+          "expected_metrics": [],
+          "expected_outputs": [
+            "report"
+          ],
+          "expected_chart_type": null,
+          "expected_report_action": "revise",
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "active_report",
+          "tags": [],
+          "expected_intent_enum": "REPORT_CREATE",
+          "expected_relationship_enum": "ARTIFACT_REVISION"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "REPORT_REVISION",
+          "turn_relationship": "ARTIFACT_REVISION",
+          "referenced_artifact_id": "report-root",
+          "referenced_artifact_type": "REPORT",
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": "revise",
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.75
+        },
+        "failure_classification": [
+          "SEMANTIC_WRONG"
+        ],
+        "latency_ms": 0.27,
+        "retry_count": 0
+      },
+      {
+        "id": "report_export",
+        "input": "Xuất PDF báo cáo này",
+        "expected_contract": {
+          "case_id": "report_export",
+          "split": "development",
+          "message": "Xuất PDF báo cáo này",
+          "expected_intent": "report",
+          "expected_relationship": "ARTIFACT_EXPORT",
+          "expected_dimensions": [],
+          "expected_metrics": [],
+          "expected_outputs": [
+            "report"
+          ],
+          "expected_chart_type": null,
+          "expected_report_action": "export",
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "active_report",
+          "tags": [],
+          "expected_intent_enum": "REPORT_CREATE",
+          "expected_relationship_enum": "ARTIFACT_EXPORT"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "REPORT_EXPORT",
+          "turn_relationship": "ARTIFACT_EXPORT",
+          "referenced_artifact_id": "report-root",
+          "referenced_artifact_type": "REPORT",
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [
+            "report"
+          ],
+          "requested_chart_type": null,
+          "requested_report_action": "export",
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.75
+        },
+        "failure_classification": [
+          "SEMANTIC_WRONG"
+        ],
+        "latency_ms": 0.17,
+        "retry_count": 0
+      },
+      {
+        "id": "artifact_question",
+        "input": "Nhận xét biểu đồ này",
+        "expected_contract": {
+          "case_id": "artifact_question",
+          "split": "holdout",
+          "message": "Nhận xét biểu đồ này",
+          "expected_intent": "artifact_question",
+          "expected_relationship": "FOLLOW_UP_QUESTION",
+          "expected_dimensions": [],
+          "expected_metrics": [],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "last_chart",
+          "tags": [
+            "context"
+          ],
+          "expected_intent_enum": "ARTIFACT_QUESTION",
+          "expected_relationship_enum": "FOLLOW_UP_QUESTION"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "CHART_CREATE",
+          "turn_relationship": "FOLLOW_UP_QUESTION",
+          "referenced_artifact_id": "artifact-previous",
+          "referenced_artifact_type": "CHART",
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [
+            "chart"
+          ],
+          "requested_chart_type": "bar",
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.75
+        },
+        "failure_classification": [
+          "SEMANTIC_WRONG"
+        ],
+        "latency_ms": 0.17,
+        "retry_count": 0
+      },
+      {
+        "id": "clarification_answer",
+        "input": "Máy 11",
+        "expected_contract": {
+          "case_id": "clarification_answer",
+          "split": "holdout",
+          "message": "Máy 11",
+          "expected_intent": "clarification_answer",
+          "expected_relationship": "CLARIFICATION_ANSWER",
+          "expected_dimensions": [
+            "machine"
+          ],
+          "expected_metrics": [],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "pending_machine",
+          "tags": [],
+          "expected_intent_enum": "CLARIFICATION_ANSWER",
+          "expected_relationship_enum": "CLARIFICATION_ANSWER"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "UNSUPPORTED_REQUEST",
+          "turn_relationship": "CLARIFICATION_ANSWER",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [
+            "machine"
+          ],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.75
+        },
+        "failure_classification": [
+          "SEMANTIC_WRONG"
+        ],
+        "latency_ms": 0.2,
+        "retry_count": 0
+      },
+      {
+        "id": "correction",
+        "input": "Không, đổi sang Máy 12",
+        "expected_contract": {
+          "case_id": "correction",
+          "split": "holdout",
+          "message": "Không, đổi sang Máy 12",
+          "expected_intent": "correction",
+          "expected_relationship": "CORRECTION",
+          "expected_dimensions": [
+            "machine"
+          ],
+          "expected_metrics": [],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "last_table",
+          "tags": [],
+          "expected_intent_enum": "CORRECTION",
+          "expected_relationship_enum": "CORRECTION"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "UNSUPPORTED_REQUEST",
+          "turn_relationship": "FOLLOW_UP_QUESTION",
+          "referenced_artifact_id": "artifact-previous",
+          "referenced_artifact_type": "TABLE",
+          "dimensions": [
+            "machine"
+          ],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.75
+        },
+        "failure_classification": [
+          "SEMANTIC_WRONG",
+          "TURN_RELATIONSHIP_WRONG"
+        ],
+        "latency_ms": 0.17,
+        "retry_count": 0
+      },
+      {
+        "id": "cancel",
+        "input": "Bỏ qua câu trước",
+        "expected_contract": {
+          "case_id": "cancel",
+          "split": "holdout",
+          "message": "Bỏ qua câu trước",
+          "expected_intent": "cancel",
+          "expected_relationship": "CANCEL",
+          "expected_dimensions": [],
+          "expected_metrics": [],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "pending_machine",
+          "tags": [],
+          "expected_intent_enum": "CANCEL",
+          "expected_relationship_enum": "CANCEL"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "UNSUPPORTED_REQUEST",
+          "turn_relationship": "CANCEL",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.75
+        },
+        "failure_classification": [
+          "SEMANTIC_WRONG"
+        ],
+        "latency_ms": 0.16,
+        "retry_count": 0
+      },
+      {
+        "id": "wrong_file",
+        "input": "Máy nào có tổng downtime cao nhất?",
+        "expected_contract": {
+          "case_id": "wrong_file",
+          "split": "holdout",
+          "message": "Máy nào có tổng downtime cao nhất?",
+          "expected_intent": "wrong_file_request",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [
+            "machine"
+          ],
+          "expected_metrics": [
+            "total_downtime"
+          ],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "EntryTransaction",
+          "state_kind": "clean",
+          "tags": [
+            "wrong_file"
+          ],
+          "expected_intent_enum": "UNSUPPORTED_REQUEST",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "RANKING",
+          "turn_relationship": "NEW_REQUEST",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [
+            "machine"
+          ],
+          "metrics": [
+            "total_downtime"
+          ],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.75
+        },
+        "failure_classification": [
+          "CAPABILITY_VALIDATION_FAILED",
+          "SEMANTIC_WRONG"
+        ],
+        "latency_ms": 0.17,
+        "retry_count": 0
+      },
+      {
+        "id": "typo_no_accent_chart",
+        "input": "ve bieu do xu huong downtime theo ngay",
+        "expected_contract": {
+          "case_id": "typo_no_accent_chart",
+          "split": "holdout",
+          "message": "ve bieu do xu huong downtime theo ngay",
+          "expected_intent": "chart",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [
+            "date"
+          ],
+          "expected_metrics": [
+            "total_downtime"
+          ],
+          "expected_outputs": [
+            "chart"
+          ],
+          "expected_chart_type": "line",
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "clean",
+          "tags": [
+            "typo"
+          ],
+          "expected_intent_enum": "CHART_CREATE",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "TIME_TREND",
+          "turn_relationship": "NEW_REQUEST",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [
+            "date"
+          ],
+          "metrics": [
+            "total_downtime"
+          ],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [
+            "chart"
+          ],
+          "requested_chart_type": "line",
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.75
+        },
+        "failure_classification": [
+          "SEMANTIC_WRONG"
+        ],
+        "latency_ms": 0.15,
+        "retry_count": 0
+      },
+      {
+        "id": "typo_dowtime",
+        "input": "vẽ biêu đồ xu hương dowtime",
+        "expected_contract": {
+          "case_id": "typo_dowtime",
+          "split": "holdout",
+          "message": "vẽ biêu đồ xu hương dowtime",
+          "expected_intent": "chart",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [
+            "date"
+          ],
+          "expected_metrics": [
+            "total_downtime"
+          ],
+          "expected_outputs": [
+            "chart"
+          ],
+          "expected_chart_type": "line",
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "clean",
+          "tags": [
+            "typo"
+          ],
+          "expected_intent_enum": "CHART_CREATE",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "TIME_TREND",
+          "turn_relationship": "NEW_REQUEST",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [
+            "date"
+          ],
+          "metrics": [
+            "total_downtime"
+          ],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [
+            "chart"
+          ],
+          "requested_chart_type": "line",
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.75
+        },
+        "failure_classification": [
+          "SEMANTIC_WRONG"
+        ],
+        "latency_ms": 0.15,
+        "retry_count": 0
+      },
+      {
+        "id": "typo_report_revision",
+        "input": "cho tui report chi tiet hon",
+        "expected_contract": {
+          "case_id": "typo_report_revision",
+          "split": "holdout",
+          "message": "cho tui report chi tiet hon",
+          "expected_intent": "report",
+          "expected_relationship": "ARTIFACT_REVISION",
+          "expected_dimensions": [],
+          "expected_metrics": [],
+          "expected_outputs": [
+            "report"
+          ],
+          "expected_chart_type": null,
+          "expected_report_action": "revise",
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "active_report",
+          "tags": [
+            "typo"
+          ],
+          "expected_intent_enum": "REPORT_CREATE",
+          "expected_relationship_enum": "ARTIFACT_REVISION"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "REPORT_REVISION",
+          "turn_relationship": "ARTIFACT_REVISION",
+          "referenced_artifact_id": "report-root",
+          "referenced_artifact_type": "REPORT",
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [
+            "report"
+          ],
+          "requested_chart_type": null,
+          "requested_report_action": "revise",
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.75
+        },
+        "failure_classification": [
+          "SEMANTIC_WRONG"
+        ],
+        "latency_ms": 0.24,
+        "retry_count": 0
+      }
+    ]
+  },
+  "split_roles_same_model": {
+    "counts": {
+      "FIELD_MAPPING_WRONG": 9,
+      "ENUM_VALIDATION_FAILED": 8,
+      "SCHEMA_VALIDATION_FAILED": 3,
+      "INVALID_JSON": 2,
+      "SEMANTIC_WRONG": 2,
+      "TURN_RELATIONSHIP_WRONG": 1
+    },
+    "cases": [
+      {
+        "id": "agg_total_downtime",
+        "input": "Tổng downtime là bao nhiêu?",
+        "expected_contract": {
+          "case_id": "agg_total_downtime",
+          "split": "development",
+          "message": "Tổng downtime là bao nhiêu?",
+          "expected_intent": "aggregation",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [],
+          "expected_metrics": [
+            "total_downtime"
+          ],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "clean",
+          "tags": [],
+          "expected_intent_enum": "AGGREGATION",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "AGGREGATION",
+          "turn_relationship": "NEW_REQUEST",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.0
+        },
+        "failure_classification": [
+          "FIELD_MAPPING_WRONG"
+        ],
+        "latency_ms": 6536.55,
+        "retry_count": 1
+      },
+      {
+        "id": "ranking_top_machine",
+        "input": "Top 5 máy downtime cao nhất",
+        "expected_contract": {
+          "case_id": "ranking_top_machine",
+          "split": "development",
+          "message": "Top 5 máy downtime cao nhất",
+          "expected_intent": "ranking",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [
+            "machine"
+          ],
+          "expected_metrics": [
+            "total_downtime"
+          ],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "clean",
+          "tags": [],
+          "expected_intent_enum": "RANKING",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": null,
+        "failure_classification": [
+          "ENUM_VALIDATION_FAILED",
+          "SCHEMA_VALIDATION_FAILED"
+        ],
+        "latency_ms": 9108.18,
+        "retry_count": 1
+      },
+      {
+        "id": "trend_day",
+        "input": "Vẽ biểu đồ xu hướng downtime theo ngày",
+        "expected_contract": {
+          "case_id": "trend_day",
+          "split": "development",
+          "message": "Vẽ biểu đồ xu hướng downtime theo ngày",
+          "expected_intent": "chart",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [
+            "date"
+          ],
+          "expected_metrics": [
+            "total_downtime"
+          ],
+          "expected_outputs": [
+            "chart"
+          ],
+          "expected_chart_type": "line",
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "clean",
+          "tags": [],
+          "expected_intent_enum": "CHART_CREATE",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "CHART_CREATE",
+          "turn_relationship": "NEW_REQUEST",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.0
+        },
+        "failure_classification": [
+          "FIELD_MAPPING_WRONG"
+        ],
+        "latency_ms": 6971.52,
+        "retry_count": 1
+      },
+      {
+        "id": "comparison_machine",
+        "input": "So sánh Máy 11 và Máy 12 theo downtime",
+        "expected_contract": {
+          "case_id": "comparison_machine",
+          "split": "development",
+          "message": "So sánh Máy 11 và Máy 12 theo downtime",
+          "expected_intent": "comparison",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [
+            "machine"
+          ],
+          "expected_metrics": [
+            "total_downtime"
+          ],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "clean",
+          "tags": [],
+          "expected_intent_enum": "COMPARISON",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "COMPARISON",
+          "turn_relationship": "NEW_REQUEST",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.0
+        },
+        "failure_classification": [
+          "FIELD_MAPPING_WRONG"
+        ],
+        "latency_ms": 6533.26,
+        "retry_count": 1
+      },
+      {
+        "id": "distribution_cause",
+        "input": "Phân bố nguyên nhân dừng máy",
+        "expected_contract": {
+          "case_id": "distribution_cause",
+          "split": "development",
+          "message": "Phân bố nguyên nhân dừng máy",
+          "expected_intent": "distribution",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [
+            "cause"
+          ],
+          "expected_metrics": [],
+          "expected_outputs": [
+            "chart"
+          ],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "clean",
+          "tags": [],
+          "expected_intent_enum": "DISTRIBUTION",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "DISTRIBUTION",
+          "turn_relationship": "NEW_REQUEST",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.0
+        },
+        "failure_classification": [
+          "FIELD_MAPPING_WRONG"
+        ],
+        "latency_ms": 6639.06,
+        "retry_count": 1
+      },
+      {
+        "id": "report_create",
+        "input": "Tạo báo cáo tổng quan",
+        "expected_contract": {
+          "case_id": "report_create",
+          "split": "development",
+          "message": "Tạo báo cáo tổng quan",
+          "expected_intent": "report",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [],
+          "expected_metrics": [],
+          "expected_outputs": [
+            "report"
+          ],
+          "expected_chart_type": null,
+          "expected_report_action": "create",
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "clean",
+          "tags": [],
+          "expected_intent_enum": "REPORT_CREATE",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": null,
+        "failure_classification": [
+          "ENUM_VALIDATION_FAILED",
+          "INVALID_JSON",
+          "SCHEMA_VALIDATION_FAILED"
+        ],
+        "latency_ms": 18965.7,
+        "retry_count": 1
+      },
+      {
+        "id": "report_revision",
+        "input": "Chi tiết hơn",
+        "expected_contract": {
+          "case_id": "report_revision",
+          "split": "development",
+          "message": "Chi tiết hơn",
+          "expected_intent": "report",
+          "expected_relationship": "ARTIFACT_REVISION",
+          "expected_dimensions": [],
+          "expected_metrics": [],
+          "expected_outputs": [
+            "report"
+          ],
+          "expected_chart_type": null,
+          "expected_report_action": "revise",
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "active_report",
+          "tags": [],
+          "expected_intent_enum": "REPORT_CREATE",
+          "expected_relationship_enum": "ARTIFACT_REVISION"
+        },
+        "parsed_output": null,
+        "failure_classification": [
+          "ENUM_VALIDATION_FAILED"
+        ],
+        "latency_ms": 7056.72,
+        "retry_count": 1
+      },
+      {
+        "id": "report_export",
+        "input": "Xuất PDF báo cáo này",
+        "expected_contract": {
+          "case_id": "report_export",
+          "split": "development",
+          "message": "Xuất PDF báo cáo này",
+          "expected_intent": "report",
+          "expected_relationship": "ARTIFACT_EXPORT",
+          "expected_dimensions": [],
+          "expected_metrics": [],
+          "expected_outputs": [
+            "report"
+          ],
+          "expected_chart_type": null,
+          "expected_report_action": "export",
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "active_report",
+          "tags": [],
+          "expected_intent_enum": "REPORT_CREATE",
+          "expected_relationship_enum": "ARTIFACT_EXPORT"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "REPORT_EXPORT",
+          "turn_relationship": "ARTIFACT_EXPORT",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.0
+        },
+        "failure_classification": [
+          "SEMANTIC_WRONG"
+        ],
+        "latency_ms": 7692.08,
+        "retry_count": 1
+      },
+      {
+        "id": "artifact_question",
+        "input": "Nhận xét biểu đồ này",
+        "expected_contract": {
+          "case_id": "artifact_question",
+          "split": "holdout",
+          "message": "Nhận xét biểu đồ này",
+          "expected_intent": "artifact_question",
+          "expected_relationship": "FOLLOW_UP_QUESTION",
+          "expected_dimensions": [],
+          "expected_metrics": [],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "last_chart",
+          "tags": [
+            "context"
+          ],
+          "expected_intent_enum": "ARTIFACT_QUESTION",
+          "expected_relationship_enum": "FOLLOW_UP_QUESTION"
+        },
+        "parsed_output": null,
+        "failure_classification": [
+          "ENUM_VALIDATION_FAILED",
+          "INVALID_JSON",
+          "SCHEMA_VALIDATION_FAILED"
+        ],
+        "latency_ms": 19167.66,
+        "retry_count": 1
+      },
+      {
+        "id": "clarification_answer",
+        "input": "Máy 11",
+        "expected_contract": {
+          "case_id": "clarification_answer",
+          "split": "holdout",
+          "message": "Máy 11",
+          "expected_intent": "clarification_answer",
+          "expected_relationship": "CLARIFICATION_ANSWER",
+          "expected_dimensions": [
+            "machine"
+          ],
+          "expected_metrics": [],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "pending_machine",
+          "tags": [],
+          "expected_intent_enum": "CLARIFICATION_ANSWER",
+          "expected_relationship_enum": "CLARIFICATION_ANSWER"
+        },
+        "parsed_output": null,
+        "failure_classification": [
+          "ENUM_VALIDATION_FAILED"
+        ],
+        "latency_ms": 9913.6,
+        "retry_count": 1
+      },
+      {
+        "id": "correction",
+        "input": "Không, đổi sang Máy 12",
+        "expected_contract": {
+          "case_id": "correction",
+          "split": "holdout",
+          "message": "Không, đổi sang Máy 12",
+          "expected_intent": "correction",
+          "expected_relationship": "CORRECTION",
+          "expected_dimensions": [
+            "machine"
+          ],
+          "expected_metrics": [],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "last_table",
+          "tags": [],
+          "expected_intent_enum": "CORRECTION",
+          "expected_relationship_enum": "CORRECTION"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "CORRECTION",
+          "turn_relationship": "FOLLOW_UP_QUESTION",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.0
+        },
+        "failure_classification": [
+          "FIELD_MAPPING_WRONG",
+          "TURN_RELATIONSHIP_WRONG"
+        ],
+        "latency_ms": 6695.85,
+        "retry_count": 1
+      },
+      {
+        "id": "cancel",
+        "input": "Bỏ qua câu trước",
+        "expected_contract": {
+          "case_id": "cancel",
+          "split": "holdout",
+          "message": "Bỏ qua câu trước",
+          "expected_intent": "cancel",
+          "expected_relationship": "CANCEL",
+          "expected_dimensions": [],
+          "expected_metrics": [],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "pending_machine",
+          "tags": [],
+          "expected_intent_enum": "CANCEL",
+          "expected_relationship_enum": "CANCEL"
+        },
+        "parsed_output": null,
+        "failure_classification": [
+          "ENUM_VALIDATION_FAILED"
+        ],
+        "latency_ms": 7130.55,
+        "retry_count": 1
+      },
+      {
+        "id": "wrong_file",
+        "input": "Máy nào có tổng downtime cao nhất?",
+        "expected_contract": {
+          "case_id": "wrong_file",
+          "split": "holdout",
+          "message": "Máy nào có tổng downtime cao nhất?",
+          "expected_intent": "wrong_file_request",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [
+            "machine"
+          ],
+          "expected_metrics": [
+            "total_downtime"
+          ],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "EntryTransaction",
+          "state_kind": "clean",
+          "tags": [
+            "wrong_file"
+          ],
+          "expected_intent_enum": "UNSUPPORTED_REQUEST",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": null,
+        "failure_classification": [
+          "ENUM_VALIDATION_FAILED",
+          "FIELD_MAPPING_WRONG"
+        ],
+        "latency_ms": 7025.25,
+        "retry_count": 1
+      },
+      {
+        "id": "typo_no_accent_chart",
+        "input": "ve bieu do xu huong downtime theo ngay",
+        "expected_contract": {
+          "case_id": "typo_no_accent_chart",
+          "split": "holdout",
+          "message": "ve bieu do xu huong downtime theo ngay",
+          "expected_intent": "chart",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [
+            "date"
+          ],
+          "expected_metrics": [
+            "total_downtime"
+          ],
+          "expected_outputs": [
+            "chart"
+          ],
+          "expected_chart_type": "line",
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "clean",
+          "tags": [
+            "typo"
+          ],
+          "expected_intent_enum": "CHART_CREATE",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "CHART_CREATE",
+          "turn_relationship": "NEW_REQUEST",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.0
+        },
+        "failure_classification": [
+          "FIELD_MAPPING_WRONG"
+        ],
+        "latency_ms": 7026.21,
+        "retry_count": 1
+      },
+      {
+        "id": "typo_dowtime",
+        "input": "vẽ biêu đồ xu hương dowtime",
+        "expected_contract": {
+          "case_id": "typo_dowtime",
+          "split": "holdout",
+          "message": "vẽ biêu đồ xu hương dowtime",
+          "expected_intent": "chart",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [
+            "date"
+          ],
+          "expected_metrics": [
+            "total_downtime"
+          ],
+          "expected_outputs": [
+            "chart"
+          ],
+          "expected_chart_type": "line",
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "clean",
+          "tags": [
+            "typo"
+          ],
+          "expected_intent_enum": "CHART_CREATE",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "CHART_CREATE",
+          "turn_relationship": "NEW_REQUEST",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.0
+        },
+        "failure_classification": [
+          "FIELD_MAPPING_WRONG"
+        ],
+        "latency_ms": 7000.84,
+        "retry_count": 1
+      },
+      {
+        "id": "typo_report_revision",
+        "input": "cho tui report chi tiet hon",
+        "expected_contract": {
+          "case_id": "typo_report_revision",
+          "split": "holdout",
+          "message": "cho tui report chi tiet hon",
+          "expected_intent": "report",
+          "expected_relationship": "ARTIFACT_REVISION",
+          "expected_dimensions": [],
+          "expected_metrics": [],
+          "expected_outputs": [
+            "report"
+          ],
+          "expected_chart_type": null,
+          "expected_report_action": "revise",
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "active_report",
+          "tags": [
+            "typo"
+          ],
+          "expected_intent_enum": "REPORT_CREATE",
+          "expected_relationship_enum": "ARTIFACT_REVISION"
+        },
+        "parsed_output": {
+          "schema_version": "semantic_resolution.v1",
+          "intent": "REPORT_REVISION",
+          "turn_relationship": "ARTIFACT_REVISION",
+          "referenced_artifact_id": null,
+          "referenced_artifact_type": null,
+          "dimensions": [],
+          "metrics": [],
+          "aggregations": [],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": null,
+          "limit": null,
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "requested_report_action": null,
+          "requested_report_detail": null,
+          "clarification_required": false,
+          "clarification_slots": [],
+          "clarification_reason": null,
+          "confidence": 0.0
+        },
+        "failure_classification": [
+          "SEMANTIC_WRONG"
+        ],
+        "latency_ms": 7457.08,
+        "retry_count": 1
+      },
+      {
+        "id": "cause_rank",
+        "input": "coi thử nguyên nhân nào nhiều nhất",
+        "expected_contract": {
+          "case_id": "cause_rank",
+          "split": "manual_blind_review",
+          "message": "coi thử nguyên nhân nào nhiều nhất",
+          "expected_intent": "ranking",
+          "expected_relationship": "NEW_REQUEST",
+          "expected_dimensions": [
+            "cause"
+          ],
+          "expected_metrics": [
+            "count"
+          ],
+          "expected_outputs": [],
+          "expected_chart_type": null,
+          "expected_report_action": null,
+          "clarification_required": false,
+          "source_file": "Machine_Downtime",
+          "state_kind": "clean",
+          "tags": [
+            "typo"
+          ],
+          "expected_intent_enum": "RANKING",
+          "expected_relationship_enum": "NEW_REQUEST"
+        },
+        "parsed_output": null,
+        "failure_classification": [
+          "ENUM_VALIDATION_FAILED",
+          "FIELD_MAPPING_WRONG"
+        ],
+        "latency_ms": 6864.48,
+        "retry_count": 1
+      }
+    ]
+  },
+  "dual_model": {
+    "counts": {},
+    "cases": []
+  }
+}
