@@ -1,0 +1,359 @@
+{
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "status": "passed"
+  },
+  "results": [
+    {
+      "file": "Machine_Downtime_20260203_100753.xlsx",
+      "question": "Ph?n t?ch data n?y.",
+      "domain": "machine_downtime",
+      "record_count": 9151,
+      "date_range": {
+        "column": "thoi_gian_bat_dau",
+        "start": "2025-11-03",
+        "end": "2026-02-03"
+      },
+      "business_dimensions": [
+        "may",
+        "ten_ton_that"
+      ],
+      "business_measures": [
+        "thoi_luong",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ],
+      "selected_insights": [
+        {
+          "type": "top_machine_downtime",
+          "title": "May dung dau ve tong downtime",
+          "statement": "May Máy 11 co tong downtime cao nhat: 413,57 giờ, gom 1.469 lan ghi nhan va trung binh 16 phút 54 giây moi lan.",
+          "primary_metric": "machine_total_downtime",
+          "primary_entity": "Máy 11",
+          "facts": [
+            {
+              "key": "duration",
+              "value": 413.57416666666666,
+              "display": "413,57 giờ"
+            },
+            {
+              "key": "count",
+              "value": 1469.0,
+              "display": "1.469"
+            },
+            {
+              "key": "avg",
+              "value": 0.28153449058316316,
+              "display": "16 phút 54 giây"
+            }
+          ]
+        },
+        {
+          "type": "top_cause_downtime",
+          "title": "Nguyen nhan/nhom ton that noi bat",
+          "statement": "MÁY LỖI PHẦN CƠ la nhom/nguyen nhan co tong downtime cao nhat: 563,32 giờ, voi 3.688 lan ghi nhan.",
+          "primary_metric": "cause_total_downtime",
+          "primary_entity": "MÁY LỖI PHẦN CƠ",
+          "facts": [
+            {
+              "key": "duration",
+              "value": 563.3194444444445,
+              "display": "563,32 giờ"
+            },
+            {
+              "key": "count",
+              "value": 3688.0,
+              "display": "3.688"
+            },
+            {
+              "key": "avg",
+              "value": 0.15274388406845024,
+              "display": "9 phút 10 giây"
+            }
+          ]
+        },
+        {
+          "type": "trend",
+          "title": "Ngay co downtime cao nhat",
+          "statement": "Downtime dat dinh vao 2025-11-21 voi 50,98 giờ tu 186 lan ghi nhan.",
+          "primary_metric": "daily_total_downtime",
+          "primary_entity": "2025-11-21",
+          "facts": [
+            {
+              "key": "peak_duration",
+              "value": 50.98416666666667,
+              "display": "50,98 giờ"
+            },
+            {
+              "key": "peak_count",
+              "value": 186.0,
+              "display": "186"
+            }
+          ]
+        }
+      ],
+      "quality": {
+        "passed": true,
+        "errors": []
+      },
+      "human_usefulness": {
+        "criteria": {
+          "Domain relevance": 2,
+          "Business usefulness": 2,
+          "Evidence specificity": 2,
+          "Non-triviality": 2,
+          "Diversity": 2,
+          "Clarity": 2,
+          "Actionability": 2,
+          "Limitation quality": 2
+        },
+        "total": 16,
+        "max": 16
+      },
+      "required_hits": [
+        "may",
+        "downtime",
+        "lan",
+        "trung binh"
+      ],
+      "forbidden_hits": [],
+      "filler_errors": [],
+      "answer_preview": "Tổng quan dữ liệu\nFile chứa dữ liệu dừng máy/downtime từ 2025-11-03 đến 2026-02-03, gồm 9.151 bản ghi và 30 cột.\n\nCác phát hiện đáng chú ý\n- May Máy 11 co tong downtime cao nhat: 413,57 giờ, gom 1.469 lan ghi nhan va trung binh 16 phút 54 giây moi lan.\n- MÁY LỖI PHẦN CƠ la nhom/nguyen nhan co tong downtime cao nhat: 563,32 giờ, voi 3.688 lan ghi nhan.\n- Downtime dat dinh vao 2025-11-21 voi 50,98 giờ tu 186 lan ghi nhan.\n\nSo sánh\nMay dung dau ve tong downtime và Nguyen nhan/nhom ton that noi bat dùng hai chỉ số khác nhau; nên xem riêng mức độ đóng góp và tần suất/phân bố.\n\nGiới hạn\n- Ket qua mo ta du lieu da import, khong chung minh quan he nhan qua hoac nguyen nhan ky thuat ben ngoai file.\n- Cac phat hien duoc tinh tu cac cot co san va phu thuoc chat luong du lieu nguon.",
+      "passed": true
+    },
+    {
+      "file": "Loss_Assignment_20260203_100840.xlsx",
+      "question": "Ph?n t?ch data n?y.",
+      "domain": "loss_assignment",
+      "record_count": 36309,
+      "date_range": {
+        "column": "thoi_gian_bat_dau",
+        "start": "2025-11-03",
+        "end": "2026-02-03"
+      },
+      "business_dimensions": [
+        "may",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that"
+      ],
+      "business_measures": [
+        "thoi_luong",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ],
+      "selected_insights": [
+        {
+          "type": "loss_duration",
+          "title": "Nhom ton that dong gop thoi luong lon nhat",
+          "statement": "Sản xuất co tong thoi luong cao nhat: 2.072,27 giờ, gom 26.892 ban ghi.",
+          "primary_metric": "total_downtime",
+          "primary_entity": "Sản xuất",
+          "facts": [
+            {
+              "key": "duration",
+              "value": 2072.2694444444446,
+              "display": "2.072,27 giờ"
+            },
+            {
+              "key": "count",
+              "value": 26892.0,
+              "display": "26.892"
+            },
+            {
+              "key": "avg",
+              "value": 0.07705895598856331,
+              "display": "4 phút 37 giây"
+            }
+          ]
+        },
+        {
+          "type": "distribution",
+          "title": "Nhom ton that xuat hien nhieu nhat",
+          "statement": "Sản xuất xuat hien nhieu nhat voi 26.892 ban ghi, chiem 74,1% tong so ban ghi.",
+          "primary_metric": "row_count",
+          "primary_entity": "Sản xuất",
+          "facts": [
+            {
+              "key": "top_count",
+              "value": 26892.0,
+              "display": "26.892"
+            },
+            {
+              "key": "top_pct",
+              "value": 74.06428158307857,
+              "display": "74,1%"
+            }
+          ]
+        },
+        {
+          "type": "concentration",
+          "title": "Muc tap trung cua cac nhom dau",
+          "statement": "Ba nhom/loai dung dau chiem 100% voi 36.309 ban ghi, cho thay muc tap trung cua phan loai ton that.",
+          "primary_metric": "row_count_share",
+          "primary_entity": "top_3",
+          "facts": [
+            {
+              "key": "top3_count",
+              "value": 36309.0,
+              "display": "36.309"
+            },
+            {
+              "key": "top3_pct",
+              "value": 100.0,
+              "display": "100%"
+            }
+          ]
+        }
+      ],
+      "quality": {
+        "passed": true,
+        "errors": []
+      },
+      "human_usefulness": {
+        "criteria": {
+          "Domain relevance": 2,
+          "Business usefulness": 2,
+          "Evidence specificity": 2,
+          "Non-triviality": 2,
+          "Diversity": 2,
+          "Clarity": 2,
+          "Actionability": 2,
+          "Limitation quality": 2
+        },
+        "total": 16,
+        "max": 16
+      },
+      "required_hits": [
+        "nhom",
+        "ton that",
+        "phan",
+        "tap trung"
+      ],
+      "forbidden_hits": [],
+      "filler_errors": [],
+      "answer_preview": "Tổng quan dữ liệu\nFile chứa dữ liệu phân loại tổn thất từ 2025-11-03 đến 2026-02-03, gồm 36.309 bản ghi và 30 cột.\n\nCác phát hiện đáng chú ý\n- Sản xuất co tong thoi luong cao nhat: 2.072,27 giờ, gom 26.892 ban ghi.\n- Sản xuất xuat hien nhieu nhat voi 26.892 ban ghi, chiem 74,1% tong so ban ghi.\n- Ba nhom/loai dung dau chiem 100% voi 36.309 ban ghi, cho thay muc tap trung cua phan loai ton that.\n\nSo sánh\nNhom ton that dong gop thoi luong lon nhat và Nhom ton that xuat hien nhieu nhat dùng hai chỉ số khác nhau; nên xem riêng mức độ đóng góp và tần suất/phân bố.\n\nGiới hạn\n- Ket qua mo ta du lieu da import, khong chung minh quan he nhan qua hoac nguyen nhan ky thuat ben ngoai file.\n- Cac phat hien duoc tinh tu cac cot co san va phu thuoc chat luong du lieu nguon.",
+      "passed": true
+    },
+    {
+      "file": "EntryTransaction_20260203_164943.xlsx",
+      "question": "Ph?n t?ch data n?y.",
+      "domain": "entry_transaction",
+      "record_count": 1294,
+      "date_range": {
+        "column": "thoi_gian_thuc_thi",
+        "start": "2026-02-03",
+        "end": "2026-02-03"
+      },
+      "business_dimensions": [
+        "cong",
+        "loai_truy_cap",
+        "ma_dang_ky",
+        "vai_tro_truy_cap",
+        "ho_va_ten",
+        "so_cmnd_cccd",
+        "cong_ty_chu_quan",
+        "cong_ty_van_tai"
+      ],
+      "business_measures": [
+        "gia_tri_can"
+      ],
+      "selected_insights": [
+        {
+          "type": "trend",
+          "title": "Ngay co giao dich cao nhat",
+          "statement": "Luong giao dich/ghi nhan dat dinh vao 2026-02-03 voi 1.294 ban ghi.",
+          "primary_metric": "transaction_count",
+          "primary_entity": "2026-02-03",
+          "facts": [
+            {
+              "key": "peak_count",
+              "value": 1294.0,
+              "display": "1.294"
+            }
+          ]
+        },
+        {
+          "type": "metric_summary",
+          "title": "Tong gia tri giao dich",
+          "statement": "Tong gia tri giao dich dat 4.985.500 tren 1.294 ban ghi; gia tri trung binh la 3.852,78.",
+          "primary_metric": "gia_tri_can",
+          "primary_entity": null,
+          "facts": [
+            {
+              "key": "total_value",
+              "value": 4985500.0,
+              "display": "4.985.500"
+            },
+            {
+              "key": "avg_value",
+              "value": 3852.7820710973724,
+              "display": "3.852,78"
+            },
+            {
+              "key": "row_count",
+              "value": 1294.0,
+              "display": "1.294"
+            }
+          ]
+        },
+        {
+          "type": "distribution",
+          "title": "Nhom/cua cong giao dich noi bat",
+          "statement": "Cổng 1 co so giao dich/ghi nhan cao nhat voi 1.048 ban ghi, chiem 81%.",
+          "primary_metric": "transaction_count",
+          "primary_entity": "Cổng 1",
+          "facts": [
+            {
+              "key": "top_count",
+              "value": 1048.0,
+              "display": "1.048"
+            },
+            {
+              "key": "top_pct",
+              "value": 80.98918083462134,
+              "display": "81%"
+            }
+          ]
+        }
+      ],
+      "quality": {
+        "passed": true,
+        "errors": []
+      },
+      "human_usefulness": {
+        "criteria": {
+          "Domain relevance": 2,
+          "Business usefulness": 2,
+          "Evidence specificity": 2,
+          "Non-triviality": 2,
+          "Diversity": 2,
+          "Clarity": 2,
+          "Actionability": 2,
+          "Limitation quality": 2
+        },
+        "total": 16,
+        "max": 16
+      },
+      "required_hits": [
+        "giao dich",
+        "gia tri",
+        "2026",
+        "cong"
+      ],
+      "forbidden_hits": [],
+      "filler_errors": [],
+      "answer_preview": "Tổng quan dữ liệu\nFile chứa dữ liệu giao dịch/ra vào từ 2026-02-03 đến 2026-02-03, gồm 1.294 bản ghi và 28 cột.\n\nCác phát hiện đáng chú ý\n- Luong giao dich/ghi nhan dat dinh vao 2026-02-03 voi 1.294 ban ghi.\n- Tong gia tri giao dich dat 4.985.500 tren 1.294 ban ghi; gia tri trung binh la 3.852,78.\n- Cổng 1 co so giao dich/ghi nhan cao nhat voi 1.048 ban ghi, chiem 81%.\n\nSo sánh\nNgay co giao dich cao nhat và Tong gia tri giao dich dùng hai chỉ số khác nhau; nên xem riêng mức độ đóng góp và tần suất/phân bố.\n\nGiới hạn\n- Ket qua mo ta du lieu da import, khong chung minh quan he nhan qua hoac nguyen nhan ky thuat ben ngoai file.\n- Cac phat hien duoc tinh tu cac cot co san va phu thuoc chat luong du lieu nguon.",
+      "passed": true
+    }
+  ]
+}

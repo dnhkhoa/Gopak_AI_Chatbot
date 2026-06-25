@@ -47,13 +47,13 @@ def main() -> None:
 
 def _ensure_server() -> subprocess.Popen | None:
     try:
-        _request("GET", "/api/health", timeout=3)
+        _request("GET", "/api/health", timeout=10)
         return None
     except Exception:
         proc = subprocess.Popen([sys.executable, "-m", "uvicorn", "backend.main:app", "--host", "127.0.0.1", "--port", "8000"], cwd=ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        for _ in range(30):
+        for _ in range(60):
             try:
-                _request("GET", "/api/health", timeout=2)
+                _request("GET", "/api/health", timeout=10)
                 return proc
             except Exception:
                 time.sleep(1)

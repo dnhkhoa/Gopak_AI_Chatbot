@@ -1,0 +1,533 @@
+{
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "technical_column_exclusion_rate": 1.0,
+    "identifier_exclusion_rate": 1.0,
+    "status": "passed"
+  },
+  "results": [
+    {
+      "id": "row_index_downtime",
+      "passed": true,
+      "forbidden_roles": {
+        "No.": "ROW_INDEX"
+      },
+      "technical_selected_as_measure": [],
+      "profiles": [
+        {
+          "column_name": "No.",
+          "display_name": "No.",
+          "data_type": "int64",
+          "semantic_role": "ROW_INDEX",
+          "business_role": null,
+          "is_identifier": false,
+          "is_row_index": true,
+          "is_technical_metadata": true,
+          "is_measure": false,
+          "is_dimension": false,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 1.0,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.01,
+          "unit": null,
+          "confidence": 0.95,
+          "evidence": [
+            "row_index_pattern"
+          ]
+        },
+        {
+          "column_name": "machine",
+          "display_name": "machine",
+          "data_type": "object",
+          "semantic_role": "CATEGORICAL_DIMENSION",
+          "business_role": "machine",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": true,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 0.03,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.5,
+          "unit": null,
+          "confidence": 0.82,
+          "evidence": [
+            "categorical_values"
+          ]
+        },
+        {
+          "column_name": "duration_seconds",
+          "display_name": "duration_seconds",
+          "data_type": "int64",
+          "semantic_role": "DURATION",
+          "business_role": "downtime_duration",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": false,
+          "is_datetime": false,
+          "is_duration": true,
+          "unique_ratio": 0.04,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.25,
+          "unit": "seconds",
+          "confidence": 0.95,
+          "evidence": [
+            "duration_role_or_name"
+          ]
+        },
+        {
+          "column_name": "cause",
+          "display_name": "cause",
+          "data_type": "object",
+          "semantic_role": "CATEGORICAL_DIMENSION",
+          "business_role": "loss_reason",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": true,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 0.03,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.5,
+          "unit": null,
+          "confidence": 0.82,
+          "evidence": [
+            "categorical_values"
+          ]
+        },
+        {
+          "column_name": "start_time",
+          "display_name": "start_time",
+          "data_type": "datetime64[ns]",
+          "semantic_role": "DATETIME",
+          "business_role": "event_start",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": false,
+          "is_datetime": true,
+          "is_duration": false,
+          "unique_ratio": 1.0,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.01,
+          "unit": null,
+          "confidence": 0.95,
+          "evidence": [
+            "datetime_role_or_values"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unique_id_generic",
+      "passed": true,
+      "forbidden_roles": {
+        "event_id": "IDENTIFIER"
+      },
+      "technical_selected_as_measure": [],
+      "profiles": [
+        {
+          "column_name": "event_id",
+          "display_name": "event_id",
+          "data_type": "object",
+          "semantic_role": "IDENTIFIER",
+          "business_role": null,
+          "is_identifier": true,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": false,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 1.0,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.0125,
+          "unit": null,
+          "confidence": 0.95,
+          "evidence": [
+            "identifier_pattern"
+          ]
+        },
+        {
+          "column_name": "region",
+          "display_name": "region",
+          "data_type": "object",
+          "semantic_role": "CATEGORICAL_DIMENSION",
+          "business_role": "category",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": true,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 0.025,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.5,
+          "unit": null,
+          "confidence": 0.82,
+          "evidence": [
+            "categorical_values"
+          ]
+        },
+        {
+          "column_name": "sales",
+          "display_name": "sales",
+          "data_type": "int64",
+          "semantic_role": "NUMERIC_MEASURE",
+          "business_role": "quantity",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": true,
+          "is_dimension": false,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 0.025,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.5,
+          "unit": null,
+          "confidence": 0.82,
+          "evidence": [
+            "numeric_dtype"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "constant_column",
+      "passed": true,
+      "forbidden_roles": {
+        "constant": "CATEGORICAL_DIMENSION"
+      },
+      "technical_selected_as_measure": [],
+      "profiles": [
+        {
+          "column_name": "constant",
+          "display_name": "constant",
+          "data_type": "object",
+          "semantic_role": "CATEGORICAL_DIMENSION",
+          "business_role": "category",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": true,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 0.0125,
+          "null_ratio": 0.0,
+          "constant_ratio": 1.0,
+          "unit": null,
+          "confidence": 0.82,
+          "evidence": [
+            "categorical_values"
+          ]
+        },
+        {
+          "column_name": "category",
+          "display_name": "category",
+          "data_type": "object",
+          "semantic_role": "CATEGORICAL_DIMENSION",
+          "business_role": "category",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": true,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 0.025,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.5,
+          "unit": null,
+          "confidence": 0.82,
+          "evidence": [
+            "categorical_values"
+          ]
+        },
+        {
+          "column_name": "amount",
+          "display_name": "amount",
+          "data_type": "int64",
+          "semantic_role": "NUMERIC_MEASURE",
+          "business_role": "transaction_value",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": true,
+          "is_dimension": false,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 0.025,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.5,
+          "unit": null,
+          "confidence": 0.82,
+          "evidence": [
+            "numeric_dtype"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loss_assignment",
+      "passed": true,
+      "forbidden_roles": {
+        "STT": "ROW_INDEX"
+      },
+      "technical_selected_as_measure": [],
+      "profiles": [
+        {
+          "column_name": "STT",
+          "display_name": "STT",
+          "data_type": "int64",
+          "semantic_role": "ROW_INDEX",
+          "business_role": null,
+          "is_identifier": false,
+          "is_row_index": true,
+          "is_technical_metadata": true,
+          "is_measure": false,
+          "is_dimension": false,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 1.0,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.0125,
+          "unit": null,
+          "confidence": 0.95,
+          "evidence": [
+            "row_index_pattern"
+          ]
+        },
+        {
+          "column_name": "loss_group",
+          "display_name": "loss_group",
+          "data_type": "object",
+          "semantic_role": "CATEGORICAL_DIMENSION",
+          "business_role": "loss_group",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": true,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 0.0375,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.5,
+          "unit": null,
+          "confidence": 0.82,
+          "evidence": [
+            "categorical_values"
+          ]
+        },
+        {
+          "column_name": "loss_reason",
+          "display_name": "loss_reason",
+          "data_type": "object",
+          "semantic_role": "CATEGORICAL_DIMENSION",
+          "business_role": "loss_reason",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": true,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 0.0375,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.5,
+          "unit": null,
+          "confidence": 0.82,
+          "evidence": [
+            "categorical_values"
+          ]
+        },
+        {
+          "column_name": "duration_seconds",
+          "display_name": "duration_seconds",
+          "data_type": "int64",
+          "semantic_role": "DURATION",
+          "business_role": "downtime_duration",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": false,
+          "is_datetime": false,
+          "is_duration": true,
+          "unique_ratio": 0.05,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.25,
+          "unit": "seconds",
+          "confidence": 0.95,
+          "evidence": [
+            "duration_role_or_name"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "entry_transaction",
+      "passed": true,
+      "forbidden_roles": {
+        "row": "ROW_INDEX"
+      },
+      "technical_selected_as_measure": [],
+      "profiles": [
+        {
+          "column_name": "row",
+          "display_name": "row",
+          "data_type": "int64",
+          "semantic_role": "ROW_INDEX",
+          "business_role": null,
+          "is_identifier": false,
+          "is_row_index": true,
+          "is_technical_metadata": true,
+          "is_measure": false,
+          "is_dimension": false,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 1.0,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.0125,
+          "unit": null,
+          "confidence": 0.95,
+          "evidence": [
+            "row_index_pattern"
+          ]
+        },
+        {
+          "column_name": "gate",
+          "display_name": "gate",
+          "data_type": "object",
+          "semantic_role": "CATEGORICAL_DIMENSION",
+          "business_role": "gate",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": true,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 0.0375,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.5,
+          "unit": null,
+          "confidence": 0.82,
+          "evidence": [
+            "categorical_values"
+          ]
+        },
+        {
+          "column_name": "gia_tri_can",
+          "display_name": "gia_tri_can",
+          "data_type": "int64",
+          "semantic_role": "NUMERIC_MEASURE",
+          "business_role": "transaction_value",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": true,
+          "is_dimension": false,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 0.05,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.25,
+          "unit": null,
+          "confidence": 0.82,
+          "evidence": [
+            "numeric_dtype"
+          ]
+        },
+        {
+          "column_name": "transaction_date",
+          "display_name": "transaction_date",
+          "data_type": "datetime64[ns]",
+          "semantic_role": "DATETIME",
+          "business_role": "event_start",
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": false,
+          "is_datetime": true,
+          "is_duration": false,
+          "unique_ratio": 1.0,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.0125,
+          "unit": null,
+          "confidence": 0.95,
+          "evidence": [
+            "datetime_role_or_values"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "insufficient",
+      "passed": true,
+      "forbidden_roles": {
+        "id": "IDENTIFIER"
+      },
+      "technical_selected_as_measure": [],
+      "profiles": [
+        {
+          "column_name": "id",
+          "display_name": "id",
+          "data_type": "object",
+          "semantic_role": "IDENTIFIER",
+          "business_role": null,
+          "is_identifier": true,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": false,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 1.0,
+          "null_ratio": 0.0,
+          "constant_ratio": 0.0333,
+          "unit": null,
+          "confidence": 0.95,
+          "evidence": [
+            "identifier_pattern"
+          ]
+        },
+        {
+          "column_name": "empty_text",
+          "display_name": "empty_text",
+          "data_type": "object",
+          "semantic_role": "UNKNOWN",
+          "business_role": null,
+          "is_identifier": false,
+          "is_row_index": false,
+          "is_technical_metadata": false,
+          "is_measure": false,
+          "is_dimension": false,
+          "is_datetime": false,
+          "is_duration": false,
+          "unique_ratio": 0.0,
+          "null_ratio": 1.0,
+          "constant_ratio": 0.0,
+          "unit": null,
+          "confidence": 0.82,
+          "evidence": [
+            "fallback_rule"
+          ]
+        }
+      ]
+    }
+  ]
+}

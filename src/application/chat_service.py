@@ -448,11 +448,20 @@ class ChatApplicationService:
             "report_artifact_id": lineage["report_artifact_id"],
         }
         planning_state = state
-        if request_contract.relation_to_previous_turn == "NEW_REQUEST":
+        if request_contract.relation_to_previous_turn == "NEW_REQUEST" and state.pending_clarification is None:
             planning_state = state.model_copy(deep=True)
             planning_state.clear_analysis_context()
             planning_state.active_file_id = state.active_file_id
             planning_state.active_file_name = state.active_file_name
+
+        customer_intent = detect_customer_intent(message)
+        if customer_intent.intent in {"REFUSAL", "SAFE_FAILURE"}:
+            metadata_response = self._try_metadata_response(conversation_id, message, customer_intent, catalog, debug, started)
+            if metadata_response is not None:
+                self._attach_file_scope_metadata(metadata_response, state, True)
+                metadata_response.metadata.update(contract_metadata)
+                self._save_assistant_response(state, metadata_response, query_plan=None, result_summary=None)
+                return metadata_response
 
         report_response = self._try_report_orchestration_response(
             conversation_id, message, catalog, state, request_contract, lineage, debug, started
@@ -476,10 +485,14 @@ class ChatApplicationService:
             started=started,
         )
         if clarification.response is not None:
+            state.pending_clarification = planning_state.pending_clarification
+            state.resolved_request = planning_state.resolved_request
             clarification.response.metadata.update(contract_metadata)
             self._save_assistant_response(state, clarification.response)
             return clarification.response
         if clarification.resolved_message:
+            state.pending_clarification = planning_state.pending_clarification
+            state.resolved_request = planning_state.resolved_request
             message = clarification.resolved_message
         forced_plan = build_plan_from_resolved_message(catalog, planning_state, message) if clarification.resolved_message else None
         if forced_plan is None and request_contract.relation_to_previous_turn != "NEW_REQUEST":
@@ -494,6 +507,8 @@ class ChatApplicationService:
                 started=started,
             )
             if started_clarification is not None:
+                state.pending_clarification = planning_state.pending_clarification
+                state.resolved_request = planning_state.resolved_request
                 started_clarification.metadata.update(contract_metadata)
                 self._save_assistant_response(state, started_clarification)
                 return started_clarification
@@ -511,7 +526,6 @@ class ChatApplicationService:
             self._save_assistant_response(state, row_response, query_plan=None, result_summary=None)
             return row_response
 
-        customer_intent = detect_customer_intent(message)
         metadata_response = self._try_metadata_response(conversation_id, message, customer_intent, catalog, debug, started)
         if metadata_response is not None:
             self._attach_file_scope_metadata(metadata_response, state, True)
@@ -970,14 +984,19 @@ class ChatApplicationService:
                         "role": "system",
                         "content": (
                             "Bạn là trợ lý phân tích dữ liệu. Trả lời bằng tiếng Việt có dấu, "
-                            "chỉ dùng các số trong payload, không nhắc tên file, không nhắc JSON/context/fallback."
+                            "chỉ dùng các số trong payload, không nhắc tên file, không nhắc JSON/context/fallback. "
+                            "Chỉ diễn đạt các insight đã chọn trong payload; không tự chọn thêm cột, không tạo metric mới, "
+                            "không dùng cột kỹ thuật/index/ID làm insight."
                         ),
                     },
                     {
                         "role": "user",
                         "content": (
-                            "Từ payload đã được tính sẵn, hãy nêu đúng ba điểm đáng chú ý, so sánh ngắn và giới hạn kết luận. "
-                            "Không tạo số mới, không đổi đơn vị, không suy đoán nguyên nhân ngoài dữ liệu.\n"
+                            "Từ payload đã được tính sẵn, hãy nêu các phát hiện đáng chú ý, so sánh ngắn và giới hạn kết luận. "
+                            "Mỗi insight phải gồm phát hiện, bằng chứng và ý nghĩa nghiệp vụ. "
+                            "Không tạo số mới, không đổi đơn vị, không suy đoán nguyên nhân ngoài dữ liệu. "
+                            "Không mô tả completeness 100%, mode của ID/index, hoặc các câu chung chung như "
+                            "'mỗi góc nhìn đo một lát cắt khác nhau'.\n"
                             f"Câu hỏi: {message}\nPayload: {json_payload(brief_to_prompt_payload(brief))}"
                         ),
                     },
@@ -2279,8 +2298,8 @@ def _requires_dataset_level_semantic(q: str) -> bool:
 
 
 def _is_open_ended_dataset_analysis(q: str) -> bool:
-    has_scope = any(term in q for term in ["toan bo du lieu", "dua tren toan bo", "file nay", "du lieu nay", "data nay"])
-    has_open_ended = any(term in q for term in ["diem dang chu y", "dang quan tam", "bat thuong", "giai thich", "so sanh", "gioi han", "ket luan", "insight", "phan tich"])
+    has_scope = any(term in q for term in ["toan bo du lieu", "dua tren toan bo", "file nay", "du lieu nay", "data nay", "file", "data", "du lieu"])
+    has_open_ended = any(term in q for term in ["diem dang chu y", "dang chu y", "co gi dang chu y", "dang quan tam", "bat thuong", "giai thich", "so sanh", "gioi han", "ket luan", "insight", "phan tich", "tom tat", "tinh hinh chung", "cho quan ly", "van de gi"])
     explicit_table_request = bool(_extract_top_n(q)) or any(term in q for term in ["theo may", "theo nhom", "theo nguyen nhan", "bang", "bieu do"])
     return has_scope and has_open_ended and not explicit_table_request
 

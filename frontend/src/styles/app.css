@@ -59,8 +59,8 @@ button:disabled { cursor: default; opacity: .45; }
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 10px;
+  justify-content: center;
+  padding: 8px 12px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -71,18 +71,6 @@ button:disabled { cursor: default; opacity: .45; }
   width: auto;
   display: block;
   flex: 0 0 auto;
-}
-.brand-divider {
-  width: 1px;
-  height: 20px;
-  background: var(--border-strong);
-  flex: 0 0 auto;
-}
-.brand-name {
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: -.01em;
-  color: var(--text);
 }
 
 .sidebar-top {

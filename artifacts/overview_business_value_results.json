@@ -1,0 +1,823 @@
+{
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "technical_column_exclusion_rate": 1.0,
+    "business_metric_inclusion_rate": 1.0,
+    "domain_relevance_rate": 1.0,
+    "evidence_coverage": 1.0,
+    "generic_filler_rate": 0.0,
+    "trivial_insight_rate": 0.0,
+    "average_human_usefulness": 15.0,
+    "min_human_usefulness": 12,
+    "status": "passed"
+  },
+  "results": [
+    {
+      "id": "row_index_downtime",
+      "expected_domain": "machine_downtime",
+      "actual_domain": "machine_downtime",
+      "passed": true,
+      "forbidden_hits": [],
+      "required_hit": true,
+      "quality": {
+        "passed": true,
+        "errors": []
+      },
+      "human_usefulness": {
+        "criteria": {
+          "Domain relevance": 2,
+          "Business usefulness": 2,
+          "Evidence specificity": 2,
+          "Non-triviality": 2,
+          "Diversity": 2,
+          "Clarity": 2,
+          "Actionability": 2,
+          "Limitation quality": 2
+        },
+        "total": 16,
+        "max": 16
+      },
+      "selected_insights": [
+        {
+          "insight_id": "ee4ba916-bc7c-422c-b51d-46c9e7ffb9ca",
+          "insight_type": "top_machine_downtime",
+          "domain": "machine_downtime",
+          "title": "May dung dau ve tong downtime",
+          "business_question": "May nao tao tong downtime lon nhat?",
+          "primary_entity": "M2",
+          "primary_metric": "machine_total_downtime",
+          "primary_value": 15000.0,
+          "unit": "seconds",
+          "comparison_entities": [],
+          "comparison_facts": [],
+          "evidence_rows": [
+            {
+              "dimension": "machine",
+              "entity": "M2",
+              "metric": "total_downtime",
+              "value": 15000.0
+            }
+          ],
+          "query_result_id": "94586af0-1a86-45f1-a4bc-020b21718148",
+          "relevance_score": 0.96,
+          "magnitude_score": 0.8,
+          "actionability_score": 0.85,
+          "evidence_score": 1.0,
+          "novelty_score": 0.75,
+          "redundancy_penalty": 0.0,
+          "triviality_penalty": 0.0,
+          "final_score": 0.891,
+          "allowed_claims": [
+            "May M2 co tong downtime cao nhat: 4 giờ 10 phút, gom 50 lan ghi nhan va trung binh 5 phút moi lan."
+          ],
+          "limitations": [],
+          "statement": "May M2 co tong downtime cao nhat: 4 giờ 10 phút, gom 50 lan ghi nhan va trung binh 5 phút moi lan.",
+          "facts": [
+            {
+              "key": "duration",
+              "value": 4.166666666666667,
+              "display": "4 giờ 10 phút"
+            },
+            {
+              "key": "count",
+              "value": 50.0,
+              "display": "50"
+            },
+            {
+              "key": "avg",
+              "value": 0.08333333333333333,
+              "display": "5 phút"
+            }
+          ]
+        },
+        {
+          "insight_id": "97f47424-fe1f-4b25-944a-354371628922",
+          "insight_type": "top_cause_downtime",
+          "domain": "machine_downtime",
+          "title": "Nguyen nhan/nhom ton that noi bat",
+          "business_question": "Nguyen nhan hoac nhom nao dong gop downtime nhieu nhat?",
+          "primary_entity": "Setup",
+          "primary_metric": "cause_total_downtime",
+          "primary_value": 10000.0,
+          "unit": "seconds",
+          "comparison_entities": [],
+          "comparison_facts": [],
+          "evidence_rows": [
+            {
+              "dimension": "cause",
+              "entity": "Setup",
+              "metric": "total_downtime",
+              "value": 10000.0
+            }
+          ],
+          "query_result_id": "9e2181c1-ce81-4a42-acc5-2433307ea8f8",
+          "relevance_score": 0.96,
+          "magnitude_score": 0.8,
+          "actionability_score": 0.85,
+          "evidence_score": 1.0,
+          "novelty_score": 0.75,
+          "redundancy_penalty": 0.0,
+          "triviality_penalty": 0.0,
+          "final_score": 0.891,
+          "allowed_claims": [
+            "Setup la nhom/nguyen nhan co tong downtime cao nhat: 2 giờ 46 phút, voi 25 lan ghi nhan."
+          ],
+          "limitations": [],
+          "statement": "Setup la nhom/nguyen nhan co tong downtime cao nhat: 2 giờ 46 phút, voi 25 lan ghi nhan.",
+          "facts": [
+            {
+              "key": "duration",
+              "value": 2.7777777777777777,
+              "display": "2 giờ 46 phút"
+            },
+            {
+              "key": "count",
+              "value": 25.0,
+              "display": "25"
+            },
+            {
+              "key": "avg",
+              "value": 0.1111111111111111,
+              "display": "6 phút 40 giây"
+            }
+          ]
+        },
+        {
+          "insight_id": "e7d2890c-d411-4ae2-a5f2-e98f27204489",
+          "insight_type": "trend",
+          "domain": "machine_downtime",
+          "title": "Ngay co downtime cao nhat",
+          "business_question": "Downtime dat dinh vao thoi diem nao?",
+          "primary_entity": "2026-01-01",
+          "primary_metric": "daily_total_downtime",
+          "primary_value": 4500.0,
+          "unit": "seconds",
+          "comparison_entities": [],
+          "comparison_facts": [],
+          "evidence_rows": [
+            {
+              "dimension": "start_time",
+              "entity": "2026-01-01",
+              "metric": "total_downtime",
+              "value": 4500.0
+            }
+          ],
+          "query_result_id": "087aef4f-02ae-40a5-b790-5d9d11056c0e",
+          "relevance_score": 0.95,
+          "magnitude_score": 0.78,
+          "actionability_score": 0.82,
+          "evidence_score": 1.0,
+          "novelty_score": 0.75,
+          "redundancy_penalty": 0.0,
+          "triviality_penalty": 0.0,
+          "final_score": 0.8775,
+          "allowed_claims": [
+            "Downtime dat dinh vao 2026-01-01 voi 1 giờ 15 phút tu 24 lan ghi nhan."
+          ],
+          "limitations": [],
+          "statement": "Downtime dat dinh vao 2026-01-01 voi 1 giờ 15 phút tu 24 lan ghi nhan.",
+          "facts": [
+            {
+              "key": "peak_duration",
+              "value": 1.25,
+              "display": "1 giờ 15 phút"
+            },
+            {
+              "key": "peak_count",
+              "value": 24.0,
+              "display": "24"
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "filler_errors": []
+    },
+    {
+      "id": "unique_id_generic",
+      "expected_domain": "generic_tabular",
+      "actual_domain": "generic_tabular",
+      "passed": true,
+      "forbidden_hits": [],
+      "required_hit": true,
+      "quality": {
+        "passed": true,
+        "errors": []
+      },
+      "human_usefulness": {
+        "criteria": {
+          "Domain relevance": 2,
+          "Business usefulness": 2,
+          "Evidence specificity": 2,
+          "Non-triviality": 2,
+          "Diversity": 2,
+          "Clarity": 2,
+          "Actionability": 1,
+          "Limitation quality": 2
+        },
+        "total": 15,
+        "max": 16
+      },
+      "selected_insights": [
+        {
+          "insight_id": "f3d73d58-9b66-435f-a27d-9b7ec3d163ca",
+          "insight_type": "distribution",
+          "domain": "generic_tabular",
+          "title": "Phan bo theo cot nghiep vu",
+          "business_question": "Gia tri nao xuat hien nhieu nhat trong cot phan loai?",
+          "primary_entity": "North",
+          "primary_metric": "row_count",
+          "primary_value": 40,
+          "unit": "records",
+          "comparison_entities": [],
+          "comparison_facts": [],
+          "evidence_rows": [
+            {
+              "dimension": "region",
+              "entity": "North",
+              "metric": "row_count",
+              "value": 40
+            }
+          ],
+          "query_result_id": "59f820b7-ab68-49fa-8bad-805ebe396d8f",
+          "relevance_score": 0.7,
+          "magnitude_score": 0.6,
+          "actionability_score": 0.55,
+          "evidence_score": 1.0,
+          "novelty_score": 0.75,
+          "redundancy_penalty": 0.0,
+          "triviality_penalty": 0.0,
+          "final_score": 0.7,
+          "allowed_claims": [
+            "region: North xuat hien nhieu nhat voi 40 ban ghi, chiem 50%."
+          ],
+          "limitations": [],
+          "statement": "region: North xuat hien nhieu nhat voi 40 ban ghi, chiem 50%.",
+          "facts": [
+            {
+              "key": "top_count",
+              "value": 40.0,
+              "display": "40"
+            },
+            {
+              "key": "top_pct",
+              "value": 50.0,
+              "display": "50%"
+            }
+          ]
+        },
+        {
+          "insight_id": "6f34f996-375c-413c-8c13-20f690652bc4",
+          "insight_type": "metric_summary",
+          "domain": "generic_tabular",
+          "title": "Tong hop chi so so",
+          "business_question": "Cot so nao co the dung lam metric tong quan?",
+          "primary_entity": null,
+          "primary_metric": "sales",
+          "primary_value": 1600.0,
+          "unit": null,
+          "comparison_entities": [],
+          "comparison_facts": [],
+          "evidence_rows": [
+            {
+              "column": "sales",
+              "metric": "sum",
+              "value": 1600.0
+            }
+          ],
+          "query_result_id": "f19ebaa8-0810-48c8-9c31-85b4bf0df31d",
+          "relevance_score": 0.66,
+          "magnitude_score": 0.56,
+          "actionability_score": 0.5,
+          "evidence_score": 1.0,
+          "novelty_score": 0.75,
+          "redundancy_penalty": 0.0,
+          "triviality_penalty": 0.0,
+          "final_score": 0.668,
+          "allowed_claims": [
+            "sales co tong 1.600 va trung binh 20."
+          ],
+          "limitations": [],
+          "statement": "sales co tong 1.600 va trung binh 20.",
+          "facts": [
+            {
+              "key": "measure_total",
+              "value": 1600.0,
+              "display": "1.600"
+            },
+            {
+              "key": "measure_avg",
+              "value": 20.0,
+              "display": "20"
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "filler_errors": []
+    },
+    {
+      "id": "constant_column",
+      "expected_domain": "generic_tabular",
+      "actual_domain": "generic_tabular",
+      "passed": true,
+      "forbidden_hits": [],
+      "required_hit": true,
+      "quality": {
+        "passed": true,
+        "errors": []
+      },
+      "human_usefulness": {
+        "criteria": {
+          "Domain relevance": 2,
+          "Business usefulness": 2,
+          "Evidence specificity": 2,
+          "Non-triviality": 2,
+          "Diversity": 2,
+          "Clarity": 2,
+          "Actionability": 1,
+          "Limitation quality": 2
+        },
+        "total": 15,
+        "max": 16
+      },
+      "selected_insights": [
+        {
+          "insight_id": "f7c1379b-d01b-4aa6-9cc5-3c8d0bb33600",
+          "insight_type": "distribution",
+          "domain": "generic_tabular",
+          "title": "Phan bo theo cot nghiep vu",
+          "business_question": "Gia tri nao xuat hien nhieu nhat trong cot phan loai?",
+          "primary_entity": "A",
+          "primary_metric": "row_count",
+          "primary_value": 40,
+          "unit": "records",
+          "comparison_entities": [],
+          "comparison_facts": [],
+          "evidence_rows": [
+            {
+              "dimension": "category",
+              "entity": "A",
+              "metric": "row_count",
+              "value": 40
+            }
+          ],
+          "query_result_id": "ab4c4a22-677a-49e5-8481-a0f052ce6843",
+          "relevance_score": 0.7,
+          "magnitude_score": 0.6,
+          "actionability_score": 0.55,
+          "evidence_score": 1.0,
+          "novelty_score": 0.75,
+          "redundancy_penalty": 0.0,
+          "triviality_penalty": 0.0,
+          "final_score": 0.7,
+          "allowed_claims": [
+            "category: A xuat hien nhieu nhat voi 40 ban ghi, chiem 50%."
+          ],
+          "limitations": [],
+          "statement": "category: A xuat hien nhieu nhat voi 40 ban ghi, chiem 50%.",
+          "facts": [
+            {
+              "key": "top_count",
+              "value": 40.0,
+              "display": "40"
+            },
+            {
+              "key": "top_pct",
+              "value": 50.0,
+              "display": "50%"
+            }
+          ]
+        },
+        {
+          "insight_id": "07d9ceda-e639-4262-a040-dd3ea300a0c6",
+          "insight_type": "metric_summary",
+          "domain": "generic_tabular",
+          "title": "Tong hop chi so so",
+          "business_question": "Cot so nao co the dung lam metric tong quan?",
+          "primary_entity": null,
+          "primary_metric": "amount",
+          "primary_value": 560.0,
+          "unit": null,
+          "comparison_entities": [],
+          "comparison_facts": [],
+          "evidence_rows": [
+            {
+              "column": "amount",
+              "metric": "sum",
+              "value": 560.0
+            }
+          ],
+          "query_result_id": "18f87581-9548-4e50-b486-d6d242afd75e",
+          "relevance_score": 0.66,
+          "magnitude_score": 0.56,
+          "actionability_score": 0.5,
+          "evidence_score": 1.0,
+          "novelty_score": 0.75,
+          "redundancy_penalty": 0.0,
+          "triviality_penalty": 0.0,
+          "final_score": 0.668,
+          "allowed_claims": [
+            "amount co tong 560 va trung binh 7."
+          ],
+          "limitations": [],
+          "statement": "amount co tong 560 va trung binh 7.",
+          "facts": [
+            {
+              "key": "measure_total",
+              "value": 560.0,
+              "display": "560"
+            },
+            {
+              "key": "measure_avg",
+              "value": 7.0,
+              "display": "7"
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "filler_errors": []
+    },
+    {
+      "id": "loss_assignment",
+      "expected_domain": "loss_assignment",
+      "actual_domain": "loss_assignment",
+      "passed": true,
+      "forbidden_hits": [],
+      "required_hit": true,
+      "quality": {
+        "passed": true,
+        "errors": []
+      },
+      "human_usefulness": {
+        "criteria": {
+          "Domain relevance": 2,
+          "Business usefulness": 2,
+          "Evidence specificity": 2,
+          "Non-triviality": 2,
+          "Diversity": 2,
+          "Clarity": 2,
+          "Actionability": 2,
+          "Limitation quality": 2
+        },
+        "total": 16,
+        "max": 16
+      },
+      "selected_insights": [
+        {
+          "insight_id": "04c8b22c-767d-4db4-854b-fe9ddb97f41a",
+          "insight_type": "loss_duration",
+          "domain": "loss_assignment",
+          "title": "Nhom ton that dong gop thoi luong lon nhat",
+          "business_question": "Nhom nao dong gop tong thoi luong lon nhat?",
+          "primary_entity": "Prod",
+          "primary_metric": "total_downtime",
+          "primary_value": 800.0,
+          "unit": "seconds",
+          "comparison_entities": [],
+          "comparison_facts": [],
+          "evidence_rows": [
+            {
+              "dimension": "loss_group",
+              "entity": "Prod",
+              "metric": "total_downtime",
+              "value": 800.0
+            }
+          ],
+          "query_result_id": "f921b13a-181c-4e0e-bf39-cc793315dac8",
+          "relevance_score": 0.96,
+          "magnitude_score": 0.8,
+          "actionability_score": 0.85,
+          "evidence_score": 1.0,
+          "novelty_score": 0.75,
+          "redundancy_penalty": 0.0,
+          "triviality_penalty": 0.0,
+          "final_score": 0.891,
+          "allowed_claims": [
+            "Prod co tong thoi luong cao nhat: 13 phút 20 giây, gom 40 ban ghi."
+          ],
+          "limitations": [],
+          "statement": "Prod co tong thoi luong cao nhat: 13 phút 20 giây, gom 40 ban ghi.",
+          "facts": [
+            {
+              "key": "duration",
+              "value": 0.2222222222222222,
+              "display": "13 phút 20 giây"
+            },
+            {
+              "key": "count",
+              "value": 40.0,
+              "display": "40"
+            },
+            {
+              "key": "avg",
+              "value": 0.005555555555555556,
+              "display": "20 giây"
+            }
+          ]
+        },
+        {
+          "insight_id": "67fa9d5c-f0bf-46d4-af89-250cc9f778b7",
+          "insight_type": "distribution",
+          "domain": "loss_assignment",
+          "title": "Nhom ton that xuat hien nhieu nhat",
+          "business_question": "Nhom/loai ton that nao chiem ty trong lon nhat?",
+          "primary_entity": "Prod",
+          "primary_metric": "row_count",
+          "primary_value": 40,
+          "unit": "records",
+          "comparison_entities": [],
+          "comparison_facts": [],
+          "evidence_rows": [
+            {
+              "dimension": "loss_group",
+              "entity": "Prod",
+              "metric": "row_count",
+              "value": 40
+            }
+          ],
+          "query_result_id": "75017be4-d741-4c34-a0d2-bfbcf8c829a5",
+          "relevance_score": 0.92,
+          "magnitude_score": 0.72,
+          "actionability_score": 0.76,
+          "evidence_score": 1.0,
+          "novelty_score": 0.75,
+          "redundancy_penalty": 0.0,
+          "triviality_penalty": 0.0,
+          "final_score": 0.843,
+          "allowed_claims": [
+            "Prod xuat hien nhieu nhat voi 40 ban ghi, chiem 50% tong so ban ghi."
+          ],
+          "limitations": [],
+          "statement": "Prod xuat hien nhieu nhat voi 40 ban ghi, chiem 50% tong so ban ghi.",
+          "facts": [
+            {
+              "key": "top_count",
+              "value": 40.0,
+              "display": "40"
+            },
+            {
+              "key": "top_pct",
+              "value": 50.0,
+              "display": "50%"
+            }
+          ]
+        },
+        {
+          "insight_id": "557416b8-7d27-4912-bab3-49e3b7e86082",
+          "insight_type": "concentration",
+          "domain": "loss_assignment",
+          "title": "Muc tap trung cua cac nhom dau",
+          "business_question": "Ton that co tap trung vao it nhom khong?",
+          "primary_entity": "top_3",
+          "primary_metric": "row_count_share",
+          "primary_value": 100.0,
+          "unit": "percent",
+          "comparison_entities": [],
+          "comparison_facts": [],
+          "evidence_rows": [
+            {
+              "dimension": "loss_group",
+              "entity": "top_3",
+              "metric": "row_count_share",
+              "value": 100.0
+            }
+          ],
+          "query_result_id": "241af8f0-cdea-4f8f-89a5-7385e1b0fab9",
+          "relevance_score": 0.85,
+          "magnitude_score": 0.7,
+          "actionability_score": 0.72,
+          "evidence_score": 1.0,
+          "novelty_score": 0.75,
+          "redundancy_penalty": 0.0,
+          "triviality_penalty": 0.0,
+          "final_score": 0.8065,
+          "allowed_claims": [
+            "Ba nhom/loai dung dau chiem 100% voi 80 ban ghi, cho thay muc tap trung cua phan loai ton that."
+          ],
+          "limitations": [],
+          "statement": "Ba nhom/loai dung dau chiem 100% voi 80 ban ghi, cho thay muc tap trung cua phan loai ton that.",
+          "facts": [
+            {
+              "key": "top3_count",
+              "value": 80.0,
+              "display": "80"
+            },
+            {
+              "key": "top3_pct",
+              "value": 100.0,
+              "display": "100%"
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "filler_errors": []
+    },
+    {
+      "id": "entry_transaction",
+      "expected_domain": "entry_transaction",
+      "actual_domain": "entry_transaction",
+      "passed": true,
+      "forbidden_hits": [],
+      "required_hit": true,
+      "quality": {
+        "passed": true,
+        "errors": []
+      },
+      "human_usefulness": {
+        "criteria": {
+          "Domain relevance": 2,
+          "Business usefulness": 2,
+          "Evidence specificity": 2,
+          "Non-triviality": 2,
+          "Diversity": 2,
+          "Clarity": 2,
+          "Actionability": 2,
+          "Limitation quality": 2
+        },
+        "total": 16,
+        "max": 16
+      },
+      "selected_insights": [
+        {
+          "insight_id": "2e4e814f-581b-487c-a5fd-eead6eb1272f",
+          "insight_type": "trend",
+          "domain": "entry_transaction",
+          "title": "Ngay co giao dich cao nhat",
+          "business_question": "Thoi diem nao co luong giao dich cao nhat?",
+          "primary_entity": "2026-01-01",
+          "primary_metric": "transaction_count",
+          "primary_value": 24,
+          "unit": "records",
+          "comparison_entities": [],
+          "comparison_facts": [],
+          "evidence_rows": [
+            {
+              "dimension": "transaction_date",
+              "entity": "2026-01-01",
+              "metric": "transaction_count",
+              "value": 24
+            }
+          ],
+          "query_result_id": "bd53ad17-736a-43ab-9003-6c61687bbdee",
+          "relevance_score": 0.95,
+          "magnitude_score": 0.85,
+          "actionability_score": 0.85,
+          "evidence_score": 1.0,
+          "novelty_score": 0.75,
+          "redundancy_penalty": 0.0,
+          "triviality_penalty": 0.0,
+          "final_score": 0.8975,
+          "allowed_claims": [
+            "Luong giao dich/ghi nhan dat dinh vao 2026-01-01 voi 24 ban ghi."
+          ],
+          "limitations": [],
+          "statement": "Luong giao dich/ghi nhan dat dinh vao 2026-01-01 voi 24 ban ghi.",
+          "facts": [
+            {
+              "key": "peak_count",
+              "value": 24.0,
+              "display": "24"
+            }
+          ]
+        },
+        {
+          "insight_id": "641919b9-9f28-48b6-b441-c81b2e1641d9",
+          "insight_type": "metric_summary",
+          "domain": "entry_transaction",
+          "title": "Tong gia tri giao dich",
+          "business_question": "Tong gia tri giao dich trong file la bao nhieu?",
+          "primary_entity": null,
+          "primary_metric": "gia_tri_can",
+          "primary_value": 2000.0,
+          "unit": null,
+          "comparison_entities": [],
+          "comparison_facts": [],
+          "evidence_rows": [
+            {
+              "column": "gia_tri_can",
+              "metric": "sum",
+              "value": 2000.0
+            }
+          ],
+          "query_result_id": "f506f7ca-b2ac-4eeb-911c-d7b7f129ab68",
+          "relevance_score": 0.92,
+          "magnitude_score": 0.75,
+          "actionability_score": 0.78,
+          "evidence_score": 1.0,
+          "novelty_score": 0.75,
+          "redundancy_penalty": 0.0,
+          "triviality_penalty": 0.0,
+          "final_score": 0.853,
+          "allowed_claims": [
+            "Tong gia tri giao dich dat 2.000 tren 80 ban ghi; gia tri trung binh la 25."
+          ],
+          "limitations": [],
+          "statement": "Tong gia tri giao dich dat 2.000 tren 80 ban ghi; gia tri trung binh la 25.",
+          "facts": [
+            {
+              "key": "total_value",
+              "value": 2000.0,
+              "display": "2.000"
+            },
+            {
+              "key": "avg_value",
+              "value": 25.0,
+              "display": "25"
+            },
+            {
+              "key": "row_count",
+              "value": 80.0,
+              "display": "80"
+            }
+          ]
+        },
+        {
+          "insight_id": "80c0ff87-46f2-41fc-9bbf-a25b215df488",
+          "insight_type": "distribution",
+          "domain": "entry_transaction",
+          "title": "Nhom/cua cong giao dich noi bat",
+          "business_question": "Doi tuong hoac nhom nao xuat hien nhieu nhat?",
+          "primary_entity": "G1",
+          "primary_metric": "transaction_count",
+          "primary_value": 40,
+          "unit": "records",
+          "comparison_entities": [],
+          "comparison_facts": [],
+          "evidence_rows": [
+            {
+              "dimension": "gate",
+              "entity": "G1",
+              "metric": "transaction_count",
+              "value": 40
+            }
+          ],
+          "query_result_id": "7910a36f-4e37-4279-9a36-1c4ad3fdf0d8",
+          "relevance_score": 0.86,
+          "magnitude_score": 0.68,
+          "actionability_score": 0.7,
+          "evidence_score": 1.0,
+          "novelty_score": 0.75,
+          "redundancy_penalty": 0.0,
+          "triviality_penalty": 0.0,
+          "final_score": 0.802,
+          "allowed_claims": [
+            "G1 co so giao dich/ghi nhan cao nhat voi 40 ban ghi, chiem 50%."
+          ],
+          "limitations": [],
+          "statement": "G1 co so giao dich/ghi nhan cao nhat voi 40 ban ghi, chiem 50%.",
+          "facts": [
+            {
+              "key": "top_count",
+              "value": 40.0,
+              "display": "40"
+            },
+            {
+              "key": "top_pct",
+              "value": 50.0,
+              "display": "50%"
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "filler_errors": []
+    },
+    {
+      "id": "insufficient",
+      "expected_domain": "generic_tabular",
+      "actual_domain": "generic_tabular",
+      "passed": true,
+      "forbidden_hits": [],
+      "required_hit": true,
+      "quality": {
+        "passed": false,
+        "errors": [
+          "missing_business_concepts"
+        ]
+      },
+      "human_usefulness": {
+        "criteria": {
+          "Domain relevance": 1,
+          "Business usefulness": 0,
+          "Evidence specificity": 2,
+          "Non-triviality": 2,
+          "Diversity": 2,
+          "Clarity": 2,
+          "Actionability": 1,
+          "Limitation quality": 2
+        },
+        "total": 12,
+        "max": 16
+      },
+      "selected_insights": [],
+      "warnings": [
+        "insufficient_business_columns"
+      ],
+      "filler_errors": []
+    }
+  ]
+}

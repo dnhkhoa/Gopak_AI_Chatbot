@@ -15,7 +15,7 @@ def detect_output(question: str) -> DetectionResult:
         return DetectionResult("line", 0.90, ["time chart"])
     if chart_requested and ("top" in q or any(term in q for term in ["cao nhat", "nhieu nhat", "pho bien nhat"])):
         return DetectionResult("bar", 0.90, ["ranked chart"])
-    if any(term in q for term in ["pie", "tron", "ty trong", "phan bo", "ty le"]):
+    if chart_requested and any(term in q for term in ["pie", "tron", "ty trong", "phan bo", "ty le"]):
         return DetectionResult("pie", 0.90, ["pie"])
     if chart_requested:
         return DetectionResult("bar", 0.90, ["chart"])

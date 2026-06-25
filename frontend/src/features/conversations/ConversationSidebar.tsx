@@ -19,8 +19,6 @@ function Brand() {
   return (
     <div className="brand">
       <img className="brand-logo" src={logoUrl} alt="i-Soft" />
-      <span className="brand-divider" aria-hidden="true" />
-      <span className="brand-name">Gopak</span>
     </div>
   );
 }

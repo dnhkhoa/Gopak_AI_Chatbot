@@ -21,10 +21,17 @@ logger = logging.getLogger("gopak.web")
 
 def create_app() -> FastAPI:
     app = FastAPI(title="Gopak API", version="0.1.0")
-    frontend_origin = os.getenv("FRONTEND_ORIGIN", "http://localhost:5173")
+    frontend_origin = os.getenv("FRONTEND_ORIGIN", "http://localhost:3000")
+    allowed_origins = [
+        frontend_origin,
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ]
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=[frontend_origin, "http://127.0.0.1:5173"],
+        allow_origins=list(dict.fromkeys(allowed_origins)),
         allow_credentials=False,
         allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
         allow_headers=["*"],

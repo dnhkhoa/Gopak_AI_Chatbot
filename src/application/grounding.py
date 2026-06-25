@@ -10,6 +10,12 @@ from typing import Any
 
 import pandas as pd
 
+from src.application.overview_analysis import (
+    OverviewAnswerBrief,
+    build_domain_aware_overview,
+    response_quality_errors,
+    validate_overview_brief,
+)
 from src.rendering.formatters import format_duration, format_vn_number, humanize_column_name
 
 
@@ -37,6 +43,8 @@ class AnswerBrief:
     limitations: tuple[str, ...]
     table_rows: tuple[dict[str, Any], ...] = ()
     allowed_numeric_facts: tuple[AllowedNumericFact, ...] = ()
+    overview: dict[str, Any] | None = None
+    quality_validation: dict[str, Any] | None = None
 
 
 @dataclass
@@ -89,6 +97,14 @@ class GroundedComposerValidator:
         ]:
             if phrase in normalized:
                 errors.append(f"unsupported_claim:{phrase}")
+        for phrase in [
+            "moi goc nhin do mot lat cat khac nhau",
+            "du lieu cho thay nhieu thong tin huu ich",
+            "ket qua co the ho tro ra quyet dinh",
+            "can xem xet them de co ket luan chinh xac",
+        ]:
+            if phrase in normalized:
+                errors.append(f"generic_filler:{phrase}")
         for raw, value in _extract_numeric_mentions(text):
             if not self._is_allowed(raw, value):
                 errors.append(f"unsupported_number:{raw}")
@@ -165,6 +181,9 @@ def deterministic_table_commentary(message: str, response: Any) -> str:
 
 
 def build_open_ended_answer_brief(catalog: dict, source_file_name: str = "") -> AnswerBrief | None:
+    overview = build_domain_aware_overview(catalog, source_file_name)
+    if overview is not None:
+        return _answer_brief_from_overview(overview)
     table = (catalog.get("tables") or [None])[0]
     if not table:
         return None
@@ -172,127 +191,46 @@ def build_open_ended_answer_brief(catalog: dict, source_file_name: str = "") -> 
     if not path:
         return None
     df = pd.read_parquet(path)
-    business_cols = [col["normalized_name"] for col in table.get("columns", []) if not str(col.get("normalized_name", "")).startswith("_")]
     row_count = int(len(df))
-    facts: list[AllowedNumericFact] = [AllowedNumericFact("row_count", float(row_count), format_vn_number(row_count, 0))]
-    insights: list[InsightCandidate] = []
-    rows: list[dict[str, Any]] = []
-    limitations = [
-        "Kết luận chỉ phản ánh file Excel đang chọn, không tự suy ra nguyên nhân vận hành ngoài dữ liệu.",
-        "Các so sánh dựa trên dữ liệu đã import và các cột có sẵn trong file.",
-    ]
-    duration = _role_column(table, "duration_seconds")
-    machine = _role_column(table, "machine")
-    loss_group = _role_column(table, "loss_group")
-    loss_name = _role_column(table, "loss_name")
-    if business_cols and not duration:
-        completeness = df[business_cols].notna().mean().sort_values(ascending=False)
-        best_col = str(completeness.index[0])
-        pct = float(completeness.iloc[0] * 100)
-        facts.append(AllowedNumericFact("best_completeness_pct", pct, f"{format_vn_number(pct, 1)}%"))
-        insights.append(
-            InsightCandidate(
-                "Độ đầy đủ dữ liệu",
-                f"Cột {humanize_column_name(best_col, catalog)} có tỷ lệ dữ liệu hiện diện cao nhất trong nhóm cột nghiệp vụ.",
-                (facts[-1],),
-            )
-        )
-    if duration and duration in df.columns:
-        total_seconds = float(pd.to_numeric(df[duration], errors="coerce").fillna(0).sum())
-        facts.append(AllowedNumericFact("total_duration_hours", total_seconds / 3600, format_duration(total_seconds)["primary"]))
-        insights.append(
-            InsightCandidate(
-                "Quy mô downtime",
-                f"Tổng downtime trong file là {format_duration(total_seconds)['primary']} trên {format_vn_number(row_count, 0)} bản ghi.",
-                (facts[-1], facts[0]),
-            )
-        )
-        for role_name, column, label in [
-            ("machine", machine, "máy"),
-            ("loss_group", loss_group, "nhóm tổn thất"),
-            ("loss_name", loss_name, "nguyên nhân tổn thất"),
-        ]:
-            if not column or column not in df.columns:
-                continue
-            grouped = (
-                df.assign(_duration=pd.to_numeric(df[duration], errors="coerce").fillna(0))
-                .groupby(column, dropna=False)
-                .agg(total_duration_seconds=("_duration", "sum"), row_count=("_duration", "size"), avg_duration_seconds=("_duration", "mean"))
-                .sort_values("total_duration_seconds", ascending=False)
-                .head(3)
-                .reset_index()
-            )
-            if grouped.empty:
-                continue
-            top = grouped.iloc[0]
-            total_display = format_duration(top["total_duration_seconds"])["primary"]
-            count_display = format_vn_number(top["row_count"], 0)
-            avg_display = format_duration(top["avg_duration_seconds"])["primary"]
-            f_total = AllowedNumericFact(f"{role_name}_top_total", float(top["total_duration_seconds"]) / 3600, total_display)
-            f_count = AllowedNumericFact(f"{role_name}_top_count", float(top["row_count"]), count_display)
-            f_avg = AllowedNumericFact(f"{role_name}_top_avg", float(top["avg_duration_seconds"]) / 3600, avg_display)
-            label_value = str(top[column])
-            label_number = _parse_number(label_value)
-            if label_number is not None:
-                facts.append(AllowedNumericFact(f"{role_name}_top_label_number", label_number, str(int(label_number) if label_number.is_integer() else label_number)))
-            facts.extend([f_total, f_count, f_avg])
-            insights.append(
-                InsightCandidate(
-                    f"Điểm nổi bật theo {label}",
-                    f"{label_value} đứng đầu theo tổng downtime với {total_display}, gồm {count_display} lần ghi nhận và trung bình {avg_display} mỗi lần.",
-                    (f_total, f_count, f_avg),
-                )
-            )
-            rows.append(
-                {
-                    "Góc nhìn": humanize_column_name(column, catalog),
-                    "Đứng đầu": label_value,
-                    "Tổng downtime": total_display,
-                    "Số lần ghi nhận": count_display,
-                    "Trung bình mỗi lần": avg_display,
-                }
-            )
-    elif business_cols:
-        column = business_cols[0]
-        grouped = df.groupby(column, dropna=False).size().sort_values(ascending=False).head(3)
-        if not grouped.empty:
-            top_label = str(grouped.index[0])
-            top_count = int(grouped.iloc[0])
-            pct = top_count / row_count * 100 if row_count else 0.0
-            f_count = AllowedNumericFact("top_count", float(top_count), format_vn_number(top_count, 0))
-            f_pct = AllowedNumericFact("top_pct", float(pct), f"{format_vn_number(pct, 1)}%")
-            facts.extend([f_count, f_pct])
-            insights.append(
-                InsightCandidate(
-                    "Nhóm xuất hiện nhiều nhất",
-                    f"{top_label} xuất hiện nhiều nhất với {format_vn_number(top_count, 0)} bản ghi, chiếm {format_vn_number(pct, 1)}%.",
-                    (f_count, f_pct),
-                )
-            )
-            rows.append({"Góc nhìn": humanize_column_name(column, catalog), "Đứng đầu": top_label, "Số lần ghi nhận": format_vn_number(top_count, 0), "Tỷ lệ": f"{format_vn_number(pct, 1)}%"})
-    selected = tuple(insights[:4])
-    if not selected:
-        selected = (InsightCandidate("Quy mô dữ liệu", f"File có {format_vn_number(row_count, 0)} bản ghi có thể truy vấn.", (facts[0],)),)
-    comparison = tuple(insight.statement for insight in selected[:3])
+    fact = AllowedNumericFact("row_count", float(row_count), format_vn_number(row_count, 0))
     return AnswerBrief(
         source_file_name=source_file_name or _source_file_name(table),
         row_count=row_count,
-        selected_insights=selected,
-        comparison_facts=comparison,
-        limitations=tuple(limitations),
-        table_rows=tuple(rows[:5]),
-        allowed_numeric_facts=tuple(facts),
+        selected_insights=(
+            InsightCandidate(
+                "Chua du tin hieu nghiep vu",
+                "Toi chua xac dinh duoc phat hien nghiep vu du tin cay tu du lieu hien tai; cac cot con lai chua du khac biet hoac chua du y nghia tong hop de ket luan.",
+                (fact,),
+            ),
+        ),
+        comparison_facts=(),
+        limitations=("Ket qua chi phan anh file dang chon va khong tao insight neu cot khong du y nghia nghiep vu.",),
+        table_rows=(),
+        allowed_numeric_facts=(fact,),
+        quality_validation={"passed": False, "errors": ["insufficient_business_columns"]},
     )
 
 
 def deterministic_open_ended_answer(brief: AnswerBrief) -> str:
     insights = list(brief.selected_insights[:3])
-    lines = ["Ba điểm đáng chú ý nhất:"]
-    lines.extend(f"- {item.statement}" for item in insights)
+    dataset = ""
+    if brief.overview and brief.overview.get("dataset_description"):
+        dataset = str(brief.overview["dataset_description"])
+    lines = ["Tổng quan dữ liệu"]
+    if dataset:
+        lines.append(dataset)
+    lines.append("")
+    lines.append("Các phát hiện đáng chú ý")
+    if insights:
+        lines.extend(f"- {item.statement}" for item in insights)
+    else:
+        lines.append("Tôi chưa xác định được phát hiện nghiệp vụ đủ tin cậy từ các cột hiện tại.")
     if len(insights) >= 2:
-        lines.append("So sánh:")
-        lines.append("- Điểm khác biệt chính là mỗi góc nhìn đo một lát cắt khác nhau của file đang chọn: quy mô tổng thể, nhóm đứng đầu và mức lặp lại/trung bình.")
-    lines.append("Giới hạn:")
+        lines.append("")
+        lines.append("So sánh")
+        lines.append(f"{insights[0].title} và {insights[1].title} dùng hai chỉ số khác nhau; nên xem riêng mức độ đóng góp và tần suất/phân bố.")
+    lines.append("")
+    lines.append("Giới hạn")
     lines.extend(f"- {item}" for item in brief.limitations[:2])
     return "\n".join(lines)
 
@@ -306,8 +244,56 @@ def brief_to_prompt_payload(brief: AnswerBrief) -> dict[str, Any]:
         "limitations": list(brief.limitations),
         "table_rows": list(brief.table_rows),
         "allowed_numbers": [fact.__dict__ for fact in brief.allowed_numeric_facts],
+        "overview": brief.overview or {},
+        "quality_validation": brief.quality_validation or {},
     }
 
+
+def _answer_brief_from_overview(overview: OverviewAnswerBrief) -> AnswerBrief:
+    facts: list[AllowedNumericFact] = [
+        AllowedNumericFact("record_count", float(overview.record_count), format_vn_number(overview.record_count, 0)),
+        AllowedNumericFact("column_count", float(overview.column_count), format_vn_number(overview.column_count, 0)),
+    ]
+    if overview.date_range:
+        for key in ("start", "end"):
+            raw_date = str(overview.date_range.get(key) or "")
+            for raw, value in _extract_numeric_mentions(raw_date):
+                facts.append(AllowedNumericFact(f"date_{key}_{raw}", value, raw))
+    insights: list[InsightCandidate] = []
+    for insight in overview.selected_insights:
+        insight_facts: list[AllowedNumericFact] = []
+        if insight.primary_entity:
+            for raw, value in _extract_numeric_mentions(str(insight.primary_entity)):
+                facts.append(AllowedNumericFact(f"{insight.insight_id}_entity_{raw}", value, raw))
+        for raw_fact in insight.facts:
+            try:
+                value = float(raw_fact.get("value"))
+            except Exception:
+                continue
+            display = str(raw_fact.get("display") or value)
+            fact = AllowedNumericFact(str(raw_fact.get("key") or insight.insight_id), value, display)
+            facts.append(fact)
+            insight_facts.append(fact)
+        insights.append(InsightCandidate(insight.title, insight.statement, tuple(insight_facts)))
+    rows = tuple((overview.supporting_table or {}).get("rows") or [])
+    validation = validate_overview_brief(overview)
+    validation_errors = list(validation.get("errors") or [])
+    validation_errors.extend(response_quality_errors(" ".join(item.statement for item in overview.selected_insights)))
+    quality_validation = {**validation, "errors": validation_errors, "passed": not validation_errors}
+    if not insights:
+        message = "Toi chua xac dinh duoc phat hien nghiep vu du tin cay tu du lieu hien tai. Cac cot con lai chua du khac biet hoac chua du y nghia tong hop de ket luan."
+        insights.append(InsightCandidate("Chua du tin hieu nghiep vu", message, tuple(facts[:1])))
+    return AnswerBrief(
+        source_file_name=overview.source_file_name,
+        row_count=overview.record_count,
+        selected_insights=tuple(insights),
+        comparison_facts=tuple(item.get("fact", "") for item in overview.comparison_facts if item.get("fact")),
+        limitations=tuple(overview.limitations),
+        table_rows=rows,
+        allowed_numeric_facts=tuple(facts),
+        overview=overview.model_dump(),
+        quality_validation=quality_validation,
+    )
 
 def json_payload(payload: dict[str, Any]) -> str:
     return json.dumps(payload, ensure_ascii=False, default=str)

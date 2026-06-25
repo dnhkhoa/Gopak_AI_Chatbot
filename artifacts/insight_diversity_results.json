@@ -1,0 +1,197 @@
+{
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "insight_diversity_pass_rate": 1.0,
+    "requested_insight_count_fulfillment": 1.0,
+    "status": "passed"
+  },
+  "results": [
+    {
+      "id": "row_index_downtime",
+      "passed": true,
+      "insight_count": 3,
+      "type_counts": {
+        "top_machine_downtime": 1,
+        "top_cause_downtime": 1,
+        "trend": 1
+      },
+      "metric_counts": {
+        "machine_total_downtime": 1,
+        "cause_total_downtime": 1,
+        "daily_total_downtime": 1
+      },
+      "entity_counts": {
+        "M2": 1,
+        "Setup": 1,
+        "2026-01-01": 1
+      },
+      "selected": [
+        {
+          "title": "May dung dau ve tong downtime",
+          "type": "top_machine_downtime",
+          "metric": "machine_total_downtime",
+          "entity": "M2"
+        },
+        {
+          "title": "Nguyen nhan/nhom ton that noi bat",
+          "type": "top_cause_downtime",
+          "metric": "cause_total_downtime",
+          "entity": "Setup"
+        },
+        {
+          "title": "Ngay co downtime cao nhat",
+          "type": "trend",
+          "metric": "daily_total_downtime",
+          "entity": "2026-01-01"
+        }
+      ]
+    },
+    {
+      "id": "unique_id_generic",
+      "passed": true,
+      "insight_count": 2,
+      "type_counts": {
+        "distribution": 1,
+        "metric_summary": 1
+      },
+      "metric_counts": {
+        "row_count": 1,
+        "sales": 1
+      },
+      "entity_counts": {
+        "North": 1
+      },
+      "selected": [
+        {
+          "title": "Phan bo theo cot nghiep vu",
+          "type": "distribution",
+          "metric": "row_count",
+          "entity": "North"
+        },
+        {
+          "title": "Tong hop chi so so",
+          "type": "metric_summary",
+          "metric": "sales",
+          "entity": null
+        }
+      ]
+    },
+    {
+      "id": "constant_column",
+      "passed": true,
+      "insight_count": 2,
+      "type_counts": {
+        "distribution": 1,
+        "metric_summary": 1
+      },
+      "metric_counts": {
+        "row_count": 1,
+        "amount": 1
+      },
+      "entity_counts": {
+        "A": 1
+      },
+      "selected": [
+        {
+          "title": "Phan bo theo cot nghiep vu",
+          "type": "distribution",
+          "metric": "row_count",
+          "entity": "A"
+        },
+        {
+          "title": "Tong hop chi so so",
+          "type": "metric_summary",
+          "metric": "amount",
+          "entity": null
+        }
+      ]
+    },
+    {
+      "id": "loss_assignment",
+      "passed": true,
+      "insight_count": 3,
+      "type_counts": {
+        "loss_duration": 1,
+        "distribution": 1,
+        "concentration": 1
+      },
+      "metric_counts": {
+        "total_downtime": 1,
+        "row_count": 1,
+        "row_count_share": 1
+      },
+      "entity_counts": {
+        "Prod": 2,
+        "top_3": 1
+      },
+      "selected": [
+        {
+          "title": "Nhom ton that dong gop thoi luong lon nhat",
+          "type": "loss_duration",
+          "metric": "total_downtime",
+          "entity": "Prod"
+        },
+        {
+          "title": "Nhom ton that xuat hien nhieu nhat",
+          "type": "distribution",
+          "metric": "row_count",
+          "entity": "Prod"
+        },
+        {
+          "title": "Muc tap trung cua cac nhom dau",
+          "type": "concentration",
+          "metric": "row_count_share",
+          "entity": "top_3"
+        }
+      ]
+    },
+    {
+      "id": "entry_transaction",
+      "passed": true,
+      "insight_count": 3,
+      "type_counts": {
+        "trend": 1,
+        "metric_summary": 1,
+        "distribution": 1
+      },
+      "metric_counts": {
+        "transaction_count": 2,
+        "gia_tri_can": 1
+      },
+      "entity_counts": {
+        "2026-01-01": 1,
+        "G1": 1
+      },
+      "selected": [
+        {
+          "title": "Ngay co giao dich cao nhat",
+          "type": "trend",
+          "metric": "transaction_count",
+          "entity": "2026-01-01"
+        },
+        {
+          "title": "Tong gia tri giao dich",
+          "type": "metric_summary",
+          "metric": "gia_tri_can",
+          "entity": null
+        },
+        {
+          "title": "Nhom/cua cong giao dich noi bat",
+          "type": "distribution",
+          "metric": "transaction_count",
+          "entity": "G1"
+        }
+      ]
+    },
+    {
+      "id": "insufficient",
+      "passed": true,
+      "insight_count": 0,
+      "type_counts": {},
+      "metric_counts": {},
+      "entity_counts": {},
+      "selected": []
+    }
+  ]
+}
