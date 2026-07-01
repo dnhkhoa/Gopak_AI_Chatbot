@@ -1,1 +1,533 @@
-[]
+[
+  {
+    "id": "top_machines_full_commentary",
+    "message": "Top 5 máy theo tổng downtime, thêm số lần dừng, thời lượng trung bình và giải thích điểm khác biệt.",
+    "response_type": "table",
+    "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.\n\nNhận xét:\n- Máy 11 đứng đầu trong bảng với 413,57 giờ ở chỉ tiêu tổng thời gian downtime.\n- Máy 12 đứng thứ hai với 323,15 giờ, nên nhóm đầu bảng có chênh lệch rõ khi so với hàng kế tiếp.\n- Với Máy 11, các chỉ tiêu bổ sung là số bản ghi 1.469 và thời gian downtime trung bình 16 phút 54 giây.",
+    "table": {
+      "columns": [
+        "Máy",
+        "Tổng thời gian downtime",
+        "Số bản ghi",
+        "Thời gian downtime trung bình"
+      ],
+      "rows": [
+        {
+          "Máy": "Máy 11",
+          "Tổng thời gian downtime": "413,57 giờ",
+          "Số bản ghi": "1.469",
+          "Thời gian downtime trung bình": "16 phút 54 giây"
+        },
+        {
+          "Máy": "Máy 12",
+          "Tổng thời gian downtime": "323,15 giờ",
+          "Số bản ghi": "1.654",
+          "Thời gian downtime trung bình": "11 phút 43 giây"
+        },
+        {
+          "Máy": "Máy 29",
+          "Tổng thời gian downtime": "294,67 giờ",
+          "Số bản ghi": "1.603",
+          "Thời gian downtime trung bình": "11 phút 2 giây"
+        },
+        {
+          "Máy": "Máy 8",
+          "Tổng thời gian downtime": "229,98 giờ",
+          "Số bản ghi": "653",
+          "Thời gian downtime trung bình": "21 phút 8 giây"
+        },
+        {
+          "Máy": "Máy 9",
+          "Tổng thời gian downtime": "185,32 giờ",
+          "Số bản ghi": "821",
+          "Thời gian downtime trung bình": "13 phút 33 giây"
+        }
+      ]
+    },
+    "metadata": {
+      "execution_mode": "REAL_LLM",
+      "router_confidence": 1.0,
+      "routing_reason": "Semantic or multipart request requires REAL_LLM structured resolution.",
+      "llm_called": true,
+      "llm_call_count": 2,
+      "fallback_used": false,
+      "fallback_reason": null,
+      "validation_passed": true,
+      "selected_tables": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+      ],
+      "selected_columns": [
+        "no",
+        "may",
+        "thoi_gian_bat_dau",
+        "thoi_gian_ket_thuc",
+        "thoi_luong",
+        "ten_ton_that",
+        "nhom_ton_that",
+        "loai_ton_that",
+        "note",
+        "duration_reported_text",
+        "duration_reported_seconds",
+        "duration_calculated_seconds",
+        "duration_difference_seconds",
+        "duration_anomaly",
+        "duration_seconds",
+        "thoi_luong_seconds"
+      ],
+      "latency_ms": {
+        "routing": 51.98009999912756,
+        "llm": 7829.459800001132,
+        "validation": 0.051799999710056,
+        "query": 0.0,
+        "rendering": 0.0,
+        "total": 10300.6,
+        "query_latency_ms": 33.2,
+        "query_wall_ms": 33.3
+      },
+      "turn_type": "NEW_QUERY",
+      "query_complexity": "simple",
+      "model_health_ok": true,
+      "model_available": true,
+      "llm_model": "qwen3.5:9b",
+      "llm_request_started": true,
+      "retry_count": 0,
+      "llm_latency_ms": 7822.8,
+      "llm_request_completed": true,
+      "structured_output_valid": true,
+      "persistence_degraded": false,
+      "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "file_scope_validated": true,
+      "lineage": {
+        "conversation_id": "5b7aa87b-6124-4f7b-a5fa-a1aeac9b3c10",
+        "turn_id": "a9dfc6f4-5be7-4ab2-9ef5-22d2e18e71f4",
+        "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+        "request_contract_id": "c2fec106-7035-4a68-b14d-8f7df88d3ec1",
+        "query_plan_id": "95c6e80f-4b73-44a8-a7e0-5c81f8bc3e38",
+        "query_result_id": "ea75d9e9-d87b-45ae-b211-52554bf586d8",
+        "answer_brief_id": "3a605438-f8e7-4a8b-af3a-ed9516d5504e",
+        "chart_spec_id": "c75ba07f-e718-4573-ba8a-7aa663d3a0c6",
+        "report_artifact_id": "24808c47-7d10-4fa0-ad5e-e30e99770ae1"
+      },
+      "request_contract": {
+        "relation_to_previous_turn": "NEW_REQUEST",
+        "intent": "commentary",
+        "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+        "dimensions": [
+          "machine"
+        ],
+        "metrics": [
+          "total_downtime",
+          "count",
+          "average_duration"
+        ],
+        "aggregations": [
+          "sum",
+          "count",
+          "avg"
+        ],
+        "filters": [],
+        "time_range": null,
+        "time_grain": null,
+        "ranking": "top",
+        "limit": 5,
+        "derived_metrics": [],
+        "requested_outputs": [],
+        "requested_chart_type": null,
+        "report_sections": [],
+        "commentary_requirements": [
+          "three_insights"
+        ],
+        "inherited_fields": [],
+        "explicitly_reset_fields": [
+          "dimension",
+          "metric",
+          "filter",
+          "time_range",
+          "chart_type",
+          "top_n"
+        ]
+      },
+      "request_contract_id": "c2fec106-7035-4a68-b14d-8f7df88d3ec1",
+      "query_plan_id": "95c6e80f-4b73-44a8-a7e0-5c81f8bc3e38",
+      "query_result_id": "ea75d9e9-d87b-45ae-b211-52554bf586d8",
+      "answer_brief_id": "3a605438-f8e7-4a8b-af3a-ed9516d5504e",
+      "chart_spec_id": "c75ba07f-e718-4573-ba8a-7aa663d3a0c6",
+      "report_artifact_id": "24808c47-7d10-4fa0-ad5e-e30e99770ae1",
+      "request_coverage": {
+        "requested": [
+          "machine",
+          "total_downtime",
+          "count",
+          "average_duration",
+          "sum",
+          "count",
+          "avg",
+          "top"
+        ],
+        "planned": [
+          "machine",
+          "total_downtime",
+          "count",
+          "average_duration",
+          "sum",
+          "count",
+          "avg",
+          "top"
+        ],
+        "missing": [],
+        "unexpected": []
+      },
+      "debug": {
+        "query_plan": {
+          "intent": "query",
+          "tables": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+          ],
+          "joins": [],
+          "filters": [],
+          "dimensions": [
+            "may"
+          ],
+          "metrics": [
+            {
+              "name": "total_duration_seconds",
+              "alias": "total_duration_seconds",
+              "aggregation": "sum",
+              "column": "thoi_luong_seconds",
+              "percentage_of_total": false
+            },
+            {
+              "name": "row_count",
+              "alias": "row_count",
+              "aggregation": "count",
+              "column": null,
+              "percentage_of_total": false
+            },
+            {
+              "name": "avg_duration_seconds",
+              "alias": "avg_duration_seconds",
+              "aggregation": "avg",
+              "column": "duration_seconds",
+              "percentage_of_total": false
+            }
+          ],
+          "having": [],
+          "ranking": null,
+          "derived_metrics": [],
+          "time_comparison": null,
+          "time_granularity": null,
+          "sort": [
+            {
+              "column": "total_duration_seconds",
+              "field": "total_duration_seconds",
+              "direction": "desc"
+            }
+          ],
+          "limit": 5,
+          "output": "table",
+          "query_complexity": "complex",
+          "clarification_question": null
+        },
+        "sql": "SELECT \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" AS \"may\", sum(\"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"thoi_luong_seconds\") AS \"total_duration_seconds\", count(*) AS \"row_count\", avg(\"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"duration_seconds\") AS \"avg_duration_seconds\" FROM read_parquet(?) AS \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\" GROUP BY \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
+        "state_after": {
+          "conversation_id": "5b7aa87b-6124-4f7b-a5fa-a1aeac9b3c10",
+          "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
+          "file_contexts": {},
+          "current_topic": "539b48d5-8771-4799-ab3e-c188c92f442f",
+          "topic_frames": [
+            {
+              "topic_id": "539b48d5-8771-4799-ab3e-c188c92f442f",
+              "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+              "label": "query / total_duration_seconds, row_count, avg_duration_seconds / may",
+              "intent": "query",
+              "metrics": [
+                {
+                  "name": "total_duration_seconds",
+                  "alias": "total_duration_seconds",
+                  "aggregation": "sum",
+                  "column": "thoi_luong_seconds",
+                  "percentage_of_total": false
+                },
+                {
+                  "name": "row_count",
+                  "alias": "row_count",
+                  "aggregation": "count",
+                  "column": null,
+                  "percentage_of_total": false
+                },
+                {
+                  "name": "avg_duration_seconds",
+                  "alias": "avg_duration_seconds",
+                  "aggregation": "avg",
+                  "column": "duration_seconds",
+                  "percentage_of_total": false
+                }
+              ],
+              "dimensions": [
+                "may"
+              ],
+              "filters": [],
+              "time_range": null,
+              "ranking": null,
+              "output_type": "table",
+              "last_query_plan": {
+                "intent": "query",
+                "tables": [
+                  "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+                ],
+                "joins": [],
+                "filters": [],
+                "dimensions": [
+                  "may"
+                ],
+                "metrics": [
+                  {
+                    "name": "total_duration_seconds",
+                    "alias": "total_duration_seconds",
+                    "aggregation": "sum",
+                    "column": "thoi_luong_seconds",
+                    "percentage_of_total": false
+                  },
+                  {
+                    "name": "row_count",
+                    "alias": "row_count",
+                    "aggregation": "count",
+                    "column": null,
+                    "percentage_of_total": false
+                  },
+                  {
+                    "name": "avg_duration_seconds",
+                    "alias": "avg_duration_seconds",
+                    "aggregation": "avg",
+                    "column": "duration_seconds",
+                    "percentage_of_total": false
+                  }
+                ],
+                "having": [],
+                "ranking": null,
+                "derived_metrics": [],
+                "time_comparison": null,
+                "time_granularity": null,
+                "sort": [
+                  {
+                    "column": "total_duration_seconds",
+                    "field": "total_duration_seconds",
+                    "direction": "desc"
+                  }
+                ],
+                "limit": 5,
+                "output": "table",
+                "query_complexity": "complex",
+                "clarification_question": null
+              },
+              "last_result_summary": {
+                "row_count": 5,
+                "columns": [
+                  "may",
+                  "total_duration_seconds",
+                  "row_count",
+                  "avg_duration_seconds"
+                ],
+                "first_row": {
+                  "may": "Máy 11",
+                  "total_duration_seconds": 1488867.0,
+                  "row_count": 1469,
+                  "avg_duration_seconds": 1013.5241660993873
+                }
+              }
+            }
+          ],
+          "pending_clarification": null,
+          "current_message": null,
+          "resolved_request": null,
+          "last_execution_mode": null,
+          "active_table": "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337",
+          "active_metric": {
+            "name": "total_duration_seconds",
+            "alias": "total_duration_seconds",
+            "aggregation": "sum",
+            "column": "thoi_luong_seconds",
+            "percentage_of_total": false
+          },
+          "active_metrics": [
+            {
+              "name": "total_duration_seconds",
+              "alias": "total_duration_seconds",
+              "aggregation": "sum",
+              "column": "thoi_luong_seconds",
+              "percentage_of_total": false
+            },
+            {
+              "name": "row_count",
+              "alias": "row_count",
+              "aggregation": "count",
+              "column": null,
+              "percentage_of_total": false
+            },
+            {
+              "name": "avg_duration_seconds",
+              "alias": "avg_duration_seconds",
+              "aggregation": "avg",
+              "column": "duration_seconds",
+              "percentage_of_total": false
+            }
+          ],
+          "active_dimensions": [
+            "may"
+          ],
+          "active_filters": [],
+          "active_time_range": null,
+          "active_having": [],
+          "active_ranking": null,
+          "active_sort": [
+            {
+              "column": "total_duration_seconds",
+              "field": "total_duration_seconds",
+              "direction": "desc"
+            }
+          ],
+          "active_limit": 5,
+          "active_output": "table",
+          "last_entities": {
+            "top_machine": "Máy 11"
+          },
+          "last_result_summary": {
+            "row_count": 5,
+            "columns": [
+              "may",
+              "total_duration_seconds",
+              "row_count",
+              "avg_duration_seconds"
+            ],
+            "first_row": {
+              "may": "Máy 11",
+              "total_duration_seconds": 1488867.0,
+              "row_count": 1469,
+              "avg_duration_seconds": 1013.5241660993873
+            }
+          },
+          "last_result_cache_id": null,
+          "last_result_reference": null,
+          "last_plan": {
+            "intent": "query",
+            "tables": [
+              "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+            ],
+            "joins": [],
+            "filters": [],
+            "dimensions": [
+              "may"
+            ],
+            "metrics": [
+              {
+                "name": "total_duration_seconds",
+                "alias": "total_duration_seconds",
+                "aggregation": "sum",
+                "column": "thoi_luong_seconds",
+                "percentage_of_total": false
+              },
+              {
+                "name": "row_count",
+                "alias": "row_count",
+                "aggregation": "count",
+                "column": null,
+                "percentage_of_total": false
+              },
+              {
+                "name": "avg_duration_seconds",
+                "alias": "avg_duration_seconds",
+                "aggregation": "avg",
+                "column": "duration_seconds",
+                "percentage_of_total": false
+              }
+            ],
+            "having": [],
+            "ranking": null,
+            "derived_metrics": [],
+            "time_comparison": null,
+            "time_granularity": null,
+            "sort": [
+              {
+                "column": "total_duration_seconds",
+                "field": "total_duration_seconds",
+                "direction": "desc"
+              }
+            ],
+            "limit": 5,
+            "output": "table",
+            "query_complexity": "complex",
+            "clarification_question": null
+          },
+          "recent_turn_ids": [
+            "574910dd-b9fc-44ee-8256-c206bfe56e5b"
+          ],
+          "conversation_summary": null,
+          "active_tables": [
+            "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+          ],
+          "time_range": null,
+          "dimensions": [
+            "may"
+          ],
+          "metrics": [
+            {
+              "name": "total_duration_seconds",
+              "alias": "total_duration_seconds",
+              "aggregation": "sum",
+              "column": "thoi_luong_seconds",
+              "percentage_of_total": false
+            },
+            {
+              "name": "row_count",
+              "alias": "row_count",
+              "aggregation": "count",
+              "column": null,
+              "percentage_of_total": false
+            },
+            {
+              "name": "avg_duration_seconds",
+              "alias": "avg_duration_seconds",
+              "aggregation": "avg",
+              "column": "duration_seconds",
+              "percentage_of_total": false
+            }
+          ],
+          "last_output": "table"
+        },
+        "scoped_catalog_tables": [
+          "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
+        ]
+      },
+      "composer_validation_passed": true,
+      "composer_validation_errors": [],
+      "composer_rejected_errors": [
+        "unsupported_claim:khoang ",
+        "unsupported_number:800",
+        "unsupported_number:700"
+      ],
+      "composer_fallback_used": true,
+      "commentary_attached": true,
+      "grounded_composer_called": true,
+      "composer_model": "qwen3.5:9b",
+      "public_response_validation": {
+        "internal_keys": [],
+        "unaccented_vietnamese": [],
+        "clean": true
+      }
+    },
+    "checks": {
+      "table": true,
+      "commentary": true,
+      "composer_validated": true,
+      "no_forbidden_numeric_claims": true,
+      "percentage": true,
+      "count_metric": false,
+      "avg_metric": true,
+      "vietnamese_columns": true
+    },
+    "passed": false,
+    "forbidden_claims": []
+  }
+]

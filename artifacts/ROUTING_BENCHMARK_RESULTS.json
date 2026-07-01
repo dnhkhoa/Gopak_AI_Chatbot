@@ -1,0 +1,1399 @@
+{
+  "summary": {
+    "total": 120,
+    "passed": 120,
+    "failed": 0,
+    "single_source_total": 50,
+    "two_source_total": 30,
+    "three_source_total": 20,
+    "clarification_total": 20,
+    "single_source_accuracy": 1.0,
+    "two_source_accuracy": 1.0,
+    "three_source_accuracy": 1.0,
+    "clarification_accuracy": 1.0,
+    "unsafe_source_inclusion": 0,
+    "silent_fallback": 0
+  },
+  "results": [
+    {
+      "question": "OEE tich luy den ngay 01/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 02/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 03/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 04/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 05/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 06/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 07/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 08/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 09/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 10/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 11/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 12/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 13/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 14/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 15/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 16/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 17/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 18/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 19/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 20/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 21/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 22/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 23/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 24/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE tich luy den ngay 25/11/2025 la bao nhieu?",
+      "expected": [
+        "apqoee_cumulative"
+      ],
+      "actual": [
+        "apqoee_cumulative"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 01/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 02/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 03/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 04/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 05/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 06/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 07/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 08/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 09/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 10/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 11/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 12/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 13/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 14/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong downtime ngay 15/11/2025 la bao nhieu?",
+      "expected": [
+        "machine_downtime"
+      ],
+      "actual": [
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong loss ngay 01/11/2025 la bao nhieu?",
+      "expected": [
+        "loss_assignment"
+      ],
+      "actual": [
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong loss ngay 02/11/2025 la bao nhieu?",
+      "expected": [
+        "loss_assignment"
+      ],
+      "actual": [
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong loss ngay 03/11/2025 la bao nhieu?",
+      "expected": [
+        "loss_assignment"
+      ],
+      "actual": [
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong loss ngay 04/11/2025 la bao nhieu?",
+      "expected": [
+        "loss_assignment"
+      ],
+      "actual": [
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong loss ngay 05/11/2025 la bao nhieu?",
+      "expected": [
+        "loss_assignment"
+      ],
+      "actual": [
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong loss ngay 06/11/2025 la bao nhieu?",
+      "expected": [
+        "loss_assignment"
+      ],
+      "actual": [
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong loss ngay 07/11/2025 la bao nhieu?",
+      "expected": [
+        "loss_assignment"
+      ],
+      "actual": [
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong loss ngay 08/11/2025 la bao nhieu?",
+      "expected": [
+        "loss_assignment"
+      ],
+      "actual": [
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong loss ngay 09/11/2025 la bao nhieu?",
+      "expected": [
+        "loss_assignment"
+      ],
+      "actual": [
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "Tong loss ngay 10/11/2025 la bao nhieu?",
+      "expected": [
+        "loss_assignment"
+      ],
+      "actual": [
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "single_source"
+    },
+    {
+      "question": "OEE va downtime den ngay 01/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 02/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 03/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 04/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 05/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 06/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 07/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 08/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 09/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 10/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 11/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 12/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 13/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 14/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va downtime den ngay 15/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va nhom ton that den ngay 01/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va nhom ton that den ngay 02/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va nhom ton that den ngay 03/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va nhom ton that den ngay 04/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va nhom ton that den ngay 05/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va nhom ton that den ngay 06/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va nhom ton that den ngay 07/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "OEE va nhom ton that den ngay 08/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Downtime va loss ngay 01/11/2025",
+      "expected": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Downtime va loss ngay 02/11/2025",
+      "expected": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Downtime va loss ngay 03/11/2025",
+      "expected": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Downtime va loss ngay 04/11/2025",
+      "expected": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Downtime va loss ngay 05/11/2025",
+      "expected": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Downtime va loss ngay 06/11/2025",
+      "expected": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Downtime va loss ngay 07/11/2025",
+      "expected": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 01/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 02/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 03/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 04/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 05/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 06/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 07/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 08/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 09/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 10/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 11/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 12/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 13/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 14/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 15/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 16/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 17/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 18/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 19/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 20/11/2025",
+      "expected": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "actual": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "status": "pass",
+      "strategy": "parallel_queries_then_merge"
+    },
+    {
+      "question": "Cau hoi mo ho 1",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 2",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 3",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 4",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 5",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 6",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 7",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 8",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 9",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 10",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 11",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 12",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 13",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 14",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 15",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 16",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 17",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 18",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 19",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    },
+    {
+      "question": "Cau hoi mo ho 20",
+      "expected": [],
+      "actual": [],
+      "status": "pass",
+      "strategy": "clarification"
+    }
+  ]
+}

@@ -28,19 +28,19 @@
       },
       "selected": [
         {
-          "title": "May dung dau ve tong downtime",
+          "title": "Máy đứng đầu về tổng downtime",
           "type": "top_machine_downtime",
           "metric": "machine_total_downtime",
           "entity": "M2"
         },
         {
-          "title": "Nguyen nhan/nhom ton that noi bat",
+          "title": "Nguyên nhân/nhóm tổn thất nổi bật",
           "type": "top_cause_downtime",
           "metric": "cause_total_downtime",
           "entity": "Setup"
         },
         {
-          "title": "Ngay co downtime cao nhat",
+          "title": "Ngày có downtime cao nhất",
           "type": "trend",
           "metric": "daily_total_downtime",
           "entity": "2026-01-01"
@@ -64,13 +64,13 @@
       },
       "selected": [
         {
-          "title": "Phan bo theo cot nghiep vu",
+          "title": "Phân bố theo cột nghiệp vụ",
           "type": "distribution",
           "metric": "row_count",
           "entity": "North"
         },
         {
-          "title": "Tong hop chi so so",
+          "title": "Tổng hợp chỉ số số",
           "type": "metric_summary",
           "metric": "sales",
           "entity": null
@@ -94,13 +94,13 @@
       },
       "selected": [
         {
-          "title": "Phan bo theo cot nghiep vu",
+          "title": "Phân bố theo cột nghiệp vụ",
           "type": "distribution",
           "metric": "row_count",
           "entity": "A"
         },
         {
-          "title": "Tong hop chi so so",
+          "title": "Tổng hợp chỉ số số",
           "type": "metric_summary",
           "metric": "amount",
           "entity": null
@@ -127,19 +127,19 @@
       },
       "selected": [
         {
-          "title": "Nhom ton that dong gop thoi luong lon nhat",
+          "title": "Nhóm tổn thất đóng góp thời lượng lớn nhất",
           "type": "loss_duration",
           "metric": "total_downtime",
           "entity": "Prod"
         },
         {
-          "title": "Nhom ton that xuat hien nhieu nhat",
+          "title": "Nhóm tổn thất xuất hiện nhiều nhất",
           "type": "distribution",
           "metric": "row_count",
           "entity": "Prod"
         },
         {
-          "title": "Muc tap trung cua cac nhom dau",
+          "title": "Mức tập trung của các nhóm đầu",
           "type": "concentration",
           "metric": "row_count_share",
           "entity": "top_3"
@@ -165,19 +165,19 @@
       },
       "selected": [
         {
-          "title": "Ngay co giao dich cao nhat",
+          "title": "Ngày có giao dịch cao nhất",
           "type": "trend",
           "metric": "transaction_count",
           "entity": "2026-01-01"
         },
         {
-          "title": "Tong gia tri giao dich",
+          "title": "Tổng giá trị giao dịch",
           "type": "metric_summary",
           "metric": "gia_tri_can",
           "entity": null
         },
         {
-          "title": "Nhom/cua cong giao dich noi bat",
+          "title": "Nhóm/cửa cổng giao dịch nổi bật",
           "type": "distribution",
           "metric": "transaction_count",
           "entity": "G1"

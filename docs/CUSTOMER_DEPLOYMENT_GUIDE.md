@@ -1,48 +1,51 @@
 # Customer Deployment Guide
 
-## Prerequisites
-
-- Python environment with project requirements installed.
-- Node/npm installed for the React frontend.
-- Ollama available with `qwen3.5:9b` when real LLM routing is required.
-- Three baseline Excel workbooks present at the repository root.
-
-## Backend
-
-Run:
+1. Install Python 3.11 and Node.js.
+2. Install dependencies:
 
 ```powershell
-python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
+.\setup.ps1
+cd frontend
+npm install
 ```
 
-Health check:
+3. Configure `.env`:
+
+```text
+CUSTOMER_PRODUCTION_MODE=true
+CUSTOMER_UPLOAD_ENABLED=false
+BUSINESS_TIMEZONE=Asia/Ho_Chi_Minh
+PERFORMANCE_FORMULA_MODE=disabled
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=qwen3.5:9b
+```
+
+4. Place the three workbook files at the repository root:
+
+- `Machine_Downtime_20260203_100753.xlsx`
+- `Loss_Assignment_20260203_100840.xlsx`
+- `Cup3.xlsx`
+
+5. Rebuild cache:
+
+```powershell
+python scripts_ingest.py
+```
+
+6. Start services:
+
+```powershell
+.\start-backend.ps1
+.\start-frontend.ps1
+```
+
+7. Verify:
 
 ```powershell
 Invoke-RestMethod http://127.0.0.1:8000/api/health
-```
-
-## Frontend
-
-Run:
-
-```powershell
 cd frontend
-npm run dev
-```
-
-Open `http://127.0.0.1:5173/`.
-
-## Verification
-
-Recommended release checks:
-
-```powershell
-python evaluation\run_file_scoped_benchmark.py
-python evaluation\run_customer_challenge_benchmark.py
-python evaluation\run_black_box_customer_uat.py
-python evaluation\run_new_workbook_generalization.py
-python -m pytest -q
-cd frontend
-npm test -- --run
+npm test
 npm run build
 ```
+
+Current release note: local Ollama was not reachable during this verification run, so customer release remains blocked.

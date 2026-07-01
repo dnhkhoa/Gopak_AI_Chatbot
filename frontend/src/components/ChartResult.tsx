@@ -19,7 +19,7 @@ const palette = ["#AEBCE8", "#C8DCC8", "#E8C6C6", "#D7C5E8", "#E8D8AE"];
 
 export function ChartResult({ chart }: { chart: ChartPayload }) {
   if (!chart.data.length || !chart.y_keys.length) {
-    return <div className="empty-inline">No chart data.</div>;
+    return <div className="empty-inline">Không có dữ liệu biểu đồ.</div>;
   }
   const yKey = chart.y_keys[0];
   const formatTooltip = (value: unknown) => {

@@ -26,7 +26,7 @@ function assistant(response: ChatResponse): UiMessage {
 test("renders scalar, sources, download and debug", () => {
   render(<ChatMessage message={assistant(baseResponse)} debug />);
   expect(screen.getByText("1.989,56 giờ")).toBeInTheDocument();
-  expect(screen.getByText("Sources and filters")).toBeInTheDocument();
+  expect(screen.getByText("Nguồn và bộ lọc")).toBeInTheDocument();
   expect(screen.getByText("Tải HTML")).toBeInTheDocument();
   expect(screen.getByText("Debug")).toBeInTheDocument();
 });
@@ -96,6 +96,7 @@ test("dispatches report payload to PDF-only ReportPreview even when chart exists
     chart: { type: "line", title: "Xu hướng", x_key: "Ngày", y_keys: ["Tổng downtime"], data: [{ Ngày: "2026-01-01", "Tổng downtime": 10 }] },
     report: {
       report_id: "r1",
+      revision_number: 3,
       title: "Báo cáo phân tích downtime",
       subtitle: "Báo cáo mô tả dữ liệu downtime.",
       source_file_name: "Machine_Downtime.xlsx",
@@ -124,8 +125,16 @@ test("dispatches report payload to PDF-only ReportPreview even when chart exists
   };
   render(<ChatMessage debug={false} message={assistant(reportResponse)} />);
   expect(screen.getByTestId("report-preview")).toBeInTheDocument();
-  expect(document.querySelectorAll("[data-section-type]").length).toBe(8);
+  expect(screen.getByText("Phiên bản 3")).toBeInTheDocument();
+  expect(screen.getByAltText("i-Soft")).toBeInTheDocument();
+  expect(screen.getByText("Mục tiêu")).toBeInTheDocument();
+  expect(screen.getAllByText("Không xác định").length).toBeGreaterThan(0);
+  expect(document.querySelectorAll("[data-section-type]").length).toBe(7);
   expect(screen.getByText("Tải báo cáo PDF")).toBeInTheDocument();
+  expect(screen.getByText("Tải báo cáo PDF").closest("a")).toHaveAttribute(
+    "href",
+    "http://127.0.0.1:8000/api/artifacts/report_r1.pdf/download",
+  );
   expect(screen.queryByText("Tải HTML")).not.toBeInTheDocument();
   expect(screen.queryByText("Tải Excel")).not.toBeInTheDocument();
   expect(document.querySelector(".chart-box")).not.toBeInTheDocument();

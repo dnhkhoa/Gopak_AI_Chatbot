@@ -1,5 +1,6 @@
 import type { ChatResponse } from "../types/api";
 import { DataTable } from "./DataTable";
+import { NarrativeBlock } from "./NarrativeBlock";
 import { isRenderableNarrative } from "./narrative";
 
 export function AnalysisResponse({ response }: { response: ChatResponse }) {
@@ -11,7 +12,7 @@ export function AnalysisResponse({ response }: { response: ChatResponse }) {
   return (
     <div className="analysis-response">
       {isRenderableNarrative(analysis?.headline ?? response.title) ? <h2>{analysis?.headline ?? response.title}</h2> : null}
-      {isRenderableNarrative(summary) ? <p>{summary}</p> : null}
+      {isRenderableNarrative(summary) ? <NarrativeBlock text={summary} /> : null}
       {insights.length ? (
         <div className="insight-list">
           {insights.filter((item) => isRenderableNarrative(item.text)).map((item, index) => (

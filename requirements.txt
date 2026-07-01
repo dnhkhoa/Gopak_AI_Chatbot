@@ -6,6 +6,7 @@ pydantic>=2.7
 plotly>=5.22
 streamlit>=1.36
 rapidfuzz>=3.9
+PyMuPDF>=1.24
 fastapi>=0.115
 uvicorn[standard]>=0.32
 python-multipart>=0.0.9

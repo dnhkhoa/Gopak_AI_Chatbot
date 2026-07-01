@@ -5,6 +5,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from src.config import get_settings
+from src.sources.registry import get_source_registry
 from src.ingestion.workbook_scanner import LoadedTable, file_sha256, load_workbook_tables, profile_to_dict
 
 
@@ -27,13 +29,31 @@ class ParquetCache:
 
     def refresh(self, paths: list[Path], force: bool = False) -> list[dict]:
         manifest = self._read_manifest()
+        settings = get_settings()
+        normalized_paths = [path.resolve() for path in paths]
+        active_keys = {str(path) for path in normalized_paths}
+        for key, file_info in list(manifest.get("files", {}).items()):
+            if key.startswith("uploaded:") and not settings.customer_production_mode:
+                continue
+            if key in active_keys:
+                continue
+            for table in file_info.get("tables", []):
+                path = Path(str(table.get("parquet_path", "")))
+                if path.exists() and path.parent == self.tables_dir:
+                    path.unlink()
+            manifest["files"].pop(key, None)
+        registry_by_name = {source.workbook_path.name: source.source_id for source in get_source_registry().load()}
         tables: list[dict] = []
-        for path in paths:
+        for path in normalized_paths:
             digest = file_sha256(path)
             file_entry = manifest["files"].get(str(path), {})
             if not force and file_entry.get("sha256") == digest:
                 tables.extend(file_entry.get("tables", []))
                 continue
+            for old in file_entry.get("tables", []):
+                old_path = Path(str(old.get("parquet_path", "")))
+                if old_path.exists() and old_path.parent == self.tables_dir:
+                    old_path.unlink()
             loaded_tables = load_workbook_tables(path, source_file_name=path.name, source_file_id=digest[:16])
             file_tables = []
             for loaded in loaded_tables:
@@ -46,6 +66,7 @@ class ParquetCache:
                     "source_sheet": loaded.profile.source_sheet,
                     "file_id": digest[:16],
                     "source_file_id": digest[:16],
+                    "source_id": registry_by_name.get(path.name),
                     "sha256": digest,
                     "parquet_path": str(parquet_path),
                     "profile": profile_to_dict(loaded.profile),

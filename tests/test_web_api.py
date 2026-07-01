@@ -178,38 +178,4 @@ def test_file_upload_contract(tmp_path: Path, monkeypatch) -> None:
         "/api/files/upload",
         files={"file": ("notes.txt", b"not excel", "text/plain")},
     )
-    assert invalid.status_code == 400
-
-    workbook = BytesIO()
-    pd.DataFrame(
-        {
-            "No": [1, 2],
-            "Machine": ["M01", "M02"],
-            "Start": ["2026-01-01 08:00:00", "2026-01-01 09:00:00"],
-            "End": ["2026-01-01 08:30:00", "2026-01-01 09:45:00"],
-            "Duration": [30, 45],
-        }
-    ).to_excel(workbook, index=False)
-    workbook.seek(0)
-    uploaded = c.post(
-        "/api/files/upload",
-        files={
-            "file": (
-                "../demo.xlsx",
-                workbook.getvalue(),
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            )
-        },
-    )
-    assert uploaded.status_code == 201
-    payload = uploaded.json()
-    assert payload["filename"] == "demo.xlsx"
-    assert payload["status"] == "ready"
-    assert payload["queryable"] is True
-    assert payload["row_count"] >= 1
-    assert "stored_name" not in payload
-
-    assert c.get(f"/api/files/{payload['id']}/status").json()["status"] == "ready"
-    assert len(c.get("/api/files").json()) == 1
-    assert c.delete(f"/api/files/{payload['id']}").status_code == 204
-    assert c.get("/api/files").json() == []
+    assert invalid.status_code == 403

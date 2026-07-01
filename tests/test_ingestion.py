@@ -41,7 +41,7 @@ def test_parquet_cache_real_files():
     tables = ParquetCache(settings.cache_dir).refresh(files, force=False)
     assert len(tables) >= 3
     assert all(Path(table["parquet_path"]).exists() for table in tables)
-    assert {"EntryTransaction_20260203_164943.xlsx", "Loss_Assignment_20260203_100840.xlsx", "Machine_Downtime_20260203_100753.xlsx"}.issubset(
+    assert {"Cup3.xlsx", "Loss_Assignment_20260203_100840.xlsx", "Machine_Downtime_20260203_100753.xlsx"}.issubset(
         {Path(str(table.get("source_file") or table.get("source_path") or "")).name for table in tables}
     )
 

@@ -1,0 +1,224 @@
+{
+  "summary": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "note": "Independent full oracle coverage is partial; period-specific APQOEE remains locked without Performance formula."
+  },
+  "cases": [
+    {
+      "question": "OEE tich luy den ngay 10/11/2025 la bao nhieu?",
+      "response_type": "table",
+      "status": "COMPLETED",
+      "sources_used": [
+        "apqoee_cumulative"
+      ],
+      "fallback_used": false,
+      "rows": [
+        {
+          "source_id": "apqoee_cumulative",
+          "source": "APQOEE Cumulative",
+          "metric": "Cumulative OEE",
+          "value": 57.55,
+          "unit": "%",
+          "time_scope": "cumulative through 2025-11-10T23:00:00+07:00",
+          "snapshot_time": "2025-11-10T23:00:00+07:00"
+        },
+        {
+          "source_id": "apqoee_cumulative",
+          "source": "APQOEE Cumulative",
+          "metric": "Cumulative Availability",
+          "value": 61.24,
+          "unit": "%",
+          "time_scope": "cumulative through 2025-11-10T23:00:00+07:00",
+          "snapshot_time": "2025-11-10T23:00:00+07:00"
+        },
+        {
+          "source_id": "apqoee_cumulative",
+          "source": "APQOEE Cumulative",
+          "metric": "Cumulative Performance",
+          "value": 95.74,
+          "unit": "%",
+          "time_scope": "cumulative through 2025-11-10T23:00:00+07:00",
+          "snapshot_time": "2025-11-10T23:00:00+07:00"
+        },
+        {
+          "source_id": "apqoee_cumulative",
+          "source": "APQOEE Cumulative",
+          "metric": "Cumulative Quality",
+          "value": 98.15,
+          "unit": "%",
+          "time_scope": "cumulative through 2025-11-10T23:00:00+07:00",
+          "snapshot_time": "2025-11-10T23:00:00+07:00"
+        }
+      ]
+    },
+    {
+      "question": "Tong downtime ngay 10/11/2025 la bao nhieu?",
+      "response_type": "table",
+      "status": "COMPLETED",
+      "sources_used": [
+        "machine_downtime"
+      ],
+      "fallback_used": false,
+      "rows": [
+        {
+          "source_id": "machine_downtime",
+          "source": "Machine Downtime",
+          "metric": "Downtime duration",
+          "value": 21.16,
+          "unit": "hours",
+          "time_scope": "2025-11-10T00:00:00 to 2025-11-11T00:00:00"
+        },
+        {
+          "source_id": "machine_downtime",
+          "source": "Machine Downtime",
+          "metric": "Downtime event count",
+          "value": 92,
+          "unit": "events",
+          "time_scope": "2025-11-10T00:00:00 to 2025-11-11T00:00:00"
+        },
+        {
+          "source_id": "machine_downtime",
+          "source": "Machine Downtime",
+          "metric": "Affected machines",
+          "value": 8,
+          "unit": "machines",
+          "time_scope": "2025-11-10T00:00:00 to 2025-11-11T00:00:00"
+        }
+      ]
+    },
+    {
+      "question": "Tong loss ngay 10/11/2025 la bao nhieu?",
+      "response_type": "table",
+      "status": "COMPLETED",
+      "sources_used": [
+        "loss_assignment"
+      ],
+      "fallback_used": false,
+      "rows": [
+        {
+          "source_id": "loss_assignment",
+          "source": "Loss Assignment",
+          "metric": "Loss duration",
+          "value": 49.58,
+          "unit": "hours",
+          "time_scope": "2025-11-10T00:00:00 to 2025-11-11T00:00:00"
+        },
+        {
+          "source_id": "loss_assignment",
+          "source": "Loss Assignment",
+          "metric": "Loss event count",
+          "value": 606,
+          "unit": "events",
+          "time_scope": "2025-11-10T00:00:00 to 2025-11-11T00:00:00"
+        },
+        {
+          "source_id": "loss_assignment",
+          "source": "Loss Assignment",
+          "metric": "Affected machines",
+          "value": 11,
+          "unit": "machines",
+          "time_scope": "2025-11-10T00:00:00 to 2025-11-11T00:00:00"
+        }
+      ]
+    },
+    {
+      "question": "Phan tich OEE, downtime va nhom ton that tu dau thang den ngay 10/11/2025",
+      "response_type": "analysis",
+      "status": "COMPLETED",
+      "sources_used": [
+        "apqoee_cumulative",
+        "machine_downtime",
+        "loss_assignment"
+      ],
+      "fallback_used": false,
+      "rows": [
+        {
+          "source_id": "apqoee_cumulative",
+          "source": "APQOEE Cumulative",
+          "metric": "Cumulative OEE",
+          "value": 57.55,
+          "unit": "%",
+          "time_scope": "cumulative through 2025-11-10T23:00:00+07:00",
+          "snapshot_time": "2025-11-10T23:00:00+07:00"
+        },
+        {
+          "source_id": "apqoee_cumulative",
+          "source": "APQOEE Cumulative",
+          "metric": "Cumulative Availability",
+          "value": 61.24,
+          "unit": "%",
+          "time_scope": "cumulative through 2025-11-10T23:00:00+07:00",
+          "snapshot_time": "2025-11-10T23:00:00+07:00"
+        },
+        {
+          "source_id": "apqoee_cumulative",
+          "source": "APQOEE Cumulative",
+          "metric": "Cumulative Performance",
+          "value": 95.74,
+          "unit": "%",
+          "time_scope": "cumulative through 2025-11-10T23:00:00+07:00",
+          "snapshot_time": "2025-11-10T23:00:00+07:00"
+        },
+        {
+          "source_id": "apqoee_cumulative",
+          "source": "APQOEE Cumulative",
+          "metric": "Cumulative Quality",
+          "value": 98.15,
+          "unit": "%",
+          "time_scope": "cumulative through 2025-11-10T23:00:00+07:00",
+          "snapshot_time": "2025-11-10T23:00:00+07:00"
+        },
+        {
+          "source_id": "machine_downtime",
+          "source": "Machine Downtime",
+          "metric": "Downtime duration",
+          "value": 96.79,
+          "unit": "hours",
+          "time_scope": "2025-11-01T00:00:00 to 2025-11-11T00:00:00"
+        },
+        {
+          "source_id": "machine_downtime",
+          "source": "Machine Downtime",
+          "metric": "Downtime event count",
+          "value": 436,
+          "unit": "events",
+          "time_scope": "2025-11-01T00:00:00 to 2025-11-11T00:00:00"
+        },
+        {
+          "source_id": "machine_downtime",
+          "source": "Machine Downtime",
+          "metric": "Affected machines",
+          "value": 9,
+          "unit": "machines",
+          "time_scope": "2025-11-01T00:00:00 to 2025-11-11T00:00:00"
+        },
+        {
+          "source_id": "loss_assignment",
+          "source": "Loss Assignment",
+          "metric": "Loss duration",
+          "value": 290.53,
+          "unit": "hours",
+          "time_scope": "2025-11-01T00:00:00 to 2025-11-11T00:00:00"
+        },
+        {
+          "source_id": "loss_assignment",
+          "source": "Loss Assignment",
+          "metric": "Loss event count",
+          "value": 3372,
+          "unit": "events",
+          "time_scope": "2025-11-01T00:00:00 to 2025-11-11T00:00:00"
+        },
+        {
+          "source_id": "loss_assignment",
+          "source": "Loss Assignment",
+          "metric": "Affected machines",
+          "value": 11,
+          "unit": "machines",
+          "time_scope": "2025-11-01T00:00:00 to 2025-11-11T00:00:00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "total_checks": 14,
+  "customer_error_localization_pct": 100.0,
+  "generic_english_errors": 0,
+  "non_vietnamese": 0,
+  "stack_trace_leakage": 0,
+  "acceptance_met": true,
+  "results": [
+    {
+      "source": "policy",
+      "code": "UNSUPPORTED_BY_ACTIVE_FILE",
+      "vietnamese": true,
+      "english": false,
+      "title": "File hiện tại không hỗ trợ yêu cầu này"
+    },
+    {
+      "source": "policy",
+      "code": "FILE_NOT_READY",
+      "vietnamese": true,
+      "english": false,
+      "title": "File chưa sẵn sàng"
+    },
+    {
+      "source": "policy",
+      "code": "FILE_MISSING",
+      "vietnamese": true,
+      "english": false,
+      "title": "Không tìm thấy file nguồn"
+    },
+    {
+      "source": "policy",
+      "code": "CATALOG_UNAVAILABLE",
+      "vietnamese": true,
+      "english": false,
+      "title": "Dữ liệu tạm thời không khả dụng"
+    },
+    {
+      "source": "policy",
+      "code": "QUERY_VALIDATION_FAILED",
+      "vietnamese": true,
+      "english": false,
+      "title": "Cần làm rõ yêu cầu"
+    },
+    {
+      "source": "policy",
+      "code": "QUERY_TIMEOUT",
+      "vietnamese": true,
+      "english": false,
+      "title": "Yêu cầu quá lớn"
+    },
+    {
+      "source": "policy",
+      "code": "MODEL_UNAVAILABLE",
+      "vietnamese": true,
+      "english": false,
+      "title": "Phân tích ngôn ngữ tạm gián đoạn"
+    },
+    {
+      "source": "policy",
+      "code": "MODEL_TIMEOUT",
+      "vietnamese": true,
+      "english": false,
+      "title": "Phân tích ngôn ngữ phản hồi chậm"
+    },
+    {
+      "source": "policy",
+      "code": "MODEL_INVALID_OUTPUT",
+      "vietnamese": true,
+      "english": false,
+      "title": "Cần làm rõ yêu cầu"
+    },
+    {
+      "source": "policy",
+      "code": "REPORT_GENERATION_FAILED",
+      "vietnamese": true,
+      "english": false,
+      "title": "Không tạo được báo cáo"
+    },
+    {
+      "source": "policy",
+      "code": "EXPORT_FAILED",
+      "vietnamese": true,
+      "english": false,
+      "title": "Không xuất được tệp"
+    },
+    {
+      "source": "policy",
+      "code": "PERSISTENCE_FAILED",
+      "vietnamese": true,
+      "english": false,
+      "title": "Sự cố lưu lịch sử"
+    },
+    {
+      "source": "policy",
+      "code": "UNKNOWN_INTERNAL_ERROR",
+      "vietnamese": true,
+      "english": false,
+      "title": "Không thể hoàn tất yêu cầu"
+    },
+    {
+      "source": "live_injected_exception",
+      "error_code": "QUERY_VALIDATION_FAILED",
+      "vietnamese": true,
+      "english": false,
+      "stack_leak": false,
+      "summary": "Mình chưa dựng được truy vấn an toàn cho yêu cầu này. Hãy diễn đạt cụ thể hơn về cột, chỉ số hoặc khoảng thời gian."
+    }
+  ]
+}

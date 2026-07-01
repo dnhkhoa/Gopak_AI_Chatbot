@@ -93,6 +93,10 @@ class DerivedMetric(BaseModel):
 
 
 class QueryPlan(BaseModel):
+    source_ids: list[str] = Field(default_factory=list)
+    execution_strategy: Literal["single_source", "validated_join", "parallel_queries_then_merge", "clarification", "not_answerable"] = "single_source"
+    requested_grain: str | None = None
+    time_semantics: str | None = None
     intent: Intent = "query"
     tables: list[str] = Field(default_factory=list)
     joins: list[JoinSpec] = Field(default_factory=list)

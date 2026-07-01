@@ -1,0 +1,33 @@
+{
+  "schema_mismatch_causing_degraded_health": 0,
+  "all_checks_passed": true,
+  "acceptance_met": true,
+  "checks": [
+    {
+      "check": "schema_mismatch_keeps_health",
+      "infra_degraded_before": false,
+      "infra_degraded_after": false,
+      "passed": true
+    },
+    {
+      "check": "model_outage_does_not_flip_infra_banner",
+      "language_model": "UNAVAILABLE",
+      "infrastructure_degraded": false,
+      "banner_message": null,
+      "language_model_note_present": true,
+      "passed": true
+    },
+    {
+      "check": "health_is_layered",
+      "components": {
+        "core_api": "HEALTHY",
+        "database": "HEALTHY",
+        "file_catalog": "HEALTHY",
+        "analytics_engine": "HEALTHY",
+        "language_model": "HEALTHY",
+        "report_export": "HEALTHY"
+      },
+      "passed": true
+    }
+  ]
+}

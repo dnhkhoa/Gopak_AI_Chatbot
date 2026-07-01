@@ -1,74 +1,85 @@
 {
   "summary": {
-    "conversation_count": 11,
-    "checked_details": 11,
-    "leak_count": 0,
     "status": "passed"
   },
   "checks": [
     {
-      "conversation_id": "2eedb1e7-22be-40cb-99f1-10e7652e23e0",
-      "message_count": 10,
+      "index": 0,
       "forbidden_terms": [],
       "passed": true
     },
     {
-      "conversation_id": "d7555feb-4bef-4324-924c-96850044ae2e",
-      "message_count": 2,
+      "index": 1,
       "forbidden_terms": [],
       "passed": true
     },
     {
-      "conversation_id": "faf86e09-79a4-4172-b7ea-9c6831058cd1",
-      "message_count": 2,
+      "index": 2,
       "forbidden_terms": [],
       "passed": true
     },
     {
-      "conversation_id": "a8c15a29-e3f3-40fa-929e-f04d0c3ae1e8",
-      "message_count": 2,
+      "index": 3,
       "forbidden_terms": [],
       "passed": true
     },
     {
-      "conversation_id": "eac0c3a9-ac23-4a1c-b81b-6d8f85ff05e3",
-      "message_count": 2,
+      "index": 4,
       "forbidden_terms": [],
       "passed": true
     },
     {
-      "conversation_id": "64a8b12d-3b81-4e98-8cb1-1a1f5868290b",
-      "message_count": 10,
+      "index": 5,
       "forbidden_terms": [],
       "passed": true
     },
     {
-      "conversation_id": "f3addada-7268-482f-9e17-64735b1ac67e",
-      "message_count": 6,
+      "index": 6,
       "forbidden_terms": [],
       "passed": true
     },
     {
-      "conversation_id": "02f21768-fd49-4807-8983-03fb2aa8030c",
-      "message_count": 10,
+      "index": 7,
       "forbidden_terms": [],
       "passed": true
     },
     {
-      "conversation_id": "8c8d4490-39a3-450e-a7a6-59226fda2292",
-      "message_count": 10,
+      "index": 8,
       "forbidden_terms": [],
       "passed": true
     },
     {
-      "conversation_id": "b0e940e0-e043-44be-b091-2358597e3f5b",
-      "message_count": 10,
+      "index": 9,
       "forbidden_terms": [],
       "passed": true
     },
     {
-      "conversation_id": "3bd7de75-f87a-49b9-a31d-3989aa4865e1",
-      "message_count": 10,
+      "index": 10,
+      "forbidden_terms": [],
+      "passed": true
+    },
+    {
+      "index": 11,
+      "forbidden_terms": [],
+      "passed": true
+    },
+    {
+      "index": 12,
+      "forbidden_terms": [],
+      "passed": true
+    },
+    {
+      "index": 13,
+      "forbidden_terms": [],
+      "passed": true
+    },
+    {
+      "index": 14,
+      "forbidden_terms": [],
+      "passed": true
+    },
+    {
+      "index": 15,
       "forbidden_terms": [],
       "passed": true
     }

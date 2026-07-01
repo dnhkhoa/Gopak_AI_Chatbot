@@ -40,11 +40,11 @@
       },
       "selected_insights": [
         {
-          "insight_id": "ee4ba916-bc7c-422c-b51d-46c9e7ffb9ca",
+          "insight_id": "2e1580bd-917a-448e-80b0-1f449038fc43",
           "insight_type": "top_machine_downtime",
           "domain": "machine_downtime",
-          "title": "May dung dau ve tong downtime",
-          "business_question": "May nao tao tong downtime lon nhat?",
+          "title": "Máy đứng đầu về tổng downtime",
+          "business_question": "Máy nào tạo tổng downtime lớn nhất?",
           "primary_entity": "M2",
           "primary_metric": "machine_total_downtime",
           "primary_value": 15000.0,
@@ -59,7 +59,7 @@
               "value": 15000.0
             }
           ],
-          "query_result_id": "94586af0-1a86-45f1-a4bc-020b21718148",
+          "query_result_id": "4d75c714-0649-4ffc-bfaa-e26657d55ac5",
           "relevance_score": 0.96,
           "magnitude_score": 0.8,
           "actionability_score": 0.85,
@@ -69,10 +69,10 @@
           "triviality_penalty": 0.0,
           "final_score": 0.891,
           "allowed_claims": [
-            "May M2 co tong downtime cao nhat: 4 giờ 10 phút, gom 50 lan ghi nhan va trung binh 5 phút moi lan."
+            "M2 có tổng downtime cao nhất: 4 giờ 10 phút, gồm 50 lần dừng và trung bình 5 phút mỗi lần."
           ],
           "limitations": [],
-          "statement": "May M2 co tong downtime cao nhat: 4 giờ 10 phút, gom 50 lan ghi nhan va trung binh 5 phút moi lan.",
+          "statement": "M2 có tổng downtime cao nhất: 4 giờ 10 phút, gồm 50 lần dừng và trung bình 5 phút mỗi lần.",
           "facts": [
             {
               "key": "duration",
@@ -92,11 +92,11 @@
           ]
         },
         {
-          "insight_id": "97f47424-fe1f-4b25-944a-354371628922",
+          "insight_id": "aeff1de9-9fb5-4ef1-b8cd-d6fecd8a762a",
           "insight_type": "top_cause_downtime",
           "domain": "machine_downtime",
-          "title": "Nguyen nhan/nhom ton that noi bat",
-          "business_question": "Nguyen nhan hoac nhom nao dong gop downtime nhieu nhat?",
+          "title": "Nguyên nhân/nhóm tổn thất nổi bật",
+          "business_question": "Nguyên nhân hoặc nhóm nào đóng góp downtime nhiều nhất?",
           "primary_entity": "Setup",
           "primary_metric": "cause_total_downtime",
           "primary_value": 10000.0,
@@ -111,7 +111,7 @@
               "value": 10000.0
             }
           ],
-          "query_result_id": "9e2181c1-ce81-4a42-acc5-2433307ea8f8",
+          "query_result_id": "6aa80cce-d7bc-444a-b0dd-165d7833ee8e",
           "relevance_score": 0.96,
           "magnitude_score": 0.8,
           "actionability_score": 0.85,
@@ -121,10 +121,10 @@
           "triviality_penalty": 0.0,
           "final_score": 0.891,
           "allowed_claims": [
-            "Setup la nhom/nguyen nhan co tong downtime cao nhat: 2 giờ 46 phút, voi 25 lan ghi nhan."
+            "Setup là nhóm/nguyên nhân có tổng downtime cao nhất: 2 giờ 46 phút, với 25 lần dừng."
           ],
           "limitations": [],
-          "statement": "Setup la nhom/nguyen nhan co tong downtime cao nhat: 2 giờ 46 phút, voi 25 lan ghi nhan.",
+          "statement": "Setup là nhóm/nguyên nhân có tổng downtime cao nhất: 2 giờ 46 phút, với 25 lần dừng.",
           "facts": [
             {
               "key": "duration",
@@ -144,11 +144,11 @@
           ]
         },
         {
-          "insight_id": "e7d2890c-d411-4ae2-a5f2-e98f27204489",
+          "insight_id": "da8e9b08-e213-4f35-b055-dadb7ccb357f",
           "insight_type": "trend",
           "domain": "machine_downtime",
-          "title": "Ngay co downtime cao nhat",
-          "business_question": "Downtime dat dinh vao thoi diem nao?",
+          "title": "Ngày có downtime cao nhất",
+          "business_question": "Downtime đạt đỉnh vào thời điểm nào?",
           "primary_entity": "2026-01-01",
           "primary_metric": "daily_total_downtime",
           "primary_value": 4500.0,
@@ -163,7 +163,7 @@
               "value": 4500.0
             }
           ],
-          "query_result_id": "087aef4f-02ae-40a5-b790-5d9d11056c0e",
+          "query_result_id": "b12d44d8-5a3d-4f4e-a4a7-393d54e5a0c1",
           "relevance_score": 0.95,
           "magnitude_score": 0.78,
           "actionability_score": 0.82,
@@ -173,10 +173,10 @@
           "triviality_penalty": 0.0,
           "final_score": 0.8775,
           "allowed_claims": [
-            "Downtime dat dinh vao 2026-01-01 voi 1 giờ 15 phút tu 24 lan ghi nhan."
+            "Downtime đạt đỉnh vào 2026-01-01 với 1 giờ 15 phút từ 24 lần dừng."
           ],
           "limitations": [],
-          "statement": "Downtime dat dinh vao 2026-01-01 voi 1 giờ 15 phút tu 24 lan ghi nhan.",
+          "statement": "Downtime đạt đỉnh vào 2026-01-01 với 1 giờ 15 phút từ 24 lần dừng.",
           "facts": [
             {
               "key": "peak_duration",
@@ -221,11 +221,11 @@
       },
       "selected_insights": [
         {
-          "insight_id": "f3d73d58-9b66-435f-a27d-9b7ec3d163ca",
+          "insight_id": "b3a4a96f-5259-48c5-bd2f-4c6c74b01341",
           "insight_type": "distribution",
           "domain": "generic_tabular",
-          "title": "Phan bo theo cot nghiep vu",
-          "business_question": "Gia tri nao xuat hien nhieu nhat trong cot phan loai?",
+          "title": "Phân bố theo cột nghiệp vụ",
+          "business_question": "Giá trị nào xuất hiện nhiều nhất trong cột phân loại?",
           "primary_entity": "North",
           "primary_metric": "row_count",
           "primary_value": 40,
@@ -240,7 +240,7 @@
               "value": 40
             }
           ],
-          "query_result_id": "59f820b7-ab68-49fa-8bad-805ebe396d8f",
+          "query_result_id": "40133a5d-1648-47a0-a2f2-8d5c4e8993a7",
           "relevance_score": 0.7,
           "magnitude_score": 0.6,
           "actionability_score": 0.55,
@@ -250,10 +250,10 @@
           "triviality_penalty": 0.0,
           "final_score": 0.7,
           "allowed_claims": [
-            "region: North xuat hien nhieu nhat voi 40 ban ghi, chiem 50%."
+            "region: North xuất hiện nhiều nhất với 40 bản ghi, chiếm 50%."
           ],
           "limitations": [],
-          "statement": "region: North xuat hien nhieu nhat voi 40 ban ghi, chiem 50%.",
+          "statement": "region: North xuất hiện nhiều nhất với 40 bản ghi, chiếm 50%.",
           "facts": [
             {
               "key": "top_count",
@@ -268,11 +268,11 @@
           ]
         },
         {
-          "insight_id": "6f34f996-375c-413c-8c13-20f690652bc4",
+          "insight_id": "93e9a363-b240-4979-a5c7-756edb3d8ac1",
           "insight_type": "metric_summary",
           "domain": "generic_tabular",
-          "title": "Tong hop chi so so",
-          "business_question": "Cot so nao co the dung lam metric tong quan?",
+          "title": "Tổng hợp chỉ số số",
+          "business_question": "Cột số nào có thể dùng làm metric tổng quan?",
           "primary_entity": null,
           "primary_metric": "sales",
           "primary_value": 1600.0,
@@ -286,7 +286,7 @@
               "value": 1600.0
             }
           ],
-          "query_result_id": "f19ebaa8-0810-48c8-9c31-85b4bf0df31d",
+          "query_result_id": "b0e93661-b732-4783-a97e-65af222f5e86",
           "relevance_score": 0.66,
           "magnitude_score": 0.56,
           "actionability_score": 0.5,
@@ -296,10 +296,10 @@
           "triviality_penalty": 0.0,
           "final_score": 0.668,
           "allowed_claims": [
-            "sales co tong 1.600 va trung binh 20."
+            "sales có tổng 1.600 và trung bình 20."
           ],
           "limitations": [],
-          "statement": "sales co tong 1.600 va trung binh 20.",
+          "statement": "sales có tổng 1.600 và trung bình 20.",
           "facts": [
             {
               "key": "measure_total",
@@ -344,11 +344,11 @@
       },
       "selected_insights": [
         {
-          "insight_id": "f7c1379b-d01b-4aa6-9cc5-3c8d0bb33600",
+          "insight_id": "4946af73-082c-49f0-aa6f-890f271c272a",
           "insight_type": "distribution",
           "domain": "generic_tabular",
-          "title": "Phan bo theo cot nghiep vu",
-          "business_question": "Gia tri nao xuat hien nhieu nhat trong cot phan loai?",
+          "title": "Phân bố theo cột nghiệp vụ",
+          "business_question": "Giá trị nào xuất hiện nhiều nhất trong cột phân loại?",
           "primary_entity": "A",
           "primary_metric": "row_count",
           "primary_value": 40,
@@ -363,7 +363,7 @@
               "value": 40
             }
           ],
-          "query_result_id": "ab4c4a22-677a-49e5-8481-a0f052ce6843",
+          "query_result_id": "ba1475bb-d285-41c2-9e73-582d20c3714c",
           "relevance_score": 0.7,
           "magnitude_score": 0.6,
           "actionability_score": 0.55,
@@ -373,10 +373,10 @@
           "triviality_penalty": 0.0,
           "final_score": 0.7,
           "allowed_claims": [
-            "category: A xuat hien nhieu nhat voi 40 ban ghi, chiem 50%."
+            "category: A xuất hiện nhiều nhất với 40 bản ghi, chiếm 50%."
           ],
           "limitations": [],
-          "statement": "category: A xuat hien nhieu nhat voi 40 ban ghi, chiem 50%.",
+          "statement": "category: A xuất hiện nhiều nhất với 40 bản ghi, chiếm 50%.",
           "facts": [
             {
               "key": "top_count",
@@ -391,11 +391,11 @@
           ]
         },
         {
-          "insight_id": "07d9ceda-e639-4262-a040-dd3ea300a0c6",
+          "insight_id": "d716a025-1f2d-4fd7-b1d1-48e2faa85646",
           "insight_type": "metric_summary",
           "domain": "generic_tabular",
-          "title": "Tong hop chi so so",
-          "business_question": "Cot so nao co the dung lam metric tong quan?",
+          "title": "Tổng hợp chỉ số số",
+          "business_question": "Cột số nào có thể dùng làm metric tổng quan?",
           "primary_entity": null,
           "primary_metric": "amount",
           "primary_value": 560.0,
@@ -409,7 +409,7 @@
               "value": 560.0
             }
           ],
-          "query_result_id": "18f87581-9548-4e50-b486-d6d242afd75e",
+          "query_result_id": "3fb65e67-8bab-4b16-b01c-317d96b66ca7",
           "relevance_score": 0.66,
           "magnitude_score": 0.56,
           "actionability_score": 0.5,
@@ -419,10 +419,10 @@
           "triviality_penalty": 0.0,
           "final_score": 0.668,
           "allowed_claims": [
-            "amount co tong 560 va trung binh 7."
+            "amount có tổng 560 và trung bình 7."
           ],
           "limitations": [],
-          "statement": "amount co tong 560 va trung binh 7.",
+          "statement": "amount có tổng 560 và trung bình 7.",
           "facts": [
             {
               "key": "measure_total",
@@ -467,11 +467,11 @@
       },
       "selected_insights": [
         {
-          "insight_id": "04c8b22c-767d-4db4-854b-fe9ddb97f41a",
+          "insight_id": "ea852d63-1fa9-4e13-a4de-1bf471be0297",
           "insight_type": "loss_duration",
           "domain": "loss_assignment",
-          "title": "Nhom ton that dong gop thoi luong lon nhat",
-          "business_question": "Nhom nao dong gop tong thoi luong lon nhat?",
+          "title": "Nhóm tổn thất đóng góp thời lượng lớn nhất",
+          "business_question": "Nhóm nào đóng góp tổng thời lượng lớn nhất?",
           "primary_entity": "Prod",
           "primary_metric": "total_downtime",
           "primary_value": 800.0,
@@ -486,7 +486,7 @@
               "value": 800.0
             }
           ],
-          "query_result_id": "f921b13a-181c-4e0e-bf39-cc793315dac8",
+          "query_result_id": "02c65343-7a90-4f48-bacc-de25933b2400",
           "relevance_score": 0.96,
           "magnitude_score": 0.8,
           "actionability_score": 0.85,
@@ -496,10 +496,10 @@
           "triviality_penalty": 0.0,
           "final_score": 0.891,
           "allowed_claims": [
-            "Prod co tong thoi luong cao nhat: 13 phút 20 giây, gom 40 ban ghi."
+            "Prod có tổng thời lượng cao nhất: 13 phút 20 giây, gồm 40 bản ghi."
           ],
           "limitations": [],
-          "statement": "Prod co tong thoi luong cao nhat: 13 phút 20 giây, gom 40 ban ghi.",
+          "statement": "Prod có tổng thời lượng cao nhất: 13 phút 20 giây, gồm 40 bản ghi.",
           "facts": [
             {
               "key": "duration",
@@ -519,11 +519,11 @@
           ]
         },
         {
-          "insight_id": "67fa9d5c-f0bf-46d4-af89-250cc9f778b7",
+          "insight_id": "93357719-4c08-4b6e-a46b-e17075b327ec",
           "insight_type": "distribution",
           "domain": "loss_assignment",
-          "title": "Nhom ton that xuat hien nhieu nhat",
-          "business_question": "Nhom/loai ton that nao chiem ty trong lon nhat?",
+          "title": "Nhóm tổn thất xuất hiện nhiều nhất",
+          "business_question": "Nhóm/loại tổn thất nào chiếm tỷ trọng lớn nhất?",
           "primary_entity": "Prod",
           "primary_metric": "row_count",
           "primary_value": 40,
@@ -538,7 +538,7 @@
               "value": 40
             }
           ],
-          "query_result_id": "75017be4-d741-4c34-a0d2-bfbcf8c829a5",
+          "query_result_id": "4d109bb6-af20-4796-a37b-26a2047bafaa",
           "relevance_score": 0.92,
           "magnitude_score": 0.72,
           "actionability_score": 0.76,
@@ -548,10 +548,10 @@
           "triviality_penalty": 0.0,
           "final_score": 0.843,
           "allowed_claims": [
-            "Prod xuat hien nhieu nhat voi 40 ban ghi, chiem 50% tong so ban ghi."
+            "Prod xuất hiện nhiều nhất với 40 bản ghi, chiếm 50% tổng số bản ghi."
           ],
           "limitations": [],
-          "statement": "Prod xuat hien nhieu nhat voi 40 ban ghi, chiem 50% tong so ban ghi.",
+          "statement": "Prod xuất hiện nhiều nhất với 40 bản ghi, chiếm 50% tổng số bản ghi.",
           "facts": [
             {
               "key": "top_count",
@@ -566,11 +566,11 @@
           ]
         },
         {
-          "insight_id": "557416b8-7d27-4912-bab3-49e3b7e86082",
+          "insight_id": "46079f9b-1c43-4c2b-9fe8-b020af0ccb4b",
           "insight_type": "concentration",
           "domain": "loss_assignment",
-          "title": "Muc tap trung cua cac nhom dau",
-          "business_question": "Ton that co tap trung vao it nhom khong?",
+          "title": "Mức tập trung của các nhóm đầu",
+          "business_question": "Tổn thất có tập trung vào ít nhóm không?",
           "primary_entity": "top_3",
           "primary_metric": "row_count_share",
           "primary_value": 100.0,
@@ -585,7 +585,7 @@
               "value": 100.0
             }
           ],
-          "query_result_id": "241af8f0-cdea-4f8f-89a5-7385e1b0fab9",
+          "query_result_id": "a76b8f15-d899-425a-920f-75bcc22d5af7",
           "relevance_score": 0.85,
           "magnitude_score": 0.7,
           "actionability_score": 0.72,
@@ -595,10 +595,10 @@
           "triviality_penalty": 0.0,
           "final_score": 0.8065,
           "allowed_claims": [
-            "Ba nhom/loai dung dau chiem 100% voi 80 ban ghi, cho thay muc tap trung cua phan loai ton that."
+            "Ba nhóm/loại đứng đầu chiếm 100% với 80 bản ghi, cho thấy mức tập trung của phân loại tổn thất."
           ],
           "limitations": [],
-          "statement": "Ba nhom/loai dung dau chiem 100% voi 80 ban ghi, cho thay muc tap trung cua phan loai ton that.",
+          "statement": "Ba nhóm/loại đứng đầu chiếm 100% với 80 bản ghi, cho thấy mức tập trung của phân loại tổn thất.",
           "facts": [
             {
               "key": "top3_count",
@@ -643,11 +643,11 @@
       },
       "selected_insights": [
         {
-          "insight_id": "2e4e814f-581b-487c-a5fd-eead6eb1272f",
+          "insight_id": "0d1aff99-8c2e-4536-9c68-cc238951c98b",
           "insight_type": "trend",
           "domain": "entry_transaction",
-          "title": "Ngay co giao dich cao nhat",
-          "business_question": "Thoi diem nao co luong giao dich cao nhat?",
+          "title": "Ngày có giao dịch cao nhất",
+          "business_question": "Thời điểm nào có lượng giao dịch cao nhất?",
           "primary_entity": "2026-01-01",
           "primary_metric": "transaction_count",
           "primary_value": 24,
@@ -662,7 +662,7 @@
               "value": 24
             }
           ],
-          "query_result_id": "bd53ad17-736a-43ab-9003-6c61687bbdee",
+          "query_result_id": "0ef0e293-dbca-4c07-9c21-dbdb4d05027d",
           "relevance_score": 0.95,
           "magnitude_score": 0.85,
           "actionability_score": 0.85,
@@ -672,10 +672,10 @@
           "triviality_penalty": 0.0,
           "final_score": 0.8975,
           "allowed_claims": [
-            "Luong giao dich/ghi nhan dat dinh vao 2026-01-01 voi 24 ban ghi."
+            "Lượng giao dịch/ghi nhận đạt đỉnh vào 2026-01-01 với 24 bản ghi."
           ],
           "limitations": [],
-          "statement": "Luong giao dich/ghi nhan dat dinh vao 2026-01-01 voi 24 ban ghi.",
+          "statement": "Lượng giao dịch/ghi nhận đạt đỉnh vào 2026-01-01 với 24 bản ghi.",
           "facts": [
             {
               "key": "peak_count",
@@ -685,11 +685,11 @@
           ]
         },
         {
-          "insight_id": "641919b9-9f28-48b6-b441-c81b2e1641d9",
+          "insight_id": "c385e857-8b54-4fa8-aa0b-4ea9f1717f86",
           "insight_type": "metric_summary",
           "domain": "entry_transaction",
-          "title": "Tong gia tri giao dich",
-          "business_question": "Tong gia tri giao dich trong file la bao nhieu?",
+          "title": "Tổng giá trị giao dịch",
+          "business_question": "Tổng giá trị giao dịch trong file là bao nhiêu?",
           "primary_entity": null,
           "primary_metric": "gia_tri_can",
           "primary_value": 2000.0,
@@ -703,7 +703,7 @@
               "value": 2000.0
             }
           ],
-          "query_result_id": "f506f7ca-b2ac-4eeb-911c-d7b7f129ab68",
+          "query_result_id": "7c9c8a2b-d08a-48d3-aef1-16b6f2043b32",
           "relevance_score": 0.92,
           "magnitude_score": 0.75,
           "actionability_score": 0.78,
@@ -713,10 +713,10 @@
           "triviality_penalty": 0.0,
           "final_score": 0.853,
           "allowed_claims": [
-            "Tong gia tri giao dich dat 2.000 tren 80 ban ghi; gia tri trung binh la 25."
+            "Tổng giá trị giao dịch đạt 2.000 trên 80 bản ghi; giá trị trung bình là 25."
           ],
           "limitations": [],
-          "statement": "Tong gia tri giao dich dat 2.000 tren 80 ban ghi; gia tri trung binh la 25.",
+          "statement": "Tổng giá trị giao dịch đạt 2.000 trên 80 bản ghi; giá trị trung bình là 25.",
           "facts": [
             {
               "key": "total_value",
@@ -736,11 +736,11 @@
           ]
         },
         {
-          "insight_id": "80c0ff87-46f2-41fc-9bbf-a25b215df488",
+          "insight_id": "c81de1c9-3e96-44cb-af24-deedf7498e19",
           "insight_type": "distribution",
           "domain": "entry_transaction",
-          "title": "Nhom/cua cong giao dich noi bat",
-          "business_question": "Doi tuong hoac nhom nao xuat hien nhieu nhat?",
+          "title": "Nhóm/cửa cổng giao dịch nổi bật",
+          "business_question": "Đối tượng hoặc nhóm nào xuất hiện nhiều nhất?",
           "primary_entity": "G1",
           "primary_metric": "transaction_count",
           "primary_value": 40,
@@ -755,7 +755,7 @@
               "value": 40
             }
           ],
-          "query_result_id": "7910a36f-4e37-4279-9a36-1c4ad3fdf0d8",
+          "query_result_id": "3a717c15-5b30-4e31-acf0-a2cff1a91222",
           "relevance_score": 0.86,
           "magnitude_score": 0.68,
           "actionability_score": 0.7,
@@ -765,10 +765,10 @@
           "triviality_penalty": 0.0,
           "final_score": 0.802,
           "allowed_claims": [
-            "G1 co so giao dich/ghi nhan cao nhat voi 40 ban ghi, chiem 50%."
+            "G1 có số giao dịch/ghi nhận cao nhất với 40 bản ghi, chiếm 50%."
           ],
           "limitations": [],
-          "statement": "G1 co so giao dich/ghi nhan cao nhat voi 40 ban ghi, chiem 50%.",
+          "statement": "G1 có số giao dịch/ghi nhận cao nhất với 40 bản ghi, chiếm 50%.",
           "facts": [
             {
               "key": "top_count",

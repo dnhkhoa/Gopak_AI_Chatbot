@@ -15,7 +15,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": true,
       "sql_present": false,
-      "latency_ms": 32.1,
+      "latency_ms": 33.2,
       "passed": true
     },
     {
@@ -33,7 +33,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 17.9,
+      "latency_ms": 18.0,
       "passed": true
     },
     {
@@ -51,7 +51,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": true,
       "sql_present": true,
-      "latency_ms": 153.1,
+      "latency_ms": 140.3,
       "passed": true
     },
     {
@@ -69,7 +69,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 18.6,
+      "latency_ms": 19.9,
       "passed": true
     }
   ],
@@ -89,7 +89,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": true,
       "sql_present": false,
-      "latency_ms": 31.5,
+      "latency_ms": 33.3,
       "passed": true
     },
     {
@@ -107,7 +107,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 17.0,
+      "latency_ms": 17.9,
       "passed": true
     },
     {
@@ -125,7 +125,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": true,
       "sql_present": true,
-      "latency_ms": 142.7,
+      "latency_ms": 139.6,
       "passed": true
     },
     {
@@ -143,7 +143,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 16.7,
+      "latency_ms": 18.7,
       "passed": true
     }
   ],
@@ -163,7 +163,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": true,
       "sql_present": false,
-      "latency_ms": 31.2,
+      "latency_ms": 35.5,
       "passed": true
     },
     {
@@ -181,7 +181,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 16.9,
+      "latency_ms": 17.8,
       "passed": true
     },
     {
@@ -199,7 +199,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": true,
       "sql_present": true,
-      "latency_ms": 155.4,
+      "latency_ms": 141.5,
       "passed": true
     },
     {
@@ -217,7 +217,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 17.4,
+      "latency_ms": 19.8,
       "passed": true
     }
   ],
@@ -237,7 +237,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": true,
       "sql_present": false,
-      "latency_ms": 34.3,
+      "latency_ms": 32.9,
       "passed": true
     },
     {
@@ -255,7 +255,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 17.9,
+      "latency_ms": 20.4,
       "passed": true
     },
     {
@@ -273,7 +273,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": true,
       "sql_present": true,
-      "latency_ms": 159.7,
+      "latency_ms": 149.2,
       "passed": true
     },
     {
@@ -291,7 +291,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 18.5,
+      "latency_ms": 18.3,
       "passed": true
     }
   ],
@@ -311,7 +311,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": true,
       "sql_present": false,
-      "latency_ms": 31.2,
+      "latency_ms": 36.0,
       "passed": true
     },
     {
@@ -329,7 +329,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 17.8,
+      "latency_ms": 17.0,
       "passed": true
     },
     {
@@ -347,7 +347,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": true,
       "sql_present": true,
-      "latency_ms": 142.8,
+      "latency_ms": 148.4,
       "passed": true
     },
     {
@@ -365,7 +365,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 16.8,
+      "latency_ms": 18.0,
       "passed": true
     }
   ],
@@ -385,7 +385,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": true,
       "sql_present": false,
-      "latency_ms": 32.2,
+      "latency_ms": 33.4,
       "passed": true
     },
     {
@@ -403,7 +403,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 18.5,
+      "latency_ms": 18.0,
       "passed": true
     },
     {
@@ -421,7 +421,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": true,
       "sql_present": true,
-      "latency_ms": 147.7,
+      "latency_ms": 150.1,
       "passed": true
     },
     {
@@ -439,7 +439,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 18.6,
+      "latency_ms": 18.0,
       "passed": true
     }
   ],
@@ -459,7 +459,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": true,
       "sql_present": false,
-      "latency_ms": 30.3,
+      "latency_ms": 34.7,
       "passed": true
     },
     {
@@ -477,7 +477,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 18.1,
+      "latency_ms": 17.8,
       "passed": true
     },
     {
@@ -495,7 +495,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": true,
       "sql_present": true,
-      "latency_ms": 145.9,
+      "latency_ms": 142.3,
       "passed": true
     },
     {
@@ -513,7 +513,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 18.1,
+      "latency_ms": 20.1,
       "passed": true
     }
   ],
@@ -533,7 +533,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": true,
       "sql_present": false,
-      "latency_ms": 39.6,
+      "latency_ms": 34.7,
       "passed": true
     },
     {
@@ -551,7 +551,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 19.7,
+      "latency_ms": 18.9,
       "passed": true
     },
     {
@@ -569,7 +569,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": true,
       "sql_present": true,
-      "latency_ms": 180.8,
+      "latency_ms": 165.5,
       "passed": true
     },
     {
@@ -587,7 +587,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 17.2,
+      "latency_ms": 20.0,
       "passed": true
     }
   ],
@@ -607,7 +607,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": true,
       "sql_present": false,
-      "latency_ms": 32.5,
+      "latency_ms": 33.2,
       "passed": true
     },
     {
@@ -625,7 +625,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 18.4,
+      "latency_ms": 17.5,
       "passed": true
     },
     {
@@ -643,7 +643,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": true,
       "sql_present": true,
-      "latency_ms": 149.8,
+      "latency_ms": 140.6,
       "passed": true
     },
     {
@@ -661,7 +661,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 18.9,
+      "latency_ms": 18.1,
       "passed": true
     }
   ],
@@ -681,7 +681,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": true,
       "sql_present": false,
-      "latency_ms": 32.5,
+      "latency_ms": 34.7,
       "passed": true
     },
     {
@@ -699,7 +699,7 @@
       "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 19.1,
+      "latency_ms": 18.9,
       "passed": true
     },
     {
@@ -717,7 +717,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": true,
       "sql_present": true,
-      "latency_ms": 148.2,
+      "latency_ms": 143.4,
       "passed": true
     },
     {
@@ -735,7 +735,7 @@
       "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
       "file_scope_validated": false,
       "sql_present": false,
-      "latency_ms": 18.1,
+      "latency_ms": 16.8,
       "passed": true
     }
   ]

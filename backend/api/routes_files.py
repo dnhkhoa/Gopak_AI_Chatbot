@@ -3,6 +3,7 @@ from __future__ import annotations
 from fastapi import APIRouter, HTTPException, UploadFile, status
 
 from backend.schemas.file import UploadedFilePayload
+from src.config import get_settings
 from src.files.lifecycle import FileLifecycleError, FileLifecycleService
 from src.files.upload_store import find_uploaded_file, list_uploaded_files
 
@@ -17,6 +18,8 @@ def list_files() -> list[UploadedFilePayload]:
 
 @router.post("/upload", response_model=UploadedFilePayload, status_code=status.HTTP_201_CREATED)
 def upload_file(file: UploadFile) -> UploadedFilePayload:
+    if not get_settings().customer_upload_enabled:
+        raise HTTPException(status_code=403, detail={"code": "CUSTOMER_UPLOAD_DISABLED", "message": "Customer uploads are disabled for the production analytics bundle."})
     try:
         return UploadedFilePayload(**FileLifecycleService().upload(file))
     except FileLifecycleError as exc:

@@ -1,0 +1,52 @@
+{
+  "schema_version": "2026-06-production-analytics-v1",
+  "bundle_name": "Production Analytics Bundle",
+  "sources": [
+    {
+      "source_id": "machine_downtime",
+      "display_name": "Machine Downtime",
+      "workbook_path": "Machine_Downtime_20260203_100753.xlsx",
+      "business_domain": "machine_downtime",
+      "primary_grain": "downtime_event",
+      "timestamp_column": "thoi_gian_bat_dau",
+      "timestamp_storage_timezone": "local_workbook_time",
+      "supported_metrics": ["downtime_duration", "downtime_count", "affected_machines", "downtime_reason"],
+      "entity_keys": ["machine"],
+      "approved_relationships": []
+    },
+    {
+      "source_id": "loss_assignment",
+      "display_name": "Loss Assignment",
+      "workbook_path": "Loss_Assignment_20260203_100840.xlsx",
+      "business_domain": "loss_assignment",
+      "primary_grain": "loss_event",
+      "timestamp_column": "thoi_gian_bat_dau",
+      "timestamp_storage_timezone": "local_workbook_time",
+      "supported_metrics": ["loss_duration", "loss_count", "loss_group", "loss_reason"],
+      "entity_keys": ["machine"],
+      "approved_relationships": []
+    },
+    {
+      "source_id": "apqoee_cumulative",
+      "display_name": "APQOEE Cumulative",
+      "workbook_path": "Cup3.xlsx",
+      "business_domain": "production_efficiency",
+      "primary_grain": "cumulative_snapshot",
+      "timestamp_column": "ExecuteAt",
+      "timestamp_storage_timezone": "UTC",
+      "supported_metrics": [
+        "oee",
+        "availability",
+        "performance",
+        "quality",
+        "total_counter_in",
+        "total_counter_out",
+        "total_counter_ng",
+        "total_run_time_ms",
+        "total_planned_downtime_ms"
+      ],
+      "entity_keys": [],
+      "approved_relationships": []
+    }
+  ]
+}

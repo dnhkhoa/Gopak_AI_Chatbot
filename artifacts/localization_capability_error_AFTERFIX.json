@@ -1,0 +1,259 @@
+{
+  "conversation_id": "e98e5629-593c-486d-bc75-ddec6a9643c3",
+  "turns": [
+    {
+      "turn": 1,
+      "active_file": "2ad2989784fc41ffb9fef3225034db54",
+      "request": "Phân tích dữ liệu này và cho tôi ba phát hiện quan trọng nhất.",
+      "resolved_intent": "ANALYTICAL_QUERY",
+      "public_response": {
+        "response_type": "text",
+        "title": "Ba insight cho quản lý",
+        "summary": "Ba thông tin nên đưa vào cuộc họp ngắn:\n- Phát hiện: Lượng giao dịch/ghi nhận đạt đỉnh vào 2026-02-03 với 1.294 bản ghi. Ý nghĩa: nhận diện thời điểm cần điều tra sâu hơn.\n- Phát hiện: Tổng giá trị giao dịch đạt 4.985.500 trên 1.294 bản ghi; giá trị trung bình là 3.852,78. Ý nghĩa: nắm quy mô giá trị giao dịch.\n- Phát hiện: Cổng 1 có số giao dịch/ghi nhận cao nhất với 1.048 bản ghi, chiếm 81%. Ý nghĩa: thấy nơi dữ liệu tập trung nhiều nhất.\nCác thông tin này được chọn vì có số liệu trực tiếp, có ý nghĩa quản lý và không dùng cột số thứ tự, mã định danh hoặc metadata kỹ thuật.",
+        "primary_value": null,
+        "table_columns": null,
+        "chart_title": null,
+        "error_code": null,
+        "execution_mode": "DETERMINISTIC",
+        "llm_called": false,
+        "capability": null,
+        "file_scope_validated": true
+      },
+      "health_before": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      },
+      "health_after": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      }
+    },
+    {
+      "turn": 2,
+      "active_file": "2ad2989784fc41ffb9fef3225034db54",
+      "request": "Máy nào có tổng downtime cao nhất?",
+      "resolved_intent": "ANALYTICAL_QUERY",
+      "public_response": {
+        "response_type": "refusal",
+        "title": "File hiện tại không hỗ trợ yêu cầu này",
+        "summary": "File hiện tại không chứa máy và thời gian downtime để thực hiện yêu cầu này. File “Machine_Downtime_20260203_100753.xlsx” phù hợp với yêu cầu này. Hãy chọn file đó để tạo một cuộc trò chuyện mới rồi thực hiện lại.",
+        "primary_value": null,
+        "table_columns": null,
+        "chart_title": null,
+        "error_code": "UNSUPPORTED_BY_ACTIVE_FILE",
+        "execution_mode": "UNSUPPORTED_BY_ACTIVE_FILE",
+        "llm_called": false,
+        "capability": {
+          "supported": false,
+          "missing_dimensions": [
+            "machine"
+          ],
+          "missing_metrics": [
+            "downtime_duration"
+          ],
+          "missing_datetime_roles": [],
+          "missing_capabilities": [],
+          "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+          "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+          "recommended_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "recommended_file_name": "Machine_Downtime_20260203_100753.xlsx"
+        },
+        "file_scope_validated": true
+      },
+      "health_before": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      },
+      "health_after": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      }
+    },
+    {
+      "turn": 3,
+      "active_file": "2ad2989784fc41ffb9fef3225034db54",
+      "request": "Phân tích xu hướng downtime theo thời gian.",
+      "resolved_intent": "ANALYTICAL_QUERY",
+      "public_response": {
+        "response_type": "refusal",
+        "title": "File hiện tại không hỗ trợ yêu cầu này",
+        "summary": "File hiện tại không chứa thời gian downtime để thực hiện yêu cầu này. File “Machine_Downtime_20260203_100753.xlsx” phù hợp với yêu cầu này. Hãy chọn file đó để tạo một cuộc trò chuyện mới rồi thực hiện lại.",
+        "primary_value": null,
+        "table_columns": null,
+        "chart_title": null,
+        "error_code": "UNSUPPORTED_BY_ACTIVE_FILE",
+        "execution_mode": "UNSUPPORTED_BY_ACTIVE_FILE",
+        "llm_called": false,
+        "capability": {
+          "supported": false,
+          "missing_dimensions": [],
+          "missing_metrics": [
+            "downtime_duration"
+          ],
+          "missing_datetime_roles": [],
+          "missing_capabilities": [],
+          "active_file_id": "2ad2989784fc41ffb9fef3225034db54",
+          "active_file_name": "EntryTransaction_20260203_164943.xlsx",
+          "recommended_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "recommended_file_name": "Machine_Downtime_20260203_100753.xlsx"
+        },
+        "file_scope_validated": true
+      },
+      "health_before": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      },
+      "health_after": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      }
+    },
+    {
+      "turn": 4,
+      "active_file": "2ad2989784fc41ffb9fef3225034db54",
+      "request": "Tạo báo cáo tổng quan.",
+      "resolved_intent": "DASHBOARD_REQUEST",
+      "public_response": {
+        "response_type": "error",
+        "title": "Cần làm rõ yêu cầu",
+        "summary": "Mình chưa dựng được truy vấn an toàn cho yêu cầu này. Hãy diễn đạt cụ thể hơn về cột, chỉ số hoặc khoảng thời gian.",
+        "primary_value": null,
+        "table_columns": null,
+        "chart_title": null,
+        "error_code": "QUERY_VALIDATION_FAILED",
+        "execution_mode": "ERROR",
+        "llm_called": false,
+        "capability": null,
+        "file_scope_validated": false
+      },
+      "health_before": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      },
+      "health_after": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      }
+    }
+  ]
+}

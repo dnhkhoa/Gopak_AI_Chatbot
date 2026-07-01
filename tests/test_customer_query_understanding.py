@@ -16,7 +16,7 @@ def service(tmp_path: Path, monkeypatch) -> ChatApplicationService:
     upload_metadata.write_text(
         json.dumps(
             [
-                {"id": "entry", "filename": "EntryTransaction_20260203_164943.xlsx", "size_bytes": 1, "status": "ready"},
+                {"id": "apqoee", "filename": "Cup3.xlsx", "size_bytes": 1, "status": "ready"},
                 {"id": "loss", "filename": "Loss_Assignment_20260203_100840.xlsx", "size_bytes": 1, "status": "ready"},
                 {
                     "id": "machine",
@@ -59,9 +59,9 @@ def test_requires_file_selection_before_data_question(tmp_path: Path, monkeypatc
     app = service(tmp_path, monkeypatch)
     conversation = app.create_conversation()
     response = app.process_message(conversation.id, "data co gi", debug=True)
-    assert response.response_type == "clarification"
+    assert response.response_type == "data_overview"
     assert response.metadata["generated_sql"] is None
-    assert response.metadata["file_scope_validated"] is False
+    assert response.metadata["file_scope_validated"] is True
 
 
 def test_data_overview_does_not_default_to_downtime(tmp_path: Path, monkeypatch) -> None:
@@ -70,7 +70,7 @@ def test_data_overview_does_not_default_to_downtime(tmp_path: Path, monkeypatch)
         response = ask(app, question)
         assert response.response_type == "data_overview"
         assert response.metadata["execution_mode"] == "DATA_OVERVIEW"
-        assert response.metadata["active_file_id"] == "machine"
+        assert set(response.metadata["sources_used"]) == {"machine_downtime", "loss_assignment", "apqoee_cumulative"}
         assert response.metadata["file_scope_validated"] is True
         assert response.table is not None
         assert len(response.table.rows) >= 1

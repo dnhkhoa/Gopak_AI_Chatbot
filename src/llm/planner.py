@@ -229,31 +229,9 @@ class QueryPlanner:
                     metadata.latency_ms["total"] = (perf_counter() - start) * 1000
                     return PlannerResult(plan=plan, latency_ms=metadata.latency_ms["total"], raw_response=raw, used_fallback=False, metadata=metadata.model_dump())
                 except Exception as retry_exc:
-                    if deterministic and deterministic.plan:
-                        try:
-                            validation_start = perf_counter()
-                            PlanValidator(self.catalog).validate(deterministic.plan)
-                            metadata.validation_passed = True
-                            metadata.latency_ms["validation"] = (perf_counter() - validation_start) * 1000
-                            metadata.extra["semantic_fallback_after_llm_failure"] = True
-                            metadata.fallback_used = True
-                            metadata.fallback_reason = "semantic_llm_failed_after_retry"
-                            metadata.extra["retry_error"] = str(retry_exc)
-                            metadata.extra["schema_validation_errors"] = [first_error, str(retry_exc)]
-                            metadata.selected_tables = deterministic.plan.tables
-                            metadata.latency_ms["total"] = (perf_counter() - start) * 1000
-                            return PlannerResult(plan=deterministic.plan, latency_ms=metadata.latency_ms["total"], raw_response=raw, used_fallback=True, error=str(retry_exc), metadata=metadata.model_dump())
-                        except Exception:
-                            pass
-                    if not (self.settings.enable_heuristic_fallback and self.settings.force_legacy_fallback_mode):
-                        return self._safe_failure(start, raw, metadata, str(retry_exc))
-        if self.settings.enable_heuristic_fallback and self.settings.force_legacy_fallback_mode:
-            plan = self._heuristic_plan(question, state)
-            metadata.execution_mode = ExecutionMode.LEGACY_FALLBACK.value
-            metadata.fallback_used = True
-            metadata.fallback_reason = "FORCE_LEGACY_FALLBACK_MODE enabled"
-            metadata.latency_ms["total"] = (perf_counter() - start) * 1000
-            return PlannerResult(plan=plan, latency_ms=metadata.latency_ms["total"], raw_response=raw, used_fallback=True, metadata=metadata.model_dump())
+                    metadata.extra["retry_error"] = str(retry_exc)
+                    metadata.extra["schema_validation_errors"] = [first_error, str(retry_exc)]
+                    return self._safe_failure(start, raw, metadata, str(retry_exc))
         return self._safe_failure(start, raw, metadata, "No safe route produced an executable plan.")
 
     def _apply_question_requirements(self, plan: QueryPlan, question: str, deterministic_plan: QueryPlan | None) -> None:
@@ -295,12 +273,6 @@ class QueryPlanner:
                 plan.metrics[0].percentage_of_total = True
 
     def _rescue_llm_clarification(self, plan: QueryPlan, deterministic_plan: QueryPlan | None, metadata: ExecutionMetadata) -> QueryPlan:
-        if plan.intent == "clarification" and deterministic_plan is not None and deterministic_plan.intent not in {"clarification", "refusal", "safe_failure"}:
-            metadata.fallback_used = True
-            metadata.fallback_reason = "semantic_llm_returned_clarification_with_valid_deterministic_candidate"
-            metadata.extra["semantic_rescue_from_clarification"] = True
-            metadata.selected_tables = deterministic_plan.tables
-            return deterministic_plan
         return plan
 
     def _safe_failure(self, start: float, raw: str, metadata: ExecutionMetadata, error: str) -> PlannerResult:
@@ -330,9 +302,7 @@ class QueryPlanner:
         selected_tables = [table["table_name"] for table in selected_catalog.get("tables", [])]
         if isinstance(data.get("tables"), list):
             data["tables"] = [item.get("table_name") if isinstance(item, dict) else item for item in data["tables"]]
-        if not data.get("tables") and selected_tables and data.get("intent") not in {"clarification", "refusal"}:
-            data["tables"] = [selected_tables[0]]
-        active_tables = data.get("tables") or selected_tables[:1]
+        active_tables = data.get("tables") or []
         role_map = self._role_map(selected_catalog, active_tables)
 
         def map_col(value):
@@ -611,10 +581,10 @@ class QueryPlanner:
         for table in candidates:
             text = _ascii(table["table_name"] + " " + table["source"])
             score = fuzz.partial_ratio(q, text)
-            if "truy cap" in q or "ra vao cong" in q or "cong ra" in q or "cong vao" in q:
-                score += 40 if "entrytransaction" in text else 0
+            if any(term in q for term in ["oee", "apqoee", "availability", "performance", "quality"]):
+                score += 40 if "apqoee_cumulative" in text or "cup3" in text else 0
             if any(word in q for word in ["downtime", "dung", "thoi gian", "may", "ton that", "bao tri", "qc", "nguyen nhan", "loi", "su co"]):
-                score += 100 if "machine_downtime" in text else 20 if "loss_assignment" in text else -30 if "entrytransaction" in text else 0
+                score += 100 if "machine_downtime" in text else 20 if "loss_assignment" in text else -30 if "apqoee_cumulative" in text else 0
             scored.append((int(score), table["table_name"]))
         return sorted(scored, reverse=True)[0][1]
 

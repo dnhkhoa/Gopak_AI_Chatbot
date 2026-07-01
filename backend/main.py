@@ -68,6 +68,9 @@ def create_app() -> FastAPI:
             settings.ollama_model,
             settings.show_internal_debug_metadata,
         )
+        if settings.customer_production_mode and not settings.customer_upload_enabled:
+            logger.info("upload reconciliation skipped: customer production bundle disables uploads")
+            return
         try:
             result = FileLifecycleService().reconcile_uploaded_files(auto_retry=True)
             logger.info("upload reconciliation completed: %s", result)

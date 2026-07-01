@@ -1,0 +1,233 @@
+{
+  "conversation_id": "00af98db-c8c8-477b-ade9-bd578b22c586",
+  "turns": [
+    {
+      "turn": 1,
+      "active_file": "2ad2989784fc41ffb9fef3225034db54",
+      "request": "Phân tích dữ liệu này và cho tôi ba phát hiện quan trọng nhất.",
+      "resolved_intent": "ANALYTICAL_QUERY",
+      "public_response": {
+        "response_type": "text",
+        "title": "Ba insight cho quản lý",
+        "summary": "Ba thông tin nên đưa vào cuộc họp ngắn:\n- Phát hiện: Lượng giao dịch/ghi nhận đạt đỉnh vào 2026-02-03 với 1.294 bản ghi. Ý nghĩa: nhận diện thời điểm cần điều tra sâu hơn.\n- Phát hiện: Tổng giá trị giao dịch đạt 4.985.500 trên 1.294 bản ghi; giá trị trung bình là 3.852,78. Ý nghĩa: nắm quy mô giá trị giao dịch.\n- Phát hiện: Cổng 1 có số giao dịch/ghi nhận cao nhất với 1.048 bản ghi, chiếm 81%. Ý nghĩa: thấy nơi dữ liệu tập trung nhiều nhất.\nCác thông tin này được chọn vì có số liệu trực tiếp, có ý nghĩa quản lý và không dùng cột số thứ tự, mã định danh hoặc metadata kỹ thuật.",
+        "primary_value": null,
+        "table_columns": null,
+        "chart_title": null,
+        "error_code": null,
+        "execution_mode": "DETERMINISTIC",
+        "llm_called": false,
+        "capability": null,
+        "file_scope_validated": true
+      },
+      "health_before": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      },
+      "health_after": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      }
+    },
+    {
+      "turn": 2,
+      "active_file": "2ad2989784fc41ffb9fef3225034db54",
+      "request": "Máy nào có tổng downtime cao nhất?",
+      "resolved_intent": "ANALYTICAL_QUERY",
+      "public_response": {
+        "response_type": "error",
+        "title": "Unable to complete the request",
+        "summary": "1 validation error for MetricSpec\n  Value error, column is required for this aggregation [type=value_error, input_value={'aggregation': 'sum', 'c...total_duration_seconds'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error",
+        "primary_value": null,
+        "table_columns": null,
+        "chart_title": null,
+        "error_code": null,
+        "execution_mode": null,
+        "llm_called": null,
+        "capability": null,
+        "file_scope_validated": false
+      },
+      "health_before": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      },
+      "health_after": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      }
+    },
+    {
+      "turn": 3,
+      "active_file": "2ad2989784fc41ffb9fef3225034db54",
+      "request": "Phân tích xu hướng downtime theo thời gian.",
+      "resolved_intent": "ANALYTICAL_QUERY",
+      "public_response": {
+        "response_type": "error",
+        "title": "Unable to complete the request",
+        "summary": "1 validation error for MetricSpec\n  Value error, column is required for this aggregation [type=value_error, input_value={'aggregation': 'sum', 'c...total_duration_seconds'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error",
+        "primary_value": null,
+        "table_columns": null,
+        "chart_title": null,
+        "error_code": null,
+        "execution_mode": null,
+        "llm_called": null,
+        "capability": null,
+        "file_scope_validated": false
+      },
+      "health_before": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      },
+      "health_after": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      }
+    },
+    {
+      "turn": 4,
+      "active_file": "2ad2989784fc41ffb9fef3225034db54",
+      "request": "Tạo báo cáo tổng quan.",
+      "resolved_intent": "DASHBOARD_REQUEST",
+      "public_response": {
+        "response_type": "report",
+        "title": "Báo cáo tổng quan",
+        "summary": "Báo cáo đã tổng hợp 1294 dòng dữ liệu trong giai đoạn không xác định.\nTổng downtime là 0 giờ.\nReport includes overview, KPI, ranked tables, time trend, source and limitation sections.",
+        "primary_value": null,
+        "table_columns": null,
+        "chart_title": null,
+        "error_code": null,
+        "execution_mode": "DETERMINISTIC_REPORT",
+        "llm_called": false,
+        "capability": null,
+        "file_scope_validated": true
+      },
+      "health_before": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      },
+      "health_after": {
+        "status": "ok",
+        "ollama_available": true,
+        "model": "qwen3.5:9b",
+        "database_available": true,
+        "memory_available": true,
+        "components": {
+          "core_api": "HEALTHY",
+          "database": "HEALTHY",
+          "file_catalog": "HEALTHY",
+          "analytics_engine": "HEALTHY",
+          "language_model": "HEALTHY",
+          "report_export": "HEALTHY"
+        },
+        "infrastructure_degraded": false,
+        "language_model_available": true,
+        "banner_message": null,
+        "language_model_note": null
+      }
+    }
+  ]
+}

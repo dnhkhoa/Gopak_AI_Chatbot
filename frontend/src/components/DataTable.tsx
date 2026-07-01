@@ -2,7 +2,7 @@ import type { TablePayload } from "../types/api";
 
 export function DataTable({ table }: { table: TablePayload }) {
   if (!table.rows.length) {
-    return <div className="empty-inline">No data.</div>;
+    return <div className="empty-inline">Không có dữ liệu.</div>;
   }
   return (
     <div className="table-wrap">

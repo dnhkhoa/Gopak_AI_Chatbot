@@ -42,7 +42,7 @@ export const mockConversations: ConversationPayload[] = [
     updated_at: now,
     status: "active",
     source_file_id: "file-3",
-    source_file_name: "EntryTransaction_20260203_164943.xlsx",
+    source_file_name: "Cup3.xlsx",
     source_available: true
   }
 ];
@@ -50,7 +50,7 @@ export const mockConversations: ConversationPayload[] = [
 export const mockFiles: UploadedFile[] = [
   { id: "file-1", filename: "Machine_Downtime_20260203_100753.xlsx", size_bytes: 2_516_582, status: "ready", uploaded_at: now, row_count: 9151, sheet_count: 1 },
   { id: "file-2", filename: "Loss_Assignment_20260203_100840.xlsx", size_bytes: 1_887_436, status: "ready", uploaded_at: now, row_count: 4210, sheet_count: 2 },
-  { id: "file-3", filename: "EntryTransaction_20260203_164943.xlsx", size_bytes: 3_250_585, status: "ready", uploaded_at: now, row_count: 12894, sheet_count: 1 }
+  { id: "file-3", filename: "Cup3.xlsx", size_bytes: 3_250_585, status: "ready", uploaded_at: now, row_count: 1105, sheet_count: 1 }
 ];
 
 function base(responseType: ResponseType, conversationId: string, overrides: Partial<ChatResponse>): ChatResponse {
@@ -86,7 +86,7 @@ export function buildMockResponse(conversationId: string, message: string): Chat
         rows: [
           { Dataset: "Machine downtime", Rows: "9,151", "Key columns": "machine, downtime_hours, date", "Date range": "2025-01 → 2026-02" },
           { Dataset: "Loss assignment", Rows: "4,210", "Key columns": "line, loss_type, hours", "Date range": "2025-01 → 2026-02" },
-          { Dataset: "Entry transaction", Rows: "12,894", "Key columns": "entry_id, qty, timestamp", "Date range": "2025-03 → 2026-02" }
+          { Dataset: "APQOEE Cumulative", Rows: "1,105", "Key columns": "OEE, Availability, Performance, ExecuteAt", "Date range": "2025-11 to 2026-02" }
         ]
       },
       sources: [{ name: "Machine_Downtime.xlsx", rows: 9151 }]

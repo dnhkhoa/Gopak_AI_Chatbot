@@ -136,7 +136,7 @@
       "turns": [
         {
           "message": "Cho tôi top 5 nhóm có số lần ghi nhận cao nhất, thêm tỷ lệ phần trăm và nhận xét những điểm đáng chú ý trong kết quả.",
-          "response_type": "table",
+          "response_type": "chart",
           "execution_mode": "REAL_LLM",
           "checks": {
             "intent": true,
@@ -157,7 +157,7 @@
       "turns": [
         {
           "message": "Cho tôi top 3 loại tổn thất, tỷ lệ trên tổng và giải thích ngắn gọn.",
-          "response_type": "table",
+          "response_type": "chart",
           "execution_mode": "REAL_LLM",
           "checks": {
             "intent": true,
@@ -178,7 +178,7 @@
       "turns": [
         {
           "message": "Nhận xét top 5 máy theo tổng downtime trong tháng gần nhất.",
-          "response_type": "table",
+          "response_type": "chart",
           "execution_mode": "REAL_LLM",
           "checks": {
             "intent": true,
@@ -229,7 +229,7 @@
         {
           "message": "Nhận xét bảng vừa rồi.",
           "response_type": "text",
-          "execution_mode": "REAL_LLM",
+          "execution_mode": "DETERMINISTIC",
           "checks": {
             "intent": true,
             "commentary": true

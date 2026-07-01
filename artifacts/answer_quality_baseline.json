@@ -119,7 +119,7 @@
           {
             "message": "Top 5 máy theo tổng downtime, thêm số lần dừng và thời lượng trung bình.",
             "response_type": "table",
-            "execution_mode": "DETERMINISTIC",
+            "execution_mode": "REAL_LLM",
             "checks": {
               "intent": true,
               "table": true,
@@ -138,8 +138,8 @@
         "turns": [
           {
             "message": "Cho tôi top 5 nhóm có số lần ghi nhận cao nhất, thêm tỷ lệ phần trăm và nhận xét những điểm đáng chú ý trong kết quả.",
-            "response_type": "chart",
-            "execution_mode": "DETERMINISTIC",
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
             "checks": {
               "intent": true,
               "table": true,
@@ -160,7 +160,7 @@
           {
             "message": "Cho tôi top 3 loại tổn thất, tỷ lệ trên tổng và giải thích ngắn gọn.",
             "response_type": "table",
-            "execution_mode": "DETERMINISTIC",
+            "execution_mode": "REAL_LLM",
             "checks": {
               "intent": true,
               "table": true,
@@ -180,8 +180,8 @@
         "turns": [
           {
             "message": "Nhận xét top 5 máy theo tổng downtime trong tháng gần nhất.",
-            "response_type": "chart",
-            "execution_mode": "DETERMINISTIC",
+            "response_type": "table",
+            "execution_mode": "REAL_LLM",
             "checks": {
               "intent": true,
               "table": true,
@@ -248,7 +248,7 @@
           {
             "message": "Nhận xét top 5 nguyên nhân theo số lần ghi nhận.",
             "response_type": "table",
-            "execution_mode": "DETERMINISTIC",
+            "execution_mode": "REAL_LLM",
             "checks": {
               "intent": true,
               "table": true,

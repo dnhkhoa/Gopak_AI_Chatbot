@@ -77,6 +77,7 @@ from src.files.upload_store import find_uploaded_file, list_uploaded_files
 from src.ingestion.cache_manager import ParquetCache
 from src.llm.ollama_client import OllamaClient
 from src.llm.planner import QueryPlanner
+from src.production.service import ProductionAnalyticsService
 from src.query.executor import SafeQueryExecutor
 from src.query.schemas import MetricSpec, QueryPlan
 from src.query_understanding.deterministic_planner import DeterministicPlanner
@@ -102,6 +103,7 @@ class ChatApplicationService:
             recent_turns_limit=self.settings.recent_turns_limit,
         )
         self._catalog: dict | None = None
+        self.production_service = ProductionAnalyticsService(self.settings)
 
     def get_catalog(self, force: bool = False) -> dict:
         if force or self._catalog is None:
@@ -150,10 +152,28 @@ class ChatApplicationService:
         return {**catalog, "tables": tables}
 
     def reload_data(self) -> DataStatus:
+        if self.settings.customer_production_mode:
+            catalog = run_ingest(force=True)
+            self._catalog = catalog
+            return self.data_status(catalog)
         catalog = self.get_catalog(force=True)
         return self.data_status(catalog)
 
     def data_status(self, catalog: dict | None = None) -> DataStatus:
+        if self.settings.customer_production_mode:
+            health = self.production_service.registry_health()
+            tables = [
+                {
+                    "name": item.get("display_name"),
+                    "source_id": item.get("source_id"),
+                    "row_count": None,
+                    "status": item.get("status"),
+                    "checksum": item.get("checksum"),
+                    "schema_fingerprint": item.get("schema_fingerprint"),
+                }
+                for item in health.get("sources", [])
+            ]
+            return DataStatus(catalog_available=bool(health.get("bundle_ready")), table_count=len(tables), tables=tables)
         catalog = catalog or self.get_catalog()
         tables = [
             {
@@ -168,14 +188,17 @@ class ChatApplicationService:
         ollama = OllamaClient(self.settings).health()
         snapshot = self.memory_service.snapshot()
         memory_available = not bool(snapshot.get("persistence_degraded"))
+        registry_health = self.production_service.registry_health()
         catalog_exists = bool((self.settings.cache_dir / "data_catalog.json").exists())
+        if self.settings.customer_production_mode:
+            catalog_exists = bool(registry_health.get("bundle_ready"))
         model_available = bool(ollama.get("ok"))
 
         components = ServiceHealth(
             core_api="HEALTHY",
             database="HEALTHY" if memory_available else "DEGRADED",
             file_catalog="HEALTHY" if catalog_exists else "UNAVAILABLE",
-            analytics_engine="HEALTHY" if catalog_exists else "DEGRADED",
+            analytics_engine="HEALTHY" if catalog_exists and registry_health.get("business_timezone_configured") else "DEGRADED",
             # A model outage is a real but ISOLATED degradation: deterministic
             # analytics keep working, so it must not flip the global banner.
             language_model="HEALTHY" if model_available else "UNAVAILABLE",
@@ -188,6 +211,8 @@ class ChatApplicationService:
             or components.analytics_engine != "HEALTHY"
         )
         banner_message = "Một số dịch vụ đang bị gián đoạn." if infrastructure_degraded else None
+        if self.settings.customer_production_mode and not registry_health.get("business_timezone_configured"):
+            banner_message = "Production analytics requires BUSINESS_TIMEZONE before day or shift questions can run."
         language_model_note = (
             "Tính năng phân tích ngôn ngữ đang tạm gián đoạn; các câu hỏi thống kê "
             "trực tiếp vẫn hoạt động bình thường."
@@ -343,6 +368,8 @@ class ChatApplicationService:
             state = self.memory_service.create_conversation()
             conversation_id = state.conversation_id
             conversation = self.memory_service.get_conversation(conversation_id) or {}
+        if self.settings.customer_production_mode:
+            source_file_id = None
         self._backfill_source_from_state(conversation, state)
         conversation_source_id = str(conversation.get("source_file_id") or state.active_file_id or "")
         if source_file_id and conversation_source_id and source_file_id != conversation_source_id:
@@ -470,6 +497,18 @@ class ChatApplicationService:
 
         self._set_title_from_first_message(conversation_id, message)
         self.memory_service.save_turn(state, role="user", content=message)
+
+        if self.settings.customer_production_mode:
+            response = self.production_service.process(
+                conversation_id,
+                message,
+                context={
+                    "recent_turns": self.memory_service.load_recent_turns(conversation_id),
+                    "state": state,
+                },
+            )
+            self._save_assistant_response(state, response, execution_mode=str(response.metadata.get("status") or response.metadata.get("execution_mode") or "COMPLETED"))
+            return response
 
         preflight = self._preflight_file_scope(conversation_id, state, message, debug, started)
         if preflight is not None:
@@ -921,7 +960,7 @@ class ChatApplicationService:
     def _mentioned_other_file(self, message: str, active_file_id: str) -> str | None:
         normalized = _ascii_text(message)
         aliases = {
-            "EntryTransaction": ["entrytransaction", "entry transaction", "entry_transaction", "file entrytransaction"],
+            "APQOEE Cumulative": ["apqoee", "cup3", "oee"],
             "Loss_Assignment": ["loss assignment", "loss_assignment", "file loss assignment"],
             "Machine_Downtime": ["machine downtime", "machine_downtime", "file machine downtime"],
         }
@@ -3087,8 +3126,8 @@ def _readable_table_name(table: dict) -> str:
         return "Downtime máy"
     if "Loss_Assignment" in source:
         return "Phân loại tổn thất"
-    if "EntryTransaction" in source:
-        return "Ra vào cổng"
+    if "APQOEE" in source or "Cup3" in source:
+        return "APQOEE tích lũy"
     return str(table.get("table_name", "Bảng dữ liệu"))
 
 
@@ -3142,9 +3181,19 @@ def _stored_chat_response(value: Any) -> ChatResponse | None:
 
 def _customer_safe_response(response: ChatResponse) -> ChatResponse:
     safe_metadata = {}
-    for key in ["active_file_id", "active_file_name", "file_scope_validated"]:
-        if key in response.metadata:
-            safe_metadata[key] = response.metadata[key]
+    if "status" in response.metadata:
+        safe_metadata["status"] = response.metadata["status"]
+    if "execution_mode" in response.metadata:
+        safe_metadata["execution_mode"] = "Đã xác minh bằng hệ thống phân tích"
+    if "fallback_used" in response.metadata:
+        safe_metadata["fallback_used"] = bool(response.metadata["fallback_used"])
+    if response.sources:
+        safe_metadata["sources_used"] = [source.name for source in response.sources]
+    if response.filters:
+        safe_metadata["filters"] = [
+            {"label": item.label, "operator": item.operator, "value": item.value}
+            for item in response.filters
+        ]
     return response.model_copy(deep=True, update={"metadata": safe_metadata})
 
 

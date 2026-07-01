@@ -123,11 +123,11 @@
         },
         {
           "message": "them so lan dung",
-          "response_type": "table",
+          "response_type": "scalar",
           "execution_mode": null,
           "sql": false,
           "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-          "summary": "Máy 29 có số lần ghi nhận cao nhất: 48. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx với các bộ lọc đang hiển thị bên dưới."
+          "summary": "9.151 Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung."
         }
       ]
     },
@@ -139,8 +139,8 @@
         {
           "name": "switch_creates_new_conversation",
           "passed": true,
-          "c1": "e205f32b-633f-442b-a488-75659d5d8142",
-          "c2": "6302724c-b678-4d5e-ba35-ffcfd763e5a6",
+          "c1": "f5d1ac6a-41d6-47b7-9b17-72f5b358e071",
+          "c2": "3864151b-8dfe-4041-af42-ba717f66fcd7",
           "c1_source": "e385c6e2a4ff41a8baf63f323dfc0b59",
           "c2_source": "a329169db4984cab80ed5fea5880bb4f"
         },

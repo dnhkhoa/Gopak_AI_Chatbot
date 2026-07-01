@@ -195,8 +195,8 @@ def _table_hint(q: str) -> str | None:
         return "machine_downtime"
     if any(term in q for term in ["loss assignment", "loss", "ton that", "nguyen nhan"]):
         return "loss_assignment"
-    if any(term in q for term in ["entry transaction", "entry", "transaction", "ra vao", "cong", "bien so"]):
-        return "entrytransaction"
+    if any(term in q for term in ["oee", "apqoee", "availability", "performance", "quality"]):
+        return "apqoee_cumulative"
     return None
 
 

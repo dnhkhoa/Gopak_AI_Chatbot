@@ -57,6 +57,7 @@ def find_excel_files(root: Path) -> list[Path]:
     return found
 
 
+
 def file_sha256(path: Path) -> str:
     digest = sha256()
     with path.open("rb") as fh:

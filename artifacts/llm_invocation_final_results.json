@@ -43,11 +43,11 @@
     "semantic_real_llm_call_rate": 1.0,
     "deterministic_unnecessary_llm_calls": 0,
     "silent_fallback_count": 0,
-    "fallback_count": 2,
+    "fallback_count": 4,
     "fallback_reason_coverage": 1.0,
-    "structured_output_validity": 1.0,
-    "llm_p50_latency_ms": 7185.4,
-    "llm_p95_latency_ms": 9836.2
+    "structured_output_validity": 0.5,
+    "llm_p50_latency_ms": 0.0,
+    "llm_p95_latency_ms": 0.0
   },
   "results": [
     {
@@ -135,7 +135,7 @@
       "actual_route": "REAL_LLM",
       "fallback_used": true,
       "fallback_reason": "semantic_llm_failed_after_retry",
-      "structured_output_valid": true,
+      "structured_output_valid": false,
       "final_response_valid": true,
       "response_type": "chart",
       "passed": true
@@ -163,9 +163,9 @@
       "actual_llm_call": true,
       "expected_route": "semantic",
       "actual_route": "REAL_LLM",
-      "fallback_used": false,
-      "fallback_reason": null,
-      "structured_output_valid": true,
+      "fallback_used": true,
+      "fallback_reason": "semantic_llm_failed_after_retry",
+      "structured_output_valid": false,
       "final_response_valid": true,
       "response_type": "table",
       "passed": true
@@ -208,9 +208,9 @@
       "actual_llm_call": true,
       "expected_route": "semantic",
       "actual_route": "REAL_LLM",
-      "fallback_used": false,
-      "fallback_reason": null,
-      "structured_output_valid": true,
+      "fallback_used": true,
+      "fallback_reason": "semantic_llm_failed_after_retry",
+      "structured_output_valid": false,
       "final_response_valid": true,
       "response_type": "table",
       "passed": true

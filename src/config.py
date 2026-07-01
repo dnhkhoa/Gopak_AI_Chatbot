@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from pathlib import Path
+import json
 import os
 
 from src.llm.architecture import LLMArchitectureMode
@@ -52,13 +53,29 @@ class Settings:
     recent_turns_limit: int = field(default_factory=lambda: int(os.getenv("RECENT_TURNS_LIMIT", "6")))
     result_cache_ttl_days: int = field(default_factory=lambda: int(os.getenv("RESULT_CACHE_TTL_DAYS", "7")))
     show_internal_debug_metadata: bool = field(default_factory=lambda: os.getenv("SHOW_INTERNAL_DEBUG_METADATA", "false").lower() == "true")
+    customer_production_mode: bool = field(default_factory=lambda: os.getenv("CUSTOMER_PRODUCTION_MODE", "true").lower() == "true")
+    customer_upload_enabled: bool = field(default_factory=lambda: os.getenv("CUSTOMER_UPLOAD_ENABLED", "false").lower() == "true")
+    business_timezone: str = field(default_factory=lambda: os.getenv("BUSINESS_TIMEZONE", ""))
+    performance_formula_mode: str = field(default_factory=lambda: os.getenv("PERFORMANCE_FORMULA_MODE", "disabled"))
+    ideal_cycle_time_ms: float | None = field(default_factory=lambda: float(os.getenv("IDEAL_CYCLE_TIME_MS")) if os.getenv("IDEAL_CYCLE_TIME_MS") else None)
+    standard_rate_per_hour: float | None = field(default_factory=lambda: float(os.getenv("STANDARD_RATE_PER_HOUR")) if os.getenv("STANDARD_RATE_PER_HOUR") else None)
+    query_timeout_seconds: int = field(default_factory=lambda: int(os.getenv("QUERY_TIMEOUT_SECONDS", "30")))
+    query_memory_limit: str = field(default_factory=lambda: os.getenv("QUERY_MEMORY_LIMIT", "512MB"))
+    max_result_rows: int = field(default_factory=lambda: int(os.getenv("MAX_RESULT_ROWS", "500")))
 
 
-TARGET_EXCEL_FILES = (
-    "EntryTransaction_20260203_164943.xlsx",
-    "Loss_Assignment_20260203_100840.xlsx",
-    "Machine_Downtime_20260203_100753.xlsx",
-)
+SOURCE_REGISTRY_PATH = ROOT / "config" / "source_registry.json"
+
+
+def _target_excel_files() -> tuple[str, ...]:
+    if not SOURCE_REGISTRY_PATH.exists():
+        return ("Machine_Downtime_20260203_100753.xlsx", "Loss_Assignment_20260203_100840.xlsx", "Cup3.xlsx")
+    payload = json.loads(SOURCE_REGISTRY_PATH.read_text(encoding="utf-8"))
+    sources = payload.get("sources", [])
+    return tuple(str(item["workbook_path"]) for item in sources)
+
+
+TARGET_EXCEL_FILES = _target_excel_files()
 
 
 def get_settings() -> Settings:

@@ -2,130 +2,64 @@
   "summary": {
     "health": {
       "status": "ok",
-      "ollama_available": true,
+      "ollama_available": false,
       "model": "qwen3.5:9b",
       "database_available": true,
       "memory_available": true
     },
-    "conversation_count": 11,
+    "conversation_count": 32,
     "structured_response_pass_rate": 1.0,
-    "reload_exact_match_count": 11,
+    "reload_exact_match_count": 32,
     "mismatch_rejected": true,
     "critical_failures": [],
     "status": "passed"
   },
   "mismatch": {
-    "conversation_id": "cc2129f4-51d5-44b4-bb39-04ae0f8f543a",
+    "conversation_id": "b4617658-8cca-4117-ad42-07c8e2f14c42",
     "conversation_source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
     "attempted_source_file_id": "2ad2989784fc41ffb9fef3225034db54",
     "http_status": 409,
-    "message_count_before": 10,
-    "message_count_after": 10,
+    "message_count_before": 6,
+    "message_count_after": 6,
     "passed": true,
     "detail": {
-      "error": "HTTP 409 POST /conversations/cc2129f4-51d5-44b4-bb39-04ae0f8f543a/messages: {\"detail\":{\"code\":\"CONVERSATION_FILE_MISMATCH\",\"message\":\"This conversation belongs to another Excel file. Start a new chat for the selected file.\"}}"
+      "error": "HTTP 409 POST /conversations/b4617658-8cca-4117-ad42-07c8e2f14c42/messages: {\"detail\":{\"code\":\"CONVERSATION_FILE_MISMATCH\",\"message\":\"This conversation belongs to another Excel file. Start a new chat for the selected file.\"}}"
     }
   },
   "checks": [
     {
-      "conversation_id": "cc2129f4-51d5-44b4-bb39-04ae0f8f543a",
-      "title": "08 - Casual User Questions",
-      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
-      "message_count": 10,
-      "assistant_count": 5,
-      "structured_response_count": 5,
-      "table_response_count": 2,
-      "chart_response_count": 1,
-      "debug_metadata_count": 5,
-      "distinct_response_source_ids": [
-        "e385c6e2a4ff41a8baf63f323dfc0b59"
-      ],
-      "passed": true
-    },
-    {
-      "conversation_id": "1de8e5af-fad8-4649-9559-ac07450ec7b7",
-      "title": "07 - File Context Switching - Machine_Downtime_20260203_100753",
-      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
-      "message_count": 2,
-      "assistant_count": 1,
-      "structured_response_count": 1,
-      "table_response_count": 1,
-      "chart_response_count": 0,
-      "debug_metadata_count": 1,
-      "distinct_response_source_ids": [
-        "e385c6e2a4ff41a8baf63f323dfc0b59"
-      ],
-      "passed": true
-    },
-    {
-      "conversation_id": "858264d7-cd2b-4927-9de5-21cb0bb3048c",
-      "title": "07 - File Context Switching - EntryTransaction_20260203_164943",
-      "source_file_id": "2ad2989784fc41ffb9fef3225034db54",
-      "source_file_name": "EntryTransaction_20260203_164943.xlsx",
-      "message_count": 2,
-      "assistant_count": 1,
-      "structured_response_count": 1,
+      "conversation_id": "859f941f-fb7b-438c-8320-c44c288026b9",
+      "title": "UAT delete selected file",
+      "source_file_id": null,
+      "source_file_name": null,
+      "message_count": 0,
+      "assistant_count": 0,
+      "structured_response_count": 0,
       "table_response_count": 0,
       "chart_response_count": 0,
-      "debug_metadata_count": 1,
-      "distinct_response_source_ids": [
-        "2ad2989784fc41ffb9fef3225034db54"
-      ],
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [],
       "passed": true
     },
     {
-      "conversation_id": "c44d929a-f7a8-4c47-b857-d65848b0ea96",
-      "title": "07 - File Context Switching - Loss_Assignment_20260203_100840",
-      "source_file_id": "a329169db4984cab80ed5fea5880bb4f",
-      "source_file_name": "Loss_Assignment_20260203_100840.xlsx",
-      "message_count": 2,
-      "assistant_count": 1,
-      "structured_response_count": 1,
-      "table_response_count": 1,
-      "chart_response_count": 0,
-      "debug_metadata_count": 1,
-      "distinct_response_source_ids": [
-        "a329169db4984cab80ed5fea5880bb4f"
-      ],
-      "passed": true
-    },
-    {
-      "conversation_id": "909c82cd-0115-42bb-8baa-49eec352cb05",
-      "title": "07 - File Context Switching",
+      "conversation_id": "b4617658-8cca-4117-ad42-07c8e2f14c42",
+      "title": "UAT restart",
       "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
       "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
-      "message_count": 2,
-      "assistant_count": 1,
-      "structured_response_count": 1,
+      "message_count": 6,
+      "assistant_count": 3,
+      "structured_response_count": 3,
       "table_response_count": 1,
       "chart_response_count": 0,
-      "debug_metadata_count": 1,
+      "debug_metadata_count": 0,
       "distinct_response_source_ids": [
         "e385c6e2a4ff41a8baf63f323dfc0b59"
       ],
       "passed": true
     },
     {
-      "conversation_id": "3baa3e8c-010d-48b4-8b31-7bef44c92c78",
-      "title": "06 - Topic Restore",
-      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
-      "message_count": 10,
-      "assistant_count": 5,
-      "structured_response_count": 5,
-      "table_response_count": 5,
-      "chart_response_count": 3,
-      "debug_metadata_count": 5,
-      "distinct_response_source_ids": [
-        "e385c6e2a4ff41a8baf63f323dfc0b59"
-      ],
-      "passed": true
-    },
-    {
-      "conversation_id": "d436d466-8025-40f3-94a4-3b7b48e53b3e",
-      "title": "05 - Clarification Demo",
+      "conversation_id": "302c4f4c-bf7c-4c91-8f40-c0c97a901139",
+      "title": "UAT pending A",
       "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
       "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "message_count": 6,
@@ -133,71 +67,467 @@
       "structured_response_count": 3,
       "table_response_count": 1,
       "chart_response_count": 1,
-      "debug_metadata_count": 3,
+      "debug_metadata_count": 0,
       "distinct_response_source_ids": [
         "e385c6e2a4ff41a8baf63f323dfc0b59"
       ],
       "passed": true
     },
     {
-      "conversation_id": "1b80c66d-c1e0-484a-847f-265a056e92ad",
-      "title": "04 - Machine Downtime",
-      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
-      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
-      "message_count": 10,
-      "assistant_count": 5,
-      "structured_response_count": 5,
-      "table_response_count": 4,
-      "chart_response_count": 1,
-      "debug_metadata_count": 5,
-      "distinct_response_source_ids": [
-        "e385c6e2a4ff41a8baf63f323dfc0b59"
-      ],
-      "passed": true
-    },
-    {
-      "conversation_id": "04e9622a-59ae-4684-be52-f27c926c2386",
-      "title": "03 - Loss Classification",
+      "conversation_id": "5ad04ee0-08b3-489c-8045-c41a843ebb8c",
+      "title": "UAT pending B",
       "source_file_id": "a329169db4984cab80ed5fea5880bb4f",
       "source_file_name": "Loss_Assignment_20260203_100840.xlsx",
-      "message_count": 10,
-      "assistant_count": 5,
-      "structured_response_count": 5,
-      "table_response_count": 5,
-      "chart_response_count": 2,
-      "debug_metadata_count": 5,
+      "message_count": 2,
+      "assistant_count": 1,
+      "structured_response_count": 1,
+      "table_response_count": 1,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
       "distinct_response_source_ids": [
         "a329169db4984cab80ed5fea5880bb4f"
       ],
       "passed": true
     },
     {
-      "conversation_id": "9c8b5982-a5b5-448e-8de3-3f251880027f",
-      "title": "02 - Transaction Analysis",
-      "source_file_id": "2ad2989784fc41ffb9fef3225034db54",
-      "source_file_name": "EntryTransaction_20260203_164943.xlsx",
-      "message_count": 10,
-      "assistant_count": 5,
-      "structured_response_count": 5,
+      "conversation_id": "f5d1ac6a-41d6-47b7-9b17-72f5b358e071",
+      "title": "UAT iso A",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 4,
+      "assistant_count": 2,
+      "structured_response_count": 2,
+      "table_response_count": 2,
+      "chart_response_count": 1,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "3864151b-8dfe-4041-af42-ba717f66fcd7",
+      "title": "UAT iso B",
+      "source_file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "source_file_name": "Loss_Assignment_20260203_100840.xlsx",
+      "message_count": 2,
+      "assistant_count": 1,
+      "structured_response_count": 1,
+      "table_response_count": 1,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "a329169db4984cab80ed5fea5880bb4f"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "62d33bbb-025a-4334-b8a5-358477479221",
+      "title": "UAT topic",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 12,
+      "assistant_count": 6,
+      "structured_response_count": 6,
+      "table_response_count": 5,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "45473521-bad8-4615-8cf4-901f8058129b",
+      "title": "UAT clarification",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 6,
+      "assistant_count": 3,
+      "structured_response_count": 3,
+      "table_response_count": 1,
+      "chart_response_count": 1,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "d49e5877-a96a-4e4a-87b6-d21b1e287446",
+      "title": "UAT basic",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 8,
+      "assistant_count": 4,
+      "structured_response_count": 4,
       "table_response_count": 3,
       "chart_response_count": 1,
-      "debug_metadata_count": 5,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "99b594ad-d7d9-46a0-8da3-8726682bc791",
+      "title": "UAT delete selected file",
+      "source_file_id": null,
+      "source_file_name": null,
+      "message_count": 0,
+      "assistant_count": 0,
+      "structured_response_count": 0,
+      "table_response_count": 0,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [],
+      "passed": true
+    },
+    {
+      "conversation_id": "a93bd5ae-006f-4790-949a-0b16a7c519c4",
+      "title": "UAT restart",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 6,
+      "assistant_count": 3,
+      "structured_response_count": 3,
+      "table_response_count": 1,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "e82d40c3-5fd1-477d-9900-3831066d2daf",
+      "title": "UAT pending A",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 6,
+      "assistant_count": 3,
+      "structured_response_count": 3,
+      "table_response_count": 1,
+      "chart_response_count": 1,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "7e11cd0c-3113-4aeb-9cac-3d3fe0273762",
+      "title": "UAT pending B",
+      "source_file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "source_file_name": "Loss_Assignment_20260203_100840.xlsx",
+      "message_count": 2,
+      "assistant_count": 1,
+      "structured_response_count": 1,
+      "table_response_count": 1,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "a329169db4984cab80ed5fea5880bb4f"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "4249624c-e558-4e4d-a63f-88e44d1fd442",
+      "title": "UAT iso A",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 4,
+      "assistant_count": 2,
+      "structured_response_count": 2,
+      "table_response_count": 2,
+      "chart_response_count": 1,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "b9e5caf6-5247-4f31-bb79-f7020236eeff",
+      "title": "UAT iso B",
+      "source_file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "source_file_name": "Loss_Assignment_20260203_100840.xlsx",
+      "message_count": 2,
+      "assistant_count": 1,
+      "structured_response_count": 1,
+      "table_response_count": 1,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "a329169db4984cab80ed5fea5880bb4f"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "4cb957b2-4328-4ed6-9366-adc64cdafa3c",
+      "title": "UAT topic",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 12,
+      "assistant_count": 6,
+      "structured_response_count": 6,
+      "table_response_count": 5,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "1efddcfc-a949-4591-8d34-a3ece8328038",
+      "title": "UAT clarification",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 6,
+      "assistant_count": 3,
+      "structured_response_count": 3,
+      "table_response_count": 1,
+      "chart_response_count": 1,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "5b8b1a57-68ea-4e66-9746-21a501b7d0ef",
+      "title": "UAT basic",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 8,
+      "assistant_count": 4,
+      "structured_response_count": 4,
+      "table_response_count": 3,
+      "chart_response_count": 1,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "d89ac134-7844-47bd-a820-735115a51869",
+      "title": "UAT delete selected file",
+      "source_file_id": null,
+      "source_file_name": null,
+      "message_count": 0,
+      "assistant_count": 0,
+      "structured_response_count": 0,
+      "table_response_count": 0,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [],
+      "passed": true
+    },
+    {
+      "conversation_id": "f0190bad-f956-43d7-be5f-a9f4249eac8a",
+      "title": "UAT restart",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 6,
+      "assistant_count": 3,
+      "structured_response_count": 3,
+      "table_response_count": 0,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "e550efdf-9c29-49ca-bc1b-777f50a3c024",
+      "title": "UAT pending A",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 6,
+      "assistant_count": 3,
+      "structured_response_count": 3,
+      "table_response_count": 0,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "2ecb68ec-74de-4ba4-be5d-ac265fa563be",
+      "title": "UAT pending B",
+      "source_file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "source_file_name": "Loss_Assignment_20260203_100840.xlsx",
+      "message_count": 2,
+      "assistant_count": 1,
+      "structured_response_count": 1,
+      "table_response_count": 1,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "a329169db4984cab80ed5fea5880bb4f"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "8bf291ba-a57f-4c3b-9513-3e843a5b1d7a",
+      "title": "UAT iso A",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 4,
+      "assistant_count": 2,
+      "structured_response_count": 2,
+      "table_response_count": 2,
+      "chart_response_count": 1,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "e06a0ba7-8431-4727-b775-14649b8fede3",
+      "title": "UAT iso B",
+      "source_file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "source_file_name": "Loss_Assignment_20260203_100840.xlsx",
+      "message_count": 2,
+      "assistant_count": 1,
+      "structured_response_count": 1,
+      "table_response_count": 1,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "a329169db4984cab80ed5fea5880bb4f"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "9510fba0-0d1c-4fd0-b815-6ce2d53690b9",
+      "title": "UAT topic",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 12,
+      "assistant_count": 6,
+      "structured_response_count": 6,
+      "table_response_count": 5,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "f7b54b56-6280-47fe-9d4d-c49c533aba6d",
+      "title": "UAT clarification",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 6,
+      "assistant_count": 3,
+      "structured_response_count": 3,
+      "table_response_count": 0,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "78f518a8-f602-4679-885a-3709f55662bd",
+      "title": "UAT basic",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 8,
+      "assistant_count": 4,
+      "structured_response_count": 4,
+      "table_response_count": 3,
+      "chart_response_count": 1,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "5a6ee5ab-1473-4d35-976b-35291f2a7fcf",
+      "title": "Row-level benchmark",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 162,
+      "assistant_count": 81,
+      "structured_response_count": 81,
+      "table_response_count": 76,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "99403d0d-9599-43ed-b614-707eb2083a50",
+      "title": "phân tích data này",
+      "source_file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "source_file_name": "EntryTransaction_20260203_164943.xlsx",
+      "message_count": 2,
+      "assistant_count": 1,
+      "structured_response_count": 1,
+      "table_response_count": 1,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
       "distinct_response_source_ids": [
         "2ad2989784fc41ffb9fef3225034db54"
       ],
       "passed": true
     },
     {
-      "conversation_id": "7bccca77-6edd-45db-a289-7bfe7f2ede87",
-      "title": "01 - Data Overview",
+      "conversation_id": "6140896d-9555-47b9-b368-e47f1604f0ef",
+      "title": "Demo 3 - Từ câu đơn giản tới LLM call",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 8,
+      "assistant_count": 4,
+      "structured_response_count": 4,
+      "table_response_count": 3,
+      "chart_response_count": 0,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "cbba995c-0fe2-43cf-81e6-daea1141a74d",
+      "title": "Demo 2 - Chart và report",
+      "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
+      "message_count": 6,
+      "assistant_count": 3,
+      "structured_response_count": 3,
+      "table_response_count": 3,
+      "chart_response_count": 3,
+      "debug_metadata_count": 0,
+      "distinct_response_source_ids": [
+        "e385c6e2a4ff41a8baf63f323dfc0b59"
+      ],
+      "passed": true
+    },
+    {
+      "conversation_id": "8058331c-b5e0-4a69-a16c-02771e720fc9",
+      "title": "Demo 1 - Context memory",
       "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
       "source_file_name": "Machine_Downtime_20260203_100753.xlsx",
       "message_count": 10,
       "assistant_count": 5,
       "structured_response_count": 5,
       "table_response_count": 4,
-      "chart_response_count": 0,
-      "debug_metadata_count": 5,
+      "chart_response_count": 2,
+      "debug_metadata_count": 0,
       "distinct_response_source_ids": [
         "e385c6e2a4ff41a8baf63f323dfc0b59"
       ],

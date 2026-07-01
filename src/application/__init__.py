@@ -1,4 +1,3 @@
-from src.application.chat_service import ChatApplicationService
 from src.application.schemas import (
     ArtifactPayload,
     ChartPayload,
@@ -12,6 +11,14 @@ from src.application.schemas import (
     SourcePayload,
     TablePayload,
 )
+
+
+def __getattr__(name: str):
+    if name == "ChatApplicationService":
+        from src.application.chat_service import ChatApplicationService
+
+        return ChatApplicationService
+    raise AttributeError(name)
 
 __all__ = [
     "ArtifactPayload",

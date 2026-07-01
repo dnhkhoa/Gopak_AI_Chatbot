@@ -1,0 +1,368 @@
+.shell {
+  --report-primary: #173B6C;
+  --report-secondary: #2F66A8;
+  --report-light: #EEF4FA;
+  --report-page: #FFFFFF;
+  --report-bg: #F7F9FC;
+  --report-text: #1F2937;
+  --report-muted: #64748B;
+  --report-border: #D9E2EC;
+
+  width: 100%;
+  padding: 18px;
+  background: var(--report-bg);
+  color: var(--report-text);
+  font-family: Inter, "Noto Sans", Arial, sans-serif;
+}
+
+.page {
+  width: min(100%, 880px);
+  margin: 0 auto;
+  padding: 34px 38px 40px;
+  background: var(--report-page);
+  border: 1px solid var(--report-border);
+  box-shadow: 0 12px 32px rgba(31, 41, 55, 0.10);
+  display: grid;
+  gap: 22px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(120px, 180px) minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+}
+
+.logoBlock {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  width: auto;
+  max-width: 150px;
+  max-height: 42px;
+  object-fit: contain;
+}
+
+.titleBlock {
+  display: grid;
+  justify-items: end;
+  gap: 6px;
+  text-align: right;
+}
+
+.version {
+  color: var(--report-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.titleBlock h2 {
+  margin: 0;
+  color: var(--report-primary);
+  font-size: 1.58rem;
+  line-height: 1.18;
+  font-weight: 760;
+  letter-spacing: 0;
+}
+
+.rule {
+  height: 2px;
+  background: var(--report-primary);
+}
+
+.cover {
+  display: grid;
+  gap: 18px;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--report-muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.metadata {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  border: 1px solid var(--report-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.metadataRow {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.32fr) minmax(0, 1fr);
+  min-height: 42px;
+}
+
+.metadataRow + .metadataRow {
+  border-top: 1px solid var(--report-border);
+}
+
+.metadataRow dt,
+.metadataRow dd {
+  margin: 0;
+  padding: 10px 13px;
+  line-height: 1.45;
+}
+
+.metadataRow dt {
+  color: var(--report-primary);
+  background: var(--report-light);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.metadataRow dd {
+  color: var(--report-text);
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.downloadButton,
+.status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--report-primary);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.downloadButton {
+  background: var(--report-primary);
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.downloadButton:hover {
+  background: var(--report-secondary);
+  border-color: var(--report-secondary);
+}
+
+.status {
+  background: var(--report-light);
+  color: var(--report-primary);
+}
+
+.section,
+.footer {
+  display: grid;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--report-border);
+}
+
+.section h3,
+.footer h3 {
+  margin: 0;
+  color: var(--report-primary);
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 760;
+}
+
+.footer h4 {
+  margin: 0 0 8px;
+  color: var(--report-text);
+  font-size: 0.9rem;
+  font-weight: 730;
+}
+
+.paragraph {
+  margin: 0;
+  color: var(--report-text);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.bulletList {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 7px;
+  color: var(--report-text);
+  font-size: 0.92rem;
+  line-height: 1.58;
+}
+
+.sections {
+  display: grid;
+  gap: 20px;
+}
+
+.kpiGrid,
+.miniKpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.miniKpis {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.kpiCard,
+.kpiCardCompact {
+  min-height: 104px;
+  padding: 14px;
+  border: 1px solid var(--report-border);
+  border-radius: 8px;
+  background: var(--report-bg);
+  display: grid;
+  align-content: start;
+  gap: 7px;
+}
+
+.kpiCardCompact {
+  min-height: 82px;
+}
+
+.kpiCard span,
+.kpiCardCompact span {
+  color: var(--report-muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.kpiCard strong,
+.kpiCardCompact strong {
+  color: var(--report-primary);
+  font-size: 1.18rem;
+  line-height: 1.2;
+  font-weight: 780;
+  overflow-wrap: anywhere;
+}
+
+.kpiCard small,
+.kpiCardCompact small {
+  color: var(--report-muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.tableWrap {
+  width: 100%;
+  overflow-x: clip;
+  border: 1px solid var(--report-border);
+  border-radius: 8px;
+  background: #FFFFFF;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 0.84rem;
+}
+
+.table th,
+.table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--report-border);
+  vertical-align: top;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.table th {
+  color: var(--report-primary);
+  background: var(--report-light);
+  font-size: 0.76rem;
+  font-weight: 760;
+}
+
+.table tr:last-child td {
+  border-bottom: 0;
+}
+
+.numeric {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+}
+
+.chartBox {
+  border: 1px solid var(--report-border);
+  border-radius: 8px;
+  padding: 14px 14px 10px;
+  background: #FFFFFF;
+}
+
+.chartTitle {
+  color: var(--report-text);
+  font-size: 0.92rem;
+  font-weight: 730;
+  margin-bottom: 4px;
+}
+
+.axisNote {
+  color: var(--report-muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  margin-top: 4px;
+}
+
+.limitations {
+  display: grid;
+  gap: 0;
+}
+
+@media (max-width: 760px) {
+  .shell {
+    padding: 10px 0;
+  }
+
+  .page {
+    width: 100%;
+    padding: 24px 18px 28px;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: none;
+  }
+
+  .header,
+  .metadataRow {
+    grid-template-columns: 1fr;
+  }
+
+  .titleBlock {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .metadataRow dt,
+  .metadataRow dd {
+    padding: 9px 11px;
+  }
+
+  .kpiGrid,
+  .miniKpis {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    justify-content: stretch;
+  }
+
+  .downloadButton,
+  .status {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -15,6 +15,7 @@ import { SampleRowsTable } from "./SampleRowsTable";
 import { SchemaTable } from "./SchemaTable";
 import { SourceDetails } from "./SourceDetails";
 import { InternalDebugMetadata } from "./InternalDebugMetadata";
+import { NarrativeBlock } from "./NarrativeBlock";
 import { isRenderableNarrative } from "./narrative";
 import { Sparkles } from "lucide-react";
 import type { ChatResponse, UiMessage } from "../types/api";
@@ -108,7 +109,7 @@ function FallbackText({ response }: { response: ChatResponse }) {
   return (
     <>
       {response.title?.trim() ? <h2>{response.title}</h2> : null}
-      {isRenderableNarrative(response.summary) ? <p>{response.summary}</p> : null}
+      {isRenderableNarrative(response.summary) ? <NarrativeBlock text={response.summary} /> : null}
     </>
   );
 }

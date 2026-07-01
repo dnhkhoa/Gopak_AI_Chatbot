@@ -1,0 +1,59 @@
+{
+  "total_probes": 5,
+  "clean": 5,
+  "diacritic_preservation_pct": 100.0,
+  "internal_field_leakage": 0,
+  "acceptance_met": true,
+  "results": [
+    {
+      "file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "message": "Phân tích dữ liệu này và cho tôi ba phát hiện quan trọng nhất.",
+      "response_type": "text",
+      "internal_keys": [],
+      "unaccented": [],
+      "history_internal_keys": [],
+      "history_unaccented": [],
+      "clean": true
+    },
+    {
+      "file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "message": "File có bao nhiêu bản ghi?",
+      "response_type": "scalar",
+      "internal_keys": [],
+      "unaccented": [],
+      "history_internal_keys": [],
+      "history_unaccented": [],
+      "clean": true
+    },
+    {
+      "file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "message": "Máy nào có tổng downtime cao nhất?",
+      "response_type": "refusal",
+      "internal_keys": [],
+      "unaccented": [],
+      "history_internal_keys": [],
+      "history_unaccented": [],
+      "clean": true
+    },
+    {
+      "file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "message": "Máy nào có tổng downtime cao nhất?",
+      "response_type": "table",
+      "internal_keys": [],
+      "unaccented": [],
+      "history_internal_keys": [],
+      "history_unaccented": [],
+      "clean": true
+    },
+    {
+      "file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "message": "Phân tích xu hướng downtime theo thời gian.",
+      "response_type": "chart",
+      "internal_keys": [],
+      "unaccented": [],
+      "history_internal_keys": [],
+      "history_unaccented": [],
+      "clean": true
+    }
+  ]
+}

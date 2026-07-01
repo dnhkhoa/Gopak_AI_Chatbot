@@ -44,15 +44,15 @@ def select_catalog_context(catalog: dict, question: str, max_tables: int = 2) ->
                 if sample and normalize_text(str(sample)) in q:
                     score += 2.0
         downtime_domain = any(term in q for term in ["downtime", "dung", "may", "ton that", "ton", "that", "bao tri", "nguyen nhan", "nguyen", "nhan", "qc", "dt"])
-        entry_domain = any(term in q for term in ["cong", "truy cap", "xe", "can"])
+        apqoee_domain = any(term in q for term in ["oee", "apqoee", "availability", "performance", "quality"])
         if downtime_domain:
             score += 6.0 if "machine_downtime" in table["table_name"] else 3.0 if "loss_assignment" in table["table_name"] else -2.0
         if any(term in q for term in ["nguyen nhan", "nguyen", "nhan", "ton that", "ton", "that", "bao tri", "setup", "qc"]):
             score += 4.0 if "machine_downtime" in table["table_name"] else 3.0 if "loss_assignment" in table["table_name"] else -4.0
-        if downtime_domain and not entry_domain and "entrytransaction" in table["table_name"]:
+        if downtime_domain and not apqoee_domain and "apqoee_cumulative" in table["table_name"]:
             score -= 8.0
-        if entry_domain:
-            score += 3.0 if "entrytransaction" in table["table_name"] else 0
+        if apqoee_domain:
+            score += 3.0 if "apqoee_cumulative" in table["table_name"] else 0
         scored.append((score, table))
     selected = [table for _, table in sorted(scored, key=lambda item: item[0], reverse=True)[:max_tables]]
     selected_names = {table["table_name"] for table in selected}

@@ -6,11 +6,11 @@ export function SourceDetails({ response }: { response: ChatResponse }) {
   }
   return (
     <details className="source-details">
-      <summary>Sources and filters</summary>
+      <summary>Nguồn và bộ lọc</summary>
       {response.sources.map((source) => (
         <div key={source.name} className="muted">
           {source.name}
-          {source.rows != null ? ` · ${source.rows.toLocaleString("en-US")} rows` : ""}
+          {source.rows != null ? ` · ${source.rows.toLocaleString("vi-VN")} bản ghi` : ""}
         </div>
       ))}
       {response.filters.map((filter, index) => (

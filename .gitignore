@@ -22,6 +22,10 @@ artifacts/*.log
 artifacts/backend*.log
 artifacts/frontend*.log
 artifacts/streamlit*.log
+artifacts/pdf_render_verification/
+artifacts/report_ui/
+artifacts/recovery/
+artifacts/artifacts/
 
 frontend/node_modules/
 node_modules/
@@ -32,3 +36,4 @@ frontend/vite.config.d.ts
 
 .DS_Store
 Thumbs.db
+~$*.xlsx

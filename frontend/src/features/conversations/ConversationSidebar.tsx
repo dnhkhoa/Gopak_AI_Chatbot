@@ -129,7 +129,16 @@ function HistoryItem(props: {
 }
 
 export function ConversationSidebar(props: Props) {
-  const degraded = Boolean(props.health && (!props.health.ollama_available || !props.health.memory_available));
+  // Only true infrastructure faults raise the global banner. A model outage is
+  // shown as a separate, specific note (deterministic analytics still work).
+  const infraDegraded = Boolean(
+    props.health &&
+      (props.health.infrastructure_degraded ??
+        (!props.health.memory_available || !props.health.database_available)),
+  );
+  const bannerMessage = props.health?.banner_message ?? "Một số dịch vụ đang bị gián đoạn.";
+  const languageModelNote =
+    props.health && props.health.language_model_available === false ? props.health.language_model_note : null;
 
   if (props.collapsed) {
     return (
@@ -177,7 +186,8 @@ export function ConversationSidebar(props: Props) {
       </div>
 
       <div className="sidebar-footer">
-        {degraded ? <div className="system-warning">Some services are degraded</div> : null}
+        {infraDegraded ? <div className="system-warning">{bannerMessage}</div> : null}
+        {languageModelNote ? <div className="system-note">{languageModelNote}</div> : null}
       </div>
     </aside>
   );

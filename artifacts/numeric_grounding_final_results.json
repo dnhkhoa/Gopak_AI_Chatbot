@@ -2,38 +2,38 @@
   "summary": {
     "phase": "final",
     "total": 7,
-    "passed": 7,
+    "passed": 6,
     "response_cases": 2,
     "synthetic_cases": 5,
-    "failure_count": 0,
-    "accuracy": 1.0
+    "failure_count": 1,
+    "accuracy": 0.8571
   },
   "results": [
     {
       "id": "top_groups_percent_commentary",
       "message": "Cho tôi top 5 nhóm có số lần ghi nhận cao nhất, thêm tỷ lệ phần trăm và nhận xét.",
       "response_type": "table",
-      "summary": "Sản xuất có số lần ghi nhận cao nhất: 26.892. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Loss_Assignment_20260203_100840.xlsx và không áp dụng bộ lọc bổ sung.\n\nNhận xét:\n- Sản xuất đứng đầu trong bảng với 26.892 ở chỉ tiêu số lần ghi nhận.\n- Bảo trì đứng thứ hai với 9.335, nên nhóm đầu bảng có chênh lệch rõ khi so với hàng kế tiếp.\n- Với Sản xuất, các chỉ tiêu bổ sung là tỷ lệ 74,06%.\n- Tỷ lệ của Sản xuất là 74,06% trong phạm vi các dòng đang hiển thị.",
+      "summary": "Sản xuất có số bản ghi cao nhất: 26.892. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Loss_Assignment_20260203_100840.xlsx và không áp dụng bộ lọc bổ sung.\n\nNhận xét:\n- Nhóm Sản xuất dẫn đầu với 26.892 bản ghi chiếm tỷ trọng lớn nhất là 74,06%.\n- Nhóm Bảo trì đứng thứ hai có 9.335 bản ghi tương ứng mức tỷ lệ 25,71%.\n- Chỉ còn nhóm thứ ba được hiển thị với số lượng rất thấp là 82 bản ghi và tỷ lệ chỉ đạt 0,23%, trong khi dữ liệu không cung cấp thông tin cho các vị trí từ thứ tư đến thứ năm.",
       "table": {
         "columns": [
           "Nhóm tổn thất",
-          "Số lần ghi nhận",
+          "Số bản ghi",
           "Tỷ lệ"
         ],
         "rows": [
           {
             "Nhóm tổn thất": "Sản xuất",
-            "Số lần ghi nhận": "26.892",
+            "Số bản ghi": "26.892",
             "Tỷ lệ": "74,06%"
           },
           {
             "Nhóm tổn thất": "Bảo trì",
-            "Số lần ghi nhận": "9.335",
+            "Số bản ghi": "9.335",
             "Tỷ lệ": "25,71%"
           },
           {
             "Nhóm tổn thất": null,
-            "Số lần ghi nhận": "82",
+            "Số bản ghi": "82",
             "Tỷ lệ": "0,23%"
           }
         ]
@@ -69,14 +69,14 @@
           "thoi_luong_seconds"
         ],
         "latency_ms": {
-          "routing": 66.76180002978072,
-          "llm": 16041.04580002604,
-          "validation": 0.018499966245144606,
+          "routing": 55.090600000767154,
+          "llm": 14487.0230000015,
+          "validation": 0.022899999748915434,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 18348.3,
-          "query_latency_ms": 34.5,
-          "query_wall_ms": 34.6
+          "total": 17611.2,
+          "query_latency_ms": 30.9,
+          "query_wall_ms": 31.0
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple",
@@ -85,7 +85,7 @@
         "llm_model": "qwen3.5:9b",
         "llm_request_started": true,
         "retry_count": 1,
-        "llm_latency_ms": 7248.7,
+        "llm_latency_ms": 6588.8,
         "llm_request_completed": true,
         "structured_output_valid": true,
         "schema_validation_errors": [
@@ -98,6 +98,78 @@
         "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
         "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
         "file_scope_validated": true,
+        "lineage": {
+          "conversation_id": "d123f68a-ba63-4580-b6c6-1c92adc3c955",
+          "turn_id": "c72abee8-d719-4c42-b503-65df57dd26f6",
+          "source_file_id": "a329169db4984cab80ed5fea5880bb4f",
+          "request_contract_id": "5ac15d82-ea1e-4ea8-8c46-7a723f5afb39",
+          "query_plan_id": "b25e97cf-85ee-4998-9227-4af5bd8650f1",
+          "query_result_id": "d235dc19-7551-4b40-a7c1-21ddbc4e12ad",
+          "answer_brief_id": "f3ace4ae-9787-49de-84d3-e915e02ed7c0",
+          "chart_spec_id": "5a7a4c12-1848-44bd-847b-69e390ffcbce",
+          "report_artifact_id": "987161e7-d77f-459c-bf13-fd04b3961733"
+        },
+        "request_contract": {
+          "relation_to_previous_turn": "NEW_REQUEST",
+          "intent": "commentary",
+          "source_file_id": "a329169db4984cab80ed5fea5880bb4f",
+          "dimensions": [
+            "loss_group"
+          ],
+          "metrics": [
+            "count"
+          ],
+          "aggregations": [
+            "count"
+          ],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": "top",
+          "limit": 5,
+          "derived_metrics": [
+            "percentage"
+          ],
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "report_sections": [],
+          "commentary_requirements": [
+            "three_insights"
+          ],
+          "inherited_fields": [],
+          "explicitly_reset_fields": [
+            "dimension",
+            "metric",
+            "filter",
+            "time_range",
+            "chart_type",
+            "top_n"
+          ]
+        },
+        "request_contract_id": "5ac15d82-ea1e-4ea8-8c46-7a723f5afb39",
+        "query_plan_id": "b25e97cf-85ee-4998-9227-4af5bd8650f1",
+        "query_result_id": "d235dc19-7551-4b40-a7c1-21ddbc4e12ad",
+        "answer_brief_id": "f3ace4ae-9787-49de-84d3-e915e02ed7c0",
+        "chart_spec_id": "5a7a4c12-1848-44bd-847b-69e390ffcbce",
+        "report_artifact_id": "987161e7-d77f-459c-bf13-fd04b3961733",
+        "request_coverage": {
+          "requested": [
+            "loss_group",
+            "count",
+            "count",
+            "percentage",
+            "top"
+          ],
+          "planned": [
+            "loss_group",
+            "count",
+            "count",
+            "percentage",
+            "top"
+          ],
+          "missing": [],
+          "unexpected": []
+        },
         "debug": {
           "query_plan": {
             "intent": "query",
@@ -137,14 +209,14 @@
           },
           "sql": "WITH base AS (SELECT \"a329169db4984cab80ed5fea5880bb4f_report_bf2c25\".\"nhom_ton_that\" AS \"nhom_ton_that\", count(*) AS \"row_count\" FROM read_parquet(?) AS \"a329169db4984cab80ed5fea5880bb4f_report_bf2c25\" GROUP BY \"a329169db4984cab80ed5fea5880bb4f_report_bf2c25\".\"nhom_ton_that\") SELECT \"nhom_ton_that\", \"row_count\", CASE WHEN SUM(\"row_count\") OVER () = 0 THEN NULL ELSE (\"row_count\" * 100.0 / NULLIF(SUM(\"row_count\") OVER (), 0)) END AS \"percentage\" FROM base ORDER BY \"row_count\" DESC LIMIT 5",
           "state_after": {
-            "conversation_id": "a8607bfa-a03a-42b4-8a3b-d7e4fa2d9813",
+            "conversation_id": "d123f68a-ba63-4580-b6c6-1c92adc3c955",
             "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
             "active_file_name": "Loss_Assignment_20260203_100840.xlsx",
             "file_contexts": {},
-            "current_topic": "eb201720-cb09-4b2e-acb9-1354d1b81f4f",
+            "current_topic": "c1e56d0b-f015-44c9-9885-1037bd4be22e",
             "topic_frames": [
               {
-                "topic_id": "eb201720-cb09-4b2e-acb9-1354d1b81f4f",
+                "topic_id": "c1e56d0b-f015-44c9-9885-1037bd4be22e",
                 "active_file_id": "a329169db4984cab80ed5fea5880bb4f",
                 "label": "query / row_count / nhom_ton_that",
                 "intent": "query",
@@ -307,7 +379,7 @@
               "clarification_question": null
             },
             "recent_turn_ids": [
-              "d41e6d43-0756-4b0f-91b8-65049865fbd4"
+              "c3284e4d-7e21-4035-a3b3-177d5131874d"
             ],
             "conversation_summary": null,
             "active_tables": [
@@ -334,13 +406,14 @@
         },
         "composer_validation_passed": true,
         "composer_validation_errors": [],
-        "composer_rejected_errors": [
-          "internal_term:null"
-        ],
-        "composer_fallback_used": true,
         "commentary_attached": true,
         "grounded_composer_called": true,
-        "composer_model": "qwen3.5:9b"
+        "composer_model": "qwen3.5:9b",
+        "public_response_validation": {
+          "internal_keys": [],
+          "unaccented_vietnamese": [],
+          "clean": true
+        }
       },
       "checks": {
         "table": true,
@@ -359,43 +432,43 @@
       "id": "top_machines_full_commentary",
       "message": "Top 5 máy theo tổng downtime, thêm số lần dừng, thời lượng trung bình và giải thích điểm khác biệt.",
       "response_type": "table",
-      "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.\n\nNhận xét:\n- Máy 11 đứng đầu trong bảng với 413,57 giờ ở chỉ tiêu tổng thời gian downtime.\n- Máy 12 đứng thứ hai với 323,15 giờ, nên nhóm đầu bảng có chênh lệch rõ khi so với hàng kế tiếp.\n- Với Máy 11, các chỉ tiêu bổ sung là số lần ghi nhận 1.469 và thời gian downtime trung bình 16 phút 54 giây.",
+      "summary": "Máy 11 có tổng thời gian downtime cao nhất: 413,57 giờ. Bảng được sắp xếp giảm dần theo chỉ tiêu chính để bạn dễ so sánh các nhóm đứng đầu. Kết quả được tính trên file Machine_Downtime_20260203_100753.xlsx và không áp dụng bộ lọc bổ sung.\n\nNhận xét:\n- Máy 11 đứng đầu trong bảng với 413,57 giờ ở chỉ tiêu tổng thời gian downtime.\n- Máy 12 đứng thứ hai với 323,15 giờ, nên nhóm đầu bảng có chênh lệch rõ khi so với hàng kế tiếp.\n- Với Máy 11, các chỉ tiêu bổ sung là số bản ghi 1.469 và thời gian downtime trung bình 16 phút 54 giây.",
       "table": {
         "columns": [
           "Máy",
           "Tổng thời gian downtime",
-          "Số lần ghi nhận",
+          "Số bản ghi",
           "Thời gian downtime trung bình"
         ],
         "rows": [
           {
             "Máy": "Máy 11",
             "Tổng thời gian downtime": "413,57 giờ",
-            "Số lần ghi nhận": "1.469",
+            "Số bản ghi": "1.469",
             "Thời gian downtime trung bình": "16 phút 54 giây"
           },
           {
             "Máy": "Máy 12",
             "Tổng thời gian downtime": "323,15 giờ",
-            "Số lần ghi nhận": "1.654",
+            "Số bản ghi": "1.654",
             "Thời gian downtime trung bình": "11 phút 43 giây"
           },
           {
             "Máy": "Máy 29",
             "Tổng thời gian downtime": "294,67 giờ",
-            "Số lần ghi nhận": "1.603",
+            "Số bản ghi": "1.603",
             "Thời gian downtime trung bình": "11 phút 2 giây"
           },
           {
             "Máy": "Máy 8",
             "Tổng thời gian downtime": "229,98 giờ",
-            "Số lần ghi nhận": "653",
+            "Số bản ghi": "653",
             "Thời gian downtime trung bình": "21 phút 8 giây"
           },
           {
             "Máy": "Máy 9",
             "Tổng thời gian downtime": "185,32 giờ",
-            "Số lần ghi nhận": "821",
+            "Số bản ghi": "821",
             "Thời gian downtime trung bình": "13 phút 33 giây"
           }
         ]
@@ -405,9 +478,9 @@
         "router_confidence": 1.0,
         "routing_reason": "Semantic or multipart request requires REAL_LLM structured resolution.",
         "llm_called": true,
-        "llm_call_count": 3,
-        "fallback_used": true,
-        "fallback_reason": "semantic_llm_failed_after_retry",
+        "llm_call_count": 2,
+        "fallback_used": false,
+        "fallback_reason": null,
         "validation_passed": true,
         "selected_tables": [
           "e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337"
@@ -431,14 +504,14 @@
           "thoi_luong_seconds"
         ],
         "latency_ms": {
-          "routing": 56.1763999867253,
-          "llm": 17267.476100008935,
-          "validation": 0.06059999577701092,
+          "routing": 51.98009999912756,
+          "llm": 7829.459800001132,
+          "validation": 0.051799999710056,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 19422.6,
-          "query_latency_ms": 35.7,
-          "query_wall_ms": 35.9
+          "total": 10300.6,
+          "query_latency_ms": 33.2,
+          "query_wall_ms": 33.3
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple",
@@ -446,20 +519,94 @@
         "model_available": true,
         "llm_model": "qwen3.5:9b",
         "llm_request_started": true,
-        "retry_count": 1,
-        "llm_latency_ms": 7887.7,
+        "retry_count": 0,
+        "llm_latency_ms": 7822.8,
         "llm_request_completed": true,
         "structured_output_valid": true,
-        "schema_validation_errors": [
-          "Unknown sort field: stop_count",
-          "Unknown sort field: stop_count"
-        ],
-        "semantic_fallback_after_llm_failure": true,
-        "retry_error": "Unknown sort field: stop_count",
         "persistence_degraded": false,
         "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
         "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
         "file_scope_validated": true,
+        "lineage": {
+          "conversation_id": "5b7aa87b-6124-4f7b-a5fa-a1aeac9b3c10",
+          "turn_id": "a9dfc6f4-5be7-4ab2-9ef5-22d2e18e71f4",
+          "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "request_contract_id": "c2fec106-7035-4a68-b14d-8f7df88d3ec1",
+          "query_plan_id": "95c6e80f-4b73-44a8-a7e0-5c81f8bc3e38",
+          "query_result_id": "ea75d9e9-d87b-45ae-b211-52554bf586d8",
+          "answer_brief_id": "3a605438-f8e7-4a8b-af3a-ed9516d5504e",
+          "chart_spec_id": "c75ba07f-e718-4573-ba8a-7aa663d3a0c6",
+          "report_artifact_id": "24808c47-7d10-4fa0-ad5e-e30e99770ae1"
+        },
+        "request_contract": {
+          "relation_to_previous_turn": "NEW_REQUEST",
+          "intent": "commentary",
+          "source_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+          "dimensions": [
+            "machine"
+          ],
+          "metrics": [
+            "total_downtime",
+            "count",
+            "average_duration"
+          ],
+          "aggregations": [
+            "sum",
+            "count",
+            "avg"
+          ],
+          "filters": [],
+          "time_range": null,
+          "time_grain": null,
+          "ranking": "top",
+          "limit": 5,
+          "derived_metrics": [],
+          "requested_outputs": [],
+          "requested_chart_type": null,
+          "report_sections": [],
+          "commentary_requirements": [
+            "three_insights"
+          ],
+          "inherited_fields": [],
+          "explicitly_reset_fields": [
+            "dimension",
+            "metric",
+            "filter",
+            "time_range",
+            "chart_type",
+            "top_n"
+          ]
+        },
+        "request_contract_id": "c2fec106-7035-4a68-b14d-8f7df88d3ec1",
+        "query_plan_id": "95c6e80f-4b73-44a8-a7e0-5c81f8bc3e38",
+        "query_result_id": "ea75d9e9-d87b-45ae-b211-52554bf586d8",
+        "answer_brief_id": "3a605438-f8e7-4a8b-af3a-ed9516d5504e",
+        "chart_spec_id": "c75ba07f-e718-4573-ba8a-7aa663d3a0c6",
+        "report_artifact_id": "24808c47-7d10-4fa0-ad5e-e30e99770ae1",
+        "request_coverage": {
+          "requested": [
+            "machine",
+            "total_downtime",
+            "count",
+            "average_duration",
+            "sum",
+            "count",
+            "avg",
+            "top"
+          ],
+          "planned": [
+            "machine",
+            "total_downtime",
+            "count",
+            "average_duration",
+            "sum",
+            "count",
+            "avg",
+            "top"
+          ],
+          "missing": [],
+          "unexpected": []
+        },
         "debug": {
           "query_plan": {
             "intent": "query",
@@ -476,7 +623,7 @@
                 "name": "total_duration_seconds",
                 "alias": "total_duration_seconds",
                 "aggregation": "sum",
-                "column": "duration_seconds",
+                "column": "thoi_luong_seconds",
                 "percentage_of_total": false
               },
               {
@@ -511,16 +658,16 @@
             "query_complexity": "complex",
             "clarification_question": null
           },
-          "sql": "SELECT \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" AS \"may\", sum(\"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"duration_seconds\") AS \"total_duration_seconds\", count(*) AS \"row_count\", avg(\"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"duration_seconds\") AS \"avg_duration_seconds\" FROM read_parquet(?) AS \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\" GROUP BY \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
+          "sql": "SELECT \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" AS \"may\", sum(\"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"thoi_luong_seconds\") AS \"total_duration_seconds\", count(*) AS \"row_count\", avg(\"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"duration_seconds\") AS \"avg_duration_seconds\" FROM read_parquet(?) AS \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\" GROUP BY \"e385c6e2a4ff41a8baf63f323dfc0b59_report_c74337\".\"may\" ORDER BY \"total_duration_seconds\" DESC LIMIT 5",
           "state_after": {
-            "conversation_id": "dedb49f7-9496-4f3f-8050-dec0d0393333",
+            "conversation_id": "5b7aa87b-6124-4f7b-a5fa-a1aeac9b3c10",
             "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
             "active_file_name": "Machine_Downtime_20260203_100753.xlsx",
             "file_contexts": {},
-            "current_topic": "1e609919-f2d2-4ba4-a5da-dff888e5f96a",
+            "current_topic": "539b48d5-8771-4799-ab3e-c188c92f442f",
             "topic_frames": [
               {
-                "topic_id": "1e609919-f2d2-4ba4-a5da-dff888e5f96a",
+                "topic_id": "539b48d5-8771-4799-ab3e-c188c92f442f",
                 "active_file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
                 "label": "query / total_duration_seconds, row_count, avg_duration_seconds / may",
                 "intent": "query",
@@ -529,7 +676,7 @@
                     "name": "total_duration_seconds",
                     "alias": "total_duration_seconds",
                     "aggregation": "sum",
-                    "column": "duration_seconds",
+                    "column": "thoi_luong_seconds",
                     "percentage_of_total": false
                   },
                   {
@@ -569,7 +716,7 @@
                       "name": "total_duration_seconds",
                       "alias": "total_duration_seconds",
                       "aggregation": "sum",
-                      "column": "duration_seconds",
+                      "column": "thoi_luong_seconds",
                       "percentage_of_total": false
                     },
                     {
@@ -630,7 +777,7 @@
               "name": "total_duration_seconds",
               "alias": "total_duration_seconds",
               "aggregation": "sum",
-              "column": "duration_seconds",
+              "column": "thoi_luong_seconds",
               "percentage_of_total": false
             },
             "active_metrics": [
@@ -638,7 +785,7 @@
                 "name": "total_duration_seconds",
                 "alias": "total_duration_seconds",
                 "aggregation": "sum",
-                "column": "duration_seconds",
+                "column": "thoi_luong_seconds",
                 "percentage_of_total": false
               },
               {
@@ -707,7 +854,7 @@
                   "name": "total_duration_seconds",
                   "alias": "total_duration_seconds",
                   "aggregation": "sum",
-                  "column": "duration_seconds",
+                  "column": "thoi_luong_seconds",
                   "percentage_of_total": false
                 },
                 {
@@ -743,7 +890,7 @@
               "clarification_question": null
             },
             "recent_turn_ids": [
-              "f4f3d7eb-735d-4a22-bc9b-2cf8e5aeaabb"
+              "574910dd-b9fc-44ee-8256-c206bfe56e5b"
             ],
             "conversation_summary": null,
             "active_tables": [
@@ -758,7 +905,7 @@
                 "name": "total_duration_seconds",
                 "alias": "total_duration_seconds",
                 "aggregation": "sum",
-                "column": "duration_seconds",
+                "column": "thoi_luong_seconds",
                 "percentage_of_total": false
               },
               {
@@ -785,12 +932,19 @@
         "composer_validation_passed": true,
         "composer_validation_errors": [],
         "composer_rejected_errors": [
-          "unsupported_claim:khoang "
+          "unsupported_claim:khoang ",
+          "unsupported_number:800",
+          "unsupported_number:700"
         ],
         "composer_fallback_used": true,
         "commentary_attached": true,
         "grounded_composer_called": true,
-        "composer_model": "qwen3.5:9b"
+        "composer_model": "qwen3.5:9b",
+        "public_response_validation": {
+          "internal_keys": [],
+          "unaccented_vietnamese": [],
+          "clean": true
+        }
       },
       "checks": {
         "table": true,
@@ -798,11 +952,11 @@
         "composer_validated": true,
         "no_forbidden_numeric_claims": true,
         "percentage": true,
-        "count_metric": true,
+        "count_metric": false,
         "avg_metric": true,
         "vietnamese_columns": true
       },
-      "passed": true,
+      "passed": false,
       "forbidden_claims": []
     }
   ],

@@ -26,6 +26,8 @@ class SafeQueryExecutor:
         self.validator = PlanValidator(catalog)
         self.builder = SQLBuilder(catalog)
         self.result_validator = ResultValidator()
+        self.query_timeout_seconds = int(catalog.get("query_timeout_seconds") or 30)
+        self.query_memory_limit = str(catalog.get("query_memory_limit") or "512MB")
 
     def execute(self, plan: QueryPlan) -> QueryResult:
         self.validator.validate(plan)
@@ -34,7 +36,10 @@ class SafeQueryExecutor:
         if not (normalized_sql.startswith("SELECT ") or normalized_sql.startswith("WITH ")):
             raise ValueError("Only SELECT queries are allowed.")
         start = perf_counter()
-        with duckdb.connect(database=":memory:", read_only=False) as con:
+        with duckdb.connect(database=":memory:") as con:
+            con.execute(f"SET memory_limit='{self.query_memory_limit}'")
+            con.execute(f"SET enable_progress_bar=false")
+            con.execute(f"SET threads=2")
             df = con.execute(sql, params).fetchdf()
         self.result_validator.validate(df, plan)
         latency_ms = (perf_counter() - start) * 1000

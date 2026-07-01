@@ -57,19 +57,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 56.365700031165034,
+          "routing": 71.48700000016106,
           "llm": 0.0,
-          "validation": 0.03850000211969018,
+          "validation": 0.042300000131945126,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 56.4062999910675
+          "total": 71.53159999961645
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 56.60050001461059
+      "latency_ms": 71.90080000009402
     },
     {
       "question": "Tổng downtime là bao nhiêu?",
@@ -121,19 +121,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 52.50770004931837,
+          "routing": 59.94030000010753,
           "llm": 0.0,
-          "validation": 0.03450002986937761,
+          "validation": 0.03210000022590975,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 52.54479998257011
+          "total": 59.97509999997419
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 52.67210002057254
+      "latency_ms": 60.1027000002432
     },
     {
       "question": "Tổng downtime là bao nhiêu?",
@@ -185,19 +185,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 53.155000030528754,
+          "routing": 57.21640000001571,
           "llm": 0.0,
-          "validation": 0.0315000070258975,
+          "validation": 0.03329999981360743,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 53.188899997621775
+          "total": 57.25189999975555
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 53.3110000542365
+      "latency_ms": 57.36650000017107
     },
     {
       "question": "Tổng số bản ghi downtime là bao nhiêu?",
@@ -249,19 +249,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 53.50029998226091,
+          "routing": 55.58640000026571,
           "llm": 0.0,
-          "validation": 0.028099981136620045,
+          "validation": 0.02519999998185085,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 53.531199984718114
+          "total": 55.613699999867094
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 53.64579998422414
+      "latency_ms": 55.71659999986878
     },
     {
       "question": "Tổng số bản ghi downtime là bao nhiêu?",
@@ -313,19 +313,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 52.4664000258781,
+          "routing": 55.42129999957979,
           "llm": 0.0,
-          "validation": 0.028300040867179632,
+          "validation": 0.025399999685760122,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 52.49759997241199
+          "total": 55.44869999994262
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 52.616999950259924
+      "latency_ms": 55.55340000000797
     },
     {
       "question": "Tổng số bản ghi downtime là bao nhiêu?",
@@ -377,19 +377,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 58.54170001111925,
+          "routing": 56.54980000008436,
           "llm": 0.0,
-          "validation": 0.027499976567924023,
+          "validation": 0.02429999995001708,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 58.571600005961955
+          "total": 56.576200000108656
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 58.69269999675453
+      "latency_ms": 56.686399999762216
     },
     {
       "question": "Thời gian downtime trung bình?",
@@ -441,19 +441,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 60.257499979343265,
+          "routing": 57.42929999996704,
           "llm": 0.0,
-          "validation": 0.03779999678954482,
+          "validation": 0.03200000037395512,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 60.29809999745339
+          "total": 57.463600000119186
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 60.435600054915994
+      "latency_ms": 57.57250000033309
     },
     {
       "question": "Thời gian downtime trung bình?",
@@ -505,19 +505,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 56.31549999816343,
+          "routing": 55.21119999957591,
           "llm": 0.0,
-          "validation": 0.032699957955628633,
+          "validation": 0.03149999974993989,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 56.350499973632395
+          "total": 55.24479999985488
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 56.476700003258884
+      "latency_ms": 55.35280000003695
     },
     {
       "question": "Thời gian downtime trung bình?",
@@ -569,19 +569,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 55.996500013861805,
+          "routing": 53.63489999990634,
           "llm": 0.0,
-          "validation": 0.03349996404722333,
+          "validation": 0.031100000342121348,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 56.032199994660914
+          "total": 53.6682999995719
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 56.15119996946305
+      "latency_ms": 53.81939999961105
     },
     {
       "question": "Downtime lớn nhất là bao nhiêu?",
@@ -633,19 +633,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 51.57180002424866,
+          "routing": 54.102900000088994,
           "llm": 0.0,
-          "validation": 0.028099981136620045,
+          "validation": 0.0266000001829525,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 51.60250002518296
+          "total": 54.13150000003952
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 51.723399956244975
+      "latency_ms": 54.238100000020495
     },
     {
       "question": "Downtime lớn nhất là bao nhiêu?",
@@ -697,19 +697,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 49.36689999885857,
+          "routing": 54.79329999980109,
           "llm": 0.0,
-          "validation": 0.030399998649954796,
+          "validation": 0.027099999897473026,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 49.39960001502186
+          "total": 54.8226999999315
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 49.526099988725036
+      "latency_ms": 54.928300000028685
     },
     {
       "question": "Downtime lớn nhất là bao nhiêu?",
@@ -761,19 +761,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 51.05480004567653,
+          "routing": 51.00399999992078,
           "llm": 0.0,
-          "validation": 0.028200040105730295,
+          "validation": 0.027999999929306796,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 51.08550004661083
+          "total": 51.033900000220456
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 51.19809997268021
+      "latency_ms": 51.137699999799224
     },
     {
       "question": "Có bao nhiêu máy khác nhau?",
@@ -825,19 +825,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 49.60600001504645,
+          "routing": 54.42119999997885,
           "llm": 0.0,
-          "validation": 0.028699985705316067,
+          "validation": 0.027999999929306796,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 49.637200019788
+          "total": 54.451200000130484
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 49.749799945857376
+      "latency_ms": 54.55419999998412
     },
     {
       "question": "Có bao nhiêu máy khác nhau?",
@@ -889,19 +889,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 55.22660003043711,
+          "routing": 54.869699999926524,
           "llm": 0.0,
-          "validation": 0.027799978852272034,
+          "validation": 0.027300000056129647,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 55.25649996707216
+          "total": 54.89910000005693
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 55.44939998071641
+      "latency_ms": 55.0015999997413
     },
     {
       "question": "Có bao nhiêu máy khác nhau?",
@@ -953,19 +953,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 49.89269998623058,
+          "routing": 51.21999999983018,
           "llm": 0.0,
-          "validation": 0.07919996278360486,
+          "validation": 0.027099999897473026,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 49.97479997109622
+          "total": 51.24890000024607
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 50.160499988123775
+      "latency_ms": 51.351099999919825
     },
     {
       "question": "Top 5 máy theo tổng downtime.",
@@ -1025,19 +1025,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 59.78299997514114,
+          "routing": 51.43019999968601,
           "llm": 0.0,
-          "validation": 0.14640000881627202,
+          "validation": 0.03330000026835478,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 59.9313999991864
+          "total": 51.46530000001803
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 60.06399996113032
+      "latency_ms": 51.57899999994697
     },
     {
       "question": "Top 5 máy theo tổng downtime.",
@@ -1097,19 +1097,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 55.06959999911487,
+          "routing": 54.030900000270776,
           "llm": 0.0,
-          "validation": 0.05339999916031957,
+          "validation": 0.03329999981360743,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 55.12500001350418
+          "total": 54.06640000001062
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 55.243899987544864
+      "latency_ms": 54.1771999996854
     },
     {
       "question": "Top 5 máy theo tổng downtime.",
@@ -1169,19 +1169,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 46.24280001735315,
+          "routing": 56.281699999999546,
           "llm": 0.0,
-          "validation": 0.033800024539232254,
+          "validation": 0.033400000120309414,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 46.27890000119805
+          "total": 56.31709999988743
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 46.3966999668628
+      "latency_ms": 56.43190000000686
     },
     {
       "question": "Top 10 nguyên nhân theo số lần xuất hiện.",
@@ -1241,19 +1241,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 45.34499999135733,
+          "routing": 57.04820000028121,
           "llm": 0.0,
-          "validation": 0.02619996666908264,
+          "validation": 0.027399999908084283,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 45.373499975539744
+          "total": 57.077700000263576
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 45.49279995262623
+      "latency_ms": 57.1962999997595
     },
     {
       "question": "Top 10 nguyên nhân theo số lần xuất hiện.",
@@ -1313,19 +1313,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 46.03909997968003,
+          "routing": 59.811399999944115,
           "llm": 0.0,
-          "validation": 0.02400000812485814,
+          "validation": 0.026900000193563756,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 46.06500000227243
+          "total": 59.840299999905255
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 46.17420001886785
+      "latency_ms": 60.072699999636825
     },
     {
       "question": "Top 10 nguyên nhân theo số lần xuất hiện.",
@@ -1385,19 +1385,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 45.410600025206804,
+          "routing": 54.3374999997468,
           "llm": 0.0,
-          "validation": 0.02829998265951872,
+          "validation": 0.026599999728205148,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 45.44130002614111
+          "total": 54.36620000000403
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 45.55790004087612
+      "latency_ms": 54.48729999989155
     },
     {
       "question": "Máy có downtime trung bình cao nhất.",
@@ -1457,19 +1457,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 50.38080003578216,
+          "routing": 52.3683000001256,
           "llm": 0.0,
-          "validation": 0.03579998156055808,
+          "validation": 0.036500000078376615,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 50.41870003333315
+          "total": 52.406799999971554
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 50.54359999485314
+      "latency_ms": 52.53690000017741
     },
     {
       "question": "Máy có downtime trung bình cao nhất.",
@@ -1529,19 +1529,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 53.902899962849915,
+          "routing": 49.59889999963707,
           "llm": 0.0,
-          "validation": 0.03320001997053623,
+          "validation": 0.03210000022590975,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 53.938400000333786
+          "total": 49.63320000024396
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 54.06319996109232
+      "latency_ms": 49.74569999967571
     },
     {
       "question": "Máy có downtime trung bình cao nhất.",
@@ -1601,19 +1601,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 51.43569997744635,
+          "routing": 52.69850000013321,
           "llm": 0.0,
-          "validation": 0.03330002073198557,
+          "validation": 0.033600000278966036,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 51.47130001569167
+          "total": 52.73410000017975
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 51.59950000233948
+      "latency_ms": 52.881100000377046
     },
     {
       "question": "Downtime theo ngày.",
@@ -1678,19 +1678,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 52.83549998421222,
+          "routing": 52.84480000000258,
           "llm": 0.0,
-          "validation": 0.03379996633157134,
+          "validation": 0.04639999997380073,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 52.87139996653423
+          "total": 52.89489999995567
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 52.99719999311492
+      "latency_ms": 53.01290000033987
     },
     {
       "question": "Downtime theo ngày.",
@@ -1755,19 +1755,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 56.06959998840466,
+          "routing": 52.51379999981509,
           "llm": 0.0,
-          "validation": 0.035999983083456755,
+          "validation": 0.11180000001331791,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 56.10789998900145
+          "total": 52.62869999978648
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 56.23529996955767
+      "latency_ms": 52.74810000037178
     },
     {
       "question": "Downtime theo ngày.",
@@ -1832,19 +1832,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 55.29920000117272,
+          "routing": 52.35880000009274,
           "llm": 0.0,
-          "validation": 0.036299985367804766,
+          "validation": 0.040299999909620965,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 55.33790000481531
+          "total": 52.40150000008725
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 55.476300010923296
+      "latency_ms": 52.52420000033453
     },
     {
       "question": "Tổng downtime tháng 12/2025.",
@@ -1905,19 +1905,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 51.513199985492975,
+          "routing": 55.19400000002861,
           "llm": 0.0,
-          "validation": 0.04859996261075139,
+          "validation": 0.042800000301213004,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 51.56419996637851
+          "total": 55.2389000004041
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 51.707400009036064
+      "latency_ms": 55.36489999985861
     },
     {
       "question": "Tổng downtime tháng 12/2025.",
@@ -1978,19 +1978,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 51.52450001332909,
+          "routing": 51.48490000010497,
           "llm": 0.0,
-          "validation": 0.03659998765215278,
+          "validation": 0.05029999965699972,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 51.563600020017475
+          "total": 51.53729999983625
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 51.68899998534471
+      "latency_ms": 51.65630000010424
     },
     {
       "question": "Tổng downtime tháng 12/2025.",
@@ -2051,19 +2051,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 49.6117000002414,
+          "routing": 50.44019999968441,
           "llm": 0.0,
-          "validation": 0.038300000596791506,
+          "validation": 0.05220000002736924,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 49.65249996166676
+          "total": 50.494999999955326
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 49.802100053057075
+      "latency_ms": 50.634500000342086
     },
     {
       "question": "Máy 29 downtime tháng 12/2025 bao lâu?",
@@ -2129,19 +2129,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 52.80920001678169,
+          "routing": 50.251699999989796,
           "llm": 0.0,
-          "validation": 0.03929995000362396,
+          "validation": 0.03779999997277628,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 52.85139998886734
+          "total": 50.291699999888806
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 53.06349997408688
+      "latency_ms": 50.414400000136084
     },
     {
       "question": "Máy 29 downtime tháng 12/2025 bao lâu?",
@@ -2207,19 +2207,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 52.73629998555407,
+          "routing": 49.7110999999677,
           "llm": 0.0,
-          "validation": 0.03980001201853156,
+          "validation": 0.03870000000461005,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 52.778300014324486
+          "total": 49.75169999988793
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 52.93349997373298
+      "latency_ms": 49.8794000000089
     },
     {
       "question": "Máy 29 downtime tháng 12/2025 bao lâu?",
@@ -2285,19 +2285,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 51.84720002580434,
+          "routing": 50.37029999994047,
           "llm": 0.0,
-          "validation": 0.0399000127799809,
+          "validation": 0.037400000110210385,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 51.88909999560565
+          "total": 50.409899999976915
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 52.03120002988726
+      "latency_ms": 50.5209000002651
     },
     {
       "question": "Các lần dừng trên 30 phút.",
@@ -2355,19 +2355,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 52.3988000350073,
+          "routing": 56.69450000004872,
           "llm": 0.0,
-          "validation": 0.03400002606213093,
+          "validation": 0.03339999966556206,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 52.435300021898
+          "total": 56.730099999640515
         },
         "turn_type": "ADD_FILTER",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 52.58469999535009
+      "latency_ms": 56.837500000256114
     },
     {
       "question": "Các lần dừng trên 30 phút.",
@@ -2425,19 +2425,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 59.46030002087355,
+          "routing": 50.139800000124524,
           "llm": 0.0,
-          "validation": 0.034100026823580265,
+          "validation": 0.03259999994043028,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 59.49660000624135
+          "total": 50.17450000013923
         },
         "turn_type": "ADD_FILTER",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 59.62720001116395
+      "latency_ms": 50.283999999919615
     },
     {
       "question": "Các lần dừng trên 30 phút.",
@@ -2495,19 +2495,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 48.0488000321202,
+          "routing": 49.49749999968844,
           "llm": 0.0,
-          "validation": 0.03400002606213093,
+          "validation": 0.03299999980299617,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 48.08540001977235
+          "total": 49.532600000020466
         },
         "turn_type": "ADD_FILTER",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 48.20989997824654
+      "latency_ms": 49.63439999983166
     },
     {
       "question": "Tổng downtime của Máy 11 và Máy 29.",
@@ -2568,19 +2568,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 46.201699995435774,
+          "routing": 53.42560000008234,
           "llm": 0.0,
-          "validation": 0.03739999374374747,
+          "validation": 0.1247000000148546,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 46.24100000364706
+          "total": 53.55239999971673
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 46.366199967451394
+      "latency_ms": 53.66460000004736
     },
     {
       "question": "Tổng downtime của Máy 11 và Máy 29.",
@@ -2641,19 +2641,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 46.92870000144467,
+          "routing": 58.5812000003898,
           "llm": 0.0,
-          "validation": 0.038300000596791506,
+          "validation": 0.03770000012082164,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 46.969200018793344
+          "total": 58.62139999999272
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 47.09750000620261
+      "latency_ms": 58.73870000004899
     },
     {
       "question": "Tổng downtime của Máy 11 và Máy 29.",
@@ -2714,19 +2714,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 48.81249996833503,
+          "routing": 54.585599999882106,
           "llm": 0.0,
-          "validation": 0.03860000288113952,
+          "validation": 0.037600000268867007,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 48.853799991775304
+          "total": 54.625299999770505
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 48.98090002825484
+      "latency_ms": 54.818300000079034
     },
     {
       "question": "Vẽ biểu đồ downtime theo ngày.",
@@ -2763,14 +2763,9 @@
             "column": "thoi_gian_bat_dau",
             "field": "thoi_gian_bat_dau",
             "direction": "asc"
-          },
-          {
-            "column": "total_duration_seconds",
-            "field": "total_duration_seconds",
-            "direction": "desc"
           }
         ],
-        "limit": 20,
+        "limit": 500,
         "output": "line",
         "query_complexity": "simple",
         "clarification_question": null
@@ -2779,8 +2774,8 @@
       "used_fallback": false,
       "metadata": {
         "execution_mode": "DETERMINISTIC",
-        "router_confidence": 1.0,
-        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "router_confidence": 0.96,
+        "routing_reason": "Time-series chart request mapped to current-turn date trend.",
         "llm_called": false,
         "llm_call_count": 0,
         "fallback_used": false,
@@ -2791,19 +2786,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 51.58679996384308,
+          "routing": 0.23509999982707086,
           "llm": 0.0,
-          "validation": 0.032800016924738884,
+          "validation": 0.020400000266818097,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 51.62209999980405
+          "total": 0.2569000002949906
         },
-        "turn_type": "CHANGE_OUTPUT",
+        "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 51.747300021816045
+      "latency_ms": 0.35939999997935956
     },
     {
       "question": "Vẽ biểu đồ downtime theo ngày.",
@@ -2840,14 +2835,9 @@
             "column": "thoi_gian_bat_dau",
             "field": "thoi_gian_bat_dau",
             "direction": "asc"
-          },
-          {
-            "column": "total_duration_seconds",
-            "field": "total_duration_seconds",
-            "direction": "desc"
           }
         ],
-        "limit": 20,
+        "limit": 500,
         "output": "line",
         "query_complexity": "simple",
         "clarification_question": null
@@ -2856,8 +2846,8 @@
       "used_fallback": false,
       "metadata": {
         "execution_mode": "DETERMINISTIC",
-        "router_confidence": 1.0,
-        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "router_confidence": 0.96,
+        "routing_reason": "Time-series chart request mapped to current-turn date trend.",
         "llm_called": false,
         "llm_call_count": 0,
         "fallback_used": false,
@@ -2868,19 +2858,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 46.64639994734898,
+          "routing": 0.1656999997976527,
           "llm": 0.0,
-          "validation": 0.03390002530068159,
+          "validation": 0.01810000003388268,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 46.68269999092445
+          "total": 0.1851000001806824
         },
-        "turn_type": "CHANGE_OUTPUT",
+        "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 46.87310004374012
+      "latency_ms": 0.2449000003252877
     },
     {
       "question": "Vẽ biểu đồ downtime theo ngày.",
@@ -2917,14 +2907,9 @@
             "column": "thoi_gian_bat_dau",
             "field": "thoi_gian_bat_dau",
             "direction": "asc"
-          },
-          {
-            "column": "total_duration_seconds",
-            "field": "total_duration_seconds",
-            "direction": "desc"
           }
         ],
-        "limit": 20,
+        "limit": 500,
         "output": "line",
         "query_complexity": "simple",
         "clarification_question": null
@@ -2933,8 +2918,8 @@
       "used_fallback": false,
       "metadata": {
         "execution_mode": "DETERMINISTIC",
-        "router_confidence": 1.0,
-        "routing_reason": "Deterministic detectors produced a validated analytical plan candidate.",
+        "router_confidence": 0.96,
+        "routing_reason": "Time-series chart request mapped to current-turn date trend.",
         "llm_called": false,
         "llm_call_count": 0,
         "fallback_used": false,
@@ -2945,19 +2930,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 43.770500051323324,
+          "routing": 0.15940000002956367,
           "llm": 0.0,
-          "validation": 0.03600004129111767,
+          "validation": 0.017100000150094274,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 43.808800051920116
+          "total": 0.17750000006344635
         },
-        "turn_type": "CHANGE_OUTPUT",
+        "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 43.928900035098195
+      "latency_ms": 0.24100000018734136
     },
     {
       "question": "Tạo dashboard tổng quan.",
@@ -3016,19 +3001,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 43.762899993453175,
+          "routing": 52.09789999980785,
           "llm": 0.0,
-          "validation": 0.03359996480867267,
+          "validation": 0.03259999994043028,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 43.79889997653663
+          "total": 52.132499999970605
         },
-        "turn_type": "CHANGE_OUTPUT",
+        "turn_type": "NEW_QUERY",
         "query_complexity": "complex"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 43.95459999796003
+      "latency_ms": 52.27419999982885
     },
     {
       "question": "Tạo dashboard tổng quan.",
@@ -3087,19 +3072,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 47.71939996862784,
+          "routing": 52.24790000011126,
           "llm": 0.0,
-          "validation": 0.03360002301633358,
+          "validation": 0.03259999994043028,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 47.75490000611171
+          "total": 52.28239999996731
         },
-        "turn_type": "CHANGE_OUTPUT",
+        "turn_type": "NEW_QUERY",
         "query_complexity": "complex"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 47.88000002736226
+      "latency_ms": 52.389799999673414
     },
     {
       "question": "Tạo dashboard tổng quan.",
@@ -3158,19 +3143,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 49.85170002328232,
+          "routing": 53.26039999999921,
           "llm": 0.0,
-          "validation": 0.03360002301633358,
+          "validation": 0.032899999951041536,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 49.887800007127225
+          "total": 53.29549999987648
         },
-        "turn_type": "CHANGE_OUTPUT",
+        "turn_type": "NEW_QUERY",
         "query_complexity": "complex"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 50.00590003328398
+      "latency_ms": 53.41290000023946
     },
     {
       "question": "Tạo báo cáo HTML downtime.",
@@ -3229,19 +3214,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 49.56399998627603,
+          "routing": 58.3771000001434,
           "llm": 0.0,
-          "validation": 0.03789999755099416,
+          "validation": 0.031600000056641875,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 49.60420000134036
+          "total": 58.41069999996762
         },
-        "turn_type": "CHANGE_OUTPUT",
+        "turn_type": "NEW_QUERY",
         "query_complexity": "complex"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 49.73919998155907
+      "latency_ms": 58.525599999939004
     },
     {
       "question": "Tạo báo cáo HTML downtime.",
@@ -3300,19 +3285,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 49.71819999627769,
+          "routing": 52.51369999996314,
           "llm": 0.0,
-          "validation": 0.03539997851476073,
+          "validation": 0.034300000152143184,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 49.755999993067235
+          "total": 52.55039999974542
         },
-        "turn_type": "CHANGE_OUTPUT",
+        "turn_type": "NEW_QUERY",
         "query_complexity": "complex"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 49.87960000289604
+      "latency_ms": 52.6705000002039
     },
     {
       "question": "Tạo báo cáo HTML downtime.",
@@ -3371,19 +3356,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 50.61560001922771,
+          "routing": 55.95259999972768,
           "llm": 0.0,
-          "validation": 0.032299954909831285,
+          "validation": 0.03910000032192329,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 50.65039999317378
+          "total": 55.99370000027193
         },
-        "turn_type": "CHANGE_OUTPUT",
+        "turn_type": "NEW_QUERY",
         "query_complexity": "complex"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 50.7769999676384
+      "latency_ms": 56.10350000006292
     },
     {
       "question": "Máy nào tốt nhất?",
@@ -3423,17 +3408,17 @@
         "selected_tables": [],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 0.037999998312443495,
+          "routing": 0.04040000021632295,
           "llm": 0.0,
           "validation": 0.0,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 0.039499951526522636
+          "total": 0.04169999965597526
         }
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 0.10699999984353781
+      "latency_ms": 0.11369999992894009
     },
     {
       "question": "Máy nào tốt nhất?",
@@ -3473,17 +3458,17 @@
         "selected_tables": [],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 0.027399975806474686,
+          "routing": 0.031200000194075983,
           "llm": 0.0,
           "validation": 0.0,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 0.028499984182417393
+          "total": 0.0320999997711624
         }
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 0.07000000914558768
+      "latency_ms": 0.06739999980709399
     },
     {
       "question": "Máy nào tốt nhất?",
@@ -3523,17 +3508,17 @@
         "selected_tables": [],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 0.02169999061152339,
+          "routing": 0.031099999887373997,
           "llm": 0.0,
           "validation": 0.0,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 0.022199994418770075
+          "total": 0.03170000036334386
         }
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 0.04569999873638153
+      "latency_ms": 0.06269999994401587
     },
     {
       "question": "Doanh thu năm 2024 là bao nhiêu?",
@@ -3573,17 +3558,17 @@
         "selected_tables": [],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 0.02340000355616212,
+          "routing": 0.02880000010918593,
           "llm": 0.0,
           "validation": 0.0,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 0.02400000812485814
+          "total": 0.029400000130408444
         }
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 0.045599997974932194
+      "latency_ms": 0.0586999999541149
     },
     {
       "question": "Doanh thu năm 2024 là bao nhiêu?",
@@ -3623,17 +3608,17 @@
         "selected_tables": [],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 0.03300001844763756,
+          "routing": 0.026000000161729986,
           "llm": 0.0,
           "validation": 0.0,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 0.03360002301633358
+          "total": 0.0266000001829525
         }
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 0.05670002428814769
+      "latency_ms": 0.05319999991115765
     },
     {
       "question": "Doanh thu năm 2024 là bao nhiêu?",
@@ -3673,17 +3658,17 @@
         "selected_tables": [],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 0.020599982235580683,
+          "routing": 0.024700000267330324,
           "llm": 0.0,
           "validation": 0.0,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 0.02099998528137803
+          "total": 0.02519999998185085
         }
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 0.04249997437000275
+      "latency_ms": 0.05180000016480335
     },
     {
       "question": "So sánh downtime với loss assignment theo từng dòng.",
@@ -3723,17 +3708,17 @@
         "selected_tables": [],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 0.028500042390078306,
+          "routing": 0.036699999782285886,
           "llm": 0.0,
           "validation": 0.0,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 0.028900045435875654
+          "total": 0.037199999951553764
         }
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 0.04870002157986164
+      "latency_ms": 0.06280000025071786
     },
     {
       "question": "So sánh downtime với loss assignment theo từng dòng.",
@@ -3773,17 +3758,17 @@
         "selected_tables": [],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 0.026099965907633305,
+          "routing": 0.03770000012082164,
           "llm": 0.0,
           "validation": 0.0,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 0.026499968953430653
+          "total": 0.03819999983534217
         }
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 0.048399961087852716
+      "latency_ms": 0.06680000024061883
     },
     {
       "question": "So sánh downtime với loss assignment theo từng dòng.",
@@ -3823,17 +3808,17 @@
         "selected_tables": [],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 0.024099950678646564,
+          "routing": 0.0328000000990869,
           "llm": 0.0,
           "validation": 0.0,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 0.024499953724443913
+          "total": 0.03329999981360743
         }
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 0.043899985030293465
+      "latency_ms": 0.05909999981668079
     },
     {
       "question": "Dữ liệu của máy KHÔNG_TỒN_TẠI là gì?",
@@ -3891,19 +3876,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 46.11219995422289,
+          "routing": 55.01600000025064,
           "llm": 0.0,
-          "validation": 0.030199997127056122,
+          "validation": 0.0289999998130952,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 46.14449996734038
+          "total": 55.046999999831314
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 46.221100026741624
+      "latency_ms": 55.119099999956234
     },
     {
       "question": "Dữ liệu của máy KHÔNG_TỒN_TẠI là gì?",
@@ -3961,19 +3946,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 51.44539999309927,
+          "routing": 51.403299999947194,
           "llm": 0.0,
-          "validation": 0.02859998494386673,
+          "validation": 0.02949999998236308,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 51.476199994795024
+          "total": 51.43510000016249
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 51.617000019177794
+      "latency_ms": 51.55500000000757
     },
     {
       "question": "Dữ liệu của máy KHÔNG_TỒN_TẠI là gì?",
@@ -4031,19 +4016,19 @@
         ],
         "selected_columns": [],
         "latency_ms": {
-          "routing": 52.45640000794083,
+          "routing": 55.86349999975937,
           "llm": 0.0,
-          "validation": 0.03170000854879618,
+          "validation": 0.029199999971751822,
           "query": 0.0,
           "rendering": 0.0,
-          "total": 52.49030003324151
+          "total": 55.89480000026015
         },
         "turn_type": "NEW_QUERY",
         "query_complexity": "simple"
       },
       "error": null,
       "validation_error": null,
-      "latency_ms": 52.61640000389889
+      "latency_ms": 56.0021000001143
     }
   ]
 }

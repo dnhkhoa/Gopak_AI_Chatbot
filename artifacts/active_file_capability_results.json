@@ -1,0 +1,98 @@
+{
+  "total_cases": 8,
+  "correct_classifications": 8,
+  "classification_pct": 100.0,
+  "wrong_file_sql_executions": 0,
+  "wrong_file_llm_calls": 0,
+  "acceptance_met": true,
+  "results": [
+    {
+      "file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "message": "Máy nào có tổng downtime cao nhất?",
+      "expected_unsupported": true,
+      "classified_unsupported": true,
+      "error_code": "UNSUPPORTED_BY_ACTIVE_FILE",
+      "llm_called": false,
+      "generated_sql": false,
+      "recommended_file": "Machine_Downtime_20260203_100753.xlsx",
+      "correct": true
+    },
+    {
+      "file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "message": "Phân tích xu hướng downtime theo thời gian.",
+      "expected_unsupported": true,
+      "classified_unsupported": true,
+      "error_code": "UNSUPPORTED_BY_ACTIVE_FILE",
+      "llm_called": false,
+      "generated_sql": false,
+      "recommended_file": "Machine_Downtime_20260203_100753.xlsx",
+      "correct": true
+    },
+    {
+      "file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "message": "Nhóm tổn thất nào có tổng downtime lớn nhất?",
+      "expected_unsupported": true,
+      "classified_unsupported": true,
+      "error_code": "UNSUPPORTED_BY_ACTIVE_FILE",
+      "llm_called": false,
+      "generated_sql": false,
+      "recommended_file": "Machine_Downtime_20260203_100753.xlsx",
+      "correct": true
+    },
+    {
+      "file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "message": "Phân tích dữ liệu này.",
+      "expected_unsupported": false,
+      "classified_unsupported": false,
+      "error_code": null,
+      "llm_called": true,
+      "generated_sql": false,
+      "recommended_file": null,
+      "correct": true
+    },
+    {
+      "file_id": "2ad2989784fc41ffb9fef3225034db54",
+      "message": "File có bao nhiêu bản ghi?",
+      "expected_unsupported": false,
+      "classified_unsupported": false,
+      "error_code": null,
+      "llm_called": false,
+      "generated_sql": false,
+      "recommended_file": null,
+      "correct": true
+    },
+    {
+      "file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "message": "Máy nào có tổng downtime cao nhất?",
+      "expected_unsupported": false,
+      "classified_unsupported": false,
+      "error_code": null,
+      "llm_called": false,
+      "generated_sql": false,
+      "recommended_file": null,
+      "correct": true
+    },
+    {
+      "file_id": "e385c6e2a4ff41a8baf63f323dfc0b59",
+      "message": "Phân tích xu hướng downtime theo thời gian.",
+      "expected_unsupported": false,
+      "classified_unsupported": false,
+      "error_code": null,
+      "llm_called": true,
+      "generated_sql": false,
+      "recommended_file": null,
+      "correct": true
+    },
+    {
+      "file_id": "a329169db4984cab80ed5fea5880bb4f",
+      "message": "Nhóm tổn thất nào có tổng downtime lớn nhất?",
+      "expected_unsupported": false,
+      "classified_unsupported": false,
+      "error_code": null,
+      "llm_called": false,
+      "generated_sql": false,
+      "recommended_file": null,
+      "correct": true
+    }
+  ]
+}

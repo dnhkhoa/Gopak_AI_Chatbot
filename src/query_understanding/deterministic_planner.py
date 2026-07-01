@@ -46,7 +46,7 @@ class DeterministicPlanner:
         loss_name = role_column(table, "loss_name")
         loss_group = role_column(table, "loss_group")
 
-        generic_entry = self._entrytransaction_plan(q, table)
+        generic_entry = self._legacy_gate_transaction_plan(q, table)
         if generic_entry is not None:
             return generic_entry
         trend_chart = self._trend_chart_plan(q, table, duration, start_time)
@@ -258,9 +258,9 @@ class DeterministicPlanner:
         metric_terms += int(any(term in q for term in ["trung binh", "thoi luong trung binh"]))
         return metric_terms >= 2 or ("hien thi them" in q and metric_terms >= 1)
 
-    def _entrytransaction_plan(self, q: str, table: dict) -> DeterministicParse | None:
+    def _legacy_gate_transaction_plan(self, q: str, table: dict) -> DeterministicParse | None:
         table_text = f"{table.get('table_name', '')} {table.get('source', '')}".lower()
-        if "entrytransaction" not in table_text:
+        if "legacy_gate_transaction" not in table_text:
             return None
         table_name = table["table_name"]
         cols = {col.get("normalized_name") for col in table.get("columns", [])}
@@ -275,7 +275,7 @@ class DeterministicPlanner:
                 limit=5,
                 output="table",
             )
-            return DeterministicParse(plan, 0.92, "EntryTransaction freeform insight mapped to scoped gate/access volume.", evidence=["entry_insight"])
+            return DeterministicParse(plan, 0.92, "Legacy gate-transaction insight mapped to scoped gate/access volume.", evidence=["entry_insight"])
         if "cong" in cols and any(term in q for term in ["theo cong", "theo tung cong", "tung cong", "moi cong", "theo cac cong", "phan bo theo cong"]):
             output = "bar" if any(term in q for term in ["bieu do", "chart", "ve cot", "ve line", "ve chart", "ve bieu do"]) else "table"
             intent = "chart" if output == "bar" else "query"
@@ -288,7 +288,7 @@ class DeterministicPlanner:
                 limit=20,
                 output=output,
             )
-            return DeterministicParse(plan, 0.93, "EntryTransaction record count grouped by gate.", evidence=["entry_gate_count"])
+            return DeterministicParse(plan, 0.93, "Legacy gate-transaction record count grouped by gate.", evidence=["entry_gate_count"])
         if ("gia_tri_can" in q or "gia tri can" in q) and "gia_tri_can" in cols:
             plan = QueryPlan(
                 intent="query",
@@ -296,7 +296,7 @@ class DeterministicPlanner:
                 metrics=[MetricSpec(aggregation="sum", column="gia_tri_can", name="total_gia_tri_can")],
                 output="text",
             )
-            return DeterministicParse(plan, 0.96, "EntryTransaction numeric weight total detected.", evidence=["gia_tri_can"])
+            return DeterministicParse(plan, 0.96, "Legacy gate-transaction numeric weight total detected.", evidence=["gia_tri_can"])
         if "cong" in q and any(term in q for term in ["bao nhieu", "khac nhau", "so cong"]) and "cong" in cols:
             plan = QueryPlan(
                 intent="query",
@@ -304,7 +304,7 @@ class DeterministicPlanner:
                 metrics=[MetricSpec(aggregation="count_distinct", column="cong", name="gate_count")],
                 output="text",
             )
-            return DeterministicParse(plan, 0.96, "EntryTransaction distinct gate count detected.", evidence=["cong"])
+            return DeterministicParse(plan, 0.96, "Legacy gate-transaction distinct gate count detected.", evidence=["cong"])
         return None
 
     def _freeform_insight_plan(
@@ -369,7 +369,7 @@ class DeterministicPlanner:
             if active:
                 return active
         if any(term in q for term in ["truy cap", "cong ra", "cong vao", "ra vao cong", "gia tri can", "bien so", "loai xe"]):
-            return find_table(self.catalog, "entrytransaction")
+            return find_table(self.catalog, "legacy_gate_transaction")
         if any(term in q for term in ["setup", "vat tu", "cho vat tu", "chinh may", "gan voi"]):
             return find_table(self.catalog, "loss_assignment") or find_table(self.catalog, "machine_downtime")
         return find_table(self.catalog, "machine_downtime") or (scoped_tables[0] if scoped_tables else None)
@@ -413,6 +413,6 @@ class DeterministicPlanner:
             confidence -= 0.35
         if plan.metrics and any(metric.column is None and metric.aggregation != "count" for metric in plan.metrics):
             confidence -= 0.35
-        if plan.tables and plan.tables[0].startswith("entrytransaction") and any(term in q for term in ["downtime", "dung", "may"]):
+        if plan.tables and plan.tables[0].startswith("legacy_gate_transaction") and any(term in q for term in ["downtime", "dung", "may"]):
             confidence -= 0.40
         return clamp_confidence(confidence)

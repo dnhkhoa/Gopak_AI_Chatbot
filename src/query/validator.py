@@ -17,6 +17,10 @@ class PlanValidator:
             return plan
         if not plan.tables:
             raise PlanValidationError("Plan must include at least one table.")
+        if len(plan.tables) > 1 and not plan.joins and plan.execution_strategy != "parallel_queries_then_merge":
+            raise PlanValidationError("Multi-table plans require explicit joins or a parallel_queries_then_merge execution strategy.")
+        if plan.execution_strategy == "parallel_queries_then_merge":
+            raise PlanValidationError("Parallel multi-source plans must be executed by the production execution planner, not the single SQL builder.")
         for table in plan.tables:
             if table not in self.tables:
                 raise PlanValidationError(f"Unknown table: {table}")

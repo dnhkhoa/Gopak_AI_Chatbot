@@ -28,11 +28,10 @@ def readable_table_name(table: dict) -> str:
         return "Downtime máy"
     if "Loss_Assignment" in source:
         return "Phân loại tổn thất"
-    if "EntryTransaction" in source:
-        return "Ra vào cổng"
+    if "APQOEE" in source or "Cup3" in source:
+        return "APQOEE tích lũy"
     return str(table.get("table_name", "Bảng dữ liệu"))
 
 
 def row_count_text(row_count: int) -> str:
     return f"{format_vn_number(row_count, 0)} bản ghi"
-

@@ -44,8 +44,8 @@
         "x_axis_unit": null,
         "y_axis_unit": "giờ",
         "tooltip_unit": "giờ",
-        "source_result_id": "6493b3bc-1cef-4bd9-83e6-ba97d4f64968",
-        "source_turn_id": "2c6a9fa6-cef9-4444-846c-c1c1912da329",
+        "source_result_id": "40ea0b9f-193b-4d21-8ded-53e1bf9b5e0b",
+        "source_turn_id": "26044b78-31ea-4522-bd61-8fb0fd5787f7",
         "metric": "total_downtime",
         "dimension": "machine"
       },
@@ -57,8 +57,8 @@
         "x_axis_unit": null,
         "y_axis_unit": "giờ",
         "tooltip_unit": "giờ",
-        "source_result_id": "6493b3bc-1cef-4bd9-83e6-ba97d4f64968",
-        "source_turn_id": "2c6a9fa6-cef9-4444-846c-c1c1912da329",
+        "source_result_id": "40ea0b9f-193b-4d21-8ded-53e1bf9b5e0b",
+        "source_turn_id": "26044b78-31ea-4522-bd61-8fb0fd5787f7",
         "expected_category_count": 5,
         "time_grain": null
       },
@@ -473,8 +473,8 @@
         "x_axis_unit": null,
         "y_axis_unit": "giờ",
         "tooltip_unit": "giờ",
-        "source_result_id": "db53d9f2-e949-41e9-9fe6-db6e95b4ef8d",
-        "source_turn_id": "5f961651-ab37-4d2d-8ab3-221beb23ef58",
+        "source_result_id": "866b43fc-f6f9-4582-bca1-b496cf741138",
+        "source_turn_id": "066c7bb6-4cd0-4e2e-9c4e-f224a7bda8df",
         "metric": "total_downtime",
         "dimension": "date"
       },
@@ -486,8 +486,8 @@
         "x_axis_unit": null,
         "y_axis_unit": "giờ",
         "tooltip_unit": "giờ",
-        "source_result_id": "db53d9f2-e949-41e9-9fe6-db6e95b4ef8d",
-        "source_turn_id": "5f961651-ab37-4d2d-8ab3-221beb23ef58",
+        "source_result_id": "866b43fc-f6f9-4582-bca1-b496cf741138",
+        "source_turn_id": "066c7bb6-4cd0-4e2e-9c4e-f224a7bda8df",
         "expected_category_count": 90,
         "time_grain": "day"
       },
@@ -536,19 +536,19 @@
         "title": "Kết quả phân tích",
         "x_key": "Nhóm tổn thất",
         "y_keys": [
-          "Số lần ghi nhận"
+          "Số bản ghi"
         ],
         "data": [
           {
             "Nhóm tổn thất": "Bảo trì",
-            "Số lần ghi nhận": 9151
+            "Số bản ghi": 9151
           }
         ],
         "x_axis_unit": null,
         "y_axis_unit": null,
         "tooltip_unit": null,
-        "source_result_id": "99fdaddc-25e6-49a0-9138-443e94ce5d26",
-        "source_turn_id": "3946aae7-d3ac-4615-82c9-b70168d680c1",
+        "source_result_id": "076fe367-4215-4266-a83a-625180915cc7",
+        "source_turn_id": "dbd9b714-7f2d-4ec2-b35f-2ff18ad59bdc",
         "metric": "count",
         "dimension": "loss_group"
       },
@@ -560,8 +560,8 @@
         "x_axis_unit": null,
         "y_axis_unit": null,
         "tooltip_unit": null,
-        "source_result_id": "99fdaddc-25e6-49a0-9138-443e94ce5d26",
-        "source_turn_id": "3946aae7-d3ac-4615-82c9-b70168d680c1",
+        "source_result_id": "076fe367-4215-4266-a83a-625180915cc7",
+        "source_turn_id": "dbd9b714-7f2d-4ec2-b35f-2ff18ad59bdc",
         "expected_category_count": 1,
         "time_grain": null
       },

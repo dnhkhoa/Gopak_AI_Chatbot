@@ -91,6 +91,7 @@ def build_catalog(table_entries: list[dict], cache_dir: Path) -> dict:
                 "parquet_path": entry["parquet_path"],
                 "file_id": entry.get("file_id") or entry.get("source_file_id"),
                 "source_file_id": entry.get("source_file_id") or entry.get("file_id"),
+                "source_id": entry.get("source_id"),
                 "sha256": entry.get("sha256"),
                 "row_count": len(df),
                 "columns": column_profiles,
